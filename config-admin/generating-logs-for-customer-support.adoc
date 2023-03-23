@@ -1,0 +1,33 @@
+---
+permalink: config-admin/generating-logs-for-customer-support.html 
+sidebar: sidebar 
+keywords:  
+summary: Si lo solicita el servicio de soporte al cliente, genere un servidor, una adquisición o un registro remoto para solucionar problemas. 
+---
+= Generando registros para el soporte al cliente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si lo solicita el servicio de soporte al cliente, genere un servidor, una adquisición o un registro remoto para solucionar problemas.
+
+
+
+== Acerca de esta tarea
+
+Si solicitudes de soporte al cliente de NetApp, use esta opción para generar los registros.
+
+
+
+== Pasos
+
+. En la barra de herramientas Insight, haga clic en *Admin* y seleccione *solución de problemas*.
+. En la parte inferior de la página en el área otras tareas, haga clic en *solución avanzada de problemas*.
+. En la página siguiente del menú Opciones avanzadas, haga clic en el vínculo *solución de problemas*.
+. Haga clic en la ficha *Logs* y seleccione el archivo de registro que desea descargar.
++
+Se abre un cuadro de diálogo que permite abrir el registro o guardar el registro localmente.
+
+

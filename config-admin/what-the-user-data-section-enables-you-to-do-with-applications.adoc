@@ -1,0 +1,37 @@
+---
+permalink: config-admin/what-the-user-data-section-enables-you-to-do-with-applications.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Es posible asignar aplicaciones que se ejecutan en el entorno a ciertos activos \(host, máquinas virtuales, volúmenes, volúmenes internos e hipervisores\). La sección datos de usuario permite cambiar la aplicación asignada a un activo o asignar una aplicación o aplicaciones adicionales a un activo.' 
+---
+= Uso de la sección datos de usuario para asignar o modificar aplicaciones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible asignar aplicaciones en ejecución en el entorno a ciertos activos (host, máquinas virtuales, volúmenes, volúmenes internos e hipervisores). La sección datos de usuario permite cambiar la aplicación asignada a un activo o asignar una aplicación o aplicaciones adicionales a un activo.
+
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web de OnCommand Insight.
+. Localice una página de activos realizando una de las siguientes acciones:
++
+** En la barra de herramientas Insight, haga clic en image:../media/icon-sanscreen-magnifying-glass-gif.gif[""], escriba el nombre del activo y, a continuación, seleccione el activo en la lista.
+** Haga clic en *Paneles*, seleccione *Panel de activos*, busque un nombre de activo y haga clic en él. Aparece la página Asset.
+
+
+. Puede hacer lo siguiente:
++
+** Para ver la página de activos de la aplicación, haga clic en el nombre de la aplicación.
+** Para cambiar la aplicación asignada o para asignar una aplicación o aplicaciones adicionales, coloque el cursor sobre el nombre de la aplicación, si hay una aplicación asignada o sobre *ninguna*, si no hay ninguna aplicación asignada, haga clic en image:../media/pencil-icon-landing-page-be.gif[""], escriba para buscar una aplicación o selecciónela de la lista y, a continuación, haga clic en image:../media/check-box-ok.gif[""].
++
+Si elige una aplicación asociada a una entidad de negocio, la entidad de negocio se asignará automáticamente al activo. En este caso, cuando coloca el cursor sobre el nombre de la entidad comercial, se muestra la palabra _derived_. Si desea mantener la entidad sólo para el activo y no para la aplicación asociada, puede anular manualmente la asignación de la aplicación.
+
+** Para eliminar una aplicación, haga clic en image:../media/trash-can-query.gif[""].
+
+
+

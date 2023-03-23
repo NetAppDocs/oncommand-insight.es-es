@@ -1,0 +1,142 @@
+---
+permalink: faq/faq-anomaly-detection.html 
+sidebar: sidebar 
+keywords:  
+summary: Estas preguntas frecuentes responden a preguntas comunes sobre la detección de anomalías en OnCommand Insight. 
+---
+= Detección de anomalías
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Estas preguntas frecuentes responden a preguntas comunes sobre la detección de anomalías en OnCommand Insight.
+
+
+
+== ¿Qué es una anomalía?
+
+Las anomalías son eventos de cambio de rendimiento en IOPS, latencia, utilización, créditos de búfer a búfer y CPU que no se ajustan a los patrones previstos y observados con anterioridad. La detección de anomalías de OCI se dirige a una infraestructura de aplicaciones que presta servicio a la aplicación, buscando cambios en los patrones de procesamiento y en los comportamientos. Estos patrones de procesamiento cíclicos incluyen «flujos y ebbs» históricos en el rendimiento de las cargas de trabajo durante las horas de actividad empresarial y los fines de semana. El motor de detección de anomalías de OCI utiliza la inteligencia de aprendizaje automático para establecer un patrón básico "'normal'" y detecta cuando una aplicación definida se desvía de su comportamiento esperado.
+
+
+
+== ¿Cómo funciona la detección de anomalías en OCI?
+
+La detección de anomalías de OCI "es un método de supervisión proactivo aprovechando la inteligencia de aprendizaje automático basada en información histórica. Su capacidad para detectar anomalías de rendimiento emergentes mucho antes que los umbrales tradicionales proporciona tiempo adicional para que los administradores debata, planifiquen y mitiguen las preocupaciones antes de que se vean afectados los servicios de SLO o del centro de datos de la aplicación.
+
+Insight detecta y asigna automáticamente toda la pila de infraestructura que da soporte a la aplicación, comenzando por los recursos informáticos, a través de la estructura de switches y hasta los recursos de almacenamiento. OCI recopila contadores de rendimiento clave, como IOPS, latencia, información de nodos, uso del pool de almacenamiento, CPU del hipervisor, Y BB Credit Zero para cada recurso, luego alimenta esos datos al motor de detección de anomalías para su uso en el análisis de anomalías de aplicaciones. Los resultados de anomalías se actualizan dos veces por hora y están disponibles en el panel de control de aplicaciones, páginas de inicio de aplicaciones y el widget de tabla de consultas. La puntuación de anomalías se realiza recurso por recurso, contador por contador y se ofrece una puntuación de significado general para toda la infraestructura de aplicaciones.
+
+
+
+== ¿Qué versiones de OCI admiten la detección de anomalías?
+
+La detección de anomalías es compatible con OCI 7.2 y versiones posteriores.
+
+
+
+== ¿Para cuántas aplicaciones puede OCI habilitar la detección de anomalías?
+
+OCI admite la supervisión de hasta 48 aplicaciones críticas para el negocio.
+
+
+
+== ¿Cuántos motores de detección de anomalías se pueden desplegar?
+
+Un motor de detección de anomalías por servidor operativo OCI.
+
+
+
+== ¿Puedo implementar motores de detección de anomalías adicionales si tengo más de 48 aplicaciones?
+
+Sí, actualmente OCI admite el emparejamiento de un motor de detección de anomalías por servidor OCI. En entornos de servidores OCI múltiples, podrían ponerse en marcha motores de detección de anomalías adicionales y servidores operativos OCI de forma «en emparejamiento». Cada servidor solo tendría visibilidad en sus aplicaciones con funcionalidades de detección de anomalías activadas.
+
+
+
+== ¿Existen limitaciones de escala para el tamaño de un clúster/grupo de aplicaciones?
+
+Las directrices generales de ingeniería de OCI para optimizar el funcionamiento y escalar mediante las funcionalidades de detección de anomalías de Insight son las siguientes: Se admite un motor de detección de anomalías por servidor Insight. En OCI se pueden supervisar hasta 48 aplicaciones. Las infraestructuras de aplicaciones pueden tener hasta 4000 objetos. Los recursos insuficientes reducirán la escala en general.
+
+
+
+== ¿Cuáles son las licencias de OCI necesarias para la detección de anomalías?
+
+El análisis de detección de anomalías requiere detectar y realizar licencias.
+
+
+
+== ¿Cuánto tiempo se tarda en comenzar a detectar anomalías y ver los resultados?
+
+Los resultados de la puntuación de anomalías aparecerán en tan solo 2-3 horas después de activar la supervisión de aplicaciones.
+
+
+
+== ¿Cuánto tiempo debo esperar antes de utilizar los resultados de forma operativa?
+
+La calidad y precisión de los resultados del motor de detección de anomalías mejoran con el tiempo (semanas, meses, trimestres, etc.). La evaluación cíclica (periodicidad) normalmente comienza alrededor de la tercera semana. Para los patrones que abarcan un período de tiempo más largo (por ejemplo, mensualmente), el motor debe observar eventos repetidos antes de ajustar las puntuaciones de anomalías.
+
+
+
+== ¿Cuánto tiempo el motor de detección de anomalías mantiene su aprendizaje?
+
+El motor de detección de anomalías es altamente eficiente en la forma en que almacena la información de aprendizaje. El aprendizaje estadístico se puede medir en meses para los comportamientos anómalos de los objetos. De los conjuntos de datos típicos de Insight no se requiere ninguna «atención». El motor de detección de anomalías aprende y almacena datos que se determinan «significativos desde el punto de vista estadístico» con el tiempo y envejece hasta datos insignificantes cuando es necesario. Este mecanismo aumenta enormemente su duración de aprendizaje y reduce tanto los recursos necesarios para almacenar datos como el tiempo necesario para realizar análisis
+
+
+
+== Si puedo habilitar la detección de anomalías hoy, ¿puedo decirme qué anomalías ocurrieron la semana pasada?
+
+No, cuando se inicializa la detección de anomalías, el servidor Insight carga todos los datos de rendimiento existentes desde el servidor Insight para aumentar la comprensión de los motores de detección de anomalías de las aplicaciones supervisadas y sus infraestructuras. No se proporcionarán anomalías en los datos de rendimiento «preexistentes» ingeridos. Las anomalías sólo se notifican en los nuevos datos entrantes a medida que se analicen con los datos preexistentes. Las anomalías recién detectadas comenzarán a mostrarse en tan solo unas pocas horas.
+
+
+
+== ¿Cómo se calculan las puntuaciones de anomalías?
+
+Cada puntuación de anomalía de aplicación se calcula a partir de un resumen de las diferentes puntuaciones de activos individuales. El motor de detección de anomalías aprovecha más de 30 algoritmos y fórmulas complejos en su determinación de anomalías y puntuaciones proporcionadas. Los usuarios podrían comparar este tipo de técnica de puntuación de análisis con puntuaciones médicas similares, como las puntuaciones del índice de masa corporal (IMC), que consisten en numerosas variables y mediciones (peso, edad, altura, densidad, etc.).
+
+
+
+== ¿Qué representan cada una de las barras azules?
+
+Cada bloque de 3 barras representa un recurso y su rango de significancia de anomalía. Cuanto más azules sean las barras, mayor será el cambio en el comportamiento observado. Al hacer clic en los bloques se revela la importancia (de la anomalía), el recurso individual y los contadores.
+
+
+
+== ¿Por qué la puntuación de recursos individuales no corresponde a la puntuación total de la aplicación?
+
+Cada recurso se puntúa individualmente en función de su desviación en el comportamiento observado. La importancia de la puntuación individual de los recursos juega un papel en la puntuación total de la aplicación, pero también puede incluir otros factores analíticos y matemáticos.
+
+
+
+== ¿Puedo configurar la detección de anomalías para supervisar entidades de negocio u objetos con anotaciones asignadas?
+
+Actualmente, la detección de anomalías solo se puede activar en aplicaciones definidas. Cualquier objeto que se pueda asignar a una aplicación (máquinas virtuales, hipervisores, servidores, volúmenes y volúmenes internos) se puede agrupar y supervisar.
+
+
+
+== ¿OCI puede proporcionar notificaciones cuando haya puntuaciones de anomalías altas?
+
+Sí, puede crear políticas de rendimiento de aplicaciones basadas en la puntuación de anomalías de la aplicación. El cruce de umbrales definidos en la directiva activa alertas que le notifican acerca de problemas relacionados con los recursos de la aplicación.
+
+
+
+== ¿Qué sucede cuando desactiva la detección de anomalías en mi aplicación?
+
+Toda la información aprendida (anomalía histórica) para la infraestructura de aplicaciones se borra del motor de detección de anomalías. Todos los resultados de detección de anomalías se borran de la base de datos operativa de Insight.
+
+
+
+== ¿Cuándo debo utilizar umbrales estáticos?
+
+Los umbrales estáticos están indicados para emitir alertas de prácticas recomendadas sobre límites de recursos de infraestructura, así como para identificar la duración del evento. También contribuyen a la gestión de los niveles de servicio y generan alertas sobre diversas métricas de contador de errores, como restablecimientos de enlace, descartes de clase 3 y pérdida de sincronización.
+
+
+
+== ¿Qué planes existen para incluir otras métricas en la detección de anomalías?
+
+Los algoritmos y el modelo de aprendizaje automático de anomalías seguirán mejorando o ajustando a medida que haya nuevos datos estadísticos, la opinión del usuario y la mejora del producto.
+
+
+
+== ¿Están los resultados de anomalías disponibles en el almacén de datos (DWH)?
+
+Los resultados de la anomalía hoy en día no se envían (ETL-ed) al almacén de datos OCI. Los usuarios pueden localizar los resultados en la página de inicio de la aplicación OCI o en los widgets de tablas de consulta definidos por el usuario.

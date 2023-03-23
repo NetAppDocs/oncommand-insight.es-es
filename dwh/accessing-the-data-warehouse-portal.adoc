@@ -1,0 +1,29 @@
+---
+permalink: dwh/accessing-the-data-warehouse-portal.html 
+sidebar: sidebar 
+keywords:  
+summary: El portal almacén de datos OnCommand Insight es una interfaz de usuario basada en web que puede utilizar para actualizar la información del conector, ver colas de trabajos, programar compilaciones diarias, seleccionar anotaciones, configurar notificaciones de correo electrónico, ver información del sistema, generar la base de datos, restablecer el almacén de datos, realizar copias de seguridad y restaurar la base de datos, solucionar problemas, Administrar las cuentas de usuario del portal Data Warehouse and Reporting y acceder a la documentación y a los diagramas de esquema. 
+---
+= Acceso al portal Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El portal almacén de datos OnCommand Insight es una interfaz de usuario basada en web que puede utilizar para actualizar la información del conector, ver colas de trabajos, programar compilaciones diarias, seleccionar anotaciones, configurar notificaciones de correo electrónico, ver información del sistema, generar la base de datos, restablecer el almacén de datos, realizar copias de seguridad y restaurar la base de datos, solucionar problemas, Administrar las cuentas de usuario del portal Data Warehouse and Reporting y acceder a la documentación y a los diagramas de esquema.
+
+
+
+== Pasos
+
+. Inicie sesión en el portal del almacén de datos en `+https://hostname/dwh+`, donde `hostname` Es el nombre del sistema en el que está instalado el almacén de datos de OnCommand Insight.
+. Introduzca su nombre de usuario y contraseña.
+. Haga clic en *Inicio de sesión*.
++
+Se abrirá el portal Data Warehouse:
+
++
+image::../media/oci-dwh-admin-login-gif.gif[Inicio de sesión en Command Insight DWH]
+
+

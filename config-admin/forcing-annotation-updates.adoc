@@ -1,0 +1,29 @@
+---
+permalink: config-admin/forcing-annotation-updates.html 
+sidebar: sidebar 
+keywords:  
+summary: Si ha cambiado las anotaciones y desea utilizarlas inmediatamente en los informes, utilice una de las opciones de anotación de fuerza. 
+---
+= Forzar actualizaciones de anotaciones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si ha cambiado las anotaciones y desea utilizarlas inmediatamente en los informes, utilice una de las opciones de anotación de fuerza.
+
+
+
+== Pasos
+
+. En la interfaz de usuario web, haga clic en *Admin* y seleccione *solución de problemas*.
+. En la parte inferior de la página, haga clic en el enlace *solución avanzada de problemas*.
+. Haga clic en la ficha *acciones*.
+. Seleccione una de estas opciones:
++
+** *Actualizar anotaciones DWH* para forzar la actualización de las anotaciones en el almacén de datos a ser utilizadas para los informes.
+** *Actualizar anotaciones DWH (incl eliminado)* para forzar una actualización de anotaciones (incluidos los objetos eliminados) en el almacén de datos que se utilizará para los informes.
+
+
+

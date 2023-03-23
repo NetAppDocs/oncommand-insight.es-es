@@ -1,0 +1,22 @@
+---
+permalink: reporting/data-model-fact-and-dimension-tables.html 
+sidebar: sidebar 
+keywords:  
+summary: Cada modelo de datos incluye tablas de hechos y dimensiones. 
+---
+= Tablas de hechos y dimensiones del modelo de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cada modelo de datos incluye tablas de hechos y dimensiones.
+
+* Tablas de hechos: Contienen datos que se miden, por ejemplo, cantidad, capacidad bruta y útil. Contiene claves externas para las tablas de dimensiones.
+* Tablas de dimensiones: Contiene información descriptiva sobre hechos, por ejemplo, el centro de datos y las unidades de negocio. Una dimensión es una estructura, a menudo compuesta de jerarquías, que categoriza los datos. Los atributos dimensionales ayudan a describir los valores dimensionales.
+
+
+Utilizando atributos de cota diferentes o múltiples (vistos como columnas en los informes), se construyen informes que tienen acceso a los datos de cada dimensión descrita en el modelo de datos.
+
+Para obtener explicaciones de todos los elementos de datos utilizados en la creación de informes, consulte el Glosario de datos.

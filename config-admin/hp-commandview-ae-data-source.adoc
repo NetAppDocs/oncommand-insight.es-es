@@ -1,0 +1,277 @@
+---
+permalink: config-admin/hp-commandview-ae-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Los orígenes de datos HP CommandView Advanced Edition \(AE\) y CommandView AE CLI/SMI \(AE Lite\) admiten el inventario y el rendimiento de un servidor CommandView \(también conocido como HiCommand\) Device Manager.' 
+---
+= Origen de datos HP CommandView AE
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los orígenes de datos HP CommandView Advanced Edition (AE) y CommandView AE CLI/SMI (AE Lite) admiten el inventario y el rendimiento desde un servidor CommandView (también conocido como HiCommand) Device Manager.
+
+
+
+== Terminología
+
+OnCommand Insight adquiere la siguiente información de inventario de los orígenes de datos HP CommandView AE y AE Lite. Para cada tipo de activo que adquiere Insight, se muestra la terminología más común utilizada en este activo. Al ver o solucionar problemas de este origen de datos, tenga en cuenta la siguiente terminología:
+
+|===
+
+
+| Plazo del proveedor/modelo | Insight plazo 
+
+
+ a| 
+PDEV
+ a| 
+Disco
+
+
+
+ a| 
+Piscina de diarios
+ a| 
+Grupo de discos
+
+
+
+ a| 
+Cabina de almacenamiento
+ a| 
+Reducida
+
+
+
+ a| 
+Controlador del puerto
+ a| 
+Nodo de almacenamiento
+
+
+
+ a| 
+Grupo de cabinas, DP Pool
+ a| 
+Pool de almacenamiento
+
+
+
+ a| 
+Unidad lógica, LDEV
+ a| 
+Volumen
+
+|===
+[NOTE]
+====
+Estos son sólo mapas terminológicos comunes y es posible que no representen todos los casos de este origen de datos.
+
+====
+
+
+== Requisitos de inventario
+
+* Dirección IP del servidor de HiCommand Device Manager
+* Nombre de usuario y contraseña de sólo lectura para el software CommandView AE y los privilegios de interlocutor
+* La versión CommandView AE Lite del administrador de dispositivos sólo tiene licencia de CLI
+* Requisito de puerto: 2001
+
+
+
+
+== Requisitos de rendimiento
+
+* HDS rendimiento USP, USP V y VSP
++
+** El Monitor de rendimiento debe tener licencia.
+** El interruptor de supervisión debe estar activado.
+** La herramienta de exportación (`Export.exe`) Se debe copiar en el servidor OnCommand Insight.
+** La versión de la herramienta de exportación debe coincidir con la versión de microcódigo de la matriz de destino.
+
+
+* Rendimiento AMS de HDS
++
+** El Monitor de rendimiento debe tener licencia.
+** Es necesario instalar la utilidad CLI de Storage Navigator Modular 2 (SNM2) en el servidor OnCommand Insight.
+** Debe registrar todas las matrices de almacenamiento AMS, WMS y SMS cuyo rendimiento necesita adquirir OnCommand Insight mediante el siguiente comando:
++
+
+
+** Debe asegurarse de que todas las cabinas que registró aparezcan en la lista de resultados de este comando: `auunitref.exe`.
+
+
+
+
+
+
+== Configuración
+
+|===
+
+
+| *Campo* | *Descripción* 
+
+
+ a| 
+Servidor HiCommand
+ a| 
+Dirección IP o nombre de dominio completo del servidor HiCommand Device Manager
+
+
+
+ a| 
+Nombre de usuario
+ a| 
+Nombre de usuario del servidor de HiCommand Device Manager.
+
+
+
+ a| 
+Contraseña
+ a| 
+Contraseña utilizada para el servidor de HiCommand Device Manager.
+
+
+
+ a| 
+Dispositivos: Almacenamiento USP, USP V, VSP/R600
+ a| 
+Lista de dispositivos para los sistemas de almacenamiento VSP G1000 (R800), VSP (R700), HUS VM (HM700) y USP. Cada almacenamiento requiere:
+
+* Dirección IP de la cabina: Dirección IP del almacenamiento
+* User Name: Nombre de usuario para el almacenamiento
+* Password: Contraseña para el almacenamiento
+* Carpeta que contiene los archivos JAR de la Utilidad de exportación: La carpeta que contiene la utilidad de exportación `.jar` archivos
+
+
+
+
+ a| 
+SNM2Devices - almacenes WMS/SMS/AMS
+ a| 
+Lista de dispositivos para almacenamientos WMS/SMS/AMS. Cada almacenamiento requiere:
+
+* Dirección IP de la cabina: Dirección IP del almacenamiento
+* Ruta de la CLI de Storage Navigator: Ruta de la CLI de SNM2
+* Autenticación de cuenta válida: Seleccione esta opción para elegir una autenticación de cuenta válida
+* User Name: Nombre de usuario para el almacenamiento
+* Password: Contraseña para el almacenamiento
+
+
+
+
+ a| 
+Seleccione Tuning Manager para rendimiento
+ a| 
+Elija Tuning Manager para obtener rendimiento y anule otras opciones de rendimiento
+
+
+
+ a| 
+Tuning Manager Host
+ a| 
+Dirección IP o nombre de dominio completo del administrador de ajustes
+
+
+
+ a| 
+Puerto del administrador de ajuste
+ a| 
+Puerto utilizado para Tuning Manager
+
+
+
+ a| 
+Nombre de usuario de Tuning Manager
+ a| 
+Nombre de usuario de Tuning Manager
+
+
+
+ a| 
+Tuning Manager Password
+ a| 
+Contraseña de Tuning Manager
+
+|===
+[NOTE]
+====
+En HDS USP, USP V y VSP, cualquier disco puede pertenecer a más de un grupo de matrices.
+
+====
+
+
+== Configuración avanzada
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Puerto del servidor HiCommand
+ a| 
+Puerto utilizado para el administrador de dispositivos HiCommand
+
+
+
+ a| 
+HTTPS habilitado
+ a| 
+Seleccione para habilitar HTTPS
+
+
+
+ a| 
+Intervalo de sondeo de inventario (mín.)
+ a| 
+Intervalo entre sondeos de inventario (predeterminado 40 minutos)
+
+
+
+ a| 
+Elija "excluir" o "incluir" para especificar una lista
+ a| 
+Especifique si desea incluir o excluir la lista de matrices a continuación al recopilar datos
+
+
+
+ a| 
+Excluir o incluir dispositivos
+ a| 
+Lista separada por comas de los ID de dispositivo o los nombres de matriz que se van a incluir o excluir
+
+
+
+ a| 
+Consulte Administrador de hosts
+ a| 
+Seleccione para consultar al administrador de host
+
+
+
+ a| 
+Tiempo de espera HTTP (s)
+ a| 
+Tiempo de espera de conexión HTTP (60 segundos predeterminado)
+
+
+
+ a| 
+Intervalo de sondeo de rendimiento (s)
+ a| 
+Intervalo entre sondeos de rendimiento (predeterminado 300 segundos)
+
+
+
+ a| 
+Tiempo de espera de exportación en segundos
+ a| 
+Tiempo de espera de la utilidad de exportación (300 segundos predeterminados)
+
+|===

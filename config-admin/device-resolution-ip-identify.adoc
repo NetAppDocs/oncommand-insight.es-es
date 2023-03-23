@@ -1,0 +1,16 @@
+---
+permalink: config-admin/device-resolution-ip-identify.html 
+sidebar: sidebar 
+keywords:  
+summary: La pantalla de identificación IP muestra todos los recursos compartidos iSCSI y CIFS o NFS que se han identificado mediante la resolución automática del dispositivo o mediante la resolución manual del mismo. También se muestran dispositivos no identificados. La pantalla incluye la dirección IP, el nombre, el estado, el nodo iSCSI y el nombre compartido de los dispositivos. También se muestra el porcentaje de dispositivos identificados correctamente. 
+---
+= Resolución del dispositivo IP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La pantalla de identificación IP muestra todos los recursos compartidos iSCSI y CIFS o NFS que se han identificado mediante la resolución automática del dispositivo o mediante la resolución manual del mismo. También se muestran dispositivos no identificados. La pantalla incluye la dirección IP, el nombre, el estado, el nodo iSCSI y el nombre compartido de los dispositivos. También se muestra el porcentaje de dispositivos identificados correctamente.
+
+image::../media/ipidentify.gif[ipidentify]

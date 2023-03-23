@@ -1,0 +1,24 @@
+---
+permalink: config-admin/starting-a-automatic-device-resolution-update.html 
+sidebar: sidebar 
+keywords:  
+summary: Una actualización de resolución de dispositivo confirma los cambios manuales que se han agregado desde la última ejecución automática de resolución de dispositivo completa. La ejecución de una actualización se puede utilizar para confirmar y ejecutar sólo las nuevas entradas manuales realizadas en la configuración de resolución del dispositivo. No se ejecuta ninguna resolución completa del dispositivo. 
+---
+= Inicio de una actualización automática de resolución del dispositivo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una actualización de resolución de dispositivo confirma los cambios manuales que se han agregado desde la última ejecución automática de resolución de dispositivo completa. La ejecución de una actualización se puede utilizar para confirmar y ejecutar sólo las nuevas entradas manuales realizadas en la configuración de resolución del dispositivo. No se ejecuta ninguna resolución completa del dispositivo.
+
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web de Insight.
+. Haga clic en *Administrar* > *resolución del dispositivo*
+. En la pantalla *resolución del dispositivo*, haga clic en la flecha hacia abajo del botón *Ejecutar AR*.
+. Haga clic en *Actualizar* para iniciar la actualización.
+

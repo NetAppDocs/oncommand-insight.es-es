@@ -1,0 +1,50 @@
+---
+permalink: config-admin/setting-up-weekly-backups-for-your-oci-database.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede configurar backups semanales automáticos para la base de datos de Insight para proteger los datos. Estas copias de seguridad automáticas sobrescriben los archivos en el directorio de copia de seguridad especificado. 
+---
+= Configuración de backups semanales para la base de datos de Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede configurar backups semanales automáticos para la base de datos de Insight para proteger los datos. Estas copias de seguridad automáticas sobrescriben los archivos en el directorio de copia de seguridad especificado.
+
+
+
+== Acerca de esta tarea
+
+*Mejor práctica*: Cuando se configura la copia de seguridad semanal de la base de datos OCI, es necesario almacenar las copias de seguridad en un servidor diferente al que está utilizando Insight, en caso de que falle el servidor. No almacene ninguna copia de seguridad manual en el directorio de copia de seguridad semanal porque cada copia de seguridad semanal sobrescribe los archivos en el directorio.
+
+El archivo de copia de seguridad contendrá lo siguiente:
+
+* Datos de inventario
+* Hasta 7 días de datos de rendimiento
+
+
+
+
+== Pasos
+
+. En la barra de herramientas Insight, haga clic en *Admin* > *Configuración*.
+. Haga clic en la ficha *copia de seguridad y archivo*.
+. En la sección copia de seguridad semanal, seleccione *Activar copia de seguridad semanal*.
+. Introduzca la ruta de acceso a la *ubicación de copia de seguridad*. Puede hacerlo en el servidor local de Insight o en un servidor remoto al que se puede acceder desde el servidor de Insight.
++
+[NOTE]
+====
+La configuración de ubicación de copia de seguridad se incluye en la copia de seguridad en sí, por lo que si restaura la copia de seguridad en otro sistema, tenga en cuenta que la ubicación de la carpeta de copia de seguridad puede no ser válida en el sistema nuevo. Compruebe dos veces la configuración de ubicación de copia de seguridad después de restaurar una copia de seguridad.
+
+====
+. Seleccione la opción *Liberador de espacio* para guardar las dos últimas o las cinco últimas copias de seguridad.
+. Haga clic en *Guardar*.
+
+
+
+
+== Resultados
+
+También puede ir a *Admin* > *solución de problemas* para crear una copia de seguridad a petición.

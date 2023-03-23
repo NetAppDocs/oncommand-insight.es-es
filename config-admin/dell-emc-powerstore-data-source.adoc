@@ -1,0 +1,192 @@
+---
+permalink: config-admin/dell-emc-powerstore-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: El recopilador de datos Dell EMC PowerStore recopila información de inventario del sistema de almacenamiento Dell EMC PowerStore. Para la configuración, el recopilador de datos requiere la dirección IP de los procesadores de almacenamiento y un nombre de usuario y contraseña de sólo lectura. 
+---
+= Fuente de datos Dell EMC PowerStore
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El recopilador de datos Dell EMC PowerStore recopila información de inventario del sistema de almacenamiento Dell EMC PowerStore. Para la configuración, el recopilador de datos requiere la dirección IP de los procesadores de almacenamiento y un nombre de usuario y contraseña de sólo lectura.
+
+
+
+== Terminología
+
+OnCommand Insight adquiere la siguiente información de inventario a partir de la fuente de datos de EMC Data Domain. Para cada tipo de activo que adquiere Insight, se muestra la terminología más común utilizada en este activo. Al ver o solucionar problemas de este origen de datos, tenga en cuenta la siguiente terminología:
+
+|===
+
+
+| Plazo del proveedor/modelo | Insight plazo 
+
+
+ a| 
+host
+ a| 
+host
+
+
+
+ a| 
+asignación_volumen_host
+ a| 
+asignación_volumen_host
+
+
+
+ a| 
+Hardware (tiene unidades bajo objeto "extra_details"): Unidades
+ a| 
+Disco
+
+
+
+ a| 
+Dispositivo
+ a| 
+StoragePool
+
+
+
+ a| 
+Clúster
+ a| 
+Cabina de almacenamiento
+
+
+
+ a| 
+Nodo
+ a| 
+Nodo de almacenamiento
+
+
+
+ a| 
+puerto_fc
+ a| 
+Puerto
+
+
+
+ a| 
+volumen
+ a| 
+Volumen
+
+
+
+ a| 
+InternalVolume
+ a| 
+sistema_de_archivos
+
+
+
+ a| 
+Archivos
+ a| 
+Volumen interno
+
+
+
+ a| 
+MTree
+ a| 
+Qtree
+
+
+
+ a| 
+Cuota
+ a| 
+Cuota
+
+
+
+ a| 
+Unidades NFS y CIFS
+ a| 
+Fileshare
+
+|===
+[NOTE]
+====
+Estos son sólo mapas terminológicos comunes y es posible que no representen todos los casos de este origen de datos.
+
+====
+
+
+== Requisitos
+
+* Dirección IP o nombre de dominio completo del procesador de almacenamiento
+* Nombre de usuario y contraseña de solo lectura
+
+
+
+
+== Se explica el número de serie padre
+
+Tradicionalmente, Insight es capaz de generar informes sobre el número de serie de la cabina de almacenamiento o los números de serie de cada nodo de almacenamiento. Sin embargo, algunas arquitecturas de cabinas de almacenamiento no se alinean correctamente con esto. Un clúster PowerStore puede estar compuesto por 1-4 dispositivos y cada dispositivo tiene 2 nodos. Si el dispositivo en sí tiene un número de serie, ese número de serie no es ni el número de serie del clúster ni los nodos.
+
+El atributo "número de serie principal" en el objeto del nodo de almacenamiento se rellena de forma adecuada para las matrices Dell/EMC PowerStore cuando los nodos individuales se encuentran dentro de un dispositivo/gabinete intermedio que es sólo parte de un clúster mayor.
+
+
+
+== Configuración
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Puertas de enlace PowerStore
+ a| 
+Direcciones IP o nombres de dominio completos de almacenamiento PowerStore
+
+
+
+ a| 
+Nombre de usuario
+ a| 
+Nombre de usuario de PowerStore
+
+
+
+ a| 
+Contraseña
+ a| 
+Contraseña usada para PowerStore
+
+|===
+
+
+== Configuración avanzada
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Puerto HTTPS
+ a| 
+El valor predeterminado es 443
+
+
+
+ a| 
+Intervalo de sondeo de inventario (minutos)
+ a| 
+Intervalo entre sondeos de inventario. El valor predeterminado es 60 minutos.
+
+|===
+La colección de rendimiento PowerStore de OnCommand Insight utiliza los datos de fuente de granularidad de 5 minutos de PowerStore. De este modo, Insight sondea esos datos cada cinco minutos; por el contrario, no se puede configurar.

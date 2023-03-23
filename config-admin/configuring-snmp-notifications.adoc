@@ -1,0 +1,60 @@
+---
+permalink: config-admin/configuring-snmp-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight admite notificaciones SNMP para cambios en la configuración y la política de ruta global, así como incumplimientos. Por ejemplo, las notificaciones SNMP se envían cuando se superan los umbrales del origen de datos. 
+---
+= Configuración de notificaciones SNMP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight admite notificaciones SNMP para cambios en la configuración y la política de ruta global, así como incumplimientos. Por ejemplo, las notificaciones SNMP se envían cuando se superan los umbrales del origen de datos.
+
+
+
+== Antes de empezar
+
+Deben haberse completado los siguientes pasos:
+
+* Identificación de la dirección IP del servidor que consolida capturas para cada tipo de evento.
++
+Es posible que tenga que consultar con el administrador del sistema para obtener esta información.
+
+* Identificación del número de puerto mediante el cual la máquina designada obtiene capturas SNMP, para cada tipo de evento.
++
+El puerto predeterminado para las capturas SNMP es 162.
+
+* Compilando la MIB en su sitio.
++
+La MIB propiedad incluye el software de instalación para admitir las capturas OnCommand Insight. El MIB de NetApp es compatible con todo el software de gestión SNMP estándar y se puede encontrar en el servidor Insight de `<install dir>\SANscreen\MIBS\sanscreen.mib`.
+
+
+
+
+
+== Pasos
+
+. Haga clic en *Admin* y seleccione *Notificaciones*.
+. Desplácese hasta la sección *SNMP* de la página.
+. Haga clic en *acciones* y seleccione *Agregar fuente de captura*.
+. En el cuadro de diálogo *Agregar destinatarios de capturas SNMP*, introduzca estos valores:
++
+** *IP*
++
+La dirección IP a la que OnCommand Insight envía mensajes de captura SNMP.
+
+** *Puerto*
++
+El número de puerto al que OnCommand Insight envía mensajes de captura SNMP.
+
+** *Cadena comunitaria*
++
+Utilice «'public» para los mensajes de captura SNMP.
+
+
+
+. Haga clic en *Guardar*.
+

@@ -1,0 +1,42 @@
+---
+permalink: config-admin/expert-view.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La sección Vista de experto de una página de activos le permite ver una muestra de rendimiento del activo base en función del número de métricas aplicables en contexto con un período de tiempo elegido \(3 horas, 24 horas, 3 días, 7 días, o un período de tiempo personalizado\) en el gráfico de rendimiento y cualquier activo relacionado con él.' 
+---
+= Vista experta
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La sección Vista de experto de una página de activos le permite ver una muestra de rendimiento del activo base en función del número de métricas aplicables en contexto con un período de tiempo elegido (3 horas, 24 horas, 3 días, 7 días, o un período de tiempo personalizado) en el gráfico de rendimiento y cualquier activo relacionado con él.
+
+A continuación se muestra un ejemplo de la sección Vista de experto en una página de activos de volumen:
+
+image::../media/expert-view-section.gif[sección de vista de expertos]
+
+Puede seleccionar las métricas que desea ver en el gráfico de rendimiento durante el período de tiempo seleccionado.
+
+La sección Recursos muestra el nombre del activo base y el color que representa el activo base en el gráfico de rendimiento. Si la sección correlación superior no contiene un activo que desea ver en el gráfico de rendimiento, puede utilizar el cuadro *Buscar activos* de la sección Recursos adicionales para localizar el activo y agregarlo al gráfico de rendimiento. A medida que se añaden recursos, aparecen en la sección Recursos adicionales.
+
+También se muestra en la sección Resources, cuando corresponda, cualquier activo relacionado con el activo base en las siguientes categorías:
+
+* Arriba correlacionado
++
+Muestra los activos con una alta correlación (porcentaje) con una o más métricas de rendimiento al activo base.
+
+* Principales colaboradores
++
+Muestra los activos que contribuyen (porcentaje) al activo base.
+
+* Avaricia
++
+Muestra los activos que eliminan los recursos del sistema del activo al compartir los mismos recursos, como hosts, redes y almacenamiento.
+
+* Degradado
++
+Muestra los activos agotados de los recursos del sistema debido a este activo.
+
+

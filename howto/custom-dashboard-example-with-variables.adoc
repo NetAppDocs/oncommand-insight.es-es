@@ -1,0 +1,137 @@
+---
+permalink: howto/custom-dashboard-example-with-variables.html 
+sidebar: sidebar 
+keywords:  
+summary: Cree un panel personalizado para el análisis del almacenamiento que contenga variables de almacenamiento, pool de almacenamiento, nodo, nivel, utilización y latencia. 
+---
+= Consola de uso de nodo de almacenamiento de ejemplo con variables
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cree un panel personalizado para el análisis del almacenamiento que contenga variables de almacenamiento, pool de almacenamiento, nodo, nivel, utilización y latencia.
+
+
+
+== Antes de empezar
+
+Se recomienda estar familiarizado con los paneles de control de Insight, aunque no sea necesario.
+
+
+
+== Acerca de esta tarea
+
+El siguiente procedimiento creará una consola personalizada de Descripción general del análisis del almacenamiento que utiliza variables para el almacenamiento, el pool de almacenamiento, el nodo, el nivel, la utilización y la latencia. Las variables del siguiente ejemplo se utilizarán para filtrar los activos o métricas mostrados en uno o varios widgets disponibles en el panel. Los widgets que utilizan estas variables como filtros se actualizarán con contenido filtrado bajo demanda según los valores introducidos en los campos variables del panel, lo que permite filtrar rápidamente múltiples gráficos y gráficos para profundizar en un área de interés específica.
+
+Siguiendo los pasos de este ejemplo, creará un panel como el siguiente. Puede cambiar estos widgets o añadir cualquier número de widgets adicionales para resaltar los datos que elija.
+
+image::../media/node-dashboard-example-2.gif[ejemplo de consola de nodos 2]
+
+
+
+== Pasos
+
+. Cree un nuevo panel y déle el nombre «'Análisis: Descripción general del almacenamiento» o algo igualmente descriptivo.
+. Haga clic en el menú desplegable *variable* y seleccione *Tipo de variable de texto*. De forma predeterminada, la variable se denomina _$var1_. Haga clic en _$var1_ para editar el nombre y cámbielo a _$Storage_ y, a continuación, haga clic en la Marca de verificación para guardar la variable. Repita este procedimiento para crear variables de texto para _$node_, _$pool_ y _$volume_.
+. Repita el proceso anterior para crear variables de *número* con el nombre _$utilizacion_ y _$latencia_.
+. Haga clic en el menú desplegable *variable* y busque la anotación _Tier_. Selecciónelo para crear una variable denominada _$Tier_.
++
+Puede agregar variables en cualquier momento, sin embargo, es más fácil crearlas por adelantado y, por tanto, ponerlas a disposición de todos los widgets a medida que los cree.
+
+. Para agregar un widget, haga clic en el menú desplegable *Widget* y seleccione un widget **gráfico de línea**o *gráfico de área*. Nombre el widget "'utilización de nodos'". Haga clic en el tipo de activo *almacenamiento* y cámbielo a *nodo de almacenamiento*. Seleccione *utilización - total* para los datos del gráfico.
+. Haga clic en el botón *filtro por +* para añadir un filtro. Busque y seleccione *almacenamiento*, haga clic en *cualquiera* y seleccione la variable _$Storage_.
+. Haga clic en el botón**+**para agregar otro filtro para *Nombre*. Establezca la variable en _$node_.
++
+Se pueden asignar diferentes variables al filtro de nombres de anotaciones. Utilice el par nombre/variable en el nivel más bajo en función del objeto del widget. Por ejemplo:
+
++
+** Puede asignar la variable _$node_ al filtro *Name* para un widget centrado en nodo.
+** Puede asignar la variable _$pool_ al filtro *Nombre* para un widget centrado en el grupo.
+
+
+. Haga clic en el botón**+ para agregar otro filtro para *utilización - total (%)*. Establezca la variable en _>= $Utilization_.
+. Haga clic en el campo *X* después del campo ** Roll up** para contraer el campo.
+. Seleccione *Mostrar Top 5* y haga clic en *Guardar* para guardar el widget y volver a su panel.
++
+Su widget debe tener un aspecto parecido al siguiente:
+
++
+image::../media/widget-node-util-1.gif[nodo de widget 1]
+
+. Añada otro widget de gráfico de línea o área a la consola. Seleccione *nodo de almacenamiento* como el tipo de activo y *latencia - total* como la métrica que se va a trazar.
+. Haga clic en el botón *filtro por +* para agregar filtros para *almacenamiento: $Storage* y *Nombre: $node*.
+. Agregue un filtro para *latencia - total* y seleccione la variable *$latencia*.
+. Asigne un nombre al widget «'latencia de nodos'» y guárdelo.
+. Puede agregar tablas auxiliares para mostrar más detalles de los gráficos que ha creado, por ejemplo, utilización de nodos máxima o media. Añada un widget de *Tabla* al panel y seleccione *nodo de almacenamiento* como tipo de activo, y cree filtros para *almacenamiento: $almacenamiento*, *Nombre: $nodo* y *utilización - total: $utilización*.
+. Agregue columnas a la tabla para *utilización - Max*, *utilización - total* o cualquier otra columna deseada.
+. Asigne un nombre al widget «'utilización máxima y media de nodos'» y guárdelo.
++
+image::../media/nodeutiltablesettings.gif[nodeutilings]
+
+. Repita los pasos para crear una tabla para latencia de nodos, mostrando *latencia - máx*, *latencia - total* u otras columnas como desee.
+. Para redondear el panel, puede añadir widgets de tabla y gráfico adicionales para algunos de los siguientes elementos o todos:
+
+
+|===
+
+
+| Carta | Tabla 
+
+
+ a| 
+Utilización del pool de almacenamiento
+ a| 
+Máximo de pool de almacenamiento y promedio de aprovechamiento
+
+
+
+ a| 
+Rendimiento del pool de almacenamiento
+ a| 
+Máximo y promedio de rendimiento del pool de almacenamiento
+
+
+
+ a| 
+Latencia del volumen
+ a| 
+Pico del volumen y latencia media
+
+
+
+ a| 
+IOPS de volumen
+ a| 
+Pico del volumen y promedio de IOPS
+
+|===
+. Puede mover y cambiar el tamaño de los widgets en cualquier posición que desee en el panel de control. Cuando termine, asegúrese de *Guardar* el panel de control.
++
+El panel final tendrá un aspecto similar a este:
+
++
+image::../media/node-dashboard-example-2.gif[ejemplo de consola de nodos 2]
+
+. Puede utilizar las variables para centrarse en activos específicos del panel. A medida que introduce valores en los campos de variables, los widgets se actualizan automáticamente para reflejar esas variables. Por ejemplo, al introducir «'15'» en el campo $Utilization variable, los widgets que utilizan dicha actualización de variable para mostrar sólo los activos con utilización total >= 15%.
++
+Widget de utilización de nodos que muestra los 5 principales nodos:
+
++
+image::../media/nodeutil-unfiltered.gif[nodo sin filtrar]
+
++
+Widget de utilización de nodos que muestra los nodos con un aprovechamiento del 15 % o superior:
+
++
+image::../media/nodeutil-filtered.gif[nodo filtrado]
+
+. Tenga en cuenta lo siguiente al crear sus widgets:
++
+** La variable $Tier sólo afectará a los recursos anotados con la anotación *Tier*.
+** No todos los filtros afectarán a todos los widgets, dependiendo de si el widget está diseñado para aceptar las variables especificadas.
+** Las variables de número se aplican como "'mayor o igual a'" el valor especificado. Tenga en cuenta que cualquier variable se puede utilizar como filtro en cualquier widget de cualquier nivel de una jerarquía de almacenamiento, siempre que la variable sea válida para el activo en el que se esté ejecutando el widget. A medida que desciende de un nivel de nodo a un widget de volumen, existen más variables para su asignación como filtros. Por ejemplo, en un widget de nivel de nodo de almacenamiento, las variables _Storage_ y _Name_ se pueden asignar como filtros. En el nivel de pools de almacenamiento, _Storage_, _Nodes_, _Storage Pools_ y _Name_ están todos disponibles. Asigne las variables según corresponda y utilice la variable $name en el nivel más bajo de la pila. Al hacerlo, la variable $name podrá filtrar el nombre real del activo en el que se está ejecutando el widget.
+
+
+

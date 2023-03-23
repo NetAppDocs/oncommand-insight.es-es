@@ -1,0 +1,32 @@
+---
+permalink: overview/insight-for-administrators-and-planners.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight proporciona información que es vital para los administradores de almacenamiento, los gestores y los arquitectos de almacenamiento para llevar a cabo tareas de solución de problemas y análisis. 
+---
+= Cómo utilizan Insight los administradores, gestores y planificadores
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight proporciona información que es vital para los administradores de almacenamiento, los gestores y los arquitectos de almacenamiento para llevar a cabo tareas de solución de problemas y análisis.
+
+Los administradores de almacenamiento con experiencia utilizan OnCommand Insight junto con sus conocimientos en almacenamiento de red para realizar las tareas habituales:
+
+* Gestione el entorno SAN y NAS.
+* Trabajar con ingenieros DE SAN en cuestiones de red.
+* Evalúe, pruebe e integre nuevas tecnologías de almacenamiento en el entorno.
+* Solucione problemas de rendimiento, alertas, infracciones de políticas, infracciones y vulnerabilidades.
+
+
+Los gestores y los planificadores de redes utilizan OnCommand Insight para llevar a cabo estas tareas empresariales:
+
+* Planificación de la capacidad
+* Desarrollar los plazos y presupuestos de los proyectos.
+* Evaluar y revisar los planes del proyecto para satisfacer las cambiantes demandas del mismo.
+* Gestionar la planificación y los gastos del proyecto.
+* Compre hardware y software.
+* Proporcione informes empresariales para la gestión de la capacidad, la facturación del pago por uso, el dimensionamiento adecuado y los acuerdos de nivel de servicio.
+

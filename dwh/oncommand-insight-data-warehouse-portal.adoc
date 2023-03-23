@@ -1,0 +1,32 @@
+---
+permalink: dwh/oncommand-insight-data-warehouse-portal.html 
+sidebar: sidebar 
+keywords:  
+summary: El portal de almacén de datos es una interfaz de usuario basada en web que se utiliza para configurar las opciones y configurar horarios fijos para recuperar datos. Desde el portal del almacén de datos, también puede acceder al portal de informes de OnCommand Insight. 
+---
+= Lo que puede hacer utilizando el portal de almacén de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El portal de almacén de datos es una interfaz de usuario basada en web que se utiliza para configurar las opciones y configurar horarios fijos para recuperar datos. Desde el portal del almacén de datos, también puede acceder al portal de informes de OnCommand Insight.
+
+Con el portal Data Warehouse, puede hacer lo siguiente:
+
+* Acceda al portal de informes de OnCommand Insight para ver informes prediseñados o para crear informes personalizados con herramientas de creación de informes.
+* Consolide varias bases de datos de OnCommand Insight.
+* Gestionar conexiones a servidores OnCommand Insight.
+* Compruebe el estado de los trabajos o consultas actuales que se están ejecutando.
+* Programar compilaciones de almacén de datos.
+* Edite el nombre del sitio.
+* Vea la versión del almacén de datos y el historial de actualizaciones, incluida información específica como versiones de módulos, sitios y licencias.
+* Importar anotaciones.
+* Configurar una compilación a partir del historial.
+* Vea la documentación de Data Warehouse y el esquema de base de datos.
+* Restablezca la base de datos del almacén de datos.
+* Realice una copia de seguridad y restaure la base de datos de Data Warehouse.
+* Solucionar problemas relacionados con el almacén de datos.
+* Administrar cuentas de usuario.
+

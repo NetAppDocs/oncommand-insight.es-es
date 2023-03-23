@@ -1,0 +1,554 @@
+---
+permalink: install-windows/oncommand-insight-licenses.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight funciona con licencias que permiten utilizar funciones específicas en Insight Server. 
+---
+= Licencias OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight funciona con licencias que permiten utilizar funciones específicas en Insight Server.
+
+* * Descubra*
++
+Discover es la licencia básica de Insight que admite inventario. Debe tener una licencia Discover para usar OnCommand Insight y la licencia Discover debe emparejarse con, al menos, una de las licencias de Assure, Perform o Plan.
+
+* *Asegurar*
++
+Una licencia de Assure ofrece soporte para la funcionalidad de garantía, que incluye una política de ruta global y DE SAN, y la gestión de infracciones. Una licencia Assure también le permite ver y gestionar vulnerabilidades.
+
+* *Realizar*
++
+Una licencia Perform admite la supervisión del rendimiento en páginas de activos, widgets de panel, consultas, etc., así como la gestión de directivas e infracciones de rendimiento.
+
+* *Plan*
++
+Una licencia Plan soporta funciones de planificación, incluyendo el uso y asignación de recursos.
+
+* *Paquete de utilización de host*
++
+Una licencia de utilización de host admite la utilización del sistema de archivos en hosts y máquinas virtuales.
+
+* *Creación de informes*
++
+Una licencia de creación de informes admite autores adicionales para la creación de informes. Esta licencia requiere la licencia Plan.
+
+
+
+Los módulos de OnCommand Insight tienen licencia por período anual o perpetuas:
+
+* Por terabyte de capacidad supervisada para detectar, asegurar, planificar y llevar a cabo módulos
+* Por número de hosts para el paquete de utilización de host
+* Por número de unidades adicionales de proautores de Cognos necesarias para la creación de informes
+
+
+Las claves de licencia son un conjunto de cadenas únicas que se generan para cada cliente. Puede obtener claves de licencia de su representante de OnCommand Insight.
+
+Las licencias instaladas controlan las siguientes opciones disponibles en el software:
+
+* * Descubra*
++
+Adquirir y gestionar inventario (Fundación)
+
++
+Supervisar cambios y gestionar directivas de inventario
+
+* *Asegurar*
++
+Consulte y gestione las directivas e infracciones de rutas SAN
+
++
+Ver y gestionar vulnerabilidades
+
++
+Consulte y gestione tareas y migraciones
+
+* *Plan*
++
+Ver y administrar solicitudes
+
++
+Ver y gestionar tareas pendientes
+
++
+Ver y gestionar infracciones de reserva
+
++
+Ver y gestionar infracciones de saldo de puertos
+
+* *Realizar*
++
+Supervise los datos de rendimiento, incluidos los datos de los widgets del panel, las páginas de activos y las consultas
+
++
+Consulte y gestione las políticas de rendimiento e infracciones
+
+
+
+En las tablas siguientes se proporcionan detalles de las funciones disponibles con y sin la licencia Perform para usuarios administradores y usuarios no administradores.
+
+|===
+
+
+| Función (administrador) | Con realizar licencia | Sin realizar licencia 
+
+
+ a| 
+Cliente más
+ a| 
+Sí
+ a| 
+Sin datos ni gráficos de rendimiento; sin widgets relacionados con la detección de anomalías
+
+
+
+ a| 
+Máquina virtual
+ a| 
+Sí
+ a| 
+No hay datos ni gráficos de rendimiento
+
+
+
+ a| 
+Hipervisor
+ a| 
+Sí
+ a| 
+No hay datos ni gráficos de rendimiento
+
+
+
+ a| 
+Host
+ a| 
+Sí
+ a| 
+No hay datos ni gráficos de rendimiento
+
+
+
+ a| 
+Almacén de datos
+ a| 
+Sí
+ a| 
+No hay datos ni gráficos de rendimiento
+
+
+
+ a| 
+VMDK
+ a| 
+Sí
+ a| 
+No hay datos ni gráficos de rendimiento
+
+
+
+ a| 
+Volumen interno
+ a| 
+Sí
+ a| 
+No hay datos ni gráficos de rendimiento
+
+
+
+ a| 
+Volumen
+ a| 
+Sí
+ a| 
+No hay datos ni gráficos de rendimiento
+
+
+
+ a| 
+Del banco de almacenamiento
+ a| 
+Sí
+ a| 
+No hay datos ni gráficos de rendimiento
+
+
+
+ a| 
+Disco
+ a| 
+Sí
+ a| 
+No hay datos ni gráficos de rendimiento
+
+
+
+ a| 
+Reducida
+ a| 
+Sí
+ a| 
+No hay datos ni gráficos de rendimiento
+
+
+
+ a| 
+Nodo de almacenamiento
+ a| 
+Sí
+ a| 
+No hay datos ni gráficos de rendimiento
+
+
+
+ a| 
+Estructura
+ a| 
+Sí
+ a| 
+No hay datos ni gráficos de rendimiento
+
+
+
+ a| 
+Puerto del switch
+ a| 
+Sí
+ a| 
+Sin datos de rendimiento ni gráficos; «'errores de puerto'» muestra «'N/A'»
+
+
+
+ a| 
+Puerto de almacenamiento
+ a| 
+Sí
+ a| 
+Sí
+
+
+
+ a| 
+Puerto NPV
+ a| 
+Sí
+ a| 
+No hay datos ni gráficos de rendimiento
+
+
+
+ a| 
+Conmutador
+ a| 
+Sí
+ a| 
+No hay datos ni gráficos de rendimiento
+
+
+
+ a| 
+Interruptor NPV
+ a| 
+Sí
+ a| 
+No hay datos ni gráficos de rendimiento
+
+
+
+ a| 
+Qtrees
+ a| 
+Sí
+ a| 
+No hay datos ni gráficos de rendimiento
+
+
+
+ a| 
+Cuota
+ a| 
+Sí
+ a| 
+No hay datos ni gráficos de rendimiento
+
+
+
+ a| 
+Ruta
+ a| 
+Sí
+ a| 
+No hay datos ni gráficos de rendimiento
+
+
+
+ a| 
+Zona
+ a| 
+Sí
+ a| 
+No hay datos ni gráficos de rendimiento
+
+
+
+ a| 
+Miembro de la zona
+ a| 
+Sí
+ a| 
+No hay datos ni gráficos de rendimiento
+
+
+
+ a| 
+Dispositivo genérico
+ a| 
+Sí
+ a| 
+No hay datos ni gráficos de rendimiento
+
+
+
+ a| 
+Cinta
+ a| 
+Sí
+ a| 
+No hay datos ni gráficos de rendimiento
+
+
+
+ a| 
+Enmascaramiento
+ a| 
+Sí
+ a| 
+No hay datos ni gráficos de rendimiento
+
+
+
+ a| 
+Sesiones ISCSI
+ a| 
+Sí
+ a| 
+No hay datos ni gráficos de rendimiento
+
+
+
+ a| 
+Portales de red ICSI
+ a| 
+Sí
+ a| 
+No hay datos ni gráficos de rendimiento
+
+
+
+ a| 
+Búsqueda
+ a| 
+Sí
+ a| 
+Sí
+
+
+
+ a| 
+Admin
+ a| 
+Sí
+ a| 
+Sí
+
+
+
+ a| 
+Consola
+ a| 
+Sí
+ a| 
+Sí
+
+
+
+ a| 
+Widgets
+ a| 
+Sí
+ a| 
+Parcialmente disponible (solo están disponibles los widgets de activo, consulta y administrador)
+
+
+
+ a| 
+Panel de infracciones
+ a| 
+Sí
+ a| 
+Oculto
+
+
+
+ a| 
+Panel de activos
+ a| 
+Sí
+ a| 
+Parcialmente disponible (los widgets de IOPS de almacenamiento y IOPS de máquina virtual están ocultos)
+
+
+
+ a| 
+Gestione las políticas de rendimiento
+ a| 
+Sí
+ a| 
+Oculto
+
+
+
+ a| 
+Gestionar anotaciones
+ a| 
+Sí
+ a| 
+Sí
+
+
+
+ a| 
+Administrar reglas de anotación
+ a| 
+Sí
+ a| 
+Sí
+
+
+
+ a| 
+Gestione las aplicaciones
+ a| 
+Sí
+ a| 
+Sí
+
+
+
+ a| 
+Consultas
+ a| 
+Sí
+ a| 
+Sí
+
+
+
+ a| 
+Administrar entidades comerciales
+ a| 
+Sí
+ a| 
+Sí
+
+|===
+|===
+
+
+| Función | Usuario: Con licencia Perform | Huésped - con licencia de ejecución | Usuario: Sin licencia de ejecución | Huésped - sin licencia de ejecución 
+
+
+ a| 
+Panel de activos
+ a| 
+Sí
+ a| 
+Sí
+ a| 
+Parcialmente disponible (los widgets de IOPS de almacenamiento y IOPS de máquina virtual están ocultos)
+ a| 
+Parcialmente disponible (los widgets de IOPS de almacenamiento y IOPS de máquina virtual están ocultos)
+
+
+
+ a| 
+Consola personalizada
+ a| 
+Sólo visualización (sin opciones de creación, edición o guardado)
+ a| 
+Sólo visualización (sin opciones de creación, edición o guardado)
+ a| 
+Sólo visualización (sin opciones de creación, edición o guardado)
+ a| 
+Sólo visualización (sin opciones de creación, edición o guardado)
+
+
+
+ a| 
+Gestione las políticas de rendimiento
+ a| 
+Sí
+ a| 
+Oculto
+ a| 
+Oculto
+ a| 
+Oculto
+
+
+
+ a| 
+Gestionar anotaciones
+ a| 
+Sí
+ a| 
+Oculto
+ a| 
+Sí
+ a| 
+Oculto
+
+
+
+ a| 
+Gestione las aplicaciones
+ a| 
+Sí
+ a| 
+Oculto
+ a| 
+Sí
+ a| 
+Oculto
+
+
+
+ a| 
+Administrar entidades comerciales
+ a| 
+Sí
+ a| 
+Oculto
+ a| 
+Sí
+ a| 
+Oculto
+
+
+
+ a| 
+Consultas
+ a| 
+Sí
+ a| 
+Ver y editar sólo (opción sin guardar)
+ a| 
+Sí
+ a| 
+Ver y editar sólo (opción sin guardar)
+
+|===

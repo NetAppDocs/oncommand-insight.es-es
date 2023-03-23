@@ -1,0 +1,39 @@
+---
+permalink: howto/querying-and-annotating-data-centers.html 
+sidebar: sidebar 
+keywords:  
+summary: Utilice consultas para asociar sus anotaciones a los activos adecuados del entorno. En este ejemplo, asociaremos las anotaciones del centro de datos a los activos seleccionados. 
+---
+= Consulta y anotación de centros de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilice consultas para asociar sus anotaciones a los activos adecuados del entorno. En este ejemplo, asociaremos las anotaciones del centro de datos a los activos seleccionados.
+
+Durante la adquisición del origen de datos, Insight recopila (entre otra información) los nombres de cada activo que detecta. En este ejemplo, suponemos que todas sus cabinas de almacenamiento se han nombrado según el centro de datos en el que residen, como «SVL_NN_<label>» para cabinas que residen en Sunnyvale. Las consultas de Insight facilitan la anotación de estos activos.
+
+* Inicie sesión en Insight como usuario con permisos administrativos
+* Seleccione *consultas* > *+Nueva consulta*
+* Coloque el campo *Buscar...* y seleccione *almacenamiento*. Se muestra una lista de todas las cabinas de almacenamiento.
+* En el campo de filtro *Nombre*, escriba "SVL" y haga clic en image:../media/check-box-ok.gif[""] (O pulse Intro). La lista de resultados de la consulta se actualiza ahora para mostrar sólo las matrices que contienen la cadena "SVL".
+* Al filtrar, puede utilizar cualquiera de los siguientes caracteres solos o combinados para afinar la búsqueda en cualquier cuadro de texto de la página Consulta:
++
+** Un asterisco le permite buscar todo. Por ejemplo, «'vol*rhel'» muestra los activos que empiezan con «'vol'» y terminan con «'rhel'».
+** El signo de interrogación le permite buscar un número específico de caracteres. Por ejemplo, el filtrado para "SVL-PRD??-S12" muestra SVL-PRD12-S12, SVL-PRD13-S12, etc.
+** El operador OR permite especificar varias entidades. Por ejemplo, «'FAS2240 O CX600 O FAS3270'» encuentra varios modelos de almacenamiento.
+
+
+* Seleccione las cabinas de almacenamiento que desea asociar a este centro de datos. Cuando haya seleccionado todas las matrices deseadas, haga clic en el botón *acciones* y seleccione *Editar anotación*.
+* En el cuadro de diálogo *Agregar anotación*, seleccione la anotación *Centro de datos*.
+* Elija el *valor* deseado, por ejemplo, "DC1_SVL".
+* Haga clic en *Guardar*.
+* Si la columna Centro de datos no está visible en la página resultados de la consulta, selecciónela pulsando el botón *columnas* y eligiendo *Centro de datos*.
+* Si lo desea, puede guardar la consulta para utilizarla en el futuro haciendo clic en el botón *Guardar* de la esquina superior derecha de la página Consulta y dándole un nombre único y explícito. Por ejemplo, «arrays de almacenamiento: Centro de datos SVL».
+
+
+Si desea asociar la anotación "SVL" con otros activos, cree una nueva consulta y siga estos pasos para cada tipo de activo que desee.
+
+Repita estos pasos para los activos de cada centro de datos.

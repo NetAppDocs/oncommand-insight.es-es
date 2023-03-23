@@ -1,0 +1,69 @@
+---
+permalink: config-admin/changing-the-time-segment-of-the-data-displayed.html 
+sidebar: sidebar 
+keywords:  
+summary: De forma predeterminada, una página de activo muestra las últimas 24 horas de datos; sin embargo, puede cambiar el segmento de datos que se muestra seleccionando otro tiempo fijo o un intervalo de tiempo personalizado para ver menos o más datos. 
+---
+= Cambiar el intervalo de tiempo de los datos mostrados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+De forma predeterminada, una página de activo muestra las últimas 24 horas de datos; sin embargo, puede cambiar el segmento de datos que se muestra seleccionando otro tiempo fijo o un intervalo de tiempo personalizado para ver menos o más datos.
+
+
+
+== Acerca de esta tarea
+
+Puede cambiar el segmento de tiempo de los datos mostrados mediante una opción que se encuentra en cada página de activos, independientemente del tipo de activo.
+
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web de OnCommand Insight.
+. Localice una página de activos realizando una de las siguientes acciones:
++
+** En la barra de herramientas Insight, haga clic en image:../media/search-assets-icon.gif[""], escriba el nombre del activo y, a continuación, seleccione el activo en la lista.
+** Haga clic en *Paneles*, seleccione *Panel de activos*, busque un nombre de activo y haga clic en él. Aparece la página Asset.
+
+
+. En la esquina superior izquierda de la página, haga clic en cualquiera de los siguientes iconos de tiempo para cambiar el segmento de datos que se muestra:
++
+** *3h*
++
+Muestra las últimas tres horas de datos.
+
+** *24h*
++
+Muestra las últimas 24 horas de datos.
+
+** *3d*
++
+Muestra los últimos tres días de datos.
+
+** *7d*
++
+Muestra los últimos siete días de datos.
+
+** *30d*
++
+Muestra los últimos treinta días de datos.
+
+** *Personalizado*
++
+Muestra un cuadro de diálogo que permite elegir un intervalo de tiempo personalizado. Puede visualizar hasta 31 días de datos a la vez.
+
+
+
+. Si elige *personalizado*, haga lo siguiente:
++
+.. Haga clic en el campo de fecha y seleccione un mes, día y año para la fecha de inicio.
+.. Haga clic en la lista Hora y seleccione una hora de inicio.
+.. Repita los pasos a y b para los datos y la hora final.
+.. Haga clic en image:../media/check-box-ok.gif[""].
+
+
+

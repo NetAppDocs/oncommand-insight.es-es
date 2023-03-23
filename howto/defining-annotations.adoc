@@ -1,0 +1,44 @@
+---
+permalink: howto/defining-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: 'A la hora de personalizar OnCommand Insight para realizar un seguimiento de los datos según sus requisitos corporativos, puede definir anotaciones especializadas necesarias para obtener una imagen completa de los datos: Por ejemplo, una anotación puede definir el fin de vida de un activo, o el centro de datos en el que reside el activo, o un nivel de almacenamiento que defina el coste por GB del almacenamiento.' 
+---
+= Definición de anotaciones para utilizar con pago por uso
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A la hora de personalizar OnCommand Insight para realizar un seguimiento de los datos según sus requisitos corporativos, puede definir anotaciones especializadas necesarias para obtener una imagen completa de los datos: Por ejemplo, una anotación puede definir el fin de vida de un activo, o el centro de datos en el que reside el activo, o un nivel de almacenamiento que define el coste por GB del almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+El ejemplo del informe de pago por uso de esta guía proporciona datos para nivel de servicio y nivel de servicio. Debe crear anotaciones para cada nivel de servicio y nivel y, a continuación, definir costes para los niveles de servicio.
+
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web de Insight
+. Haga clic en *Administrar* > *Anotaciones*
++
+Aparece la página anotaciones.
+
+. Coloque el cursor sobre el nivel de servicio o la anotación de nivel y haga clic en image:../media/edit-annotation-icon.gif[""].
++
+Aparece el cuadro de diálogo Editar anotación.
+
+. Haga clic en *AÑADIR* para añadir nuevos niveles y costes.
++
+En el ejemplo del informe, los nombres de nivel y nivel de servicio utilizan la analogía de metal precioso de oro, hígado y bronce. Puede utilizar cualquier convención de nomenclatura elegida por su organización, por ejemplo, nivel 1, nivel 2, Supremo.
+
+. Introduzca los valores para los niveles Gold-Fast, Gold, Silver y Bronze y los costos asociados con cada uno.
++
+Los valores que introduzca definen el coste por GB del almacenamiento que utilizan las aplicaciones. El costo del nivel de servicio puede ser el costo de proporcionar el servicio o el precio real para el consumidor. Estos costos se informarán en el informe de pago por uso.
+
+. Haga clic en *Guardar* cuando termine.
+

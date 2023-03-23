@@ -1,0 +1,126 @@
+---
+permalink: howto/integration-code-sample.html 
+sidebar: sidebar 
+keywords:  
+summary: El archivo Integration.json identifica la carga útil . 
+---
+= Información del archivo Integration.json
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El archivo Integration.json identifica la carga útil .
+
+En la siguiente ilustración, se proporciona una representación codificada con colores de un archivo simple Integration.json. La tabla adjunta identifica la función de los objetos del archivo.
+
+image::../media/color-code-example.gif[ejemplo de código de color]
+
+
+
+== Acerca de los archivos Integration.json
+
+Cada campo tiene las siguientes características:
+
+* La sección "identificadores" forma una clave compuesta única para crear un "objeto" nuevo en Insight
+* Los "atributos" proporcionan metadatos auxiliares sobre el objeto.
++
+En ambos casos, sólo se conserva el valor del último informe para ese objeto (identificado por los identificadores).
+
+* Los "puntos de datos" son datos de series temporales y deben ser valores numéricos. Insight conserva todos y cada uno de los valores registrados aquí durante 90 días (de forma predeterminada) y los vincula series de tiempo al objeto identificado.
+
+
+
+
+== Expresiones numéricas
+
+De forma predeterminada, todas las expresiones de valor se informan como cadenas en la carga útil de integración. "identificadores" y "atributos" sólo pueden definir valores de cadena. "Puntos de datos" puede definir valores numéricos o de cadena. Los valores numéricos se definen mediante una de las siguientes teclas modificadoras:
+
+* núm: número total de bytes recibidos desde que se inicializó por última vez el contador
+* delta: número de bytes recibidos durante el intervalo de sondeo
+* tasa: la tasa de recepción media durante el intervalo de sondeo en bytes por segundo
++
+Una tasa de recepción media durante el intervalo de sondeo en megabytes por segundo se puede lograr usando una combinación de operaciones de tasa y matemáticas
+
+
+
+
+
+== Operaciones matemáticas
+
+La `integration.json` el archivo admite las siguientes operaciones matemáticas: agregar, restar, multiplicar, dividir. En el ejemplo siguiente se muestran operaciones de multiplicación, división y suma en un archivo JSON.
+
+image::../media/net-util-rhel.gif[rhel neta]
+
+
+
+== Palabras clave
+
+Una palabra clave del paquete de integración, cadena, se implementa para forzar las cadenas DE OCTETO o los tipos propietarios derivados de LA CADENA DE OCTETO que normalmente se procesarían en formato hexadecimal, en su lugar, se procesarían como caracteres ASCII.
+
+A menudo, las cadenas DE OCTETO contienen datos binarios, por ejemplo, direcciones MAC y WWN:
+
+[listing]
+----
+        "interface_mac": {
+                  "mibModuleName":      "IF-MIB",
+                  "objectName":         "ifPhysAddress"
+                 }
+----
+IfPhysAddress es el tipo PhysAddress, que es sólo UNA CADENA DE OCTETO:
+
+[listing]
+----
+  PhysAddress ::= TEXTUAL-CONVENTION
+                DISPLAY-HINT "1x:"
+                STATUS       current
+                DESCRIPTION
+                                "Represents media- or physical-level addresses."
+                SYNTAX       OCTET STRING
+----
+Cuando ifPhysAddress se representa como hexadecimal de forma predeterminada, el resultado es:
+
+[listing]
+----
+"interface_mac": "00:50:56:A2:07:E7"
+----
+Sin embargo, si tiene UNA CADENA DE OCTETO o un tipo propietario derivado DE UNA CADENA DE OCTETO que desea interpretar como ASCII, puede utilizar la palabra clave "string":
+
+[listing]
+----
+        "string_test_1": {
+          "string": {
+            "mibModuleName":      "IF-MIB",
+            "objectName":         "ifPhysAddress"
+          }
+        },
+
+        "string_test_2": {
+          "string": [
+            {
+              "mibModuleName":      "IF-MIB",
+              "objectName":         "ifPhysAddress"
+            },
+            {
+              "const": "JSD"
+            },
+            {
+              "mibModuleName":      "IF-MIB",
+              "objectName":         "ifPhysAddress"
+            }
+          ]
+        }
+----
+La palabra clave sigue las reglas de concatenación de cadena existentes, insertando un solo espacio entre términos en el siguiente ejemplo:
+
+[listing]
+----
+      "string_test_1": "PV¢ç",
+              "string_test_2": "PV¢ç JSD PV¢ç"
+----
+La palabra clave "string" actúa sobre un único término o una lista de términos, pero no expresiones anidadas. Las expresiones anidadas sólo se admiten para expresiones de datapoint. Si se intenta utilizar una expresión "string" en una expresión de datapoint, se producirá un error similar al siguiente:
+
+_Java.lang.IllegalArgumentException: Paquete de integración 'GenericSwitch32' index 'nmp_generic_interface_32' section 'DataPoints' key 'tring_test_3' expresión numérica JSON no compatible '{"string":{"mibModuleName":"IF-MIB","nombreobjeto":"ifPhysAddress}"
+
+Algunos tipos de CADENA de OCTETO derivado, como DisplayString, SnmpAdminString, tienen prioridad codificada sobre la palabra clave "string". Esto se debe a que SnmpAdminString está específicamente codificado UTF-8 y queremos manejarlo correctamente, mientras que la palabra clave "string" fuerza la representación de cadena predeterminada devuelta por el SNMP_Framework, que asume puntos de código ascii de un solo byte por carácter.

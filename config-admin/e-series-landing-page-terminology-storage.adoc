@@ -1,0 +1,31 @@
+---
+permalink: config-admin/e-series-landing-page-terminology-storage.html 
+sidebar: sidebar 
+keywords:  
+summary: Términos que se aplican a objetos o referencias que puede encontrar en las páginas de destino de activos de almacenamiento E-Series de NetApp. 
+---
+= Almacenamiento E-Series de NetApp
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Términos que se aplican a objetos o referencias que puede encontrar en las páginas de destino de activos de almacenamiento E-Series de NetApp.
+
+
+
+== Terminología de almacenamiento E-Series
+
+Los siguientes términos se aplican a objetos o referencias que puede encontrar en las páginas de destino de activos de almacenamiento E-Series de NetApp. Muchos de estos términos también se aplican a otros recopiladores de datos.
+
+* Modelo -- nombre del modelo del dispositivo.
+* Proveedor -- mismo nombre de proveedor que se vería si estuviera configurando un nuevo origen de datos.
+* Número de serie: El número de serie de la matriz. En sistemas de almacenamiento de arquitectura en clúster como Clustered Data ONTAP de NetApp, este número de serie puede ser menos útil que los números de serie de «nodos de almacenamiento» individuales.
+* IP -- generalmente serán los IP(s) o los hostname(s) tal como están configurados en el origen de datos.
+* Versión de microcódigo -- firmware.
+* Capacidad bruta -- base 2 suma de todos los discos físicos del sistema, sin importar su función.
+* Latencia: Representación de lo que experimentan las cargas de trabajo que se enfrentan al host, tanto en lecturas como escrituras. Insight calcula una media ponderada de IOPS derivada de los volúmenes del almacenamiento.
+* Rendimiento:- rendimiento orientado al host total de la cabina. Insight resume el rendimiento de los volúmenes para obtener este valor.
+* Administración: Puede contener un hipervínculo para la interfaz de administración del dispositivo. Creado mediante programación por el origen de datos de Insight como parte de los informes de inventario.
+

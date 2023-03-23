@@ -1,0 +1,43 @@
+---
+permalink: dwh/skipping-failed-builds.html 
+sidebar: sidebar 
+keywords:  
+summary: Después de la primera compilación, a veces puede encontrarse con una compilación fallida. Para asegurarse de que todos los trabajos después de una compilación incorrecta se hayan completado correctamente, puede habilitar la opción Omitir errores de creación del historial. 
+---
+= Omitiendo compilaciones fallidas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de la primera compilación, a veces puede encontrarse con una compilación fallida. Para asegurarse de que todos los trabajos después de una compilación incorrecta se hayan completado correctamente, puede activar la opción *Omitir fallos de compilación del historial*.
+
+
+
+== Acerca de esta tarea
+
+Si una compilación falla y la opción *Omitir fallos de compilación del historial* está activada, Data Warehouse continúa construyendo e ignora cualquier compilación fallida. Si esto ocurre, no habrá un punto de datos en los datos históricos para ninguna compilación omitida.
+
+Utilice esta opción sólo si la generación no se ha realizado correctamente.
+
+Si se produce un error en la compilación a partir del historial y la casilla de verificación *Omitir fallos de generación del historial* no está activada, se abortan todos los trabajos posteriores.
+
+
+
+== Pasos
+
+. Inicie sesión en el portal del almacén de datos en `+https://hostname/dwh+`, donde `hostname` Es el nombre del sistema en el que está instalado el almacén de datos de OnCommand Insight.
+. En el panel de navegación de la izquierda, haga clic en *construir a partir del historial*.
++
+image::../media/oci-dwh-admin-buildfromhistory-gif.gif[Crear a partir de la vista Historial]
+
+. Haga clic en *Configurar*.
+. Configure el desarrollo.
+. Haga clic en *Guardar*.
+. Para omitir las compilaciones fallidas, marque *Omitir errores de compilación del historial*.
++
+Sólo puede ver esta casilla de verificación si el botón *Ejecutar* está activado.
+
+. Para realizar una compilación fuera de la compilación programada automática, haga clic en *Ejecutar*.
+

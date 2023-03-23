@@ -1,0 +1,43 @@
+---
+permalink: howto/use-an-expression-to-identify-alternate-metrics.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar expresiones para ver métricas que no proporciona la interfaz de usuario web, como las IOPS que se generan sobre la sobrecarga del sistema. 
+---
+= Utilice una expresión para identificar métricas alternativas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar expresiones para ver métricas que no proporciona la interfaz de usuario web, como las IOPS que se generan sobre la sobrecarga del sistema.
+
+
+
+== Acerca de esta tarea
+
+Se recomienda usar una expresión para mostrar el total de IOPS generados por operaciones de no lectura o sin escritura, como las operaciones de sobrecarga de un volumen interno.
+
+
+
+== Pasos
+
+. Añada un widget a la consola. Seleccione *Área gráfica*.
+. Cambie el dispositivo predeterminado a volumen interno: Haga clic en *almacenamiento* > *volumen interno* > *escritura IOPS*
+. Haga clic en el botón *convertir en expresión*.
+. La métrica *IOPS - Write* se encuentra ahora en el campo de variable alfabética "'*a*'".
+. En el campo de la variable "'*b*'", haga clic en *Seleccionar* y elija *IOPS - Leer*.
+. En el campo *expresión*, escriba *a + b*. En la sección *Mostrar*, elija**Gráfico de área** para la expresión.
+. En el campo *filtro por*, introduzca el nombre del volumen interno que está analizando.
+. El campo *etiqueta* identifica la expresión. Cambie la etiqueta por algo significativo como «'R + W IOPS'».
+. Haga clic en **+Add**para agregar una línea de IOPS totales al widget.
+. Cambie el dispositivo predeterminado a volumen interno: Haga clic en *almacenamiento* > *volumen interno* > *IOPS total*
+. En el campo *filtro por*, introduzca el nombre del volumen interno que esté analizando.
++
+image::../media/expression-anl-how-to.gif[expresión anl como]
+
++
+El gráfico muestra el número total de IOPS como línea, con el gráfico que muestra la combinación de IOPS de lectura y escritura en azul. La brecha entre las 9:30 y las 9:45 muestra las operaciones de E/S (sobrecarga) sin lectura y sin escritura.
+
+

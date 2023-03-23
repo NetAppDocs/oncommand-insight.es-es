@@ -1,0 +1,37 @@
+---
+permalink: install-linux/verifying-new-insight-services-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: Después de la instalación, debe comprobar la existencia de los nuevos componentes en el servidor. 
+---
+= Comprobación de que se han instalado los nuevos componentes de Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de la instalación, debe comprobar la existencia de los nuevos componentes en el servidor.
+
+
+
+== Pasos
+
+. Para mostrar una lista de los servicios que están funcionando actualmente en el servidor al que ha iniciado sesión, escriba:
++
+`sudo oci-service.sh status all`
+
+. En función del servidor en el que haya iniciado sesión, compruebe los siguientes servicios de Insight de la lista y asegúrese de que tienen el estado «'en funcionamiento'».
++
+** Insight Server: Wily, adquisición, mysql, elaselassearch
+** Servidor de almacén de datos: Wily, mysql
+** Servidor de adquisición remota: Adquisición
+
+
+
+
+
+
+== Resultados
+
+Si estos componentes no se enumeran, póngase en contacto con el soporte técnico.

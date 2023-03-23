@@ -1,0 +1,56 @@
+---
+permalink: config-admin/exporting-fc-identification-to-a-csv-file.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede exportar identificaciones de dispositivos Fibre Channel existentes a un archivo CSV desde la característica de resolución de dispositivos OnCommand Insight. Es posible que desee exportar una identificación de dispositivo para poder modificarla y, a continuación, volver a importarla en Insight, donde se utilizará para identificar dispositivos similares a los que originalmente coinciden con la identificación exportada. 
+---
+= Exportación de identificaciones de dispositivos Fibre Channel a un archivo CSV
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede exportar identificaciones de dispositivos Fibre Channel existentes a un archivo CSV desde la característica de resolución de dispositivos OnCommand Insight. Es posible que desee exportar una identificación de dispositivo para poder modificarla y, a continuación, volver a importarla en Insight, donde se utilizará para identificar dispositivos similares a los que originalmente coinciden con la identificación exportada.
+
+
+
+== Acerca de esta tarea
+
+Este escenario se puede utilizar cuando los dispositivos tienen atributos similares que se pueden editar fácilmente en el archivo CSV y luego volver a importar al sistema.
+
+Al exportar una identificación de dispositivo Fibre Channel a un archivo CSV, el archivo contiene la siguiente información en el orden que se muestra:
+
+|===
+
+
+ a| 
+WWN
+
+
+
+ a| 
+IP
+
+
+
+ a| 
+Nombre
+
+
+
+ a| 
+Tipo
+
+|===
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web de Insight.
+. Haga clic en *Administrar* > *resolución del dispositivo*
+. Seleccione la ficha *FC Identify*.
+. Seleccione el dispositivo Fibre Channel o los dispositivos cuya identificación desea exportar.
+. Haga clic en la exportación image:../media/export-to-csv.gif[""] .
+. Elija si desea abrir el archivo CSV o guardar el archivo.
+

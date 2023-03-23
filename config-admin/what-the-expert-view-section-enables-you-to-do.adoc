@@ -1,0 +1,54 @@
+---
+permalink: config-admin/what-the-expert-view-section-enables-you-to-do.html 
+sidebar: sidebar 
+keywords:  
+summary: La sección Vista de experto le permite ver gráficos de rendimiento de un activo basados en cualquier número de métricas aplicables durante un período de tiempo elegido y agregar activos relacionados para comparar y contrastar el rendimiento de activos y activos relacionados durante diferentes períodos de tiempo. 
+---
+= Uso de la sección Vista experta
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La sección Vista de experto le permite ver gráficos de rendimiento de un activo basados en cualquier número de métricas aplicables durante un período de tiempo elegido y agregar activos relacionados para comparar y contrastar el rendimiento de activos y activos relacionados durante diferentes períodos de tiempo.
+
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web de OnCommand Insight.
+. Localice una página de activos realizando una de las siguientes acciones:
++
+** En la barra de herramientas Insight, haga clic en image:../media/icon-sanscreen-magnifying-glass-gif.gif[""], escriba el nombre del activo y, a continuación, seleccione el activo en la lista.
+** Haga clic en *Paneles*, seleccione *Panel de activos*, busque un nombre de activo y haga clic en él. Aparece la página Asset. De forma predeterminada, el gráfico de rendimiento muestra dos métricas para el período de tiempo seleccionado para la página del activo. Por ejemplo, para un almacenamiento, el gráfico de rendimiento muestra la latencia y el total de IOPS de forma predeterminada. La sección Resources muestra el nombre del recurso y una sección de recursos adicionales, que le permiten buscar activos. Dependiendo del activo, también puede ver los activos en las secciones correlacionadas Top, contribuidor Top, avaricioso y degraded.
+
+
+. Puede hacer clic en *Seleccionar métricas para mostrar* y seleccionar una métrica para agregar un gráfico de rendimiento para una métrica.
++
+Se agrega un gráfico de rendimiento para la métrica seleccionada. El gráfico muestra los datos del período de tiempo seleccionado. Puede cambiar el período de tiempo haciendo clic en otro período de tiempo en la esquina superior izquierda de la página del activo.
+
++
+Puede volver a realizar el paso y hacer clic para borrar una métrica. Se elimina el gráfico de rendimiento de la métrica.
+
+. Puede colocar el cursor sobre el gráfico y cambiar los datos de métrica que se muestran haciendo clic en cualquiera de los siguientes, dependiendo del activo:
++
+** *Leer* o *escribir*
+** **Tx**o *Rx* *total* es el valor predeterminado.
+
+
+. Puede arrastrar el cursor sobre los puntos de datos del gráfico para ver cómo cambia el valor de la métrica en el período de tiempo seleccionado.
+. En la sección *Recursos*, puede realizar cualquiera de las siguientes acciones, si procede, para agregar cualquier activo relacionado a los gráficos de rendimiento:
++
+** Puede seleccionar un activo relacionado en las secciones correlación superior, contribuyentes principales, codiciosos o degradados para agregar datos de ese activo al gráfico de rendimiento para cada métrica seleccionada. Los activos deben tener una correlación o contribución mínima del 15% para ser mostrados.
++
+Después de seleccionar el activo, aparece un bloque de color junto al activo para indicar el color de sus puntos de datos en el gráfico.
+
+** Para cualquier activo mostrado, puede hacer clic en el nombre del activo para mostrar su página de activo, o puede hacer clic en el porcentaje que el activo correlaciona o contribuye con el activo base para ver más información acerca de la relación de activos con el activo base.
++
+Por ejemplo, al hacer clic en el porcentaje vinculado junto a un activo correlacionado superior se muestra un mensaje informativo que compara el tipo de correlación que tiene el activo base.
+
+** Si la sección correlación superior no contiene un activo que desea mostrar en un gráfico de rendimiento con fines de comparación, puede utilizar la casilla *Buscar activos* de la sección Recursos adicionales para localizar otros activos. Después de seleccionar un activo, este se muestra en la sección Recursos adicionales. Cuando ya no desee ver información sobre el activo, haga clic en image:../media/trash-can-query.gif[""].
+
+
+

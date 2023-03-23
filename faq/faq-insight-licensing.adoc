@@ -1,0 +1,59 @@
+---
+permalink: faq/faq-insight-licensing.html 
+sidebar: sidebar 
+keywords:  
+summary: Respuestas a preguntas comunes sobre las licencias de OnCommand Insight. 
+---
+= Licencias de OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Respuestas a preguntas comunes sobre las licencias de OnCommand Insight.
+
+
+
+== Descripción general de las licencias de OCI
+
+OCI tiene una licencia por capacidad. Los clientes deben adquirir una licencia por cada módulo que deseen habilitar:
+
+*Discover* es un requisito previo para Assure, Perform, y Plan y no se ofrece por sí solo. La detección tiene licencia de TB de capacidad gestionada.
+
+*Assure* cuenta con licencia por TB de capacidad gestionada (como una única unidad de coste para toda la infraestructura de almacenamiento: FC, NAS, iSCSI, FCoE).
+
+*Perform* está autorizado por TB de capacidad administrada.
+
+*Plan* está autorizado por TB de capacidad administrada.
+
+Antes de formatearlo, se define «capacidad de almacenamiento» como la capacidad bruta de los discos físicos, los discos virtuales y las cintas. Esto se aplica a todo el almacenamiento detectado por Insight, tanto en las instalaciones como en el cloud.
+
+La mayoría de las fuentes de datos están considerando la capacidad bruta de disco 2. No se tiene en cuenta el rol de disco, como un disco de repuesto, un disco sin asignar o un disco RAID.
+
+Hay dos tipos de licencias de Insight disponibles: *Perpetua* y *Suscripción*.
+
+*Licencias perpetuas* le permiten utilizar indefinidamente la versión/versión específica del software obtenido en función de los términos de la licencia aplicables. Si ha adquirido un plan de soporte de software (SSP), NetApp proporciona acceso a las actualizaciones de software disponibles comercialmente a través del sitio de soporte de NetApp cuando estas actualizaciones están disponibles según sus términos de servicios de soporte. NetApp también proporciona acceso a parches especiales según lo establecido por el Centro de soporte técnico de NetApp.
+
+*Suscripción* es una licencia fija de software que otorga el derecho a:
+
+* Utilice el software en las instalaciones durante un período limitado (normalmente 12 meses) sujeto a los términos de la licencia aplicables
+* Recibir soporte de software (anteriormente denominado SSP) durante el período de vigencia del período de vigencia
+* Aunque en efecto, el Licenciatario puede utilizar la versión, versión o actualización disponible comercialmente más actual, en caso de estar disponible, así como recibir asistencia para el software
+
+
+Al final de cada período fijo (normalmente 12 meses), la licencia puede renovarse por un plazo fijo adicional (normalmente 12 meses). Si la licencia no se renueva, el Licenciatario ya no tendrá derechos para utilizar el software, ya no tendrá derecho a las ventajas del SSP y el Licenciatario debe destruir todas las copias del software.
+
+
+
+== Más información sobre los módulos de licencia de OCI
+
+OCI tiene 4 módulos de licencia de núcleo para satisfacer las necesidades actuales del entorno de centro de datos. Estos módulos son *Discover, Perform, Assure y Plan*. Discover es el módulo base y se requiere para el resto de compras de módulos.
+
+El módulo *Discover* permite a OCI localizar los activos en el centro de datos y asignar dinámicamente las rutas de servicio del dispositivo. Se proporciona información como la capacidad, la información del proveedor, el modelo, el firmware y los números de serie.
+
+*Perform* es el módulo de recopilación de rendimiento de OCI. Realice captura la información de IOPS, rendimiento, latencia e información de CPU y memoria, así como otros análisis.
+
+*Assure* se posiciona hacia entornos de Fibre Channel y tecnologías de eficiencia. Ayuda a identificar y gestionar los riesgos en entornos iSCSI y Fibre Channel. Assure también ayuda con información sobre la identificación, la asignación y las alertas de enmascaramiento, la asignación y la división en zonas de las entradas de rutas de servicio y las políticas de prácticas recomendadas de eficiencia como la redundancia de la estructura, los saltos de switch, los ratios de dispersión y el thin provisioning.
+
+*Plan* ofrece la capacidad de identificar y pronosticar tendencias en informática, estructura y diversos tipos de almacenamiento (CDOT, 7-mode, terceros) en entornos híbridos de centros de datos locales y distribuidos globalmente. Permite períodos de retención más largos. Data Warehouse consta de una inteligencia integrada que permite la creación de informes y evita el doble recuento de métricas en entornos empresariales de almacenamiento compartido. Tiene la capacidad de generar y programar un cumplido con los informes "listos para usar", o crear sus propios informes utilizando sus herramientas integradas de creación de informes "arrastrar y soltar".

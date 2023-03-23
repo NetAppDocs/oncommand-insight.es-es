@@ -1,0 +1,61 @@
+---
+permalink: howto/assigning-applications-using-an-ad-hoc-method.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede asignar una aplicación a un activo para poder identificar los recursos del activo que usa la aplicación. Si un activo tiene un costo asignado al activo, puede identificar el costo en el que incurre la aplicación y si el recurso se mide por tamaño, puede determinar si el recurso debe reabastecerse. 
+---
+= Asignar aplicaciones a activos mediante un método ad hoc
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede asignar una aplicación a un activo para poder identificar los recursos del activo que usa la aplicación. Si un activo tiene un costo asignado al activo, puede identificar el costo en el que incurre la aplicación y si el recurso se mide por tamaño, puede determinar si el recurso debe reabastecerse.
+
+
+
+== Acerca de esta tarea
+
+Utilice el siguiente método para asignar aplicaciones a activos.
+
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web de OnCommand Insight.
+. Busque el activo (host, máquina virtual, volumen o volumen interno) al que desea aplicar la aplicación. Para ello, siga uno de estos pasos:
++
+|===
+
+
+| Opción | Descripción 
+
+
+ a| 
+Desplácese a la lista de activos
+ a| 
+Haga clic en *Panel* > *panel de activos* y seleccione el activo.
+
+
+
+ a| 
+Busque el activo
+ a| 
+Haga clic en image:../media/icon-sanscreen-magnifying-glass-gif.gif[""] En la barra de herramientas para mostrar el cuadro *Buscar activos*, escriba el nombre del activo y, a continuación, seleccione el activo en la lista.
+
+|===
+. En la sección *datos de usuario* de la página de activos, coloque el cursor sobre el nombre de la aplicación actualmente asignada al activo (si no hay ninguna aplicación asignada, se muestra *Ninguno*) y, a continuación, haga clic en image:../media/pencil-icon-landing-page-be.gif[""] (Editar aplicación).
++
+Se muestra la lista de aplicaciones disponibles para el activo seleccionado. Las aplicaciones que están actualmente asociadas con el activo van precedidas de una Marca de verificación.
+
+. Puede escribir en el cuadro Buscar para filtrar los nombres de las aplicaciones o desplazarse por la lista.
+. Seleccione las aplicaciones que desea asociar al activo.
++
+Es posible asignar varias aplicaciones a un host, una máquina virtual y un volumen interno; no obstante, solo se puede asignar una aplicación a un volumen.
+
+. Haga clic en image:../media/check-box-ok.gif[""] para asignar la aplicación o aplicaciones seleccionadas al activo.
++
+Los nombres de las aplicaciones aparecen en la sección datos de usuario; si la aplicación está asociada a una entidad de negocio, el nombre de la entidad de negocio también aparece en esta sección.
+
+

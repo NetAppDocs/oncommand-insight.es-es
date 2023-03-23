@@ -1,0 +1,40 @@
+---
+permalink: config-admin/hds-landing-page-terminology-storage-pool.html 
+sidebar: sidebar 
+keywords:  
+summary: Términos que se aplican a objetos o referencias que puede encontrar en las páginas de destino de activos de pools de almacenamiento HDS. 
+---
+= Pool de almacenamiento de HDS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Términos que se aplican a objetos o referencias que puede encontrar en las páginas de destino de activos de pools de almacenamiento HDS.
+
+
+
+== Terminología de HDS Storage Pool
+
+Los siguientes términos se aplican a objetos o referencias que puede encontrar en las páginas de destino de activos de pool de almacenamiento de HDS. Muchos de estos términos también se aplican a otros recopiladores de datos.
+
+* Tipo: El valor aquí será uno de:
++
+** RESERVADA: Si este pool está dedicado a otros fines distintos a los volúmenes de datos, es decir, registro en diario, instantáneas
+** Thin Provisioning -- si se trata de un pool HDP
+** RAID Group -- probablemente no los verá por algunos motivos:
++
+OCI tiene una postura sólida para evitar el doble de capacidad de conteo a todos los costes. En HDS, normalmente es necesario crear grupos RAID a partir de discos, crear volúmenes de pool en esos grupos RAID y crear pools (a menudo HDP, pero podría ser un propósito especial) a partir de dichos volúmenes de pools. Si OCI notificó tanto los grupos de RAID subyacentes como los pools, la suma de su capacidad bruta superaría en gran medida la suma de los discos.
+
++
+En su lugar, el recopilador de datos HDS HiCommand de OCI reduce arbitrariamente el tamaño de los grupos RAID según la capacidad de los volúmenes de pools. Esto puede provocar que OCI no informe del grupo RAID. Además, todos los grupos RAID resultantes se marcan de forma que no sean visibles en la WebUI de OCI, pero fluyen al almacén de datos de OCI (DWH). El propósito de estas decisiones es evitar el desorden de la interfaz de usuario para cosas que la mayoría de los usuarios no se preocupan por -- si su matriz HDS tiene grupos RAID con 50MB libres, usted probablemente no puede utilizar ese espacio libre para cualquier resultado significativo.
+
+
+
+* Nodo: N/A, ya que los pools HDS no están ligados a ningún nodo en concreto
+* Redundancia: Nivel de RAID del pool. Posiblemente varios valores para un pool HDP constan de varios tipos de RAID
+* Porcentaje de capacidad: El porcentaje utilizado del pool para el uso de datos, con los GB usados y el tamaño total lógico GB del pool
+* Capacidad sobrecomprometida - un valor derivado que indique «'la capacidad lógica de este pool está sobresuscrita por este porcentaje en virtud de la suma de los volúmenes lógicos que exceden la capacidad lógica del pool por este porcentaje».
+* Snapshot: Muestra la capacidad reservada para el uso Snapshot en este pool
+

@@ -1,0 +1,111 @@
+---
+permalink: install-linux/anomaly-detection-requirements.html 
+sidebar: sidebar 
+keywords: redhat 
+summary: El software de detección de anomalías requiere un sistema operativo específico, cantidades de memoria, núcleos de CPU y espacio en disco. Debe cumplir ciertos requisitos para instalar correctamente el software de detección de anomalías. 
+---
+= Requisitos de detección de anomalías
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El software de detección de anomalías requiere un sistema operativo específico, cantidades de memoria, núcleos de CPU y espacio en disco. Debe cumplir ciertos requisitos para instalar correctamente el software de detección de anomalías.
+
+|===
+
+
+| Componente | Obligatorio 
+
+
+ a| 
+De NetApp
+ a| 
+Un equipo que ejecuta una versión con licencia de uno de los siguientes, que no ejecuta ningún otro software de nivel de aplicación:
+
+* Red Hat Enterprise Linux 7.3, 7.4, 7.5, 7.6, 7.7 7.8, 7.9, 8.1, 8.2, 8.3, 8.4, 8.5
+* CentOS 7.5, 7.6, 7.7, 7.8 y 7.9 CentOS 8 flujo
+* Oracle Enterprise Linux 7.5, 7.6, 7.7, 7.8 y 7.9 8.1, 8.2, 8.3, 8.4, 8.5
+* SUSE Enterprise Linux 15.1, 15.2, 15.3
+* OpenSUSE 15.1, 15.2, 15.3
+
+
+Una versión con licencia garantiza que el sistema operativo resuelva automáticamente las dependencias necesarias para la instalación.
+
+Se recomienda un servidor dedicado.
+
+
+
+ a| 
+Máquina virtual (VM)
+ a| 
+La detección de anomalías se puede ejecutar en un entorno virtual, siempre que los recursos de CPU y memoria de la instancia estén reservados.
+
+
+
+ a| 
+CPU y memoria
+ a| 
+Un núcleo de 8 núcleos. Servidor de memoria de 64 GB.
+
+
+
+ a| 
+Espacio disponible en disco
+ a| 
+El servidor necesita 200 GB de espacio libre en disco particionado de la siguiente manera:
+
+* 150 GB de pulg `/var/lib`
+* 25 GB de pulg `/var/log`
+* 25 GB de pulg `/opt`
+
+
+La instalación del software requiere el siguiente espacio en disco:
+
+* 5 GB de pulg `/var/lib`
+* 25 GB de pulg `/var/log`
+* 25 GB de pulg `/opt`
+
+
+Se recomienda montarlo ``/opt``y.. en discos separados del sistema de archivos raíz (`/`).
+
+
+
+ a| 
+Permisos
+ a| 
+Se requieren permisos sudo para instalar el software de detección de anomalías.
+
+
+
+ a| 
+Red
+ a| 
+El servidor Insight en el que desea instalar el software de detección de anomalías debe residir en la misma red, o al menos en el mismo sitio o centro de datos, que el servidor que ejecuta el motor de detección de anomalías. El software de detección de anomalías no admite la configuración en una red de área extensa (WAN).
+
+Los puertos TCP 8080 y 9200 deben estar abiertos en la máquina virtual.
+
+
+
+ a| 
+Requisitos previos
+ a| 
+Debe tener una licencia de ejecución válida.debe tener la dirección IP del servidor Insight en el que desea instalar el software de detección de anomalías.
+
+Debe tener un número de puerto alternativo en el servidor de Insight si no acepta el puerto predeterminado.
+
+Los puertos TCP 8080 y 9200 deben estar abiertos en la máquina virtual.
+
+Debe tener un nombre de usuario y una contraseña para una cuenta con privilegios de administrador en la máquina virtual.
+
+Debe introducir dos barras invertidas (compañía\\usuario) para un nombre de usuario que contenga una barra invertida única (empresa\usuario).
+
+Un nombre de usuario no puede contener una barra invertida (empresa\\tom).
+
+|===
+[NOTE]
+====
+Debe tratar y validar todas las recomendaciones de dimensionamiento con un representante de NetApp.
+
+====

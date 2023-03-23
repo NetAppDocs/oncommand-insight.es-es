@@ -1,0 +1,48 @@
+---
+permalink: howto/defining-applications-how-to-chargeback.html 
+sidebar: sidebar 
+keywords:  
+summary: Si desea realizar un seguimiento de los datos de costes asociados con aplicaciones específicas que se ejecutan en el entorno, primero debe definir las aplicaciones. 
+---
+= Definición de aplicaciones para uso con pago por uso
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si desea realizar un seguimiento de los datos de costes asociados con aplicaciones específicas que se ejecutan en el entorno, primero debe definir las aplicaciones.
+
+
+
+== Antes de empezar
+
+Si desea asociar la aplicación a una entidad de negocio, debe haber creado ya la entidad de negocio.
+
+[NOTE]
+====
+En este ejemplo no se asocia ninguna aplicación a entidades de negocio.
+
+====
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web de OnCommand Insight.
+. Haga clic en *Administrar* > *aplicación*
++
+Después de definir una aplicación, la página aplicaciones muestra el nombre de la aplicación, su prioridad y, si corresponde, la entidad de negocio asociada a la aplicación.
+
+. Haga clic en ** Agregar**
++
+Aparece el cuadro de diálogo Agregar aplicación.
+
+. Introduzca un nombre único para la aplicación en el cuadro Nombre. Introduzca las aplicaciones identificadas en el informe: African Tours, APAC Commercial Sales, etc.
+. Haga clic en *prioridad* y seleccione la prioridad (crítica, alta, media o baja) de la aplicación en su entorno.
+. Si planea utilizar esta aplicación con una entidad de negocio, haga clic en *entidad de negocio* y seleccione la entidad de la lista.
+. No utilizará el uso compartido de volúmenes, haga clic para desactivar el cuadro *Validar* para compartir volúmenes.
+. Haga clic en *Guardar*.
++
+Las aplicaciones aparecen en la página aplicaciones. Si hace clic en el nombre de la aplicación, Insight muestra la página de activos de la aplicación. Después de definir una aplicación, puede ir a una página de activos para host, máquina virtual, volumen, volumen interno o hipervisor a fin de asignar una aplicación a un activo.
+
+

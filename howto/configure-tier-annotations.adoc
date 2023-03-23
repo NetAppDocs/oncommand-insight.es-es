@@ -1,0 +1,80 @@
+---
+permalink: howto/configure-tier-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: La anotación de nivel se utiliza para asociar activos con sus niveles respectivos, por ejemplo, para su uso en contabilidad de costes. Insight incluye varias anotaciones de nivel predeterminadas; puede modificarlas de acuerdo con sus convenciones de nomenclatura de organización en niveles o crear sus propios niveles según sea necesario. 
+---
+= Configurar anotaciones de nivel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La anotación de nivel se utiliza para asociar activos con sus niveles respectivos, por ejemplo, para su uso en contabilidad de costes. Insight incluye varias anotaciones de nivel predeterminadas; puede modificarlas de acuerdo con sus convenciones de nomenclatura de organización en niveles o crear sus propios niveles según sea necesario.
+
+Cuando configure anotaciones de nivel, tenga en cuenta lo siguiente:
+
+* El costo es por gigabyte.
+* El nivel 1, 2 y 3 son los niveles predeterminados configurados en un nivel de cabina de almacenamiento, por tipo de disco. Sin embargo, muchos clientes tendrán varios tipos de discos dentro de una matriz o entre arrays del mismo tipo.
+* Lo más recomendable es crear anotaciones de nivel basadas en el tipo de disco y/o la velocidad de disco. Se trata de una metodología típica de nivel; sus propias necesidades pueden variar.
+
+
+Pasos:
+
+* Elija la anotación *Tier* y haga clic en el icono *Edit*.
+* Si lo desea, haga clic en *+Add* y agregue el nombre y la descripción del primer nivel a la lista de anotaciones.
+* Haga lo mismo para sus otros niveles.
+* Cuando termine, haga clic en *Guardar*.
+
+
+Anotaciones de nivel de ejemplo:
+
+|===
+
+
+| Nombre | Descripción | Costo por GB 
+
+
+ a| 
+Nivel automático
+ a| 
+Nivel de almacenamiento por niveles automático
+ a| 
+0.5
+
+
+
+ a| 
+SSD de nivel 1
+ a| 
+Cabina all-flash
+ a| 
+0.5
+
+
+
+ a| 
+SAS de nivel 2
+ a| 
+SAS
+ a| 
+0.25
+
+
+
+ a| 
+SATA de nivel 3
+ a| 
+SATA
+ a| 
+0.1
+
+
+
+ a| 
+...
+ a| 
+ a| 
+
+|===

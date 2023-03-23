@@ -1,0 +1,123 @@
+---
+permalink: config-admin/dell-emc-ecs-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Este recopilador de datos adquiere datos de inventario y rendimiento de los sistemas de almacenamiento de EMC ECS. Para la configuración, el recopilador de datos requiere una dirección IP del servidor ECS y una cuenta de dominio de nivel administrativo. 
+---
+= Fuente de datos de Dell EMC ECS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Este recopilador de datos adquiere datos de inventario y rendimiento de los sistemas de almacenamiento de EMC ECS. Para la configuración, el recopilador de datos requiere una dirección IP del servidor ECS y una cuenta de dominio de nivel administrativo.
+
+
+
+== Terminología
+
+OnCommand Insight adquiere la siguiente información de inventario de la fuente de datos de EMC ECS. Para cada tipo de activo que adquiere Insight, se muestra la terminología más común utilizada en este activo. Al ver o solucionar problemas de este origen de datos, tenga en cuenta la siguiente terminología:
+
+|===
+
+
+| Plazo del proveedor/modelo | Insight plazo 
+
+
+ a| 
+Cluser
+ a| 
+Reducida
+
+
+
+ a| 
+Inquilino
+ a| 
+Pool de almacenamiento
+
+
+
+ a| 
+Cucharón
+ a| 
+Volumen interno
+
+
+
+ a| 
+Disco
+ a| 
+Disco
+
+|===
+[NOTE]
+====
+Estos son sólo mapas terminológicos comunes y es posible que no representen todos los casos de este origen de datos.
+
+====
+
+
+== Requisitos
+
+* Dirección IP de la consola de administración de ECS
+* Cuenta de dominio de nivel administrativo para el sistema ECS
+* Puerto 443 (HTTPS). Requiere conectividad saliente al puerto TCP 443 del sistema ECS.
+* Para obtener rendimiento, nombre de usuario y contraseña de solo lectura para acceso a ssh/scp.
+* Para el rendimiento, se necesita el puerto 22.
+
+
+
+
+== Configuración
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Host ECS
+ a| 
+Direcciones IP o nombres de dominio completos del sistema ECS
+
+
+
+ a| 
+Puerto de host ECS
+ a| 
+Puerto utilizado para la comunicación con el host ECS
+
+
+
+ a| 
+ID de proveedor de ECS
+ a| 
+ID de proveedor de ECS
+
+
+
+ a| 
+Contraseña
+ a| 
+Contraseña utilizada para ECS
+
+|===
+
+
+== Configuración avanzada
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Intervalo de sondeo de inventario (minutos)
+ a| 
+Intervalo entre sondeos de inventario. El valor predeterminado es 360 minutos.
+
+|===

@@ -1,0 +1,109 @@
+---
+permalink: install-linux/data-warehouse-server-requirements-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: El servidor de almacén de datos debe ejecutarse en un equipo que sea compatible con los requisitos de hardware y software establecidos. Debe asegurarse de que el servidor web Apache o el software de generación de informes no estén ya instalados en este equipo. 
+---
+= Requisitos del servidor del almacén de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El servidor de almacén de datos debe ejecutarse en un equipo que sea compatible con los requisitos de hardware y software establecidos. Debe asegurarse de que el servidor web Apache o el software de generación de informes no estén ya instalados en este equipo.
+
+[NOTE]
+====
+El ajuste de tamaño de OnCommand Insight tiene varias dependencias, como el número de activos en su entorno, la cantidad de datos históricos que se conservan y mucho más. Los siguientes ejemplos de configuración de almacenes de datos son solo directrices; representan algunos de los entornos en los que se ha probado Insight. Cambiar cualquiera de estos u otros factores en el entorno puede cambiar los requisitos de configuración de Insight.
+
+====
+Se recomienda ponerse en contacto con el ingeniero de ventas para obtener información detallada sobre el tamaño antes de instalar o actualizar Insight.
+
+*Ejemplos:*
+
+|===
+
+
+| Factores del entorno: | Espacio en disco, CPU y memoria probados: 
+
+
+ a| 
+18 equipos virtuales de almacenamiento
+
+4,500 puertos del switch
+ a| 
+Discos duros de 200 GB 8 núcleos
+
+32 GB DE MEMORIA RAM
+
+
+
+ a| 
+110 000 equipos virtuales de almacenamiento
+
+14,500 puertos del switch
+ a| 
+Discos duros de 300 GB 8 núcleos
+
+48 GB DE MEMORIA RAM
+
+|===
+*Requisitos:*
+
+|===
+
+
+| Componente | Obligatorio 
+
+
+ a| 
+De NetApp
+ a| 
+Un equipo que ejecuta una versión con licencia de uno de los siguientes, que no ejecuta ningún otro software de nivel de aplicación:
+
+* Red Hat Enterprise Linux 7.3, 7.4, 7.5, 7.6, 7.7 7.8, 7.9, 8.1, 8.2, 8.3, 8.4, 8.5
+* CentOS 7.2, 7.5, 7.6, 7.7 y 7.8 7.9, CentOS 8 Stream
+* Oracle Enterprise Linux 7.5, 7.6, 7.7, 7.8 y 7.9 8.1, 8.2, 8.3, 8.4, 8.5
+
+
+
+
+ a| 
+Máquina virtual (VM)
+ a| 
+Este componente puede ejecutarse en un entorno virtual, siempre que los recursos de CPU y memoria de su instancia estén reservados.
+
+
+
+ a| 
+CPU
+ a| 
+8 - 40 núcleos de CPU
+
+
+
+ a| 
+Memoria
+ a| 
+32 GB - 2 TB DE RAM
+
+
+
+ a| 
+Espacio disponible en disco
+ a| 
+200 GB - 512 GB de espacio en disco debería haber al menos 50 GB de espacio libre en el `/var/lib` Partición y 25 GB de espacio libre en el `/opt` y.. `/var/log` particiones.
+
+
+
+ a| 
+Red
+ a| 
+* Conexión Ethernet de 100 Mbps o 1 Gbps
+* Dirección IP estática
+* Para el proceso del servidor OnCommand Insight DWH, puertos 80, 443, 1098, 1099, 3873, 8083 y 4444 hasta 4446
+* Para MySQL, puerto 3306
+
+
+|===

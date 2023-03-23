@@ -1,0 +1,24 @@
+---
+permalink: howto/displaying-widget-legends.html 
+sidebar: sidebar 
+keywords:  
+summary: Los widgets de los paneles se pueden mostrar con o sin leyendas. 
+---
+= Visualización de leyendas de widgets
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los widgets de los paneles se pueden mostrar con o sin leyendas.
+
+Las leyendas de los widgets se pueden activar o desactivar en un panel mediante dos métodos:
+
+. Al crear o editar el propio widget, marque la casilla Leyendas y guarde el widget.
+. Con el panel en el modo de edición, haga clic en el botón Opciones del widget y active la casilla Leyendas del menú.
+
+
+A medida que edite y cambie los datos que aparecen en el widget, la leyenda de ese widget se actualiza dinámicamente.
+
+Cuando se muestren las leyendas, si se puede navegar hasta la página de destino del activo indicado por la leyenda, la leyenda se mostrará como un enlace a esa página de activos.

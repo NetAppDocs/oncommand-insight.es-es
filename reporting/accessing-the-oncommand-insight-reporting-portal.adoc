@@ -1,0 +1,68 @@
+---
+permalink: reporting/accessing-the-oncommand-insight-reporting-portal.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede acceder al portal de informes de OnCommand Insight directamente desde un navegador web, desde el almacén de datos o desde el servidor de Insight . El Portal de informes se utiliza para acceder a informes predefinidos o para crear informes propios mediante datos del almacén de datos. 
+---
+= Acceder al portal de informes de OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede acceder al portal de informes de OnCommand Insight directamente desde un navegador web, desde el almacén de datos o desde el servidor de Insight . El Portal de informes se utiliza para acceder a informes predefinidos o para crear informes propios mediante datos del almacén de datos.
+
+
+
+== Acceda al portal de informes desde un explorador web
+
+
+
+=== Pasos
+
+. Abra un explorador web.
+. Introduzca la siguiente URL: `+https://server-name:9300/bi+`
++
+9300 representa el puerto predeterminado que se especificó durante la instalación. Si se especifica otro puerto, debe cambiar el puerto.
+
+. Introduzca su nombre de usuario y contraseña y, a continuación, haga clic en *Aceptar*.
+
+
+
+
+== Acceso al portal de informes desde el servidor de Insight
+
+
+
+=== Pasos
+
+. Abra un explorador web.
+. Introduzca la siguiente URL para acceder al servidor de Insight: `+https://server-name+`
+. Introduzca su nombre de usuario y contraseña y, a continuación, haga clic en *Aceptar*.
+. En la barra de herramientas Insight, haga clic en image:../media/oci-reporting-portal-icon.gif[""].
+. En la página de inicio de sesión que aparece, introduzca su nombre de usuario y contraseña y, a continuación, haga clic en *Aceptar*.
+
+
+
+
+== Acceso al portal de informes desde el almacén de datos
+
+
+
+=== Pasos
+
+. Abra un explorador web.
+. Introduzca la siguiente dirección URL para acceder al almacén de datos: `+https://server-name/dwh+`
+. Introduzca su nombre de usuario y contraseña y, a continuación, haga clic en *Aceptar*.
+. En la barra de herramientas almacén de datos, haga clic en image:../media/oci-reporting-portal-icon.gif[""].
+. En la página de inicio de sesión que aparece, introduzca su nombre de usuario y contraseña y, a continuación, haga clic en *Aceptar*.
+
+
+
+
+=== Resultados
+
+Aparece la página de bienvenida de IBM Cognos Analytics. Esta es la página de destino predeterminada del portal de informes de OnCommand Insight.
+
+image::../media/cognos-welcome.gif[cognos bienvenida]

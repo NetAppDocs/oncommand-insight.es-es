@@ -1,0 +1,24 @@
+---
+permalink: config-admin/data-source-patches.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Los parches de origen de datos solucionan los problemas con los parches existentes y también le permiten agregar fácilmente nuevos tipos de origen de datos \(proveedores y modelos\). Para cada tipo de origen de datos de la red, puede cargar parches de origen de datos. También puede instalar, probar y administrar el proceso de parches. Sin embargo, solo se puede activar un parche para un tipo de origen de datos a la vez.' 
+---
+= Qué son los parches de origen de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los parches del origen de los datos solucionan problemas con los parches existentes y permiten añadir fácilmente nuevos tipos de orígenes de datos (proveedores y modelos). Para cada tipo de origen de datos de la red, puede cargar parches de origen de datos. También puede instalar, probar y administrar el proceso de parches. Sin embargo, solo se puede activar un parche para un tipo de origen de datos a la vez.
+
+Para cada parche, puede realizar estas tareas:
+
+* Compruebe la comparación antes y después de cada origen de datos que recibe el parche.
+* Escribir comentarios para explicar las decisiones o resumir la investigación.
+* Realice cambios en un origen de datos que no responde correctamente al parche.
+* Apruebe el parche que se va a asignar a su servidor de Insight.
+* Retrocede un parche que no esté funcionando como se pretendía.
+* Reemplace un parche que falla por uno diferente.
+

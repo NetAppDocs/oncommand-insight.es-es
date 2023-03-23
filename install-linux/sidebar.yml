@@ -1,0 +1,99 @@
+---
+section: install-linux
+title: Instalación para Linux
+entries:
+- title: Requisitos previos de la instalación
+  url: "/install-linux/installation-prerequisites.html"
+  entries:
+  - title: Planificación de la implementación
+    url: "/install-linux/planning-the-installation.html"
+    entries:
+    - title: Información de soporte de fuentes de datos
+      url: "/install-linux/data-source-support-information.html"
+    - title: Identificación de dispositivo y planificación del origen de datos
+      url: "/install-linux/device-identification-and-data-source-planning.html"
+    - title: Tráfico de red generado por OnCommand Insight
+      url: "/install-linux/network-traffic-generated-by-oncommand-insight.html"
+  - title: Desinstalar MariaDB
+    url: "/install-linux/uninstalling-mariadb.html"
+  - title: Requisitos de Insight Server
+    url: "/install-linux/insight-server-requirements.html"
+  - title: Requisitos del servidor del almacén de datos
+    url: "/install-linux/data-warehouse-server-requirements-linux.html"
+  - title: Requisitos del servidor de la unidad de adquisición remota
+    url: "/install-linux/remote-acquisition-unit-server-requirements.html"
+  - title: Requisitos de detección de anomalías
+    url: "/install-linux/anomaly-detection-requirements.html"
+  - title: Requisitos de la interfaz de usuario de Insight Java
+    url: "/install-linux/insight-java-ui-requirements.html"
+  - title: Exploradores compatibles con OnCommand Insight
+    url: "/install-linux/insight-browser-support.html"
+- title: Instrucciones de instalación de Insight
+  url: "/install-linux/oncommand-insight-installation-instructions.html"
+  entries:
+  - title: Descargue el instalador de OnCommand Insight
+    url: "/install-linux/downloading-the-oncommand-insight-installer.html"
+  - title: Instalación del servidor OnCommand Insight
+    url: "/install-linux/installing-the-oncommand-insight-server-linux.html"
+  - title: Instalación del almacén de datos OnCommand Insight
+    url: "/install-linux/installing-oncommand-insight-data-warehouse-linux.html"
+  - title: Instalación de una unidad de adquisición remota
+    url: "/install-linux/installing-a-remote-acquisition-unit-rau-linux.html"
+    entries:
+    - title: Validación de la instalación de la unidad de adquisición remota
+      url: "/install-linux/validating-the-rau-installation.html"
+  - title: Instalación del software de detección de anomalías
+    url: "/install-linux/installing-the-anomaly-detection-software.html"
+  - title: Instalación de una unidad de supervisión Ethernet
+    url: "/install-linux/installing-an-ethernet-monitoring-unit-linux.html"
+  - title: Comprobación de la instalación
+    url: "/install-linux/checking-the-installation.html"
+    entries:
+    - title: Comprobación de que se han instalado los nuevos componentes de Insight
+      url: "/install-linux/verifying-new-insight-services-linux.html"
+    - title: Registros de Insight
+      url: "/install-linux/insight-logs.html"
+    - title: Acceso a la interfaz de usuario web de
+      url: "/install-linux/opening-insight.html"
+    - title: Instalación de sus licencias de Insight
+      url: "/install-linux/installing-your-insight-licenses.html"
+      entries:
+      - title: Licencias OnCommand Insight
+        url: "/install-linux/oncommand-insight-licenses.html"
+  - title: Resolución de problemas en instalaciones
+    url: "/install-linux/troubleshooting-installations.html"
+    entries:
+    - title: Faltan licencias
+      url: "/install-linux/missing-licenses.html"
+    - title: Envío de una solicitud de asistencia técnica en línea
+      url: "/install-linux/submitting-an-online-technical-support-request.html"
+- title: Renovar Insight
+  url: "/install-linux/upgrading-insight-linux.html"
+  entries:
+  - title: 'Actualización de Insight a la versión 7.3.12 o posterior: Linux'
+    url: "/install-linux/upgrading-insight-to-version-7-3-12-or-later-linux.html"
+  - title: Actualización del software Insight Server
+    url: "/install-linux/upgrading-insight-server-software.html"
+  - title: Actualización del software Data Warehouse
+    url: "/install-linux/upgrading-data-warehouse.html"
+  - title: Actualización del software de la Unidad de adquisición remota
+    url: "/install-linux/upgrading-remote-acquisition-units.html"
+  - title: Actualización del motor de detección de anomalías
+    url: "/install-linux/upgrading-the-anomaly-detection-engine.html"
+  - title: Actualización del software de la unidad de supervisión Ethernet
+    url: "/install-linux/upgrading-ethernet-monitoring-units.html"
+  - title: Migrando de Windows a Linux
+    url: "/install-linux/migrating-from-windows-to-linux.html"
+- title: Desinstalando OnCommand Insight
+  url: "/install-linux/uninstalling-oncommand-insight.html"
+  entries:
+  - title: Desinstalación del servidor de OnCommand Insight
+    url: "/install-linux/uninstalling-insight.html"
+  - title: Desinstalando el almacén de datos
+    url: "/install-linux/uninstalling-data-warehouse.html"
+  - title: Desinstalación de una unidad de adquisición remota
+    url: "/install-linux/uninstalling-a-remote-acquisition-unit-rau.html"
+  - title: Desinstalación de una unidad de supervisión Ethernet
+    url: "/install-linux/uninstalling-an-ethernet-monitoring-unit-emu-linux.html"
+  - title: Desinstalación del motor de detección de anomalías
+    url: "/install-linux/uninstalling-the-anomaly-detection-engine-linux.html"

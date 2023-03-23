@@ -1,0 +1,74 @@
+---
+permalink: config-admin/creating-a-query.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede crear una consulta para poder buscar los activos de su entorno a un nivel granular. Las consultas permiten cortar los datos agregando filtros y, a continuación, ordenando los resultados para ver los datos de inventario y rendimiento en una sola vista. 
+---
+= Crear una consulta
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede crear una consulta para poder buscar los activos de su entorno a un nivel granular. Las consultas permiten cortar los datos agregando filtros y, a continuación, ordenando los resultados para ver los datos de inventario y rendimiento en una sola vista.
+
+
+
+== Acerca de esta tarea
+
+Por ejemplo, puede crear una consulta para los volúmenes, agregar un filtro para buscar determinados almacenamientos asociados al volumen seleccionado, agregar un filtro para buscar una anotación determinada, como el nivel 1, en los almacenamientos seleccionados, Y añada otro filtro para encontrar todos los almacenamientos con IOPS - Leer (IO/s) más de 25. Cuando se muestran los resultados, puede ordenar las columnas de información asociadas a la consulta en orden ascendente o descendente.
+
+Cuando se agrega un nuevo origen de datos que adquiere activos o se realiza cualquier anotación o asignación de aplicaciones, puede consultar esos activos, anotaciones o aplicaciones después de indizar las consultas, lo que ocurre a intervalos regulares programados.
+
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web de OnCommand Insight.
+. Haga clic en *consultas* y seleccione *+ Nueva consulta*.
+. Haga clic en *Seleccionar tipo de recurso* y seleccione un tipo de activo.
++
+Cuando se selecciona un recurso para una consulta, se muestran automáticamente un número de columnas predeterminadas; puede eliminar estas columnas o agregar nuevas en cualquier momento.
+
+. En el cuadro de texto *Nombre*, escriba el nombre del activo o escriba una parte del texto para filtrar a través de los nombres de los activos.
++
+Puede utilizar cualquiera de las opciones siguientes, solo o combinadas, para refinar la búsqueda en cualquier cuadro de texto de la página Nueva consulta:
+
++
+** Un asterisco le permite buscar todo. Por ejemplo: `vol*rhel` muestra todos los recursos que empiezan con «'vol'» y terminan con «'rhel'».
+** El signo de interrogación le permite buscar un número específico de caracteres. Por ejemplo: `BOS-PRD??-S12` Muestra BOS-PRD12-S12, BOS-PRD13-S12, etc.
+** El operador OR permite especificar varias entidades. Por ejemplo: `FAS2240 OR CX600 OR FAS3270` busca varios modelos de almacenamiento.
+** El operador NOT permite excluir el texto de los resultados de búsqueda. Por ejemplo: `NOT EMC*` Encuentra todo lo que no empieza con «'EMC». Puede utilizar `NOT *` para mostrar campos que no contienen ningún valor.
+
+
+. Haga clic en image:../media/check-box-ok.gif[""] para mostrar los activos.
+. Para agregar un criterio, haga clic en image:../media/more-button.gif[""], y realice una de las siguientes acciones:
++
+** Escriba para buscar un criterio específico y, a continuación, selecciónelo.
+** Desplácese hacia abajo por la lista y seleccione un criterio.
+** Introduzca un rango de valores si selecciona una métrica de rendimiento, como IOPS - Read (IO/s). Las anotaciones predeterminadas proporcionadas por Insight se indican mediante image:../media/annotation-icon.gif[""]; es posible tener anotaciones con nombres duplicados.
+
+
++
+Se agrega una columna a la lista resultados de la consulta para los criterios y los resultados de la consulta en la lista se actualizan.
+
+. De manera opcional, puede hacer clic en image:../media/remove-criteria-button.gif[""] para eliminar una métrica de rendimiento o anotación de los resultados de la consulta.
++
+Por ejemplo, si la consulta muestra la latencia máxima y el rendimiento máximo de los almacenes de datos y desea mostrar sólo la latencia máxima en la lista de resultados de la consulta, haga clic en este botón y desactive la casilla de verificación *rendimiento - Máx*. La columna Throughput - Max (MB/s) se elimina de la lista resultados de la consulta.
+
++
+[NOTE]
+====
+Dependiendo del número de columnas que se muestran en la tabla de resultados de la consulta, es posible que no pueda ver columnas adicionales agregadas. Puede eliminar una o más columnas hasta que las columnas que desee se vean.
+
+====
+. Haga clic en *Guardar*, escriba un nombre para la consulta y vuelva a hacer clic en *Guardar*.
++
+Si tiene una cuenta con una función de administrador, puede crear paneles personalizados. Un panel personalizado puede incluir cualquiera de los widgets de la Biblioteca de widgets, algunos de los cuales permiten representar los resultados de las consultas en un panel personalizado. Para obtener más información acerca de los paneles personalizados, consulte la _Guía de introducción de OnCommand Insight_.
+
+
+
+*Información relacionada*
+
+link:importing-and-exporting-user-data.md#["Importar y exportar datos de usuario"]

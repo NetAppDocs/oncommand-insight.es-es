@@ -1,0 +1,38 @@
+---
+permalink: install-linux/upgrading-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: Después de actualizar el software de servidor Insight, debe actualizar el software de almacén de datos. 
+---
+= Actualización del software Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de actualizar el software de servidor Insight, debe actualizar el software de almacén de datos.
+
+
+
+== Pasos
+
+. Inicie sesión en el servidor de almacén de datos (DWH) utilizando una cuenta con privilegios sudo.
+. Descargue el software Insight DWH del sitio de soporte de NetApp.
+. Desplácese hasta el directorio de descarga y escriba el comando siguiente:
++
+`unzip oci-dwh-<version>-linux-x86_64.zip`
+
++
+Asegúrese de tener el número de versión correcto del archivo de instalación.
+
+. Puede ver la sintaxis, los argumentos de comandos y el uso de los parámetros para `oci-install.sh` :
++
+`sudo ./oci-dwh-<version>-linux-x86_64/oci-install.sh --help`
+
+. Ejecute el script de instalación:
++
+`sudo ./oci-dwh-<version>-linux-x86_64/oci-install.sh`
+
+. Acepte el Contrato de licencia y siga las indicaciones.
+

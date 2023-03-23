@@ -1,0 +1,16 @@
+---
+permalink: config-admin/preparing-a-special-troubleshooting-report.html 
+sidebar: sidebar 
+keywords:  
+summary: Insight envía información automáticamente al soporte de clientes de NetApp a través del sistema ASUP que configuró tras instalar el software. Sin embargo, es posible que desee crear un informe de solución de problemas y abrir un caso con el equipo de soporte para un problema específico. 
+---
+= Preparación de un informe especial de solución de problemas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight envía información automáticamente al soporte de clientes de NetApp a través del sistema ASUP que configuró tras instalar el software. Sin embargo, es posible que desee crear un informe de solución de problemas y abrir un caso con el equipo de soporte para un problema específico.
+
+Las herramientas se pueden usar en Insight para realizar una copia de seguridad manual de Insight, empaquetar los registros y enviar esa información al servicio de soporte al cliente de NetApp.

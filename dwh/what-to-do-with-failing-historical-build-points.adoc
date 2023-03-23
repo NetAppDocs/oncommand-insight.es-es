@@ -1,0 +1,16 @@
+---
+permalink: dwh/what-to-do-with-failing-historical-build-points.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede crear a partir del historial, omitiendo cualquier generación fallida activando la opción Omitir errores de creación del historial. 
+---
+= Qué hacer con los puntos de construcción históricos fallidos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede construir a partir de la historia, omitiendo cualquier compilación fallida activando la opción * Omitir fallos de compilación del historial*.
+
+Si lo hace, el desarrollo a partir de la historia continúa. Si una compilación falla y esta opción está activada, Data Warehouse continúa construyendo e ignora las compilaciones fallidas. En tales casos, no hay ningún punto de datos en los datos históricos para ninguna compilación omitida. Si no habilita esta opción y la generación falla, se cancelarán todos los trabajos posteriores.

@@ -1,0 +1,183 @@
+---
+permalink: config-admin/emc-clariion-navicli-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Antes de configurar este origen de datos, asegúrese de que la CLI de EMC Navisphere está instalada en el dispositivo de destino y en el servidor de Insight. La versión de la CLI de Navisphere debe coincidir con la versión de firmware de la controladora. Para la recogida de datos de rendimiento, se debe activar el registro de estadísticas. 
+---
+= Fuente de datos EMC CLARiiON (NaviCLI)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de configurar este origen de datos, asegúrese de que la CLI de EMC Navisphere está instalada en el dispositivo de destino y en el servidor de Insight. La versión de la CLI de Navisphere debe coincidir con la versión de firmware de la controladora. Para la recogida de datos de rendimiento, se debe activar el registro de estadísticas.
+
+
+
+== Sintaxis de la interfaz de línea de comandos de Navisphere
+
+[listing]
+----
+naviseccli.exe -h <IP address> -user <user> -password <password> -scope
+<scope,use 0 for global scope> -port <use 443 by default> command
+----
+
+
+== Terminología
+
+OnCommand Insight adquiere la siguiente información de inventario a partir del origen de datos de EMC CLARiiON. Para cada tipo de activo que adquiere Insight, se muestra la terminología más común utilizada en este activo. Al ver o solucionar problemas de este origen de datos, tenga en cuenta la siguiente terminología:
+
+|===
+
+
+| Plazo del proveedor/modelo | Insight plazo 
+
+
+ a| 
+Disco
+ a| 
+Disco
+
+
+
+ a| 
+Reducida
+ a| 
+Reducida
+
+
+
+ a| 
+Procesador de almacenamiento
+ a| 
+Nodo de almacenamiento
+
+
+
+ a| 
+Thin Pool y grupo RAID
+ a| 
+Pool de almacenamiento
+
+
+
+ a| 
+LUN
+ a| 
+Volumen
+
+|===
+[NOTE]
+====
+Estos son sólo mapas terminológicos comunes y es posible que no representen todos los casos de este origen de datos.
+
+====
+
+
+== Requisitos
+
+* Dirección IP de cada procesador de almacenamiento CLARiiON
+* Nombre de usuario y contraseña de sólo lectura de Navisphere en las matrices CLARiiON
+* Navicli debe instalarse en Insight Server/RAU
+* Validación de acceso: Ejecute NaviCLI desde el servidor de Insight a cada matriz utilizando el nombre de usuario y la contraseña anteriores.
+* La versión navicli debe corresponder con el código DE BROTE más reciente de la matriz
+* Para mejorar el rendimiento, se debe activar el registro de estadísticas.
+* Requisitos de los puertos: 80, 443
+
+
+
+
+== Configuración
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Almacenamiento CLARiiON
+ a| 
+La dirección IP o el nombre de dominio completo de CLARiiON Storage
+
+
+
+ a| 
+Nombre de usuario
+ a| 
+Nombre utilizado para iniciar sesión en el dispositivo de almacenamiento CLARiiON.
+
+
+
+ a| 
+Contraseña
+ a| 
+Contraseña utilizada para iniciar sesión en el dispositivo de almacenamiento CLARiiON.
+
+
+
+ a| 
+La ruta de la CLI a la ruta navicli.exe o naviseccli.exe
+ a| 
+Ruta completa a la `navicli.exe` O. `naviseccli.exe` ejecutable
+
+|===
+
+
+== Configuración avanzada
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Intervalo de sondeo de inventario (mín.)
+ a| 
+Intervalo entre sondeos de inventario (predeterminado 40 minutos)
+
+
+
+ a| 
+Usar cliente seguro (naviseccli)
+ a| 
+Seleccionar para utilizar cliente seguro (navseccli)
+
+
+
+ a| 
+Ámbito
+ a| 
+Ámbito de cliente seguro. El valor predeterminado es Global.
+
+
+
+ a| 
+Puerto CLI de CLARiiON
+ a| 
+Puerto utilizado para la CLI de CLARiiON
+
+
+
+ a| 
+Tiempo de espera de proceso externo de inventario (seg)
+ a| 
+Tiempo de espera de proceso externo (predeterminado 1800 segundos)
+
+
+
+ a| 
+Intervalo de sondeo de rendimiento (s)
+ a| 
+Intervalo entre sondeos de rendimiento (predeterminado 300 segundos)
+
+
+
+ a| 
+Tiempo de espera de proceso externo de rendimiento (s)
+ a| 
+Tiempo de espera de proceso externo (predeterminado 1800 segundos)
+
+|===

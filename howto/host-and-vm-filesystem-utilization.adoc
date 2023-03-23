@@ -1,0 +1,26 @@
+---
+permalink: howto/host-and-vm-filesystem-utilization.html 
+sidebar: sidebar 
+keywords: filesystem 
+summary: El origen de datos de sistemas de archivos de Host y VM, combinado con la licencia de utilización de host, permite la generación de informes y el pago por uso a nivel del sistema de archivos para hosts y equipos virtuales conocidos. 
+---
+= Recopilación de datos de utilización de sistemas de archivos del host y de equipos virtuales
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El origen de datos de sistemas de archivos de Host y VM, combinado con la licencia de utilización de host, permite la generación de informes y el pago por uso a nivel del sistema de archivos para hosts y equipos virtuales conocidos.
+
+OnCommand Insight recopila datos de dispositivos de almacenamiento, la mayoría de los cuales informan sus volúmenes como dispositivos de bloque. De este modo, Insight puede informar sobre el uso a nivel de almacenamiento, pero no a nivel de sistema de archivos. Las cabinas de almacenamiento normalmente conocen en qué bloques se han escrito, pero no en qué bloques se han liberado.
+
+Los hosts de cliente y los equipos virtuales implementan sistemas de archivos (ntfs, ext*...) encima de estos dispositivos de bloque. La mayoría de los sistemas de archivos mantienen un índice que contiene metadatos de directorios y archivos. Cuando se eliminan archivos, sus entradas simplemente se eliminan del índice. Los bloques consumidos por esos archivos ahora son aptos para el sistema de archivos para su reutilización. La cabina de almacenamiento no lo sabe. Para que Insight pueda informar sobre el uso del sistema de archivos, este debe recopilarse desde el host del cliente o el punto de vista del equipo virtual para lograr un pago por uso preciso.
+
+Insight permite este nivel de recopilación de datos de utilización del sistema de archivos mediante la fuente de datos *Host de NetApp y VM File System*, en combinación con la licencia de *utilización del host*. Los equipos virtuales deben anotarse con el nombre *Compute Resource Group* correspondiente y las cabinas de almacenamiento asociadas deben anotarse con anotaciones *Tier* adecuadas con los costes adecuados para obtener informes de costes precisos.
+
+[NOTE]
+====
+La licencia de utilización de host se basa en recursos, a diferencia de la basada en capacidad como otras licencias de Insight.
+
+====

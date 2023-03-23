@@ -1,0 +1,69 @@
+---
+permalink: install-linux/remote-acquisition-unit-server-requirements.html 
+sidebar: sidebar 
+keywords: redhat 
+summary: 'Debe instalar una unidad de adquisición remota \(RAU\) para obtener información de los dispositivos SAN que están detrás de un firewall, en un sitio remoto, en una red privada o en segmentos de red diferentes. Antes de instalar la RAU, debe asegurarse de que su entorno cumple con los requisitos de sistema operativo, CPU, memoria y espacio en disco de la RAU.' 
+---
+= Requisitos del servidor de la unidad de adquisición remota
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe instalar una unidad de adquisición remota (RAU) para obtener información de los dispositivos SAN que están detrás de un firewall, en un sitio remoto, en una red privada o en segmentos de red diferentes. Antes de instalar la RAU, debe asegurarse de que su entorno cumple con los requisitos de sistema operativo, CPU, memoria y espacio en disco de la RAU.
+
+|===
+
+
+| Componente | Requisito 
+
+
+ a| 
+De NetApp
+ a| 
+Un equipo que ejecuta una versión con licencia de uno de los siguientes, que no ejecuta ningún otro software de nivel de aplicación:
+
+* Red Hat Enterprise Linux 7.3, 7.4, 7.5, 7.6, 7.7 7.8, 7.9, 8.1, 8.2, 8.3, 8.4, 8.5
+* CentOS 7.2, 7.5, 7.6, 7.7 y 7.8 7.9, CentOS 8 Stream
+* Oracle Enterprise Linux 7.5, 7.6, 7.7, 7.8 y 7.9 8.1, 8.2, 8.3, 8.4, 8.5
+
+
+Se recomienda un servidor dedicado.
+
+
+
+ a| 
+CPU
+ a| 
+4 núcleos de CPU
+
+
+
+ a| 
+Memoria
+ a| 
+16 GB DE MEMORIA RAM
+
+
+
+ a| 
+Espacio disponible en disco
+ a| 
+40 GB
+
+
+
+ a| 
+Red
+ a| 
+Conexión Ethernet de 100 Mbps /1 Gbps, dirección IP estática, conectividad IP con todos los dispositivos FC y un puerto requerido para el servidor OnCommand Insight (80 o 443).
+
+
+
+ a| 
+Permisos
+ a| 
+Permisos sudo en el servidor RAU
+
+|===

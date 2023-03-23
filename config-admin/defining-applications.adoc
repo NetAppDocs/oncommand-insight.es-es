@@ -1,0 +1,64 @@
+---
+permalink: config-admin/defining-applications.html 
+sidebar: sidebar 
+keywords:  
+summary: Si desea realizar un seguimiento de los datos asociados con aplicaciones específicas que se ejecutan en su entorno, debe definir dichas aplicaciones. 
+---
+= Definición de aplicaciones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si desea realizar un seguimiento de los datos asociados con aplicaciones específicas que se ejecutan en su entorno, debe definir dichas aplicaciones.
+
+
+
+== Antes de empezar
+
+Si desea asociar la aplicación a una entidad de negocio, debe haber creado ya la entidad de negocio.
+
+
+
+== Acerca de esta tarea
+
+Puede asociar las aplicaciones con los siguientes activos: Hosts, máquinas virtuales, volúmenes, volúmenes internos, qtrees, recursos compartidos e hipervisores.
+
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web de OnCommand Insight.
+. Haga clic en *Administrar* y seleccione *aplicaciones*.
++
+Después de definir una aplicación, la página aplicaciones muestra el nombre de la aplicación, su prioridad y, si corresponde, la entidad de negocio asociada a la aplicación.
+
++
+[NOTE]
+====
+Si el motor de detección de anomalías está instalado, la página Panel de aplicaciones también muestra una puntuación de anomalías para la aplicación. Para obtener más información acerca de la instalación y configuración del motor de detección de anomalías, consulte la _Guía de configuración y administración de OnCommand Insight_.
+
+====
+. Haga clic en *Agregar*.
++
+Aparece el cuadro de diálogo Agregar aplicación.
+
+. Introduzca un nombre único para la aplicación en el cuadro *Nombre*.
+. Haga clic en *prioridad* y seleccione la prioridad (crítica, alta, media o baja) de la aplicación en su entorno.
+. Si planea utilizar esta aplicación con una entidad de negocio, haga clic en *entidad de negocio* y seleccione la entidad de la lista.
+. *Opcional*: Si no utiliza el uso compartido de volúmenes, haga clic para desactivar el cuadro *Validar uso compartido de volúmenes*.
++
+Esto requiere la licencia Assure. Configure esto cuando desee garantizar que cada host tenga acceso a los mismos volúmenes en un clúster. Por ejemplo, los hosts de clústeres de alta disponibilidad suelen tener que enmascarar a los mismos volúmenes para permitir la recuperación tras fallos; sin embargo, los hosts de aplicaciones que no estén relacionados suelen tener acceso a los mismos volúmenes físicos. Además, es posible que las políticas normativas exijan que se deniega explícitamente el acceso de aplicaciones no relacionadas a los mismos volúmenes físicos por motivos de seguridad.
+
+. Haga clic en *Guardar*.
++
+La aplicación aparece en la página aplicaciones. Si hace clic en el nombre de la aplicación, Insight muestra la página de activos de la aplicación.
+
+
+
+
+
+== Después de terminar
+
+Después de definir una aplicación, puede ir a una página de activos para host, máquina virtual, volumen, volumen interno o hipervisor a fin de asignar una aplicación a un activo.

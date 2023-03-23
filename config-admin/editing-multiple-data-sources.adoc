@@ -1,0 +1,33 @@
+---
+permalink: config-admin/editing-multiple-data-sources.html 
+sidebar: sidebar 
+keywords: bulk edit 
+summary: Puede editar la mayoría de la información de varias fuentes de datos del mismo proveedor y modelo a la vez. Por ejemplo, si estos orígenes de datos comparten un nombre de usuario y una contraseña, puede cambiar la contraseña en un lugar y, por tanto, actualizar la contraseña para todos los orígenes de datos seleccionados. 
+---
+= Edición de información para varios orígenes de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede editar la mayoría de la información de varias fuentes de datos del mismo proveedor y modelo a la vez. Por ejemplo, si estos orígenes de datos comparten un nombre de usuario y una contraseña, puede cambiar la contraseña en un lugar y, por tanto, actualizar la contraseña para todos los orígenes de datos seleccionados.
+
+
+
+== Acerca de esta tarea
+
+Las opciones que no puede editar para los orígenes de datos seleccionados aparecen atenuadas o no se muestran en el cuadro de diálogo Editar origen de datos. Además, cuando una opción muestra un valor de *Mixed*, indica que el valor de la opción varía entre los orígenes de datos seleccionados. Por ejemplo, si la opción *tiempo de espera (seg)* para dos orígenes de datos seleccionados es *mixta*, un origen de datos podría tener un valor de tiempo de espera de 60 y el otro podría tener un valor de 90; por lo tanto, si cambia este valor a 120 y guarda los cambios en los orígenes de datos, la configuración de tiempo de espera para ambos orígenes de datos pasa a ser 120.
+
+
+
+== Pasos
+
+. Haga clic en *Admin* y desplácese a la vista de lista de orígenes de datos
+. Seleccione los orígenes de datos que desea modificar. Los orígenes de datos seleccionados deben pertenecer al mismo proveedor, modelo y unidad de adquisición.
+. Haga clic en el botón *acciones* y seleccione la opción *Editar*.
+. En el cuadro de diálogo de edición, cambie cualquiera de los *Ajustes* según sea necesario.
+. Haga clic en el enlace *Configuración* para cambiar cualquiera de las opciones básicas de los orígenes de datos.
+. Haga clic en el vínculo *Configuración avanzada* para cambiar cualquiera de las opciones avanzadas de los orígenes de datos.
+. Haga clic en *Guardar*.
+

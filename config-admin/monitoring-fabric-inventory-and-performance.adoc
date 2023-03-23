@@ -1,0 +1,26 @@
+---
+permalink: config-admin/monitoring-fabric-inventory-and-performance.html 
+sidebar: sidebar 
+keywords:  
+summary: Mediante las páginas de activos Fibre Channel de OnCommand Insight, puede supervisar el rendimiento y el inventario de las estructuras de su entorno y conocer los cambios que puedan causar problemas. 
+---
+= Supervisión del entorno Fibre Channel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mediante el uso de las páginas de activos de Fibre Channel de OnCommand Insight, puede supervisar el rendimiento y el inventario de las estructuras de su entorno y conocer los cambios que puedan dar lugar a problemas.
+
+
+
+== Páginas de activos de Fibre Channel
+
+Las páginas de activos de Insight presentan información resumida sobre el recurso, su topología (el dispositivo y sus conexiones), gráficos de rendimiento y tablas de recursos asociados. Puede utilizar las páginas de activos Fabric, switch y puerto para supervisar el entorno Fibre Channel. Especialmente útil cuando se resuelve un problema de Fibre Channel es el gráfico de rendimiento de cada activo de puerto, que muestra el tráfico del puerto de contribuidor superior seleccionado. Además, también puede mostrar métricas de crédito de búfer a búfer y errores de puerto en este gráfico, donde Insight muestra un gráfico de rendimiento independiente para cada métrica.
+
+
+
+== Políticas de rendimiento para métricas de puertos
+
+Insight le permite crear políticas de rendimiento para supervisar la red y detectar diversos umbrales y alertas cuando se superen esos umbrales. Puede crear políticas de rendimiento para los puertos en función de las métricas de puertos disponibles. Cuando se produce una infracción de un umbral, Insight lo detecta y lo notifica en la página de activos asociados mostrando un círculo sólido rojo; por alerta de correo electrónico, si se configura; y en el panel de infracciones o en cualquier panel personalizado que informe de infracciones.

@@ -1,0 +1,40 @@
+---
+permalink: config-admin/rolling-back-a-data-source-patch.html 
+sidebar: sidebar 
+keywords:  
+summary: Si un parche de origen de datos no funciona de la forma esperada, puede retroceder. La reversión de un parche lo elimina y restaura la versión anterior tal como era antes de aplicar este parche. 
+---
+= Revertir una revisión de origen de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si un parche de origen de datos no funciona de la forma esperada, puede retroceder. La reversión de un parche lo elimina y restaura la versión anterior tal como era antes de aplicar este parche.
+
+
+
+== Pasos
+
+. En la barra de herramientas Insight, haga clic en *Admin*.
+. Haga clic en *parches*.
+. En *parches actualmente en revisión*, haga clic en el nombre vinculado del parche que parece no tener éxito.
+. En la página parches del origen de datos, examine esta información:
++
+** *Resumen* describe cuándo se aplicó el parche, los orígenes de datos afectados y los comentarios sobre el parche de usted u otros miembros de su equipo.
+** *Orígenes de datos afectados* enumera todos los orígenes de datos que se están parchando e incluye una comparación del estado antes y después de la aplicación de parches.
+
+
+. Para mostrar los detalles de un origen de datos que no esté procesando correctamente el parche, haga clic en el archivo vinculado *Nombre*.
++
+.. Compruebe la información de resumen.
+.. Compruebe *escala de tiempo de evento* para ver cualquier dato de configuración o rendimiento que pueda afectar a este origen de datos.
+
+
+. Si concluye que el parche no va a ser correcto, haga clic en la flecha de retroceso del explorador para volver a la página de resumen parches.
+. Haga clic en *Volver* para eliminar ese parche.
++
+Si conoce un parche diferente que es más probable que tenga éxito, haga clic en *sustituir parche* y cargue el nuevo parche.
+
+

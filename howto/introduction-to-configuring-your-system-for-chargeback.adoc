@@ -1,0 +1,27 @@
+---
+permalink: howto/introduction-to-configuring-your-system-for-chargeback.html 
+sidebar: sidebar 
+keywords:  
+summary: Los informes de pago por uso proporcionan información de pago por uso y responsabilidad de la capacidad de almacenamiento por parte de hosts, aplicaciones y entidades de negocio, e incluyen datos actuales e históricos. 
+---
+= Configuración del sistema para informar de los datos de pago por uso
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los informes de pago por uso proporcionan información de pago por uso y responsabilidad de la capacidad de almacenamiento por parte de hosts, aplicaciones y entidades de negocio, e incluyen datos actuales e históricos.
+
+Esta guía describe cómo configurar Insight para generar un informe de pago por uso que le proporcione responsabilidad sobre los costes del nivel de servicio y el coste del uso del almacenamiento. La guía pretende proporcionar los pasos necesarios para crear un informe de pago por uso sencillo y familiarizar a los usuarios de Insight con las opciones disponibles al configurar el pago por uso en su entorno único.
+
+En cada aplicación, el informe de ejemplo identifica los recursos aprovisionados y el coste de los recursos. El resultado del informe se crea definiendo los siguientes datos en Insight
+
+* Niveles de almacenamiento
+* Coste asociado con cada nivel de almacenamiento
+* Capacidad de almacenamiento aprovisionada
+* Niveles de servicio
+* Coste por nivel de servicio
+
+
+En las siguientes secciones se describen los pasos necesarios para configurar estos datos a fin de que puedan accederse a ellos mediante Insight Reporting.

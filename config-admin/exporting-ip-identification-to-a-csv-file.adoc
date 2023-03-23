@@ -1,0 +1,49 @@
+---
+permalink: config-admin/exporting-ip-identification-to-a-csv-file.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede exportar identificaciones de dispositivos IP existentes desde Insight mediante la función resolución de dispositivos. Es posible que desee exportar una identificación de dispositivo para poder modificarla y volver a importarla en Insight para poder identificar dispositivos similares a los que figuran en la identificación exportada. 
+---
+= Exportando identificación de dispositivo IP a un archivo CSV
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede exportar identificaciones de dispositivos IP existentes desde Insight mediante la función resolución de dispositivos. Es posible que desee exportar una identificación de dispositivo para poder modificarla y volver a importarla en Insight para poder identificar dispositivos similares a los que figuran en la identificación exportada.
+
+
+
+== Acerca de esta tarea
+
+Al exportar una identificación de dispositivo IP a un archivo CSV, el archivo contiene la siguiente información en el orden que se muestra:
+
+|===
+
+
+ a| 
+Dirección
+
+
+
+ a| 
+IP
+
+
+
+ a| 
+Nombre
+
+|===
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web de Insight.
+. Haga clic en *Administrar* > *resolución del dispositivo*
+. Seleccione la ficha *Identificación IP*.
+. Seleccione el dispositivo IP o los dispositivos cuya identificación desea exportar.
+. Haga clic en la exportación image:../media/export-to-csv.gif[""] .
+. Elija si desea abrir el archivo CSV o guardar el archivo.
+

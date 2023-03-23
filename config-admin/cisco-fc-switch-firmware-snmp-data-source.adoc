@@ -1,0 +1,285 @@
+---
+permalink: config-admin/cisco-fc-switch-firmware-snmp-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight usa el origen de datos de firmware 2.0+ \(SNMP\) de switch FC de Cisco para detectar el inventario de switches Fibre Channel de Cisco MDS, así como una serie de switches FCoE de Cisco en los que se ha habilitado el servicio FC. Además, puede descubrir muchos modelos de dispositivos Cisco que se ejecutan en modo NPV con este origen de datos.' 
+---
+= Origen de datos de firmware de switch FC de Cisco (SNMP)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight usa el origen de datos 2.0+ (SNMP) del firmware de switch FC de Cisco para detectar el inventario de switches Fibre Channel de Cisco MDS, así como una variedad de switches FCoE de Cisco Nexus en los que se ha habilitado el servicio FC. Además, puede descubrir muchos modelos de dispositivos Cisco que se ejecutan en modo NPV con este origen de datos.
+
+
+
+== Terminología
+
+OnCommand Insight adquiere la siguiente información de inventario a partir de la fuente de datos de Cisco FC Switch. Para cada tipo de activo que adquiere Insight, se muestra la terminología más común utilizada en este activo. Al ver o solucionar problemas de este origen de datos, tenga en cuenta la siguiente terminología:
+
+|===
+
+
+| Plazo del proveedor/modelo | Insight plazo 
+
+
+ a| 
+Conmutador
+ a| 
+Conmutador
+
+
+
+ a| 
+Puerto
+ a| 
+Puerto
+
+
+
+ a| 
+VSAN
+ a| 
+Estructura
+
+
+
+ a| 
+Zona
+ a| 
+Zona
+
+
+
+ a| 
+Cambio lógico
+ a| 
+Cambio lógico
+
+
+
+ a| 
+Entrada del servidor de nombres
+ a| 
+Entrada del servidor de nombres
+
+
+
+ a| 
+Zona de enrutamiento entre VSAN (IVR)
+ a| 
+Zona IVR
+
+|===
+[NOTE]
+====
+Estos son sólo mapas terminológicos comunes y es posible que no representen todos los casos de este origen de datos.
+
+====
+
+
+== Requisitos
+
+* Dirección IP de un switch en la estructura o en los switches individuales
+* Detección del chasis para habilitar la detección de estructura
+* Si se utiliza SNMP V2, cadena de comunidad de sólo lectura
+* El puerto 161 se utiliza para acceder al dispositivo
+* Validación de acceso mediante la `snmpwalk` utilidad para el interruptor (consulte `<install_path\>\bin\`)
+
+
+
+
+== Configuración
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Switch IP de Cisco
+ a| 
+Dirección IP o nombre de dominio completo del switch
+
+
+
+ a| 
+Versión de SNMP
+ a| 
+Se requiere SNMP versión v2 o posterior para la adquisición del rendimiento
+
+
+
+ a| 
+Cadena de comunidad SNMP
+ a| 
+Cadena de comunidad de solo lectura de SNMP que se utiliza para acceder al switch (no aplicable para SNMP v3)
+
+
+
+ a| 
+Nombre de usuario
+ a| 
+Nombre de usuario para el conmutador (sólo SNMP v3)
+
+
+
+ a| 
+Contraseña
+ a| 
+Contraseña utilizada para el conmutador (sólo SNMPv3)
+
+|===
+
+
+== Configuración avanzada
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Intervalo de sondeo de inventario (mín.)
+ a| 
+Intervalo entre sondeos de inventario (predeterminado 40 minutos)
+
+
+
+ a| 
+Protocolo de autenticación SNMP
+ a| 
+Protocolo de autenticación SNMP (sólo SNMPv3)
+
+
+
+ a| 
+Protocolo de privacidad SNMP
+ a| 
+Protocolo de privacidad SNMP (sólo SNMPv3)
+
+
+
+ a| 
+Contraseña de privacidad de SNMP
+ a| 
+Contraseña de privacidad de SNMP
+
+
+
+ a| 
+Reintentos SNMP
+ a| 
+Número de intentos de reintento SNMP
+
+
+
+ a| 
+Tiempo de espera de SNMP (ms)
+ a| 
+Tiempo de espera de SNMP (5000 ms predeterminado)
+
+
+
+ a| 
+Habilite el solapamiento
+ a| 
+Seleccione esta opción para activar el solapamiento. Si habilita el solapamiento, también debe activar las notificaciones SNMP.
+
+
+
+ a| 
+Tiempo mínimo entre solapamientos (seg)
+ a| 
+Tiempo mínimo entre intentos de adquisición activados por solapamientos (predeterminado 10 segundos)
+
+
+
+ a| 
+Descubra los switches de la estructura
+ a| 
+Seleccione para detectar todos los switches de la estructura
+
+
+
+ a| 
+Excluir dispositivos
+ a| 
+Lista separada por comas de IP de dispositivo que se van a excluir del sondeo
+
+
+
+ a| 
+Incluir dispositivos
+ a| 
+Lista separada por comas de IP de dispositivo que se van a incluir en el sondeo
+
+
+
+ a| 
+Compruebe el tipo de dispositivo
+ a| 
+Seleccione esta opción para aceptar sólo los dispositivos que se anuncian explícitamente como dispositivos Cisco
+
+
+
+ a| 
+Tipo de alias principal
+ a| 
+Proporcione una primera preferencia para la resolución del alias. Elija una de las siguientes opciones:
+
+* *Alias del dispositivo*
++
+Este es un nombre descriptivo de usuario de un WWN de puerto (pWWN) que se puede utilizar en todos los comandos de configuración, según sea necesario. Todos los switches de la familia Cisco MDS 9000 admiten Distributed Device Alias Services (alias de dispositivo).
+
+* *Ninguno*
++
+No informe ningún alias
+
+* *Descripción del puerto*
++
+Una descripción que ayuda a identificar el puerto en una lista de puertos
+
+* *Alias de zona (todos)*
++
+Un nombre descriptivo para el usuario de un puerto que solo se puede utilizar para la configuración de división en zonas
+
+* *Alias de zona (sólo activo)*
++
+Nombre descriptivo para un puerto que solo se puede utilizar para la configuración activa. Este es el valor predeterminado.
+
+
+
+
+
+ a| 
+Tipo de alias secundario
+ a| 
+Proporcione una segunda preferencia para la resolución del alias
+
+
+
+ a| 
+Tipo de alias terciario
+ a| 
+Proporcione una tercera preferencia para la resolución del alias
+
+
+
+ a| 
+Habilite la compatibilidad con el modo de proxy de SANTap
+ a| 
+Seleccione si el conmutador Cisco está utilizando SANTap en modo proxy. Si utiliza EMC RecoverPoint, es probable que utilice SANTap.
+
+
+
+ a| 
+Intervalo de sondeo de rendimiento (s)
+ a| 
+Intervalo entre sondeos de rendimiento (predeterminado 300 segundos)
+
+|===

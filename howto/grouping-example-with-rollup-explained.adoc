@@ -1,0 +1,50 @@
+---
+permalink: howto/grouping-example-with-rollup-explained.html 
+sidebar: sidebar 
+keywords:  
+summary: Los widgets de tabla permiten agrupar los datos para facilitar la visualización. 
+---
+= Ejemplo de agrupación (con resumen explicado)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los widgets de tabla permiten agrupar los datos para facilitar la visualización.
+
+
+
+== Acerca de esta tarea
+
+En este ejemplo, crearemos un widget de tabla en el que se muestren todas las máquinas virtuales agrupadas por centro de datos.
+
+
+
+== Pasos
+
+. Cree o abra un panel y añada un widget *Tabla*.
+. Seleccione *Virtual Machine* como el tipo de activo de este widget.
+. Haga clic en el selector de columnas image:../media/column-picker-button.gif[""] Y elija _Hypervisor name_ y _IOPS - total_.
++
+Esas columnas se muestran ahora en la tabla.
+
+. Ignoremos cualquier máquina virtual sin IOPS, e incluya solo máquinas virtuales que tengan un IOPS total superior a 1. Haga clic en el botón *filtro por +* y seleccione *IOPS - total*. Haga clic en *Any*, y en el campo *de*, escriba 1. Deje el campo *a* vacío. Haga clic en el botón de comprobación para aplicar el filtro.
++
+En la tabla ahora se muestran todas las máquinas virtuales con un IOPS total mayor o igual que 1. Observe que no hay agrupación en la tabla. Se muestran todas las máquinas virtuales.
+
+. Haga clic en el botón *Agrupar por +*.
++
+Dado que *todo* se selecciona como método de agrupación de forma predeterminada, todas las VM se mueven a un único grupo denominado «'todo'».
+
+. Por encima de la columna _IOPS - total_ ahora se encuentra la opción *Roll up*. El método de recuperación predeterminado es _Avg_. Esto significa que el número mostrado para el grupo es la media de todas las IOPS totales notificadas para cada máquina virtual dentro del grupo. Puede optar por subir esta columna por _Avg_, _Sum_, _Min_ o _Max_. Cada columna que muestre que contiene métricas de rendimiento puede revertirse de forma individual.
+. Haga clic en *todo* y seleccione *Nombre del hipervisor*.
++
+La lista de máquinas virtuales ahora se agrupa por hipervisor. Puede expandir cada hipervisor para ver las máquinas virtuales alojadas en él.
+
++
+image::../media/table-grouping-example.gif[ejemplo de agrupación de tablas]
+
+. Haga clic en *Guardar* para guardar la tabla en el panel de control. Puede cambiar el tamaño del widget.
+. Haga clic en *Guardar* para guardar el panel.
+

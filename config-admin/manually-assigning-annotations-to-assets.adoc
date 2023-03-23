@@ -1,0 +1,52 @@
+---
+permalink: config-admin/manually-assigning-annotations-to-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: La asignación de anotaciones a activos ayuda a ordenar, agrupar e informar sobre los activos de forma que sean relevantes para su negocio. Aunque puede asignar anotaciones a activos de un tipo concreto automáticamente, mediante reglas de anotación, puede asignar anotaciones a un activo individual mediante su página de activos. 
+---
+= Asignación manual de anotaciones a activos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La asignación de anotaciones a activos ayuda a ordenar, agrupar e informar sobre los activos de forma que sean relevantes para su negocio. Aunque puede asignar anotaciones a activos de un tipo concreto automáticamente, mediante reglas de anotación, puede asignar anotaciones a un activo individual mediante su página de activos.
+
+
+
+== Antes de empezar
+
+Debe haber creado la anotación que desea asignar.
+
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web de OnCommand Insight.
+. Busque el activo al que desea aplicar la anotación realizando una de las siguientes acciones:
++
+** Haga clic en el activo en el panel de activos.
+** Haga clic en image:../media/icon-sanscreen-magnifying-glass-gif.gif[""] En la barra de herramientas para mostrar el cuadro *Buscar activos*, escriba el tipo o el nombre del activo y, a continuación, seleccione el activo de la lista que aparece.
++
+Aparece la página Asset.
+
+
+
+. En la sección *datos de usuario* de la página de activos, haga clic en image:../media/add-annotation-icon.gif[""].
++
+Aparece el cuadro de diálogo Agregar anotación.
+
+. Haga clic en *anotación* y seleccione una anotación de la lista.
+. Haga clic en *valor* y realice una de las siguientes acciones, según el tipo de anotación que haya seleccionado:
++
+** Si el tipo de anotación es lista, fecha o booleano, seleccione un valor de la lista.
+** Si el tipo de anotación es texto, escriba un valor.
+
+
+. Haga clic en *Guardar*.
+. Si desea cambiar el valor de la anotación después de asignarla, haga clic en image:../media/change-annotation-value.gif[""] y seleccione un valor diferente.
++
+Si la anotación es del tipo de lista para el que está seleccionada la opción *Agregar valores dinámicamente al asignar anotaciones*, puede escribir para agregar un nuevo valor además de seleccionar un valor existente.
+
+

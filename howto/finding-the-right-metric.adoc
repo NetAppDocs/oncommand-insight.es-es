@@ -1,0 +1,116 @@
+---
+permalink: howto/finding-the-right-metric.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight adquiere contadores y métricas utilizando nombres que a veces difieren del origen de datos al origen de datos. 
+---
+= Práctica recomendada: Encontrar la métrica correcta
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight adquiere contadores y métricas utilizando nombres que a veces difieren del origen de datos al origen de datos.
+
+Al buscar la métrica o el contador adecuado para el widget de panel, tenga en cuenta que la métrica que desea podría estar con un nombre diferente al que está pensando en. Aunque las listas desplegables de OnCommand Insight suelen ser por orden alfabético, a veces es posible que un término no aparezca en la lista donde usted cree que debería. Por ejemplo, los términos como "capacidad bruta" y "capacidad utilizada" no aparecen juntos en la mayoría de las listas.
+
+Práctica recomendada: Utilice la función de búsqueda en campos como *Filtrar por* o lugares como el selector de columnas image:../media/column-picker-button.gif[""] para encontrar lo que busca. Por ejemplo, si busca "cap", se mostrarán todas las métricas con "capacidad" en sus nombres, independientemente de dónde se produzca. A continuación, podrá seleccionar fácilmente las métricas que quiera de esa lista.
+
+A continuación puede consultar algunas frases alternativas que puede intentar al buscar métricas:
+
+|===
+
+
+| Cuando desee buscar: | También intente buscar: 
+
+
+ a| 
+CPU
+ a| 
+Procesador
+
+
+
+ a| 
+Capacidad
+ a| 
+Capacidad bruta utilizada
+
+Capacidad aprovisionada
+
+Capacidad de pools de almacenamiento
+
+capacidad de <other asset type>
+
+Capacidad escrita
+
+
+
+ a| 
+Velocidad de disco
+ a| 
+Velocidad de disco más baja que realiza el tipo de disco
+
+
+
+ a| 
+Host
+ a| 
+HypervisorHosts
+
+
+
+ a| 
+Hipervisor
+ a| 
+Hipervisor Otis
+
+
+
+ a| 
+Microcódigo
+ a| 
+Firmware
+
+
+
+ a| 
+Nombre
+ a| 
+Nombre de AliasHypervisor
+
+Nombre de almacenamiento
+
+nombre del <other asset type>
+
+Nombre simple
+
+Nombre del recurso
+
+Alias de estructura
+
+
+
+ a| 
+Lectura/escritura
+ a| 
+Escrituras R/WPending parciales
+
+IOPS: Escritura
+
+Capacidad escrita
+
+Latencia: Lectura
+
+Uso de caché: Lectura
+
+
+
+ a| 
+Máquina virtual
+ a| 
+VMIs virtuales
+
+|===
+Esta no es una lista completa. Estos son ejemplos solo de posibles términos de búsqueda.

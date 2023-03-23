@@ -1,0 +1,226 @@
+---
+permalink: config-admin/netapp-data-ontap-operating-in-7-mode-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: En los sistemas de almacenamiento que utilizan el software Data ONTAP funcionando en 7-Mode, se debe utilizar el origen de datos de ONAPI, que utiliza la CLI para obtener los números de capacidad. 
+---
+= Origen de datos con sistema operativo Data ONTAP de NetApp en 7-Mode
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En los sistemas de almacenamiento que utilizan el software Data ONTAP funcionando en 7-Mode, se debe utilizar el origen de datos de ONAPI, que utiliza la CLI para obtener los números de capacidad.
+
+
+
+== Terminología
+
+OnCommand Insight adquiere la siguiente información de inventario del origen de datos de Data ONTAP 7-Mode de NetApp. Para cada tipo de activo que adquiere Insight, se muestra la terminología más común utilizada en este activo. Al ver o solucionar problemas de este origen de datos, tenga en cuenta la siguiente terminología:
+
+|===
+
+
+| Plazo del proveedor/modelo | Insight plazo 
+
+
+ a| 
+Disco
+ a| 
+Disco
+
+
+
+ a| 
+Grupo RAID
+ a| 
+Grupo de discos
+
+
+
+ a| 
+Servidor dedicado a almacenamiento
+ a| 
+Reducida
+
+
+
+ a| 
+Servidor dedicado a almacenamiento
+ a| 
+Nodo de almacenamiento
+
+
+
+ a| 
+Agregado
+ a| 
+Pool de almacenamiento
+
+
+
+ a| 
+LUN
+ a| 
+Volumen
+
+
+
+ a| 
+Volumen
+ a| 
+Volumen interno
+
+|===
+[NOTE]
+====
+Estos son sólo mapas terminológicos comunes y es posible que no representen todos los casos de este origen de datos.
+
+====
+
+
+== Requisitos
+
+* Dirección IP de la controladora de almacenamiento de FAS y el asociado
+* Puerto 443
+* Nombre de usuario y contraseña para el controlador y el asociado
+* Un nombre de usuario y contraseña de nivel de administrador personalizados para la controladora y la controladora asociada con las siguientes funcionalidades de rol para 7-Mode:
++
+** "api-*": Utilice esto para permitir que OnCommand Insight ejecute todos los comandos de la API de almacenamiento de NetApp.
+** "login-http-admin": Utilice esto para permitir que OnCommand Insight se conecte al almacenamiento de NetApp a través de HTTP.
+** «Security-api-vfiler»: Utilice esto para permitir a OnCommand Insight ejecutar comandos de API de almacenamiento de NetApp para recuperar información de la unidad vFiler.
+** "cli-options": Utilice esto para leer las opciones del sistema de almacenamiento.
+** "cli-lun": Acceda a estos comandos para gestionar las LUN. Muestra el estado (ruta de LUN, tamaño, estado en línea/sin conexión y estado compartido) de la LUN o clase de LUN determinada.
+** "cli-df": Utilice esta opción para mostrar el espacio libre en disco.
+** "cli-ifconfig": Utilice esta opción para mostrar interfaces y direcciones IP.
+
+
+
+
+
+
+== Configuración
+
+|===
+
+
+| *Campo* | *Descripción* 
+
+
+ a| 
+Dirección del servidor dedicado a almacenamiento
+ a| 
+La dirección IP o el nombre de dominio completo para los servidores dedicados a almacenamiento de NetApp
+
+
+
+ a| 
+Nombre de usuario
+ a| 
+Nombre de usuario para servidores dedicados al almacenamiento de NetApp
+
+
+
+ a| 
+Contraseña
+ a| 
+Contraseña para servidores dedicados a almacenamiento de NetApp
+
+
+
+ a| 
+Dirección del servidor dedicado a almacenamiento de partners de alta disponibilidad en clúster
+ a| 
+La dirección IP o el nombre de dominio completo para el servidor dedicado a almacenamiento para partners de alta disponibilidad
+
+
+
+ a| 
+Nombre de usuario del servidor dedicado a almacenamiento de partners de alta disponibilidad en clúster
+ a| 
+Nombre de usuario del servidor dedicado a almacenamiento para partners de alta disponibilidad de NetApp
+
+
+
+ a| 
+Contraseña de almacenamiento para partners de alta disponibilidad en clúster
+ a| 
+Contraseña para el servidor dedicado a almacenamiento para partners de alta disponibilidad de NetApp
+
+|===
+
+
+== Configuración avanzada
+
+|===
+
+
+| *Campo* | *Descripción* 
+
+
+ a| 
+Intervalo de sondeo de inventario (mín.)
+ a| 
+Intervalo entre sondeos de inventario (predeterminado 20 minutos)
+
+
+
+ a| 
+Tipo de conexión
+ a| 
+Elija el tipo de conexión
+
+
+
+ a| 
+Puerto de conexión
+ a| 
+Puerto que se utiliza para la API de NetApp
+
+
+
+ a| 
+Intervalo de sondeo de rendimiento (s)
+ a| 
+Intervalo entre sondeos de rendimiento (predeterminado 300 segundos)
+
+|===
+
+
+== Conexión de sistemas de almacenamiento
+
+Como alternativa al uso del usuario administrativo predeterminado para este origen de datos, es posible configurar un usuario con derechos administrativos directamente en los sistemas de almacenamiento de NetApp, de tal modo que este origen de datos pueda adquirir los datos de los sistemas de almacenamiento NetApp.
+
+La conexión con los sistemas de almacenamiento NetApp requiere que el usuario, especificado al adquirir el pfilers principal (en el que existe el sistema de almacenamiento), cumpla las siguientes condiciones:
+
+* El usuario debe estar en vfiler0 (archivador raíz/pfiler).
++
+Los sistemas de almacenamiento se adquieren cuando se adquiere el filer principal.
+
+* Los siguientes comandos definen las capacidades de los roles de usuario:
++
+** "api-*": Utilice esto para permitir que OnCommand Insight ejecute todos los comandos de la API de almacenamiento de NetApp. Este comando es necesario para utilizar LA ZAPI.
+** "login-http-admin": Utilice esto para permitir que OnCommand Insight se conecte al almacenamiento de NetApp a través de HTTP. Este comando es necesario para utilizar LA ZAPI.
+** «Security-api-vfiler»: Utilice esto para permitir a OnCommand Insight ejecutar comandos de API de almacenamiento de NetApp para recuperar información de la unidad vFiler.
+** "cli-options": Para el comando "OPTIONS" y se utiliza para la IP del partner y las licencias habilitadas.
+** " cli-lun": Acceda a este comando para gestionar las LUN. Muestra el estado (ruta de LUN, tamaño, estado en línea/sin conexión y estado compartido) de la LUN o clase de LUN determinada.
+** "cli-df": Para comandos "df -s", "df -r", "df -A -r" y se utiliza para mostrar espacio libre.
+** "cli-ifconfig": Para el comando "ifconfig -a" y se utiliza para obtener la dirección IP del servidor de almacenamiento.
+** "cli-rdfile": Para el comando "rdfile /etc/netgroup" y se utiliza para obtener grupos de red.
+** "cli-date": Comando "date" y se usa para obtener la fecha completa para obtener las copias Snapshot.
+** "cli-snap": Para el comando "snap list" y se utiliza para obtener copias snapshot.
+
+
+
+
+Si no se proporcionan permisos date de cli o snap-cli, la adquisición puede finalizar, pero no se notifican las copias snapshot.
+
+Para adquirir correctamente un origen de datos de 7-Mode y no generar ninguna advertencia en el sistema de almacenamiento, debe usar una de las siguientes cadenas de comandos para definir los roles de usuario. La segunda cadena que aparece aquí es una versión simplificada de la primera:
+
+[listing]
+----
+login-http-admin,api-*,security-api-vfile,cli-rdfile,cli-options,cli-df,cli-lun,cli-ifconfig,cli-date,cli-snap,
+or
+login-http-admin,api-*,security-api-vfile,cli-*
+----

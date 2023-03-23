@@ -1,0 +1,62 @@
+---
+permalink: config-admin/importing-ip-identification-from-a-csv-file.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede importar manualmente identificaciones de dispositivos IP a la función resolución de dispositivos mediante una lista de identificaciones de dispositivos en un archivo CSV. 
+---
+= Importando identificación de dispositivo IP desde un archivo CSV
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede importar manualmente identificaciones de dispositivos IP a la función resolución de dispositivos mediante una lista de identificaciones de dispositivos en un archivo CSV.
+
+
+
+== Antes de empezar
+
+Debe tener un archivo CSV formateado correctamente para importar identificaciones de dispositivo. El archivo CSV para dispositivos IP requiere la siguiente información:
+
+|===
+
+
+ a| 
+Dirección
+
+
+
+ a| 
+IP
+
+
+
+ a| 
+Nombre
+
+|===
+[NOTE]
+====
+Como práctica recomendada, se recomienda exportar primero la información IP Identify a un archivo CSV, realizar los cambios deseados en ese archivo y, a continuación, importar el archivo de nuevo a IP Identify. Esto garantiza que las columnas esperadas estén presentes y en el orden adecuado.
+
+====
+Para importar información de identificación de IP:
+
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web de Insight.
+. Haga clic en *Administrar* > *resolución del dispositivo*
+. Seleccione la ficha *Identificación IP*.
+. Haga clic en *identificar* > *identificar desde archivo*
+. 
++
+.. Desplácese hasta la carpeta que contiene los archivos CSV para importar y seleccione el archivo deseado.
+
+
++
+Los dispositivos que introduzca se agregarán a la lista de dispositivos de la ficha Identificación IP.
+
+

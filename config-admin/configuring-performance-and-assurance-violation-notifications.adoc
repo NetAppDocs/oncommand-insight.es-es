@@ -1,0 +1,30 @@
+---
+permalink: config-admin/configuring-performance-and-assurance-violation-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight admite notificaciones para incumplimientos de rendimiento y garantiza los incumplimientos. De manera predeterminada, Insight no envía notificaciones de estos incumplimientos; debe configurar Insight para que envíe correo electrónico, para enviar mensajes de syslog al servidor de syslog o para enviar notificaciones SNMP cuando se produce una infracción. 
+---
+= Configurar el rendimiento y garantizar notificaciones de infracciones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight admite notificaciones para incumplimientos de rendimiento y garantiza los incumplimientos. De manera predeterminada, Insight no envía notificaciones de estos incumplimientos; debe configurar Insight para que envíe correo electrónico, para enviar mensajes de syslog al servidor de syslog o para enviar notificaciones SNMP cuando se produce una infracción.
+
+
+
+== Antes de empezar
+
+Debe haber configurado métodos de envío de correo electrónico, syslog y SNMP para infracciones.
+
+
+
+== Pasos
+
+. Haga clic en *Admin* > *Notificaciones*.
+. Haga clic en *Eventos*.
+. En la sección *Eventos de infracciones de rendimiento* o *Eventos de infracciones de seguridad*, haga clic en la lista del método de notificación (*correo electrónico*, *Syslog* o *SNMP*) que desee y seleccione el nivel de gravedad (*Advertencia y superior* o *crítico*) para la violación.
+. Haga clic en *Guardar*.
+

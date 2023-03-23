@@ -1,0 +1,20 @@
+---
+permalink: howto/examining-the-vm.html 
+sidebar: sidebar 
+keywords:  
+summary: 'En la página de destino de la máquina virtual, seleccione otras métricas para mostrar e incluir la utilización de la CPU y la utilización de la memoria. Los gráficos de utilización de la CPU y la memoria muestran que ambas funcionan a casi el 100 % de su capacidad. Esto nos indica que el problema con el servidor de Exchange no es un problema del almacenamiento, sino que es el resultado del elevado uso de la memoria y la CPU del equipo virtual y del intercambio de memoria consiguiente de E/S al disco.' 
+---
+= Examinar la VM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En la página de destino de la máquina virtual, seleccione otras métricas para mostrar e incluir la utilización de la CPU y la utilización de la memoria. Los gráficos de utilización de la CPU y la memoria muestran que ambas funcionan a casi el 100 % de su capacidad. Esto nos indica que el problema con el servidor de Exchange no es un problema del almacenamiento, sino que es el resultado del elevado uso de la memoria y la CPU del equipo virtual y del intercambio de memoria consiguiente de E/S al disco.
+
+image::../media/travbook-vm.gif[vm de travbook]
+
+Para resolver este problema, puede buscar recursos similares adicionales. Introduzca «'Node'» en el cuadro de diálogo de entrada de recursos adicionales para mostrar métricas de activos similares a los de la máquina virtual de Exchange. La comparación puede ayudar a identificar un nodo que podría ser más adecuado para alojar la carga de trabajo en caso de que sea necesario cambiar.
+
+image::../media/resources-vm.gif[recursos de máquina virtual]

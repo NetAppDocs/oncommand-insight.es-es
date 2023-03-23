@@ -1,0 +1,39 @@
+---
+permalink: config-admin/what-the-violations-section-enables-you-to-do.html 
+sidebar: sidebar 
+keywords:  
+summary: La sección infracciones le permite ver y administrar cualquiera de las infracciones que se produzcan en la red como resultado de una política de rendimiento asignada a un activo. 
+---
+= Uso de la sección violaciones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La sección infracciones le permite ver y administrar cualquiera de las infracciones que se produzcan en la red como resultado de una política de rendimiento asignada a un activo.
+
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web de OnCommand Insight.
+. Localice una página de activos realizando una de las siguientes acciones:
++
+** En la barra de herramientas Insight, haga clic en image:../media/icon-sanscreen-magnifying-glass-gif.gif[""], escriba el nombre del activo y, a continuación, seleccione el activo en la lista.
+** Haga clic en *Paneles*, seleccione *Panel de activos*, busque un nombre de activo y haga clic en él. Aparece la página Asset. La sección violaciones muestra el tiempo en que se produjo la infracción y una descripción del umbral que se atravesó, junto con un hipervínculo al activo en el que se produjo la violación (por ejemplo «'2 violaciones de los derechos de propiedad DS-30 con latencia - total > 50'»).
+
+
+. Puede realizar cualquiera de las siguientes tareas opcionales:
++
+** Utilice el cuadro *filtro* para mostrar sólo infracciones específicas.
+** Haga clic en un número de página para examinar las violaciones por página si hay más de cinco infracciones en la tabla.
+** Cambie el orden de las columnas de una tabla a ascendente (flecha arriba) o descendente (flecha abajo) haciendo clic en la flecha del encabezado de la columna.
+** Haga clic en el nombre del activo en cualquier descripción para mostrar su página de activos; un círculo rojo indica los problemas que necesitan más investigación.
++
+Puede hacer clic en la política de rendimiento, que se muestra en el cuadro de diálogo Edit Policy, para revisar la política de rendimiento y realizar cambios en la política de ser necesario.
+
+** Haga clic en image:../media/delete-icon.gif[""] eliminar una infracción de la lista si determina que el problema ya no es motivo de preocupación.
+
+
+

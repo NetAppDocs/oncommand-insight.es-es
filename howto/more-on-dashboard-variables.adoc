@@ -1,0 +1,76 @@
+---
+permalink: howto/more-on-dashboard-variables.html 
+sidebar: sidebar 
+keywords:  
+summary: Las variables de panel vienen en varios tipos, se pueden utilizar en diferentes campos y deben seguir las reglas para la nomenclatura. Estos conceptos se explican aquí. 
+---
+= Más información sobre variables de panel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las variables de panel vienen en varios tipos, se pueden utilizar en diferentes campos y deben seguir las reglas para la nomenclatura. Estos conceptos se explican aquí.
+
+
+
+== Tipos de variables
+
+Una variable puede ser uno de los siguientes tipos:
+
+*Texto*: Cadena alfanumérica. Este es el tipo de variable predeterminado.
+
+*Numérico*: Un número o rango de números.
+
+*Boolean*: Se usa para campos con valores de True/False, Yes/no, 0/1, etc. Para la variable booleana, las opciones son _Yes_, _no_, _None_, _any_.
+
+*Fecha*: Fecha o rango de fechas.
+
+
+
+== Variables «'genéricas»
+
+Puede establecer una variable genérica o universal haciendo clic en el botón *variable* y seleccionando uno de los tipos indicados anteriormente. Estos tipos siempre se muestran en la parte superior de la lista desplegable. A la variable se le asigna un nombre por defecto, por ejemplo "'$var1'", y no está vinculada a una anotación o atributo específico.
+
+La configuración de una variable genérica permite utilizar esa variable en widgets para filtrar el campo _any_ de ese tipo. Por ejemplo, si tiene un widget de tabla que muestre _Name_, _Alias_ y _Vendor_ (que son todos los atributos de tipo texto), y "'$var1'" es una variable de tipo texto, puede establecer filtros para cada uno de esos campos del widget para utilizar la variable $var1. Puede configurar otros widgets para utilizar $var1 en esos o en cualquier campo de texto.
+
+En la página del panel, si se establece $var1 en un valor (por ejemplo «'NetApp'»), se filtrarán _all_ de los campos en _all_ widgets configurados para utilizar esa variable. De esta forma, puede actualizar varios widgets al mismo tiempo para resaltar los datos del panel que elija a voluntad.
+
+Dado que las variables genéricas se pueden utilizar para cualquier campo de ese tipo, puede cambiar el nombre de una variable genérica sin cambiar su funcionalidad.
+
+[NOTE]
+====
+Todas las variables se tratan como variables "genéricas", incluso las que se crean para un atributo específico, porque todas las variables configuradas de un tipo se muestran al establecer un filtro para cualquier atributo o anotaciones de ese tipo. Sin embargo, la práctica recomendada es crear una variable genérica cuando la utilizará para filtrar un valor en varios campos, como en el ejemplo de _Name/Alias/Vendor_ anterior.
+
+====
+
+
+== Nomenclatura de variables
+
+Nombres de variables:
+
+* Deberá prefijarse siempre con una «»$». Esto se agrega automáticamente al configurar una variable.
+* No puede contener caracteres especiales; sólo se permiten las letras a-z y los dígitos 0-9.
+* No puede tener más de 20 caracteres, incluido el símbolo «»$».
+* No son sensibles a mayúsculas/minúsculas: $CityName y $cityname son la misma variable.
+* No puede ser el mismo que un nombre de variable existente.
+* No puede ser sólo el símbolo « »$».
+
+
+
+
+== Widgets que utilizan variables
+
+Las variables se pueden utilizar con los siguientes widgets:
+
+* Gráfico de área
+* Gráfico de barras
+* Gráfico de trazado de cuadro
+* Gráfico de líneas
+* Gráfico de trazados de dispersión
+* Widget de un único valor
+* Gráfico de spline
+* Gráfico de área apilada
+* Widget de tabla
+

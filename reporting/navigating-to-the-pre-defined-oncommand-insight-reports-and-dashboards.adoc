@@ -1,0 +1,26 @@
+---
+permalink: reporting/navigating-to-the-pre-defined-oncommand-insight-reports-and-dashboards.html 
+sidebar: sidebar 
+keywords:  
+summary: Al abrir el Portal de informes, la carpeta Contenido del equipo es el punto de partida para que seleccione el tipo de información que necesite en los informes de OnCommand Insight. 
+---
+= Navegar hasta informes predefinidos de OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Al abrir el Portal de informes, la carpeta Contenido del equipo es el punto de partida para que seleccione el tipo de información que necesite en los informes de OnCommand Insight.
+
+
+
+== Pasos
+
+. En el panel de navegación izquierdo, haga clic en *Contenido del equipo* y seleccione la categoría de información que desea utilizar.
++
+image::../media/cognos-menu.gif[menú cognos]
+
+. Haga clic en *Informes* para acceder a los informes predefinidos.
+. Haga clic en *comenzar*, *muestras* o *Tutoriales* para aprender a crear informes.
+

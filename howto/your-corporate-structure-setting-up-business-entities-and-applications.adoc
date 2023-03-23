@@ -1,0 +1,14 @@
+---
+permalink: howto/your-corporate-structure-setting-up-business-entities-and-applications.html 
+sidebar: sidebar 
+keywords:  
+summary: La comprensión de los elementos de la estructura corporativa le ayuda a realizar un seguimiento del uso de los activos y a informar sobre los costes. 
+---
+= Estructura corporativa: Configuración de entidades y aplicaciones empresariales
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La comprensión de los elementos de la estructura corporativa le ayuda a realizar un seguimiento del uso de los activos y a informar sobre los costes.

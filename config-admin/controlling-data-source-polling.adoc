@@ -1,0 +1,35 @@
+---
+permalink: config-admin/controlling-data-source-polling.html 
+sidebar: sidebar 
+keywords:  
+summary: Después de realizar un cambio en un origen de datos, es posible que desee sondear inmediatamente para comprobar sus cambios, o puede que desee posponer la recopilación de datos en un origen de datos durante uno, tres o cinco días mientras trabaja en un problema. 
+---
+= Controlando el sondeo del origen de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de realizar un cambio en un origen de datos, es posible que desee sondear inmediatamente para comprobar sus cambios, o puede que desee posponer la recopilación de datos en un origen de datos durante uno, tres o cinco días mientras trabaja en un problema.
+
+
+
+== Pasos
+
+. Haga clic en *Admin* y desplácese a la vista de lista de orígenes de datos
+. Seleccione el origen de datos para el que desea controlar el sondeo.
+. Haga clic en el enlace del nombre del origen de datos.
+. En la página de resumen del origen de datos, compruebe la información y haga clic en una de estas dos opciones de sondeo:
++
+** *Encuesta de nuevo* para obligar al origen de datos a recopilar datos inmediatamente.
+** *Posponer* y seleccionar la duración del retraso de sondeo de 3, 7 o 30 días.
+
+
+
+
+
+
+== Después de terminar
+
+Si pospuso la recopilación de datos en un origen de datos y desea reiniciar la colección, haga clic en *Reanudar* en la página de resumen.

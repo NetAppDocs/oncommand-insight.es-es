@@ -1,0 +1,51 @@
+---
+permalink: dwh/restoring-the-data-warehouse-database.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede restaurar una base de datos de Data Warehouse utilizando el archivo .zip que se creó cuando se hizo una copia de seguridad de esa base de datos de Data Warehouse. 
+---
+= Restauración de la base de datos del almacén de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede restaurar una base de datos de almacén de datos mediante la `.zip` Archivo que se creó al realizar una copia de seguridad de esa base de datos de Data Warehouse.
+
+
+
+== Acerca de esta tarea
+
+Al restaurar una base de datos de almacén de datos, también tiene la opción de restaurar la información de la cuenta de usuario desde la copia de seguridad. El motor de informes de Data Warehouse utiliza las tablas de administración de usuarios en una instalación sólo de Data Warehouse.
+
+
+
+== Pasos
+
+. Inicie sesión en el portal del almacén de datos en `+https://hostname/dwh+`, donde `hostname` Es el nombre del sistema en el que está instalado el almacén de datos de OnCommand Insight.
+. En el panel de navegación de la izquierda, haga clic en *copia de seguridad/Restaurar*.
+. En la sección *Restaurar base de datos e informes*, haga clic en *examinar* y busque `.zip` Archivo que contiene la copia de seguridad del almacén de datos.
+. Si desea restaurar informes o datos de cuentas de usuario, seleccione una o ambas de las siguientes casillas de verificación:
++
+** *Restaurar base de datos*
++
+Incluye la configuración del almacén de datos, los marts de datos, las conexiones y la información de la cuenta de usuario.
+
+** *Restaurar informes*
++
+Incluye informes personalizados, informes prediseñados, cambios que se realizaron en los informes prediseñados y configuración de la generación de informes que se creó en el portal de informes.
+
++
+[NOTE]
+====
+Si la copia de seguridad de la base de datos contiene un informe personalizado que tiene una barra oblicua (/) o un soporte abierto ([) en su nombre (por ejemplo, US IT Center Switch Port Boston/July), la operación de restauración cambia el nombre del informe, reemplazando la barra oblicua o el soporte abierto por un guión bajo (por ejemplo, US IT Center Switch Port Boston_July).
+
+====
+
+
+. Haga clic en *Restaurar*.
++
+Una vez completado el proceso de restauración, aparece un mensaje debajo del botón Restaurar. Si el proceso de restauración se realiza correctamente, el mensaje indica que el proceso se ha realizado correctamente. Si se produce un error en el proceso de restauración, el mensaje informa de la excepción específica que provocó el error. Si se produce una excepción y el proceso de restauración falla, la base de datos original se restablece automáticamente.
+
+

@@ -1,0 +1,31 @@
+---
+permalink: config-admin/deleting-performance-policies.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede eliminar una política de rendimiento si cree que ya no es aplicable a la supervisión de los objetos de la red. 
+---
+= Eliminar políticas de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede eliminar una política de rendimiento si cree que ya no es aplicable a la supervisión de los objetos de la red.
+
+
+
+== Pasos
+
+. Abra Insight en su navegador.
+. En el menú *gestionar*, seleccione *políticas de rendimiento*.
++
+Se muestra la página Performance Policies.
+
+. Pase el cursor sobre el nombre de una política de la lista de políticas de rendimiento de un objeto.
+. Haga clic en image:../media/oci-delete-policy-threshold-icon.gif[""].
++
+Aparece un mensaje en el que se pregunta si desea eliminar la directiva.
+
+. Haga clic en *Aceptar*.
+

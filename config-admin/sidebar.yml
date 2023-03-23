@@ -1,0 +1,765 @@
+---
+section: config-admin
+title: Configuración y administración
+entries:
+- title: Configurar Insight
+  url: "/config-admin/setting-up-insight.html"
+  entries:
+  - title: Acceso a la interfaz de usuario web de
+    url: "/config-admin/opening-insight.html"
+  - title: Instalación de sus licencias de Insight
+    url: "/config-admin/installing-your-insight-licenses.html"
+    entries:
+    - title: Licencias OnCommand Insight
+      url: "/config-admin/oncommand-insight-licenses.html"
+  - title: Configurar y gestionar cuentas de usuario
+    url: "/config-admin/setting-up-and-managing-user-accounts.html"
+    entries:
+    - title: Roles de usuario Insight
+      url: "/config-admin/insight-user-roles.html"
+    - title: Configurar Insight para LDAP
+      url: "/config-admin/configuring-insight-for-ldap-s.html"
+      entries:
+      - title: Configurar definiciones de usuario con LDAP
+        url: "/config-admin/configuring-user-definitions-using-ldap.html"
+    - title: Cambio de contraseñas de usuario
+      url: "/config-admin/changing-user-passwords.html"
+    - title: Edición de una definición de usuario
+      url: "/config-admin/editing-a-user-definition.html"
+    - title: Eliminar una cuenta de usuario
+      url: "/config-admin/deleting-a-user-account.html"
+    - title: Configuración del inicio de sesión único (SSO)
+      url: "/config-admin/configuring-sso.html"
+  - title: Configuración de un mensaje de advertencia de inicio de sesión
+    url: "/config-admin/configuring-a-login-warning-message.html"
+  - title: Seguridad de Insight
+    url: "/config-admin/security-management.html"
+    entries:
+    - title: Gestión de la seguridad en el servidor de Insight
+      url: "/config-admin/managing-security-on-the-insight-server.html"
+    - title: Gestión de la seguridad en la unidad de adquisición local
+      url: "/config-admin/managing-security-on-the-local-acquisition-unit.html"
+    - title: Gestión de la seguridad en una RAU
+      url: "/config-admin/managing-security-on-an-rau.html"
+    - title: Gestión de la seguridad en el almacén de datos
+      url: "/config-admin/managing-security-on-the-data-warehouse.html"
+    - title: Cambiar contraseñas de usuario interno de OnCommand Insight
+      url: "/config-admin/changing-oncommand-insight-internal-user-passwords.html"
+      entries:
+      - title: Cambio de las contraseñas “Inventory” y “dwh_Internal” mediante la
+          interfaz de usuario de configuración de la conexión al servidor
+        url: "/config-admin/changing-passwords-in-the-server-connection-configuration-ui.html"
+      - title: Cambio de la contraseña dwh mediante la herramienta de administración
+          de ODBC
+        url: "/config-admin/changing-the-dwh-password-using-the-odbc-administration-tool.html"
+  - title: Compatibilidad con el inicio de sesión de la tarjeta inteligente y el certificado
+    url: "/config-admin/certificate-login-support.html"
+    entries:
+    - title: Configuración de hosts para el inicio de sesión de tarjeta inteligente
+        y certificado
+      url: "/config-admin/host-configuration-for-smart-card-and-certificate-login.html"
+    - title: Configuración de un cliente para que admita el inicio de sesión de tarjeta
+        inteligente y certificado
+      url: "/config-admin/client-configuration-for-smart-card-and-certificate-login.html"
+    - title: Activación de CAC en un servidor Linux
+      url: "/config-admin/cac-configuration-for-linux.html"
+    - title: Configuración del almacén de datos para el inicio de sesión de la tarjeta
+        inteligente y el certificado
+      url: "/config-admin/host-configuration-for-smart-card-and-certificate-login-dwh.html"
+    - title: Configuración de Cognos para el inicio de sesión con tarjeta inteligente
+        y certificado (OnCommand Insight 7.3.5 a 7.3.9)
+      url: "/config-admin/cognos-configuration-for-smart-card-and-certificate-login-7-3-5-through-7-3-9.html"
+    - title: Configuración de Cognos para el inicio de sesión con tarjeta inteligente
+        y certificado (OnCommand Insight 7.3.10 y posterior)
+      url: "/config-admin/cognos-configuration-for-smart-card-and-certificate-login-7-3-10-and-later.html"
+    - title: Importación de certificados SSL firmados por CA para Cognos y DWH (Insight
+        7.3.5 a 7.3.9)
+      url: "/config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-5-to-7-3-9.html"
+    - title: Importación de certificados SSL firmados por CA para Cognos y DWH (Insight
+        7.3.10 y posterior)
+      url: "/config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-10-and-later.html"
+  - title: Configuración del almacén de datos para el inicio de sesión de la tarjeta
+      inteligente y el certificado
+    url: "/config-admin/host-configuration-for-smart-card-and-certificate-login-dwh.html"
+  - title: Configuración de Cognos para el inicio de sesión con tarjeta inteligente
+      y certificado (OnCommand Insight 7.3.5 a 7.3.9)
+    url: "/config-admin/cognos-configuration-for-smart-card-and-certificate-login-7-3-5-through-7-3-9.html"
+  - title: Configuración de Cognos para el inicio de sesión con tarjeta inteligente
+      y certificado (OnCommand Insight 7.3.10 y posterior)
+    url: "/config-admin/cognos-configuration-for-smart-card-and-certificate-login-7-3-10-and-later.html"
+  - title: Importación de certificados SSL firmados por CA para Cognos y DWH (Insight
+      7.3.5 a 7.3.9)
+    url: "/config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-5-to-7-3-9.html"
+  - title: Importación de certificados SSL firmados por CA para Cognos y DWH (Insight
+      7.3.10 y posterior)
+    url: "/config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-10-and-later.html"
+  - title: Importación de certificados SSL
+    url: "/config-admin/importing-an-ssl-certificate.html"
+  - title: Configuración de backups semanales para la base de datos de Insight
+    url: "/config-admin/setting-up-weekly-backups-for-your-oci-database.html"
+    entries:
+    - title: Lo que se incluye en el respaldo
+      url: "/config-admin/what-s-included-in-the-backup.html"
+  - title: Archivado de datos de rendimiento
+    url: "/config-admin/performance-data-archiving.html"
+    entries:
+    - title: Permitiendo el archivado de rendimiento
+      url: "/config-admin/enabling-performance-archive.html"
+    - title: Cargando archivo de rendimiento
+      url: "/config-admin/loading-performance-archive.html"
+  - title: Configuración del correo electrónico
+    url: "/config-admin/configuring-your-email.html"
+    entries:
+    - title: Requisitos previos para la configuración del correo electrónico
+      url: "/config-admin/email-configuration-prerequisites.html"
+    - title: Configuración de su correo electrónico para Insight
+      url: "/config-admin/configuring-your-email-for-insight.html"
+  - title: Configuración de notificaciones SNMP
+    url: "/config-admin/configuring-snmp-notifications.html"
+  - title: Activación de la instalación de syslog
+    url: "/config-admin/enabling-the-syslog-facility.html"
+    entries:
+    - title: Contenido de syslog de Insight
+      url: "/config-admin/insight-syslog-contents.html"
+  - title: Configurar el rendimiento y garantizar notificaciones de infracciones
+    url: "/config-admin/configuring-performance-and-assurance-violation-notifications.html"
+  - title: Configurar notificaciones de eventos en el nivel del sistema
+    url: "/config-admin/configuring-system-level-event-notifications.html"
+  - title: Configurar el procesamiento de ASUP
+    url: "/config-admin/configuring-your-asup-processing.html"
+    entries:
+    - title: Lo que se incluye en el paquete AutoSupport (ASUP)
+      url: "/config-admin/what-s-included-in-the-autosupport-package.html"
+  - title: Definición de aplicaciones
+    url: "/config-admin/defining-applications.html"
+    entries:
+    - title: Asignar aplicaciones a activos
+      url: "/config-admin/assigning-applications-to-assets.html"
+    - title: Editar aplicaciones
+      url: "/config-admin/editing-applications.html"
+    - title: Eliminar aplicaciones
+      url: "/config-admin/deleting-an-application.html"
+  - title: Cómo funciona la detección de anomalías de OnCommand Insight
+    url: "/config-admin/about-oncommand-insight-anomaly-detection.html"
+    entries:
+    - title: Configurar las aplicaciones para la detección de anomalías
+      url: "/config-admin/configuring-anomaly-detection-for-applications.html"
+    - title: Utilizando la sección anomalías
+      url: "/config-admin/what-the-anomalies-section-enables-you-to-do.html"
+    - title: Estado de supervisión de detección de anomalías
+      url: "/config-admin/anomaly-detection-monitoring-status.html"
+    - title: Crear una política de rendimiento de aplicaciones
+      url: "/config-admin/creating-an-application-performance-policy.html"
+  - title: La jerarquía de entidades de negocio
+    url: "/config-admin/your-business-entities-hierarchy.html"
+    entries:
+    - title: Diseño de la jerarquía de entidades de negocio
+      url: "/config-admin/designing-your-business-entities-hierarchy.html"
+    - title: Creación de entidades de negocio
+      url: "/config-admin/setting-up-business-entities.html"
+    - title: Asignar entidades de negocio a activos
+      url: "/config-admin/assigning-business-entities-to-assets.html"
+    - title: Asignar entidades de negocio a o eliminar entidades de negocio de varios
+        activos
+      url: "/config-admin/adding-or-removing-business-entities-from-multiple-assets.html"
+  - title: Definición de anotaciones
+    url: "/config-admin/defining-annotations.html"
+    entries:
+    - title: Uso de anotaciones para supervisar su entorno
+      url: "/config-admin/using-annotations-to-monitor-your-environment.html"
+      entries:
+      - title: Gestión de tipos de anotaciones
+        url: "/config-admin/managing-annotation-types.html"
+        entries:
+        - title: Tipos de anotaciones predeterminados
+          url: "/config-admin/predefined-annotation-types.html"
+        - title: Cómo se asignan las anotaciones
+          url: "/config-admin/how-annotations-are-assigned.html"
+        - title: Asociación de costes con anotaciones
+          url: "/config-admin/associating-costs-with-annotations.html"
+      - title: Creación de anotaciones personalizadas
+        url: "/config-admin/creating-custom-annotations.html"
+        entries:
+        - title: Asignación manual de anotaciones a activos
+          url: "/config-admin/manually-assigning-annotations-to-assets.html"
+        - title: Modificación de anotaciones
+          url: "/config-admin/modifying-annotations.html"
+        - title: Eliminar anotaciones
+          url: "/config-admin/deleting-annotations.html"
+      - title: Asignación de anotaciones a activos mediante reglas de anotación
+        url: "/config-admin/assigning-annotations-to-assets-using-annotation-rules.html"
+        entries:
+        - title: Reglas de anotación de almacenamiento predeterminadas
+          url: "/config-admin/default-storage-annotation-settings.html"
+        - title: Creación de reglas de anotación
+          url: "/config-admin/configuring-annotation-rules-for-automatic-assignment.html"
+        - title: Establecimiento de la precedencia de regla de anotación
+          url: "/config-admin/setting-annotation-rule-precedence.html"
+        - title: Modificación de reglas de anotación
+          url: "/config-admin/modifying-annotation-rules.html"
+        - title: Eliminación de reglas de anotación
+          url: "/config-admin/deleting-annotation-rules.html"
+      - title: Importando valores de anotación
+        url: "/config-admin/importing-annotation-values.html"
+      - title: Asignar anotaciones a varios activos mediante una consulta
+        url: "/config-admin/assigning-annotations-using-a-query.html"
+  - title: Consulta de activos
+    url: "/config-admin/using-queries.html"
+    entries:
+    - title: Activos utilizados en consultas y paneles
+      url: "/config-admin/assets-used-in-queries-and-dashboards.html"
+    - title: Crear una consulta
+      url: "/config-admin/creating-a-query.html"
+    - title: Ver consultas
+      url: "/config-admin/viewing-queries.html"
+    - title: Exportando resultados de consulta a un archivo .CSV
+      url: "/config-admin/exporting-query-results-to-a-csv-file.html"
+    - title: Modificar consultas
+      url: "/config-admin/modifying-queries.html"
+    - title: Eliminación de consultas
+      url: "/config-admin/deleting-queries.html"
+    - title: Asignar múltiples aplicaciones a o quitar varias aplicaciones de activos
+      url: "/config-admin/editing-or-removing-applications-in-bulk.html"
+    - title: Edición o eliminación de varias anotaciones de activos
+      url: "/config-admin/editing-or-removing-annotations-from-assets-in-bulk.html"
+    - title: Copiando valores de tabla
+      url: "/config-admin/copying-table-values.html"
+  - title: Gestionar políticas de rendimiento
+    url: "/config-admin/performance-policy-management.html"
+    entries:
+    - title: Crear políticas de rendimiento
+      url: "/config-admin/creating-performance-policies.html"
+    - title: Prioridad de evaluación de políticas de rendimiento
+      url: "/config-admin/performance-policy-precedence.html"
+      entries:
+      - title: Cambiar la prioridad de una política de rendimiento
+        url: "/config-admin/configuring-performance-policy-precedence.html"
+    - title: Editar políticas de rendimiento
+      url: "/config-admin/modifying-performance-policies.html"
+    - title: Eliminar políticas de rendimiento
+      url: "/config-admin/deleting-performance-policies.html"
+  - title: Importar y exportar datos de usuario
+    url: "/config-admin/importing-and-exporting-user-data.html"
+- title: Seguridad de Insight
+  url: "/config-admin/security-management.html"
+  entries:
+  - title: Gestión de la seguridad en el servidor de Insight
+    url: "/config-admin/managing-security-on-the-insight-server.html"
+  - title: Gestión de la seguridad en la unidad de adquisición local
+    url: "/config-admin/managing-security-on-the-local-acquisition-unit.html"
+  - title: Gestión de la seguridad en una RAU
+    url: "/config-admin/managing-security-on-an-rau.html"
+  - title: Gestión de la seguridad en el almacén de datos
+    url: "/config-admin/managing-security-on-the-data-warehouse.html"
+  - title: Cambiar contraseñas de usuario interno de OnCommand Insight
+    url: "/config-admin/changing-oncommand-insight-internal-user-passwords.html"
+    entries:
+    - title: Cambio de las contraseñas “Inventory” y “dwh_Internal” mediante la interfaz
+        de usuario de configuración de la conexión al servidor
+      url: "/config-admin/changing-passwords-in-the-server-connection-configuration-ui.html"
+    - title: Cambio de la contraseña dwh mediante la herramienta de administración
+        de ODBC
+      url: "/config-admin/changing-the-dwh-password-using-the-odbc-administration-tool.html"
+- title: Compatibilidad con el inicio de sesión de la tarjeta inteligente y el certificado
+  url: "/config-admin/certificate-login-support.html"
+  entries:
+  - title: Configuración de hosts para el inicio de sesión de tarjeta inteligente
+      y certificado
+    url: "/config-admin/host-configuration-for-smart-card-and-certificate-login.html"
+  - title: Configuración de un cliente para que admita el inicio de sesión de tarjeta
+      inteligente y certificado
+    url: "/config-admin/client-configuration-for-smart-card-and-certificate-login.html"
+  - title: Activación de CAC en un servidor Linux
+    url: "/config-admin/cac-configuration-for-linux.html"
+  - title: Configuración del almacén de datos para el inicio de sesión de la tarjeta
+      inteligente y el certificado
+    url: "/config-admin/host-configuration-for-smart-card-and-certificate-login-dwh.html"
+  - title: Configuración de Cognos para el inicio de sesión con tarjeta inteligente
+      y certificado (OnCommand Insight 7.3.5 a 7.3.9)
+    url: "/config-admin/cognos-configuration-for-smart-card-and-certificate-login-7-3-5-through-7-3-9.html"
+  - title: Configuración de Cognos para el inicio de sesión con tarjeta inteligente
+      y certificado (OnCommand Insight 7.3.10 y posterior)
+    url: "/config-admin/cognos-configuration-for-smart-card-and-certificate-login-7-3-10-and-later.html"
+  - title: Importación de certificados SSL firmados por CA para Cognos y DWH (Insight
+      7.3.5 a 7.3.9)
+    url: "/config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-5-to-7-3-9.html"
+  - title: Importación de certificados SSL firmados por CA para Cognos y DWH (Insight
+      7.3.10 y posterior)
+    url: "/config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-10-and-later.html"
+- title: Configuración del almacén de datos para el inicio de sesión de la tarjeta
+    inteligente y el certificado
+  url: "/config-admin/host-configuration-for-smart-card-and-certificate-login-dwh.html"
+- title: Configuración de Cognos para el inicio de sesión con tarjeta inteligente
+    y certificado (OnCommand Insight 7.3.5 a 7.3.9)
+  url: "/config-admin/cognos-configuration-for-smart-card-and-certificate-login-7-3-5-through-7-3-9.html"
+- title: Configuración de Cognos para el inicio de sesión con tarjeta inteligente
+    y certificado (OnCommand Insight 7.3.10 y posterior)
+  url: "/config-admin/cognos-configuration-for-smart-card-and-certificate-login-7-3-10-and-later.html"
+- title: Importación de certificados SSL firmados por CA para Cognos y DWH (Insight
+    7.3.5 a 7.3.9)
+  url: "/config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-5-to-7-3-9.html"
+- title: Importación de certificados SSL firmados por CA para Cognos y DWH (Insight
+    7.3.10 y posterior)
+  url: "/config-admin/importing-ca-signed-ssl-certificates-for-cognos-and-dwh-insight-7-3-10-and-later.html"
+- title: Importación de certificados SSL
+  url: "/config-admin/importing-an-ssl-certificate.html"
+- title: Cómo funciona la detección de anomalías de OnCommand Insight
+  url: "/config-admin/about-oncommand-insight-anomaly-detection.html"
+  entries:
+  - title: Configurar las aplicaciones para la detección de anomalías
+    url: "/config-admin/configuring-anomaly-detection-for-applications.html"
+  - title: Utilizando la sección anomalías
+    url: "/config-admin/what-the-anomalies-section-enables-you-to-do.html"
+  - title: Estado de supervisión de detección de anomalías
+    url: "/config-admin/anomaly-detection-monitoring-status.html"
+  - title: Crear una política de rendimiento de aplicaciones
+    url: "/config-admin/creating-an-application-performance-policy.html"
+- title: La jerarquía de entidades de negocio
+  url: "/config-admin/your-business-entities-hierarchy.html"
+  entries:
+  - title: Diseño de la jerarquía de entidades de negocio
+    url: "/config-admin/designing-your-business-entities-hierarchy.html"
+  - title: Creación de entidades de negocio
+    url: "/config-admin/setting-up-business-entities.html"
+  - title: Asignar entidades de negocio a activos
+    url: "/config-admin/assigning-business-entities-to-assets.html"
+  - title: Asignar entidades de negocio a o eliminar entidades de negocio de varios
+      activos
+    url: "/config-admin/adding-or-removing-business-entities-from-multiple-assets.html"
+- title: Definición de anotaciones
+  url: "/config-admin/defining-annotations.html"
+  entries:
+  - title: Uso de anotaciones para supervisar su entorno
+    url: "/config-admin/using-annotations-to-monitor-your-environment.html"
+    entries:
+    - title: Gestión de tipos de anotaciones
+      url: "/config-admin/managing-annotation-types.html"
+      entries:
+      - title: Tipos de anotaciones predeterminados
+        url: "/config-admin/predefined-annotation-types.html"
+      - title: Cómo se asignan las anotaciones
+        url: "/config-admin/how-annotations-are-assigned.html"
+      - title: Asociación de costes con anotaciones
+        url: "/config-admin/associating-costs-with-annotations.html"
+    - title: Creación de anotaciones personalizadas
+      url: "/config-admin/creating-custom-annotations.html"
+      entries:
+      - title: Asignación manual de anotaciones a activos
+        url: "/config-admin/manually-assigning-annotations-to-assets.html"
+      - title: Modificación de anotaciones
+        url: "/config-admin/modifying-annotations.html"
+      - title: Eliminar anotaciones
+        url: "/config-admin/deleting-annotations.html"
+    - title: Asignación de anotaciones a activos mediante reglas de anotación
+      url: "/config-admin/assigning-annotations-to-assets-using-annotation-rules.html"
+      entries:
+      - title: Reglas de anotación de almacenamiento predeterminadas
+        url: "/config-admin/default-storage-annotation-settings.html"
+      - title: Creación de reglas de anotación
+        url: "/config-admin/configuring-annotation-rules-for-automatic-assignment.html"
+      - title: Establecimiento de la precedencia de regla de anotación
+        url: "/config-admin/setting-annotation-rule-precedence.html"
+      - title: Modificación de reglas de anotación
+        url: "/config-admin/modifying-annotation-rules.html"
+      - title: Eliminación de reglas de anotación
+        url: "/config-admin/deleting-annotation-rules.html"
+    - title: Importando valores de anotación
+      url: "/config-admin/importing-annotation-values.html"
+    - title: Asignar anotaciones a varios activos mediante una consulta
+      url: "/config-admin/assigning-annotations-using-a-query.html"
+- title: Consulta de activos
+  url: "/config-admin/using-queries.html"
+  entries:
+  - title: Activos utilizados en consultas y paneles
+    url: "/config-admin/assets-used-in-queries-and-dashboards.html"
+  - title: Crear una consulta
+    url: "/config-admin/creating-a-query.html"
+  - title: Ver consultas
+    url: "/config-admin/viewing-queries.html"
+  - title: Exportando resultados de consulta a un archivo .CSV
+    url: "/config-admin/exporting-query-results-to-a-csv-file.html"
+  - title: Modificar consultas
+    url: "/config-admin/modifying-queries.html"
+  - title: Eliminación de consultas
+    url: "/config-admin/deleting-queries.html"
+  - title: Asignar múltiples aplicaciones a o quitar varias aplicaciones de activos
+    url: "/config-admin/editing-or-removing-applications-in-bulk.html"
+  - title: Edición o eliminación de varias anotaciones de activos
+    url: "/config-admin/editing-or-removing-annotations-from-assets-in-bulk.html"
+  - title: Copiando valores de tabla
+    url: "/config-admin/copying-table-values.html"
+- title: Gestión de fuentes de datos de Insight
+  url: "/config-admin/insight-data-source-management.html"
+  entries:
+  - title: Configurar orígenes de datos en Insight
+    url: "/config-admin/setting-up-your-data-sources-in-insight.html"
+    entries:
+    - title: Información de soporte de fuentes de datos
+      url: "/config-admin/data-source-support-information.html"
+    - title: Agregar orígenes de datos
+      url: "/config-admin/adding-data-sources.html"
+      entries:
+      - title: Importar orígenes de datos de una hoja de cálculo
+        url: "/config-admin/importing-data-sources-from-a-spreadsheet.html"
+      - title: Adición de un nuevo origen de datos por parche
+        url: "/config-admin/adding-a-new-data-source-patch-us26313-fr.html"
+    - title: Clonar un origen de datos
+      url: "/config-admin/cloning-a-data-source.html"
+    - title: Prueba de la configuración del origen de datos
+      url: "/config-admin/testing-the-data-source-configuration.html"
+  - title: Referencia de origen de datos específica del proveedor
+    url: "/config-admin/vendor-specific-data-source-reference.html"
+    entries:
+    - title: Origen de datos de 3PAR InServ
+      url: "/config-admin/3par-inserv-firmware-ssh-data-source.html"
+    - title: Origen de datos de Amazon AWS EC2
+      url: "/config-admin/amazon-aws-ec2-data-source.html"
+    - title: Fuente de datos de Brocade Enterprise Fabric Connectivity Manager
+      url: "/config-admin/brocade-efcm-9-5-to-9-7-data-sources.html"
+    - title: Fuente de datos del switch FC Brocade
+      url: "/config-admin/brocade-fc-switch-firmware-ssh-data-source.html"
+    - title: Fuente de datos Brocade Sphereon/Intrepid Switch
+      url: "/config-admin/brocade-sphereon-intrepid-switch-snmp-data-source.html"
+    - title: Origen de datos de firmware de switch FC de Cisco (SNMP)
+      url: "/config-admin/cisco-fc-switch-firmware-snmp-data-source.html"
+    - title: Fuente de datos de EMC Celerra
+      url: "/config-admin/emc-celerra-ssh-data-source.html"
+    - title: Fuente de datos EMC CLARiiON (NaviCLI)
+      url: "/config-admin/emc-clariion-navicli-data-source.html"
+    - title: Fuente de datos de EMC Data Domain
+      url: "/config-admin/emc-datadomain-data-source.html"
+    - title: Fuente de datos de EMC ECC StorageScope
+      url: "/config-admin/generic-emc-ecc-storagescope-data-source.html"
+    - title: Fuente de datos de Dell EMC ECS
+      url: "/config-admin/dell-emc-ecs-data-source.html"
+    - title: Fuente de datos de EMC Isilon
+      url: "/config-admin/emc-isilon-ssh-data-source.html"
+    - title: Fuente de datos Dell EMC PowerStore
+      url: "/config-admin/dell-emc-powerstore-data-source.html"
+    - title: Fuente de datos de EMC RecoverPoint
+      url: "/config-admin/emc-recoverpoint-data-source.html"
+    - title: Habilitador de soluciones EMC con fuente de datos de rendimiento SMI-S.
+      url: "/config-admin/emc-solutions-enabler-cli-with-smi-s-performance.html"
+    - title: Fuente de datos de EMC VNX
+      url: "/config-admin/emc-vnx-ssh-data-source.html"
+    - title: Fuente de datos VNXe de EMC
+      url: "/config-admin/emc-vnxe-data-source.html"
+    - title: Fuente de datos de EMC VPLEX
+      url: "/config-admin/emc-vplex-cli-data-source.html"
+    - title: Fuente de datos de EMC XtremIO
+      url: "/config-admin/emc-xtremeio-data-source.html"
+    - title: Fuente de datos ETERNUS de Fujitsu
+      url: "/config-admin/fujitsu-eternus-data-source.html"
+    - title: Fuente de datos de Hitachi Content Platform (HCP)
+      url: "/config-admin/hitachi-content-platform-hcp-data-source.html"
+    - title: Fuente de datos de HDS HiCommand Device Manager
+      url: "/config-admin/hds-hicommand-devicemanager-data-source.html"
+      entries:
+      - title: Almacenamiento en HDS
+        url: "/config-admin/hds-landing-page-terminology-storage.html"
+      - title: Pool de almacenamiento de HDS
+        url: "/config-admin/hds-landing-page-terminology-storage-pool.html"
+      - title: Nodo de almacenamiento HDS
+        url: "/config-admin/hds-landing-page-terminology-storage-node.html"
+    - title: Fuente de datos NAS (Hnas) de HDS
+      url: "/config-admin/hds-hnas-data-source.html"
+    - title: Origen de datos HP CommandView AE
+      url: "/config-admin/hp-commandview-ae-data-source.html"
+    - title: Fuente de datos de almacenamiento HP EVA
+      url: "/config-admin/hp-eva-storage-sssu-data-source.html"
+    - title: Origen de datos HPE Nimble
+      url: "/config-admin/hpe-nimble-data-source.html"
+    - title: Fuente de datos Huawei OceanStor
+      url: "/config-admin/huawei-oceanstor-data-source.html"
+    - title: Fuente de datos IBM Cleversafe
+      url: "/config-admin/ibm-cleversafe-data-source.html"
+    - title: Origen de datos de IBM DS
+      url: "/config-admin/ibm-ds-cli-data-source.html"
+    - title: Fuente de datos IBM PowerVM
+      url: "/config-admin/ibm-powervm-ssh-data-source.html"
+    - title: Fuente de datos IBM SVC
+      url: "/config-admin/ibm-svc-ssh-data-source.html"
+    - title: Origen de datos de IBM Tivoli Monitoring
+      url: "/config-admin/ibm-tivoli-monitoring-data-source.html"
+    - title: Fuente de datos IBM TotalStorage DS4000
+      url: "/config-admin/ibm-totalstorage-ds4000-data-source.html"
+    - title: Origen de datos de IBM XIV
+      url: "/config-admin/ibm-xiv-cli-data-source.html"
+    - title: Fuente de datos Infinidat InfiniBox
+      url: "/config-admin/infinidat-infinibox-http-data-source.html"
+    - title: Origen de datos de computación de Microsoft Azure
+      url: "/config-admin/microsoft-azure-compute-data-source.html"
+    - title: Origen de datos Azure NetApp Files
+      url: "/config-admin/microsoft-azure-netapp-files-data-source.html"
+    - title: Origen de datos de Microsoft Hyper-V.
+      url: "/config-admin/microsoft-hyper-v-wmi-data-source.html"
+    - title: Origen de datos de Clustered Data ONTAP de NetApp
+      url: "/config-admin/netapp-clustered-data-ontap-data-source.html"
+      entries:
+      - title: Almacenamiento Clustered Data ONTAP de NetApp
+        url: "/config-admin/cdot-landing-page-terminology-storage.html"
+      - title: Pool de almacenamiento de Clustered Data ONTAP
+        url: "/config-admin/cdot-landing-page-terminology-storage-pool.html"
+      - title: Nodo de almacenamiento Clustered Data ONTAP
+        url: "/config-admin/cdot-landing-page-terminology-storage-node.html"
+    - title: Origen de los datos en Clustered Data ONTAP para Unified Manager de NetApp
+      url: "/config-admin/netapp-clustered-data-ontap-for-unified-manager-data-source.html"
+    - title: Origen de datos con sistema operativo Data ONTAP de NetApp en 7-Mode
+      url: "/config-admin/netapp-data-ontap-operating-in-7-mode-data-source.html"
+    - title: Origen de datos E-Series de NetApp
+      url: "/config-admin/netapp-e-series-data-source.html"
+      entries:
+      - title: Almacenamiento E-Series de NetApp
+        url: "/config-admin/e-series-landing-page-terminology-storage.html"
+      - title: Pool de almacenamiento de E-Series
+        url: "/config-admin/e-series-landing-page-terminology-storage-pool.html"
+      - title: Nodo de almacenamiento E-Series
+        url: "/config-admin/e-series-landing-page-terminology-storage-node.html"
+    - title: Origen de datos de sistemas de archivos de VM y host de NetApp
+      url: "/config-admin/netapp-host-and-vm-filesystems-data-source.html"
+    - title: Fuente de datos SolidFire de NetApp
+      url: "/config-admin/netapp-solidfire-data-source.html"
+    - title: Fuente de datos StorageGRID de NetApp
+      url: "/config-admin/netapp-storagegrid-data-source.html"
+    - title: Origen de datos de OpenStack
+      url: "/config-admin/openstack-data-source.html"
+    - title: Origen de datos de Oracle ZFS
+      url: "/config-admin/oracle-zfs-data-source.html"
+    - title: Origen de datos de FlashArray de Pure Storage
+      url: "/config-admin/pure-storage-flasharray-http-data-source.html"
+    - title: Fuente de datos del switch FC QLogic
+      url: "/config-admin/qlogic-fc-switch-snmp-data-source.html"
+    - title: Fuente de datos de Red Hat (RHEV)
+      url: "/config-admin/red-hat-rhev-data-source.html"
+    - title: Fuente de datos de Violin Flash Memory Array
+      url: "/config-admin/violin-memory-data-source.html"
+    - title: Origen de datos de VMware vSphere
+      url: "/config-admin/vmware-vsphere-web-services-data-source.html"
+  - title: Cambio de las credenciales de origen de datos
+    url: "/config-admin/changing-data-source-credentials.html"
+  - title: Cambios que causan problemas de recopilación de datos
+    url: "/config-admin/changes-causing-data-collection-problems.html"
+  - title: Examinar en detalle un origen de datos
+    url: "/config-admin/examining-one-data-source-in-detail.html"
+  - title: Investigar una fuente de datos fallida
+    url: "/config-admin/researching-a-failed-data-source.html"
+  - title: Controlando el sondeo del origen de datos
+    url: "/config-admin/controlling-data-source-polling.html"
+  - title: Edición de la información del origen de datos
+    url: "/config-admin/editing-data-source-information.html"
+  - title: Edición de información para varios orígenes de datos
+    url: "/config-admin/editing-multiple-data-sources.html"
+  - title: Asignación de etiquetas de origen de datos a anotaciones
+    url: "/config-admin/mapping-data-source-tags-to-annotations.html"
+  - title: Eliminar un origen de datos
+    url: "/config-admin/deleting-a-data-source-from-the-monitoring-environment.html"
+  - title: Qué son los parches de origen de datos
+    url: "/config-admin/data-source-patches.html"
+    entries:
+    - title: Aplicación de un parche de origen de datos
+      url: "/config-admin/applying-a-data-source-patch.html"
+    - title: Instalar un parche en un tipo de origen de datos
+      url: "/config-admin/installing-a-patch-on-all-data-sources-of-one-type.html"
+    - title: Gestión de parches
+      url: "/config-admin/managing-patches.html"
+    - title: Se está cometiendo un parche de origen de datos
+      url: "/config-admin/committing-a-data-source-patch.html"
+    - title: Revertir una revisión de origen de datos
+      url: "/config-admin/rolling-back-a-data-source-patch.html"
+- title: Resolución del dispositivo
+  url: "/config-admin/device-resolution.html"
+  entries:
+  - title: Antes de empezar
+    url: "/config-admin/before-you-begin.html"
+  - title: Planificación de reglas de resolución de dispositivos para su entorno
+    url: "/config-admin/creating-rules-for-your-environment.html"
+  - title: Creación de reglas de resolución de dispositivos
+    url: "/config-admin/creating-device-resolution-rules.html"
+    entries:
+    - title: Inicio de una actualización automática de resolución del dispositivo
+      url: "/config-admin/starting-a-automatic-device-resolution-update.html"
+    - title: Identificación manual asistida por reglas
+      url: "/config-admin/rule-assisted-manual-identification.html"
+  - title: Resolución de dispositivos Fibre Channel
+    url: "/config-admin/device-resolution-fc-identify.html"
+    entries:
+    - title: Adición manual de un dispositivo Fibre Channel
+      url: "/config-admin/adding-fc-devices-manually.html"
+    - title: Importe la identificación de dispositivo Fibre Channel desde un archivo
+        CSV
+      url: "/config-admin/importing-fc-identification-from-a-csv-file.html"
+    - title: Exportación de identificaciones de dispositivos Fibre Channel a un archivo
+        CSV
+      url: "/config-admin/exporting-fc-identification-to-a-csv-file.html"
+  - title: Resolución del dispositivo IP
+    url: "/config-admin/device-resolution-ip-identify.html"
+    entries:
+    - title: Adición manual de dispositivos IP
+      url: "/config-admin/adding-ip-devices-manually.html"
+    - title: Importando identificación de dispositivo IP desde un archivo CSV
+      url: "/config-admin/importing-ip-identification-from-a-csv-file.html"
+    - title: Exportando identificación de dispositivo IP a un archivo CSV
+      url: "/config-admin/exporting-ip-identification-to-a-csv-file.html"
+  - title: Opciones de configuración en la ficha Preferencias
+    url: "/config-admin/using-options-in-the-preferences-tab.html"
+  - title: Ejemplos de expresiones regulares
+    url: "/config-admin/regular-expression-examples.html"
+- title: Manteniéndose Insight
+  url: "/config-admin/maintaining-insight.html"
+  entries:
+  - title: Información de gestión
+    url: "/config-admin/managing-insight.html"
+  - title: Supervise el estado del sistema OnCommand Insight
+    url: "/config-admin/monitoring-oncommand-insight-system-health.html"
+  - title: Eliminando dispositivos inactivos
+    url: "/config-admin/deleting-inactive-devices.html"
+  - title: Auditar las actividades del sistema y del usuario
+    url: "/config-admin/auditing-system-and-user-activities.html"
+  - title: Supervisar las infracciones en la red
+    url: "/config-admin/opening-the-violations-dashboard.html"
+  - title: Estado de la unidad de adquisición
+    url: "/config-admin/acquisition-unit-status.html"
+  - title: Restauración de la base de datos de Insight
+    url: "/config-admin/restoring-the-insight-database.html"
+  - title: Actualizando licencias caducadas
+    url: "/config-admin/updating-expired-licenses.html"
+    entries:
+    - title: Las licencias ya no cumplen
+      url: "/config-admin/licenses-no-longer-compliant.html"
+    - title: Reemplazar licencias de versiones anteriores de Insight
+      url: "/config-admin/replacing-licenses-for-older-insight-versions.html"
+  - title: Aplicación de un Service Pack
+    url: "/config-admin/applying-a-service-pack.html"
+  - title: Preparación de un informe especial de solución de problemas
+    url: "/config-admin/preparing-a-special-troubleshooting-report.html"
+    entries:
+    - title: Realizar manualmente un backup de la base de datos de OnCommand Insight
+      url: "/config-admin/manually-backing-up-the-oci-database.html"
+    - title: Agrupación de registros para soporte
+      url: "/config-admin/bundling-logs-for-support.html"
+    - title: Envío de información a Soporte de NetApp
+      url: "/config-admin/sending-information-to-netapp-support.html"
+    - title: Eliminación de datos para su transferencia a soporte
+      url: "/config-admin/scrubbing-data-for-transfer-to-support-webui.html"
+  - title: Resolución avanzada de problemas
+    url: "/config-admin/advanced-troubleshooting.html"
+    entries:
+    - title: Configuración del número de horas para ignorar datos dinámicos
+      url: "/config-admin/configuring-the-number-of-hours-to-ignore-dynamic-data.html"
+    - title: Generando registros para el soporte al cliente
+      url: "/config-admin/generating-logs-for-customer-support.html"
+    - title: Mostrar información del sistema
+      url: "/config-admin/displaying-system-information.html"
+    - title: Enumerar los componentes de OnCommand Insight instalados
+      url: "/config-admin/listing-installed-oncommand-insight-packages.html"
+    - title: Calculando el número de objetos de base de datos
+      url: "/config-admin/calculating-the-number-of-database-objects.html"
+    - title: Reiniciar el servidor OnCommand Insight
+      url: "/config-admin/restarting-the-oncommand-insight-server-or-acquisition-unit.html"
+    - title: Mover datos de MySQL con la opción Migrate
+      url: "/config-admin/moving-mysql-data-using-the-migrate-option.html"
+      entries:
+      - title: Mover datos de MySQL con la línea de comandos
+        url: "/config-admin/moving-mysql-data-using-the-command-line.html"
+    - title: Forzar actualizaciones de anotaciones
+      url: "/config-admin/forcing-annotation-updates.html"
+    - title: Configuración de los ajustes del cliente
+      url: "/config-admin/configuring-client-settings.html"
+    - title: Comprobar el estado de los recursos del servidor
+      url: "/config-admin/checking-the-status-of-server-resources.html"
+    - title: Búsqueda de orígenes de datos fantasma
+      url: "/config-admin/finding-ghost-data-sources.html"
+    - title: Agregar un modelo de disco ausente
+      url: "/config-admin/adding-a-missing-disk-model.html"
+      entries:
+      - title: Localizar la información necesaria para el nuevo modelo de disco
+        url: "/config-admin/locating-required-information-for-new-disk-model.html"
+        entries:
+        - title: Contenido del archivo new_disk_models.txtI.
+          url: "/config-admin/content-of-the-new-disk-models-txt-file.html"
+- title: Supervisión de su entorno
+  url: "/config-admin/monitoring-your-environment.html"
+  entries:
+  - title: Datos de páginas de activos
+    url: "/config-admin/asset-pages.html"
+    entries:
+    - title: Tipos de páginas de activos
+      url: "/config-admin/types-of-asset-pages.html"
+    - title: Buscar activos específicos en su entorno
+      url: "/config-admin/searching-your-environment-for-specific-assets.html"
+      entries:
+      - title: Técnicas avanzadas de búsqueda
+        url: "/config-admin/advanced-asset-search-techniques-new.html"
+    - title: Cambiar el intervalo de tiempo de los datos mostrados
+      url: "/config-admin/changing-the-time-segment-of-the-data-displayed.html"
+    - title: Determinación del estado de adquisición del origen de datos
+      url: "/config-admin/determining-data-source-acquisition-status.html"
+    - title: Secciones de páginas de activos
+      url: "/config-admin/asset-page-sections.html"
+      entries:
+      - title: Resumen
+        url: "/config-admin/summary.html"
+        entries:
+        - title: Uso de la sección Resumen
+          url: "/config-admin/what-the-summary-section-enables-you-to-do.html"
+      - title: Topología
+        url: "/config-admin/topology.html"
+        entries:
+        - title: Uso de la sección Topology
+          url: "/config-admin/what-the-topology-section-enables-you-to-do.html"
+      - title: Datos de usuarios
+        url: "/config-admin/user-data.html"
+        entries:
+        - title: Uso de la sección datos de usuario para asignar o modificar aplicaciones
+          url: "/config-admin/what-the-user-data-section-enables-you-to-do-with-applications.html"
+        - title: Uso de la sección datos de usuario para asignar o modificar entidades
+            de negocio
+          url: "/config-admin/what-the-user-data-section-enables-you-to-do-with-business-entities.html"
+        - title: Uso de la sección datos de usuario para asignar o modificar anotaciones
+          url: "/config-admin/what-the-user-data-section-enables-you-to-do-with-annotations.html"
+      - title: Anomalías
+        url: "/config-admin/anomalies.html"
+        entries:
+        - title: Utilizando la sección anomalías
+          url: "/config-admin/what-the-anomalies-section-enables-you-to-do.html"
+      - title: Vista experta
+        url: "/config-admin/expert-view.html"
+        entries:
+        - title: Definiciones de métricas de Expert View
+          url: "/config-admin/metric-definitions.html"
+        - title: Uso de la sección Vista experta
+          url: "/config-admin/what-the-expert-view-section-enables-you-to-do.html"
+      - title: Activos relacionados
+        url: "/config-admin/related-assets.html"
+        entries:
+        - title: Uso de la sección activos relacionados
+          url: "/config-admin/what-the-related-assets-sections-enable-you-to-do.html"
+      - title: Infracciones
+        url: "/config-admin/violations.html"
+        entries:
+        - title: Uso de la sección violaciones
+          url: "/config-admin/what-the-violations-section-enables-you-to-do.html"
+      - title: Página de activos personalizable
+        url: "/config-admin/additional-data.html"
+        entries:
+        - title: Entender las variables “$this”
+          url: "/config-admin/understanding-this-variables.html"
+  - title: Equilibrado de recursos de red
+    url: "/config-admin/balancing-network-resources.html"
+  - title: Examen del rendimiento de la red
+    url: "/config-admin/examining-network-performance.html"
+    entries:
+    - title: Análisis de rendimiento lento del PC
+      url: "/config-admin/analyzing-slow-pc-performance.html"
+    - title: Analizar recursos correlacionados
+      url: "/config-admin/analyzing-correlated-resources.html"
+  - title: Supervisión del entorno Fibre Channel
+    url: "/config-admin/monitoring-fabric-inventory-and-performance.html"
+  - title: Tiempo de vida (TTL) y datos de reducción de la muestra
+    url: "/config-admin/time-to-live-ttl-and-downsampling.html"
+  - title: Eliminación del historial de inventario
+    url: "/config-admin/pruning-of-inventory-history.html"
+  - title: Ruta NAS para máquinas virtuales
+    url: "/config-admin/nas-path-for-vms.html"
+  - title: Capacidad como serie temporal
+    url: "/config-admin/capacity-as-time-series.html"

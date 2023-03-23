@@ -1,0 +1,274 @@
+---
+permalink: config-admin/monitoring-oncommand-insight-system-health.html 
+sidebar: sidebar 
+keywords:  
+summary: Debe comprobar periódicamente el estado actual de los componentes del sistema Insight mediante la página de estado, que muestra el estado de cada componente y le alerta cuando hay un problema. 
+---
+= Supervise el estado del sistema OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe comprobar periódicamente el estado actual de los componentes del sistema Insight mediante la página de estado, que muestra el estado de cada componente y le alerta cuando hay un problema.
+
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web Insight.
+. Haga clic en *Admin* y seleccione *Estado*.
++
+Se mostrará la página Estado.
+
+. Vea el resumen del estado actual de los componentes prestando especial atención a cualquier estado de atención en la columna *Detalles* que está precedida por un círculo rojo, que indica un problema que requiere su atención inmediata.
++
+La página Estado muestra información sobre cualquiera o todos los siguientes componentes de Insight en función de la configuración del sistema:
+
++
+|===
+
+
+| Componente | Prueba | Detalles | Pantallas 
+
+
+ a| 
+Adquisición
+ a| 
+Procesamiento de datos de inventario
+ a| 
+Estado de la unidad de adquisición local
+ a| 
+"'OK'" si el número de orígenes de datos de sondeo simultáneo es inferior al 75% del máximo del grupo de ejecución (el máximo predeterminado es 30). "'la adquisición está ocupada'" si el uso es superior al 75%, y recomienda aumentar el intervalo de sondeo o agregar más unidades de adquisición remotas.
+
+
+
+ a| 
+Motor de detección de anomalías
+ a| 
+Capacidad del motor
+ a| 
+Número de aplicaciones supervisadas para la detección de anomalías
+ a| 
+Número y porcentaje de aplicaciones que se están supervisando de 48 aplicaciones posibles.
+
+
+
+ a| 
+Motor de detección de anomalías
+ a| 
+Estado del motor
+ a| 
+Estado del motor de detección de anomalías
+ a| 
+"'OK'" si no se detectan errores, en caso contrario se muestra información sobre algún error encontrado. Consulte `prelert.log` archivo para obtener más información.
+
+
+
+ a| 
+DWH
+ a| 
+Backup
+ a| 
+Estado de la copia de seguridad programada del almacén de datos
+ a| 
+"'OK'" y la última hora de copia de seguridad de DWH correcta si está activada la copia de seguridad programada DWH. De lo contrario, muestra información sobre cualquier error encontrado.
+
+
+
+ a| 
+DWH
+ a| 
+ETL
+ a| 
+Estado de ETL del almacén de datos
+ a| 
+"'OK'" y el último tiempo de compilación de DWH satisfactorio si no hay errores. De lo contrario, muestra información sobre cualquier error encontrado.
+
+
+
+ a| 
+Servidor
+ a| 
+ASUP
+ a| 
+Estado de ASUP
+ a| 
+"'ASUP activado'" y la última hora de fonohogar correcta si está disponible. "'error de ASUP'" si fonohome está activado pero se ha encontrado un problema.
+
++ "ubicación de copia de seguridad no válida" si el directorio de copia de seguridad no es válido.
+
++ muestra la última hora de fonehome correcta, así como la hora del último intento fallido si está disponible.
+
++ "'ASUP desactivado'" si el fonohome está desactivado.
+
+
+
+ a| 
+Servidor
+ a| 
+Resolución automática
+ a| 
+Estado de la resolución automática del dispositivo
+ a| 
+"'OK'" si no hay errores. "'la resolución automática está bloqueada'" si los errores de identificación impiden el progreso de la resolución.
+
++ «'tasa de éxito baja'» si se pudiera identificar menos del 75% de los dispositivos genéricos.
+
+
+
+ a| 
+Servidor
+ a| 
+Elasticsearch
+ a| 
+Estado del almacén de datos de búsqueda elástico
+ a| 
+"'OK'" si no hay errores. "Servicio no disponible" si no puede conectarse a un servicio de búsqueda elástico.
+
++ "modo de clúster detectado" si se detecta más de un nodo.
+
++ "uso elevado de memoria" si el espacio de pila utilizado es superior al 85%.
+
++ "Estado: ROJO" indica un error notificado por la búsqueda elástica. Muestra información sobre el error y recomienda ponerse en contacto con el servicio de atención al cliente.
+
+
+
+ a| 
+Servidor
+ a| 
+CPU
+ a| 
+Uso de CPU Insight
+ a| 
+«'Aceptar'» si la carga de la CPU es inferior al 65%. "La carga de CPU del sistema es alta. Reduzca la carga de la CPU». Si la carga de CPU es superior al 65%.
+
+
+
+ a| 
+Servidor
+ a| 
+Espacio en disco adicional
+ a| 
+Estado del espacio en disco
+ a| 
+Espacio libre en disco, espacio en disco utilizado por Insight, y espacio en disco recomendado reservado para Insight. «"espacio en disco bajo»» si el aprovechamiento del disco supera el 80 %.
+
+
+
+ a| 
+Servidor
+ a| 
+EventBus
+ a| 
+Estado de EventBus
+ a| 
+"'EventBus está vacío'" si la cola EventBus está vacía, de lo contrario se muestra el estado de la cola EventBus.
+
+
+
+ a| 
+Servidor
+ a| 
+Procesamiento de datos de inventario
+ a| 
+Estado de la capacidad de procesamiento de datos de inventario de Insight Server
+ a| 
+«'OK» si el servidor de Insight no está ocupado. "El servidor está ocupado" si el servidor está ocupado al menos el 75% del tiempo durante la última hora. Recomienda no añadir más orígenes de datos y recomienda dividir el entorno en varios servidores.
+
+
+
+ a| 
+Servidor
+ a| 
+MySQL
+ a| 
+Estado de la base de datos de MySQL
+ a| 
+"'OK'" si no se detectan problemas. "'la base de datos está teniendo problemas de rendimiento. Algunas consultas tardan demasiado en ejecutarse»» si el número de consultas lentas supera el 5 %.
+
++ "'el archivo de registro de la base de datos ha crecido más que <size> en la última hora. Compruebe el archivo de registro de MySQL'" si el registro de errores crece a más de 20 KB.
+
+
+
+ a| 
+Servidor
+ a| 
+Archivado del rendimiento
+ a| 
+Estado del archivado de rendimiento
+ a| 
+«"el archivo de rendimiento está activado" o «"el archivo de rendimiento no está activado»».
+
+
+
+ a| 
+Servidor
+ a| 
+Memoria física
+ a| 
+Estado de la memoria física
+ a| 
+"'OK'" si el uso de memoria es inferior al 85%. "Mi uso es alto. Reduzca el espacio de memoria total para la estabilidad del sistema» si el uso de la memoria es superior al 85%.
+
+
+
+ a| 
+Servidor
+ a| 
+Service Pack
+ a| 
+Disponibilidad del Service Pack
+ a| 
+Muestra si hay un Service Pack disponible para Insight. Si hay un Service Pack disponible, muestra las instrucciones.
+
+
+
+ a| 
+Servidor
+ a| 
+Información de uso
+ a| 
+Estado del envío de información de uso
+ a| 
+Muestra si el envío de información de uso a NetApp está habilitado o deshabilitado. Recomienda habilitar si está deshabilitado. Muestra la última hora de envío que se ha intentado o la última vez que se ha realizado correctamente
+
++ muestra información sobre cualquier problema encontrado.
+
+
+
+ a| 
+Servidor
+ a| 
+Infracción
+ a| 
+Estado de las infracciones abiertas
+ a| 
+"'OK'" si el número de violaciones abiertas es inferior al 75% del límite de violaciones. «El número máximo de violaciones abiertas permitidas es <number>» si el número de violaciones abiertas supera el 75% del límite de violaciones. Recomienda revisar la configuración de las políticas de rendimiento.
+
++ "'el gestor de violaciones está bloqueado'" si el número de violaciones abiertas está en el límite de violaciones.
+
++ tenga en cuenta que el gestor de infracciones no puede crear nuevas infracciones y recomienda revisar la configuración de la directiva de rendimiento.
+
+
+
+ a| 
+Servidor
+ a| 
+Copia de seguridad semanal
+ a| 
+Estado de la copia de seguridad semanal
+ a| 
+"'OK'" si la copia de seguridad semanal está activada, en caso contrario muestra "'la copia de seguridad semanal no está activada'".
+
+|===
++
+[NOTE]
+====
+Si el motor de detección de anomalías muestra un error, consulte `prelert.log` Archivo en la siguiente ubicación para obtener más información: - Windows: `disk drive:\install directory\SANscreen\Wildfly\Standalone\Logs`- Linux: `/var/log/netapp/oci/wildfly/`
+
++
+
+====
+

@@ -1,0 +1,44 @@
+---
+permalink: config-admin/types-of-asset-pages.html 
+sidebar: sidebar 
+keywords:  
+summary: Las páginas de activos resumen el estado actual de un activo y contienen vínculos a información adicional sobre el activo y sus activos relacionados. 
+---
+= Tipos de páginas de activos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las páginas de activos resumen el estado actual de un activo y contienen vínculos a información adicional sobre el activo y sus activos relacionados.
+
+OnCommand Insight proporciona páginas de activos para los siguientes activos:
+
+* Máquina virtual
+* Volumen
+* Volumen interno
+* Host físico
+* Del banco de almacenamiento
+* Reducida
+* Almacén de datos
+* Hipervisor
+* Cliente más
+* Nodo de almacenamiento
+* Qtree
+* Disco
+* VMDK
+* Puerto
+* Conmutador
+* Estructura
+* Almacenamiento de objetos (por ejemplo, Atmos, Centera, Amazon S3)
+* Zona
+
+
+La información de asignación y enmascaramiento se puede ver en las tablas de las páginas de activos Zone, Volume, VM y Host/Hypervisor.
+
+[NOTE]
+====
+La información de resumen está disponible para activos de almacenamiento de objetos; sin embargo, solo puede acceder a esta información desde la página de detalles orígenes de datos.
+
+====

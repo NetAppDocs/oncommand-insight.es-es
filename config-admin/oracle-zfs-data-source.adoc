@@ -1,0 +1,210 @@
+---
+permalink: config-admin/oracle-zfs-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: El origen de datos Oracle ZFS admite la recopilación de inventario y rendimiento. 
+---
+= Origen de datos de Oracle ZFS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El origen de datos Oracle ZFS admite la recopilación de inventario y rendimiento.
+
+
+
+== Terminología
+
+OnCommand Insight adquiere la siguiente información de inventario de este origen de datos. Para cada tipo de activo que adquiere Insight, se muestra la terminología más común utilizada en este activo. Al ver o solucionar problemas de este origen de datos, tenga en cuenta la siguiente terminología:
+
+|===
+
+
+| Plazo del proveedor/modelo | Insight plazo 
+
+
+ a| 
+Disco (SDD)
+ a| 
+Disco
+
+
+
+ a| 
+Clúster
+ a| 
+Reducida
+
+
+
+ a| 
+Controladora
+ a| 
+Nodo de almacenamiento
+
+
+
+ a| 
+LUN
+ a| 
+Volumen
+
+
+
+ a| 
+Mapa de LUN
+ a| 
+Asignación de volumen
+
+
+
+ a| 
+Iniciador, destino
+ a| 
+Máscara de volumen
+
+
+
+ a| 
+Share
+ a| 
+Volumen interno
+
+|===
+[NOTE]
+====
+Estos son sólo mapas terminológicos comunes y es posible que no representen todos los casos de este origen de datos.
+
+====
+
+
+== Requisitos
+
+A continuación se muestran los requisitos para configurar este origen de datos:
+
+* Nombres de host para ZFS Controller-1 y ZFS Controller-2
+* Nombre de usuario y credenciales del administrador
+* Requisito de puerto: 215 HTTP/HTTPS
+
+
+
+
+== Configuración
+
+|===
+
+
+|  |  
+
+
+ a| 
+Nombre de host de controladora ZFS-1
+ a| 
+Nombre del host de la controladora de almacenamiento 1
+
+
+
+ a| 
+Nombre de host ZFS Controller-2
+ a| 
+Nombre del host de la controladora de almacenamiento 2
+
+
+
+ a| 
+Nombre de usuario
+ a| 
+El nombre de usuario de administrador del sistema de almacenamiento
+
+
+
+ a| 
+Contraseña
+ a| 
+Contraseña de la cuenta de usuario administrador
+
+|===
+
+
+== Configuración avanzada
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Puerto TCP
+ a| 
+Puerto TCP utilizado para conectarse a ZFS (predeterminado 215 )
+
+
+
+ a| 
+Tipo de conexión
+ a| 
+HTTP o HTTPS
+
+
+
+ a| 
+Intervalo del sondeo de inventario
+ a| 
+Intervalo de sondeo de inventario (predeterminado 60 minutos)
+
+
+
+ a| 
+Tiempo de espera de conexión
+ a| 
+El valor predeterminado es 60 segundos
+
+
+
+ a| 
+Intervalo de sondeo de rendimiento (s)
+ a| 
+Intervalo entre sondeos de rendimiento (predeterminado 300 segundos)
+
+|===
+
+
+== Resolución de problemas
+
+Algunas cosas para intentar si tiene problemas con este recopilador de datos:
+
+|===
+
+
+| Problema: | Pruebe lo siguiente: 
+
+
+ a| 
+"Credenciales de inicio de sesión no válidas"
+ a| 
+Validar la cuenta de usuario y contraseña de ZFS
+
+
+
+ a| 
+"Error de configuración" con el mensaje de error "SE ha desactivado EL servicio "RESTST"
+ a| 
+Compruebe que el servicio REST esté activado en este dispositivo.
+
+
+
+ a| 
+"Error de configuración " con el mensaje de error "'Usuario no autorizado para comando'"
+ a| 
+Probablemente debido a ciertos roles (por ejemplo, 'Advanced_Analytics') no se incluyen para el usuario configurado <userName>.solución posible:
+
+* Corrija el ámbito de análisis (estadístico) para el usuario ${USER} con la función de sólo lectura:- desde la pantalla Configuración → usuarios, coloque el ratón sobre la función y haga doble clic para permitir la edición
+* Seleccione "Análisis" en el menú desplegable ámbito. Aparece una lista de las propiedades posibles.
+* Haga clic en la casilla de verificación situada más arriba y seleccionará las tres propiedades.- haga clic en el botón Agregar situado en el lado derecho.
+* Haga clic en el botón aplicar situado en la parte superior derecha de la ventana emergente. Se cerrará la ventana emergente.
+
+
+|===

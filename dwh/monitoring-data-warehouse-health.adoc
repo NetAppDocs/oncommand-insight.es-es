@@ -1,0 +1,35 @@
+---
+permalink: dwh/monitoring-data-warehouse-health.html 
+sidebar: sidebar 
+keywords: suppress 
+summary: 'El almacén de datos \(DWH\) incluye un monitor de estado que muestra información sobre el estado de DWH. Los mensajes de alarma se muestran en las páginas conectores y trabajos del DWH, así como en el servidor de Insight conectado, donde se muestran en la página Admin \> Health.' 
+---
+= Supervisión del estado del almacén de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El almacén de datos (DWH) incluye un monitor de estado que muestra información sobre el estado de DWH. Los mensajes de alarma se muestran en las páginas *conectores* y *trabajos* del DWH, así como en el servidor de Insight conectado, donde se muestran en la página *Admin* > *Estado*.
+
+DWH recopila mediciones cada diez minutos y muestra una alarma en las siguientes condiciones:
+
+* La conexión con el servidor de Insight está inactiva
+* La utilización del disco es superior al 90%
+* El servicio de informes (Cognos) está inactivo
+* Una consulta mantiene un bloqueo en cualquier tabla durante un tiempo prolongado
+* Se ha desactivado un trabajo de mantenimiento
+* La copia de seguridad automática está desactivada
+* Riesgo de seguridad: Se han detectado claves de cifrado predeterminadas
+
+
+Las advertencias del monitor de estado en el almacén de datos se pueden suprimir hasta 30 días.
+
+Cuando la notificación por correo electrónico está habilitada, estos eventos también se notifican por correo electrónico. Tenga en cuenta que el correo electrónico no contiene ningún archivo adjunto.
+
+Estos eventos se registran en la `dwh_troubleshoot.log` en las siguientes ubicaciones:
+
+* Windows. `<install dir>\SANscreen\Wildfly\Standalone\Logs`
+* Linux: `/var/log/netapp/oci/wildfly/`
+

@@ -1,0 +1,167 @@
+---
+permalink: config-admin/huawei-oceanstor-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight utiliza la fuente de datos Huawei OceanStor \(REST/HTTPS\) para descubrir inventarios de sistemas de almacenamiento Huawei OceanStor.' 
+---
+= Fuente de datos Huawei OceanStor
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight utiliza la fuente de datos Huawei OceanStor (REST/HTTPS) para descubrir inventarios de sistemas de almacenamiento Huawei OceanStor.
+
+
+
+== Terminología
+
+OnCommand Insight adquiere la siguiente información de inventario y rendimiento del OceanStor de Huawei. Para cada tipo de activo adquirido por OnCommand Insight, se muestra la terminología más común utilizada para este activo. Al ver o solucionar problemas de este recopilador de datos, tenga en cuenta la siguiente terminología:
+
+|===
+
+
+| Plazo del proveedor/modelo | Término de OnCommand Insight 
+
+
+ a| 
+Pool de almacenamiento
+ a| 
+Pool de almacenamiento
+
+
+
+ a| 
+Sistema de archivos
+ a| 
+Volumen interno
+
+
+
+ a| 
+Controladora
+ a| 
+Nodo de almacenamiento
+
+
+
+ a| 
+Puerto FC (asignado)
+ a| 
+Asignación de volumen
+
+
+
+ a| 
+Iniciador de FC de host (asignado)
+ a| 
+Máscara de volumen
+
+
+
+ a| 
+Recursos compartidos NFS/CIFS
+ a| 
+Share
+
+
+
+ a| 
+Share
+ a| 
+Nodo de destino iSCSI
+
+
+
+ a| 
+Iniciador de enlace iSCSI
+ a| 
+Nodo iniciador iSCSI
+
+
+
+ a| 
+Disco
+ a| 
+Disco
+
+
+
+ a| 
+LUN
+ a| 
+Volumen
+
+|===
+
+
+== Requisitos
+
+A continuación se enumeran los requisitos para configurar y utilizar este recopilador de datos:
+
+* IP del dispositivo
+* Credenciales para acceder al administrador de dispositivos OceanStor
+* El puerto 8088 debe estar disponible
+
+
+
+
+== Configuración
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+OceanStor Host IP Address
+ a| 
+Dirección IP o nombre de dominio completo del Administrador de dispositivos OceanStor
+
+
+
+ a| 
+Nombre de usuario
+ a| 
+Nombre utilizado para iniciar sesión en el Administrador de dispositivos OceanStor
+
+
+
+ a| 
+Contraseña
+ a| 
+Contraseña utilizada para iniciar sesión en el Administrador de dispositivos OceanStor
+
+|===
+
+
+== Configuración avanzada
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Puerto TCP
+ a| 
+Puerto TCP utilizado para conectar con el Administrador de dispositivos OceanStor (predeterminado: 8088 )
+
+
+
+ a| 
+Intervalo de sondeo de inventario (mín.)
+ a| 
+Intervalo entre sondeos de inventario (predeterminado 60 minutos)
+
+
+
+ a| 
+Tiempo de espera de conexión (s)
+ a| 
+Tiempo de espera de conexión (60 segundos predeterminado)
+
+|===

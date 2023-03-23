@@ -1,0 +1,14 @@
+---
+permalink: dwh/troubleshooting-setup-issues.html 
+sidebar: sidebar 
+keywords:  
+summary: Hay varios problemas comunes con anotaciones, compilaciones e informes que se pueden enfrentar durante la instalación. Puede solucionar estos problemas siguiendo los pasos que se describen. 
+---
+= Resolución de problemas de configuración
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Hay varios problemas comunes con anotaciones, compilaciones e informes que se pueden enfrentar durante la instalación. Puede solucionar estos problemas siguiendo los pasos que se describen.

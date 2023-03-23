@@ -1,0 +1,45 @@
+---
+permalink: install-linux/upgrading-insight-server-software.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede comprobar si hay actualizaciones del servidor OnCommand Insight después de iniciar sesión en el servidor. 
+---
+= Actualización del software Insight Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede comprobar si hay actualizaciones del servidor OnCommand Insight después de iniciar sesión en el servidor.
+
+
+
+== Pasos
+
+. En la barra de herramientas Insight, haga clic en el icono *Ayuda*.
+. Seleccione *Buscar actualizaciones*.
+. Haga clic en *Aceptar* si el `Version is up to date` aparece el mensaje.
+. Si se detecta una versión más reciente, haga clic en el enlace *descargar aquí* del cuadro de mensaje.
+. En la página *Descargar*, haga clic en *Descargar*. Anote la ubicación del directorio de descarga.
++
+También puede descargar la versión más reciente del sitio de soporte de NetApp.
+
+. Inicie sesión en Insight Server con una cuenta con privilegios sudo.
+. Desplácese hasta el directorio de descarga y escriba el comando siguiente:
++
+`unzip oci-<version>-linux-x86_64.zip`
+
++
+Asegúrese de tener el número de versión correcto del archivo de instalación.
+
+. Puede ver la sintaxis, los argumentos de comandos y el uso de los parámetros para `oci-install.sh` :
++
+`sudo ./oci-<version>-linux-x86_64/oci-install.sh --help`
+
+. Ejecute el script de instalación:
++
+`sudo ./oci-<version>-linux-x86_64/oci-install.sh`
+
+. Acepte el Contrato de licencia y siga las indicaciones.
+

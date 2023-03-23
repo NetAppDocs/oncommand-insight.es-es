@@ -1,0 +1,18 @@
+---
+permalink: howto/examining-the-server-volume.html 
+sidebar: sidebar 
+keywords:  
+summary: La página de destino para volúmenes muestra el mismo pico de IOPS conocido que se ve en sus activos correlacionados. 
+---
+= Examen del volumen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página de destino para volúmenes muestra el mismo pico de IOPS conocido que se ve en sus activos correlacionados.
+
+image::../media/server-vol-lp.gif[vol. del servidor]
+
+En la sección de recursos se identifica el VM para la aplicación Reserva de viaje. Haga clic en el enlace de la máquina virtual para ver la página de destino de la máquina virtual.

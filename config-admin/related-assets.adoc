@@ -1,0 +1,14 @@
+---
+permalink: config-admin/related-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: Si corresponde, una página de activos muestra una sección de activos relacionados. Por ejemplo, una página de activos de volúmenes puede mostrar información acerca de activos como Storage Pools, puertos de switch conectados y recursos de computación. Cada sección incluye una tabla que enumera cualquiera de los activos relacionados de esa categoría, con vínculos a sus respectivas páginas de activos y varias estadísticas de rendimiento relacionadas con el activo. 
+---
+= Activos relacionados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si corresponde, una página de activos muestra una sección de activos relacionados. Por ejemplo, una página de activos de volúmenes puede mostrar información acerca de activos como Storage Pools, puertos de switch conectados y recursos de computación. Cada sección incluye una tabla que enumera cualquiera de los activos relacionados de esa categoría, con vínculos a sus respectivas páginas de activos y varias estadísticas de rendimiento relacionadas con el activo.

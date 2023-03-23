@@ -1,0 +1,26 @@
+---
+permalink: reporting/welcome-to-oncommand-insight-reporting.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La generación de informes OnCommand Insight es una herramienta de inteligencia empresarial que permite ver informes predefinidos o crear informes personalizados. Los informes de OnCommand Insight generan informes desde los datos del almacén de datos \(DWH\).' 
+---
+= Le damos la bienvenida a los informes de OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La generación de informes OnCommand Insight es una herramienta de inteligencia empresarial que permite ver informes predefinidos o crear informes personalizados. La generación de informes de OnCommand Insight genera informes a partir de los datos del almacén de datos (DWH).
+
+Los informes de OnCommand Insight permiten realizar las siguientes tareas:
+
+* Ejecute un informe predefinido
+* Cree un informe personalizado
+* Personalice el formato del informe y el método de entrega
+* Programar informes para que se ejecuten automáticamente
+* Informes por correo electrónico
+* Utilice colores para representar umbrales de datos
+
+
+Los informes predefinidos son los informes OnCommand Insight estándar. En esta guía se describen los informes predefinidos que están disponibles con todas las licencias de productos.

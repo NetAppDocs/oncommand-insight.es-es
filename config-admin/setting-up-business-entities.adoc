@@ -1,0 +1,43 @@
+---
+permalink: config-admin/setting-up-business-entities.html 
+sidebar: sidebar 
+keywords:  
+summary: Después de diseñar la jerarquía de entidades de negocio para la empresa, puede configurar aplicaciones y, a continuación, asociar las entidades de negocio con las aplicaciones. Este proceso crea la estructura de entidades de negocio en la base de datos de OnCommand Insight. 
+---
+= Creación de entidades de negocio
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de diseñar la jerarquía de entidades de negocio para la empresa, puede configurar aplicaciones y, a continuación, asociar las entidades de negocio con las aplicaciones. Este proceso crea la estructura de entidades de negocio en la base de datos de OnCommand Insight.
+
+
+
+== Acerca de esta tarea
+
+Asociar aplicaciones con entidades de negocio es opcional; sin embargo, es una práctica recomendada.
+
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web de Insight.
+. Haga clic en *Administrar* y seleccione *entidades empresariales*.
++
+Aparece la página entidades de negocio.
+
+. Haga clic en image:../media/add-annotation-icon.gif[""] para empezar a construir una nueva entidad.
++
+Aparece el cuadro de diálogo *Agregar entidad de negocio*.
+
+. Para cada nivel de entidad (inquilino, línea de negocio, Unidad de negocio y proyecto), puede realizar cualquiera de las siguientes acciones:
++
+** Haga clic en la lista nivel de entidad y seleccione un valor.
+** Escriba un nuevo valor y pulse Intro.
+** Deje el valor de nivel de entidad como N/A si no desea utilizar el nivel de entidad para la entidad de negocio.
+
+
+. Haga clic en *Guardar*.
+

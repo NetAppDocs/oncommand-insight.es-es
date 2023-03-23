@@ -1,0 +1,149 @@
+---
+permalink: config-admin/emc-datadomain-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Este origen de datos recopila información de almacenamiento y configuración de los sistemas de almacenamiento de deduplicación de EMC Data Domain. Para añadir el origen de datos, debe utilizar instrucciones y comandos de configuración específicos, así como tener en cuenta los requisitos del origen de datos y las recomendaciones de uso. 
+---
+= Fuente de datos de EMC Data Domain
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Este origen de datos recopila información de almacenamiento y configuración de los sistemas de almacenamiento de deduplicación de EMC Data Domain. Para añadir el origen de datos, debe utilizar instrucciones y comandos de configuración específicos, así como tener en cuenta los requisitos del origen de datos y las recomendaciones de uso.
+
+
+
+== Terminología
+
+OnCommand Insight adquiere la siguiente información de inventario a partir de la fuente de datos de EMC Data Domain. Para cada tipo de activo que adquiere Insight, se muestra la terminología más común utilizada en este activo. Al ver o solucionar problemas de este origen de datos, tenga en cuenta la siguiente terminología:
+
+|===
+
+
+| Plazo del proveedor/modelo | Insight plazo 
+
+
+ a| 
+Disco
+ a| 
+Disco
+
+
+
+ a| 
+Cabina
+ a| 
+Reducida
+
+
+
+ a| 
+Puerto
+ a| 
+Puerto
+
+
+
+ a| 
+Archivos
+ a| 
+Volumen interno
+
+
+
+ a| 
+MTree
+ a| 
+Qtree
+
+
+
+ a| 
+Cuota
+ a| 
+Cuota
+
+
+
+ a| 
+Unidades NFS y CIFS
+ a| 
+Fileshare
+
+|===
+[NOTE]
+====
+Estos son sólo mapas terminológicos comunes y es posible que no representen todos los casos de este origen de datos.
+
+====
+
+
+== Requisitos
+
+* Dirección IP del dispositivo Data Domain
+* Nombre de usuario y contraseña de sólo lectura para el almacenamiento de Data Domain
+* Puerto SSH 22
+
+
+
+
+== Configuración
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Dirección IP
+ a| 
+La dirección IP o el nombre de dominio completo de la cabina de almacenamiento Data Domain
+
+
+
+ a| 
+Nombre de usuario
+ a| 
+El nombre de usuario para la cabina de almacenamiento Data Domain
+
+
+
+ a| 
+Contraseña
+ a| 
+La contraseña de la cabina de almacenamiento de Data Domain
+
+|===
+
+
+== Configuración avanzada
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Intervalo de sondeo de inventario (mín.)
+ a| 
+Intervalo entre sondeos de inventario (predeterminado 20 minutos)
+
+
+
+ a| 
+Tiempo de espera del proceso SSH (s)
+ a| 
+Tiempo de espera del proceso SSH (180 segundos predeterminado)
+
+
+
+ a| 
+Puerto SSH
+ a| 
+Puerto del servicio SSH
+
+|===

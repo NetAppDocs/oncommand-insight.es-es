@@ -1,0 +1,44 @@
+---
+permalink: config-admin/performance-policy-management.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight le permite crear políticas de rendimiento para supervisar la red de diversos umbrales y generar alertas cuando se superen esos umbrales. Mediante políticas de rendimiento, puede detectar una infracción de un umbral inmediatamente, identificar la implicación y analizar el impacto y la causa raíz del problema de forma que permita una corrección rápida y efectiva. 
+---
+= Gestionar políticas de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight le permite crear políticas de rendimiento para supervisar la red de diversos umbrales y generar alertas cuando se superen esos umbrales. Mediante políticas de rendimiento, puede detectar una infracción de un umbral inmediatamente, identificar la implicación y analizar el impacto y la causa raíz del problema de forma que permita una corrección rápida y efectiva.
+
+Una política de rendimiento permite establecer umbrales en cualquier objeto (almacén de datos, disco, hipervisor, volumen interno, puerto, Almacenamiento, nodo de almacenamiento, pool de almacenamiento, VMDK, máquina virtual, Y volumen) con contadores de rendimiento reportados (por ejemplo, un total de IOPS). Cuando se produce una infracción de un umbral, Insight lo detecta y lo notifica en la página de activos asociados, mostrando un círculo sólido rojo; por alerta de correo electrónico, si se configura; y en el panel de infracciones o en cualquier panel personalizado que informe de infracciones.
+
+Insight proporciona algunas políticas de rendimiento predeterminadas, que se pueden modificar o eliminar si no son aplicables al entorno, para los siguientes objetos:
+
+* Hipervisor
++
+Existen políticas de intercambio de ESX y uso de ESX.
+
+* Volumen y volumen internos
++
+Hay dos políticas de latencia para cada recurso, una anotada para el nivel 1 y la otra anotada para el nivel 2.
+
+* Puerto
++
+Existe una política para el crédito de BB cero.
+
+* Nodo de almacenamiento
++
+Existe una política de uso de nodos.
+
+* Máquina virtual
++
+Se intercambian las VM y las políticas de CPU y memoria de ESX.
+
+* Volumen
++
+Existen normativas de volumen mal alineadas y de nivel de latencia.
+
+

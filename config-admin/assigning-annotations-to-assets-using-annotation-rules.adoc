@@ -1,0 +1,14 @@
+---
+permalink: config-admin/assigning-annotations-to-assets-using-annotation-rules.html 
+sidebar: sidebar 
+keywords:  
+summary: Para asignar anotaciones automáticamente a activos basándose en los criterios definidos, configure reglas de anotación. OnCommand Insight asigna las anotaciones a los activos basándose en estas reglas. Insight también proporciona dos reglas de anotación predeterminadas, que se pueden modificar para ajustarse a sus necesidades o quitar si no desea utilizarlas. 
+---
+= Asignación de anotaciones a activos mediante reglas de anotación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para asignar anotaciones automáticamente a activos basándose en los criterios definidos, configure reglas de anotación. OnCommand Insight asigna las anotaciones a los activos basándose en estas reglas. Insight también proporciona dos reglas de anotación predeterminadas, que se pueden modificar para ajustarse a sus necesidades o quitar si no desea utilizarlas.

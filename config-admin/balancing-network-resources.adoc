@@ -1,0 +1,28 @@
+---
+permalink: config-admin/balancing-network-resources.html 
+sidebar: sidebar 
+keywords:  
+summary: Para resolver problemas de equilibrio, utilice las páginas de activos para encontrar los problemas e identificar volúmenes de alta capacidad que están infrautilizados. 
+---
+= Equilibrado de recursos de red
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para resolver problemas de equilibrio, utilice las páginas de activos para encontrar los problemas e identificar volúmenes de alta capacidad que están infrautilizados.
+
+
+
+== Pasos
+
+. Abra la consola de activos en el explorador.
+. En el mapa térmico de IOPS de máquinas virtuales, se observa el nombre de una máquina virtual en una impresión muy grande que a menudo informa de problemas.
+. Haga clic en el nombre de la máquina virtual para mostrar la página del activo.
+. Compruebe si hay mensajes de error en el resumen.
+. Compruebe los gráficos de rendimiento y, en particular, los recursos principales correlacionados para localizar cualquier volumen que pueda estar en disputa.
+. Añada volúmenes al gráfico de rendimiento para comparar los patrones de actividad y mostrar más páginas de activos de otros recursos implicados en el problema.
+. Desplácese hasta la parte inferior de la página Asset para ver listas de todos los recursos asociados con la VM. Tenga en cuenta que cualquier VMDK funciona a alta capacidad. Es probable que esto cause la contención.
+. Para resolver el problema de equilibrio, identifique un recurso que está infrautilizado para recibir la carga de un recurso sobreutilizado o quite una aplicación menos exigente del recurso utilizado.
+

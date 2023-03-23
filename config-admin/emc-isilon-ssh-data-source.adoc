@@ -1,0 +1,155 @@
+---
+permalink: config-admin/emc-isilon-ssh-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: La fuente de datos SSH de Isilon recopila inventario y rendimiento del almacenamiento NAS de escalabilidad horizontal de EMC Isilon. 
+---
+= Fuente de datos de EMC Isilon
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La fuente de datos SSH de Isilon recopila inventario y rendimiento del almacenamiento NAS de escalabilidad horizontal de EMC Isilon.
+
+
+
+== Terminología
+
+OnCommand Insight adquiere la siguiente información de inventario a través de la fuente de datos de EMC Isilon. Para cada tipo de activo que adquiere Insight, se muestra la terminología más común utilizada en este activo. Al ver o solucionar problemas de este origen de datos, tenga en cuenta la siguiente terminología:
+
+|===
+
+
+| Plazo del proveedor/modelo | Insight plazo 
+
+
+ a| 
+Unidad
+ a| 
+Disco
+
+
+
+ a| 
+Clúster
+ a| 
+Reducida
+
+
+
+ a| 
+Nodo
+ a| 
+Nodo de almacenamiento
+
+
+
+ a| 
+Sistema de archivos
+ a| 
+Volumen interno
+
+|===
+[NOTE]
+====
+Estos son sólo mapas terminológicos comunes y es posible que no representen todos los casos de este origen de datos.
+
+====
+
+
+== Requisitos
+
+* Permisos de administrador para el almacenamiento Isilon
+* Acceso validado mediante `telnet` al puerto 22
+
+
+
+
+== Configuración
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Dirección IP
+ a| 
+La dirección IP o el nombre de dominio completo del clúster Isilon
+
+
+
+ a| 
+Nombre de usuario
+ a| 
+El nombre de usuario del clúster Isilon
+
+
+
+ a| 
+Contraseña
+ a| 
+La contraseña del clúster de Isilon
+
+|===
+
+
+== Configuración avanzada
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Intervalo de sondeo de inventario (mín.)
+ a| 
+Intervalo entre sondeos de inventario (predeterminado 20 minutos)
+
+
+
+ a| 
+Intervalo de sondeo de rendimiento (s)
+ a| 
+Intervalo entre sondeos de rendimiento (predeterminado 300 segundos)
+
+
+
+ a| 
+Tiempo de espera del proceso SSH
+ a| 
+Tiempo de espera del proceso SSH (60 segundos predeterminado)
+
+
+
+ a| 
+Puerto SSH
+ a| 
+Puerto del servicio SSH
+
+|===
+
+
+== Ejecutando comandos de la CLI
+
+A partir de OnCommand Insight versión 7.3.11 y Service Pack 9, la fuente de datos de EMC Isilon contiene una mejora que hará que Insight ejecute más comandos de la CLI. Si utiliza un usuario que no es raíz dentro de su origen de datos, es probable que haya configurado un archivo "sudoers" para otorgar a esa cuenta de usuario la capacidad de ejecutar comandos CLI específicos a través de SSH.
+
+Para que Insight comprenda la función "zonas de acceso" de EMC, Insight ejecutará ahora, además, los siguientes nuevos comandos CLI:
+
+* `sudo isi zone zones list --format json –verbose`
+* `sudo isi zone zones list`
+
+
+Insight analiza el resultado de estos comandos y ejecuta más instancias de comandos existentes para obtener la configuración lógica de objetos como qtrees, cuotas y recursos compartidos/exportaciones NAS que residen en zonas de acceso no predeterminadas. Insight ahora informa de esos objetos para zonas de acceso no predeterminadas como resultado de esta mejora. A medida que Insight obtiene los datos ejecutando comandos existentes (con opciones diferentes), no se requiere ningún cambio en el archivo de sudoers para que funcionen; sólo con la introducción de los nuevos comandos anteriores es necesario el cambio.
+
+Actualice el archivo sudoers para permitir que su cuenta de servicio de Insight ejecute esos comandos antes de actualizar a esta versión de Insight. De lo contrario, sus orígenes de datos de Isilon fracasarán.
+
+
+
+== Estadísticas de "sistema de archivos"
+
+A partir de OnCommand Insight 7.3.12, el recopilador de datos de EMC Isilon introduce estadísticas de "sistema de archivos" sobre el objeto de nodo para EMC Isilon. Las estadísticas del nodo existente indicadas por OnCommand Insight se basan en el "disco", es decir, para IOPS y rendimiento de un nodo de almacenamiento. ¿Qué hacen los discos de este nodo en el agregado? Sin embargo, para las cargas de trabajo donde se almacenan en caché las lecturas en la memoria o la compresión, la carga de trabajo del sistema de archivos puede ser significativamente superior a lo que afecta a los discos. Un conjunto de datos que comprime 5:1 podría tener un valor de "rendimiento de lectura del sistema de archivos" cinco veces el rendimiento de lectura del nodo de almacenamiento. esta última mide las lecturas del disco, que se expanden cinco veces cuando el nodo descomprime los datos para atender la solicitud de lectura del cliente.

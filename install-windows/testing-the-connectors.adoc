@@ -1,0 +1,36 @@
+---
+permalink: install-windows/testing-the-connectors.html 
+sidebar: sidebar 
+keywords:  
+summary: Después de actualizar, desea probar los conectores para asegurarse de que tiene una conexión del almacén de datos OnCommand Insight al servidor OnCommand Insight. 
+---
+= Comprobación de los conectores
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de actualizar, desea probar los conectores para asegurarse de que tiene una conexión del almacén de datos OnCommand Insight al servidor OnCommand Insight.
+
+
+
+== Pasos
+
+. Inicie sesión en el portal del almacén de datos en `+https://fqdn/dwh+`.
+. En el panel de navegación de la izquierda, haga clic en *conectores*.
+. Seleccione el primer conector.
++
+Aparece la página Editar conector.
+
+. Haga clic en *Prueba*.
+. Si la prueba es correcta, haga clic en *Cerrar*; si falla, escriba el nombre del servidor Insight en el campo *Nombre* y su dirección IP en el campo *Host* y haga clic en *Prueba*.
+. Cuando haya una conexión correcta entre el almacén de datos y el servidor de Insight, haga clic en *Guardar*.
++
+Si no se realiza correctamente, compruebe la configuración de la conexión y asegúrese de que el servidor Insight no tiene ningún problema.
+
+. Haga clic en *Prueba*.
++
+Data Warehouse prueba la conexión.
+
+

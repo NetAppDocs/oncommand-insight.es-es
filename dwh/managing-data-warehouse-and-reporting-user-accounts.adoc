@@ -1,0 +1,22 @@
+---
+permalink: dwh/managing-data-warehouse-and-reporting-user-accounts.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Las cuentas de usuario, la autenticación de usuarios y la autorización de usuario para las herramientas de informes de OnCommand Insight se definen y administran desde el almacén de datos \(DWH\). En función de estas configuraciones, los usuarios y los administradores obtienen acceso a algunos de los informes de OnCommand Insight disponibles, o a todos ellos.' 
+---
+= Gestión de cuentas de usuario de almacén de datos e informes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las cuentas de usuario, la autenticación de usuarios y la autorización de usuario para las herramientas de informes de OnCommand Insight se definen y administran desde el almacén de datos (DWH). En función de estas configuraciones, los usuarios y los administradores obtienen acceso a algunos de los informes de OnCommand Insight disponibles, o a todos ellos.
+
+El acceso a la Administración de usuarios del almacén de datos requiere una cuenta con privilegios de administrador del sistema. Estos recursos incluyen:
+
+* Funciones administrativas completas para el almacén de datos
+* Configuración y mantenimiento de todas las cuentas de usuario
+* Acceso de lectura a la base de datos
+* Capacidad para configurar conectores en ETL, programar trabajos de almacén de datos, restablecer la base de datos, asignar o cambiar funciones y agregar y quitar cuentas de usuario
+

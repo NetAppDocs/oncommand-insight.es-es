@@ -1,0 +1,57 @@
+---
+permalink: install-windows/installing-a-remote-acquisition-unit-rau.html 
+sidebar: sidebar 
+keywords:  
+summary: Instale uno o más raus en su entorno OnCommand Insight. 
+---
+= Instalación de una unidad de adquisición remota (RAU)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Instale uno o más raus en su entorno OnCommand Insight.
+
+
+
+== Antes de empezar
+
+Debe haber completado todos los requisitos previos de instalación.
+
+Debe haber al menos un puerto abierto y disponible entre el servidor de RAU y el servidor de OnCommand Insight para reenviar la información de cambio al servidor. Si no está seguro de esto, valídelo abriendo un explorador Web en el equipo de la RAU y dirigirlo al servidor de OnCommand Insight:
+
+[listing]
+----
+ https://< OnCommand Insight Server hostname >:< acquisition_port >
+----
+El puerto de adquisición predeterminado es 443, pero puede que se haya cambiado durante la instalación del servidor. Si la conexión se realiza correctamente, verá una página de respuesta de OnCommand Insight que indica un puerto abierto y disponible entre la RAU y el servidor OnCommand Insight.
+
+
+
+== Pasos
+
+. Inicie sesión en el servidor RAU utilizando una cuenta con privilegios de administrador.
+. Abra el Explorador de Windows y desplácese hasta el directorio en el que se encuentra el archivo de instalación de RAU.
+. Haga doble clic `.MSI` archivo para iniciar la instalación.
+. Haga clic en *Siguiente* para continuar con la ventana que muestra el Contrato de licencia. Lea esto y acepte los términos del Contrato de licencia y haga clic en *Siguiente*.
+. Seleccione para instalar la RAU en una unidad de disco duro local o toda la función en una unidad de disco duro local. (Puede consultar el enlace uso del disco para asegurarse de que tiene suficiente espacio; se necesitan 116MB). Haga clic en *Siguiente*.
+. En la ventana Configurar, defina estos parámetros específicos de su sitio:
++
+** *OnCommand Insight* *Nombre del servidor o dirección*: Nombre de host o dirección IP para identificar el servidor OnCommand Insight. La RAU utiliza este nombre/IP para abrir un enlace de comunicaciones con el servidor. Si especifica un nombre de host, asegúrese de que se puede resolver mediante DNS.
+** *Nombre de la unidad de adquisición*: Nombre único que identifica la RAU.
+** *Puerto Seguro de adquisición remota (HTTPS)* de OnCommand Insight: Puerto utilizado por las unidades de adquisición remota para enviar información de cambio de entorno al servidor OnCommand Insight. Esta configuración debe coincidir con el valor introducido al instalar el servidor OnCommand Insight y debe ser la misma en todos los raus.
+
+
+. Revise las selecciones. Haga clic en *Atrás* para volver y realizar los cambios. Haga clic en *Siguiente*.
+. Haga clic en *instalar* para iniciar la instalación.
++
+Espere a que finalice la instalación. Esto debería tardar entre 5 y 10 minutos aproximadamente.
+
+
+
+
+
+== Después de terminar
+
+Una vez finalizada la instalación, aparece una ventana final. Haga clic en el cuadro *Iniciar servicio de adquisición remota* para iniciar la RAU y haga clic en *Finalizar* para finalizar esta operación.

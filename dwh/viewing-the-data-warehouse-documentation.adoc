@@ -1,0 +1,22 @@
+---
+permalink: dwh/viewing-the-data-warehouse-documentation.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede revisar la información del esquema de la base de datos de Data Warehouse. 
+---
+= Ver la documentación del esquema de la base de datos de Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede revisar la información del esquema de la base de datos de Data Warehouse.
+
+
+
+== Pasos
+
+. Inicie sesión en el portal del almacén de datos en `+https://hostname/dwh+`, donde `hostname` Es el nombre del sistema en el que está instalado el almacén de datos de OnCommand Insight.
+. En la barra de herramientas almacén de datos, haga clic en image:../media/oci-7-help-icon-gif.gif[""] Y seleccione *Esquema*.
+

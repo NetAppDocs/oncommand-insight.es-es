@@ -1,0 +1,20 @@
+---
+permalink: howto/custom-dashboard-override-dashboard-time.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede anular el ajuste del marco temporal del panel principal en widgets individuales. Estos widgets mostrarán los datos en función del marco de tiempo establecido, no del marco de tiempo del panel de control. 
+---
+= Anulación del tiempo del panel para widgets individuales
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede anular el ajuste del marco temporal del panel principal en widgets individuales. Estos widgets mostrarán los datos en función del marco de tiempo establecido, no del marco de tiempo del panel de control.
+
+Para anular la hora del panel de instrumentos y forzar a un widget a utilizar su propio intervalo de tiempo, en el modo de edición del widget, defina *Omitir tiempo del panel* en *Activado* y seleccione un intervalo de tiempo para el widget. *Guardar* el widget en el panel.
+
+El widget mostrará sus datos en función del intervalo de tiempo establecido, independientemente del periodo de tiempo seleccionado en el propio panel.
+
+El intervalo de tiempo establecido para un widget no afectará a ningún otro widget del panel.

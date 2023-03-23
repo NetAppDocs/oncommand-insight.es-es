@@ -1,0 +1,86 @@
+---
+permalink: faq/faq-general-insight-questions.html 
+sidebar: sidebar 
+keywords: redhat,Linux 
+summary: Estas preguntas frecuentes responden a preguntas generales comunes sobre OnCommand Insight. 
+---
+= Preguntas generales
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Estas preguntas frecuentes responden a preguntas generales comunes sobre OnCommand Insight.
+
+
+
+== ¿Cuándo se introdujo OnCommand Insight (OCI)?
+
+OCI es uno de los productos de supervisión de infraestructura más maduros del sector y ya cuenta con más de una década de desarrollo activo. Antes conocida como Onaro o SANscreen, el nombre de la SANscreen cambió al unirse a la suite de productos de la cartera de OnCommand y ahora se conoce como OnCommand Insight, o bien Insight o OCI, que es más habitual.
+
+
+
+== ¿Cuánto tiempo tardará OCI en ponerse en marcha en mi entorno?
+
+OCI es solo una descarga de software. El software se instala en dos servidores físicos o virtuales dedicados. Las instalaciones típicas se pueden realizar en tan solo 2 horas y los datos de inventario, capacidad y rendimiento se empezarán a proporcionar de forma casi inmediata. Cualquier política adicional de rendimiento y mejores prácticas, la anotación de los usuarios y la configuración de concienciación de costes requerirán discusiones adicionales sobre la planificación.
+
+
+
+== ¿OCI requiere agentes, recopiladores o sondas?
+
+OCI es 100% sin agentes y no requiere el uso de agentes, grifos ni sondas. Toda la detección de dispositivos es de solo lectura, se realiza fuera de banda y a través de IP.
+
+
+
+== ¿Cómo detecta y se conecta OCI a los dispositivos?
+
+La configuración de OCI aprovecha las API y los protocolos nativos que suelen estar presentes en el entorno del centro de datos, sin necesidad de agentes ni sondas. SSH, HTTP, SMIS y CLI son solo algunos ejemplos. Cuando ya existan administradores de elementos de dispositivo (como Unisphere de EMC, por ejemplo), OCI se comunicará con los gestores de elementos para capturar los datos del entorno existentes. La mayoría de los descubrimientos de dispositivos requieren sólo una dirección IP y un nombre de usuario y contraseña de sólo lectura. Estos descubrimientos de dispositivos pueden ser «uno a muchos», como por ejemplo con la fuente de datos de VMware de OCI. Al detectar VMware vCenter, OCI detecta a su vez todos sus hosts ESXi y sus máquinas virtuales asociadas con una única dirección IP y una única credencial.
+
+
+
+== ¿OCI requiere servicios profesionales? ¿Está disponible y qué ofrecen?
+
+En entornos de tamaño moderado, recomendamos Servicios profesionales para puesta en marcha, configuración e integraciones, así como una amplia variedad de posibilidades de generación de informes y validación de datos personalizadas. Un breve debate con el equipo de OCI y el gestor de relaciones con las cuentas puede ayudarle a determinar qué servicios le beneficiarán más.
+
+
+
+== ¿Con qué frecuencia publican actualizaciones de OCI para nuevas funciones y mejoras?
+
+Las actualizaciones de productos y los Service Packs están disponibles para varias versiones de OCI. Las versiones principales o secundarias se proporcionan normalmente cada pocos meses, con paquetes de servicio que incluyen soporte de nuevo dispositivo y firmware lanzado con mayor frecuencia. Ambos están disponibles en el sitio de descarga de support.netapp.com. Ciertas actualizaciones, como los nuevos modelos de disco que se presentan con mayor frecuencia de los fabricantes, se envían automáticamente al software OCI. Además, la recopilación de dispositivos de origen de datos OCI se puede aplicar a las revisiones en el sitio inmediatamente después de una actualización o corrección de desarrollo.
+
+
+
+== ¿Cómo prioriza el equipo de gestión OCI las solicitudes para nuevos orígenes de datos?
+
+El equipo de gestión de productos de OCI realiza un seguimiento activo de todas las solicitudes de mejora e interoperabilidad de los clientes (IFR). Cada solicitud se detalla, se evalúa para la viabilidad y se prioriza según la demanda del cliente y el impacto comercial estratégico general. Una vez aceptadas, el dimensionamiento de las solicitudes se basa en el nivel de esfuerzo y se programará para un futuro desarrollo. La naturaleza ágil del proceso de desarrollo de OCI permite a menudo que los nuevos orígenes de datos estén disponibles fuera de los ciclos regulares de lanzamiento programados. Los representantes de cuentas de NetApp pueden ayudar en las consultas de los clientes y en el envío de nuevas solicitudes en su nombre. Los orígenes de datos se pueden aplicar parches in situ sin que sea necesario actualizar OCI.
+
+
+
+== Mi empresa funciona completamente en Linux. ¿Funcionará OCI en Linux?
+
+Sí, OCI admite diversas variedades de Linux y Windows. Tenga en cuenta que Cognos (la herramienta de generación de informes de IBM utilizada por OCI junto con el almacén de datos) sólo es compatible con Windows, por lo que si está utilizando OCI para la creación de informes, tendrá que ejecutar la herramienta de generación de informes en un servidor Windows. La guía de instalación de OCI enumera los requisitos del servidor y los sistemas operativos compatibles para cada componente OCI.
+
+
+
+== ¿OCI es adecuado para entornos seguros sin acceso a Internet?
+
+Sí, OCI lo utilizan las 10 principales empresas de la lista Fortune 500 y las principales agencias bancarias, sanitarias, de investigación y gubernamentales de todo el mundo hoy en día. OCI ofrece compatibilidad con las tarjetas de acceso comunes militares de EE. UU. (CAC) y ofrece soluciones para entornos distribuidos geográficamente o con paredes muy fuego.
+
+
+
+== Sigo escuchando que Unified Manager de OnCommand (OCUM) es la solución de gestión para CDOT. ¿Puede ayudarme a entender por qué también voy a usar OCI?
+
+Unified Manager de OnCommand opera en la capa de «gestión de protección» de la cabina de almacenamiento, proporcionando un análisis exhaustivo de incidentes y eventos de cabinas de Clustered Data ONTAP (CDOT) y sus interconexiones de clúster. OCI proporciona una visión holística de los entornos locales y de dispersión global formados por cabinas de 7-Mode, Clustered Data ONTAP y otras de terceros. Su visibilidad completa, desde equipos virtuales hasta discos, permite establecer tendencias históricas y realizar previsiones de capacidad, rendimiento y modelado de costes, lo que fomenta un enfoque de calidad de servicio proactivo para la gestión de centros de datos.
+
+
+
+== ¿Qué es la ETL secundaria de OnCommand Insight mencionada en Automation Storefront?
+
+El requisito de "ETL secundario" al que se hace referencia en algunas descargas de informes de OnCommand Insight Automation Storefront hace referencia a una implementación de servicios profesionales desarrollados que se utiliza para invocar datos capturados de extracción, transformación y carga adicionales (ETL), para que los datos se utilicen para su población en el almacén de datos de OnCommand Insight.
+
+El objetivo principal del proceso ETL secundario es obtener una captura previa de datos en "lote", lo que permite generar informes más complejos con mayor rapidez o programar su ejecución diaria.
+
+Esta ETL secundaria se suma a la ETL "una vez al día" recomendada que se detalla en la guía de administración de almacenes de datos OnCommand Insight.
+
+Los servicios profesionales de NetApp están cualificados para configurar las secuencias de comandos ETL secundarias para evitar que se vean afectados los programas de informes de OnCommand Insight, las copias de seguridad automatizadas, la escalabilidad u otras actividades de rendimiento del sistema. Para obtener información adicional sobre las necesidades de secuencias de comandos ETL o validación de datos, póngase en contacto con su representante de ventas de NetApp y analizar cómo pueden ayudarle los servicios profesionales de NetApp.

@@ -1,0 +1,46 @@
+---
+permalink: config-admin/what-the-user-data-section-enables-you-to-do-with-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: A la hora de personalizar OnCommand Insight para realizar un seguimiento de los datos según sus requisitos corporativos, puede definir notas especializadas, llamadas anotaciones y asignarlas a sus activos. La sección datos de usuario de una página de activos muestra las anotaciones asignadas a un activo y también permite cambiar las anotaciones asignadas a ese activo. 
+---
+= Uso de la sección datos de usuario para asignar o modificar anotaciones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Al personalizar OnCommand Insight para realizar un seguimiento de los datos de sus requisitos corporativos, puede definir notas especializadas, llamadas _anotaciones_, y asignarlas a sus activos. La sección datos de usuario de una página de activos muestra las anotaciones asignadas a un activo y también permite cambiar las anotaciones asignadas a ese activo.
+
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web de OnCommand Insight.
+. Localice una página de activos realizando una de las siguientes acciones:
++
+** En la barra de herramientas Insight, haga clic en image:../media/icon-sanscreen-magnifying-glass-gif.gif[""], escriba el nombre del activo y, a continuación, seleccione el activo en la lista.
+** Haga clic en *Paneles*, seleccione *Panel de activos*, busque un nombre de activo y haga clic en él. Aparece la página Asset.
+
+
+. En la sección *datos de usuario* de la página de activos, haga clic en image:../media/add-annotation-icon.gif[""].
++
+Aparece el cuadro de diálogo Agregar anotación.
+
+. Haga clic en *anotación* y seleccione una anotación de la lista.
+. Haga clic en *valor* y realice una de las siguientes acciones, según el tipo de anotación que haya seleccionado:
++
+** Si el tipo de anotación es lista, fecha o booleano, seleccione un valor de la lista.
+** Si el tipo de anotación es texto, escriba un valor.
+
+
+. Haga clic en *Guardar*.
++
+La anotación se asigna al activo. Posteriormente, puede filtrar los activos mediante anotaciones mediante una consulta. Si desea agrupar activos por anotaciones, debe utilizar la interfaz de usuario de Java.
+
+. Si desea cambiar el valor de la anotación después de asignarla, haga clic en image:../media/change-annotation-value.gif[""] y seleccione un valor diferente.
++
+Si la anotación es del tipo de lista para el que está seleccionada la opción *Agregar valores dinámicamente al asignar anotaciones*, puede escribir para agregar un nuevo valor además de seleccionar un valor existente.
+
+

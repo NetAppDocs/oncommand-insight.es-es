@@ -1,0 +1,14 @@
+---
+permalink: config-admin/managing-annotation-types.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight proporciona algunos tipos de anotaciones predeterminados, como el ciclo de vida de los activos \(cumpleaños o fin de vida\), la ubicación del centro de datos o edificio y el nivel, que puede personalizar para que se muestren en los informes. Puede definir valores para tipos de anotaciones predeterminados o crear sus propios tipos de anotaciones personalizadas. Posteriormente, puede editar esos valores.' 
+---
+= Gestión de tipos de anotaciones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight proporciona algunos tipos de anotaciones predeterminados, como el ciclo de vida de los activos (cumpleaños o fin de vida), la ubicación del centro de datos o edificio y la capa, que puede personalizar para que aparezcan en los informes. Puede definir valores para tipos de anotaciones predeterminados o crear sus propios tipos de anotaciones personalizadas. Posteriormente, puede editar esos valores.

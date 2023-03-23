@@ -1,0 +1,29 @@
+---
+permalink: config-admin/changes-causing-data-collection-problems.html 
+sidebar: sidebar 
+keywords:  
+summary: Si tiene problemas de recopilación de datos en OnCommand Insight, los cambios en el entorno son una causa probable. Como regla general de mantenimiento, también debe adaptarse a los cambios que se produzcan en su entorno en Insight. 
+---
+= Cambios que causan problemas de recopilación de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si tiene problemas de recopilación de datos en OnCommand Insight, los cambios en el entorno son una causa probable. Como regla general de mantenimiento, también debe adaptarse a los cambios que se produzcan en su entorno en Insight.
+
+Puede utilizar esta lista de comprobación para identificar los cambios en la red que puedan causar problemas:
+
+* ¿Ha cambiado alguna contraseña? ¿Se han cambiado esas contraseñas en Insight?
+* ¿Ha eliminar un dispositivo de la red? También debe eliminar el dispositivo de OnCommand Insight para evitar que se vuelva a detectar y volver a introducir.
+* ¿Actualizó software de infraestructura (como HP CommandView EVA o EMC Solutions facilitadora)?
++
+Asegúrese de que las versiones apropiadas de las herramientas cliente están instaladas en la unidad de adquisición. Si persisten los fallos en el origen de datos, debe ponerse en contacto con el servicio de asistencia técnica para solicitar asistencia y, posiblemente, con un parche en el origen de datos.
+
+* ¿Utilizan todas sus unidades de adquisición de OnCommand Insight la misma versión de OnCommand Insight? Si las unidades de adquisición remota y la unidad de adquisición local ejecutan diferentes versiones de OnCommand Insight, instale la misma versión en todas las unidades para corregir el problema de recopilación de datos.
++
+Si necesita instalar una nueva versión de OnCommand Insight en todas las unidades de adquisición, vaya al sitio de soporte y descargue la versión correcta.
+
+* ¿Ha cambiado algún nombre de dominio o agregado otro? Debe actualizar los métodos de resolución del dispositivo (anteriormente resolución automática).
+

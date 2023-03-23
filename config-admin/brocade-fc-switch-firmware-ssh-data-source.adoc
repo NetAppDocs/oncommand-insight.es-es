@@ -1,0 +1,270 @@
+---
+permalink: config-admin/brocade-fc-switch-firmware-ssh-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight utiliza la fuente de datos de Brocade FC Switch \(SSH\) para descubrir el inventario de Brocade o los dispositivos de switch de nueva Marca que ejecutan el firmware 4.2 del sistema operativo factorizado \(FOS\) y versiones posteriores. Son compatibles los dispositivos en los modos de switch FC y Access Gateway.' 
+---
+= Fuente de datos del switch FC Brocade
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight utiliza la fuente de datos de switch FC de Brocade (SSH) para descubrir el inventario de Brocade o dispositivos de switch nuevos que ejecutan el firmware 4.2 de sistema operativo (FOS) incluido en versiones posteriores. Son compatibles los dispositivos en los modos de switch FC y Access Gateway.
+
+
+
+== Terminología
+
+OnCommand Insight adquiere la siguiente información de inventario a partir de la fuente de datos de switches FC Brocade. Para cada tipo de activo que adquiere Insight, se muestra la terminología más común utilizada en este activo. Al ver o solucionar problemas de este origen de datos, tenga en cuenta la siguiente terminología:
+
+|===
+
+
+| Plazo del proveedor/modelo | Insight plazo 
+
+
+ a| 
+Conmutador
+ a| 
+Conmutador
+
+
+
+ a| 
+Puerto
+ a| 
+Puerto
+
+
+
+ a| 
+Estructura virtual, estructura física
+ a| 
+Estructura
+
+
+
+ a| 
+Zona
+ a| 
+Zona
+
+
+
+ a| 
+Cambio lógico
+ a| 
+Cambio lógico
+
+
+
+ a| 
+Zona LSAN
+ a| 
+Zona IVR
+
+|===
+[NOTE]
+====
+Estos son sólo mapas terminológicos comunes y es posible que no representen todos los casos de este origen de datos.
+
+====
+
+
+== Requisitos
+
+* La unidad de adquisición (local o remota) iniciará conexiones al puerto TCP 22 en los conmutadores Brocade para recopilar datos de inventario. El AU también iniciará conexiones al puerto UDP 161 para la recopilación de datos de rendimiento.
+* Debe haber conectividad IP a todos los switches de la estructura. Si selecciona la casilla de comprobación detectar todos los switches en la estructura, OCI identifica todos los switches de la estructura; sin embargo, necesita conectividad IP a estos switches adicionales para detectarlos.
+* La misma cuenta es necesaria globalmente en todos los switches del entramado. Puede utilizar PuTTY (emulador de terminal de código abierto) para confirmar el acceso.
+* Si se ha instalado la licencia Perform, los puertos 161 y 162 deben estar abiertos para todos los switches de la estructura para realizar el sondeo de rendimiento de SNMP.
+* Cadena de comunidad de sólo lectura SNMP
+
+
+
+
+== Configuración
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Cambie IP
+ a| 
+Dirección IP o nombre de dominio completo del switch
+
+
+
+ a| 
+Nombre de usuario
+ a| 
+Nombre de usuario del conmutador
+
+
+
+ a| 
+Contraseña
+ a| 
+Contraseña utilizada para el conmutador
+
+
+
+ a| 
+Versión de SNMP
+ a| 
+Versión de SNMP
+
+
+
+ a| 
+Cadena de comunidad SNMP
+ a| 
+Cadena de comunidad de sólo lectura de SNMP que se utiliza para acceder al conmutador
+
+
+
+ a| 
+Nombre de usuario SNMP
+ a| 
+Nombre de usuario del protocolo de versión SNMP (sólo se aplica a SNMP v3)
+
+
+
+ a| 
+Contraseña SNMP
+ a| 
+Contraseña de protocolo de versión SNMP (sólo se aplica a SNMP v3)
+
+|===
+
+
+== Configuración avanzada
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Nombre de la estructura
+ a| 
+El origen de datos informará del nombre de la estructura. Deje en blanco para informar el nombre de la estructura como WWN.
+
+
+
+ a| 
+Excluir dispositivos
+ a| 
+Lista separada por comas de ID de dispositivo que se van a excluir del sondeo
+
+
+
+ a| 
+Intervalo de sondeo de inventario (mín.)
+ a| 
+Intervalo entre sondeos de inventario (predeterminado 15 minutos)
+
+
+
+ a| 
+Tiempo de espera (s)
+ a| 
+Tiempo de espera de conexión (30 segundos predeterminado)
+
+
+
+ a| 
+Tiempo de espera del banner (s)
+ a| 
+Tiempo de espera del banner SSH (5 segundos predeterminado)
+
+
+
+ a| 
+Dominios de administración activos
+ a| 
+Seleccione si utiliza dominios de administración
+
+
+
+ a| 
+Recuperar datos MPR
+ a| 
+Seleccione esta opción para adquirir datos de enrutamiento desde su enrutador multiprotocolo (MPR)
+
+
+
+ a| 
+Habilite el solapamiento
+ a| 
+Seleccione esta opción para activar la adquisición al recibir una captura SNMP del dispositivo. Si selecciona Activar solapamiento, también debe activar SNMP.
+
+
+
+ a| 
+Tiempo mínimo entre solapamientos (seg)
+ a| 
+Tiempo mínimo entre intentos de adquisición activados por solapamientos (predeterminado 10 segundos)
+
+
+
+ a| 
+Descubra todos los switches del entramado
+ a| 
+Seleccione para detectar todos los switches de la estructura
+
+
+
+ a| 
+Elija favorecer HBA frente a Alias de zona
+ a| 
+Elija si prefiere los alias de HBA o de zona
+
+
+
+ a| 
+Intervalo de sondeo de rendimiento (s)
+ a| 
+Intervalo entre sondeos de rendimiento (predeterminado 300 segundos)
+
+
+
+ a| 
+Protocolo de autenticación SNMP
+ a| 
+Protocolo de autenticación SNMP (solo SNMP v3)
+
+
+
+ a| 
+Protocolo de privacidad SNMP
+ a| 
+Protocolo de privacidad SNMP (sólo SNMP v3)
+
+
+
+ a| 
+Contraseña de privacidad de SNMP
+ a| 
+Contraseña de privacidad de SNMP (sólo SNMP v3)
+
+
+
+ a| 
+Reintentos SNMP
+ a| 
+Número de intentos de reintento SNMP
+
+
+
+ a| 
+Tiempo de espera de SNMP (ms)
+ a| 
+Tiempo de espera de SNMP (5000 ms predeterminado)
+
+|===

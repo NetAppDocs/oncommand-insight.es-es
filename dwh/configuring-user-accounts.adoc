@@ -1,0 +1,23 @@
+---
+permalink: dwh/configuring-user-accounts.html 
+sidebar: sidebar 
+keywords:  
+summary: Debe completar varios pasos para configurar cuentas de usuario. 
+---
+= Configurar cuentas de usuario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe completar varios pasos para configurar cuentas de usuario.
+
+
+
+== Pasos
+
+. Inicie sesión en el portal del almacén de datos en `+https://hostname/dwh+`, donde `hostname` Es el nombre del sistema en el que está instalado el almacén de datos de OnCommand Insight.
+. En el panel de navegación de la izquierda, haga clic en *Administración de usuarios*.
+. Configure cada cuenta de usuario.
+

@@ -1,0 +1,23 @@
+---
+permalink: config-admin/maintaining-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Tanto si es nuevo en Insight y tiene que configurar un nuevo sistema como si ya ha estado funcionando durante algún tiempo, debe tomar las medidas necesarias para mantener el funcionamiento perfecto de Insight y de su red. El concepto clave de mantenimiento es que los cambios en la red normalmente necesitan ser acomodados en Insight. 
+---
+= Manteniéndose Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Tanto si es nuevo en Insight y tiene que configurar un nuevo sistema como si ya ha estado funcionando durante algún tiempo, debe tomar las medidas necesarias para mantener el funcionamiento perfecto de Insight y de su red. El concepto clave de mantenimiento es que los cambios en la red normalmente necesitan ser acomodados en Insight.
+
+Estas son las tareas de mantenimiento más comunes:
+
+* Mantenimiento de backups de Insight
+* Actualizando licencias de Insight caducadas
+* Coordinación de parches de origen de datos
+* Actualización de la versión de Insight en todas las unidades de adquisición
+* Eliminar orígenes de datos eliminados de Insight
+

@@ -1,0 +1,25 @@
+---
+permalink: reporting/tips-for-designing-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible que varias sugerencias sean útiles cuando se diseñan informes. 
+---
+= Sugerencias para diseñar informes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible que varias sugerencias sean útiles cuando se diseñan informes.
+
+* Determinar si necesita utilizar datos actuales o históricos.
++
+La mayoría de los informes solo necesitan informar sobre los datos más recientes disponibles en el almacén de datos.
+
+* Data Warehouse proporciona información histórica sobre la capacidad y el rendimiento, pero no en el inventario.
+* Todo el mundo ve todos los datos; sin embargo, es posible que tenga que limitar los datos a audiencias específicas.
++
+Para segmentar la información de diferentes usuarios, puede crear informes y establecer permisos de acceso en ellos.
+
+

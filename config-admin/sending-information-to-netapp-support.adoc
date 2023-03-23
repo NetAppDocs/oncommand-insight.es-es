@@ -1,0 +1,27 @@
+---
+permalink: config-admin/sending-information-to-netapp-support.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La instalación de soporte automatizado \(ASUP\) de NetApp envía información sobre solución de problemas directamente al equipo de soporte al cliente de NetApp. Puede forzar el envío de un informe especial.' 
+---
+= Envío de información a Soporte de NetApp
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La instalación de soporte automatizado (ASUP) de NetApp envía información para la solución de problemas directamente al equipo de soporte al cliente de NetApp. Puede forzar el envío de un informe especial.
+
+
+
+== Pasos
+
+. En la barra de herramientas Insight, haga clic en *Admin*.
+. Haga clic en *Configuración*.
+. Haga clic en la ficha *copia de seguridad/ASUP*.
+. En el área Enviar/recopilar datos, haga clic en *Enviar ASUP ahora* para enviar sus registros, grabaciones y backup al servicio de soporte de NetApp.
++
+image::../media/oci-7-backup-restore-gif.gif[página backup and restore]
+
+

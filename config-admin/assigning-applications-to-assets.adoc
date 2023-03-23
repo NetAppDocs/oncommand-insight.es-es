@@ -1,0 +1,40 @@
+---
+permalink: config-admin/assigning-applications-to-assets.html 
+sidebar: sidebar 
+keywords: bulk edit 
+summary: Después de definir aplicaciones con o sin entidades de negocio, puede asociar las aplicaciones con activos. 
+---
+= Asignar aplicaciones a activos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de definir aplicaciones con o sin entidades de negocio, puede asociar las aplicaciones con activos.
+
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web de OnCommand Insight.
+. Busque el activo (host, máquina virtual, volumen o volumen interno) al que desea aplicar la aplicación. Para ello, siga uno de estos pasos:
++
+** Haga clic en *Panel*, seleccione *Panel de activos* y haga clic en el activo.
+** Haga clic en image:../media/icon-sanscreen-magnifying-glass-gif.gif[""] En la barra de herramientas para mostrar el cuadro *Buscar activos*, escriba el nombre del activo y, a continuación, seleccione el activo en la lista.
+
+
+. En la sección *datos de usuario* de la página de activos, coloque el cursor sobre el nombre de la aplicación actualmente asignada al activo (si no hay ninguna aplicación asignada, aparece *Ninguno* en su lugar) y, a continuación, haga clic en image:../media/pencil-icon-landing-page-be.gif[""] (Editar aplicación).
++
+Lista de aplicaciones disponibles para la visualización de activos seleccionados. Las aplicaciones que están actualmente asociadas con el activo van precedidas de una Marca de verificación.
+
+. Puede escribir en el cuadro Buscar para filtrar los nombres de las aplicaciones o desplazarse por la lista.
+. Seleccione las aplicaciones que desea asociar al activo.
++
+Es posible asignar varias aplicaciones a un host, una máquina virtual y un volumen interno; no obstante, solo se puede asignar una aplicación al volumen.
+
+. Haga clic en image:../media/check-box-ok.gif[""] para asignar la aplicación o aplicaciones seleccionadas al activo.
++
+Los nombres de las aplicaciones aparecen en la sección datos de usuario; si la aplicación está asociada a una entidad de negocio, el nombre de la entidad de negocio también aparece en esta sección.
+
+

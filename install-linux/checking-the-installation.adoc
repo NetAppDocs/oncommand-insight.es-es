@@ -1,0 +1,18 @@
+---
+permalink: install-linux/checking-the-installation.html 
+sidebar: sidebar 
+keywords:  
+summary: Tras completar la instalación, el directorio de instalación se encuentra en /opt/netapp/oci. Puede abrir Insight en un navegador compatible para comprobar la instalación. También es posible que desee comprobar los archivos de registro de Insight. 
+---
+= Comprobación de la instalación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de completar la instalación, el directorio de instalación se encuentra en `/opt/netapp/oci`. Puede abrir Insight en un navegador compatible para comprobar la instalación. También es posible que desee comprobar los archivos de registro de Insight.
+
+Al abrir por primera vez Insight, se abre la página de configuración de la licencia. Después de introducir la información de licencia, debe configurar los orígenes de datos. Consulte _Guía de configuración y administración de OnCommand Insight_ para obtener información sobre la introducción de definiciones de origen de datos y la configuración de usuarios y notificaciones de Insight.
+
+Si ha tenido problemas de instalación, póngase en contacto con el soporte técnico y proporcione la información solicitada.

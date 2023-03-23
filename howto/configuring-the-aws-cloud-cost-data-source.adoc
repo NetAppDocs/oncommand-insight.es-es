@@ -1,0 +1,50 @@
+---
+permalink: howto/configuring-the-aws-cloud-cost-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Configura el origen de datos de coste del cloud de AWS como lo haría con cualquier origen de datos de Insight. 
+---
+= Configurar el origen de datos de coste del cloud de AWS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Configura el origen de datos de coste del cloud de AWS como lo haría con cualquier origen de datos de Insight.
+
+
+
+== Antes de empezar
+
+Debe tener su cuenta de Amazon AWS ya configurada y preparada para la recogida de datos de Insight, y tener a mano los siguientes datos.
+
+* Nombre del informe
+* Nombre del bloque de S3
+* Región de AWS donde reside su bloque de S3.
+* Prefijo de ruta de informes
+
+
+
+
+== Acerca de esta tarea
+
+Una vez que su cuenta de AWS esté lista y tenga los permisos adecuados, estará listo para configurar OnCommand Insight para recopilar datos de informes de facturación.
+
+[NOTE]
+====
+Deberá añadir un origen de datos de coste de AWS Cloud independiente para cada usuario o cuenta facturable desde la cual desee recuperar los datos de facturación.
+
+====
+
+
+== Pasos
+
+. Inicie sesión en OnCommand Insight como administrador.
+. Haga clic en *Admin* > *orígenes de datos* para abrir la página de origen de datos de Insight.
+. Haga clic en *+Agregar* para agregar un nuevo origen de datos. Elija *Amazon* y seleccione *costo de cloud de AWS*.
+. En la sección *Configuración*, rellene el _Report name_, _S3 Bucket_ name, _S3 Region_ (debe ser la región donde reside el bloque de S3), _Report path prefix_, _AWS IAM Key ID_ y _AWS IAM Secret Access Key_. Si no está seguro de alguno de estos factores, consulte a su proveedor de cloud o al titular de la cuenta de AWS.
+. Haga clic en la casilla de verificación para verificar si entiende que AWS le facturará las solicitudes de API y las transferencias de datos que realice el origen de datos de Insight.
+. En *Configuración avanzada*, introduzca la conexión HTTP y el tiempo de espera del socket. El valor predeterminado es 300 segundos.
+. Haga clic en *Guardar*.
+

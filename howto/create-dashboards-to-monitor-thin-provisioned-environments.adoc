@@ -1,0 +1,41 @@
+---
+permalink: howto/create-dashboards-to-monitor-thin-provisioned-environments.html 
+sidebar: sidebar 
+keywords:  
+summary: Las opciones flexibles de diseño y visualización de gráficos del widget de panel de OnCommand Insight permiten analizar en profundidad el uso y la utilización de la capacidad, información estratégica para minimizar los riesgos en infraestructuras de centros de datos con thin provisioning. 
+---
+= Cree consolas para supervisar entornos con thin provisioning
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El diseño del widget de panel flexible de OnCommand Insight y las opciones de presentación de gráficos permiten analizar en profundidad el uso y la capacidad, así como información estratégica para minimizar los riesgos en infraestructuras de centros de datos con thin provisioning.
+
+Puede crear consolas que proporcionen acceso a la información del almacén de datos y el pool de almacenamiento que desee supervisar.
+
+
+
+== Uso de consolas para acceder a la información del almacén de datos
+
+Puede que desee crear consolas que ofrezcan un acceso rápido a los datos que desea supervisar en su infraestructura virtual. Un panel puede incluir widgets similares a los siguientes para identificar los 10 almacenes de datos principales según su porcentaje sobregado y un widget que muestra los datos de capacidad de los almacenes de datos. En los paneles se emplean variables para destacar los almacenes de datos sobrecomprometidos por más del 150% y los almacenes de datos que han superado el 80% de la capacidad utilizada.
+
+image::../media/new-dashboard-thin.gif[nuevo panel fino]
+
+image::../media/new-dashboard-thin-2.gif[nuevo panel fino 2]
+
+Los widgets adicionales que se pueden utilizar para supervisar su entorno de thin provisioning pueden incluir algunas de las siguientes informaciones:
+
+* Las capacidades de VMDK se correlacionan con almacenes de datos
+* Capacidades de máquinas virtuales
+* Tendencia de la capacidad del almacén de datos
+
+
+
+
+== Uso de paneles para acceder a la información del pool de almacenamiento
+
+Un panel puede incluir widgets similares a los siguientes, identificar la cantidad de capacidad de almacenamiento físico utilizada o identificar la capacidad excesiva para un pool de almacenamiento.
+
+image::../media/aggr3c64.gif[aggr3c64]

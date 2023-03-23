@@ -1,0 +1,57 @@
+---
+permalink: howto/creating-a-performance-policy-for-alerting.html 
+sidebar: sidebar 
+keywords:  
+summary: Las políticas de rendimiento permiten supervisar y enviar alertas cuando se cumplen condiciones específicas. 
+---
+= Crear políticas de rendimiento para alertas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las políticas de rendimiento permiten supervisar y enviar alertas cuando se cumplen condiciones específicas.
+
+
+
+== Acerca de esta tarea
+
+Ahora que hemos anotado nuestros activos, vamos a crear una Política de rendimiento que podemos usar para avisarnos cuando la latencia sea superior a 2 ms en cualquier cabina de almacenamiento en nuestro centro de datos de Sunnyvale (DC1_SVL). Cuando se produzcan estas condiciones, enviaremos un correo electrónico a los destinatarios seleccionados.
+
+
+
+== Pasos
+
+. Seleccione *gestionar* > *políticas de rendimiento*.
++
+Se abre la página Performance Policies. Ya se han establecido varias directivas predeterminadas, que se pueden modificar para ajustarse a sus necesidades. Sin embargo, vamos a crear una nueva política.
+
+. Haga clic en el botón *+Add*.
++
+Se abre el diálogo *Agregar directiva*.
+
+. En el campo *Nombre de la directiva*, introduzca "Política de latencia del centro de datos SVL".
++
+Debe usar un nombre diferente de los demás nombres de políticas del objeto. Por ejemplo, no puede contar con dos políticas denominadas "latencia" para un volumen interno; sin embargo, puede contar con una política de "latencia" para un volumen interno y otra política de "latencia" para un volumen diferente. La práctica recomendada es utilizar siempre un nombre único para cualquier política, independientemente del tipo de objeto.
+
+. Para *aplicar a objetos de tipo*, seleccione *almacenamiento*.
+. En el campo *con anotación*, seleccione *Data Center* es "DC1_SVL" (o elija aquí el nombre del centro de datos que desee).
+. Aplicar después de una ventana de *primera ocurrencia* .
++
+La primera opción de ocurrencia activa una alerta cuando se supera un umbral en la primera muestra de datos. Todas las demás opciones activan una alerta cuando el umbral se cruza una vez y se cruza de forma continua durante al menos el tiempo especificado.
+
+. En la lista *con severidad*, seleccione *Advertencia*.
+. En *destinatarios de correo electrónico*, haga clic para anular la lista global de destinatarios. Haga clic en**+**para agregar la dirección de correo electrónico del primer destinatario de alerta deseado y haga clic en *Aceptar*. Repita esto para todos los destinatarios de correo electrónico que desee.
+. Deje la opción predeterminada de Crear alerta si *cualquiera de las siguientes opciones es verdadera. Esto enviará una alerta si se cumple cualquiera de los umbrales establecidos. También puede optar por alertar sólo si se cumplen *todos* de los umbrales establecidos.
+. Para establecer el primer umbral, seleccione *latencia - total* en la lista desplegable y configúrelo en más de 2 ms.
+. Si lo desea, agregue umbrales adicionales para activar la alerta haciendo clic en el botón *Añadir umbral*. Cuando la directiva esté personalizada de la manera que desee, haga clic en *Guardar*.
+. También puede elegir *Detener el procesamiento de directivas adicionales si se genera una alerta*. Esto detendrá las alertas de directivas adicionales si se cumplen las condiciones de esta política.
+. Puede agregar tantas directivas nuevas como desee, estableciendo alertas para otros destinatarios en función de distintas condiciones, según las necesidades empresariales. Cualquier directiva configurada sin destinatarios específicos enviará alertas a la lista global de destinatarios establecida en la página *Admin* > *Notificaciones*
+
+
+
+
+== Después de terminar
+
+Cada nueva directiva se activa automáticamente cuando se guarda y los destinatarios comenzarán a recibir alertas cuando se cumplan las condiciones de la directiva (conocidas como _violage_). También puede supervisar estas violaciones en el panel *Paneles* > *infracciones*.

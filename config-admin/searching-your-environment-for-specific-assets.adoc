@@ -1,0 +1,30 @@
+---
+permalink: config-admin/searching-your-environment-for-specific-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede localizar información sobre activos específicos mediante la función de búsqueda. Por ejemplo, si un usuario del sistema se pone en contacto con el administrador de almacenamiento con un reclamo acerca de un servidor en particular, el administrador puede buscar el nombre del servidor y mostrar una página de activos que resume el estado y proporciona información adicional vinculada. 
+---
+= Buscar activos específicos en su entorno
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede localizar información sobre activos específicos mediante la función de búsqueda. Por ejemplo, si un usuario del sistema se pone en contacto con el administrador de almacenamiento con un reclamo acerca de un servidor en particular, el administrador puede buscar el nombre del servidor y mostrar una página de activos que resume el estado y proporciona información adicional vinculada.
+
+
+
+== Pasos
+
+. Abra la interfaz de usuario web de OnCommand Insight.
+. En la barra de herramientas, haga clic en image:../media/search-assets-icon.gif[""].
++
+Aparece el cuadro *Buscar activos*.
+
+. Introduzca el nombre de un activo o una parte del nombre.
+. Seleccione el recurso que desea de los resultados de búsqueda.
++
+Se muestra la página de activos de ese recurso.
+
+

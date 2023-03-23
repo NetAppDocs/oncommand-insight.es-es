@@ -1,0 +1,56 @@
+---
+permalink: config-admin/editing-or-removing-applications-in-bulk.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede asignar varias aplicaciones a o eliminar varias aplicaciones de activos mediante una consulta en lugar de tener que asignarlas o eliminarlas manualmente. 
+---
+= Asignar múltiples aplicaciones a o quitar varias aplicaciones de activos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede asignar varias aplicaciones a o eliminar varias aplicaciones de activos mediante una consulta en lugar de tener que asignarlas o eliminarlas manualmente.
+
+
+
+== Antes de empezar
+
+Debe haber creado una consulta que busque todos los activos que desea editar.
+
+
+
+== Pasos
+
+. Haga clic en *consultas* y seleccione *Mostrar todas las consultas*.
++
+Aparece la página consultas.
+
+. Haga clic en el nombre de la consulta que encuentra los activos.
++
+Se muestra la lista de activos asociados a la consulta.
+
+. Seleccione los activos deseados en la lista o haga clic en image:../media/select-assets.gif[""] Para seleccionar *todo*.
++
+Aparece el botón *acciones*.
+
+. Para agregar una aplicación a los activos seleccionados, haga clic en image:../media/actions-button.gif[""]Y seleccione *Editar aplicación*.
++
+.. Haga clic en *aplicación* y seleccione una o más aplicaciones.
++
+Es posible seleccionar varias aplicaciones para hosts, volúmenes internos y máquinas virtuales; sin embargo, solo puede seleccionar una aplicación para un volumen.
+
+.. Haga clic en *Guardar*.
+
+
+. Para eliminar una aplicación asignada a los activos, haga clic en image:../media/actions-button.gif[""] Y seleccione *Eliminar aplicación*.
++
+.. Seleccione la aplicación o aplicaciones que desea eliminar.
+.. Haga clic en *Eliminar*.
+
+
++
+Las aplicaciones nuevas que asigne anulan las aplicaciones del activo que se derivaron de otro activo. Por ejemplo, los volúmenes heredan aplicaciones de hosts y cuando se asignan aplicaciones nuevas a un volumen, la nueva aplicación tiene prioridad sobre la aplicación derivada.
+
+

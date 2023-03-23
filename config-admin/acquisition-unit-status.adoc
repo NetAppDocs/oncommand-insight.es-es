@@ -1,0 +1,29 @@
+---
+permalink: config-admin/acquisition-unit-status.html 
+sidebar: sidebar 
+keywords:  
+summary: La pantalla Unidad de adquisición ofrece una vista de todas las unidades de adquisición, incluido el estado y los errores presentes. 
+---
+= Estado de la unidad de adquisición
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La pantalla Unidad de adquisición ofrece una vista de todas las unidades de adquisición, incluido el estado y los errores presentes.
+
+El estado de las unidades de adquisición de Insight conectadas al servidor se muestra en la tabla *Admin* > *unidades de adquisición*. Esta tabla muestra la siguiente información para cada unidad de adquisición:
+
+* *Nombre*
+* *IP*
+* *Estado* es el estado de funcionamiento de la unidad de adquisición.
+* **Última generación informada**muestra la última vez que se informó de una fuente de datos conectada a la unidad de adquisición.
+* *Nota* muestra una nota introducida por el usuario relacionada con la AU.
+
+
+Si una unidad de adquisición de la lista presenta un problema, el campo Estado mostrará un círculo rojo con información breve sobre el problema. Debería investigar cualquier problema de unidad de adquisición, ya que probablemente afectan a la recopilación de datos.
+
+Para reiniciar una unidad de adquisición, pase el cursor sobre la unidad y haga clic en el botón _Restart Acquisition Unit_ que aparece.
+
+Para agregar una nota de texto, coloque el cursor sobre una unidad de adquisición y haga clic en el botón _Add Note_ que aparece. Sólo se muestra la nota introducida más recientemente.

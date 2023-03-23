@@ -1,0 +1,14 @@
+---
+permalink: howto/assigning-application-to-assets-how-to-chargeback.html 
+sidebar: sidebar 
+keywords:  
+summary: Después de definir las aplicaciones, debe asociar las aplicaciones con activos específicos. Puede utilizar un método ad hoc simple para aplicar una aplicación a un activo. Los usuarios que deseen aplicar aplicaciones en bloque deben utilizar un método de consulta para identificar los activos que desean asignar a una aplicación. 
+---
+= Asignar aplicaciones a activos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de definir las aplicaciones, debe asociar las aplicaciones con activos específicos. Puede utilizar un método ad hoc simple para aplicar una aplicación a un activo. Los usuarios que deseen aplicar aplicaciones en bloque deben utilizar un método de consulta para identificar los activos que desean asignar a una aplicación.

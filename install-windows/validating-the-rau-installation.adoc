@@ -1,0 +1,26 @@
+---
+permalink: install-windows/validating-the-rau-installation.html 
+sidebar: sidebar 
+keywords:  
+summary: Para validar la instalación correcta de la unidad de adquisición remota, puede ver el estado de las unidades de adquisición remota conectadas al servidor. 
+---
+= Validación de la instalación de la unidad de adquisición remota
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para validar la instalación correcta de la unidad de adquisición remota, puede ver el estado de las unidades de adquisición remota conectadas al servidor.
+
+
+
+== Pasos
+
+. En la barra de herramientas Insight, haga clic en *Admin*.
+. Haga clic en *unidades de adquisición*.
+. Compruebe que la nueva unidad de adquisición remota se ha registrado correctamente y que tiene un estado conectado.
++
+Si no lo hace, debe ponerse en contacto con el soporte técnico.
+
+

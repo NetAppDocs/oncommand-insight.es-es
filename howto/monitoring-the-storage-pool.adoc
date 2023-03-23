@@ -1,0 +1,43 @@
+---
+permalink: howto/monitoring-the-storage-pool.html 
+sidebar: sidebar 
+keywords:  
+summary: Cada página de destino de la agrupación de almacenamiento proporciona ratios de suscripción excesiva e identifica recursos correlacionados, utilización de discos y LUN, así como violaciones de normativas e infracciones producidas en el pool de almacenamiento. 
+---
+= Supervisión del pool de almacenamiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cada página de destino de la agrupación de almacenamiento proporciona ratios de suscripción excesiva e identifica recursos correlacionados, utilización de discos y LUN, así como violaciones de normativas e infracciones producidas en el pool de almacenamiento.
+
+Utilice la página de destino del pool de almacenamiento para identificar cualquier problema potencial con los activos físicos que respaldan su infraestructura virtual. Puede realizar un seguimiento de la tendencia de los ratios de capacidad y capacidad a lo largo de 30 días o utilizar un plazo personalizado. Preste atención a los datos de las siguientes secciones para supervisar el estado del pool de almacenamiento.
+
+* *Resumen*
++
+Utilice esta sección para comprender:
+
++
+** Información de la capacidad del pool de almacenamiento, incluida la capacidad física y la capacidad excesivamente comprometida.
+** Si el agregado está sobrecargado de trabajo y por cuánto.
+** Cualquier infracción de la política que se haya producido.
+
+
+* *Secciones de discos y recursos de almacenamiento*
++
+La sección de recursos de almacenamiento muestra el uso de la LUN.
+
++
+La sección discos muestra los discos individuales que componen el pool de almacenamiento.
+
+* *Recursos*
++
+Utilice esta sección para comprender la correlación de VMDK a las LUN y comprender la ruta de aplicación de almacenamiento a VM.
+
+* *Sección de violaciones*
++
+La sección de incumplimientos identifica cualquier incumplimiento de las políticas de rendimiento que se han establecido para el banco de almacenamiento.
+
+

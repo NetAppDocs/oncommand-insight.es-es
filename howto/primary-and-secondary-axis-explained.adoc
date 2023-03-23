@@ -1,0 +1,44 @@
+---
+permalink: howto/primary-and-secondary-axis-explained.html 
+sidebar: sidebar 
+keywords:  
+summary: El eje secundario facilita la visualización de datos de dos conjuntos diferentes de valores que utilizan diferentes unidades de medida. 
+---
+= Explicación de los ejes primario y secundario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El eje secundario facilita la visualización de datos de dos conjuntos diferentes de valores que utilizan diferentes unidades de medida.
+
+
+
+== Acerca de esta tarea
+
+Las diferentes métricas utilizan diferentes unidades de medida para los datos que informan en un gráfico. Por ejemplo, al observar las IOPS, la unidad de medida es el número de operaciones de I/o por segundo de tiempo (IO/s), mientras que la latencia es únicamente una medida de tiempo (milisegundos, microsegundos, segundos, etc.). Al introducir ambas métricas en un único gráfico de línea mediante un único conjunto de valores para el eje y, los números de latencia (normalmente, unos pocos milisegundos) se registran en la misma escala con las IOPS (normalmente, la numeración es de miles) y la línea de latencia se pierde a esa escala.
+
+Pero es posible trazar ambos conjuntos de datos en un único gráfico significativo, estableciendo una unidad de medida en el eje y primario (lado izquierdo) y la otra unidad de medida en el eje y secundario (lado derecho). Cada métrica se registra a su propia escala.
+
+
+
+== Pasos
+
+. Cree o abra un panel. Agregue al panel un widget *gráfico de líneas*, *gráfico de spline*, *gráfico de área* o *gráfico de área apilada*.
+. Seleccione un tipo de activo (por ejemplo *almacenamiento*) y elija *IOPS - total* para su primera métrica. Configure los filtros que desee y elija un método de despliegue si lo desea.
++
+La línea IOPS se muestra en el gráfico, con su escala mostrada a la izquierda.
+
+. Haga clic en *+Agregar* para agregar una segunda línea al gráfico. Para esta línea, elija *latencia - total* para la métrica.
++
+Observe que la línea se muestra plana en la parte inferior del gráfico. Esto se debe a que se está utilizando a la misma escala que la línea IOPS.
+
+. En la consulta latencia, seleccione *eje y: Secundario*.
++
+La línea latencia se dibuja ahora a su propia escala, que se muestra en el lado derecho del gráfico.
+
++
+image::../media/secondary-axis-example.gif[ejemplo de eje secundario]
+
+

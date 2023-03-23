@@ -1,0 +1,20 @@
+---
+permalink: install-windows/backing-up-the-security-configuration.html 
+sidebar: sidebar 
+keywords:  
+summary: Cuando los componentes de Insight utilizan una configuración de seguridad no predeterminada, debe realizar una copia de seguridad de la configuración de seguridad y, a continuación, restaurar la configuración en todos los componentes una vez instalado el nuevo software. La configuración de seguridad debe restaurarse antes de restaurar la copia de seguridad de la base de datos del almacén de datos. 
+---
+= Realizar una copia de seguridad de la configuración de seguridad
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cuando los componentes de Insight utilizan una configuración de seguridad no predeterminada, debe realizar una copia de seguridad de la configuración de seguridad y, a continuación, restaurar la configuración en todos los componentes una vez instalado el nuevo software. La configuración de seguridad debe restaurarse antes de restaurar la copia de seguridad de la base de datos del almacén de datos.
+
+
+
+== Acerca de esta tarea
+
+Utilice la `securityadmin` para crear una copia de seguridad de la configuración y restaurar la configuración guardada. Para obtener más información, busque `securityadmin` En el centro de documentación de OnCommand Insight: http://docs.netapp.com/oci-73/index.jsp[]

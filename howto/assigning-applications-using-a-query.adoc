@@ -1,0 +1,45 @@
+---
+permalink: howto/assigning-applications-using-a-query.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede asignar una aplicación a un activo para poder identificar los recursos del activo que usa la aplicación. Si un activo tiene un costo asignado al activo, puede identificar el costo en el que incurre la aplicación y si el recurso se mide por tamaño, puede determinar si el recurso debe reabastecerse. 
+---
+= Asignar aplicaciones a un activo mediante una consulta
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede asignar una aplicación a un activo para poder identificar los recursos del activo que usa la aplicación. Si un activo tiene un costo asignado al activo, puede identificar el costo en el que incurre la aplicación y si el recurso se mide por tamaño, puede determinar si el recurso debe reabastecerse.
+
+
+
+== Acerca de esta tarea
+
+Puede simplificar la tarea de asignar varios activos a una aplicación mediante una consulta.
+
+
+
+== Pasos
+
+. Cree una nueva consulta para identificar los activos a los que desea asignar una aplicación. Por ejemplo, si desea asignarlo a un host con un nombre específico relacionado con una ubicación geográfica, haga clic en *consultas* > *+Nueva consulta*
+. Haga clic en *Host*
+. En el campo *Nombre*, introduzca `Chicago`
++
+El sistema muestra todos los hosts con `Chicago` como parte si su nombre. image:../media/new-query.gif[""]
+
+. Seleccione uno o varios de los hosts identificados por la consulta.
+. Haga clic en *acciones* > *Agregar aplicación*
++
+image::../media/application-assign.gif[asignación de aplicaciones]
+
++
+El sistema muestra el cuadro de diálogo asignar aplicación.
+
+. Seleccione la aplicación que desea asignar al host y haga clic en image:../media/check-box-ok.gif[""]
+. Haga clic en *Guardar*
++
+El nombre de la aplicación aparece en la sección datos del usuario.
+
+

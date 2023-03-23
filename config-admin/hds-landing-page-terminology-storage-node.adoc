@@ -1,0 +1,24 @@
+---
+permalink: config-admin/hds-landing-page-terminology-storage-node.html 
+sidebar: sidebar 
+keywords:  
+summary: Términos que se aplican a objetos o referencias que puede encontrar en las páginas de destino de activos de nodo de almacenamiento HDS. 
+---
+= Nodo de almacenamiento HDS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Términos que se aplican a objetos o referencias que puede encontrar en las páginas de destino de activos de nodo de almacenamiento HDS.
+
+
+
+== Terminología de nodos de almacenamiento de HDS
+
+Los siguientes términos se aplican a los objetos o referencias que puede encontrar en las páginas de destino de activos del nodo de almacenamiento HDS. Muchos de estos términos también se aplican a otros recopiladores de datos.
+
+* Nombre: Nombre del director de interfaz (FED) o del adaptador de canal en matrices monolíticas, o el nombre del controlador en una matriz modular. Una cabina HDS determinada tendrá 2 o más nodos de almacenamiento
+* Volúmenes: En la tabla volumen, se mostrarán todos los volúmenes asignados a cualquier puerto que pertenezca a este nodo de almacenamiento
+

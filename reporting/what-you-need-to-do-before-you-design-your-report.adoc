@@ -1,0 +1,23 @@
+---
+permalink: reporting/what-you-need-to-do-before-you-design-your-report.html 
+sidebar: sidebar 
+keywords:  
+summary: Antes de diseñar su informe personalizado, debe completar algunas tareas previas. Si no los completa, los informes podrían ser inexactos o incompletos. 
+---
+= Qué debe hacer antes de diseñar su informe
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de diseñar su informe personalizado, debe completar algunas tareas previas. Si no los completa, los informes podrían ser inexactos o incompletos.
+
+Por ejemplo, si no finaliza el proceso de identificación del dispositivo, los informes de capacidad no serán precisos. O bien, si no termina de establecer anotaciones (como niveles, unidades de negocio y centros de datos), es posible que sus informes personalizados no informen de forma precisa los datos en todo su dominio y puedan mostrar "N/A" para algunos puntos de datos.
+
+Antes de diseñar los informes, lleve a cabo las tareas siguientes:
+
+* Configurar todos los orígenes de datos. Para obtener más información, consulte la _Guía de configuración y administración de OnCommand Insight_.
+* Introducir anotaciones (como niveles, centros de datos y unidades de negocio) en dispositivos y recursos del entorno. Es beneficioso que las anotaciones sean estables antes de generar informes, ya que el almacén de datos de OnCommand Insight recopila información histórica.
+* Configure el almacén de datos OnCommand Insight para que acepte los datos del servidor OnCommand Insight en el proceso extraer, transformar y cargar (ETL).
+

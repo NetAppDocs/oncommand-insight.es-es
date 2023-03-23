@@ -1,0 +1,103 @@
+---
+permalink: dwh/connecting-data-warehouse-to-oncommand-insight-servers.html 
+sidebar: sidebar 
+keywords:  
+summary: Los conectores establecen conexiones desde el almacén de datos OnCommand Insight a los servidores OnCommand Insight. Puede conectar el almacén de datos con uno o más servidores OnCommand Insight. Puede añadir o quitar conexiones a o desde bases de datos OnCommand Insight. 
+---
+= Conexión del almacén de datos a los servidores OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los conectores establecen conexiones desde el almacén de datos OnCommand Insight a los servidores OnCommand Insight. Puede conectar el almacén de datos con uno o más servidores OnCommand Insight. Puede añadir o quitar conexiones a o desde bases de datos OnCommand Insight.
+
+
+
+== Acerca de esta tarea
+
+Data Warehouse asigna una identificación única global al conector que se utiliza junto con el nombre del conector. Después de agregar un conector, el almacén de datos consulta a la base de datos OnCommand Insight el nombre y la versión del sitio OnCommand Insight.
+
+Puede elegir conectarse a un origen de datos con o sin SSL. La elección del origen de datos seguro obliga a la conexión a utilizar SSL cuando se comunica con la base de datos remota de OnCommand Insight.
+
+El almacén de datos puede proporcionar una vista consolidada de los datos de varias instalaciones de OnCommand Insight. Esta base de datos consolidada proporciona la siguiente información:
+
+* Identificadores únicos globales
++
+A cada objeto se le asigna un identificador único global que es independiente de los identificadores utilizados por sitios individuales, para evitar los identificadores en conflicto y habilitar la detección de duplicados. Estos ID se comparten entre todos los data marts. Este ID es el identificador exclusivo global (GUID) de la columna Comentario de las tablas inteligentes de datos de inventario.
+
+* Sin duplicación
++
+Las entidades que existen en varias bases de datos OnCommand Insight solo se registran una vez en la base de datos consolidada.
+
+* Registro actual
++
+Los datos de la base de datos consolidada (mercados de datos de inventario) son siempre los más actualizados posibles.
+
+
+
+Al agregar o editar una conexión, también puede probar la conexión. La prueba hace lo siguiente:
+
+* Verifica la dirección IP del host, el nombre de usuario y la contraseña y garantiza que se pueda establecer una conexión.
++
+Las conexiones no válidas aparecen en rojo.
+
+* Compara la versión OnCommand Insight con la versión de almacén de datos.
++
+Si las versiones no son compatibles, aparece un mensaje de error.
+
+* Verifica que la base de datos OnCommand Insight no se ha modificado ni restaurado en una base de datos diferente como lo ve el último procesamiento de almacén de datos. Si se ha producido un cambio, aparece un mensaje de error.
+
+
+
+
+== Pasos
+
+. Inicie sesión en el portal del almacén de datos en `+https://hostname/dwh+`, donde `hostname` Es el nombre del sistema en el que está instalado el almacén de datos de OnCommand Insight.
+. En el panel de navegación de la izquierda, haga clic en *conectores*.
++
+La tabla conectores aparece en blanco al principio y muestra la información del conector después de agregar un conector.
+
+. Haga clic en *Nuevo* para agregar un nuevo conector.
+. Introduzca lo siguiente:
++
+** *Cifrado*
++
+Para habilitar las solicitudes de almacén de datos que se van a realizar mediante el cifrado SSL, seleccione `Enabled`.
+
+** *Nombre*
++
+Un nombre de conector que identificará el conector en la vista conectores.
+
+** *Host*
++
+Dirección IP del host
+
+** *Nombre de usuario*
++
+"'inventario'"
+
++
+[NOTE]
+====
+Con este nombre de usuario y contraseña, puede iniciar sesión en la base de datos remota de OnCommand Insight y realizar consultas en los datos.
+
+====
+** *Contraseña*
++
+"SANscreen"
+
+
+
+. Para especificar el puerto que se va a utilizar para las conexiones TCP con el host, haga clic en *Avanzado* e introduzca el número de puerto TCP.
+. Para especificar el puerto (distinto del puerto predeterminado) que se va a utilizar para las conexiones HTTPS con el host, haga clic en *Avanzado* e introduzca el número de puerto.
+. Haga clic en *Prueba*.
++
+Data Warehouse prueba la conexión.
+
+. Haga clic en *Guardar*.
++
+Si introduce varias conexiones para varias instalaciones, Data Warehouse invoca procesos de generación independientes, uno para cada base de datos desde la que se deben extraer los datos. Cada proceso de compilación de este tipo extrae datos de una base de datos OnCommand Insight y los carga en la base de datos consolidada.
+
+

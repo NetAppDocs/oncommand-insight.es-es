@@ -1,0 +1,41 @@
+---
+permalink: config-admin/applying-a-data-source-patch.html 
+sidebar: sidebar 
+keywords:  
+summary: Los parches de origen de datos están disponibles periódicamente y le permiten solucionar problemas con un origen de datos existente, añadir un origen de datos a un nuevo proveedor o añadir un nuevo modelo a un proveedor. 
+---
+= Aplicación de un parche de origen de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los parches de origen de datos están disponibles periódicamente y le permiten solucionar problemas con un origen de datos existente, añadir un origen de datos a un nuevo proveedor o añadir un nuevo modelo a un proveedor.
+
+
+
+== Antes de empezar
+
+Debe haber obtenido la `.zip` archivo que contiene el último origen de datos `.patch` archivos del soporte técnico.
+
+
+
+== Pasos
+
+. En la barra de herramientas Insight, haga clic en *Admin*.
+. Haga clic en *parches*.
+. En el botón acciones, seleccione *aplicar parche*.
+. En el cuadro de diálogo *aplicar parche de origen de datos*, haga clic en *examinar* para buscar `.patch` archivo.
+. Inspeccione los tipos de fuente de datos *Patch name*, *Description* y *impactados*.
+. Si el parche seleccionado es correcto, haga clic en *aplicar parche*.
++
+Si está aplicando un parche que soluciona problemas con un origen de datos, todos los orígenes de datos del mismo tipo se actualizan con el parche y debe aprobar el parche. Los parches que no afectan a ningún origen de datos configurado se aprueban automáticamente.
+
+
+
+
+
+== Después de terminar
+
+Si está aplicando un parche que agrega un origen de datos para un nuevo proveedor o un nuevo modelo, debe agregar el origen de datos después de aplicar el parche.

@@ -1,0 +1,78 @@
+---
+permalink: howto/finding-the-right-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: Los activos de Insight a los que puede hacer referencia en los filtros de widgets y las búsquedas varían según el tipo de activo. 
+---
+= Práctica recomendada: Encontrar los activos adecuados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los activos de Insight a los que puede hacer referencia en los filtros de widgets y las búsquedas varían según el tipo de activo.
+
+En los paneles, el tipo de activo alrededor del que está creando el widget determina los otros contadores de tipo de activo para los que puede filtrar o agregar una columna. Tenga en cuenta lo siguiente al crear el widget:
+
+|===
+
+
+| Este tipo de activo / contador: | Se puede filtrar según estos activos: 
+
+
+ a| 
+Máquina virtual
+ a| 
+VMDK
+
+
+
+ a| 
+Almacén de datos
+ a| 
+VMDK de volumen interno
+
+Máquina virtual
+
+Volumen
+
+
+
+ a| 
+Hipervisor
+ a| 
+Máquina virtual
+
+
+
+ a| 
+Es hipervisor
+ a| 
+Host
+
+
+
+ a| 
+Hosts
+ a| 
+Volumen Volumeinterno
+
+
+
+ a| 
+Clúster
+ a| 
+Máquina HostVirtual
+
+
+
+ a| 
+Estructura
+ a| 
+Puerto
+
+|===
+Esta no es una lista completa.
+
+Práctica recomendada: Si está filtrando un tipo de activo concreto que no aparece en la lista, intente crear la consulta alrededor de un tipo de activo alternativo.

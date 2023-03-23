@@ -1,0 +1,48 @@
+---
+permalink: config-admin/configuring-your-asup-processing.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Todos los productos de NetApp están equipados con funcionalidades automatizadas para ofrecer el mejor soporte posible a los clientes. El soporte automatizado \(ASUP\) envía periódicamente información específica y predefinida al soporte de cliente. Puede controlar la información que se va a reenviar a NetApp y con qué frecuencia se envía.' 
+---
+= Configurar el procesamiento de ASUP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Todos los productos de NetApp están equipados con funcionalidades automatizadas para ofrecer el mejor soporte posible a los clientes. El soporte automatizado (ASUP) envía periódicamente información predefinida y específica al soporte del cliente. Puede controlar la información que se va a reenviar a NetApp y con qué frecuencia se envía.
+
+
+
+== Antes de empezar
+
+Es necesario configurar OnCommand Insight para reenviar los datos antes de enviarlos.
+
+
+
+== Acerca de esta tarea
+
+Los datos de ASUP se reenvían mediante el protocolo HTTPS.
+
+
+
+== Pasos
+
+. En la barra de herramientas Insight, haga clic en *Admin*.
+. Haga clic en *Configuración*.
+. Haga clic en la ficha *ASUP y proxy*.
+. En la sección *ASUP*, seleccione *Activar ASUP* para activar la instalación de ASUP.
+. Si desea cambiar la información corporativa, actualice los siguientes campos:
++
+** *Nombre de la compañía*
+** *Nombre del sitio*
+** *Qué enviar*: Registros, datos de configuración, datos de rendimiento
+
+
+. Haga clic en *probar conexión* para asegurarse de que la conexión especificada funciona.
+. Haga clic en *Guardar*.
+. En la sección *Proxy*, elija si desea *Activar proxy* y especifique su información de proxy *host*, *puerto* y *usuario*.
+. Haga clic en *probar conexión* para asegurarse de que el proxy especificado funciona.
+. Haga clic en *Guardar*.
+

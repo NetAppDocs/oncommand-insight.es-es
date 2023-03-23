@@ -1,0 +1,39 @@
+---
+permalink: config-admin/adding-or-removing-business-entities-from-multiple-assets.html 
+sidebar: sidebar 
+keywords: bulk edit 
+summary: Puede asignar entidades de negocio a o quitar entidades de negocio de varios activos utilizando una consulta en lugar de tener que asignarlas o eliminarlas manualmente. 
+---
+= Asignar entidades de negocio a o eliminar entidades de negocio de varios activos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede asignar entidades de negocio a o quitar entidades de negocio de varios activos utilizando una consulta en lugar de tener que asignarlas o eliminarlas manualmente.
+
+
+
+== Antes de empezar
+
+Debe haber creado ya las entidades de negocio que desea agregar a los activos deseados.
+
+
+
+== Pasos
+
+. Cree una consulta nueva o abra una consulta existente.
+. Si lo desea, puede filtrar los activos a los que desea agregar entidades de negocio.
+. Seleccione los activos deseados en la lista o haga clic en image:../media/select-assets.gif[""] Para seleccionar *todo*.
++
+Aparece el botón *acciones*.
+
+. Para agregar una entidad de negocio a los activos seleccionados, haga clic en image:../media/actions-button.gif[""]. Si el tipo de activo seleccionado puede tener entidades de negocio asignadas a él, verá la opción de menú a *Agregar entidad de negocio*. Seleccione esto.
+. Seleccione la entidad comercial deseada de la lista y haga clic en *Guardar*.
++
+Cualquier nueva entidad de negocio que asigne reemplazará a cualquier entidad de negocio que ya se haya asignado al activo. La asignación de aplicaciones a activos también anulará las entidades de negocio asignadas de la misma manera. La asignación de entidades de negocio a como activo también puede reemplazar cualquier aplicación asignada a ese activo.
+
+. Para eliminar una entidad de negocio asignada a los activos, haga clic en image:../media/actions-button.gif[""] Y seleccione *Quitar entidad de negocio*.
+. Seleccione la entidad de negocio deseada de la lista y haga clic en *Eliminar*.
+

@@ -1,0 +1,45 @@
+---
+permalink: howto/configuring-servicenow-for-integration.html 
+sidebar: sidebar 
+keywords:  
+summary: La integración de ServiceNow con Insight requiere varias tareas de configuración. 
+---
+= Configurar ServiceNow para la integración
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La integración de ServiceNow con Insight requiere varias tareas de configuración.
+
+
+
+== Acerca de esta tarea
+
+Deben realizarse las siguientes tareas al integrar ServiceNow con Insight:
+
+En el lado ServiceNow:
+
+* Aumente el rol
+* Instalar conjuntos de actualizaciones
+* Configurar usuarios
+
+
+En la parte Insight:
+
+* Agregue el usuario ServiceNow
+
+
+En el lado del conector Python:
+
+* Instalar Python
+* Instalar bibliotecas adicionales
+* Inicializar el conector
+* Edite el archivo config.ini
+* Pruebe el conector
+* Sincronice el conector
+* Programar la ejecución diaria de tareas
+
+
+Cada una de ellas se explica con mayor detalle en las siguientes secciones.

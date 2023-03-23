@@ -1,0 +1,14 @@
+---
+permalink: config-admin/asset-page-sections.html 
+sidebar: sidebar 
+keywords:  
+summary: Una página de activos muestra varias secciones que contienen información relevante para el activo. Las secciones que vea dependen del tipo de activo. 
+---
+= Secciones de páginas de activos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una página de activos muestra varias secciones que contienen información relevante para el activo. Las secciones que vea dependen del tipo de activo.

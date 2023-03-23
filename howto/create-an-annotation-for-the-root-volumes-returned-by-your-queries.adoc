@@ -1,0 +1,35 @@
+---
+permalink: howto/create-an-annotation-for-the-root-volumes-returned-by-your-queries.html 
+sidebar: sidebar 
+keywords:  
+summary: Las anotaciones son notas especializadas que asigna a sus activos, lo que le permite filtrar los activos por sus anotaciones. La anotación que cree se utilizará para identificar los agregados raíz de NetApp en su entorno y garantizar que no se incluyan en un informe específico. 
+---
+= Cree una anotación para los volúmenes raíz devueltos por sus consultas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las anotaciones son notas especializadas que asigna a sus activos, lo que le permite filtrar los activos por sus anotaciones. La anotación que cree se utilizará para identificar los agregados raíz de NetApp en su entorno y garantizar que no se incluyan en un informe específico.
+
+
+
+== Antes de empezar
+
+Debe haber identificado todos los agregados raíz que desea excluir del informe "'Alta densidad de E/S'".
+
+
+
+== Pasos
+
+. Cree una anotación para asociar todos los agregados raíz de NetApp identificados con las consultas: *Gestionar* > *Anotaciones*
+. Haga clic en *Agregar*
++
+.. Introduzca el nombre de la anotación: *RootAggr*
+.. Introduzca una descripción de la anotación: *Eliminar agregado raíz del informe "Alta densidad de E/S"*
+.. Introduzca el tipo de anotación: *Boolean*
+
+
+. Haga clic en *Guardar*
+

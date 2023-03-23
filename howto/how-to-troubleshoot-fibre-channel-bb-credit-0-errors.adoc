@@ -1,0 +1,68 @@
+---
+permalink: howto/how-to-troubleshoot-fibre-channel-bb-credit-0-errors.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Fibre Channel utiliza créditos de búfer a búfer \(BB credits\) para controlar el flujo de transmisión. El valor de crédito se reduce cuando se envía una trama desde un puerto y el valor de crédito se repone cuando el puerto recibe una respuesta. Si los créditos BB del puerto no se reponen, el flujo de transmisión puede verse afectado. Los puertos necesitan memoria, o búferes, para almacenar temporalmente tramas hasta que se ensamblan en secuencia y se entregan. El número de búferes es el número de tramas que puede almacenar un puerto y se denomina crédito de búfer.' 
+---
+= Resolución de errores de crédito 0 de BB de Fibre Channel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Fibre Channel utiliza créditos de búfer a búfer (créditos de BB) para controlar el flujo de transmisión. El valor de crédito se reduce cuando se envía una trama desde un puerto y el valor de crédito se repone cuando el puerto recibe una respuesta. Si los créditos BB del puerto no se reponen, el flujo de transmisión puede verse afectado. Los puertos necesitan memoria, o búferes, para almacenar temporalmente tramas hasta que se ensamblan en secuencia y se entregan. El número de búferes es el número de tramas que puede almacenar un puerto y se denomina crédito de búfer.
+
+Como los créditos disponibles para un enfoque de puerto dado cero, un error advierte que el puerto dejará de recibir transmisiones cuando se alcance el valor cero y no se reanudará hasta que se repongan los créditos BB.
+
+Las políticas de rendimiento de Insight permiten establecer umbrales en las siguientes métricas de puertos.
+
+|===
+
+
+ a| 
+BB credit cero - Rx
+
+
+
+ a| 
+Número de veces que el recuento de créditos de búfer a búfer de recepción pasó a cero durante el período de muestreo
+
+
+
+ a| 
+BB credit cero - Tx
+
+
+
+ a| 
+Número de veces que el recuento de créditos de búfer de transmisión a búfer pasó a cero durante el período de muestreo
+
+
+
+ a| 
+BB credit cero - total
+
+
+
+ a| 
+Número de veces que este puerto tuvo que dejar de transmitir porque el puerto conectado estaba fuera de créditos para proporcionar
+
+
+
+ a| 
+Duración cero de crédito BB - Tx
+
+
+
+ a| 
+Tiempo en milisegundos durante el cual el crédito Tx BB fue cero durante el intervalo de muestreo
+
+|===
+Los errores de crédito de BB pueden deberse a algunos de los siguientes escenarios:
+
+* Si una implementación determinada tiene un alto porcentaje de tramas FC de tamaños considerablemente inferior al tamaño máximo, es posible que se necesiten más BB_Credits.
+* Cambios de carga de trabajo en el entorno que podrían afectar a puertos o dispositivos que están conectados a ellos, como los nodos de almacenamiento.
+
+
+Puede utilizar las páginas de activos Fabric, switch y puerto para supervisar el entorno Fibre Channel. Las páginas de activos de puerto presentan información resumida sobre el recurso, su topología (el dispositivo y sus conexiones), gráficos de rendimiento y tablas de recursos asociados. Al solucionar problemas de Fibre Channel, el gráfico de rendimiento de cada activo de puerto resulta útil porque muestra tráfico para el puerto del contribuyente superior seleccionado. Las páginas de activos de puertos también muestran métricas de crédito de búfer a búfer y errores de puerto en este gráfico, en los que Insight muestra un gráfico de rendimiento independiente para cada métrica.

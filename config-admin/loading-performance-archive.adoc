@@ -1,0 +1,34 @@
+---
+permalink: config-admin/loading-performance-archive.html 
+sidebar: sidebar 
+keywords:  
+summary: Para cargar el archivo de datos de rendimiento, siga estos pasos. 
+---
+= Cargando archivo de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para cargar el archivo de datos de rendimiento, siga estos pasos.
+
+
+
+== Antes de empezar
+
+Antes de cargar el archivo de datos de rendimiento, debe restaurar un backup manual o semanal válido.
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *Admin* > *solución de problemas*.
+. En la sección Restaurar, en *cargar archivo de rendimiento*, haga clic en *cargar*.
++
+[NOTE]
+====
+La carga de archivo se gestiona en segundo plano. La carga del archivado completo puede llevar mucho tiempo, ya que los datos de rendimiento de archivado diarios se completan en Insight. El estado de la carga del archivo se muestra en la sección de archivo de esta página.
+
+====
+

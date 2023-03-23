@@ -1,0 +1,31 @@
+---
+permalink: install-windows/device-identification-and-data-source-planning.html 
+sidebar: sidebar 
+keywords:  
+summary: Como parte de la planificación de la implementación, debe recopilar información sobre los dispositivos del entorno. 
+---
+= Identificación de dispositivo y planificación del origen de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Como parte de la planificación de la implementación, debe recopilar información sobre los dispositivos del entorno.
+
+Necesita el siguiente software, conectividad e información sobre cada dispositivo del entorno:
+
+* La dirección IP o el nombre de host que puede resolver el servidor OCI
+* Nombre de inicio de sesión y contraseña
+* Tipo de acceso al dispositivo, por ejemplo, controlador y estación de gestión
++
+[NOTE]
+====
+El acceso de sólo lectura será suficiente para la mayoría de los dispositivos, pero algunos requieren permisos de administrador.
+
+====
+* Conectividad de puerto al dispositivo en función de los requisitos del puerto de origen de datos
+* En el caso de los switches, cadena de comunidad de solo lectura de SNMP (ID de usuario o contraseña para otorgar acceso a los switches)
+* Cualquier software de terceros necesario en el dispositivo, por ejemplo, capacitador de soluciones.
+* Consulte la "referencia de origen de datos específica del proveedor" en la Ayuda de la interfaz de usuario web o en la _Guía de configuración y administración de OnCommand Insight_ para obtener más información sobre los permisos y requisitos del origen de datos.
+

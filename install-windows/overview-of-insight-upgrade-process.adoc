@@ -1,0 +1,44 @@
+---
+permalink: install-windows/overview-of-insight-upgrade-process.html 
+sidebar: sidebar 
+keywords:  
+summary: Antes de comenzar a actualizar Insight, es importante comprender el proceso de actualización. El proceso de actualización es el mismo para la mayoría de las versiones de Insight. 
+---
+= Descripción general del proceso de actualización de OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de comenzar a actualizar Insight, es importante comprender el proceso de actualización. El proceso de actualización es el mismo para la mayoría de las versiones de Insight.
+
+El proceso de actualización de Insight incluye las siguientes tareas de alto nivel:
+
+* Descarga de los paquetes de instalación
+* Copia de seguridad de la base de datos del almacén de datos
++
+Para evitar la posibilidad de informar de forma errónea de los datos, debe realizar una copia de seguridad de la base de datos de Data Warehouse antes de realizar una copia de seguridad de la base de datos de Insight.
+
+* Realizar backups de la base de datos de Insight
++
+Se realiza automáticamente un backup de la base de datos de Insight cuando se realiza una actualización sin movimiento. Se recomienda realizar una copia de seguridad de la base de datos antes de la actualización y colocar la copia de seguridad en una ubicación distinta a la del servidor de Insight. Durante el proceso de actualización, Insight no recopila datos nuevos. Para minimizar la cantidad de datos que no se recopilan, debe iniciar el backup de base de datos en una hora o dos del tiempo de actualización planificado.
+
+* Realice una copia de seguridad de la configuración de seguridad almacén de datos y Unidad de adquisición remota si la configuración se ha cambiado de la configuración predeterminada.
++
+La configuración de seguridad no predeterminada se debe restaurar en el servidor de depósito de datos y RAU una vez finalizada la actualización y antes de restaurar la base de datos de almacén de datos en el sistema.
+
+* Realizar una copia de seguridad de los informes personalizados de Data Warehouse
++
+Al realizar una copia de seguridad de la base de datos de Data Warehouse, se incluyen informes personalizados. El archivo de copia de seguridad se crea en el servidor de almacén de datos. Se recomienda realizar una copia de seguridad de los informes personalizados en una ubicación distinta a la del servidor de almacén de datos.
+
+* Desinstalar el almacén de datos y el software de la unidad de adquisición remota, si procede
++
+El servidor de Insight tiene una actualización in situ; no es necesario desinstalar el software. La actualización in situ realiza backups de la base de datos, desinstala el software, instala la nueva versión y, a continuación, restaura la base de datos.
+
+* Actualización del software en el servidor de Insight, el almacén de datos y las unidades de adquisición remota
++
+Todas las licencias anteriormente aplicadas permanecen en el registro; no tiene que volver a aplicar estas licencias.
+
+* Completar las tareas posteriores a la actualización
+

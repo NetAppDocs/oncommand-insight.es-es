@@ -1,0 +1,52 @@
+---
+permalink: config-admin/what-s-included-in-the-backup.html 
+sidebar: sidebar 
+keywords:  
+summary: Pueden utilizarse backups semanales y bajo demanda para solución de problemas o migración. 
+---
+= Lo que se incluye en el respaldo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Pueden utilizarse backups semanales y bajo demanda para solución de problemas o migración.
+
+El backup semanal o bajo demanda incluye lo siguiente:
+
+* Datos de inventario
+* Datos de rendimiento (si se seleccionan para incluir en el backup)
+* Orígenes de datos y configuración de orígenes de datos
+* Paquetes de integración
+* Unidades de adquisición remota
+* Unidades de monitorización Ethernet
+* Configuración de ASUP/proxy
+* Configuración de ubicación de copia de seguridad
+* Configuración de ubicación de archivo
+* Configuración de notificaciones
+* Puntuaciones y dispositivos de detección de anomalías
+* Configuración de la aplicación de detección de anomalías
+* Usuarios
+* Políticas de rendimiento
+* Entidades y aplicaciones empresariales
+* Reglas y configuración de resolución del dispositivo
+* Paneles y widgets
+* Widgets y paneles de páginas de activos personalizados
+* Consultas
+* Anotaciones y reglas de anotación
+
+
+La copia de seguridad semanal no incluye:
+
+* Configuración de herramientas de seguridad / información del almacén (copia de seguridad mediante un proceso CLI independiente)
+* Registros (se pueden guardar en un archivo .zip bajo demanda)
+* Datos de rendimiento (si no se seleccionan para incluir en el backup)
+* Licencias
+
+
+[NOTE]
+====
+Si decide incluir datos de rendimiento en el backup, se realizará un backup de los siete días más recientes de datos. Los datos restantes estarán en el archivo si tiene activada esa función.
+
+====

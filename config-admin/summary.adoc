@@ -1,0 +1,18 @@
+---
+permalink: config-admin/summary.html 
+sidebar: sidebar 
+keywords:  
+summary: La sección Resumen de una página de activos muestra un resumen de la información sobre el activo en particular y muestra los problemas relacionados con el activo, indicados por un círculo rojo, con hipervínculos a información adicional sobre activos relacionados y a cualquier política de rendimiento asignada al activo. 
+---
+= Resumen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La sección Resumen de una página de activos muestra un resumen de la información sobre el activo en particular y muestra los problemas relacionados con el activo, indicados por un círculo rojo, con hipervínculos a información adicional sobre activos relacionados y a cualquier política de rendimiento asignada al activo.
+
+En el siguiente ejemplo, se muestran algunos de los tipos de información disponibles en la sección Summary de una página de activos para una máquina virtual. Cualquier elemento con un círculo rojo fijo junto a él indica posibles problemas con el entorno supervisado.
+
+image::../media/summary-section.gif[sección de resumen]

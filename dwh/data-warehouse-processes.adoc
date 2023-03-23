@@ -1,0 +1,28 @@
+---
+permalink: dwh/data-warehouse-processes.html 
+sidebar: sidebar 
+keywords:  
+summary: Data Warehouse realiza muchos tipos de procesos. 
+---
+= Procesos de almacén de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Data Warehouse realiza muchos tipos de procesos.
+
+* *Proceso ETL*
++
+El proceso extraer transformación y carga (ETL) recupera datos de varias bases de datos OnCommand Insight, transforma los datos y los guarda en el data Mart. El proceso de compilación del almacén de datos es un proceso ETL.
+
+* *Trabajos*
++
+El almacén de datos realiza e informa sobre trabajos como los siguientes: Inventario, dimensiones, capacidad, capacidad de puerto, capacidad de la máquina virtual, utilización del sistema de archivos, rendimiento, eficiencia de la capacidad, licencias, compilación del historial, Anotaciones dinámicas, eliminación de conectores, compilación omitida, opción ASUP y tareas de mantenimiento.
+
+* *Proceso de consolidación*
++
+Data Warehouse admite la consolidación de varios servidores OnCommand Insight en la misma base de datos de Data Warehouse. En muchas configuraciones puede suceder que el mismo objeto se informa desde varios conectores (es decir, el mismo switch existe en dos instancias de OnCommand Insight). En ese caso, el almacén de datos consolida los múltiples objetos en uno (se elige un conector principal y los datos del objeto se toman únicamente de ese conector).
+
+

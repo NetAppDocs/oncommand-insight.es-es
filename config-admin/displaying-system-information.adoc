@@ -1,0 +1,27 @@
+---
+permalink: config-admin/displaying-system-information.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede mostrar la información de configuración de IP de Microsoft Windows acerca del sistema en el que se ha implementado OnCommand Insight Server. 
+---
+= Mostrar información del sistema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede mostrar la información de configuración de IP de Microsoft Windows acerca del sistema en el que se ha implementado OnCommand Insight Server.
+
+
+
+== Pasos
+
+. En la barra de herramientas Insight, haga clic en *Admin* y seleccione *solución de problemas*.
+. En la parte inferior de la página del área otras tareas, haga clic en el vínculo *solución avanzada de problemas*.
+. En la página solución de problemas avanzada, haga clic en la ficha *Informes*.
+. Haga clic en *Información del sistema*.
++
+La configuración IP de Windows incluye información como el nombre de host, DNS, dirección IP, máscara de subred, información del sistema operativo, memoria, dispositivo de inicio y nombre de conexión.
+
+

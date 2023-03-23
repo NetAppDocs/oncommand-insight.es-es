@@ -1,0 +1,23 @@
+---
+permalink: dwh/generating-a-manual-data-warehouse-build.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Después de forzar una actualización de anotaciones \(ejecutando datos transitorios\) en OnCommand Insight, debe iniciar una compilación de almacén de datos. Puede esperar a la siguiente generación programada o iniciar una generación ahora.' 
+---
+= Generar una compilación manual del almacén de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de forzar una actualización de anotaciones (ejecutando datos transitorios) en OnCommand Insight, debe iniciar una compilación de almacén de datos. Puede esperar a la siguiente generación programada o iniciar una generación ahora.
+
+
+
+== Pasos
+
+. Inicie sesión como administrador en el portal del almacén de datos en `+https://hostname/dwh+`, donde `hostname` Es el nombre del sistema en el que está instalado el almacén de datos de OnCommand Insight.
+. En el panel de navegación de la izquierda, haga clic en *Programación*.
+. Haga clic en *Crear ahora*.
+

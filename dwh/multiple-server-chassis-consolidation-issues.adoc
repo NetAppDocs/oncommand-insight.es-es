@@ -1,0 +1,14 @@
+---
+permalink: dwh/multiple-server-chassis-consolidation-issues.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede ver los conectores que informan sobre hosts y adaptadores y switches SAN y matrices de almacenamiento. También puede ver los diferentes conectores que informan sobre un objeto e identificar el conector principal, que es el conector elegido para el objeto. 
+---
+= Varios problemas de consolidación del chasis del servidor
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede ver los conectores que informan sobre hosts y adaptadores y switches SAN y matrices de almacenamiento. También puede ver los diferentes conectores que informan sobre un objeto e identificar el conector principal, que es el conector elegido para el objeto.

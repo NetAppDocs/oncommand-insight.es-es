@@ -1,0 +1,52 @@
+---
+permalink: dwh/importing-user-defined-annotations-into-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: Después de forzar una actualización de anotaciones en OnCommand Insight, debe seleccionar las anotaciones que desea en el almacén de datos e iniciar una compilación del almacén de datos. Puede esperar a la siguiente generación programada o iniciar una generación ahora. 
+---
+= Importación de anotaciones definidas por el usuario en el almacén de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de forzar una actualización de anotaciones en OnCommand Insight, debe seleccionar las anotaciones que desea en el almacén de datos e iniciar una compilación del almacén de datos. Puede esperar a la siguiente generación programada o iniciar una generación ahora.
+
+
+
+== Pasos
+
+. Inicie sesión como administrador en el portal del almacén de datos en `+https://hostname/dwh+`, donde `hostname` Es el nombre del sistema en el que está instalado el almacén de datos de OnCommand Insight.
+. En el panel de navegación de la izquierda, haga clic en *Anotaciones*.
++
+image::../media/oci-dwh-admin-annotations-gif.gif[Anotaciones DWH]
+
++
+La lista muestra una fila para cada tipo de anotación y un objeto de destino al que se puede asignar la anotación. Una Marca de verificación en la columna Publicado indica que la anotación ya se ha seleccionado para el objeto de destino concreto y que ya está disponible a través de los data Warehouse marts.
+
+. Haga clic en *Editar* para editar cómo se importarán las anotaciones desde OnCommand Insight.
++
+image::../media/oci-dwh-admin-annotations-edit-gif.gif[DWH Anotaciones Modificar]
+
+. Para editar el proceso de anotación, haga lo siguiente:
++
+** Seleccione *Publicado* para agregar anotaciones recuperadas de OnCommand Insight a la base de datos del almacén de datos. Haga clic en *todo* para seleccionar todas las anotaciones de todos los objetos. Haga clic en *Ninguno* para asegurarse de que no se han seleccionado todas las opciones.
++
+[NOTE]
+====
+Anule la selección de esta opción para eliminar la columna de anotación de la tabla de inventario del objeto específico y de las marcas de datos asociadas. Si alguno de los informes personalizados utiliza datos de anotaciones, los informes no se ejecutan correctamente.
+
+====
+** Marque *Init con Current* para inicializar los datos históricos en las tablas de dimensiones de Data Warehouse con el valor de anotación actual. Haga clic en *todo* para seleccionar todas las anotaciones de todos los objetos. Haga clic en *Ninguno* para asegurarse de que no se han seleccionado todas las opciones. Esta casilla de verificación se desactiva después de que se publique una anotación; la casilla de verificación está activada para las anotaciones que no se hayan publicado. Por ejemplo, si un host se anota con el tipo de anotación «'floor'» y obtiene el valor «'1'», y hay 3 filas para ese host en la tabla host_dimensión, al seleccionar *Init with Current* se asocia el valor «'1'» en la columna «'floor'» para las 3 filas de la tabla host_dimensión. Si no se selecciona *Init con Current*, sólo la última fila de ese host tendrá el valor "'1'" en la columna del piso.
+
+
+. Haga clic en *Guardar*.
++
+Aparece un mensaje de advertencia que indica que esto provocará cambios en la estructura de los datos o pérdida de datos, si va a eliminar anotaciones.
+
+. Para continuar, haga clic en *Sí*.
++
+Data Warehouse inicia un trabajo de anotaciones asíncronas que aplica los cambios solicitados. Puede ver el trabajo en la página Jobs. También puede ver los cambios en el esquema de base de datos de Data Warehouse.
+
+

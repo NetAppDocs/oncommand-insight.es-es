@@ -1,0 +1,16 @@
+---
+permalink: config-admin/vendor-specific-data-source-reference.html 
+sidebar: sidebar 
+keywords:  
+summary: Los detalles de la configuración varían según el proveedor y modelo del origen de datos que se agrega. 
+---
+= Referencia de origen de datos específica del proveedor
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los detalles de la configuración varían según el proveedor y modelo del origen de datos que se agrega.
+
+Si el origen de datos de un proveedor requiere instrucciones de configuración de Insight avanzadas, como requisitos especiales y comandos específicos, esa información se incluye en esta sección.

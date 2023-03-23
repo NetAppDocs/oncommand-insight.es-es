@@ -1,0 +1,30 @@
+---
+permalink: howto/setting-up-snmp-for-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: Insight puede enviar notificaciones SNMP cuando se produzcan eventos de desencadenamiento, como infracciones o cuando se superen los umbrales de los orígenes de datos. 
+---
+= Configuración de SNMP para las notificaciones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight puede enviar notificaciones SNMP cuando se produzcan eventos de desencadenamiento, como infracciones o cuando se superen los umbrales de los orígenes de datos.
+
+
+
+== Acerca de esta tarea
+
+Siga estos pasos básicos para configurar SNMP en Insight:
+
+
+
+== Pasos
+
+. Haga clic en *Admin* > *Notificaciones* y vaya a la sección *SNMP*.
+. Haga clic en *acciones* y seleccione *Agregar fuente de captura*.
+. En el cuadro de diálogo *Agregar destinatarios de capturas SNMP*, introduzca la dirección *IP* y *Puerto* a los que desea enviar mensajes de captura SNMP. Para *cadena de comunidad*, utilice "'public'" para los mensajes de captura SNMP.
+. Haga clic en *Guardar*.
+

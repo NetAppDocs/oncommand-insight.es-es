@@ -1,0 +1,70 @@
+---
+permalink: config-admin/client-configuration-for-smart-card-and-certificate-login.html 
+sidebar: sidebar 
+keywords:  
+summary: Las máquinas cliente requieren middleware y modificaciones a los exploradores para permitir el uso de tarjetas inteligentes y para el inicio de sesión de certificados. Los clientes que ya utilizan tarjetas inteligentes no deben requerir modificaciones adicionales en sus equipos cliente. 
+---
+= Configuración de un cliente para que admita el inicio de sesión de tarjeta inteligente y certificado
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las máquinas cliente requieren middleware y modificaciones a los exploradores para permitir el uso de tarjetas inteligentes y para el inicio de sesión de certificados. Los clientes que ya utilizan tarjetas inteligentes no deben requerir modificaciones adicionales en sus equipos cliente.
+
+
+
+== Antes de empezar
+
+[NOTE]
+====
+Para obtener las instrucciones más actualizadas del CAC y del certificado, consulte los siguientes artículos de la base de conocimientos (se requiere inicio de sesión de asistencia técnica):
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight["Cómo configurar la autenticación de la tarjeta de acceso común (CAC) para OnCommand Insight"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_configure_Common_Access_Card_(CAC)_authentication_for_NetApp_OnCommand_Insight_DataWarehouse["Cómo configurar la autenticación de la tarjeta de acceso común (CAC) para el almacén de datos de OnCommand Insight"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_and_import_a_Certificate_Authority_(CA)_signed_certificate_into_OCI_and_DWH_7.3.X["Cómo crear e importar un certificado firmado de entidad de certificación (CA) en OnComand Insight y almacén de datos OnCommand Insight 7.3.x."]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_create_a_Self_Signed_Certificate_within_OnCommand_Insight_7.3.X_installed_on_a_Windows_Host["Cómo crear un certificado autofirmado en OnCommand Insight 7.3.X instalado en un host de Windows"]
+* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_import_a_Cognos_Certificate_Authority_(CA)_signed_certificate_into_DWH_7.3.3_and_later["Cómo importar un certificado firmado por Cognos Certificate Authority (CA) en OnCommand DataWarehouse 7.3.3 y posterior"]
+
+
+====
+
+
+== Acerca de esta tarea
+
+A continuación se enumeran los requisitos comunes de configuración del cliente:
+
+* Instalación de Smart Card middleware, como ActivClient (consulte http://militarycac.com/activclient.htm)[]
+* Modificación del explorador de IE (consulte http://militarycac.com/files/Making_AKO_work_with_Internet_Explorer_color.pdf)[]
+* Modificación del navegador Firefox (consulte https://militarycac.com/firefox2.htm)[]
+
+
+Entre los pasos adicionales de configuración se incluyen los siguientes:
+
+
+
+== Pasos
+
+. Desactive las ventanas emergentes de diálogo innecesarias al iniciar el cliente Java:
++
+.. Abra el panel de control "'Java'".
+.. Seleccione la ficha «'Avanzado'».
+.. Seleccione "'Configuración avanzada de seguridad'".
+.. Desactive la opción "'usar certificados y claves en el almacén de claves del navegador'".
+
+
+. Importar certificados de software a los certificados personales de un usuario mediante el navegador Chrome:
++
+.. Desplácese hasta «'Configuración avanzada».
+.. Seleccione «certificados de antigüedad».
+.. Seleccione la ficha «'certificados personales»».
+.. Seleccione "'Importar...'".
+.. Seleccione el archivo .p12.
+.. Complete el asistente; asegúrese de introducir el campo de contraseña con la contraseña que se utilizó para crear el certificado.
+
+
++
+Es necesario realizar pasos similares para configurar los exploradores Internet Explorer y Firefox.
+
+

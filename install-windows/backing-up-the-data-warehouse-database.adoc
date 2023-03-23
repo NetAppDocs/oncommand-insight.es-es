@@ -1,0 +1,262 @@
+---
+permalink: install-windows/backing-up-the-data-warehouse-database.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede realizar una copia de seguridad de la base de datos de Data Warehouse, que también incluye una copia de seguridad de Cognos, en un archivo y, posteriormente, restaurarla mediante el portal Data Warehouse. Dicha copia de seguridad le permite migrar a un servidor de Data Warehouse diferente o actualizar a una nueva versión de Data Warehouse. 
+---
+= Copia de seguridad de la base de datos del almacén de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede realizar una copia de seguridad de la base de datos de Data Warehouse, que también incluye una copia de seguridad de Cognos, en un archivo y, posteriormente, restaurarla mediante el portal Data Warehouse. Dicha copia de seguridad le permite migrar a un servidor de Data Warehouse diferente o actualizar a una nueva versión de Data Warehouse.
+
+
+
+== Pasos
+
+. Inicie sesión en el portal del almacén de datos en `+https://fqdn/dwh+`.
+. En el panel de navegación de la izquierda, seleccione *copia de seguridad/Restaurar*.
+. Haga clic en *copia de seguridad* y seleccione su configuración de copia de seguridad:
++
+.. Todos los Datamarts excepto Performance Datamart
+.. Todos los Datamarts
+
+
++
+Esta operación puede tardar 30 minutos o más.
+
++
++ almacén de datos crea un archivo de copia de seguridad y muestra su nombre.
+
+. Haga clic con el botón derecho del ratón en el archivo de copia de seguridad y guárdelo en la ubicación que desee.
++
+Puede que no desee cambiar el nombre del archivo; sin embargo, debe almacenar el archivo fuera de la ruta de instalación del almacén de datos.
+
++
+El archivo de copia de seguridad de Data Warehouse incluye MySQL de la instancia DWH; esquemas personalizados (MySQL DBS) y tablas; configuración LDAP; los orígenes de datos que conectan Cognos a la base de datos MySQL (no los orígenes de datos que conectan el servidor Insight a los dispositivos para adquirir datos); importar y exportar tareas que importaron o exportaron informes; informar de funciones de seguridad, grupos y espacios de nombres; cuentas de usuario; Cualquier informe modificado del Portal de informes y cualquier informe personalizado, independientemente del lugar donde se almacenen, incluso en el directorio Mis carpetas. No se realiza una copia de seguridad de los parámetros de configuración del sistema Cognos, como la configuración del servidor SMTP y la configuración de memoria personalizada Cognos.
+
++
+Los esquemas predeterminados en los que se realiza una copia de seguridad de las tablas personalizadas incluyen los siguientes:
+
++
+|===
+
+
+ a| 
+dwh_capacity
+
+
+
+ a| 
+dwh_capacity_staging
+
+
+
+ a| 
+dwh_dimensions
+
+
+
+ a| 
+dwh_fs_util
+
+
+
+ a| 
+dwh_inventory
+
+
+
+ a| 
+dwh_inventory_staging
+
+
+
+ a| 
+dwh_inventory_transitorio
+
+
+
+ a| 
+dwh_management
+
+
+
+ a| 
+dwh_performance
+
+
+
+ a| 
+dwh_performance_staging
+
+
+
+ a| 
+dwh_ports
+
+
+
+ a| 
+dwh_reports
+
+
+
+ a| 
+dwh_sa_staging
+
+
+
+ a| 
+
+
+
+ a| 
+
+
+
+ a| 
+
+|===
++
+Entre los esquemas en los que se excluyen las tablas personalizadas de la copia de seguridad se incluyen los siguientes:
+
++
+|===
+
+
+ a| 
+esquema_de_información
+
+
+
+ a| 
+adquisición
+
+
+
+ a| 
+modelo_cloud
+
+
+
+ a| 
+datos_host
+
+
+
+ a| 
+innodb
+
+
+
+ a| 
+inventario
+
+
+
+ a| 
+inventory_private
+
+
+
+ a| 
+hora_inventario
+
+
+
+ a| 
+registros
+
+
+
+ a| 
+gestión
+
+
+
+ a| 
+mysql
+
+
+
+ a| 
+nas
+
+
+
+ a| 
+rendimiento
+
+
+
+ a| 
+esquema_rendimiento
+
+
+
+ a| 
+performance_views
+
+
+
+ a| 
+SANscreen
+
+
+
+ a| 
+frote
+
+
+
+ a| 
+garantía de servicio
+
+
+
+ a| 
+prueba
+
+
+
+ a| 
+tmp
+
+
+
+ a| 
+banco de trabajo
+
+
+
+ a| 
+
+
+
+ a| 
+
+
+
+ a| 
+
+|===
++
+En cualquier backup iniciado manualmente, un `.zip` se crea un archivo que contiene los siguientes archivos:
+
++
+** Un backup diario `.zip` Archivo, que contiene definiciones de informe de Cognos
+** Una copia de seguridad de informes `.zip` Archivo, que contiene todos los informes en Cognos, incluidos los del directorio Mis carpetas
+** Un archivo de copia de seguridad de la base de datos de Data Warehouse además de copias de seguridad manuales, que puede realizar en cualquier momento, Cognos crea una copia de seguridad diaria (generada automáticamente cada día a un archivo llamado `DailyBackup.zip`) que incluye las definiciones de informe. La copia de seguridad diaria incluye las carpetas y paquetes principales que se suministran con el producto. El directorio Mis carpetas y cualquier directorio que cree fuera de las carpetas superiores del producto no están incluidos en la copia de seguridad de Cognos.
+
+
++
+[NOTE]
+====
+Debido a la forma en que Insight nombra los archivos en `.zip` archivo, algunos programas de descompresión muestran que el archivo está vacío al abrirse. Siempre que la `.zip` el archivo tiene un tamaño mayor que 0 y no termina con un `.bad` extensión, la `.zip` el archivo es válido. Puede abrir el archivo con otro programa de descompresión como 7-Zip o WinZip®.
+
+====
+

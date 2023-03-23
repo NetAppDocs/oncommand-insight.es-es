@@ -1,0 +1,53 @@
+---
+permalink: config-admin/setting-up-and-managing-user-accounts.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Las cuentas de usuario, la autenticación de usuario y la autorización de usuario se pueden definir y administrar de dos formas: En el servidor LDAP \(Lightweight Directory Access Protocol\) de Microsoft Active Directory \(Versión 2 ó 3\) o en una base de datos de usuario interna de OnCommand Insight. Disponer de una cuenta de usuario diferente para cada persona proporciona una forma de controlar los derechos de acceso, las preferencias individuales y la responsabilidad. Utilice una cuenta con privilegios de administrador para esta operación.' 
+---
+= Configurar y gestionar cuentas de usuario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las cuentas de usuario, la autenticación de usuarios y la autorización de usuarios se pueden definir y gestionar de dos formas: En el servidor LDAP (protocolo ligero de acceso a directorios) de Microsoft Active Directory (versión 2 o 3) o en una base de datos de usuarios interna de OnCommand Insight. Disponer de una cuenta de usuario diferente para cada persona proporciona una forma de controlar los derechos de acceso, las preferencias individuales y la responsabilidad. Utilice una cuenta con privilegios de administrador para esta operación.
+
+
+
+== Antes de empezar
+
+Debe haber completado las siguientes tareas:
+
+* Instale sus licencias de OnCommand Insight.
+* Asigne un nombre de usuario único para cada usuario.
+* Determine qué contraseñas usar.
+* Asigne los roles de usuario correctos.
+
+
+[NOTE]
+====
+Las prácticas recomendadas de seguridad exigen que los administradores configuren el sistema operativo host para evitar el inicio de sesión interactivo de usuarios que no son administradores o estándar.
+
+====
+
+
+== Pasos
+
+. Abra Insight en su navegador.
+. En la barra de herramientas Insight, haga clic en *Admin*.
+. Haga clic en *Configuración*.
+. Seleccione la ficha **Users**.
+. Para crear un nuevo usuario, haga clic en el botón *acciones* y seleccione *Agregar usuario*.
++
+Introduzca la dirección *Nombre*, *Contraseña*, *correo electrónico* y seleccione uno de los usuarios *roles* como Administrador, Usuario o Invitado.
+
+. Para cambiar la información de un usuario, seleccione el usuario en la lista y haga clic en el símbolo *Editar cuenta de usuario* situado a la derecha de la descripción del usuario.
+. Para eliminar un usuario del sistema OnCommand Insight, seleccione el usuario de la lista y haga clic en *Eliminar cuenta de usuario* a la derecha de la descripción del usuario.
+
+
+
+
+== Resultados
+
+Cuando un usuario inicia sesión en OnCommand Insight, el servidor intenta primero la autenticación a través de LDAP, si LDAP está habilitado. Si OnCommand Insight no puede localizar al usuario en el servidor LDAP, busca en la base de datos local de Insight.

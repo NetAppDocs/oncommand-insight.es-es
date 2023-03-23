@@ -1,0 +1,58 @@
+---
+permalink: howto/viewing-data-on-a-dashboard-how-to.html 
+sidebar: sidebar 
+keywords:  
+summary: Ahora que dispone de anotados los activos y tiene configuradas políticas de rendimiento para alertar de posibles infracciones, puede crear paneles para resaltar datos específicos a los que desea dirigirse. 
+---
+= Resaltar datos mediante paneles
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ahora que dispone de anotados los activos y tiene configuradas políticas de rendimiento para alertar de posibles infracciones, puede crear paneles para resaltar datos específicos a los que desea dirigirse.
+
+
+
+== Acerca de esta tarea
+
+En este ejemplo, proporcionaremos una vista de alto nivel de la creación de un panel mediante la creación de un panel con un único widget que destaque los datos de rendimiento de las máquinas virtuales. Puede agregar tantos widgets como necesite en un único panel y crear tantos paneles como necesite. Los widgets se pueden cambiar de tamaño y mover según se desee.
+
+Puede encontrar más información sobre Paneles y widgets en la documentación de OnCommand Insight.
+
+
+
+== Pasos
+
+. Inicie sesión en Insight como usuario con permisos administrativos.
+. En el menú *Paneles*, seleccione *+Nuevo panel*.
++
+Se abrirá la página Nuevo panel.
+
+. Práctica recomendada: Asigne un nombre a su panel y guárdelo en cuanto lo cree. Haga clic en el botón *Guardar* e introduzca un nombre único para el panel en el campo *Nombre*. Por ejemplo «'VM Performance Dashboard»». Haga clic en *Guardar*.
+. Si es necesario, deslice el interruptor *Edit* a "'on'" para activar el modo de edición. Esto le permite comenzar a agregar widgets al panel de control.
+. Haga clic en el botón *+Widgets* y seleccione *Tabla* para agregar un nuevo widget de tabla al panel.
++
+Se abrirá el cuadro de diálogo Editar widget.
+
+. En el campo Nombre, elimine "'Widget 1'" e introduzca "'Tabla de rendimiento de la máquina virtual'".
+. Haga clic en la lista desplegable de tipo de activo y cambie *almacenamiento* a *máquina virtual*.
++
+Los datos de la tabla cambian para mostrar todas las máquinas virtuales del entorno.
+
+. Para agregar columnas adicionales a la tabla, haga clic en *columnas*image:../media/column-picker-button.gif[""] Y seleccione las columnas deseadas, por ejemplo__Data Center__, _Storage name_ y _Tier_.puede ordenar la tabla por cualquiera de estas columnas.
+. Puede establecer filtros según sea necesario para resaltar los datos que le sean importantes para este panel. Por ejemplo, puede elegir mostrar sólo máquinas virtuales con anotación «'Tier 1 - SSD'». Haga clic en el botón "" + "junto a *filtro por* y seleccione__Tier____. Haga clic en *any* y escriba «'Tier 1 - SSD'». Haga clic en la image:../media/check-box-ok.gif[""] para guardar el filtro.
++
+La tabla muestra ahora sólo máquinas virtuales en el nivel «SSD».
+
+. Puede agrupar los resultados haciendo clic en el botón "" + "" situado junto a *Agrupar por* y seleccionando un campo por el que agrupar, como Data Center. La agrupación se aplica automáticamente a la tabla.
+. Cuando haya personalizado el widget a su satisfacción, haga clic en el botón *Guardar*.
++
+El widget de tabla se guarda en el panel.
+
+. Puede cambiar el tamaño del widget en el panel arrastrando la esquina inferior derecha.
+. Para añadir más widgets, haga clic en el botón *+Widget*. Cada widget se agrega al panel cuando se guarda.
+. Cuando haya realizado todos los cambios deseados, asegúrese de hacer clic en *Guardar* para guardar el panel de control.
+. Puede crear paneles adicionales para resaltar diferentes datos.
+

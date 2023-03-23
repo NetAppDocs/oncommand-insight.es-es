@@ -1,0 +1,20 @@
+---
+permalink: reporting/data-model-overview.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight proporciona varios modelos de datos para el desarrollo de informes. Cada modelo de datos es una agregación que resume los datos para que se puedan consultar y buscar. Por ejemplo, los informes sobre la planificación de la capacidad utilizan el modelo de datos de capacidad. 
+---
+= Información general de modelos de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight proporciona varios modelos de datos para el desarrollo de informes. Cada modelo de datos es una agregación que resume los datos para que se puedan consultar y buscar. Por ejemplo, los informes sobre la planificación de la capacidad utilizan el modelo de datos de capacidad.
+
+Los modelos de datos de generación de informes empresariales de OnCommand Insight proporcionan elementos de datos y relaciones interactivas entre elementos de datos que proporcionan vistas empresariales de los datos. Con los elementos de datos y las relaciones, puede crear informes con las herramientas de generación de informes de IBM Cognos Analytics recomendadas por NetApp.
+
+OnCommand Insight también proporciona data marts que se pueden usar para desarrollar sus propias consultas SQL. Hay una distinción entre estos marts de datos de consulta SQL y los modelos de datos utilizados en los informes. Los modelos de datos individuales de informes de OnCommand Insight utilizan el esquema de base de datos de OnCommand Insight subyacente que se proporciona en los data marts; sin embargo, los modelos de datos utilizan tablas adicionales y, a veces, elementos nuevos en las tablas. Por ejemplo, el modelo de datos incluye una tabla de hechos mensual de capacidad en el modelo de datos de capacidad de almacenamiento que se basa en la tabla de hechos de capacidad del esquema de base de datos y del Data Mart. El modelo de datos filtra los valores de la tabla de esquemas de la base de datos para mostrar sólo la información mensual.
+
+Otro ejemplo de diferencia entre el esquema de base de datos utilizado en los data marts y el modelo de datos se encuentra en la tabla de infracciones y en la columna Tipo de infracción. El modelo de datos traduce valores denominados mediante programación en la base de datos para que coincidan con el texto mostrado en la interfaz de usuario web de OnCommand Insight.

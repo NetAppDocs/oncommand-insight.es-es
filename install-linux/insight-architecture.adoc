@@ -1,0 +1,63 @@
+---
+permalink: install-linux/insight-architecture.html 
+sidebar: sidebar 
+keywords:  
+summary: Una instalación típica de OnCommand Insight incluye la adquisición de datos y el almacenamiento de datos con informes, todos a los que se puede acceder fácilmente desde una interfaz de usuario web. En entornos más seguros, la adquisición se puede realizar a través de una unidad de adquisición remota. 
+---
+= Arquitectura de Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una instalación típica de OnCommand Insight incluye la adquisición de datos y el almacenamiento de datos con informes, todos a los que se puede acceder fácilmente desde una interfaz de usuario web. En entornos más seguros, la adquisición se puede realizar a través de una unidad de adquisición remota.
+
+Los principales componentes de la arquitectura de Insight se muestran en el siguiente diagrama:
+
+image::../media/oci-architecture-2022.gif[arquitectura de oci 2022]
+
+* *Servidor OnCommand Insight*
++
+El servidor OnCommand Insight contiene los principales componentes de análisis y repositorio de datos. El servidor está creando continuamente una topología de extremo a extremo del entorno, analizando el entorno y generando alertas cuando se detecta un incidente o infracción.
+
+* *Adquisición*
++
+El motor de recogida Insight se basa en una o varias unidades de adquisición. Cada servidor de Insight contiene una unidad de adquisición local y puede admitir unidades de adquisición remotas. Cada unidad es un servicio que se ejecuta en la red a la que accede (mediante módulos llamados _orígenes de datos_) y recopila datos de los dispositivos del centro de datos. La información recopilada por las unidades de adquisición se envía al servidor para su análisis.
+
++
+El motor de recogida está diseñado para ser muy modular y con parches fáciles.
+
+* *API de integración*
++
+Una API permite la recopilación de datos de agentes externos. Los datos de integración se pueden ver en la interfaz de usuario web mediante consultas y widgets. Los paneles pueden contener datos de información "nativos" y datos de integración. Puede aplicar filtros, agrupaciones y agrupaciones a los datos de estos paneles.
+
+* *Web UI*
++
+La interfaz de usuario web HTML5 de Insight le permite configurar orígenes de datos y su entorno de supervisión, incluidas políticas, umbrales y alertas. A continuación, puede usar el panel de control de UIAsset y las páginas de activos de la Web para identificar y investigar posibles problemas. Puede crear paneles personalizados con una gran variedad de widgets, cada uno de los cuales ofrece una gran flexibilidad para visualizar, analizar y crear gráficos de sus datos.
+
+* *Detección de anomalías*
++
+Las anomalías son eventos de cambio de rendimiento en la infraestructura de aplicaciones que no se ajustan a patrones previamente observados y esperados. La detección de anomalías se dirige a la infraestructura que presta servicio a una aplicación, identificando los cambios en los patrones de procesamiento y los comportamientos. Estos patrones de procesamiento cíclicos incluyen «ebbs y flujos» históricos en un rendimiento de las cargas de trabajo durante las horas de funcionamiento empresarial y las operaciones no empresariales.
+
+* *Almacén de datos*
++
+El almacén de datos de OnCommand Insight es un repositorio centralizado que almacena datos de varios servidores de Insight y transforma los datos en un modelo de datos común y multidimensional para la consulta y el análisis.
+
++
+El almacén de datos de OnCommand Insight permite el acceso a una base de datos abierta compuesta por varios mercados de datos que le permiten generar informes personalizados de capacidad y rendimiento, como informes de pago por uso, informes de tendencias con datos históricos, análisis de consumo e informes de previsión.
+
++
+El almacén de datos consolida y prepara los datos para la generación de informes para una o varias instalaciones de Insight. Los datos incluyen historia, tendencias, inventario, pago por uso, presentación de presentación y datos para respaldar la planificación a largo plazo de la infraestructura del centro de datos.
+
+* * Cognos*
++
+Cognos es el motor de informes de Insight, una herramienta de inteligencia comercial de IBM que le permite ver informes predefinidos o crear informes personalizados. Los informes de Insight generan informes a partir de los datos del almacén de datos.
+
++
+[NOTE]
+====
+Si instala Insight en un servidor Linux, sólo puede utilizar Cognos si el almacén de datos está instalado en un servidor Windows. Para obtener información sobre la instalación del almacén de datos en Windows, consulte la _OnCommand Insight Installation Guide for Microsoft Windows_.
+
+====
+

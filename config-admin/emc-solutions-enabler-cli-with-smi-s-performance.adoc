@@ -1,0 +1,252 @@
+---
+permalink: config-admin/emc-solutions-enabler-cli-with-smi-s-performance.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight descubre las cabinas de almacenamiento Symmetrix mediante el uso de comandos sycli de Solutions facilitadora en combinación con un servidor de facilitadores de soluciones existente en su entorno. El servidor existente de Solution facilitadora tiene conectividad con la cabina de almacenamiento de Symmetrix mediante el acceso a volúmenes de gatekeeper. Se requieren permisos de administrador para acceder a este dispositivo. 
+---
+= Habilitador de soluciones EMC con fuente de datos de rendimiento SMI-S.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight descubre las cabinas de almacenamiento Symmetrix mediante el uso del habilitador de soluciones `symcli` Comandos junto con un servidor existente del capacitador de soluciones de su entorno. El servidor existente de Solution facilitadora tiene conectividad con la cabina de almacenamiento de Symmetrix mediante el acceso a volúmenes de gatekeeper. Se requieren permisos de administrador para acceder a este dispositivo.
+
+
+
+== Terminología
+
+OnCommand Insight adquiere la siguiente información de inventario de la fuente de datos del habilitador de soluciones de EMC. Para cada tipo de activo que adquiere Insight, se muestra la terminología más común utilizada en este activo. Al ver o solucionar problemas de este origen de datos, tenga en cuenta la siguiente terminología:
+
+|===
+
+
+| Plazo del proveedor/modelo | Insight plazo 
+
+
+ a| 
+Disco
+ a| 
+Disco
+
+
+
+ a| 
+Grupo de discos
+ a| 
+Grupo de discos
+
+
+
+ a| 
+Cabina de almacenamiento
+ a| 
+Reducida
+
+
+
+ a| 
+Director
+ a| 
+Nodo de almacenamiento
+
+
+
+ a| 
+Grupo de dispositivos, pool de recursos de almacenamiento (SRP)
+ a| 
+Pool de almacenamiento
+
+
+
+ a| 
+Dispositivo, TDev
+ a| 
+Volumen
+
+|===
+[NOTE]
+====
+Estos son sólo mapas terminológicos comunes y es posible que no representen todos los casos de este origen de datos.
+
+====
+
+
+== Requisitos
+
+Antes de configurar este origen de datos, debe asegurarse de que el servidor OnCommand Insight tiene conectividad TCP con el puerto 2707 del servidor existente del capacitador de soluciones. OnCommand Insight descubre todos los arreglos Symmetrix que son "'local'" de este servidor, como se ve en la salida "lista de DYcfg" de ese servidor.
+
+* El habilitador de soluciones de EMC (CLI) con la aplicación del proveedor SMI-S debe estar instalado y la versión debe coincidir o ser anterior a la versión que se ejecuta en el servidor de capacitadores de soluciones.
+* Un configurado correctamente `+{installdir}\EMC\SYMAPI\config\netcnfg+` el archivo es obligatorio. Este archivo define los nombres de servicio de los servidores de Solution facilitation, así como el método de acceso (SECURE / NOSECURE /ANY).
+* Si necesita una latencia de lectura/escritura a nivel de nodo de almacenamiento, SMI-S Provider debe comunicarse con una instancia en ejecución de UNISPHERE para la aplicación VMAX.
+* Permisos de administrador en el servidor del habilitador de soluciones (se)
+* Nombre de usuario y contraseña de sólo lectura para el software se
+* Requisitos DEL solutions facilitadora SERVER 6.5X:
++
+** Proveedor SMI-S 3.3.1 para SMIS-S V1.2 instalado
+** Después de la instalación, ejecute `\Program Files\EMC\SYMCLI\bin>stordaemon start storsrvd`
+
+
+* LA aplicación UNISPHERE para VMAX debe ejecutar y recopilar estadísticas para las cabinas de almacenamiento Symmetrix VMAX que se gestionan mediante la instalación del proveedor SMI-S
+* Validación de acceso: Verifique que el proveedor de SMI-S esté en ejecución: `telnet <se_server\> 5988`
+
+
+
+
+== Configuración
+
+[NOTE]
+====
+Si la autenticación de usuario de SMI-S no está habilitada, se ignoran los valores predeterminados en el origen de datos de OnCommand Insight.
+
+====
+El hecho de tener activado symauth en cabinas Symmetrix puede inhibir la capacidad de OnCommand Insight para descubrirlas. OnCommand Insight Acquisition se ejecuta como usuario DEL SISTEMA en el servidor de OnCommand Insight / Unidad de adquisición remota que se comunica con el servidor de facilitadores de soluciones. Si hostname\SYSTEM no tiene privilegios symauth, OnCommand Insight no puede detectar la matriz.
+
+La fuente de datos de la CLI de Symmetrix facilitadora de soluciones de EMC incluye soporte para la configuración de dispositivos para thin provisioning y Symmetrix Remote Data Facility (SRDF).
+
+Se proporcionan definiciones para los paquetes Fibre Channel y Switch Performance.
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Nombre del servicio
+ a| 
+Nombre de servicio como se especifica en el archivo netcnfg
+
+
+
+ a| 
+Ruta completa a la CLI
+ a| 
+Ruta completa a la CLI de Symmetrix
+
+|===
+
+
+== Configuración avanzada
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Intervalo de sondeo de inventario (mín.)
+ a| 
+Intervalo entre sondeos de inventario (predeterminado 40 minutos)
+
+
+
+ a| 
+Elija "excluir" o "incluir" para especificar una lista
+ a| 
+Especifique si desea incluir o excluir la lista de matrices a continuación al recopilar datos
+
+
+
+ a| 
+Excluir dispositivos de inventario
+ a| 
+Lista separada por comas de los ID de dispositivo que se van a incluir o excluir
+
+
+
+ a| 
+Almacenamiento en caché de conexión
+ a| 
+Elija el método de almacenamiento en caché de conexión:
+
+* LOCAL significa que el servicio de adquisición de OnCommand Insight se está ejecutando en el servidor de Solution facilitadora, que tiene conectividad Fibre Channel con los arreglos de Symmetrix que desea detectar y tiene acceso a volúmenes de gatekeeper. Esto puede verse en algunas configuraciones de la unidad de adquisición remota (RAU).
+* REMOTE_CACHED es el valor predeterminado y se debe utilizar en la mayoría de los casos. De este modo, se utiliza la configuración del archivo NETTNFG para conectar mediante IP con el servidor Solutions facilitadora, que debe tener conectividad Fibre Channel con los arreglos Symmetrix que busca detectar y tener acceso a los volúmenes de Gatekeeper.
+* Si las opciones REMOTE_CACHE hacen que los comandos de la CLI fallen, utilice la opción REMOTE. Tenga en cuenta que ralentizará el proceso de adquisición (posiblemente a horas o incluso días en casos extremos). La configuración del archivo NETTNFG se sigue utilizando para una conexión IP con el servidor Solutions facilitadora que tenga conectividad Fibre Channel con los arreglos Symmetrix que se van a detectar.
+
+
+[NOTE]
+====
+Esta configuración no cambia el comportamiento de OnCommand Insight con respecto a las matrices enumeradas COMO REMOTAS mediante la salida "symcfg list". OnCommand Insight recopila datos sólo en los dispositivos que se muestran COMO LOCALES mediante este comando.
+
+====
+
+
+ a| 
+Tiempo de espera de la CLI (s)
+ a| 
+Tiempo de espera del proceso de la CLI (7200 segundos predeterminados)
+
+
+
+ a| 
+IP DEL HOST DE SMI-S.
+ a| 
+Dirección IP del host del proveedor SMI-S.
+
+
+
+ a| 
+Puerto SMI-S.
+ a| 
+Puerto que utiliza el host del proveedor SMI-S.
+
+
+
+ a| 
+Protocolo
+ a| 
+Protocolo utilizado para conectar con el proveedor SMI-S.
+
+
+
+ a| 
+Espacio de nombres SMI-S.
+ a| 
+Espacio de nombres de interoperabilidad que el proveedor SMI-S está configurado para utilizar
+
+
+
+ a| 
+Nombre de usuario de SMI-S.
+ a| 
+Nombre de usuario para el host del proveedor de SMI-S.
+
+
+
+ a| 
+Contraseña SMI-S.
+ a| 
+Nombre de usuario para el host del proveedor de SMI-S.
+
+
+
+ a| 
+Intervalo de sondeo de rendimiento (s)
+ a| 
+Intervalo entre sondeos de rendimiento (predeterminado 1000 segundos)
+
+
+
+ a| 
+Tipo de filtro de rendimiento
+ a| 
+Especifique si desea incluir o excluir la siguiente lista de matrices al recopilar datos de rendimiento
+
+
+
+ a| 
+Lista de dispositivos de filtro de rendimiento
+ a| 
+Lista separada por comas de los ID de dispositivo que se van a incluir o excluir
+
+
+
+ a| 
+Intervalo de sondeo de RPO (s)
+ a| 
+Intervalo entre sondeos RPO (predeterminado 300 segundos)
+
+|===

@@ -1,0 +1,16 @@
+---
+permalink: install-windows/missing-licenses.html 
+sidebar: sidebar 
+keywords:  
+summary: Se necesitan diferentes licencias para distintas funcionalidades de OnCommand Insight. Lo que se muestra en OnCommand Insight está controlado por las licencias instaladas. Consulte la sección licencias de OnCommand Insight para obtener información sobre las funcionalidades controladas por cada licencia. 
+---
+= Faltan licencias
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se necesitan diferentes licencias para distintas funcionalidades de OnCommand Insight. Lo que se muestra en OnCommand Insight está controlado por las licencias instaladas. Consulte la sección licencias de OnCommand Insight para obtener información sobre las funcionalidades controladas por cada licencia.
+
+Consulte la sección licencias de OnCommand Insight para obtener información sobre las funcionalidades controladas por cada licencia.

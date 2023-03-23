@@ -1,0 +1,84 @@
+---
+permalink: config-admin/configuring-the-number-of-hours-to-ignore-dynamic-data.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible configurar el número de horas durante las cuales OnCommand Insight ignora la actualización de datos dinámicos, como la capacidad utilizada. Si se utiliza el valor predeterminado de seis horas y no se producen cambios en la configuración, los informes no se actualizarán con datos dinámicos hasta después del número predeterminado de horas. Esta opción mejora el rendimiento porque esta opción desacelera las actualizaciones cuando sólo cambian los datos dinámicos. 
+---
+= Configuración del número de horas para ignorar datos dinámicos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible configurar el número de horas durante las cuales OnCommand Insight ignora la actualización de datos dinámicos, como la capacidad utilizada. Si se utiliza el valor predeterminado de seis horas y no se producen cambios en la configuración, los informes no se actualizarán con datos dinámicos hasta después del número predeterminado de horas. Esta opción mejora el rendimiento porque esta opción desacelera las actualizaciones cuando sólo cambian los datos dinámicos.
+
+
+
+== Acerca de esta tarea
+
+Si se establece un valor para esta opción, OnCommand Insight actualizará los datos dinámicos basándose en las siguientes reglas:
+
+* Si no se producen cambios de configuración, pero cambian los datos de capacidad, no se actualizarán los datos.
+* Los datos dinámicos (distintos de los cambios de configuración) sólo se actualizarán después del tiempo de espera especificado en esta opción.
+* Si se producen cambios en la configuración, se actualizan los datos dinámicos y de configuración.
+
+
+Los datos dinámicos afectados por esta opción incluyen lo siguiente:
+
+* Datos sobre infracciones de capacidad
+* Capacidad asignada y capacidad utilizada de los sistemas de archivos
+* Hipervisor
++
+** Capacidad utilizada de los discos virtuales
+** Capacidad utilizada de la máquina virtual
+
+
+* Volumen interno
++
+** Capacidad asignada de datos
+** Datos capacidad utilizada
+** Ahorro con la deduplicación
+** Hora de último acceso conocido
+** Última hora de snapshot
+** Otra capacidad utilizada
+** Número de copias Snapshot
+** Capacidad utilizada de Snapshot
+** Capacidad total utilizada
+
+
+* IP de iniciador de sesión iSCSI, ID de sesión de destino e ID de sesión del iniciador
+* La cuota de qtree utilizada la capacidad
+* Archivos de cuota usados y capacidad utilizada
+* Tecnología de eficiencia del almacenamiento, ganancia/pérdida, y posible ganancia/pérdida
+* Pool de almacenamiento
++
+** Datos capacidad utilizada
+** Ahorro con la deduplicación
+** Otra capacidad utilizada
+** Capacidad utilizada de Snapshot
+** Capacidad total utilizada
+
+
+* Volumen
++
+** Ahorro con la deduplicación
+** Hora de último acceso conocido
+** Capacidad utilizada
+
+
+
+
+
+
+== Pasos
+
+. En la barra de herramientas Insight, haga clic en *Admin* y seleccione *solución de problemas*.
+. En la parte inferior de la página del área otras tareas, haga clic en el vínculo *solución avanzada de problemas*.
+. Haga clic en la ficha *Configuración avanzada*, en la sección atributos dinámicos de adquisición, introduzca el número de horas que OnCommand Insight debe ignorar los datos dinámicos para los atributos dinámicos de adquisición.
+. Haga clic en *Guardar*.
+. (Opcional) para reiniciar la unidad de adquisición, haga clic en el enlace *Reiniciar unidad de adquisición*.
++
+Al volver a restaurar la unidad de adquisición local, se vuelven a cargar todas las vistas del origen de datos de OnCommand Insight. Este cambio se aplica durante la siguiente encuesta, por lo que no tiene que reiniciar la unidad de adquisición.
+
+

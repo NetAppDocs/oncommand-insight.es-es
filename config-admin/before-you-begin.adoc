@@ -1,0 +1,43 @@
+---
+permalink: config-admin/before-you-begin.html 
+sidebar: sidebar 
+keywords:  
+summary: Debe saber cómo se configura el entorno antes de definir las reglas para identificar dispositivos. Cuanto más conozca su entorno, más fácil será identificar los dispositivos. 
+---
+= Antes de empezar
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe saber cómo se configura el entorno antes de definir las reglas para identificar dispositivos. Cuanto más conozca su entorno, más fácil será identificar los dispositivos.
+
+Debe responder a preguntas similares a las siguientes para ayudarle a crear reglas precisas:
+
+* ¿Su entorno tiene estándares de nomenclatura para las zonas o hosts y qué porcentaje de estos son precisos?
+* ¿El entorno usa un alias del switch o un alias de almacenamiento y coincide con el nombre del host?
+* ¿Su entorno utiliza una herramienta SRM y puede utilizarla para identificar los nombres de host? ¿Qué cobertura ofrece el SRM?
+* ¿Con qué frecuencia cambian los esquemas de nomenclatura en su entorno?
+* ¿Ha habido alguna adquisición o fusión que haya introducido diferentes esquemas de nomenclatura?
+
+
+Después de analizar su entorno, debe ser capaz de identificar qué estándares de nomenclatura existen que puede esperar encontrar fiabilidad. La información recopilada puede representarse gráficamente en una figura similar a la siguiente:
+
+image::../media/ar-workflow-circles.gif[círculos de flujo de trabajo ar]
+
+En este ejemplo, el mayor número de dispositivos está representado de forma fiable por alias de almacenamiento. Las reglas que identifican hosts que usan alias de almacenamiento deben escribirse primero, las reglas que usan alias de switch deben escribirse Next y las últimas reglas creadas deben usar alias de zona. Debido a la superposición del uso de alias de zona y alias de switch, algunas reglas de alias de almacenamiento pueden identificar dispositivos adicionales, dejando menos reglas necesarias para los alias de zona y los alias de cambio.
+
+
+
+== Pasos para definir dispositivos en el entorno
+
+Por lo general, use un flujo de trabajo similar al siguiente para identificar los dispositivos en su entorno. La identificación es un proceso iterativo y podría requerir múltiples pasos de reglas de planificación y refinación.
+
+image::../media/ar-workflow-final.gif[flujo de trabajo ar final]
+
+[NOTE]
+====
+Si dispone de dispositivos no identificados (conocidos como "'desconocidos'" o genéricos) en su entorno y, a continuación, configura un origen de datos que identifica dichos dispositivos tras el sondeo, ya no se mostrarán ni contarán como dispositivos genéricos.
+
+====

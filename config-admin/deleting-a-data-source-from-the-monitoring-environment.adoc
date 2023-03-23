@@ -1,0 +1,29 @@
+---
+permalink: config-admin/deleting-a-data-source-from-the-monitoring-environment.html 
+sidebar: sidebar 
+keywords:  
+summary: Si ha eliminado un origen de datos del entorno, también debe eliminarlo del entorno de supervisión de OnCommand Insight. 
+---
+= Eliminar un origen de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si ha eliminado un origen de datos del entorno, también debe eliminarlo del entorno de supervisión de OnCommand Insight.
+
+
+
+== Pasos
+
+. En la barra de herramientas Insight, haga clic en *Admin*.
++
+Se abrirá la lista orígenes de datos.
+
+. Seleccione el origen de datos que desea eliminar.
+. Haga clic en el nombre del origen de datos vinculado.
+. Compruebe la información del origen de datos seleccionado en la página de resumen para asegurarse de que es el que desea eliminar.
+. Haga clic en *Eliminar*.
+. Haga clic en *Aceptar* para confirmar la operación.
+

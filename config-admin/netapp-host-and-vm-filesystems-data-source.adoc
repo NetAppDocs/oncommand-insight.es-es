@@ -1,0 +1,119 @@
+---
+permalink: config-admin/netapp-host-and-vm-filesystems-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede utilizar el origen de datos de sistemas de archivos de VM y host de NetApp para recuperar detalles del sistema de archivos y asignaciones de recursos de almacenamiento para todos los sistemas de archivos de host de Microsoft Windows y VM \(máquina virtual\) y para todos los equipos virtuales Linux admitidos \(los que se asignan virtualmente solo\) Existente en el servidor de Insight que se anota con el grupo de recursos informáticos \(CRG\) configurado.' 
+---
+= Origen de datos de sistemas de archivos de VM y host de NetApp
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar el origen de datos de sistemas de archivos de VM y host de NetApp para recuperar detalles del sistema de archivos y asignaciones de recursos de almacenamiento para todos los sistemas de archivos de hosts y máquinas virtuales (máquinas virtuales) de Microsoft Windows y para todos los equipos virtuales Linux compatibles (los que están virtualmente asignados solo) Existente en el servidor de Insight que se anota con el grupo de recursos informáticos (CRG) configurado.
+
+
+
+== Requisitos generales
+
+* Esta función debe adquirirse por separado.
++
+Si necesita ayuda, puede ponerse en contacto con su representante de Insight.
+
+* Debe consultar la matriz de compatibilidad de Insight para verificar que el sistema operativo de máquina virtual o host es compatible.
++
+Para verificar que se han creado los enlaces de los sistemas de archivos a los recursos de almacenamiento, compruebe que el tipo y la versión del proveedor de almacenamiento o de virtualización pertinentes informan sobre el volumen o los datos de identificación de discos virtuales necesarios.
+
+
+
+
+
+== Requisitos de Microsoft Windows
+
+* Este origen de datos utiliza estructuras de datos del Instrumental de administración de ventanas (WMI) para recuperar datos.
++
+Este servicio debe estar operativo y disponible de forma remota. En particular, el puerto 135 debe ser accesible y debe abrirse si está detrás de un firewall.
+
+* Los usuarios de dominio de Windows deben tener los permisos adecuados para tener acceso a las estructuras WMI.
+* Se requieren permisos de administrador.
+* Puertos TCP dinámicos asignados a 1024-65535 para Windows 2003 y versiones anteriores
+* Puertos 49152--65535 para Windows 2008
+
+
+[NOTE]
+====
+Como regla general, al intentar utilizar un firewall entre Insight, una AU y este origen de datos, debe consultar con su equipo de Microsoft para identificar los puertos que creen que serán necesarios.
+
+====
+
+
+== Requisitos de Linux
+
+* Este origen de datos utiliza una conexión de Secure Shell (SSH) para ejecutar comandos en máquinas virtuales Linux.
++
+El servicio SSH debe estar operativo y disponible de forma remota. En particular, el puerto 22 debe ser accesible y debe abrirse si está detrás de un firewall.
+
+* Los usuarios de SSH deben tener permisos sudo para ejecutar comandos de solo lectura en máquinas virtuales de Linux.
++
+Debe usar la misma contraseña para iniciar sesión en SSH y para responder a cualquier desafío de contraseña sudo.
+
+
+
+
+
+== Recomendaciones de uso
+
+* Debe anotar un grupo de hosts y máquinas virtuales que tengan credenciales de sistema operativo comunes utilizando la misma anotación Compute Resource Group.
++
+Cada grupo tiene una instancia de este origen de datos que descubre los detalles del sistema de archivos de dichos hosts y máquinas virtuales.
+
+* Si tiene una instancia de este origen de datos para la cual la tasa de éxito es baja (por ejemplo, OnCommand Insight está detectando detalles del sistema de archivos de solo 50 de 1000 hosts y máquinas virtuales de un grupo), Debería mover los hosts y las máquinas virtuales para las que la detección se realiza correctamente a un grupo de recursos de computación independiente.
+
+
+
+
+== Configuración
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Nombre de usuario
+ a| 
+Usuario del sistema operativo con derechos adecuados para recuperar datos del sistema de archivos para usuarios del sistema operativo Windows, debe incluir el prefijo de dominio.
+
+
+
+ a| 
+Contraseña
+ a| 
+Contraseña para el usuario del sistema operativo
+
+
+
+ a| 
+Grupo de recursos informáticos
+ a| 
+El valor de anotación utilizado para marcar máquinas virtuales y hosts para el origen de datos detecta sistemas de archivos.Un valor en blanco indica que el origen de datos detecta sistemas de archivos para todos los hosts y máquinas virtuales que no están anotados actualmente con ningún grupo de recursos de computación.
+
+|===
+
+
+== Configuración avanzada
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Intervalo de sondeo de inventario (min)
+ a| 
+Intervalo entre sondeos de inventario (predeterminado 360 minutos)
+
+|===

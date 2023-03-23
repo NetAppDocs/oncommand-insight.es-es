@@ -1,0 +1,56 @@
+---
+permalink: howto/preparing-aws-for-insight-collection.html 
+sidebar: sidebar 
+keywords:  
+summary: Su cuenta de AWS debe estar correctamente configurada para permitir a Insight recopilar datos de costes del cloud. 
+---
+= Preparar la recogida de datos de AWS para Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Su cuenta de AWS debe estar correctamente configurada para permitir a Insight recopilar datos de costes del cloud.
+
+
+
+== Acerca de esta tarea
+
+Los siguientes pasos se realizan a través de su cuenta de AWS. Consulte la documentación de Amazon para obtener más información: https://docs.aws.amazon.com["http://docs.aws.amazon.com"]. Si no está familiarizado con la configuración de una cuenta del cloud de AWS, póngase en contacto con su proveedor de cloud para obtener ayuda.
+
+[NOTE]
+====
+Estos pasos se proporcionan aquí como cortesía y se consideran correctos a partir del momento de la publicación. NetApp no garantiza lo correcto de estos pasos. Póngase en contacto con su proveedor de cloud o propietario de cuenta de AWS para obtener información o ayuda para configurar su cuenta de AWS.
+
+====
+Recomendación: Insight recomienda crear un usuario de IAM principal en la misma cuenta que posee el bloque de S3 donde se cargan los informes de facturación, y utilizarlo para configurar y recopilar los datos de facturación de AWS.
+
+Para configurar su cuenta de AWS y permitir que Insight recopile datos, realice los siguientes pasos:
+
+
+
+== Pasos
+
+. Inicie sesión en la cuenta de AWS como usuario de Identity Access Management (IAM). Para obtener una recopilación adecuada, inicie sesión en la cuenta IAM principal, a diferencia de una cuenta IAM de grupo.
+. Vaya a *Amazon S3* para crear su contenedor. Introduzca un nombre de bloque único y verifique la región correcta.
+. Active su Informe de costo y uso de Amazon. Consulte https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-reports-gettingstarted-turnonreports.html[] para obtener más información.
++
+.. Vaya a AWS **Panel de facturación y gestión de costos**y seleccione *Informes*.
+.. Haga clic en *Crear informe* e introduzca el nombre del informe. Para *Unidad de tiempo*, elija diariamente. Active la casilla para incluir *ID de recursos* y haga clic en *Siguiente*.
+.. Haga clic en el enlace *Sample Policy* de la página Seleccionar opciones de entrega. Copie el texto de la directiva de ejemplo del cuadro en el portapapeles. Haga clic en *Cerrar*.
+.. Vuelva al bloque S3 creado, haga clic en la ficha *permisos* y seleccione el botón *Política de bloque*.
+.. Pegue el texto de la directiva de ejemplo y sustitúyalo `<bucketname>` con su nombre de bloque real en cada línea que contenga lo siguiente: `"Resource": "arn:aws:s3:: <bucketname>"`. *Guardar* la política.
+.. Vuelva a la pantalla Create Report (Crear informe), introduzca su bloque de S3 y haga clic en el botón *Verify* (verificar). Haga clic en *Siguiente*.
+.. Compruebe su información y haga clic en *revisar y completar*.
+
+
+. Para que Insight recopile datos de AWS, debe conceder permisos. En el siguiente enlace se proporciona información sobre cómo otorgar permisos a *enumerar todos los cucharones* (Paso 4.1) y establecer permisos sobre los objetos de la carpeta (Paso 5.2): https://docs.aws.amazon.com/AmazonS3/latest/dev/walkthrough1.html[].
+. En la consola del IAM, vaya a *Directivas* y haga clic en *Crear política*.
+. Introduzca un nombre en el campo *Nombre de directiva* y haga clic en *Crear directiva* en la parte inferior.
+. En la consola del IAM, seleccione el usuario y, a continuación, seleccione *Agregar política en línea* en la parte inferior de la pantalla.
+. Haga clic en *Elija un servicio* y seleccione S3.
+. Vaya a la ficha *JSON*. Copie el texto de ejemplo JSON del paso 5.1.2.g del tutorial de AWS en el cuadro JSON.
+. Reemplace los campos _companket_ y _Development_ en JSON con la información de S3.
+. Haga clic en *revisar directiva* para revisar la configuración de su directiva.
+

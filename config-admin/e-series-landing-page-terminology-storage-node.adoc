@@ -1,0 +1,34 @@
+---
+permalink: config-admin/e-series-landing-page-terminology-storage-node.html 
+sidebar: sidebar 
+keywords:  
+summary: Términos que se aplican a objetos o referencias que puede encontrar en las páginas de destino de activos del nodo de almacenamiento E-Series de NetApp. 
+---
+= Nodo de almacenamiento E-Series
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Términos que se aplican a objetos o referencias que puede encontrar en las páginas de destino de activos del nodo de almacenamiento E-Series de NetApp.
+
+
+
+== Terminología del nodo de almacenamiento E-Series
+
+Los siguientes términos se aplican a objetos o referencias que puede encontrar en las páginas de destino de activos de pools de almacenamiento E-Series de NetApp. Muchos de estos términos también se aplican a otros recopiladores de datos.
+
+* Almacenamiento:- de qué cabina de almacenamiento forma parte este nodo. Obligatorio.
+* PARTNER de ALTA DISPONIBILIDAD: En las plataformas en las que un nodo se conmuta al nodo de respaldo uno y solo otro, normalmente se verá aquí.
+* Estado:- estado del nodo. Solo disponible cuando la matriz está lo suficientemente sana para ser inventariada por una fuente de datos.
+* Modelo -- nombre de modelo del nodo.
+* Versión: Nombre de versión del dispositivo.
+* Número de serie: El número de serie del nodo.
+* Memoria -- memoria base 2 si está disponible.
+* Utilización -- la utilización no está actualmente disponible para E-Series de NetApp.
+* IOPS: Calculado sumando todos los IOPS de los volúmenes que pertenecen exclusivamente a este nodo.
+* Latencia: Un número que representa la latencia del host o el tiempo de respuesta típicos de esta controladora. Las estadísticas calculan una media ponderada de IOPS de los volúmenes que pertenecen exclusivamente a este nodo.
+* Rendimiento: Número que representa el rendimiento impulsado por el host en esta controladora. Calculado sumando todo el rendimiento de los volúmenes que pertenecen exclusivamente a este nodo.
+* Procesadores -- número de CPU.
+

@@ -1,0 +1,51 @@
+---
+permalink: howto/servicenow-integration-python-middleware-setup.html 
+sidebar: sidebar 
+keywords:  
+summary: Ahora que Python y las bibliotecas necesarias están instaladas, puede configurar el conector de middleware para que se comunique con OnCommand Insight y ServiceNow. 
+---
+= Configuración del middleware Python
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Ahora que Python y las bibliotecas necesarias están instaladas, puede configurar el conector de middleware para que se comunique con OnCommand Insight y ServiceNow.
+
+
+
+== Pasos
+
+. En el host o equipo virtual donde descargó el software del conector, abra una ventana de cmd como administrador y cambie a `\OCI2SNOW\` carpeta.
+. Debe inicializar la secuencia de comandos para generar un archivo *config.ini* vacío. Ejecute el siguiente comando: `oci_snow_sync.pyz init`
+. Abra el **config.ini**file en un editor de texto y realice los siguientes cambios en la sección [OCI]:
++
+** Establezca *URL* en `https://<name.domain>` o. `https://<ip address>` Para la instancia de Insight.
+** Defina *user* y *password* en el usuario de Insight creado, por ejemplo, OCI2SNOW.
+** Establezca *include_off_vms* en *false*
+
+
+. En la sección [SNOW], realice los siguientes cambios:
++
+** Establezca *Instance* en el FQDN o la dirección ip de la instancia ServiceNow
+** Defina *Usuario* y *Contraseña* en el usuario de la cuenta de servicio ServiceNow, por ejemplo, OCI2SNOW.
+** En *campo para la URL de OCI*, establezca el campo *URL* en "'u_oci_URL'". Este campo se crea como parte del conjunto de actualizaciones OCI del conector. Puede cambiar esto en el entorno de cliente, pero si lo hace, debe modificarlo aquí y en ServiceNow. La mejor práctica es dejar este campo tal cual.
+** Establezca el campo *filter_status* en "'installed, in Stock'". Si tiene un estado diferente, debe establecer ese estado aquí para que todos los registros coincidan con los registros de Insight antes de cargar nuevos registros. En la mayoría de los casos este campo no debe cambiarse.
+** Establezca **obsoleto_status**en "'retirado'".
+
+
+. La sección [Proxy] sólo es necesaria si utiliza un servidor proxy. Si necesita utilizar esta sección, asegúrese de los siguientes ajustes:
++
+** ;https = http://<host>:<port>[]
+** ;http = http://<host>:<port>[]
+** ;Include_oci = True
+** ;Include_Snow = Verdadero
+
+
+. Edite la sección [Log] sólo si necesita más información de depuración.
+. Para probar el conector, abra un símbolo del sistema cmd como administrador y cambie a la carpeta \OCI2SNOW. Ejecute el siguiente comando: `oci_snow_sync.pyz test`
++
+Puede ver más detalles en la `logs\` carpeta.
+
+

@@ -1,0 +1,33 @@
+---
+permalink: config-admin/moving-mysql-data-using-the-migrate-option.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar migrar un directorio de datos de MySQL a otro directorio. Puede conservar el directorio de datos actual. Puede utilizar la opción migrar del menú solución de problemas o la línea de comandos. Este procedimiento describe cómo utilizar la opción solucionar problemas \> migrar datos MySQL. 
+---
+= Mover datos de MySQL con la opción Migrate
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar migrar un directorio de datos de MySQL a otro directorio. Puede conservar el directorio de datos actual. Puede utilizar la opción migrar del menú solución de problemas o la línea de comandos. Este procedimiento describe cómo utilizar la opción *solución de problemas* > *migración de datos MySQL*.
+
+
+
+== Acerca de esta tarea
+
+Si conserva el directorio de datos actual, se conservará como copia de seguridad y se cambiará el nombre.
+
+
+
+== Pasos
+
+. En la interfaz de usuario web, haga clic en *Admin* y seleccione *solución de problemas*.
+. Haga clic en *solución avanzada de problemas*.
+. Seleccione la ficha *acciones*
+. Seleccione *Migrate MySQL Data*.
+. Introduzca la ruta a la que desee migrar los datos.
+. Para conservar el directorio de datos existente, marque *mantener el directorio de datos existente.*
+. Haga clic en *migrar*.
+

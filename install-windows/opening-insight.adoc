@@ -1,0 +1,48 @@
+---
+permalink: install-windows/opening-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Tras instalar OnCommand Insight, debe instalar sus licencias y, a continuación, configurar Insight para supervisar su entorno. Para ello, utilice un navegador web para acceder a la interfaz de usuario web de Insight. 
+---
+= Acceso a la interfaz de usuario web de
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Tras instalar OnCommand Insight, debe instalar sus licencias y, a continuación, configurar Insight para supervisar su entorno. Para ello, utilice un navegador web para acceder a la interfaz de usuario web de Insight.
+
+
+
+== Pasos
+
+. Debe realizar una de las siguientes acciones:
++
+** Open Insight en el servidor de Insight:
++
+`+https://fqdn+`
+
+** Abrir Insight desde cualquier otra ubicación:
++
+`+https://fqdn:port+`
+
++
+El número de puerto es 443 u otro puerto configurado cuando se instaló Insight Server. El número de puerto predeterminado es 443 si no se especifica en la URL.
+
+
+
++
+Se muestra el cuadro de diálogo OnCommand Insight:image:../media/oci-login-dialog-box.gif[""]
+
+. Introduzca su nombre de usuario y contraseña y haga clic en *Login*.
++
+Si se han instalado las licencias, se muestra la página de configuración del origen de datos.
+
++
+[NOTE]
+====
+Se agotó el tiempo de espera de una sesión en Insight Browser inactiva durante 30 minutos y se cierra la sesión automáticamente del sistema. Para mayor seguridad, se recomienda cerrar el navegador después de cerrar la sesión de Insight.
+
+====
+

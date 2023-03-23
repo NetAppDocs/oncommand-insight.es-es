@@ -1,0 +1,105 @@
+---
+permalink: config-admin/emc-vnx-ssh-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Para la configuración, el origen de datos VNX \(SSH\) de EMC requiere la dirección IP de Control Station y un nombre de usuario y contraseña de sólo lectura.' 
+---
+= Fuente de datos de EMC VNX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para la configuración, el origen de datos de EMC VNX (SSH) requiere la dirección IP de Control Station y un nombre de usuario y contraseña de sólo lectura.
+
+
+
+== Configuración
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+VNX IP
+ a| 
+Dirección IP o nombre de dominio completo de VNX Control Station
+
+
+
+ a| 
+Nombre de usuario de VNX
+ a| 
+Nombre de usuario de VNX Control Station
+
+
+
+ a| 
+Contraseña de VNX
+ a| 
+Contraseña de VNX Control Station
+
+|===
+
+
+== Requisitos
+
+* Dirección IP de la estación de control
+* Nombre de usuario y contraseña de solo lectura.
+* Validación de acceso: Verifique el acceso SSH a través de PuTTY.
+
+
+
+
+== Configuración avanzada
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Intervalo de sondeo de inventario (mín.)
+ a| 
+Intervalo entre sondeos de inventario (predeterminado 40 minutos)
+
+
+
+ a| 
+Tiempo de espera del proceso de SSH de VNX (s)
+ a| 
+Tiempo de espera del proceso VNX SSH (predeterminado 600 segundos)
+
+
+
+ a| 
+Intentos de reintento de comando Celerra
+ a| 
+Número de intentos de reintento de comando Celerra
+
+
+
+ a| 
+Tiempo de espera de proceso externo de CLARiiON para inventario (seg)
+ a| 
+Tiempo de espera de proceso externo de CLARiiON para inventario (predeterminado 1800 segundos)
+
+
+
+ a| 
+Intervalo de sondeo de rendimiento (s)
+ a| 
+Intervalo entre sondeos de rendimiento (predeterminado 300 segundos)
+
+
+
+ a| 
+Tiempo de espera de proceso externo de CLARiiON para rendimiento (seg)
+ a| 
+Tiempo de espera de proceso externo CLARiiON para rendimiento (predeterminado: 1800 segundos)
+
+|===

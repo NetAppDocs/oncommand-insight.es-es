@@ -1,0 +1,21 @@
+---
+permalink: config-admin/testing-the-data-source-configuration.html 
+sidebar: sidebar 
+keywords:  
+summary: Cuando se agrega un origen de datos, puede comprobar la corrección de la configuración para comunicarse con el dispositivo antes de guardar o actualizar ese origen de datos. 
+---
+= Prueba de la configuración del origen de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cuando se agrega un origen de datos, puede comprobar la corrección de la configuración para comunicarse con el dispositivo antes de guardar o actualizar ese origen de datos.
+
+Al hacer clic en el botón *Prueba* del asistente de origen de datos, se comprueba la comunicación con el dispositivo especificado. La prueba produce uno de estos resultados:
+
+* PASADO: El origen de datos está configurado correctamente.
+* ADVERTENCIA: La prueba estaba incompleta, probablemente debido a que el tiempo de espera se agota durante el procesamiento o la adquisición no se estaba ejecutando.
+* FAILED: El origen de datos, tal y como se ha configurado, no puede comunicarse con el dispositivo especificado. Compruebe los ajustes de configuración y vuelva a realizar una prueba.
+

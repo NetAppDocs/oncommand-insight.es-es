@@ -1,0 +1,33 @@
+---
+permalink: config-admin/setting-annotation-rule-precedence.html 
+sidebar: sidebar 
+keywords:  
+summary: De forma predeterminada, OnCommand Insight evalúa las reglas de anotación secuencialmente; sin embargo, puede configurar el orden en el que OnCommand Insight evalúa las reglas de anotación si desea que Insight evalúe las reglas en un orden específico. 
+---
+= Establecimiento de la precedencia de regla de anotación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+De forma predeterminada, OnCommand Insight evalúa las reglas de anotación secuencialmente; sin embargo, puede configurar el orden en el que OnCommand Insight evalúa las reglas de anotación si desea que Insight evalúe las reglas en un orden específico.
+
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web Insight.
+. Haga clic en *Administrar* y seleccione *Reglas de anotación*.
++
+La página Reglas de anotación muestra la lista de reglas de anotación existentes.
+
+. Coloque el cursor sobre una regla de anotación.
++
+Las flechas de precedencia aparecen a la derecha de la regla.
+
+. Para mover una regla hacia arriba o hacia abajo en la lista, haga clic en la flecha hacia arriba o hacia abajo.
++
+De forma predeterminada, las nuevas reglas se agregan secuencialmente a la lista de reglas. Las anotaciones definidas manualmente en una página de activos individual tienen prioridad sobre las anotaciones basadas en reglas cuando Insight evalúa las reglas de anotación.
+
+

@@ -1,0 +1,51 @@
+---
+permalink: install-linux/installing-the-anomaly-detection-software.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight incluye el software que aplica la detección de anomalías de aprendizaje automático a los datos de Insight. Puede instalar este software por separado de otros componentes de OnCommand Insight. 
+---
+= Instalación del software de detección de anomalías
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight incluye el software que aplica la detección de anomalías de aprendizaje automático a los datos de Insight. Puede instalar este software por separado de otros componentes de OnCommand Insight.
+
+
+
+== Antes de empezar
+
+Debe haber completado todos los requisitos previos de instalación.
+
+
+
+== Pasos
+
+. Inicie sesión en el servidor de detección de anomalías usando una cuenta con privilegios sudo.
+. Copie el `.zip` Archivo que contiene el software de detección de anomalías en el servidor Linux.
+. Extraiga los archivos en la `oci-prelert-<version>-linux-x86_64` directorio.
+. Desplácese hasta el directorio en el que se encuentra el instalador: `cd oci-prelert-<version>-linux-x86_64`
+. Instale el software de detección de anomalías: `sudo ./oci-prelert-install.sh`
++
+Durante la instalación, se le pedirá que introduzca el nombre de servidor o la dirección IP del servidor OnCommand Insight, así como el nombre de usuario y la contraseña de una cuenta con privilegios de administrador.
+
++
+Puede quitar el software de detección de anomalías mediante el siguiente comando: `sudo /usr/bin/oci-prelert-uninstall.sh`
+
+
+
+
+
+== Resultados
+
+El software se registra automáticamente con la instancia de OnCommand Insight que se especifica en la instalación. El software sólo se puede comunicar con la instancia de OnCommand Insight con la que está registrado y sólo se puede registrar una instancia del software en un servidor OnCommand Insight.
+
+Si reinicia el servidor que ejecuta el software de detección de anomalías o el servidor Insight, el proceso de detección de anomalías se reinicia automáticamente.
+
+[NOTE]
+====
+Si instala el software de detección de anomalías a través de la línea de comandos proporcionando parámetros, en lugar de permitir que se le pida la instalación de parámetros, no se registrará en el Insight Server a menos que se proporcione el siguiente parámetro: `--path rest/v1`
+
+====

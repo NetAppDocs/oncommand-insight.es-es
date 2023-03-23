@@ -1,0 +1,36 @@
+---
+permalink: config-admin/analyzing-correlated-resources.html 
+sidebar: sidebar 
+keywords:  
+summary: Cuando esté investigando problemas de rendimiento y abra la página de activos de un dispositivo, debe utilizar la lista de recursos correlacionados principales para refinar los datos que se muestran en los gráficos de rendimiento. Un recurso con un porcentaje alto indica que el recurso tiene una actividad similar al recurso base. 
+---
+= Analizar recursos correlacionados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cuando esté investigando problemas de rendimiento y abra _Asset page_ para un dispositivo, debe utilizar la lista Top correlated resources para afinar los datos que se muestran en los gráficos de rendimiento. Un recurso con un porcentaje alto indica que el recurso tiene una actividad similar al recurso base.
+
+
+
+== Acerca de esta tarea
+
+Está investigando un problema de rendimiento y ha abierto la página de activos de un dispositivo.
+
+
+
+== Pasos
+
+. En la lista * recursos correlacionados principales*, el primer recurso es el recurso base. Los recursos correlacionados de la lista se clasifican según el porcentaje de actividad correlacionada con el primer dispositivo. Haga clic en el porcentaje vinculado de correlación para ver los detalles. En este ejemplo, la correlación del 70 % está en utilización, por lo que tanto el recurso base como este recurso correlacionado tienen la misma utilización.
++
+image::../media/correlation-new.gif[correlación nueva]
+
+. Para agregar un recurso correlacionado a los gráficos de rendimiento, active la casilla de verificación de la lista *principales recursos correlacionados* del recurso que desea agregar. De forma predeterminada, cada recurso proporciona los datos totales disponibles, pero sólo puede seleccionar datos de lectura o escritura en el menú de la casilla de verificación.
++
+Cada recurso de los gráficos tiene un color diferente para que pueda comparar las mediciones de rendimiento de cada recurso. Sólo se traza el tipo de datos apropiado para las métricas de medición seleccionadas. Por ejemplo, los datos de CPU no incluyen métricas de lectura o escritura, por lo que solo están disponibles los datos totales.
+
+. Haga clic en el nombre vinculado del recurso correlacionado para mostrar su página de activos.
+. Si no ve un recurso enumerado en los recursos correlacionados principales que cree que debe ser considerado en el análisis, puede utilizar el cuadro *activos de búsqueda* para encontrar ese recurso.
+

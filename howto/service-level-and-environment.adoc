@@ -1,0 +1,23 @@
+---
+permalink: howto/service-level-and-environment.html 
+sidebar: sidebar 
+keywords:  
+summary: Agregue anotaciones de nivel de servicio y entorno a los activos adecuados utilizando los pasos y conceptos que ha aprendido. 
+---
+= Anotaciones de nivel de servicio y entorno
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Agregue anotaciones de nivel de servicio y entorno a los activos adecuados utilizando los pasos y conceptos que ha aprendido.
+
+Para agregar anotaciones de nivel de servicio y entorno a los activos adecuados de su entorno, siga los pasos indicados anteriormente, eligiendo los activos deseados y las anotaciones de nivel de servicio o entorno adecuadas. Puede tener varias anotaciones asociadas a los mismos activos y, de hecho, esta práctica le proporcionará una mayor flexibilidad a la hora de gestionar su entorno a través de Insight.
+
+Ahora que ha creado consultas para anotar sus activos, puede utilizar estas anotaciones de distintas formas, como:
+
+* Políticas de rendimiento para alertarle cuando los eventos suceden sobre los activos deseados
+* Paneles y widgets personalizados para supervisar la actividad
+* Creación de informes
+

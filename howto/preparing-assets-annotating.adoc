@@ -1,0 +1,14 @@
+---
+permalink: howto/preparing-assets-annotating.html 
+sidebar: sidebar 
+keywords:  
+summary: La anotación le permite asociar etiquetas o etiquetas específicas a los activos que elija, lo que ayuda a administrar e informar sobre dichos activos. 
+---
+= Preparación de activos: Anotación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La anotación le permite asociar etiquetas o etiquetas específicas a los activos que elija, lo que ayuda a administrar e informar sobre dichos activos.

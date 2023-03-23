@@ -1,0 +1,18 @@
+---
+permalink: config-admin/violations.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar la sección de infracciones de una página de activos para ver las infracciones, si las hay, que ocurren en su entorno como resultado de una política de rendimiento asignada a un activo. Las políticas de rendimiento supervisan los umbrales de la red y le permiten detectar una infracción de un umbral inmediatamente, identificar las implicaciones y analizar el impacto y la causa raíz del problema de una manera que permita una corrección rápida y efectiva. 
+---
+= Infracciones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar la sección de infracciones de una página de activos para ver las infracciones, si las hay, que ocurren en su entorno como resultado de una política de rendimiento asignada a un activo. Las políticas de rendimiento supervisan los umbrales de la red y le permiten detectar una infracción de un umbral inmediatamente, identificar las implicaciones y analizar el impacto y la causa raíz del problema de una manera que permita una corrección rápida y efectiva.
+
+En el siguiente ejemplo se muestra la sección aViolations que se muestra en una página de activos de un hipervisor:
+
+image::../media/violations-section.gif[sección infracciones]

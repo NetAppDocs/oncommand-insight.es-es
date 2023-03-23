@@ -1,0 +1,86 @@
+---
+permalink: howto/creating-a-simple-chargeback-report.html 
+sidebar: sidebar 
+keywords:  
+summary: Los informes de pago por uso permiten a los administradores y gestores evaluar el consumo de capacidad por aplicación, entidad de negocio, nivel de servicios y nivel. Los informes de pago por uso incluyen responsabilidad de capacidad, responsabilidad histórica de la capacidad y datos de tendencias. Los datos de estos informes se construyen y programan desde el almacén de datos de OnCommand Insight. 
+---
+= Crear un informe de pago por uso simple
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los informes de pago por uso permiten a los administradores y gestores evaluar el consumo de capacidad por aplicación, entidad de negocio, nivel de servicios y nivel. Los informes de pago por uso incluyen responsabilidad de capacidad, responsabilidad histórica de la capacidad y datos de tendencias. Los datos de estos informes se construyen y programan desde el almacén de datos de OnCommand Insight.
+
+
+
+== Antes de empezar
+
+Para crear el informe de ejemplo, el sistema debe estar configurado para informar de los costes de los niveles de almacenamiento. Es necesario realizar las siguientes tareas:
+
+* Defina anotaciones para niveles.
+* Asignar costes a anotaciones.
+* Defina las aplicaciones para las que desea realizar el seguimiento de los datos.
+* Asigne aplicaciones a los activos.
+
+
+
+
+== Acerca de esta tarea
+
+En este ejemplo se utiliza la herramienta de generación de informes Cognos Workspace Advanced para crear el informe de pago por uso. Con Workspace Advanced, puede crear informes arrastrando y colocando elementos de datos en un palé de informe.
+
+
+
+== Pasos
+
+. En la interfaz de usuario web de OnCommand Insight, haga clic en el icono de generación de informes.
+. Inicie sesión en el Portal de informes.
+. En la barra de herramientas de IBM Cognos Connection, haga clic en *Iniciar* > *Cognos Worksapce Advanced*
++
+Se abre la pantalla del paquete Workspace Advanced.
+
+. Haga clic en *Paquetes* > *Chargeback*
++
+Aparece la pantalla Advanace de IBM Workspace.
+
+. Haga clic en *Nuevo*
+. En el cuadro de diálogo *Nuevo*, haga clic en *Lista* para especificar un informe de lista.
++
+Se muestra la paleta de informes y se muestran los términos de pago "ajuste de data mart" y "'Smart Data mart"" bajo el encabezado origen.
+
+. Haga clic en las flechas junto a cada data Mart para ampliarlas.
++
+Se muestra el contenido completo de los data marts.
+
+. Arrastre "'Application'" desde el "Mimple Data Mart" a la columna de la parte izquierda de la paleta de informes.
++
+Al arrastrar un elemento a la paleta, la columna se contrae y se resalta. Al soltar los datos de la aplicación en las columnas resaltadas, todas las aplicaciones se muestran correctamente en la columna.
+
+. Arrastre "'Tier'" del "Mimple Data Mart" a la siguiente columna de la paleta de informes.
++
+El nivel de almacenamiento asociado con cada aplicación se agrega a la paleta.
+
+. Arrastre "'Tier cost'" desde el "Mimple Data Mart "" a la siguiente columna de la paleta de informes.
+. Arrastre «capacidad aprovisionada» desde «Datamart» hasta la siguiente columna de la paleta de informes.
+. Mantenga pulsada la tecla *Ctrl* y seleccione las columnas "'coste de nivel'" y "'capacidad suministrada'" del palé.
+. Haga clic con el botón derecho del ratón en cualquiera de las columnas seleccionadas.
+. Haga clic en *calcular* > *coste de nivel * base de datos de capacidad aprovisionada*
++
+Se añade una nueva columna al palé con el título "Tier cost * Provision Capacity GB".
+
+. Haga clic con el botón derecho del ratón en la columna *coste de nivel * capacidad de aprovisionamiento GB*.
+. Haga clic en *estilo* > *Tipo de datos*
+. Haga clic en *Tipo de formato* > *Moneda*
+. Haga clic en *Aceptar*
++
+Los datos de columna ahora tienen el formato de moneda estadounidense.
+
+. Haga clic con el botón derecho del ratón en «'coste del nivel * capacidad de aprovisionamiento GB» y seleccione *Editar etiqueta de elemento de datos*
+. Sustituir el campo Nombre por «'coste de capacidad aprovisionada»».
+. Para ejecutar el informe, haga clic en *Ejecutar* > *Ejecutar informe - HTML*
++
+Se muestra un informe similar al siguiente. image:../media/insight-chargeback-report.gif[""]
+
+

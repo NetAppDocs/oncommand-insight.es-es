@@ -1,0 +1,32 @@
+---
+permalink: dwh/data-warehouse-software-components.html 
+sidebar: sidebar 
+keywords:  
+summary: El almacén de datos OnCommand Insight incluye varios componentes de software. 
+---
+= Componentes de software Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El almacén de datos OnCommand Insight incluye varios componentes de software.
+
+* Base de datos MySQL
++
+El repositorio back-end para tablas de data Mart
+
+* IBM Cognos
++
+El motor de informes de OnCommand Insight
+
+* Base de datos Apache Derby
++
+Se utiliza para almacenar la configuración y el contenido de Cognos
+
+* WildFly
++
+Servidor de aplicaciones Java Enterprise que aloja componentes de OnCommand Insight
+
+

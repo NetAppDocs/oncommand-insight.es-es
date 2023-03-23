@@ -1,0 +1,195 @@
+---
+permalink: config-admin/openstack-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'El origen de datos de OpenStack \(API REST/KVM\) recopila información sobre las instancias de hardware de OpenStack. Este origen de datos recopila datos de inventario para todas las instancias de OpenStack y, opcionalmente, datos de rendimiento de los equipos virtuales.' 
+---
+= Origen de datos de OpenStack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El origen de datos de OpenStack (API DE REST/KVM) recopila información sobre las instancias de hardware de OpenStack. Este origen de datos recopila datos de inventario para todas las instancias de OpenStack y, opcionalmente, datos de rendimiento de los equipos virtuales.
+
+
+
+== Requisitos
+
+A continuación, se enumeran los requisitos para configurar el origen de datos de OpenStack.
+
+* La dirección IP de la controladora OpenStack
+* Se recomiendan las credenciales de rol de administrador de OpenStack y el acceso sudo al hipervisor KVM de Linux.
++
+[NOTE]
+====
+Si no utiliza una cuenta de administrador ni privilegios equivalentes de administrador, puede adquirir datos del origen de datos. Deberá modificar el archivo de configuración de políticas (es decir, etc/nova/policy.json) para permitir a los usuarios con un rol que no sea administrador llamar a la API:
+
+====
++
+** "os_compute_api:os-availability-zone:detail": ""
+** "os_compute_api:os-hipervisores": ""
+** os_compute_api:servidores:detail:get_all_arrendatarios": ""
+
+
+* Para la recopilación del rendimiento, debe instalarse y configurarse el módulo Ceilometer de OpenStack. La configuración del Ceilometer se realiza editando la `nova.conf` Archivo para cada hipervisor y, a continuación, reinicie el servicio de computación Nova en cada hipervisor. La opción cambia de nombre para diferentes versiones de OpenStack:
++
+** Icehouse
+** Juno
+** Kilo
+** Libertad
+** Mitaka
+** Newton
+** Ocata
+
+
+* Para las estadísticas de CPU, "Compute_Monitores=ComputeDriverCPUMonitor" debe estar activado en /etc/nova/nova.conf en nodos de computación.
+* Requisitos de puerto:
++
+** 5000 para http y 13000 para https, para el servicio Keystone
+** 22 para SSH KVM
+** 8774 para Nova Compute Service
+** 8776 para Cinder Block Service
+** 8777 para el servicio de rendimiento Ceilometer
+** 9292 para el servicio de imágenes Glance
++
+[NOTE]
+====
+El puerto se enlaza al servicio específico y el servicio puede ejecutarse en la controladora u otro host en los entornos más grandes.
+
+====
+
+
+
+
+
+
+== Configuración
+
+|===
+
+
+| *Campo* | *Descripción* 
+
+
+ a| 
+Dirección IP de la controladora OpenStack
+ a| 
+La dirección IP o el nombre de dominio completo del controlador OpenStack
+
+
+
+ a| 
+Administrador de OpenStack
+ a| 
+Nombre de usuario para un administrador de OpenStack
+
+
+
+ a| 
+Contraseña de OpenStack
+ a| 
+La contraseña que se usa para el administrador de OpenStack
+
+
+
+ a| 
+Inquilino de administrador de OpenStack
+ a| 
+Inquilino de administrador de OpenStack
+
+
+
+ a| 
+Usuario sudo KVM
+ a| 
+Nombre de usuario sudo KVM
+
+
+
+ a| 
+Elija 'Contraseña' o 'Archivo de claves OpenSSH' para especificar el tipo de credencial
+ a| 
+El tipo de credencial utilizado para conectarse al dispositivo a través de SSH
+
+
+
+ a| 
+Ruta completa a la clave privada de inventario
+ a| 
+Ruta completa a la clave privada de inventario
+
+
+
+ a| 
+Contraseña sudo KVM
+ a| 
+Contraseña sudo KVM
+
+|===
+
+
+== Configuración avanzada
+
+|===
+
+
+| *Campo* | *Descripción* 
+
+
+ a| 
+Habilite la detección de inventario del hipervisor a través de SSH
+ a| 
+Compruebe esto para habilitar la detección de inventario de hipervisor a través de SSH
+
+
+
+ a| 
+Puerto de URL de administrador de OpenStack
+ a| 
+Puerto de URL de administrador de OpenStack
+
+
+
+ a| 
+Utilice HTTPS
+ a| 
+Compruebe que utilice HTTP seguro
+
+
+
+ a| 
+Tiempo de espera de conexión HTTP (s)
+ a| 
+Tiempo de espera para la conexión HTTP (predeterminado 300 segundos)
+
+
+
+ a| 
+Puerto SSH
+ a| 
+Puerto utilizado para SSH
+
+
+
+ a| 
+Tiempo de espera del proceso SSH (s)
+ a| 
+Tiempo de espera del proceso SSH (30 segundos predeterminado)
+
+
+
+ a| 
+Reintentos de proceso SSH
+ a| 
+Número de intentos de reintento de inventario
+
+
+
+ a| 
+Intervalo de sondeo de inventario (mín.)
+ a| 
+Intervalo entre sondeos de inventario (predeterminado 20 minutos)
+
+|===

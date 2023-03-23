@@ -1,0 +1,62 @@
+---
+permalink: dwh/adding-a-build-from-history-job.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede construir la base de datos del almacén de datos utilizando datos históricos que se conservan en el servidor OnCommand Insight, lo que le permite ejecutar informes de proyección. 
+---
+= Agregar un trabajo que genere una base de datos de almacén de datos desde el historial
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede construir la base de datos del almacén de datos utilizando datos históricos que se conservan en el servidor OnCommand Insight, lo que le permite ejecutar informes de proyección.
+
+
+
+== Antes de empezar
+
+Debe haber actualizado las anotaciones en el servidor OnCommand Insight y forzar una actualización de la información de anotaciones para el almacén de datos.
+
+
+
+== Pasos
+
+. Inicie sesión en el portal del almacén de datos en `+https://hostname/dwh+`, donde `hostname` Es el nombre del sistema en el que está instalado el almacén de datos de OnCommand Insight.
+. En el panel de navegación de la izquierda, haga clic en *generar a partir del historial*.
++
+image::../media/oci-dwh-admin-buildfromhistory-gif.gif[Crear a partir del historial]
+
+. Haga clic en *Configurar*.
++
+image::../media/oci-dwh-admin-buildfromhistory-configure-gif.gif[Configurar la creación a partir del historial]
+
+. Introduzca las horas de inicio y finalización.
++
+Para mostrar un calendario desde el que puede seleccionar estas fechas, haga clic en la flecha hacia abajo situada junto al nombre del mes.
+
++
+El formato de hora depende de la configuración regional del servidor de almacén de datos.
+
++
+Las horas de inicio y finalización deben estar dentro del intervalo de historial contenido en todos los servidores OnCommand Insight a los que está conectado el almacén de datos, tal como se establece en la opción conectores del portal de almacén de datos. Las horas de inicio y fin predeterminadas reflejan el período máximo válido. El trabajo de compilación de almacén de datos se ejecuta automáticamente en el momento especificado.
+
++
+[NOTE]
+====
+La configuración de un programa no realista como "día durante 4 años" da como resultado 1460 ciclos de compilación, que podrían tardar 10 días en completarse.
+
+====
+. Elija el intervalo.
++
+Si selecciona un intervalo mensual o semanal, aparece el campo día. Si seleccionó mensualmente, entonces día es una fecha. Si seleccionó semanalmente, Day es de domingo a sábado.
+
+. Elija la hora en la que se llevará a cabo el desarrollo.
+. De forma opcional, para volver a la configuración predeterminada, haga clic en *Restablecer*.
+. Haga clic en *Guardar*.
+. En la página *generar a partir de Historial*, para realizar una compilación fuera de la compilación automática de horario, haga clic en *Ejecutar*.
++
+La columna Hora de destino muestra la hora a la que se creó esta entrada. La columna Estado muestra si la generación se ha completado o no.
+
+

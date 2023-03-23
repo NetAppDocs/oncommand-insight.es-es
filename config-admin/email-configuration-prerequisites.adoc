@@ -1,0 +1,20 @@
+---
+permalink: config-admin/email-configuration-prerequisites.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Para poder configurar OnCommand Insight con el fin de acceder al sistema de correo electrónico, debe detectar el nombre de host o la dirección IP para identificar el servidor de correo \(SMTP o Exchange\) y asignar una cuenta de correo electrónico para los informes de OnCommand Insight.' 
+---
+= Requisitos previos para la configuración del correo electrónico
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para poder configurar OnCommand Insight con el fin de acceder al sistema de correo electrónico, debe detectar el nombre de host o la dirección IP para identificar el servidor de correo (SMTP o Exchange) y asignar una cuenta de correo electrónico para los informes de OnCommand Insight.
+
+Pida al administrador de correo electrónico que cree una cuenta de correo electrónico para OnCommand Insight. Necesitará la siguiente información:
+
+* El nombre de host o la dirección IP para identificar el servidor de correo (SMTP o Exchange) que utiliza la organización. Puede encontrar esta información a través de la aplicación que utiliza para leer su correo electrónico. En Microsoft Outlook, por ejemplo, puede buscar el nombre del servidor visualizando la configuración de su cuenta: Herramientas - Cuentas de correo electrónico - Ver o cambiar la cuenta de correo existente.
+* Nombre de la cuenta de correo electrónico a través de la cual OnCommand Insight enviará informes regulares. La cuenta debe ser una dirección de correo electrónico válida en su empresa. (La mayoría de los sistemas de correo no enviarán mensajes a menos que se envíen desde un usuario válido.) Si el servidor de correo electrónico requiere un nombre de usuario y una contraseña para enviar correo, obtenga esta información del administrador del sistema.
+

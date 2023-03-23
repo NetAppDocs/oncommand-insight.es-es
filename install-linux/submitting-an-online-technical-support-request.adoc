@@ -1,0 +1,48 @@
+---
+permalink: install-linux/submitting-an-online-technical-support-request.html 
+sidebar: sidebar 
+keywords:  
+summary: Si tiene problemas con la instalación de Insight, como cliente de soporte registrado, puede enviar una solicitud de soporte técnico en línea. 
+---
+= Envío de una solicitud de asistencia técnica en línea
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si tiene problemas con la instalación de Insight, como cliente de soporte registrado, puede enviar una solicitud de soporte técnico en línea.
+
+
+
+== Antes de empezar
+
+A través de su dirección de correo electrónico corporativa, debe registrarse como cliente de soporte para obtener servicios de soporte online. El registro se realiza a través del sitio de soporte (http://support.netapp.com)[].
+
+
+
+== Acerca de esta tarea
+
+Para ayudar al servicio de atención al cliente a resolver el problema de instalación, debe recopilar toda la información posible, incluidos los siguientes elementos:
+
+* Número de serie de Insight
+* Descripción del problema
+* Todos los archivos de registro de Insight
+* Captura de pantalla de cualquier mensaje de error
+
+
+
+
+== Pasos
+
+. Cree un `.zip` archivo de la información recopilada para crear un paquete de solución de problemas.
+. Inicie sesión en el sitio de soporte en http://mysupport.netapp.com/["mysupport.netapp.com"] Y seleccione *asistencia técnica*.
+. Haga clic en *Abrir un caso*.
+. Siga las instrucciones de su paquete de datos.
+
+
+
+
+== Después de terminar
+
+Puede utilizar *comprobar el estado del caso* en la página de asistencia técnica para seguir su solicitud.

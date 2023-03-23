@@ -1,0 +1,51 @@
+---
+permalink: howto/creating-performance-policies-for-datastores.html 
+sidebar: sidebar 
+keywords: performance policy,Datastore 
+summary: Es posible crear políticas de rendimiento con umbrales para las métricas asociadas con los almacenes de datos que se correlacionen con los pools de almacenamiento que se supervisan. De forma predeterminada, las políticas de rendimiento se aplican a todos los dispositivos del tipo especificado al crearlos. Puede crear una anotación para incluir sólo un dispositivo específico o un conjunto de dispositivos en la política de rendimiento. 
+---
+= Crear políticas de rendimiento para almacenes de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible crear políticas de rendimiento con umbrales para las métricas asociadas con los almacenes de datos que se correlacionen con los pools de almacenamiento que se supervisan. De forma predeterminada, las políticas de rendimiento se aplican a todos los dispositivos del tipo especificado al crearlos. Puede crear una anotación para incluir sólo un dispositivo específico o un conjunto de dispositivos en la política de rendimiento.
+
+
+
+== Antes de empezar
+
+Al utilizar una anotación en una directiva de rendimiento, la anotación debe existir antes de crear la directiva.
+
+
+
+== Acerca de esta tarea
+
+Cree una política de rendimiento que proporcione notificación cuando uno o más almacenes de datos que está supervisando superen un umbral establecido. Es posible que su sistema ya contenga una política global que satisfaga sus necesidades o que una política que utilice anotaciones también funcione si anota sus almacenes de datos.
+
+
+
+== Pasos
+
+. En la barra de herramientas Insight, seleccione *gestionar* > *políticas de rendimiento*
++
+Se muestra la página Performance Policies. Revise las políticas de rendimiento existentes para identificar las políticas existentes que aborden las métricas de los umbrales que desea supervisar.
+
+. Haga clic en *+Agregar* para agregar una nueva directiva
+. Agregar «'Nombre de la política»»
++
+Debe usar un nombre diferente de los demás nombres de políticas del objeto. Por ejemplo, no puede contar con dos políticas llamadas "latencia" para un volumen interno; sin embargo, puede tener una política de "latencia" para un volumen interno y otra política de "latencia" para un almacén de datos. La práctica recomendada es utilizar siempre un nombre único para cualquier política, independientemente del tipo de objeto.
+
+. Seleccione "Datastore" como el tipo de objeto
+. Haga clic en «'primera aparición»».
++
+La primera opción de ocurrencia activa una alerta cuando se supera un umbral en la primera muestra de datos. Todas las demás opciones activan una alerta cuando el umbral se cruza una vez y se cruza de forma continua durante al menos el tiempo especificado.
+
+. Haga clic en «'Advertencia'».
+. Para "'Crear alerta'", seleccione *ratio de capacidad - sobre COMMIT* y establezca el valor en *> 150*
++
+Puede crear alertas relacionadas con capacidad adicionales, como **Capacity total**y *Capacity used*.
+
+

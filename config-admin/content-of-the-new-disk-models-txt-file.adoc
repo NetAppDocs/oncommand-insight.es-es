@@ -1,0 +1,40 @@
+---
+permalink: config-admin/content-of-the-new-disk-models-txt-file.html 
+sidebar: sidebar 
+keywords:  
+summary: El archivo new_disk_models.txt tiene campos obligatorios y opcionales. Los campos están separados por comas, por lo que no utilice comas en los campos. 
+---
+= Contenido del archivo new_disk_models.txtI.
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La `new_disk_models.txt` el archivo tiene campos obligatorios y opcionales. Los campos están separados por comas, por lo que no utilice comas _dentro de_ los campos.
+
+Todos los campos son obligatorios excepto el tiempo de búsqueda, las tarifas de transferencia y adicional_info. Si está disponible, incluya el enlace del sitio web del proveedor/modelo en el campo adicional_info.
+
+Con un editor de texto, introduzca la siguiente información en este orden, separada por comas, para cada nuevo modelo de disco que desee agregar:
+
+. *tecla*: utilice el número de modelo (obligatorio)
+. *proveedor*: nombre (obligatorio)
+. *número de modelo*: número completo (normalmente el mismo valor que en "tecla") (obligatorio)
+. *rpm del disco*: por ejemplo 10000 o 15000 (requerido)
+. *Tamaño*: Capacidad en GB (requerido)
+. *Tipo de interfaz*: ATA, SATA, FC, SAS, FATA, SSD, OTROS (obligatorio)
+. *tiempo de búsqueda*: en ms (opcional)
+. *Velocidad de transferencia potencial*: La velocidad de transferencia potencial en MB/s. Velocidad de transferencia máxima del disco. (opcional)
+. *Velocidad de transferencia de interfaz*: La velocidad desde y hacia el host en MB/s (opcional).
+. *Información adicional*: Cualquier información adicional que desee capturar. Lo más recomendable es introducir el enlace a la página del proveedor donde se encuentren las especificaciones, como referencia (opcional)
+
+
+Si deja en blanco los campos opcionales, asegúrese de incluir la coma.
+
+Ejemplos (cada uno en una línea sin espacios):
+
+`+ST373405,Seagate,ST373405,10000,73,FC,5.3,64,160,http://www.seagate.com/staticfiles/support/disc/manuals/enterprise/cheetah/73(LP)/100109943e.pdf+`
+
+`SLR5B-M400SS,HITACHI,SLR5B-M400SS,1000000,400,SSD,,,,`
+
+`+X477_THARX04TA07,TOSHIBA,X477_THARX04TA07,7200,4000,SATA,9.5,,,https://storage.toshiba.eu/export/sites/toshiba-sdd/media/products/datasheets/MG03ACAxxxY.pdf+`

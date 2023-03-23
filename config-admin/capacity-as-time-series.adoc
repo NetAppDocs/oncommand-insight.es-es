@@ -1,0 +1,23 @@
+---
+permalink: config-admin/capacity-as-time-series.html 
+sidebar: sidebar 
+keywords:  
+summary: Con OnCommand Insight 7.3.1, la información de capacidad se registra y se registra como datos de series temporales. 
+---
+= Capacidad como serie temporal
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Con OnCommand Insight 7.3.1, la información de capacidad se registra y se registra como datos de series temporales.
+
+Anteriormente, la información de capacidad adquirida de orígenes de datos ha sido exclusivamente datos "puntuales" (PIT), lo que significa que no se podía utilizar en gráficos como datos de series temporales. Ahora, los valores de capacidad de los activos se pueden utilizar como datos de series temporales de las siguientes formas:
+
+* Grafica en tablas, widgets, vistas de expertos y en cualquier lugar donde se muestren los datos de series temporales
+* Se aplica a umbrales de rendimiento con infracciones mediante semántica existente
+* Se utiliza en expresiones con otros contadores de rendimiento cuando sea apropiado
+
+
+Tenga en cuenta que si actualiza una versión anterior de Insight, los valores de capacidad DE PIT anteriores utilizados en consultas o en filtros para paneles personalizados se sustituirán por los datos de capacidad de series temporales. Esto puede dar lugar a pequeños cambios en la forma en que se notifican o filtran los datos de capacidad en comparación con los datos equivalentes de versiones anteriores de Insight.

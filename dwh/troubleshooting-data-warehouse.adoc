@@ -1,0 +1,24 @@
+---
+permalink: dwh/troubleshooting-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede realizar varias tareas relacionadas con la solución de problemas del almacén de datos. 
+---
+= Solución de problemas del almacén de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede realizar varias tareas relacionadas con la solución de problemas del almacén de datos.
+
+* Utilice ASUP de OnCommand Insight.
+* Ver los registros de OnCommand Insight.
+* Resolver problemas relacionados con actualizaciones y entidades empresariales.
+* Resolver los problemas relacionados con la consolidación de varios servidores OnCommand Insight.
+
+
+Puede consolidar varios servidores OnCommand Insight en la misma base de datos de almacén de datos. Muchas configuraciones pueden informar del mismo objeto desde varios conectores (es decir, el mismo switch existe en dos instancias de OnCommand Insight). En tales casos, Data Warehouse consolida los múltiples objetos en uno (se elige un conector primario y los datos del objeto se tomarán únicamente de ese conector).
+
+El administrador de almacenamiento puede utilizar la página de solución de problemas para resolver problemas relacionados con los problemas de consolidación.

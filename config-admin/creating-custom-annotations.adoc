@@ -1,0 +1,105 @@
+---
+permalink: config-admin/creating-custom-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: Con las anotaciones, puede agregar datos personalizados específicos del negocio que se ajusten a los activos de las necesidades del negocio. Aunque OnCommand Insight proporciona un conjunto de anotaciones predeterminadas, es posible que desee ver datos de otras maneras. Los datos de anotaciones personalizadas complementan los datos del dispositivo ya recopilados, como el fabricante del switch, el número de puertos y las estadísticas de rendimiento. Insight no detecta los datos que se agregan con anotaciones. 
+---
+= Creación de anotaciones personalizadas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Con las anotaciones, puede agregar datos personalizados específicos del negocio que se ajusten a los activos de las necesidades del negocio. Aunque OnCommand Insight proporciona un conjunto de anotaciones predeterminadas, es posible que desee ver datos de otras maneras. Los datos de anotaciones personalizadas complementan los datos del dispositivo ya recopilados, como el fabricante del switch, el número de puertos y las estadísticas de rendimiento. Insight no detecta los datos que se agregan con anotaciones.
+
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web de Insight.
+. Haga clic en *Administrar* y seleccione *Anotaciones*.
++
+La página Anotaciones muestra la lista de anotaciones.
+
+. Haga clic en image:../media/add-annotation-icon.gif[""].
++
+Aparece el cuadro de diálogo *Agregar anotación*.
+
+. Introduzca un nombre y una descripción en los campos *Nombre* y *Descripción*.
++
+Es posible introducir hasta 255 caracteres en estos campos.
+
++
+[NOTE]
+====
+Nombres de anotaciones que empiezan o terminan con un punto "". no son compatibles.
+
+====
+. Haga clic en *Tipo* y, a continuación, seleccione una de las siguientes opciones que representa el tipo de datos permitidos en esta anotación:
++
+** Booleano
++
+Esto crea una lista desplegable con las opciones de yes y no Por ejemplo, la anotación "Ditret adjuntado" es booleana.
+
+** Fecha
++
+Esto crea un campo que contiene una fecha. Por ejemplo, si la anotación será una fecha, selecciónela.
+
+** Lista
++
+Esto puede crear uno de los siguientes:
+
++
+*** Una lista desplegable fija
++
+Cuando otros están asignando este tipo de anotación en un dispositivo, no pueden agregar más valores a la lista.
+
+*** Una lista desplegable flexible
++
+Si selecciona la opción *Agregar nuevos valores sobre la marcha* al crear esta lista, cuando otros asignan este tipo de anotación en un dispositivo, pueden agregar más valores a la lista.
+
+
+
+** Número
++
+Esto crea un campo en el que el usuario que asigna la anotación puede introducir un número. Por ejemplo, si el tipo de anotación es "'Piso'", el usuario puede seleccionar el tipo de valor "'número'" e introducir el número de piso.
+
+** Texto
++
+Esto crea un campo que permite texto de forma libre. Por ejemplo, puede escribir «'Idioma'» como tipo de anotación, seleccionar «'texto'» como tipo de valor e introducir un idioma como valor.
+
+
+
++
+[NOTE]
+====
+Después de establecer el tipo y guardar los cambios, no puede cambiar el tipo de anotación. Si necesita cambiar el tipo, debe eliminar la anotación y crear una nueva.
+
+====
+. Si selecciona **List**como tipo de anotación, haga lo siguiente:
++
+.. Seleccione *Agregar nuevos valores sobre la marcha* si desea la capacidad de agregar más valores a la anotación cuando se encuentra en una página de activos, que crea una lista flexible.
++
+Por ejemplo, supongamos que se encuentra en una página de activos y que el activo tiene la anotación Ciudad con los valores Detroit, Tampa y Boston. Si ha seleccionado la opción *Agregar nuevos valores sobre la marcha*, puede agregar valores adicionales a Ciudad como San Francisco y Chicago directamente en la página de activos en lugar de tener que ir a la página Anotaciones para agregarlos. Si no selecciona esta opción, no podrá agregar nuevos valores de anotación al aplicar la anotación; esto creará una lista fija.
+
+.. Introduzca un valor y un nombre en los campos *valor* y *Descripción*.
+.. Haga clic enimage:../media/edit-annotation-dialog-box-add-icon.gif[""] para añadir valores adicionales.
+.. Haga clic en image:../media/trash-can-query.gif[""] para eliminar un valor.
+
+
+. Haga clic en *Guardar*.
++
+Las anotaciones aparecen en la lista de la página Anotaciones.
+
+
+
+
+
+== Después de terminar
+
+En la interfaz de usuario web, la anotación está disponible inmediatamente para su uso. Para utilizar la anotación en el cliente Java, debe reiniciar cualquier cliente Java en ejecución antes de poder aplicar la anotación. Si va a agregar o cambiar valores de anotación o a eliminar un tipo de anotación, no es necesario reiniciar el cliente Java.
+
+*Información relacionada*
+
+link:importing-and-exporting-user-data.md#["Importar y exportar datos de usuario"]

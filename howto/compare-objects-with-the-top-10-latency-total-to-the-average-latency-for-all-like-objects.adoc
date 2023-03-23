@@ -1,0 +1,53 @@
+---
+permalink: howto/compare-objects-with-the-top-10-latency-total-to-the-average-latency-for-all-like-objects.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede que desee comparar los equipos virtuales con el total de 10 de latencia superior con el total de latencia media para identificar aquellos que estén extremadamente fuera del rango medio. Esta información puede ayudar a tomar decisiones para equilibrar las cargas de trabajo en los equipos virtuales. 
+---
+= Compare objetos con la latencia total de los 10 principales con la latencia media de todos los objetos similares
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede que desee comparar los equipos virtuales con el total de 10 de latencia superior con el total de latencia media para identificar aquellos que estén extremadamente fuera del rango medio. Esta información puede ayudar a tomar decisiones para equilibrar las cargas de trabajo en los equipos virtuales.
+
+
+
+== Pasos
+
+. Añada un widget con un gráfico de área apilada al nuevo panel: *Widget* > *Diagrama de área apilada*
++
+.. Cambie el dispositivo predeterminado a máquina virtual: Haga clic en *almacenamiento* > *máquina virtual* > *latencia total*
++
+El widget muestra el total de latencia, en todas las máquinas virtuales, durante 24 horas en un gráfico de área apilado.
+
+.. Cree una segunda pantalla en este widget que muestre el promedio de latencia total para todas las VM: *Widget* > *Diagrama de línea*
+.. Cambie el dispositivo predeterminado a máquina virtual: Haga clic en *máquina virtual* > *latencia-total*
++
+El widget muestra el total de latencia para el período de tiempo predeterminado de 24 horas utilizando un gráfico de líneas.
+
+.. Haga clic en *X* en la barra *Roll up* y seleccione *Mostrar* > *Arriba* > *10*
+
+
++
+El sistema muestra los 10 VM principales según la latencia total.
+
+. Para comparar el total de latencia medio de todos los equipos virtuales con los 10 IOPS totales principales, utilice los siguientes pasos:
++
+.. Haga clic en *+Agregar*
+.. Cambie el dispositivo predeterminado a máquina virtual: Haga clic en *almacenamiento* > *máquina virtual* > *IOPS total*
+.. Haga clic en *X* en la barra *Roll up* y seleccione *Mostrar* > *Arriba* > *10*
+
+
++
+El sistema muestra los 10 objetos con alta latencia y muestra la latencia media en un gráfico de líneas.
+
++
++ imagen:.../media/analítica-to10-avg.gif[]
+
++
++ la latencia media es de 1.6 ms, mientras que en los diez primeros puestos, los equipos virtuales están experimentando una latencia de más de 200 ms.
+
+

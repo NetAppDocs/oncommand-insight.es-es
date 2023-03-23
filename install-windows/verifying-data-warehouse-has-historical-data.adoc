@@ -1,0 +1,25 @@
+---
+permalink: install-windows/verifying-data-warehouse-has-historical-data.html 
+sidebar: sidebar 
+keywords:  
+summary: Después de restaurar los informes personalizados, debe comprobar que Data Warehouse recopila datos históricos mediante la visualización de los informes personalizados. 
+---
+= Verificación de que el almacén de datos tiene datos históricos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de restaurar los informes personalizados, debe comprobar que Data Warehouse recopila datos históricos mediante la visualización de los informes personalizados.
+
+
+
+== Pasos
+
+. Inicie sesión en el portal del almacén de datos en `+https://fqdn/dwh+`.
+. En la barra de herramientas almacén de datos, haga clic en image:../media/oci-reporting-portal-icon.gif[""] Para abrir el portal de Insight Reporting e iniciar sesión.
+. Abra la carpeta que contiene los informes personalizados (por ejemplo, Informes personalizados).
+. Haga clic en image:../media/run-with-options.gif[""] para abrir las opciones de formato de salida de este informe.
+. Seleccione las opciones que desee y haga clic en *Ejecutar* para asegurarse de que están rellenadas con datos históricos de almacenamiento, computación y cambio.
+

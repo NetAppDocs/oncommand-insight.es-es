@@ -1,0 +1,24 @@
+---
+permalink: howto/custom-dashboard-group-by.html 
+sidebar: sidebar 
+keywords:  
+summary: Los datos de un widget de tabla se pueden agrupar por cualquier atributo disponible, lo que permite ver una descripción general de los datos y profundizar en ellos para obtener más detalles. Las métricas de la tabla se reforman para facilitar la visualización en cada fila contraída. 
+---
+= Agrupación en widgets de tabla
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los datos de un widget de tabla se pueden agrupar por cualquier atributo disponible, lo que permite ver una descripción general de los datos y profundizar en ellos para obtener más detalles. Las métricas de la tabla se reforman para facilitar la visualización en cada fila contraída.
+
+Los widgets de tabla permiten agrupar los datos en función de los atributos establecidos. Por ejemplo, puede que desee que la tabla muestre total Storage IOPS agrupadas por los centros de datos en los que residen esos almacenamientos. O puede que desee mostrar una tabla de máquinas virtuales agrupadas según el hipervisor que las aloja. En la lista, puede expandir cada grupo para ver los activos de ese grupo.
+
+La agrupación sólo está disponible en el tipo de widget *Tabla*.
+
+
+
+== Despliegue de datos de rendimiento
+
+Si incluye una columna para los datos de rendimiento (por ejemplo, _IOPS - total_) en un widget de tabla, cuando elija agrupar los datos, podrá elegir un método de despliegue para esa columna. El método de recuperación predeterminado es mostrar el _promedio_ de los datos subyacentes en la fila de grupo. también puede elegir mostrar el _sum_, _minimo_ o _maximum_ de los datos.

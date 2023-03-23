@@ -1,0 +1,89 @@
+---
+permalink: config-admin/importing-and-exporting-user-data.html 
+sidebar: sidebar 
+keywords:  
+summary: Las funciones de importación y exportación permiten exportar anotaciones, reglas de anotación, consultas, políticas de rendimiento y paneles personalizados a un archivo. Este archivo se puede importar posteriormente a diferentes servidores OnCommand Insight. 
+---
+= Importar y exportar datos de usuario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las funciones de importación y exportación permiten exportar anotaciones, reglas de anotación, consultas, políticas de rendimiento y paneles personalizados a un archivo. Este archivo se puede importar posteriormente a diferentes servidores OnCommand Insight.
+
+Las funciones de exportación e importación sólo se admiten entre servidores que ejecutan la misma versión de OnCommand Insight.
+
+Para exportar o importar datos de usuario, haga clic en *Admin* y seleccione *Configuración*; a continuación, seleccione la ficha *Importar/Exportar datos de usuario*.
+
+Durante la operación de importación, los datos se agregan, combinan o reemplazan, dependiendo de los objetos y tipos de objeto que se importan.
+
+* Tipos de anotaciones
++
+** Agrega una anotación si no existe ninguna anotación con el mismo nombre en el sistema de destino.
+** Combina una anotación si el tipo de anotación es una lista y existe una anotación con el mismo nombre en el sistema de destino.
+** Reemplaza una anotación si el tipo de anotación no es una lista y existe una anotación con el mismo nombre en el sistema de destino.
+
+
++
+[NOTE]
+====
+Si existe una anotación con el mismo nombre pero con un tipo diferente en el sistema de destino, la importación falla. Si los objetos dependen de la anotación fallida, dichos objetos pueden mostrar información incorrecta o no deseada. Debe comprobar todas las dependencias de anotación una vez completada la operación de importación.
+
+====
+* Reglas de anotación
++
+** Agrega una regla de anotación si no existe ninguna regla de anotación con el mismo nombre en el sistema de destino.
+** Reemplaza una regla de anotación si existe una regla de anotación con el mismo nombre en el sistema de destino.
+
+
++
+[NOTE]
+====
+Las reglas de anotación dependen tanto de las consultas como de las anotaciones. Debe comprobar la precisión de todas las reglas de anotación una vez completada la operación de importación.
+
+====
+* Normativas
++
+** Agrega una directiva si no existe ninguna directiva con el mismo nombre en el sistema de destino.
+** Reemplaza una directiva si existe una directiva con el mismo nombre en el sistema de destino.
+
+
++
+[NOTE]
+====
+Las políticas pueden estar fuera de servicio una vez completada la operación de importación. Debe comprobar el orden de las directivas después de la importación. Las directivas que dependen de anotaciones pueden fallar si las anotaciones son incorrectas. Debe comprobar todas las dependencias de anotación después de la importación.
+
++
+
+====
+* Consultas
++
+** Agrega una consulta si no existe ninguna consulta con el mismo nombre en el sistema de destino.
+** Reemplaza una consulta si existe una consulta con el mismo nombre en el sistema de destino, incluso si el tipo de recurso de la consulta es diferente.
+
+
++
+[NOTE]
+====
+Si el tipo de recurso de una consulta es diferente, después de la importación, cualquier widget de panel que utilice esa consulta puede mostrar resultados no deseados o incorrectos. Debe comprobar la precisión de todos los widgets basados en consultas después de la importación. Las consultas que dependen de anotaciones pueden fallar si las anotaciones son incorrectas. Debe comprobar todas las dependencias de anotación después de la importación.
+
++
+
+====
+* Consolas
++
+** Agrega un panel si no existe ningún panel con el mismo nombre en el sistema de destino.
+** Reemplaza un panel si existe un panel con el mismo nombre en el sistema de destino, incluso si el tipo de recurso de la consulta es diferente.
+
+
++
+[NOTE]
+====
+Debe comprobar la precisión de todos los widgets basados en consultas en los paneles después de la importación. Si el servidor de origen tiene varios paneles con el mismo nombre, se exportarán todos. Sin embargo, sólo se importará el primero al servidor de destino. Para evitar errores durante la importación, debe asegurarse de que los paneles tienen nombres únicos antes de exportarlos.
+
++
+
+====
+

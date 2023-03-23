@@ -1,0 +1,69 @@
+---
+permalink: install-windows/remote-acquisition-unit-server-requirements.html 
+sidebar: sidebar 
+keywords: redhat 
+summary: 'Debe instalar una unidad de adquisición remota \(RAU\) para obtener información de los dispositivos SAN que están detrás de un firewall, en un sitio remoto, en una red privada o en segmentos de red diferentes. Antes de instalar la RAU, debe asegurarse de que su entorno cumple con los requisitos de sistema operativo, CPU, memoria y espacio en disco de la RAU.' 
+---
+= Requisitos del servidor de la unidad de adquisición remota
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe instalar una unidad de adquisición remota (RAU) para obtener información de los dispositivos SAN que están detrás de un firewall, en un sitio remoto, en una red privada o en segmentos de red diferentes. Antes de instalar la RAU, debe asegurarse de que su entorno cumple con los requisitos de sistema operativo, CPU, memoria y espacio en disco de la RAU.
+
+|===
+
+
+| Componente | Requisito 
+
+
+ a| 
+De NetApp
+ a| 
+Un equipo que ejecuta Microsoft Windows Server 2012, 2012 R2, 2016 o 2019 de 64 bits con el Service Pack más reciente
+
+
+
+ a| 
+CPU
+ a| 
+4 núcleos de CPU
+
+
+
+ a| 
+Memoria
+ a| 
+16 GB DE MEMORIA RAM
+
+
+
+ a| 
+Espacio disponible en disco
+ a| 
+40 GB
+
+
+
+ a| 
+Red
+ a| 
+Conexión Ethernet de 100 Mbps /1 Gbps, dirección IP estática, conectividad IP con todos los dispositivos FC y un puerto requerido para el servidor OnCommand Insight (80 o 443).
+
+
+
+ a| 
+Permisos
+ a| 
+Permisos de administrador local en el servidor RAU
+
+
+
+ a| 
+Exploración de virus
+ a| 
+Durante la instalación de este componente de OnCommand Insight, debe desactivar por completo todos los detectores de virus. Tras la instalación, las rutas utilizadas por el componente Insight deben excluirse del análisis de virus. Además, debe excluir la carpeta IBM/DB2 (por ejemplo, _C:\Archivos de programa\IBM\DB2_) de la exploración antivirus tras la instalación.
+
+|===

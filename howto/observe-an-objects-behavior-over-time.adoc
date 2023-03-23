@@ -1,0 +1,56 @@
+---
+permalink: howto/observe-an-objects-behavior-over-time.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede observar el comportamiento de un solo objeto para determinar si el objeto está funcionando dentro de los niveles operativos esperados. 
+---
+= Observe el comportamiento de un objeto a lo largo del tiempo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede observar el comportamiento de un solo objeto para determinar si el objeto está funcionando dentro de los niveles operativos esperados.
+
+
+
+== Pasos
+
+. Utilice una consulta para identificar la VM que será objeto de análisis: *Consulta* > *+ Nueva consulta* > *máquina virtual* > *"nombre"*
++
+Si se deja el campo de nombre en blanco, se devuelven todas las máquinas virtuales. Seleccione la máquina virtual que desee utilizar en este ejercicio. Puede seleccionarla desplazando por la lista de máquinas virtuales.
+
+. Cree un nuevo panel para la información que desee recopilar. En la barra de herramientas, haga clic en *Paneles* > *+Nuevo panel*.
+. En el nuevo panel, seleccione *variable* > *texto*.
++
+.. Añada el nombre de la máquina virtual de su consulta como``$var1`` valor.
+.. Haga clic en la casilla de verificación.
+
+
++
+La variable se utiliza para intercambiar fácilmente entre diferentes conjuntos de objetos que desea analizar. En otros pasos del análisis, es posible que reutilice esta variable para realizar análisis adicionales con respecto al único equipo virtual elegido inicialmente. Las variables resultan más útiles al identificar varios objetos.
+
+. Añada un widget de gráfico de líneas al nuevo panel: *Widget* > *Diagrama de líneas*.
++
+.. Cambie el tipo de activo predeterminado a máquina virtual: Haga clic en *máquina virtual* > *latencia-total*.
+.. Haga clic en *filtro por* > *Nombre* > *$var1*.
+.. Cambie el período de tiempo en el tablero de instrumentos: *Omitir tiempo en el tablero de mandos* > *On* > *7 días*.
+
+
++
+Puede cambiar la duración de la pantalla utilizando cualquiera de las selecciones predeterminadas o especificando un intervalo de tiempo personalizado.
+
++
++ el panel muestra el *IOPS-total* del equipo virtual durante el período de tiempo especificado.
+
+. Asigne un nombre al widget y guarde el widget.
+
+
+
+
+== Resultados
+
+Su widget debe contener datos similares a los siguientes: image:../media/guid-e7ea8edf-7fcc-4fc8-bd87-d8030e85a988.gif[""]
+
+La máquina virtual muestra un período de latencia anormalmente alta durante un corto período de tiempo en los 7 días que se muestran.

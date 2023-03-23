@@ -1,0 +1,60 @@
+---
+permalink: config-admin/understanding-this-variables.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Las variables especiales de la página personalizable "datos adicionales" de un activo le permiten mostrar fácilmente información adicional directamente relacionada con el activo actual.' 
+---
+= Entender las variables “$this”
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las variables especiales de la página personalizable "datos adicionales" de un activo le permiten mostrar fácilmente información adicional directamente relacionada con el activo actual.
+
+
+
+== Acerca de esta tarea
+
+Para utilizar las variables « »$this» en widgets de la página de inicio personalizable de su activo, siga estos pasos. En este ejemplo, añadiremos un widget de tabla.
+
+[NOTE]
+====
+las variables « »$this» solo son válidas para la página de destino personalizable de un activo. No están disponibles para otros paneles de Insight. Las variables disponibles « »$this» varían en función del tipo de activo.
+
+====
+
+
+== Pasos
+
+. Desplácese a una página de activos para obtener un activo de su elección. Para este ejemplo, vamos a elegir una página de activos de máquinas virtuales (VM). Consultar o buscar una máquina virtual y hacer clic en el enlace para ir a la página de activos de esa máquina virtual.
++
+Se abre la página de activos para la máquina virtual.
+
+. Haga clic en la lista desplegable *Cambiar vista:* > *datos adicionales de la máquina virtual* para ir a la página de destino personalizable de ese activo.
+. Haga clic en el botón *Widget* y elija *widget de tabla*.
++
+Se abre el widget Table para su edición. De forma predeterminada, todos los almacenamientos se muestran en la tabla.
+
+. Queremos mostrar todas las máquinas virtuales. Haga clic en el selector de activos y cambie *almacenamiento* a *máquina virtual*.
++
+Ahora todos los equipos virtuales se muestran en la tabla.
+
+. Haga clic en el botón *selector de columna*image:../media/column-picker-button.gif[""]y agregue el campo *nombre del hipervisor* a la tabla.
++
+El nombre del hipervisor se muestra para cada máquina virtual de la tabla.
+
+. Solo nos preocupamos por el hipervisor que aloja la máquina virtual actual. Haga clic en el botón *filtro por* del campo**+**y seleccione *nombre de hipervisor*.
+. Haga clic en *Any* y seleccione la variable *$this.host.name*. Haga clic en el botón de comprobación para guardar el filtro.
++
+image::../media/variable-this-example-1.gif[variable este ejemplo 1]
+
+. Ahora la tabla muestra todas las máquinas virtuales alojadas por el hipervisor actual de la máquina virtual. Haga clic en *Guardar*.
+
+
+
+
+== Resultados
+
+La tabla que haya creado para esta página de activos de máquina virtual se mostrará en la página de activos de máquina virtual que muestre. El uso de la variable *$this.host.name* en el widget significa que sólo se mostrará en la tabla el hipervisor del equipo virtual propiedad del activo actual.

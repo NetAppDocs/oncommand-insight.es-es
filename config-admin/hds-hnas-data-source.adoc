@@ -1,0 +1,145 @@
+---
+permalink: config-admin/hds-hnas-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'El origen de datos NAS \(Hnas\) de HDS es una fuente de datos de inventario y configuración para admitir el descubrimiento de clústeres NAS de HDS. Insight admite la detección de recursos compartidos de NFS y CIFS, sistemas de archivos \(Insight Internal Volumes\) y abarca \(Insight Storage Pools\).' 
+---
+= Fuente de datos NAS (Hnas) de HDS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El origen de datos NAS de HDS (HNAS) es una fuente de datos de inventario y configuración para admitir la detección de clústeres NAS de HDS. Insight admite la detección de recursos compartidos de NFS y CIFS, sistemas de archivos (volúmenes internos de Insight) y duraciones (pools de almacenamiento de Insight).
+
+Este origen de datos está basado en SSH, por lo que la unidad de adquisición que la alojará debe poder iniciar sesiones SSH a TCP 22 en el Hnas mismo o la Unidad de Gestión de sistemas (SMU) a la que está conectado el clúster.
+
+
+
+== Terminología
+
+OnCommand Insight adquiere la siguiente información de inventario del origen de datos Hnas. Para cada tipo de activo que adquiere Insight, se muestra la terminología más común utilizada en este activo. Al ver o solucionar problemas de este origen de datos, tenga en cuenta la siguiente terminología:
+
+|===
+
+
+| Plazo del proveedor/modelo | Insight plazo 
+
+
+ a| 
+Nivel
+ a| 
+Grupo de discos
+
+
+
+ a| 
+Clúster
+ a| 
+Reducida
+
+
+
+ a| 
+Nodo
+ a| 
+Nodo de almacenamiento
+
+
+
+ a| 
+Capacidad de expansión
+ a| 
+Pool de almacenamiento
+
+
+
+ a| 
+Sistema de archivos
+ a| 
+Volumen interno
+
+|===
+[NOTE]
+====
+Estos son sólo mapas terminológicos comunes y es posible que no representen todos los casos de este origen de datos.
+
+====
+
+
+== Requisitos
+
+A continuación, se enumeran los requisitos para configurar y utilizar este origen de datos:
+
+* Dirección IP del dispositivo
+* Puerto 22, protocolo SSH
+* Nombre de usuario y contraseña - nivel de privilegio: Supervisor
+* NOTA: Este recopilador de datos está basado en SSH, por lo que la unidad principal que la aloja debe ser capaz de iniciar sesiones SSH a TCP 22 en el propio Hnas o la unidad de administración de sistemas (SMU) a la que está conectado el clúster.
+
+
+[NOTE]
+====
+Este recopilador de datos está basado en SSH, por lo que la unidad de datos que la aloja debe ser capaz de iniciar sesiones SSH a TCP 22 en el propio Hnas o la unidad de administración de sistemas (SMU) a la que está conectado el clúster.
+
+====
+
+
+== Configuración
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Host Hnas
+ a| 
+Dirección IP o nombre de dominio completo del host de gestión Hnas
+
+
+
+ a| 
+Nombre de usuario
+ a| 
+Nombre de usuario de Hnas CLI
+
+
+
+ a| 
+Contraseña
+ a| 
+Contraseña usada para Hnas CLI
+
+|===
+
+
+== Configuración avanzada
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Intervalo de sondeo de inventario (mín.)
+ a| 
+Intervalo entre sondeos de inventario (predeterminado 30 minutos)
+
+
+
+ a| 
+Tiempo de espera del banner SSH (s)
+ a| 
+Tiempo de espera del banner SSH (15 segundos predeterminado)
+
+
+
+ a| 
+Tiempo de espera de comando SSH (s)
+ a| 
+Tiempo de espera de comando SSH (predeterminado 30 segundos)
+
+|===

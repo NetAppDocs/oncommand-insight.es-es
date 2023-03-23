@@ -1,0 +1,20 @@
+---
+permalink: config-admin/topology.html 
+sidebar: sidebar 
+keywords:  
+summary: La sección Topology, si la aplicación se aplica a un activo, permite ver cómo está conectado un activo base con sus activos relacionados. 
+---
+= Topología
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La sección Topology, si corresponde a un activo, le permite ver cómo está conectado un activo base con sus activos relacionados.
+
+A continuación, se muestra un ejemplo de lo que puede aparecer en la sección Topology de una página de activos de máquinas virtuales.
+
+image::../media/topology-section.gif[sección de topología]
+
+Si la topología del activo es mayor de lo que cabe en la sección, se muestra en su lugar el enlace *haga clic para ver el hipervínculo topolog*.

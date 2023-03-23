@@ -1,0 +1,27 @@
+---
+permalink: install-windows/uninstalling-the-anomaly-detection-engine-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede desinstalar el motor de detección de anomalías cuando ya no lo necesite. 
+---
+= Desinstalación del motor de detección de anomalías
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede desinstalar el motor de detección de anomalías cuando ya no lo necesite.
+
+
+
+== Pasos
+
+. Inicie sesión en el servidor donde instaló el software del motor de detección de anomalías, usando una cuenta con privilegios sudo.
+. Asegúrese de que todas las ventanas de OnCommand Insight están cerradas.
+. Puede ver la sintaxis, los argumentos de comandos y el uso de los parámetros para `uninstall.sh` introduzca el comando siguiente: `sudo /usr/bin/oci-prelert-uninstall.sh --help`
+. Escriba el siguiente comando: `sudo /usr/bin/oci-prelert-uninstall.sh`
++
+Se ejecuta el script de desinstalación. Siga las indicaciones.
+
+

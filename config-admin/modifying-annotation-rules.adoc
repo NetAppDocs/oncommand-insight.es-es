@@ -1,0 +1,38 @@
+---
+permalink: config-admin/modifying-annotation-rules.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede modificar una regla de anotación para cambiar el nombre de la regla, su anotación, el valor de la anotación o la consulta asociada con la regla. 
+---
+= Modificación de reglas de anotación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede modificar una regla de anotación para cambiar el nombre de la regla, su anotación, el valor de la anotación o la consulta asociada con la regla.
+
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web de OnCommand Insight.
+. Haga clic en *Administrar* y seleccione *Reglas de anotación*.
++
+La página Reglas de anotación muestra la lista de reglas de anotación existentes.
+
+. Busque la regla que desea modificar:
++
+** En la página Reglas de anotación, puede filtrar las reglas de anotación introduciendo un valor en el cuadro de filtro.
+** Haga clic en un número de página para examinar las reglas de anotación por página si hay más reglas que ajustar en una página.
+
+
+. Realice una de las siguientes acciones para visualizar el cuadro de diálogo *Editar regla*:
++
+** Si se encuentra en la página Reglas de anotación, coloque el cursor sobre la regla de anotación y haga clic en image:../media/edit-annotation-icon.gif[""].
+** Si se encuentra en una página de activos, coloque el cursor sobre la anotación asociada con la regla, coloque el cursor sobre el nombre de la regla cuando aparezca y, a continuación, haga clic en el nombre de la regla.
+
+
+. Realice los cambios necesarios y haga clic en *Guardar*.
+

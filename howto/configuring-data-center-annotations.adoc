@@ -1,0 +1,73 @@
+---
+permalink: howto/configuring-data-center-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: La anotación del centro de datos se suele utilizar para asociar un activo de host físico, switch o cabina de almacenamiento a una ubicación de centro de datos. También puede optar por asociar la anotación del centro de datos a otros activos del entorno. 
+---
+= Configuración de anotaciones del centro de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La anotación del centro de datos se suele utilizar para asociar un activo de host físico, switch o cabina de almacenamiento a una ubicación de centro de datos. También puede optar por asociar la anotación del centro de datos a otros activos del entorno.
+
+Pasos:
+
+* Inicie sesión en Insight como usuario con permisos administrativos.
+* Seleccione *gestionar* > *Anotaciones*.
+* Elija la anotación *Data Center* y haga clic en el icono *Editar*.
+* Haga clic en *+Add* y agregue el nombre y la descripción del primer centro de datos a la lista de anotaciones.
+* Haga lo mismo con el resto de sus centros de datos.
+* Cuando termine, haga clic en *Guardar*.
+
+
+Anotaciones del centro de datos de ejemplo:
+
+|===
+
+
+| Nombre | Descripción 
+
+
+ a| 
+CD1_SVL
+ a| 
+Edificio 1 de Sunnyvale
+
+
+
+ a| 
+DC2_SVLb3
+ a| 
+SVL Bldg3 es
+
+
+
+ a| 
+DC3_NY
+ a| 
+Nueva York
+
+
+
+ a| 
+DC4_Londres
+ a| 
+Londres
+
+
+
+ a| 
+...
+ a| 
+
+|===
+Insight incluye varios tipos de anotaciones listas para usar que permiten a los usuarios definir o modificar valores para adaptarlos a sus necesidades. Estos tipos de anotación predeterminados siempre estarán disponibles para la interfaz de usuario web de Insight, así como para la creación de informes. Las anotaciones personalizadas recién creadas están visibles en la interfaz de usuario web de Insight, pero se necesitan medidas adicionales para que estén disponibles para los informes. Para obtener información sobre la inclusión de anotaciones personalizadas en los informes. Póngase en contacto con el representante del soporte al cliente de NetApp.
+
+[NOTE]
+====
+Algunos usuarios pueden utilizar la anotación Country para establecer ubicaciones de activos, en lugar de la anotación del Centro de datos o junto con ella. Sin embargo, debe tener en cuenta que la anotación Country se trata como un tipo de anotación personalizada en el almacén de datos de Insight y, por lo tanto, es posible que no aparezca en los informes con la misma granularidad que el centro de datos.
+
+====

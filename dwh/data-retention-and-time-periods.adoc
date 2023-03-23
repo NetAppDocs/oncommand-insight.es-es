@@ -1,0 +1,100 @@
+---
+permalink: dwh/data-retention-and-time-periods.html 
+sidebar: sidebar 
+keywords:  
+summary: 'El almacén de datos OnCommand Insight conserva los datos obtenidos del proceso extraer, transformar y cargar \(ETL\) durante diferentes periodos de tiempo basados en los diferentes data marts y la granularidad de tiempo de los datos.' 
+---
+= Conservación de datos, ETL y periodos de tiempo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El almacén de datos OnCommand Insight conserva los datos obtenidos del proceso de extracción, transformación y carga (ETL) durante diferentes periodos de tiempo basados en los diferentes data marts y la granularidad de tiempo de los datos.
+
+
+
+== Marcadores de rendimiento y granularidad horaria para volúmenes y volúmenes internos
+
+El almacén de datos OnCommand Insight registra los promedios por hora, los máximos por hora y el bit de acceso por cada hora del día (24 puntos de datos) durante 14 días. El bit de acceso es un valor booleano que es true si se accede al volumen o false si no se accede al volumen durante el intervalo por horas. Los 24 puntos de datos del día anterior se obtienen durante el primer proceso ETL del día.
+
+No es necesario ejecutar un proceso ETL por hora para recopilar los puntos de datos por hora. La ejecución de procesos ETL adicionales durante el día no obtiene ninguna información de rendimiento de los servidores OnCommand Insight.
+
+
+
+== Marcadores de rendimiento y granularidad diaria para volúmenes y volúmenes internos
+
+Cada día en que se procesa la ETL, los promedios diarios para el día anterior se calculan y se rellenan en el almacén de datos. La media diaria es un resumen de los 24 puntos de datos del día anterior. Los mercados de datos de rendimiento mantienen resúmenes diarios para volúmenes y volúmenes internos durante 13 meses.
+
+
+
+== Marts de capacidad y granularidad diaria
+
+Los marts de capacidad proporcionan mediciones diarias para diversos datos de capacidad sobre una base diaria durante un período de 13 meses. Los datos sobre la capacidad del almacén de datos son actuales a partir de la última adquisición de la fuente de datos para el dispositivo anterior a la ETL.
+
+
+
+== Marts de capacidad y granularidad mensual
+
+El almacén de datos conserva los datos de capacidad diarios durante 13 meses. Una vez alcanzado el umbral de 13 meses, los datos de capacidad se resumen mensualmente. Los datos mensuales se basan en los valores reflejados por la fecha que corresponde a la fecha del representante del mes.
+
+La siguiente tabla muestra los datos mensuales que se incluyen en el resumen mensual:
+
+|===
+
+
+| Fecha | Es el valor del representante mensual | Capacidad asignada 
+
+
+ a| 
+1 de enero
+ a| 
+1 (Verdadero)
+ a| 
+50 TB
+
+
+
+ a| 
+Ene 2
+ a| 
+0 (Falso)
+ a| 
+52 TB
+
+
+
+ a| 
+...
+ a| 
+...
+ a| 
+...
+
+
+
+ a| 
+Ene 31
+ a| 
+0 (Falso)
+ a| 
+65 TB
+
+
+
+ a| 
+1 de febrero
+ a| 
+1 (Verdadero)
+ a| 
+65 TB
+
+|===
+Según el cuadro, un informe mensual mostraría 50 TB asignados para enero y 65 TB asignados para febrero. Todos los demás valores de capacidad de enero no se incluirán en el resumen mensual.
+
+
+
+== Inventario inteligente
+
+El data Mart de inventario no es histórico. Cada vez que se ejecuta un proceso ETL, se borra y vuelve a crear el mercado de inventario. Por lo tanto, cualquier informe generado a partir de Inventory Mart no refleja la configuración de inventario histórica.

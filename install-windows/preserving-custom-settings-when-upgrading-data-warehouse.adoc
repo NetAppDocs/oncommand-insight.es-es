@@ -1,0 +1,16 @@
+---
+permalink: install-windows/preserving-custom-settings-when-upgrading-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: La configuración personalizada de Cognos, como la configuración de correo electrónico SMTP no predeterminada, no se realiza automáticamente una copia de seguridad como parte de una actualización de Data Warehouse. Debe documentar manualmente y restaurar la configuración personalizada después de una actualización. 
+---
+= Conservando la configuración personalizada de Cognos durante una actualización de Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La configuración personalizada de Cognos, como la configuración de correo electrónico SMTP no predeterminada, no se realiza automáticamente una copia de seguridad como parte de una actualización de Data Warehouse. Debe documentar manualmente y restaurar la configuración personalizada después de una actualización.
+
+Antes de actualizar Data Warehouse, prepare una lista de comprobación con cualquier configuración personalizada de Cognos que desee conservar y revise la lista antes de actualizar el sistema. Una vez finalizada la actualización, puede restaurar los valores manualmente para devolverlos a los ajustes de la configuración original.

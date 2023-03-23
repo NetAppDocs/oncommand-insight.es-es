@@ -1,0 +1,231 @@
+---
+permalink: config-admin/metric-definitions.html 
+sidebar: sidebar 
+keywords:  
+summary: La sección Vista de experto de una página de activos muestra varias métricas en función del período de tiempo seleccionado para el activo. Cada métrica se muestra en su propio gráfico de rendimiento. Puede agregar o quitar métricas y activos relacionados de los gráficos en función de los datos que desee ver. 
+---
+= Definiciones de métricas de Expert View
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La sección Vista de experto de una página de activos muestra varias métricas en función del período de tiempo seleccionado para el activo. Cada métrica se muestra en su propio gráfico de rendimiento. Puede agregar o quitar métricas y activos relacionados de los gráficos en función de los datos que desee ver.
+
+|===
+
+
+| Métrico | Descripción 
+
+
+ a| 
+BB Credit Zero Rx, Tx
+ a| 
+Número de veces que el recuento de créditos de búfer a búfer de recepción/transmisión pasó a cero durante el período de muestreo. Esta métrica representa el número de veces que el puerto conectado tuvo que dejar de transmitir porque este puerto estaba fuera de créditos para proporcionar.
+
+
+
+ a| 
+BB duración cero de crédito Tx
+ a| 
+Tiempo en milisegundos durante el cual el crédito de transmisión BB fue cero durante el intervalo de muestreo.
+
+
+
+ a| 
+Proporción de aciertos de caché (total, lectura, escritura) %
+ a| 
+Porcentaje de solicitudes que provocan aciertos en caché. Cuanto mayor sea el número de aciertos en comparación con el acceso al volumen, mejor será el rendimiento. Esta columna está vacía para las cabinas de almacenamiento que no recopilan información de acierto en caché.
+
+
+
+ a| 
+Uso de caché (total) %
+ a| 
+Porcentaje total de solicitudes de caché que producen aciertos en caché
+
+
+
+ a| 
+Clase 3 descarta
+ a| 
+Recuento de descartes de transporte de datos de clase 3 de Fibre Channel.
+
+
+
+ a| 
+% De uso de CPU (total)
+ a| 
+Cantidad de recursos de CPU utilizados activamente, como porcentaje del total disponible (en todas las CPU virtuales).
+
+
+
+ a| 
+Error de CRC
+ a| 
+Número de tramas con comprobaciones de redundancia cíclicas no válidas (CRCs) detectadas por el puerto durante el período de muestreo
+
+
+
+ a| 
+Velocidad de fotogramas
+ a| 
+Velocidad de transmisión de fotogramas por segundo (FPS)
+
+
+
+ a| 
+Promedio de tamaño de cuadro (Rx, Tx)
+ a| 
+Relación entre el tráfico y el tamaño del fotograma. Esta métrica le permite identificar si hay alguna estructura general.
+
+
+
+ a| 
+Tamaño del marco demasiado largo
+ a| 
+El número de tramas de transmisión de datos de Fibre Channel es demasiado largo.
+
+
+
+ a| 
+Tamaño del marco demasiado corto
+ a| 
+El número de tramas de transmisión de datos de Fibre Channel es demasiado corto.
+
+
+
+ a| 
+Densidad de I/o (total, lectura, escritura)
+ a| 
+Número de IOPS dividido por la capacidad usada (tal como se adquirió de la encuesta de inventario más reciente del origen de datos) para el volumen, el volumen interno o el elemento de almacenamiento. Medida en el número de operaciones de I/o por segundo por TB.
+
+
+
+ a| 
+IOPS (total, lectura, escritura)
+ a| 
+Número de solicitudes de servicio de I/o de lectura/escritura que pasan por el canal de I/o o o una parte de ese canal por unidad de tiempo (medidas en I/o por segundo)
+
+
+
+ a| 
+Rendimiento de IP (total, lectura, escritura)
+ a| 
+Total: Velocidad agregada a la que se transmitieron y recibieron datos IP en megabytes por segundo. Read: Rendimiento de IP (recibir): Tasa media a la que se recibieron los datos de IP en megabytes por segundo.
+
+Write: Rendimiento IP (transmisión): Velocidad media a la que se transmiten los datos IP en megabytes por segundo.
+
+
+
+ a| 
+Latencia (total, lectura, escritura)
+ a| 
+Latencia (I+W): Tasa a la que se leen o se escriben los datos en las máquinas virtuales en un tiempo fijo. El valor se mide en megabytes por segundo.
+
+Latencia: Tiempo de respuesta medio de los equipos virtuales de un almacén de datos.
+
+Top latencia: El mayor tiempo de respuesta de las máquinas virtuales de un almacén de datos.
+
+
+
+ a| 
+Error de enlace
+ a| 
+Número de fallos de enlace detectados por el puerto durante el período de muestreo.
+
+
+
+ a| 
+Restablecer Rx, Tx
+ a| 
+El número de enlaces de recepción o transmisión se restablece durante el período de muestreo. Esta métrica representa el número de restablecimientos de enlace que emitió el puerto conectado a este puerto.
+
+
+
+ a| 
+Uso de memoria (total) %
+ a| 
+Umbral de la memoria utilizada por el host.
+
+
+
+ a| 
+R/W parcial (total) %
+ a| 
+Número total de veces que una operación de lectura/escritura cruza un límite de franja en cualquier módulo de disco en una LUN RAID 5, RAID 1/0 o RAID 0 en general, los pasos de franja no son beneficiosos, ya que cada uno requiere un I/o adicional Un porcentaje bajo indica un tamaño de elemento de franja eficiente y es un indicador de alineación incorrecta de un volumen (o un LUN de NetApp).
+
+Para CLARiiON, este valor es el número de cruces de franja dividido por el número total de IOPS.
+
+
+
+ a| 
+Errores de puerto
+ a| 
+Informe de errores de puerto durante el período de muestreo/período de tiempo dado.
+
+
+
+ a| 
+Recuento de pérdidas de señal
+ a| 
+Número de errores de pérdida de señal. Si se produce un error de pérdida de señal, no hay conexión eléctrica y existe un problema físico.
+
+
+
+ a| 
+Tasa de intercambio (tasa total, tasa en tasa, tasa de salida)
+ a| 
+Velocidad a la que se cambia la memoria, hacia fuera o ambos desde el disco a la memoria activa durante el período de muestreo. Este contador se aplica a las máquinas virtuales.
+
+
+
+ a| 
+Número de pérdidas de sincronización
+ a| 
+Cantidad de errores de pérdida de sincronización. Si se produce un error de pérdida de sincronización, el hardware no puede detectar el tráfico ni bloquearlo. Es posible que todos los equipos no utilicen la misma velocidad de datos, o que la óptica o las conexiones físicas puedan ser de mala calidad. El puerto debe resincronizar después de cada uno de estos errores, lo que afecta al rendimiento del sistema. Se mide en KB/s.
+
+
+
+ a| 
+Rendimiento (total, lectura, escritura)
+ a| 
+Velocidad a la que se transmiten, reciben o ambos datos en un tiempo fijo en respuesta a las solicitudes de servicio de I/o (medidas en MB por segundo).
+
+
+
+ a| 
+Tiempo de espera descartar tramas - Tx
+ a| 
+Recuento de tramas de transmisión descartadas causadas por el tiempo de espera.
+
+
+
+ a| 
+Velocidad de tráfico (total, lectura, escritura)
+ a| 
+Tráfico transmitido, recibido o ambos recibidos durante el período de muestreo, en mebibytes por segundo.
+
+
+
+ a| 
+Utilización del tráfico (total, lectura, escritura)
+ a| 
+Relación entre el tráfico recibido/transmitido/total y la capacidad de recepción/transmisión/total durante el período de muestreo.
+
+
+
+ a| 
+Porcentaje de utilización (total, lectura, escritura
+ a| 
+Porcentaje del ancho de banda disponible utilizado para la transmisión (Tx) y la recepción (Rx).
+
+
+
+ a| 
+Escritura pendiente (total)
+ a| 
+Número de solicitudes de servicio I/o de escritura pendientes.
+
+|===

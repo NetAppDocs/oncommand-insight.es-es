@@ -1,0 +1,48 @@
+---
+permalink: howto/collecting-snmp-integration-data.html 
+sidebar: sidebar 
+keywords:  
+summary: El origen de datos SNMP de integración le permite recopilar datos SNMP genéricos en OnCommand Insight. 
+---
+= Recogida de datos de integración de SNMP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El origen de datos SNMP de integración le permite recopilar datos SNMP genéricos en OnCommand Insight.
+
+
+
+== Paquetes de integración
+
+El origen de datos de integración SNMP utiliza un "'paquete de integración'" para definir qué valores de integración se recopilan y qué objetos SNMP proporcionan esos valores.
+
+Un paquete de integración consta de:
+
+* Un archivo de configuración JSON (Integration.json) define el contenido de la carga útil de integración en términos de objetos SNMP de un tipo de dispositivo específico (switch, enrutador, etc.).
+* Una lista de archivos MIB de los que depende el paquete de integración.
+
+
+Un paquete de integración puede definir varios tipos de datos. Por ejemplo, al integrar un host RHEL, se puede definir un tipo de datos para la información general del sistema, como el tiempo de actividad, el número de usuarios y el número de procesos en ejecución, se puede definir un segundo tipo de datos para los datos sobre la memoria y el uso del sistema de archivos. En general, cada tipo de datos debe ser "'flat'" y no puede contener datos anidados.
+
+Un único paquete de integración no debe definir más de 24 tipos de datos. Insight limita la cantidad de datos de integración que se recopilan. Si se intenta procesar más de 24 informes durante un período de un minuto, se produce un error de tasa.
+
+Los nombres de los tipos de integración deben respetar las siguientes reglas:
+
+* El nombre no puede comenzar con los siguientes caracteres: _, -, o,+
+* El nombre no puede contener los siguientes caracteres: #, \, /, *, ?, ", <, >, |, ' , ',
+* No puede tener más de 100 bytes codificados UTF-8
+* No se puede denominarse . o ..
+
+
+
+
+== Formato de archivo de integración
+
+Un paquete de integración es un archivo ZIP que contiene un archivo de configuración JSON (Integration.json) para definir el contenido de la carga útil de integración en términos de objetos SNMP. También contiene una carpeta MIB que contiene todos los archivos MIB y sus dependencias en MIB.
+
+La `integration.json` El archivo debe existir en el nivel superior del archivo ZIP y los archivos MIB deben existir en el subdirectorio "resources/mibs" dentro del ZIP. El archivo ZIP también puede contener archivos, como "readme.txt", si lo desea. Un ejemplo de integración estructura ZIP es:
+
+image::../media/integration-zip.gif[cremallera de integración]

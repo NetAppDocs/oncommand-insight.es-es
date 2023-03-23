@@ -1,0 +1,207 @@
+---
+permalink: config-admin/3par-inserv-firmware-ssh-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight utiliza la fuente de datos 3PAR InServ \(firmware 2.2.2+, SSH\) para descubrir el inventario de cabinas de almacenamiento de HP 3PAR StoreServ.' 
+---
+= Origen de datos de 3PAR InServ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight usa el origen de datos InServ (firmware 2.2.2+, SSH) de 3PAR para descubrir el inventario de cabinas de almacenamiento StoreServ de HP 3PAR.
+
+
+
+== Terminología
+
+OnCommand Insight adquiere la siguiente información de inventario del origen de datos de 3PAR InServ. Para cada tipo de activo que adquiere Insight, se muestra la terminología más común utilizada en este activo. Al ver o solucionar problemas de este origen de datos, tenga en cuenta la siguiente terminología:
+
+|===
+
+
+| Plazo del proveedor/modelo | Insight plazo 
+
+
+ a| 
+Disco físico
+ a| 
+Disco
+
+
+
+ a| 
+Sistema de almacenamiento
+ a| 
+Reducida
+
+
+
+ a| 
+Nodo de controladoras
+ a| 
+Nodo de almacenamiento
+
+
+
+ a| 
+Grupo de aprovisionamiento común
+ a| 
+Pool de almacenamiento
+
+
+
+ a| 
+Volumen virtual
+ a| 
+Volumen
+
+|===
+[NOTE]
+====
+Estos son sólo mapas terminológicos comunes y es posible que no representen todos los casos de este origen de datos.
+
+====
+
+
+== Requisitos
+
+* La dirección IP o el FQDN del clúster InServ
+* Para inventario, nombre de usuario y contraseña de sólo lectura para InServ Server.
+* Para obtener rendimiento, nombre de usuario y contraseña de lectura y escritura en InServ Server.
+* Requisitos de puerto: 22 (colección de inventario), 5988 o 5989 (recopilación de rendimiento) [Nota: El rendimiento de 3PAR es compatible con InServ OS 3.x+]
+* Para la recogida del rendimiento, confirme que SMI-S está habilitado mediante el inicio de sesión en la cabina 3PAR por SSH.
+
+
+
+
+== Configuración
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+IP del clúster
+ a| 
+Dirección IP o nombre de dominio completo del clúster InServ
+
+
+
+ a| 
+Nombre de usuario
+ a| 
+Nombre de usuario del servidor InServ
+
+
+
+ a| 
+Contraseña
+ a| 
+Contraseña utilizada para InServ Server
+
+
+
+ a| 
+IP DEL HOST DE SMI-S.
+ a| 
+Dirección IP del host del proveedor SMI-S.
+
+
+
+ a| 
+Nombre de usuario de SMI-S.
+ a| 
+Nombre de usuario para el host del proveedor de SMI-S.
+
+
+
+ a| 
+Contraseña SMI-S.
+ a| 
+Contraseña utilizada para el host del proveedor SMI-S.
+
+|===
+
+
+== Configuración avanzada
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Intervalo de sondeo de inventario (mín.)
+ a| 
+Intervalo entre sondeos de inventario (predeterminado 40 minutos)
+
+
+
+ a| 
+Excluir dispositivos
+ a| 
+Lista separada por comas de IP de dispositivo que se van a excluir
+
+
+
+ a| 
+Tiempo de espera del proceso SSH (s)
+ a| 
+Tiempo de espera del proceso SSH (60 segundos predeterminado)
+
+
+
+ a| 
+Número de reintentos SSH
+ a| 
+Número de intentos de reintento de SSH
+
+
+
+ a| 
+Tiempo de espera del banner SSH (s)
+ a| 
+Tiempo de espera del banner SSH (20 segundos predeterminado)
+
+
+
+ a| 
+Puerto SMI-S.
+ a| 
+Puerto que utiliza el host del proveedor SMI-S.
+
+
+
+ a| 
+Protocolo
+ a| 
+Protocolo utilizado para conectar con el proveedor SMI-S.
+
+
+
+ a| 
+Espacio de nombres SMI-S.
+ a| 
+Espacio de nombres SMI-S.
+
+
+
+ a| 
+Intervalo de sondeo de rendimiento (s)
+ a| 
+Intervalo entre sondeos de rendimiento (predeterminado 300 segundos)
+
+
+
+ a| 
+Número de reintentos de conexión SMI-S.
+ a| 
+Número de intentos de reintento de conexión SMI-S.
+
+|===

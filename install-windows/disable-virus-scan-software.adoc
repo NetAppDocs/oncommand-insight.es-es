@@ -1,0 +1,18 @@
+---
+permalink: install-windows/disable-virus-scan-software.html 
+sidebar: sidebar 
+keywords:  
+summary: Si el software antivirus está activo en el sistema, se produce un error en la instalación de OnCommand Insight. Puede evitar este problema deshabilitando el software de análisis de virus antes de la instalación. 
+---
+= Desablación del software de detección de virus
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si el software antivirus está activo en el sistema, se produce un error en la instalación de OnCommand Insight. Puede evitar este problema deshabilitando el software de análisis de virus antes de la instalación.
+
+Para evitar un fallo de instalación debido al software de análisis antivirus activo, durante la instalación de cada componente de OnCommand Insight, debe desactivar por completo todos los análisis de virus. Tras la instalación, las rutas utilizadas por el componente de Insight (rutas de instalación, copia de seguridad y archivado) deben excluirse del análisis de virus.
+
+Además, debe excluir la carpeta IBM/DB2 (por ejemplo, _C:\Archivos de programa\IBM\DB2_) de la exploración antivirus tras la instalación.

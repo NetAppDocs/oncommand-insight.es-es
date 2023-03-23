@@ -1,0 +1,22 @@
+---
+permalink: dwh/backing-up-custom-reports-and-report-artifacts.html 
+sidebar: sidebar 
+keywords:  
+summary: Si ha creado informes personalizados en una versión de Insight anterior a 7.0 y desea actualizar a la versión más reciente de Insight, debe realizar un backup de los informes y generar informes de los artefactos antes de la instalación de la actualización y restaurarlos después de la instalación de la actualización. También debe prestar atención a las carpetas que está utilizando para almacenar artefactos de informe. 
+---
+= Realizar copias de seguridad de informes personalizados y artefactos de informes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si ha creado informes personalizados en una versión de Insight anterior a 7.0 y desea actualizar a la versión más reciente de Insight, debe realizar un backup de los informes y generar informes de los artefactos antes de la instalación de la actualización y restaurarlos después de la instalación de la actualización. También debe prestar atención a las carpetas que está utilizando para almacenar artefactos de informe.
+
+
+
+== Acerca de esta tarea
+
+Si ha realizado cambios en los informes prediseñados, cree sus propias copias de dichos informes en una carpeta independiente. De esa manera, cuando actualice los artefactos prediseñados, no sobrescribirá los cambios.
+
+Si tiene informes en el área Mis carpetas, debe copiarlos en las carpetas Informes personalizados para que no se pierdan.

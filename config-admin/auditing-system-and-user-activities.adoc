@@ -1,0 +1,107 @@
+---
+permalink: config-admin/auditing-system-and-user-activities.html 
+sidebar: sidebar 
+keywords:  
+summary: Si desea localizar cambios inesperados, puede ver un registro de auditoría del sistema OnCommand Insight y sus actividades de usuario. Los mensajes de registro de auditoría pueden enviarse de manera opcional a syslog, además de mostrarse en la página auditoría. 
+---
+= Auditar las actividades del sistema y del usuario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si desea localizar cambios inesperados, puede ver un registro de auditoría del sistema OnCommand Insight y sus actividades de usuario. Los mensajes de registro de auditoría pueden enviarse de manera opcional a syslog, además de mostrarse en la página auditoría.
+
+
+
+== Acerca de esta tarea
+
+Insight genera entradas de auditoría para las actividades de cualquier usuario que afecten a la red de almacenamiento o a su gestión, incluido lo siguiente:
+
+* Inicio de sesión
+* Autorizar o anular la autorización de un camino
+* Actualizar una ruta autorizada
+* Establecimiento de umbrales o políticas globales
+* Agregar o quitar un origen de datos
+* Iniciar o detener un origen de datos
+* Actualizando las propiedades del origen de datos
+* Agregar, editar o eliminar una tarea
+* Eliminación de un grupo de aplicaciones
+* Identificar o cambiar la identificación de un dispositivo
+* Cree un usuario
+* Eliminar un usuario
+* Cambio de rol de usuario
+* Modificar un usuario (Guest à Admin)
+* Cierre de sesión de un usuario (cierre de sesión forzado o cierre de sesión manual)
+* Eliminación de una unidad de adquisición
+* Actualizar licencia
+* Habilitar backup
+* Desactivando copia de seguridad
+* Cuando se habilita ASUP (se informa del proxy en la misma página en el registro de auditoría)
+* Si se deshabilita ASUP (se informa sobre la deshabilitación de proxy en la misma página en el registro de auditoría)
+* Seguridad: Vuelva a introducir la clave, cambie las contraseñas del sistema.
+* Eliminación/adición de anotaciones en activos
+* Inicio/cierre de sesión del usuario de CAC
+* Tiempo de espera de sesión de usuario de CAC
+
+
+
+
+== Pasos
+
+. Abra Insight en su navegador.
+. Haga clic en *Admin* y seleccione *Auditoría*.
++
+La página Auditoría muestra las entradas de auditoría en una tabla.
+
+. Se pueden ver los siguientes detalles en la tabla:
++
+** *Tiempo*
++
+Fecha y hora en la que se realizaron los cambios
+
+** *Usuario*
++
+Nombre del usuario asociado a la entrada de auditoría
+
+** *Rol*
++
+Rol de la cuenta de usuario, que es invitado, usuario o administrador
+
+** *IP*
++
+Dirección IP asociada con la entrada de auditoría
+
+** *Acción*
++
+Tipo de actividad en la entrada de auditoría
+
+** *Detalles*
++
+Detalles de la entrada de auditoría
+
++
+Si hay una actividad del usuario que afecta a un recurso, como un origen de datos o una aplicación, los detalles incluyen un enlace a la página de destino del recurso.
+
++
+[NOTE]
+====
+Cuando se elimina un origen de datos, los detalles de la actividad del usuario relacionados con el origen de datos ya no contienen un enlace a la página de destino del origen de datos.
+
+====
+
+
+. Puede mostrar las entradas de auditoría eligiendo un período de tiempo determinado (1 hora, 3 horas, 24 horas, 3 días y 7 días), Insight muestra un número máximo de 1000 infracciones durante el período de tiempo seleccionado.
++
+Puede hacer clic en un número de página debajo de la tabla para examinar los datos por página si hay más datos que se ajustan en una sola página.
+
+. Para cambiar el orden de clasificación de las columnas de una tabla a ascendente (flecha arriba) o descendente (flecha abajo), haga clic en la flecha del encabezado de la columna; para volver al orden predeterminado, haga clic en cualquier otro encabezado de columna.
++
+De forma predeterminada, la tabla muestra las entradas en orden descendente.
+
+. Puede utilizar el cuadro *filtro* para mostrar sólo las entradas que desee en la tabla.
++
+Para ver sólo las entradas de auditoría del usuario `izzyk`, escriba `izzyk` en el cuadro *filtro*.
+
+

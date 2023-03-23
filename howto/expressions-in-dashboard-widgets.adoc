@@ -1,0 +1,16 @@
+---
+permalink: howto/expressions-in-dashboard-widgets.html 
+sidebar: sidebar 
+keywords:  
+summary: Las expresiones en los widgets de series temporales le permiten visualizar datos basados en cálculos con las métricas que elija. 
+---
+= Expresiones en los widgets del panel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las expresiones en los widgets de series temporales le permiten visualizar datos basados en cálculos con las métricas que elija.
+
+En un panel, cualquier widget de serie temporal (línea, spline, área, área apilada) permite crear expresiones a partir de las métricas que elija y mostrar el resultado de esas expresiones en un único gráfico. Los ejemplos siguientes utilizan expresiones para resolver problemas específicos. En el primer ejemplo, queremos mostrar IOPS de lectura como un porcentaje de IOPS total para todos los activos de almacenamiento de nuestro entorno. El segundo ejemplo nos da visibilidad de las IOPS de «sistema» o «sobrecarga» que se producen en nuestro entorno, aquellas IOPS que no son de lectura ni escritura de datos.

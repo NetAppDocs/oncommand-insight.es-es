@@ -1,0 +1,22 @@
+---
+permalink: dwh/accessing-the-reporting-portal.html 
+sidebar: sidebar 
+keywords:  
+summary: Desde el portal de almacén de datos, puede acceder al Portal de informes, donde puede crear informes personalizados con herramientas de creación de informes como Workspace Advanced e Report Studio. 
+---
+= Acceso al Portal de informes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Desde el portal de almacén de datos, puede acceder al Portal de informes, donde puede crear informes personalizados con herramientas de creación de informes como Workspace Advanced e Report Studio.
+
+
+
+== Pasos
+
+. En la barra de herramientas almacén de datos, haga clic en image:../media/oci-reporting-portal-icon.gif[""] Para abrir el Portal de informes de Insight.
+. Introduzca su nombre de usuario y contraseña y haga clic en *Login*.
+

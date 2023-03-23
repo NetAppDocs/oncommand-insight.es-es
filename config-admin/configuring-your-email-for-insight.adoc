@@ -1,0 +1,39 @@
+---
+permalink: config-admin/configuring-your-email-for-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Si sus usuarios desean recibir informes de Insight en sus cuentas de correo electrónico, debe configurar su servidor de correo electrónico para habilitar esta función. 
+---
+= Configuración de su correo electrónico para Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si sus usuarios desean recibir informes de Insight en sus cuentas de correo electrónico, debe configurar su servidor de correo electrónico para habilitar esta función.
+
+
+
+== Pasos
+
+. En la barra de herramientas Insight, haga clic en *Admin* y seleccione *Notificaciones*.
+. Desplácese hasta la sección *correo electrónico* de la página.
+. En el cuadro *servidor* , escriba el nombre del servidor SMTP de su organización, que se identifica mediante un nombre de host o una dirección IP (_nnn.nnn.nnn.nnn.nnn_ formato).
++
+Si especifica un nombre de host, asegúrese de que el nombre se puede resolver mediante DNS.
+
+. En el cuadro *Nombre de usuario*, introduzca su nombre de usuario.
+. En el cuadro *Contraseña*, introduzca la contraseña para acceder al servidor de correo electrónico, que sólo es necesaria si el servidor SMTP está protegido mediante contraseña. Esta es la misma contraseña que utiliza para iniciar sesión en la aplicación que le permite leer su correo electrónico. Si se requiere una contraseña, debe introducirla por segunda vez para la verificación.
+. En el cuadro *correo electrónico del remitente*, introduzca la cuenta de correo electrónico del remitente que se identificará como remitente en todos los informes de OnCommand Insight.
++
+Esta cuenta debe ser una cuenta de correo electrónico válida dentro de su empresa.
+
+. En el cuadro *firma de correo electrónico*, introduzca el texto que desea insertar en cada correo electrónico que se envíe.
+. En el cuadro destinatarios , haga clic en image:../media/add-email-recipient-icon.gif[""], Introduzca una dirección de correo electrónico y haga clic en *Aceptar*.
++
+Para editar una dirección de correo electrónico, seleccione la dirección y haga clic en image:../media/edit-recipient-icon.gif[""]. Para eliminar una dirección de correo electrónico, seleccione la dirección y haga clic en image:../media/delete-recipient-icon.gif[""].
+
+. Para enviar un correo electrónico de prueba a los destinatarios especificados, haga clic en image:../media/test-email-icon.gif[""].
+. Haga clic en *Guardar*.
+

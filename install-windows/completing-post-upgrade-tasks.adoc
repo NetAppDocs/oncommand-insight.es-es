@@ -1,0 +1,14 @@
+---
+permalink: install-windows/completing-post-upgrade-tasks.html 
+sidebar: sidebar 
+keywords:  
+summary: Tras actualizar a la versión más reciente de Insight, debe completar las tareas adicionales. 
+---
+= Finalización de las tareas posteriores a la actualización
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Tras actualizar a la versión más reciente de Insight, debe completar las tareas adicionales.

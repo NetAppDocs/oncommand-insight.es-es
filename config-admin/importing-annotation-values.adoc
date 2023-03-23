@@ -1,0 +1,171 @@
+---
+permalink: config-admin/importing-annotation-values.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Si mantiene anotaciones en objetos SAN \(como almacenamiento, hosts y máquinas virtuales\) en un archivo CSV, puede importar esa información a OnCommand Insight. Puede importar aplicaciones, entidades de negocio o anotaciones como Tier y Building.' 
+---
+= Importando valores de anotación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si mantiene anotaciones en objetos SAN (como almacenamiento, hosts y máquinas virtuales) en un archivo CSV, puede importar esa información a OnCommand Insight. Puede importar aplicaciones, entidades de negocio o anotaciones como Tier y Building.
+
+
+
+== Acerca de esta tarea
+
+Se aplican las siguientes reglas:
+
+* Si un valor de anotación está vacío, esa anotación se elimina del objeto.
+* Al anotar volúmenes o volúmenes internos, el nombre del objeto es una combinación de nombre de almacenamiento y nombre de volumen utilizando el guión y el separador de flecha (\->):
++
+[listing]
+----
+<storage_name>-><volume_name>
+----
+* Cuando se anota el almacenamiento, los conmutadores o los puertos, se omite la columna aplicación.
+* Las columnas de inquilino, línea_de_negocio, Unidad_Negocio y proyecto conforman una entidad de negocio.
++
+Cualquiera de los valores puede dejarse en blanco. Si una aplicación ya está relacionada con una entidad de negocio distinta de los valores de entrada, la aplicación se asigna a la nueva entidad de negocio.
+
+
+
+La utilidad de importación admite los siguientes tipos de objeto y claves:
+
+|===
+
+
+| Tipo | Clave 
+
+
+ a| 
+Host
+ a| 
+`+id-><id>+` o. `<Name>` o. `<IP>`
+
+
+
+ a| 
+MÁQUINA VIRTUAL
+ a| 
+`+id-><id>+` o. `<Name>`
+
+
+
+ a| 
+Del banco de almacenamiento
+ a| 
+`+id-><id>+` o. `<Storage_name>`\->``<Storage_Pool_name>``
+
+
+
+ a| 
+Volumen interno
+ a| 
+`+id-><id>+` o. `<Storage_name>`\->``<Internal_volume_name>``
+
+
+
+ a| 
+Volumen
+ a| 
+`+id-><id>+` o. `<Storage_name>`\->``<Volume_name>``
+
+
+
+ a| 
+Reducida
+ a| 
+`+id-><id>+` o. `<Name>` o. `<IP>`
+
+
+
+ a| 
+Conmutador
+ a| 
+`+id-><id>+` o. `<Name>` o. `<IP>`
+
+
+
+ a| 
+Puerto
+ a| 
+`+id-><id>+` o. `<WWN>`
+
+
+
+ a| 
+Share
+ a| 
+`+id-><id>+` o. `+<Storage Name>-><Internal Volume Name>-><Share Name>-><Protocol>+` [`+-><Qtree Name >+`]`<Qtree>` es opcional si hay un qtree predeterminado.
+
+
+
+ a| 
+Qtree
+ a| 
+`+id-><id>+` o. `+<Storage Name>-><Internal Volume Name>-><Qtree Name>+`
+
+|===
+El archivo CSV debe utilizar el formato siguiente:
+
+[listing]
+----
+, , <Annotation Type> [, <Annotation Type> ...]
+[, Application] [, Tenant] [, Line_Of_Business] [,
+Business_Unit] [, Project]
+
+<Object Type Value 1>, <Object Key 1>, <Annotation Value> [,
+<Annotation Value> ...] [, <Application>] [, <Tenant>] [,
+<Line_Of_Business>] [, <Business_Unit>] [, <Project>]
+
+...
+
+<Object Type Value N>, <Object Key N>, <Annotation Value> [,
+<Annotation Value> ...] [, <Application>] [, <Tenant>] [,
+<Line_Of_Business>] [, <Business_Unit>] [, <Project>]
+----
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web de Insight.
+. Haga clic en *Admin* y seleccione *solución de problemas*.
++
+Aparece la página solución de problemas.
+
+. En la sección *otras tareas* de la página, haga clic en el vínculo *Portal OnCommand Insight*.
+. Haga clic en *Insight Connect API*.
+. Inicie sesión en el portal.
+. Haga clic en *Utilidad de importación de anotación*.
+. Guarde la `.zip` descomprimirlo, descomprimirlo y leer el `readme.txt` archivo para obtener información adicional y muestras.
+. Coloque el archivo CSV en la misma carpeta que `.zip` archivo.
+. En la ventana de línea de comandos de, introduzca lo siguiente:
++
+[listing]
+----
+java -jar rest-import-utility.jar [-uusername] [-ppassword]
+[-aserver name or IP address] [-bbatch size] [-ccase sensitive:true/false]
+[-lextra logging:true/false] csv filename
+----
++
+La opción -l, que activa el registro adicional, y la opción -c, que habilita la sensibilidad del caso, se establecen en FALSE de forma predeterminada. Por lo tanto, sólo debe especificarlos cuando desee utilizar las operaciones.
+
++
+[NOTE]
+====
+No hay espacios entre las opciones y sus valores.
+
+====
++
+[NOTE]
+====
+Las siguientes palabras clave están reservadas e impiden que los usuarios las especifiquen como nombres de anotación: - Aplicación - prioridad_de_aplicación - arrendatario - línea_de_negocio - Unidad_de_negocio - se generan errores de proyecto si intenta importar un tipo de anotación utilizando una de las palabras clave reservadas. Si ha creado nombres de anotación con estas palabras clave, debe modificarlas para que la herramienta de utilidad de importación pueda funcionar correctamente.
+
++
+
+====
+

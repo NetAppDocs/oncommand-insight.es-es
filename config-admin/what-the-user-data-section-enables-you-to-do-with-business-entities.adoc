@@ -1,0 +1,39 @@
+---
+permalink: config-admin/what-the-user-data-section-enables-you-to-do-with-business-entities.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede definir entidades de negocio para realizar un seguimiento de los datos de su entorno y crear informes a un nivel más granular. La sección datos de usuario de una página de activos permite cambiar la entidad de negocio asignada a un activo o quitar una entidad de negocio de un activo. 
+---
+= Uso de la sección datos de usuario para asignar o modificar entidades de negocio
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede definir entidades de negocio para realizar un seguimiento de los datos de su entorno y crear informes a un nivel más granular. La sección datos de usuario de una página de activos permite cambiar la entidad de negocio asignada a un activo o quitar una entidad de negocio de un activo.
+
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web de OnCommand Insight.
+. Localice una página de activos realizando una de las siguientes acciones:
++
+** En la barra de herramientas Insight, haga clic en image:../media/icon-sanscreen-magnifying-glass-gif.gif[""], escriba el nombre del activo y, a continuación, seleccione el activo en la lista.
+** Haga clic en *Paneles*, seleccione *Panel de activos*, busque un nombre de activo y haga clic en él. Aparece la página Asset.
+
+
+. Puede hacer lo siguiente:
++
+** Para cambiar la entidad asignada o para asignar una entidad, haga clic en image:../media/pencil-icon-landing-page-be.gif[""] y seleccione una entidad de la lista.
+** Para quitar una entidad de negocio, haga clic en image:../media/trash-can-query.gif[""].
++
+[NOTE]
+====
+No se puede quitar una entidad derivada de una aplicación asignada al activo.
+
+====
+
+
+

@@ -1,0 +1,43 @@
+---
+permalink: config-admin/nas-path-for-vms.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight 7.3 admite rutas NAS para máquinas virtuales a recursos compartidos de almacenamiento. Estas rutas son similares a las rutas NAS para los hosts con los recursos compartidos de almacenamiento. Cuando se permite que la dirección IP de una máquina virtual acceda a un recurso compartido, se crea una ruta NAS. 
+---
+= Ruta NAS para máquinas virtuales
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 7.3 admite rutas NAS para máquinas virtuales a recursos compartidos de almacenamiento. Estas rutas son similares a las rutas NAS para los hosts con los recursos compartidos de almacenamiento. Cuando se permite la dirección IP de una máquina virtual para acceder a un recurso compartido, se crea una ruta NAS.
+
+Las rutas NAS para máquinas virtuales se muestran en la página de destino de los volúmenes internos. Esta página contiene un widget Storage Resources montado en invitado al que identifica los volúmenes internos a los que tienen acceso las máquinas virtuales.
+
+* Las rutas NAS se crean cuando las máquinas virtuales tienen acceso a los recursos compartidos back-end. No se reconoce si los equipos virtuales acceden o no a los recursos compartidos.
+* El cálculo de correlación se basa en las latencias y las IOPS, y no incluye casos en los que las máquinas virtuales tienen rutas NAS al almacenamiento back-end.
+* El usuario puede consultar el recurso compartido por dirección IP del iniciador, pero no se admite la consulta por ruta.
+
+
+La tabla Compute Resources del volumen interno ahora muestra también las máquinas virtuales con rutas NAS. Para cada equipo virtual, se proporcionan datos de CPU y memoria, utilización y rendimiento.
+
+
+
+== Impacto en el almacén de datos
+
+Los cambios en el almacén de datos que están presentes después de actualizar a OnCommand Insight 7.3 incluyen los siguientes:
+
+* la tabla dwh_Inventory.nas_logical se elimina de la tienda de datos de inventario y se sustituye por una vista.
++
+Se conservan todos los informes de Insight 7.2.x que contengan la tabla de rutas NFS.
+
+* la tabla dwh_Inventory.nas_cr_logical se agrega al mercado de datos de inventario e incluye lo siguiente:
++
+** Recurso de computación
+** Volumen interno
+** Reducida
+** Recurso compartido NAS
+
+
+

@@ -1,0 +1,132 @@
+---
+permalink: config-admin/importing-an-ssl-certificate.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede añadir certificados SSL para habilitar la autenticación y el cifrado mejorados a fin de mejorar la seguridad del entorno de OnCommand Insight. 
+---
+= Importación de certificados SSL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede añadir certificados SSL para habilitar la autenticación y el cifrado mejorados a fin de mejorar la seguridad del entorno de OnCommand Insight.
+
+
+
+== Antes de empezar
+
+Debe asegurarse de que el sistema cumple el nivel de bit mínimo requerido (1024 bits).
+
+
+
+== Acerca de esta tarea
+
+[NOTE]
+====
+Antes de intentar realizar este procedimiento, debe realizar una copia de seguridad de la existente `server.keystore` y asigne un nombre a la copia de seguridad `server.keystore.old`. Corromper o dañar el `server.keystore` El archivo puede resultar en un servidor Insight inoperable después de reiniciar el servidor Insight. Si crea una copia de seguridad, puede revertir al archivo antiguo si se producen problemas.
+
+====
+
+
+== Pasos
+
+. Cree una copia del archivo original del almacén de claves: `cp c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore.old`
+. Enumere el contenido del almacén de claves: `C:\Program Files\SANscreen\java64\bin\keytool.exe -list -v -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
++
+.. Cuando se le pida una contraseña, introduzca `changeit`.
+
+
++
+El sistema muestra el contenido del almacén de claves. Debe haber al menos un certificado en el almacén de claves, `"ssl certificate"`.
+
+. Elimine el `"ssl certificate"`: `keytool -delete -alias "ssl certificate" -keystore c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore`
+. Genere una nueva clave: `C:\Program Files\SANscreen\java64\bin\keytool.exe -genkey -alias "ssl certificate" -keyalg RSA -keysize 2048 -validity 365 -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
++
+.. Cuando se le soliciten los nombres y apellidos, introduzca el nombre de dominio completo (FQDN) que desee utilizar.
+.. Proporcione la siguiente información acerca de la organización y la estructura de su organización:
++
+*** País: Abreviatura ISO de dos letras para su país (por ejemplo, US)
+*** Estado o provincia: Nombre del estado o provincia donde está ubicada la oficina central de su organización (por ejemplo, Massachusetts)
+*** Localidad: Nombre de la ciudad donde está ubicada la oficina central de su organización (por ejemplo, Waltham)
+*** Nombre organizativo: Nombre de la organización a la que se pertenece el nombre de dominio (por ejemplo, NetApp).
+*** Nombre de la unidad organizativa: Nombre del departamento o grupo que utilizará el certificado (por ejemplo, Soporte)
+*** Nombre de dominio/ Nombre común: El FQDN que se utiliza para las búsquedas DNS de su servidor (por ejemplo, www.example.com) el sistema responde con información similar a la siguiente: `Is CN=www.example.com, OU=support, O=NetApp, L=Waltham, ST=MA, C=US correct?`
+
+
+.. Introduzca `Yes` Cuando el nombre común (CN) es igual al FQDN.
+.. Al solicitar la contraseña clave, introduzca la contraseña o pulse la tecla Intro para usar la contraseña del almacén de claves existente.
+
+
+. Generar un archivo de solicitud de certificado: `C:\Program Files\SANscreen\java64\bin\keytool.exe -certreq -alias "ssl certificate" -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore" -file c:\localhost.csr`
++
+La `c:\localhost.csr` archivo es el archivo de solicitud de certificado que se acaba de generar.
+
+. Envíe el `c:\localhost.csr` Archivar a la entidad emisora de certificados (CA) para su aprobación.
++
+Una vez aprobado el archivo de solicitud de certificado, desea que se le devuelva el certificado `.der` formato. Es posible que el archivo no se devuelva como a. `.der` archivo. El formato de archivo predeterminado es `.cer` Para los servicios de CA de Microsoft.
+
++
+Las CA de la mayoría de las organizaciones utilizan una cadena de modelo de confianza, incluida una CA raíz, que a menudo se encuentra sin conexión. Ha firmado los certificados para sólo algunas CA secundarias, conocidas como CA intermedias.
+
++
+Debe obtener la clave pública (certificados) para toda la cadena de confianza: El certificado de la CA que firmó el certificado para el servidor OnCommand Insight, y todos los certificados entre esa CA firmada hasta la CA raíz de la organización y hasta ella.
+
++
+En algunas organizaciones, al enviar una solicitud de firma, es posible que reciba una de las siguientes opciones:
+
++
+** Archivo PKCS12 que contiene el certificado firmado y todos los certificados públicos de la cadena de confianza
+** A. `.zip` archivo que contiene archivos individuales (incluido el certificado firmado) y todos los certificados públicos de la cadena de confianza
+** Solo el certificado firmado
++
+Debe obtener los certificados públicos.
+
+
+
+. Importe el certificado aprobado para Server.keystore: `C:\Program Files\SANscreen\java64\bin\keytool.exe -importcert -alias OCI.hostname.com -file c:\localhost2.DER -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
++
+.. Al solicitar, introduzca la contraseña del almacén de claves.
++
+Se muestra el siguiente mensaje: `Certificate reply was installed in keystore`
+
+
+
+. Importe el certificado aprobado para Server.trustore: `C:\Program Files\SANscreen\java64\bin\keytool.exe -importcert -alias OCI.hostname.com -file c:\localhost2.DER -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.trustore"`
++
+.. Cuando se le solicite, introduzca la contraseña de trusted.
++
+Se muestra el siguiente mensaje: `Certificate reply was installed in trustore`
+
+
+
+. Edite el `SANscreen\wildfly\standalone\configuration\standalone-full.xml` archivo:
++
+Sustituya la siguiente cadena de alias: `alias="cbc-oci-02.muccbc.hq.netapp.com"`. Por ejemplo:
+
++
+`<keystore path="server.keystore" relative-to="jboss.server.config.dir" keystore-password="${VAULT::HttpsRealm::keystore_password::1}" alias="cbc-oci-02.muccbc.hq.netapp.com" key-password="${VAULT::HttpsRealm::key_password::1}"/>`
+
+. Reinicie el servicio del servidor SANscreen.
++
+Una vez que Insight esté en funcionamiento, puede hacer clic en el icono de candado para ver los certificados instalados en el sistema.
+
++
+Si ve un certificado que contiene información "emitida a" que coincide con la información "emitida por", todavía tiene instalado un certificado autofirmado. Los certificados autofirmados generados por el instalador de Insight tienen un vencimiento de 100 años.
+
++
+NetApp no puede garantizar que este procedimiento elimine las advertencias de certificado digitales. NetApp no puede controlar el modo en que se han configurado las estaciones de trabajo de los usuarios finales. Considere los siguientes casos:
+
++
+** Microsoft Internet Explorer y Google Chrome utilizan las funciones de certificado nativo de Microsoft en Windows.
++
+Esto significa que si los administradores de Active Directory presionan los certificados de CA de su empresa en los almacenes de certificados del usuario final, los usuarios de estos exploradores verán que desaparecen las advertencias de certificado cuando los certificados autofirmados de OnCommand Insight se han reemplazado por los firmados por la infraestructura de CA interna.
+
+** Java y Mozilla Firefox tienen sus propios almacenes de certificados.
++
+Si los administradores del sistema no automatizan la incorporación de los certificados de CA en los almacenes de certificados de confianza de estas aplicaciones, es posible que el uso del cliente Insight Java o del explorador Firefox siga generando advertencias de certificado debido a que se trata de un certificado no confiable, incluso cuando se reemplazó el certificado autofirmado. Conseguir que la cadena de certificados de su empresa esté instalada en el almacén de verdad es un requisito adicional.
+
+
+
+

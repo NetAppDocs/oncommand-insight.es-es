@@ -1,0 +1,56 @@
+---
+permalink: config-admin/enabling-the-syslog-facility.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede identificar una ubicación para el registro de los incumplimientos y las alertas de rendimiento de OnCommand Insight, así como mensajes de auditoría, y activar el proceso de registro. 
+---
+= Activación de la instalación de syslog
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede identificar una ubicación para el registro de los incumplimientos y las alertas de rendimiento de OnCommand Insight, así como mensajes de auditoría, y activar el proceso de registro.
+
+
+
+== Antes de empezar
+
+* Debe tener la dirección IP del servidor en el que almacenar el registro del sistema.
+* Debe conocer el nivel de instalación que corresponde al tipo de programa que está registrando el mensaje, como LOCAL1 o USUARIO.
+
+
+
+
+== Acerca de esta tarea
+
+Syslog incluye los siguientes tipos de información:
+
+* Mensajes de infracción
+* Alertas de rendimiento
+* De manera opcional, los mensajes del registro de auditoría
+
+
+Las siguientes unidades se usan en el syslog:
+
+* Métricas de utilización: Porcentaje
+* Métricas de tráfico: MB
+* Velocidad de tráfico: MB/s
+
+
+
+
+== Pasos
+
+. En la barra de herramientas Insight, haga clic en *Admin* y seleccione *Notificaciones*.
+. Desplácese hasta la sección *Syslog* de la página.
+. Active la casilla de verificación *Activar syslog*.
+. Si lo desea, active la casilla de verificación *Enviar auditoría*. Se enviarán nuevos mensajes de registro de auditoría a syslog además de mostrarse en la página de auditoría. Tenga en cuenta que los mensajes de registro de auditoría que ya son existentes no se enviarán a syslog; solo se enviarán los mensajes de registro recién generados.
+. En el campo *servidor*, introduzca la dirección IP del servidor de registro.
++
+Puede especificar un puerto personalizado anexándolo después de dos puntos al final de la IP del servidor (por ejemplo, Server:Port). Si no se especifica el puerto, se utiliza el puerto de syslog predeterminado de 514.
+
+. En el campo *Facility*, seleccione el nivel de instalación que corresponda al tipo de programa que está registrando el mensaje.
+. Haga clic en *Guardar*.
+

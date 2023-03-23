@@ -1,0 +1,44 @@
+---
+permalink: install-windows/troubleshooting-an-upgrade.html 
+sidebar: sidebar 
+keywords:  
+summary: Si se encuentran problemas después de una actualización de OnCommand Insight, es posible que sea útil revisar la información para la solución de problemas relacionada con algunos problemas posibles. 
+---
+= Solucionar problemas de una actualización
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si se encuentran problemas después de una actualización de OnCommand Insight, es posible que sea útil revisar la información para la solución de problemas relacionada con algunos problemas posibles.
+
+
+
+== No se puede iniciar Cognos desde el menú Inicio de Windows
+
+La existencia de un espacio antes `\SANscreen\cognos` en el nombre de la ruta es un problema. Consulte lo siguiente en la Comunidad de casos de éxito de clientes de NetApp para obtener más información: https://forums.netapp.com/thread/62721[].
+
+
+
+== "'no es una aplicación win32 válida'" mensaje de error
+
+Esto es un problema con Microsoft Windows. Para resolver este problema, debe colocar comillas alrededor de la ruta de acceso de imagen en el Registro. En la siguiente documentación, se ofrece más información: https://support.microsoft.com/en-us/kb/812486/en-us[].
+
+
+
+== Las anotaciones no están presentes
+
+Cuando un trabajo ETL de almacén de datos consulta las anotaciones de una instancia de Insight, a veces recibe una respuesta vacía (resultado de 0) en error. Este error da lugar a anotaciones para determinados objetos que se mueven entre los Estados «'presentes'» y «'no presentes'» del almacén de datos. En la siguiente sección, se ofrece más información: https://forums.netapp.com/docs/DOC-44167[]
+
+
+
+== Diferencias en los valores mostrados en los informes
+
+Antes de 7.0, los informes se basaban en números enteros. Ahora están basados en decimales; por lo tanto, después de actualizar, puede notar un aumento o disminución en cómo se muestran los valores.
+
+
+
+== Los datos no se muestran en los informes
+
+En 7.0.1 se cambiaron varios nombres de modelos (por ejemplo, Symmetrix se cambió a Symmetrix VMAX). Como resultado, si un informe contiene un filtro para "Tymmetrix", no verá ningún dato al ejecutar el informe. Para cambiar el informe, debe abrir el informe con Query Explorer en Report Studio, buscar el nombre del modelo, reemplazarlo con el nuevo nombre del modelo y guardar el informe.

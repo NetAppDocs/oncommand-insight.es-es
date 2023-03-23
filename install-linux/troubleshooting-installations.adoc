@@ -1,0 +1,16 @@
+---
+permalink: install-linux/troubleshooting-installations.html 
+sidebar: sidebar 
+keywords:  
+summary: Las instalaciones de OnCommand Insight generalmente se gestionan mediante los asistentes de instalación. Sin embargo, los clientes pueden experimentar problemas durante las actualizaciones o conflictos debido a entornos informáticos. 
+---
+= Resolución de problemas en instalaciones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las instalaciones de OnCommand Insight generalmente se gestionan mediante los asistentes de instalación. Sin embargo, los clientes pueden experimentar problemas durante las actualizaciones o conflictos debido a entornos informáticos.
+
+También debe estar seguro de que instala todas las licencias de OnCommand Insight necesarias para instalar el software.

@@ -1,0 +1,28 @@
+---
+permalink: reporting/reporting-data-model.html 
+sidebar: sidebar 
+keywords:  
+summary: Su empresa puede beneficiarse de los datos detectados y almacenados en el almacén de datos OnCommand Insight. El almacén de datos de OnCommand Insight es un repositorio centralizado que almacena datos de múltiples fuentes de información y los transforma en un modelo de datos multidimensional y común para consultas y análisis eficientes. 
+---
+= Modelo de datos de generación de informes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Su empresa puede beneficiarse de los datos detectados y almacenados en el almacén de datos OnCommand Insight. El almacén de datos de OnCommand Insight es un repositorio centralizado que almacena datos de múltiples fuentes de información y los transforma en un modelo de datos multidimensional y común para consultas y análisis eficientes.
+
+A partir de este almacén, puede generar informes personalizados como informes de pago por uso, análisis de consumo y previsiones que respondan a preguntas como las siguientes:
+
+* ¿Qué inventario tengo?
+* ¿Dónde está mi inventario?
+* ¿Quién utiliza nuestros activos?
+* ¿Cuál es el pago por uso para el almacenamiento asignado a una unidad de negocio?
+* ¿Cuánto margen de maniobra tengo en los puertos del switch?
+* ¿Cuánto tiempo hasta que necesite adquirir capacidad de almacenamiento adicional?
+* ¿Las unidades de negocio están alineadas en los niveles de almacenamiento adecuados?
+* ¿Cómo cambia la asignación de almacenamiento a lo largo de un mes, trimestre o año?
+
+
+Mediante el modelo de datos proporcionado con el Informe de OnCommand Insight, puede utilizar herramientas de creación de informes para diseñar y programar informes.

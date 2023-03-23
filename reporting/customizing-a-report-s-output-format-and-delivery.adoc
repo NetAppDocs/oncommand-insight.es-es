@@ -1,0 +1,37 @@
+---
+permalink: reporting/customizing-a-report-s-output-format-and-delivery.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede personalizar el formato y el método de entrega de los informes. 
+---
+= Personalización del formato de salida y la entrega de un informe
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede personalizar el formato y el método de entrega de los informes.
+
+
+
+== Pasos
+
+. Abra el Portal de informes de OnCommand Insight y seleccione el informe que desea personalizar y haga clic en *[...]*.
++
+image::../media/run-report.gif[ejecutar informe]
+
+. Haga clic en *Propiedades* > *Programación*
++
+image::../media/email-report.gif[informe por correo electrónico]
+
+. Puede establecer las siguientes opciones:
++
+** *Programar* cuando desee que se ejecuten los informes.
+** *Formatea* la salida del informe.
+** *Entrega* imprima, guarde o envíe un correo electrónico al informe.
+** *Idiomas* definen el idioma en el que se entrega el informe.
+
+
+. Haga clic en *Crear* para generar el informe con las selecciones realizadas.
+

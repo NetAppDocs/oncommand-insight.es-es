@@ -1,0 +1,42 @@
+---
+permalink: dwh/resetting-the-data-warehouse-database.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede eliminar el contenido de las data warehouse data marts y eliminar todos los conectores configurados. Puede que desee hacer esto si una instalación o actualización no se ha completado correctamente y deja la base de datos de Data Warehouse en un estado intermedio. También puede eliminar sólo el modelo de datos de inventario o el modelo de datos de Cognos Reporting. 
+---
+= Restablecimiento de la base de datos del almacén de datos o del servidor de informes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede eliminar el contenido de las data warehouse data marts y eliminar todos los conectores configurados. Puede que desee hacer esto si una instalación o actualización no se ha completado correctamente y deja la base de datos de Data Warehouse en un estado intermedio. También puede eliminar sólo el modelo de datos de inventario o el modelo de datos de Cognos Reporting.
+
+
+
+== Pasos
+
+. Inicie sesión en el portal del almacén de datos en `+https://hostname/dwh+`, donde `hostname` Es el nombre del sistema en el que está instalado el almacén de datos de OnCommand Insight.
+. En el panel de navegación de la izquierda, haga clic en *Restablecer base de datos DWH*.
+. Haga clic en una de las siguientes opciones:
++
+** *Restablecer base de datos DWH*
++
+De esta forma se elimina el contenido de todas las data warehouse y todos los conectores configurados, y se coloca el almacén de datos en el estado de instalación predeterminado sin ninguna configuración personalizada. Puede elegir esta opción, por ejemplo, si cambió los servidores conectados, pero restauró una base de datos de almacén de datos diferente accidentalmente en el servidor y necesita volver al estado predeterminado instalado. Esto no elimina ningún informe. (Los informes se guardan en el almacén de contenido de Cognos.)
+
+** *Restablecer sólo inventario*
++
+De esta forma se elimina el contenido del modelo de datos de inventario únicamente. Esto no elimina ningún dato histórico.
+
+** *Restablecer contenido de informes*
++
+De este modo, se restablece el contenido del servidor de informes. De esta forma se eliminan los informes personalizados que pueda tener. Realice una copia de seguridad de los informes antes de elegir esta opción.
+
+
+
++
+Aparece un mensaje de advertencia.
+
+. Para continuar, haga clic en *Sí*.
+

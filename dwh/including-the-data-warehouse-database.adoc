@@ -1,0 +1,30 @@
+---
+permalink: dwh/including-the-data-warehouse-database.html 
+sidebar: sidebar 
+keywords:  
+summary: De forma predeterminada, ASUP envía sólo los archivos de registro de Data Warehouse al soporte técnico para obtener ayuda en la solución de problemas; sin embargo, también puede incluir una copia de seguridad de la base de datos de Data Warehouse y seleccionar el tipo de datos que se envía. 
+---
+= Incluye una copia de seguridad de la base de datos de Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+De forma predeterminada, ASUP envía sólo los archivos de registro de Data Warehouse al soporte técnico para obtener ayuda en la solución de problemas; sin embargo, también puede incluir una copia de seguridad de la base de datos de Data Warehouse y seleccionar el tipo de datos que se envía.
+
+
+
+== Pasos
+
+. Inicie sesión en el portal del almacén de datos en `+https://hostname/dwh+`, donde `hostname` Es el nombre del sistema en el que está instalado el almacén de datos de OnCommand Insight.
+. En el panel de navegación de la izquierda, haga clic en *solución de problemas*.
+. Para especificar que ASUP debe incluir una copia de seguridad de la base de datos de Data Warehouse, haga clic en la lista *incluir copia de seguridad de base de datos DWH* y seleccione una de las siguientes opciones para el tipo de datos que la copia de seguridad debe incluir:
++
+** Todos (incluido el rendimiento)
+** Todo excepto rendimiento
+** Solo inventario
+
+
+. Haga clic en *Actualizar*.
+

@@ -1,0 +1,45 @@
+---
+permalink: install-windows/restoring-custom-data-warehouse-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: Si procede, puede restaurar manualmente todos los informes personalizados de los que ha realizado la copia de seguridad antes de la actualización; sin embargo, sólo tendrá que hacerlo si pierde los informes si se han dañado. 
+---
+= Restaurar informes personalizados de almacén de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si procede, puede restaurar manualmente todos los informes personalizados de los que ha realizado la copia de seguridad antes de la actualización; sin embargo, sólo tendrá que hacerlo si pierde los informes si se han dañado.
+
+
+
+== Pasos
+
+. Abra el informe con un editor de texto y, a continuación, seleccione y copie su contenido.
+. Inicie sesión en el portal de informes en `+https://fqdn/reporting+`.
+. En la barra de herramientas almacén de datos, haga clic en image:../media/oci-reporting-portal-icon.gif[""] Para abrir el portal de Insight Reporting.
+. En el menú Inicio, seleccione *Report Studio*.
+. Seleccione cualquier paquete.
++
+Aparecerá Report Studio.
+
+. Haga clic en *Crear nuevo*.
+. Seleccione *Lista*.
+. En el menú Herramientas, seleccione *Abrir informe desde Portapapeles*.
++
+Aparece el cuadro de diálogo *Abrir informe desde el Portapapeles*.
+
+. En el menú Archivo, seleccione *Guardar como* y guarde el informe en la carpeta Informes personalizados.
+. Abra el informe para verificar que se ha importado.
++
+Repita esta tarea para cada informe.
+
++
+[NOTE]
+====
+Al cargar un informe, puede aparecer un "'error de análisis de expresión'". Esto significa que la consulta contiene una referencia al menos a un objeto que no existe, lo que significa que no hay ningún paquete seleccionado en la ventana origen para validar el informe. En este caso, haga clic con el botón derecho del ratón en una dimensión de data Mart en la ventana origen, seleccione paquete de informe, A continuación, seleccione el paquete asociado con el informe (por ejemplo, el paquete de inventario si se trata de un informe de inventario o uno de los paquetes de rendimiento si es un informe de rendimiento) para que Report Studio pueda validarlo y, a continuación, guardarlo.
+
+====
+

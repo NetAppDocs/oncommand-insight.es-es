@@ -1,0 +1,37 @@
+---
+permalink: config-admin/configuring-system-level-event-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight admite notificaciones sobre eventos de nivel de sistema, como fallos de unidad de adquisición o errores de origen de datos. Para recibir notificaciones, debe configurar Insight para que envíe mensajes de correo electrónico cuando se produzca uno o varios de estos eventos. 
+---
+= Configurar notificaciones de eventos en el nivel del sistema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight admite notificaciones sobre eventos de nivel de sistema, como fallos de unidad de adquisición o errores de origen de datos. Para recibir notificaciones, debe configurar Insight para que envíe mensajes de correo electrónico cuando se produzca uno o varios de estos eventos.
+
+
+
+== Antes de empezar
+
+Debe haber configurado los destinatarios de correo electrónico para recibir notificaciones en *Admin* > *Notificaciones* > *métodos de envío*.
+
+
+
+== Pasos
+
+. Haga clic en *Admin* > *Notificaciones*.
+. Haga clic en *Eventos*.
+. En la sección *Eventos de alerta del sistema* correo electrónico, seleccione el nivel de gravedad (*Advertencia y superior* o *crítico*) para la notificación o seleccione *no enviar* si no desea recibir notificaciones de eventos de nivel de sistema.
+. Haga clic en *Guardar*.
+. Haga clic en *Admin* > *Alertas del sistema* para configurar las alertas.
+. Para agregar una nueva alerta, haga clic en *+Agregar* y asigne a la alerta un nombre * único. También puede hacer clic en el icono del lado derecho para *Editar* una alerta existente.
+. Seleccione el *Tipo de evento* en el que desea alertar, por ejemplo _error de unidad de adquisición_.
+. Seleccione un intervalo *Snooze* para suprimir notificaciones en eventos duplicados del tipo seleccionado para el intervalo de tiempo seleccionado. Si selecciona _Never_, recibirá notificaciones repetidas una vez por minuto hasta que el evento ya no se produzca.
+. Elija una *gravedad* (Advertencia o crítica) para la notificación de eventos.
+. De forma predeterminada, las notificaciones por correo electrónico se enviarán a la lista global de destinatarios o bien puede hacer clic en el enlace proporcionado para anular la lista global y enviar notificaciones a destinatarios específicos.
+. Haga clic en Guardar para añadir la alerta.
+

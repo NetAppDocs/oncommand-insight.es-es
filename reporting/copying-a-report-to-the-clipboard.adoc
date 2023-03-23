@@ -1,0 +1,32 @@
+---
+permalink: reporting/copying-a-report-to-the-clipboard.html 
+sidebar: sidebar 
+keywords:  
+summary: Utilice este proceso para copiar un informe en el portapapeles. 
+---
+= Copia de un informe en el portapapeles
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Utilice este proceso para copiar un informe en el portapapeles.
+
+
+
+== Pasos
+
+. Abra el Portal de informes de Cognos 11: https://server-name:9300/bi/[]
+. En la barra de herramientas, haga clic en image:../media/new-report.gif[""]
+. Haga clic en *Informe*
+. Haga clic en el icono *Páginas*image:../media/pages-icon.gif[""]
++
+El icono *Informe* image:../media/report-icon.gif[""] aparece en pantalla
+
+. Haga clic con el botón izquierdo del ratón en el icono *Informe*
++
+Se muestran las opciones de informe.
+
+. Haga clic en *Copiar informe al portapapeles*.
+

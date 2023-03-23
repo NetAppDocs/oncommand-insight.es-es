@@ -1,0 +1,14 @@
+---
+permalink: config-admin/using-queries.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Las consultas le permiten supervisar y solucionar problemas en la red mediante la búsqueda de activos en su entorno a un nivel granular en función de los criterios \(anotaciones y métricas de rendimiento\) seleccionados por el usuario. Además, las reglas de anotación, que asignan anotaciones automáticamente a los activos, requieren una consulta.' 
+---
+= Consulta de activos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las consultas permiten supervisar y solucionar problemas en la red mediante la búsqueda de activos en el entorno a un nivel granular en función de los criterios seleccionados por el usuario (anotaciones y métricas de rendimiento). Además, las reglas de anotación, que asignan anotaciones automáticamente a los activos, requieren una consulta.

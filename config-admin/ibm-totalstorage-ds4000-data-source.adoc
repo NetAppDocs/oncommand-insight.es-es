@@ -1,0 +1,62 @@
+---
+permalink: config-admin/ibm-totalstorage-ds4000-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Este origen de datos recopila información de inventario y rendimiento. Hay dos configuraciones posibles \(firmware 6.x y 7.x+\) y ambas tienen los mismos valores. La API recoge las estadísticas de datos de volúmenes.' 
+---
+= Fuente de datos IBM TotalStorage DS4000
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Este origen de datos recopila información de inventario y rendimiento. Hay dos configuraciones posibles (firmware 6.x y 7.x+) y ambas tienen los mismos valores. La API recoge las estadísticas de datos de volúmenes.
+
+
+
+== Configuración
+
+|===
+
+
+| *Campo* | *Descripción* 
+
+
+ a| 
+Lista separada por comas de las IP de controladora SANtricity de la cabina
+ a| 
+Direcciones IP o nombres de dominio completos de controladoras separados por comas
+
+|===
+
+
+== Requisitos
+
+* Dirección IP de cada matriz DS5 o FAStT
+* Validación de acceso: Haga ping a la dirección IP de ambas controladoras en cada matriz.
+
+
+
+
+== Configuración avanzada
+
+|===
+
+
+| *Campo* | *Descripción* 
+
+
+ a| 
+Intervalo de sondeo de inventario (mín.)
+ a| 
+Intervalo entre sondeos de inventario (predeterminado 30 minutos)
+
+
+
+ a| 
+Intervalo de sondeo de rendimiento (hasta 3600 segundos)
+ a| 
+Intervalo entre sondeos de rendimiento (predeterminado 300 segundos)
+
+|===

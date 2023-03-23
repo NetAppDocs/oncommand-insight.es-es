@@ -1,0 +1,26 @@
+---
+permalink: install-windows/planning-the-installation.html 
+sidebar: sidebar 
+keywords:  
+summary: Para garantizar una correcta implementación, debe tener en cuenta algunos elementos del sistema antes de instalar OnCommand Insight. 
+---
+= Planificación de la implementación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para garantizar una correcta implementación, debe tener en cuenta algunos elementos del sistema antes de instalar OnCommand Insight.
+
+
+
+== Acerca de esta tarea
+
+La planificación de la puesta en marcha de Insight incluye aspectos como los siguientes:
+
+* Arquitectura de Insight
+* Los componentes de red que se van a supervisar
+* Requisitos previos de la instalación de Insight y del servidor
+* Requisitos del navegador web de Insight
+

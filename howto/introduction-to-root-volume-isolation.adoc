@@ -1,0 +1,23 @@
+---
+permalink: howto/introduction-to-root-volume-isolation.html 
+sidebar: sidebar 
+keywords:  
+summary: En los sistemas de almacenamiento NetApp, el agregado raíz contiene el volumen raíz. El volumen raíz contiene directorios especiales y archivos de configuración para gestionar y controlar el sistema de almacenamiento. Las operaciones de gestión y control pueden dar como resultado una gran cantidad de actividad en el agregado raíz. Cuando consulta en el sistema Insight los 10 volúmenes internos principales con la mayor densidad de I/o, los resultados pueden incluir agregados raíz de NetApp como miembros de los 10 principales. 
+---
+= Si se asegura la generación de informes de densidad de I/o, se describen solo los volúmenes de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En los sistemas de almacenamiento NetApp, el agregado raíz contiene el volumen raíz. El volumen raíz contiene directorios especiales y archivos de configuración para gestionar y controlar el sistema de almacenamiento. Las operaciones de gestión y control pueden dar como resultado una gran cantidad de actividad en el agregado raíz. Cuando consulta en el sistema Insight los 10 volúmenes internos principales con la mayor densidad de I/o, los resultados pueden incluir agregados raíz de NetApp como miembros de los 10 principales.
+
+Al supervisar su entorno, es más importante determinar qué volúmenes de datos internos producen números de densidad de I/o elevados. Para identificar exclusivamente los volúmenes de datos de forma precisa, debe aislar los volúmenes internos de NetApp de las consultas que utilice para supervisar la densidad de I/O.
+
+En esta guía se describe cómo identificar fácilmente los agregados raíz de NetApp, aislarlos de los resultados de las consultas de volúmenes internos y crear reglas que excluyen los agregados raíz de NetApp nuevos a medida que se agregan al sistema. Las siguientes funciones de Insight se utilizan para garantizar que sus informes de densidad de I/o se obtienen de los volúmenes de datos internos.
+
+* Se crea una consulta para identificar todos los agregados raíz de NetApp que supervisa Insight.
+* Se asigna una anotación a cada uno de los agregados raíz de NetApp.
+* Se crea una regla de anotación para excluir los agregados de NetApp
+

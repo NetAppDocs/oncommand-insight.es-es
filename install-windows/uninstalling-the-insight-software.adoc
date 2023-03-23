@@ -1,0 +1,14 @@
+---
+permalink: install-windows/uninstalling-the-insight-software.html 
+sidebar: sidebar 
+keywords:  
+summary: Debe desinstalar las versiones antiguas del software de almacén de datos y adquisición remota para instalar las nuevas versiones. Debe hacer esto antes de intentar actualizar cualquiera de estos componentes. El software del servidor Insight se desinstala durante la actualización in situ. 
+---
+= Desinstalación del software
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe desinstalar las versiones antiguas del software de almacén de datos y adquisición remota para instalar las nuevas versiones. Debe hacer esto antes de intentar actualizar cualquiera de estos componentes. El software del servidor Insight se desinstala durante la actualización in situ.

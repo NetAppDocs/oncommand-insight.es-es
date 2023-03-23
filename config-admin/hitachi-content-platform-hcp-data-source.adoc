@@ -1,0 +1,134 @@
+---
+permalink: config-admin/hitachi-content-platform-hcp-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Este recopilador de datos admite la Plataforma de Contenido Hitachi \(HCP\) que utiliza la API de gestión de HCP.' 
+---
+= Fuente de datos de Hitachi Content Platform (HCP)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Este recopilador de datos admite la Plataforma de Contenido Hitachi (HCP) que utiliza la API de Gestión de HCP.
+
+
+
+== Terminología
+
+OnCommand Insight adquiere la siguiente información de inventario del origen de datos de HCP. Para cada tipo de activo que adquiere Insight, se muestra la terminología más común utilizada en este activo. Al ver o solucionar problemas de este origen de datos, tenga en cuenta la siguiente terminología:
+
+|===
+
+
+| Plazo del proveedor/modelo | Insight plazo 
+
+
+ a| 
+Clúster HCP
+ a| 
+Reducida
+
+
+
+ a| 
+Inquilino
+ a| 
+Pool de almacenamiento
+
+
+
+ a| 
+Espacio de nombres
+ a| 
+Volumen interno
+
+
+
+ a| 
+Nodo
+ a| 
+Nodo
+
+|===
+[NOTE]
+====
+Estos son sólo mapas terminológicos comunes y es posible que no representen todos los casos de este origen de datos.
+
+====
+
+
+== Requisitos de inventario
+
+* Dirección IP del servidor HCP
+* Nombre de usuario y contraseña de sólo lectura para el software HCP y los privilegios del mismo nivel
+
+
+
+
+== Configuración
+
+|===
+
+
+| *Campo* | *Descripción* 
+
+
+ a| 
+Host HCP
+ a| 
+Dirección IP o nombre de dominio completo del host HCP
+
+
+
+ a| 
+Puerto HCP
+ a| 
+El valor predeterminado es 9090
+
+
+
+ a| 
+ID de usuario de HCP
+ a| 
+Nombre de usuario del host HCP
+
+
+
+ a| 
+Contraseña de HCP
+ a| 
+Contraseña utilizada para el host HCP
+
+
+
+ a| 
+Tipo de autenticación HCP
+ a| 
+Elija HCP_LOCAL o ACTIVE_DIRECTORY
+
+|===
+
+
+== Configuración avanzada
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Intervalo de sondeo de inventario (mín.)
+ a| 
+Intervalo entre sondeos de inventario (predeterminado 60 minutos)
+
+
+
+ a| 
+Intervalo de sondeo de rendimiento (s)
+ a| 
+Intervalo entre sondeos de rendimiento (predeterminado 900 segundos)
+
+|===

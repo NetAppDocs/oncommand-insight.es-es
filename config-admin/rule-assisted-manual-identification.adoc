@@ -1,0 +1,57 @@
+---
+permalink: config-admin/rule-assisted-manual-identification.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Esta función se utiliza en casos especiales en los que desea ejecutar una regla específica o una lista de reglas \(con o sin un reordenamiento único\) para resolver hosts, dispositivos de almacenamiento y cinta desconocidos o grupos de ellos.' 
+---
+= Identificación manual asistida por reglas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Esta función se utiliza en casos especiales en los que desea ejecutar una regla específica o una lista de reglas (con o sin una reordenación puntual) para resolver hosts, dispositivos de almacenamiento y cinta desconocidos o grupos de ellas.
+
+
+
+== Antes de empezar
+
+Tiene varios dispositivos que no se han identificado y también varias reglas que han identificado correctamente otros dispositivos.
+
+
+
+== Acerca de esta tarea
+
+[NOTE]
+====
+Si el origen sólo contiene parte del nombre de un host o dispositivo, utilice una regla de expresión regular y dé formato para agregar el texto que falta.
+
+====
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web de OnCommand Insight.
+. Haga clic en *Administrar* > *resolución del dispositivo*
+. Haga clic en la ficha *FC Identify*.
++
+El sistema muestra los dispositivos identificados y no identificados.
+
+. Seleccione varios dispositivos no identificados.
+. Haga clic en *Identify* > *Set host resolution* o *> Set Tape resolution*
++
+El sistema muestra la pantalla de identificación que contiene una lista de todas las reglas que han identificado correctamente los dispositivos.
+
+. Cambie el orden de las reglas por un orden que satisfaga sus necesidades.
++
+El orden de las reglas se cambia en la pantalla de identificación, pero no se cambian globalmente.
+
+. Seleccione el método que se ajuste a sus necesidades.
++
+OnCommand Insight ejecuta el proceso de resolución del host en el orden en que se muestran los métodos, comenzando por los que se encuentran en la parte superior.
+
++
+Cuando se encuentran las reglas que se aplican, los nombres de reglas se muestran en la columna rules y se identifican como manuales.
+
+

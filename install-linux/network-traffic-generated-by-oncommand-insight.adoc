@@ -1,0 +1,32 @@
+---
+permalink: install-linux/network-traffic-generated-by-oncommand-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: El tráfico de red que genera OnCommand Insight, la cantidad de datos procesados que pasa por la red y la carga que OnCommand Insight coloca en los dispositivos difieren en función de muchos factores. 
+---
+= Tráfico de red generado por OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El tráfico de red que genera OnCommand Insight, la cantidad de datos procesados que pasa por la red y la carga que OnCommand Insight coloca en los dispositivos difieren en función de muchos factores.
+
+El tráfico, los datos y la carga difieren entre los entornos en función de los siguientes factores:
+
+* Los datos sin formato
+* Configuración de dispositivos
+* Topología de puesta en marcha de OnCommand Insight
+* Diferentes intervalos de sondeo de origen de datos de inventario y rendimiento, que se pueden reducir para permitir la detección de dispositivos lentos o conservar ancho de banda
+
+
+Los datos de configuración sin formato que recopila OnCommand Insight pueden variar significativamente.
+
+El ejemplo siguiente ilustra cómo pueden variar los datos de configuración y cómo el tráfico, los datos y la carga se ven afectados por muchos factores de configuración. Por ejemplo, puede tener dos matrices con 1,000 discos cada una:
+
+* Arreglo 1: Tiene 1,000 discos SATA, todos de 1 TB de tamaño. Los 1,000 discos se encuentran en un pool de almacenamiento, y hay 1,000 LUN, todos presentados (asignados y enmascarados) a los mismos 32 nodos de un clúster ESX.
+* Cabina 2: Cuenta con 400 discos de datos de 2 TB, 560 600 discos FC de GB y 40 SSD. Hay 3 pools de almacenamiento, pero 320 de los discos FC se utilizan en grupos RAID tradicionales. Las LUN talladas en los grupos de RAID utilizan un tipo de máscara tradicional (symmaskdb), mientras que las LUN basadas en pools con thin provisioning utilizan un tipo de máscara más reciente (acceso simbólico). Se presentan 600 LUN en 150 hosts diferentes. Hay 200 BCVs (volúmenes de réplica de bloque completo de 200 de los 600 LUN). También hay 200 volúmenes R2, volúmenes de réplica remota de volúmenes que existen en una cabina de un sitio diferente.
+
+
+Cada una de estas cabinas tiene 1,000 discos y 1,000 volúmenes lógicos. Pueden ser físicamente idénticos en la cantidad de espacio de rack que consumen en el centro de datos e incluso pueden ejecutar el mismo firmware, pero la segunda cabina es mucho más compleja en su configuración que la primera cabina.

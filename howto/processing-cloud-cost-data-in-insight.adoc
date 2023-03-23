@@ -1,0 +1,22 @@
+---
+permalink: howto/processing-cloud-cost-data-in-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Insight recopila datos de su informe de facturación de AWS una vez al mes correspondiente al mes anterior y refleja el coste finalizado del cloud durante ese mes. 
+---
+= Procesamiento de datos de coste del cloud de AWS en Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight recopila datos de su informe de facturación de AWS una vez al mes correspondiente al mes anterior y refleja el coste finalizado del cloud durante ese mes.
+
+Después de configurar los orígenes de datos de costes de AWS Cloud, si ya tenía informes de facturación generados en S3, obtendrá hasta tres meses de datos anteriores inmediatamente después del primer sondeo de los orígenes de datos.
+
+Insight recopila datos «finales» de AWS una vez al mes. Esta recogida se produce unos días después del cierre del mes anterior, lo que permite que AWS sea el tiempo necesario para completar los datos reales.
+
+Los datos de facturación de AWS se envían al almacén de datos de Insight para usarlos en la creación de informes.
+
+Tenga en cuenta que cada origen de datos debe configurarse para una cuenta o usuario facturable individual.

@@ -1,0 +1,123 @@
+---
+permalink: howto/configuring-business-entities-for-your-company.html 
+sidebar: sidebar 
+keywords:  
+summary: La comprensión de los elementos de negocio de la estructura corporativa le ayuda a realizar un seguimiento del uso de los activos y a informar sobre los costes. Aquí configuraremos las entidades empresariales de su empresa. 
+---
+= Configurar entidades de negocio para su compañía
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La comprensión de los elementos de negocio de la estructura corporativa le ayuda a realizar un seguimiento del uso de los activos y a informar sobre los costes. Aquí configuraremos las entidades empresariales de su empresa.
+
+
+
+== Acerca de esta tarea
+
+OnCommand Insight permite definir entidades empresariales en una jerarquía que incluye hasta cuatro niveles de granularidad.
+
+* *Inquilino*
++
+Lo utilizan principalmente proveedores de servicios para asociar recursos a un cliente. El nivel de inquilino es necesario si su compañía es un ISP y desea realizar un seguimiento del uso de los recursos por parte del cliente.
+
+* *Línea de negocio (LOB)*
++
+Una línea de negocio o línea de producto de una empresa, por ejemplo, almacenamiento de datos. La línea de negocio es necesaria en la jerarquía si es necesario realizar el seguimiento de los datos de diferentes líneas de producto.
+
+* *Unidad de Negocio*
++
+Representa una unidad de negocio tradicional, como legal o marketing. La unidad de negocio es necesaria si necesita realizar un seguimiento de los datos de diferentes departamentos. Este nivel de la jerarquía suele ser valioso para separar un recurso que un departamento utiliza que otros departamentos no.
+
+* *Proyecto*
++
+Con frecuencia, se utiliza para identificar un proyecto específico dentro de una unidad empresarial para el que desea aplicar un pago por uso de capacidad. Por ejemplo, «'Patentes» podría ser un nombre de proyecto para la unidad de negocio Legal y «Eventos de venta» podría ser un nombre de proyecto para la unidad de negocio de Marketing. Tenga en cuenta que los nombres de nivel pueden incluir espacios.
+
+
+
+Un ejemplo de jerarquía de entidad de negocio sería:
+
+image::../media/businessentitieshierarchyexample.gif[businessentiesjerarchyexample]
+
+Práctica recomendada: Cree una tabla con cada fila que muestre una entidad de negocio completa en su jerarquía:
+
+|===
+
+
+| Inquilino | Línea de negocio | Unidad de negocio | Proyecto 
+
+
+ a| 
+NetApp, Inc
+ a| 
+Almacenamiento de datos
+ a| 
+Legal
+ a| 
+Estadounidenses
+
+
+
+ a| 
+NetApp, Inc
+ a| 
+Almacenamiento de datos
+ a| 
+Marketing
+ a| 
+Eventos de ventas
+
+
+
+ a| 
+N.A.
+ a| 
+N.A.
+ a| 
+Seguridad
+ a| 
+N.A.
+
+
+
+ a| 
+...
+ a| 
+ a| 
+ a| 
+
+|===
+[NOTE]
+====
+No es necesario que utilice todos los niveles en el diseño de la jerarquía corporativa. Puede elegir «'N/A'» para los niveles que no utilice.
+
+====
+Para crear una jerarquía de entidades de negocio en Insight:
+
+
+
+== Pasos
+
+. Inicie sesión en Insight como usuario con permisos administrativos.
+. Seleccione *gestionar* > *entidades comerciales*.
+. Haga clic en el botón *+Add*
+. Haga clic en el cuadro *arrendatario* y escriba su nombre de arrendatario.
++
+Si ya ha introducido inquilinos para su entorno, aparecerá una lista de los inquilinos existentes entre los que puede elegir. También puede elegir N/A si el inquilino no aplica a esta entidad de negocio.
+
+. Repita estos pasos para *línea de negocio*, *Unidad de Negocio* y *proyecto*.
+. Haga clic en *Guardar*
+
+
+
+
+== Después de terminar
+
+Prácticas recomendadas:
+
+* Trace la jerarquía empresarial en una tabla y compruebe que los nombres de la jerarquía sean autoexplicativos en las vistas e informes de Insight.
+* Cree sus entidades de negocio en Insight antes de crear aplicaciones.
+* Identifique y enumere todas las aplicaciones que estarán asociadas a cada entidad de negocio.
+

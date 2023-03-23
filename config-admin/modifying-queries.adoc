@@ -1,0 +1,36 @@
+---
+permalink: config-admin/modifying-queries.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede cambiar los criterios asociados a una consulta cuando desee cambiar los criterios de búsqueda de los activos que esté consultando. 
+---
+= Modificar consultas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede cambiar los criterios asociados a una consulta cuando desee cambiar los criterios de búsqueda de los activos que esté consultando.
+
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web Insight.
+. Haga clic en *consultas* y seleccione *Mostrar todas las consultas*.
++
+Se muestra la página consultas.
+
+. Haga clic en el nombre de la consulta.
+. Para eliminar un criterio de la consulta, haga clic en image:../media/trash-can-query.gif[""].
+. Para agregar un criterio a la consulta, haga clic en image:../media/more-button.gif[""]y seleccione un criterio de la lista.
+. Debe realizar una de las siguientes acciones:
++
+** Haga clic en *Guardar* para guardar la consulta con el nombre que se utilizó inicialmente.
+** Haga clic en *Guardar como* para guardar la consulta con otro nombre.
+** Haga clic en *Cambiar nombre* para cambiar el nombre de la consulta que ha utilizado inicialmente.
+** Haga clic en *revertir* para volver a cambiar el nombre de la consulta al que había utilizado inicialmente.
+
+
+

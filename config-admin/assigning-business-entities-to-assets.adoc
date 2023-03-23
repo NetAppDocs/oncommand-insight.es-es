@@ -1,0 +1,48 @@
+---
+permalink: config-admin/assigning-business-entities-to-assets.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede asignar una entidad de negocio a un activo \( host, puerto, almacenamiento, switch, máquina virtual, qtree, share, volume o internal volume\) sin haber asociado la entidad comercial a una aplicación; sin embargo, las entidades comerciales se asignan automáticamente a un activo si dicho activo está asociado con una aplicación relacionada con una entidad empresarial.' 
+---
+= Asignar entidades de negocio a activos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible asignar una entidad de negocio a un activo (host, puerto, almacenamiento, switch, máquina virtual, qtree, share, volume o internal volume) sin haber asociado la entidad comercial a una aplicación; sin embargo, las entidades comerciales se asignan automáticamente a un activo si dicho activo está asociado con una aplicación relacionada con una entidad empresarial.
+
+
+
+== Antes de empezar
+
+Debe haber creado ya una entidad de negocio.
+
+
+
+== Acerca de esta tarea
+
+Si bien puede asignar entidades de negocio directamente a activos, se recomienda asignar aplicaciones a activos y, a continuación, asignar entidades de negocio a activos.
+
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web de OnCommand Insight.
+. Busque el activo al que desea aplicar la entidad de negocio realizando una de las siguientes acciones:
++
+** Haga clic en el activo en el panel de activos.
+** Haga clic en image:../media/icon-sanscreen-magnifying-glass-gif.gif[""] En la barra de herramientas para mostrar el cuadro *Buscar activos*, escriba el nombre del activo y, a continuación, seleccione el activo en la lista.
+
+
+. En la sección *datos de usuario* de la página de activos, sitúe el cursor sobre *Ninguno* junto a *entidades de negocio* y, a continuación, haga clic en image:../media/pencil-icon-landing-page-be.gif[""].
++
+Se muestra la lista de entidades de negocio disponibles.
+
+. Escriba el cuadro *Buscar* para filtrar la lista de una entidad específica o desplácese hacia abajo por la lista; seleccione una entidad comercial de la lista.
++
+Si la entidad de negocio que elija está asociada a una aplicación, se mostrará el nombre de la aplicación. En este caso, aparece la palabra "derived" junto al nombre de la entidad de negocio. Si desea mantener la entidad sólo para el activo y no para la aplicación asociada, puede anular manualmente la asignación de la aplicación.
+
+. Para reemplazar una aplicación derivada de una entidad de negocio, coloque el cursor sobre el nombre de la aplicación y haga clic en image:../media/trash-can-query.gif[""], seleccione otra entidad de negocio y seleccione otra aplicación de la lista.
+

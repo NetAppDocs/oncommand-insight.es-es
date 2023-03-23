@@ -1,0 +1,43 @@
+---
+permalink: dwh/assigning-users-to-business-entities.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Debe completar una serie de pasos para asignar usuarios a entidades de negocio. Data Warehouse admite multi-tenancy \(a menudo acortado a “multi-tenancy” o “multi-tenancy”\) en la creación de informes al permitirle asociar usuarios con una o más entidades de negocio. Esto permite a los administradores separar datos o informes de acuerdo con atributos de usuario o pertenencia a usuarios.' 
+---
+= Asignar usuarios a entidades de negocio
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe completar una serie de pasos para asignar usuarios a entidades de negocio. El almacén de datos alberga varias opciones de soporte (que a menudo se acortan al «multi-tenancy» o «multi-tenancy») a la hora de crear informes, ya que le permite asociar usuarios con una o más entidades de negocio. Esto permite a los administradores separar datos o informes de acuerdo con atributos de usuario o pertenencia a usuarios.
+
+
+
+== Pasos
+
+. Inicie sesión en el portal del almacén de datos como administrador en `+https://hostname/dwh+`, donde `hostname` Es el nombre del sistema en el que está instalado el almacén de datos de OnCommand Insight.
+. En la barra de herramientas almacén de datos, haga clic en image:../media/oci-reporting-portal-icon.gif[""] Para abrir el Portal de informes.
+. Introduzca su nombre de usuario y contraseña y haga clic en *Login*.
+. En el menú Inicio, seleccione *IBM Cognos Administration*.
+. Haga clic en la ficha *Seguridad*:
+. En el directorio, seleccione *Cognos*.
+. Cree una nueva subcarpeta en la carpeta Cognos llamada "'BES'", para entidades comerciales.
+. Abra la carpeta BES.
+. Haga clic en el icono *Nuevo grupo* para agregar grupos que correspondan a diferentes niveles de permisos.
++
+Estos niveles de permisos pueden ser el nombre completo de la entidad empresarial (por ejemplo, NetApp.N/A) o un prefijo (por ejemplo, NetApp.N/A.Finance). Cualquiera de estos formatos permite el acceso a todos los proyectos de la entidad empresarial (NetApp.N/A.Finance).
+
++
+Se mostrará el asistente New Group.
+
+. Complete las páginas del asistente.
+. Seleccione una entidad de negocio y haga clic en *más*.
+. Haga clic en *establecer miembros*.
+. Haga clic en *Agregar*.
+. Seleccione el directorio SANscreen.
+. En la lista de usuarios, seleccione cada usuario que desee incluir en la entidad de negocio y agregue el usuario al cuadro Entradas seleccionadas.
+. Haga clic en *Aceptar*.
+. Repita el proceso de agregar miembros a cada uno de los grupos de entidades de negocio.
+

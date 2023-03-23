@@ -1,0 +1,39 @@
+---
+permalink: config-admin/configuring-client-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede configurar opciones para el cliente de interfaz de usuario Java de OnCommand Insight en el servidor. 
+---
+= Configuración de los ajustes del cliente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede configurar opciones para el cliente de interfaz de usuario Java de OnCommand Insight en el servidor.
+
+
+
+== Pasos
+
+. En la barra de herramientas Insight, haga clic en *Admin* y seleccione *solución de problemas*.
+. En la parte inferior de la página del área otras tareas, haga clic en el vínculo *solución avanzada de problemas*.
+. En el menú Avanzadas de la página siguiente, haga clic en la ficha *Configuración avanzada*.
+. En *atributos dinámicos de adquisición*, introduzca el número de horas que desea ignorar los cambios dinámicos de atributos.
+. En *Configurar ajustes del cliente*, introduzca la siguiente información.
++
+** *Tamaño inicial del montón* es el tamaño del montón que se crea cuando se inicia la VM (máquina virtual) para ejecutar el cliente. Este número se utiliza para construir el``-Xms<size>`` parámetro a. `java`. Al reducir este número, Java ocupa menos memoria cuando se inicia. (Sin embargo, es más probable que Java tenga que reasignar el montón cuando supere este número, lo que es una operación costosa, por lo que no desea que este número sea demasiado pequeño.)
+** *Tamaño máximo de la pila* es el más grande que Java permitirá que el montón crezca en la VM que ejecuta el cliente. Este número se utiliza para construir el``-Xmx<size>`` parámetro a. `java`.
+** Log Level controla la cantidad de detalles que se genera en los registros del cliente. Hay dos valores posibles:
++
+*** INFO - genera una cantidad "normal" de información.
+*** DEBUG: Genera información más detallada al registro del cliente para ayudar con la depuración.
+
+
+
+
+. Configurar las alertas de origen de datos.
+. Configure el mensaje de advertencia de inicio de sesión que muestra el cliente.
+. Haga clic en *Guardar*.
+

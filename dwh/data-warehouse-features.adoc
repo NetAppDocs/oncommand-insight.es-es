@@ -1,0 +1,28 @@
+---
+permalink: dwh/data-warehouse-features.html 
+sidebar: sidebar 
+keywords:  
+summary: El almacén de datos OnCommand Insight es una base de datos independiente compuesta por varios data marts. 
+---
+= Funciones de almacén de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El almacén de datos OnCommand Insight es una base de datos independiente compuesta por varios data marts.
+
+Data Warehouse incluye las siguientes características:
+
+* Configuración actual e histórica y datos de inventario que permiten crear informes de tendencias útiles para la previsión y la planificación
+* Varios mercados de datos históricos multidimensionales y un mercado de datos de inventario de sólo corriente adicional
+* Base de datos optimizada para consultas predefinidas o consultas definidas por el usuario
+* Una plataforma para la integración con motores de creación de informes y de inteligencia empresarial de terceros, que incluye:
++
+** Bases de datos de gestión de la configuración
+** Sistemas de contabilidad financiera
+** Sistemas de gestión de activos
+
+
+

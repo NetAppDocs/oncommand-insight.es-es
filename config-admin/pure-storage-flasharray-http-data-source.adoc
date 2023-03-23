@@ -1,0 +1,156 @@
+---
+permalink: config-admin/pure-storage-flasharray-http-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'El origen de datos de Pure Storage FlashArray \(HTTP\) se utiliza para recopilar información de la cabina flash de Pure Storage. Insight admite tanto el inventario como la recopilación de rendimiento.' 
+---
+= Origen de datos de FlashArray de Pure Storage
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El origen de datos de Pure Storage FlashArray (HTTP) se utiliza para recopilar información de la cabina flash de Pure Storage. Insight admite tanto el inventario como la recopilación de rendimiento.
+
+
+
+== Terminología
+
+OnCommand Insight adquiere la siguiente información de inventario del origen de datos de FlashArray de Pure Storage. Para cada tipo de activo que adquiere Insight, se muestra la terminología más común utilizada en este activo. Al ver o solucionar problemas de este origen de datos, tenga en cuenta la siguiente terminología:
+
+|===
+
+
+| Plazo del proveedor/modelo | Insight plazo 
+
+
+ a| 
+Unidad (SSD)
+ a| 
+Disco
+
+
+
+ a| 
+Cabina
+ a| 
+Reducida
+
+
+
+ a| 
+Controladora
+ a| 
+Nodo de almacenamiento
+
+
+
+ a| 
+Volumen
+ a| 
+Volumen
+
+
+
+ a| 
+Puerto
+ a| 
+Puerto
+
+
+
+ a| 
+Asignación de LUN (host, grupo de hosts, puerto de destino)
+ a| 
+Mapa de volumen, Máscara de volumen
+
+|===
+[NOTE]
+====
+Estos son sólo mapas terminológicos comunes y es posible que no representen todos los casos de este origen de datos.
+
+====
+
+
+== Requisitos
+
+* Dirección IP del sistema de almacenamiento
+* El nombre de usuario y la contraseña de la cuenta de administrador del sistema de almacenamiento de Pure.
+* Requisito de puerto: HTTP/HTTPS 80/443
+
+
+
+
+== Configuración
+
+|===
+
+
+| *Campo* | *Descripción* 
+
+
+ a| 
+FlashArray Host
+ a| 
+La dirección IIP o el nombre de dominio completo de FlashArray Management Server
+
+
+
+ a| 
+Nombre de usuario
+ a| 
+Nombre de usuario del servidor de FlashArray Management
+
+
+
+ a| 
+Contraseña
+ a| 
+Contraseña del servidor de gestión de FlashArray
+
+|===
+
+
+== Configuración avanzada
+
+|===
+
+
+| *Campo* | *Descripción* 
+
+
+ a| 
+Tipo de conexión
+ a| 
+Servidor de gestión
+
+
+
+ a| 
+Puerto TCP
+ a| 
+Puerto TCP utilizado para conectar con FlashArray Server (predeterminado 443 )
+
+
+
+ a| 
+Tiempo de espera de conexión (s)
+ a| 
+Tiempo de espera de conexión (60 segundos predeterminado)
+
+
+
+ a| 
+Intervalo de sondeo de inventario (mín.)
+ a| 
+Intervalo entre sondeos de inventario (predeterminado 60 minutos)
+
+
+
+ a| 
+Intervalo de sondeo de rendimiento (s)
+ a| 
+Intervalo entre sondeos de rendimiento (predeterminado 300 segundos)
+
+|===

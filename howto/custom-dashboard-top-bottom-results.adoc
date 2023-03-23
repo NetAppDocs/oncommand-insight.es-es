@@ -1,0 +1,32 @@
+---
+permalink: howto/custom-dashboard-top-bottom-results.html 
+sidebar: sidebar 
+keywords:  
+summary: En un widget de gráfico de un panel personalizado, puede mostrar los resultados superiores o inferiores de los datos acumulados y elegir el número de resultados mostrados. En un widget de tabla, puede seleccionar el número de filas mostradas y ordenarlas por cualquier columna. 
+---
+= Mostrar los resultados superior e inferior en los widgets del panel
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En un widget de gráfico de un panel personalizado, puede mostrar los resultados superiores o inferiores de los datos acumulados y elegir el número de resultados mostrados. En un widget de tabla, puede seleccionar el número de filas mostradas y ordenarlas por cualquier columna.
+
+
+
+== Widget de gráfico arriba/abajo
+
+En un widget de gráfico, cuando decide realizar un resumen de datos por un atributo específico, tiene la opción de ver los resultados N superior o N inferior. Tenga en cuenta que no puede elegir los resultados superior o inferior al elegir los atributos _All_ ROLLUP.
+
+Puede elegir los resultados que desea mostrar eligiendo *Superior* o *inferior* en el campo *Mostrar* de la consulta y seleccionando un valor de la lista proporcionada.
+
+
+
+== El widget de tabla muestra las entradas
+
+En un widget de tabla, puede seleccionar el número de resultados que se muestran en los resultados de la tabla. Puede elegir entre 5, 10, 20 o 50 resultados. No se le da la opción de elegir los resultados superiores o inferiores porque la tabla permite ordenar el sentido ascendente o descendente por cualquier columna bajo demanda.
+
+Puede elegir el número de resultados que se mostrarán en la tabla del panel seleccionando un valor en el campo *Mostrar entradas* de la consulta.
+
+Tenga en cuenta que cuantos más resultados elija mostrar, más alto será el widget al guardarlo en el panel de control. No podrá cambiar el tamaño del widget más pequeño que el número de filas mostradas.

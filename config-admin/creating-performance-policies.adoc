@@ -1,0 +1,72 @@
+---
+permalink: config-admin/creating-performance-policies.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Se crean políticas de rendimiento para establecer umbrales que activen alertas para notificarle acerca de los problemas relacionados con los recursos de la red. Por ejemplo, puede crear una política de rendimiento para alertarle cuando el uso total de los pools de almacenamiento es superior al 60 %.' 
+---
+= Crear políticas de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se crean políticas de rendimiento para establecer umbrales que activen alertas para notificarle acerca de los problemas relacionados con los recursos de la red. Por ejemplo, puede crear una política de rendimiento para alertarle cuando el uso total de los pools de almacenamiento es superior al 60 %.
+
+
+
+== Pasos
+
+. Abra OnCommand Insight en el explorador.
+. Seleccione *gestionar* > *políticas de rendimiento*.
++
+Se muestra la página Performance Policies.image:../media/performance-policies-page.gif[""]
+
++
+Las directivas se organizan por objeto y se evalúan en el orden en el que aparecen en la lista de ese objeto.
+
+. Haga clic en *Agregar nueva directiva*.
++
+Aparecerá el cuadro de diálogo Add Policy.
+
+. En el campo *Nombre de directiva*, escriba un nombre para la directiva.
++
+Debe usar un nombre diferente de los demás nombres de políticas del objeto. Por ejemplo, no se pueden tener dos políticas denominadas «'latencia'» para un volumen interno; sin embargo, se puede tener una política de «'latencia'» para un volumen interno y otra política de «'latencia'» para un volumen diferente. La práctica recomendada es utilizar siempre un nombre único para cualquier política, independientemente del tipo de objeto.
+
+. En la lista *aplicar a objetos de tipo*, seleccione el tipo de objeto al que se aplica la directiva.
+. En la lista *con anotación*, seleccione un tipo de anotación, si corresponde, e introduzca un valor para la anotación en el cuadro *valor* para aplicar la directiva sólo a los objetos que tienen definida esta anotación en particular.
+. Si ha seleccionado *Puerto* como tipo de objeto, en la lista *conectado a*, seleccione a qué puerto está conectado.
+. En la lista *aplicar después de una ventana de*, seleccione cuando se cree una alerta para indicar una infracción de umbral.
++
+La primera opción de ocurrencia activa una alerta cuando se supera un umbral en la primera muestra de datos. Todas las demás opciones activan una alerta cuando el umbral se cruza una vez y se cruza de forma continua durante al menos el tiempo especificado.
+
+. En la lista *with severity*, seleccione la gravedad de la infracción.
+. De forma predeterminada, las alertas por correo electrónico sobre infracciones de directivas se enviarán a los destinatarios de la lista global de correo electrónico. Puede anular esta configuración para que se envíen alertas de una directiva concreta a destinatarios específicos.
++
+** Haga clic en el vínculo para abrir la lista de destinatarios y, a continuación, haga clic en el botón *+* para agregar destinatarios. Las alertas de infracción de esa directiva se enviarán a todos los destinatarios de la lista.
+
+
+. Haga clic en el enlace *Any* de la sección *Crear alerta si cualquiera de las siguientes opciones son verdaderas* para controlar cómo se activan las alertas:
++
+** *cualquiera*
++
+Esta es la configuración predeterminada, que crea alertas cuando se cruza cualquiera de los umbrales relacionados con una política.
+
+** *todo*
++
+Este ajuste crea una alerta cuando se cruzan todos los umbrales de una política. Al seleccionar *all*, el primer umbral que se crea para una política de rendimiento se denomina regla principal. Debe asegurarse de que el umbral de regla principal sea la infracción de la que le preocupa más la política de rendimiento.
+
+
+
+. En la sección *Crear alerta si*, seleccione un contador de rendimiento y un operador y, a continuación, introduzca un valor para crear un umbral.
+. Haga clic en *Agregar umbral* para agregar más umbrales.
+. Para eliminar un umbral, haga clic en el icono de papelera.
+. Active la casilla de verificación *Detener el procesamiento de directivas adicionales si se genera una alerta* si desea que la directiva deje de procesarse cuando se produzca una alerta.
++
+Por ejemplo, si tiene cuatro políticas para almacenes de datos y la segunda política se configura para detener el procesamiento cuando se produce una alerta, las tercera y cuarta políticas no se procesan mientras que la violación de la segunda política está activa.
+
+. Haga clic en *Guardar*.
++
+Se muestra la página Performance Policies y la política de rendimiento se muestra en la lista de políticas para el tipo de objeto.
+
+

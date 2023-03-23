@@ -1,0 +1,45 @@
+---
+permalink: config-admin/committing-a-data-source-patch.html 
+sidebar: sidebar 
+keywords:  
+summary: La información del resumen parches se utiliza para decidir si el parche se está realizando según lo esperado y, a continuación, se debe confirmar en la red. 
+---
+= Se está cometiendo un parche de origen de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La información del resumen parches se utiliza para decidir si el parche se está realizando según lo esperado y, a continuación, se debe confirmar en la red.
+
+
+
+== Antes de empezar
+
+Ha instalado un parche y debe decidir si el parche se ha realizado correctamente y se debe aprobar.
+
+
+
+== Pasos
+
+. En la barra de herramientas Insight, haga clic en *Admin*.
+. Haga clic en *parches*.
++
+Si no se está instalando ningún parche, los parches que se están revisando están vacíos.
+
+. En *parches actualmente en revisión*, compruebe el estado de los parches del origen de datos que se están aplicando actualmente.
+. Para examinar los detalles asociados a una revisión específica, haga clic en el nombre vinculado de la revisión.
+. En la información resumida de Patches, que se muestra en este ejemplo, compruebe *Recomendación* y *Comentarios* para evaluar el progreso del parche.
++
+image::../media/oci-7-patch-approval-gif.gif[cuadro de diálogo aprobación de parche]
+
+. Consulte la tabla *orígenes de datos afectados* para ver el estado de cada origen de datos afectado antes y después del parche.
++
+Si le preocupa que haya un problema con uno de los orígenes de datos que se van a aplicar parches, haga clic en el nombre vinculado en la tabla orígenes de datos afectados.
+
+. Si concluye que el parche debe aplicarse a ese tipo de origen de datos, haga clic en *aprobar*.
++
+Los orígenes de datos se modifican y el parche se elimina de los parches actualmente en revisión.
+
+

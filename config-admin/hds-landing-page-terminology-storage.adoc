@@ -1,0 +1,28 @@
+---
+permalink: config-admin/hds-landing-page-terminology-storage.html 
+sidebar: sidebar 
+keywords:  
+summary: Términos que se aplican a objetos o referencias que puede encontrar en las páginas de destino de activos de almacenamiento de HDS. 
+---
+= Almacenamiento en HDS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Términos que se aplican a objetos o referencias que puede encontrar en las páginas de destino de activos de almacenamiento de HDS.
+
+
+
+== Terminología de almacenamiento de HDS
+
+Los siguientes términos se aplican a objetos o referencias que puede encontrar en las páginas de destino de activos de almacenamiento HDS. Muchos de estos términos también se aplican a otros recopiladores de datos.
+
+* Nombre -- proviene directamente del atributo "'name'" de HDS HiCommand Device Manager a través de la llamada a la API XML de GetStorageArray
+* Modelo: Procede directamente del atributo "'arrayType'" de HDS HiCommand Device Manager a través de la llamada API XML de GetStorageArray
+* Proveedor -- HDS
+* Familia: Proviene directamente del atributo "'arrayFamily'" de HDS HiCommand Device Manager a través de la llamada API XML de GetStorageArray
+* IP:- esta es la dirección IP de gestión de la cabina, no una lista exhaustiva de todas las direcciones IP de la cabina
+* Capacidad bruta: Valor base2 que representa la suma de la capacidad total de todos los discos de este sistema, sin importar la función de disco.
+

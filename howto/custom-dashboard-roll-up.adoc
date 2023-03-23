@@ -1,0 +1,38 @@
+---
+permalink: howto/custom-dashboard-roll-up.html 
+sidebar: sidebar 
+keywords:  
+summary: Los datos que se muestran en los widgets del panel se resumen a partir de los puntos de datos adquiridos, lo que permite la flexibilidad y concisión de los paneles. 
+---
+= Acumulación y acumulación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los datos que se muestran en los widgets del panel se resumen a partir de los puntos de datos adquiridos, lo que permite la flexibilidad y concisión de los paneles.
+
+Los datos que se muestran en cada widget se recogen de los puntos de datos subyacentes recopilados durante la adquisición. Por ejemplo, si tiene un widget de gráfico de líneas que muestra Storage IOPS a lo largo del tiempo, puede que desee ver una línea independiente para cada uno de sus centros de datos, para una rápida comparación. Puede optar por recuperar estos datos de una de estas formas:
+
+* *Avg*: Muestra cada línea como el _promedio_ de los datos subyacentes.
+* *Max*: Muestra cada línea como el _Maximum_ de los datos subyacentes.
+* *Min*: Muestra cada línea como el _minimo_ de los datos subyacentes.
+* *Suma*: Muestra cada línea como la _suma_ de los datos subyacentes.
+
+
+Para ello, en la consulta del widget, elija primero un tipo de activo (por ejemplo, _Storage_) y una métrica (por ejemplo, __IOPS - Tota__l). En *Roll up*, elija un método de acumulación (como _Avg_) y seleccione un atributo o anotación por el que desea acumular los datos (por ejemplo, _Data Center_). El widget se actualiza automáticamente y muestra una línea para cada uno de los centros de datos.
+
+También puede optar por recuperar _All_ de los datos subyacentes en el gráfico o la tabla. En este caso, obtendrá una sola línea para cada consulta en el widget, que mostrará la media, mínima, máxima o suma de la métrica seleccionada para todos los activos subyacentes.
+
+Si ha establecido un filtro para la consulta, los datos que se han acumulado se basan en los datos filtrados.
+
+Tenga en cuenta que, cuando elija desplegar un widget por cualquier campo (por ejemplo, _Model_), necesitará *filtrar por* ese campo para mostrar correctamente los datos de ese campo en el gráfico o la tabla.
+
+*Agregando datos:* puede alinear aún más sus gráficos de series de tiempo (línea, área, etc.) agregando puntos de datos en cubos de minutos, horas o días antes de que esos datos se enrolle posteriormente por atributo (si se ha elegido). Puede elegir agregar puntos de datos según su media, Máx, Mín o suma, o por el último punto de datos recogido durante el intervalo elegido. Para elegir un método de agregación, haga clic en *más opciones* en la sección de consulta del widget.
+
+El intervalo mínimo permitido es de diez minutos. Un intervalo pequeño combinado con un intervalo de tiempo largo puede dar como resultado un "intervalo de agregación dio lugar a demasiados puntos de datos". advertencia. Es posible que vea esto si tiene un intervalo pequeño y aumente el lapso de tiempo del panel de control a 7 días. En este caso, Insight aumentará temporalmente el intervalo de agregación a 1 hora hasta que seleccione un lapso de tiempo menor.
+
+También puede agregar datos en el widget de gráfico de barras y en el widget de valor único.
+
+La mayoría de los contadores de activos se agregan a _Avg_ de forma predeterminada. Algunos contadores se agregan a _Max_, _Min_ o _suma_ de forma predeterminada. Por ejemplo, los errores de puerto se agregan a _suma_ de forma predeterminada, donde el agregado de IOPS de almacenamiento se agrega a _Avg_.

@@ -1,0 +1,55 @@
+---
+permalink: config-admin/what-s-included-in-the-autosupport-package.html 
+sidebar: sidebar 
+keywords:  
+summary: El paquete AutoSupport contiene la copia de seguridad de la base de datos, así como información ampliada. 
+---
+= Lo que se incluye en el paquete AutoSupport (ASUP)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El paquete AutoSupport contiene la copia de seguridad de la base de datos, así como información ampliada.
+
+El paquete AutoSupport incluye lo siguiente:
+
+* Datos de inventario
+* Datos de rendimiento (si se seleccionan para incluir en ASUP)
+* Orígenes de datos y configuración de orígenes de datos
+* Paquetes de integración
+* Unidades de adquisición remota
+* Unidades de monitorización Ethernet
+* Configuración de ASUP/proxy
+* Configuración de ubicación de copia de seguridad
+* Configuración de ubicación de archivo
+* Configuración de notificaciones
+* Puntuaciones y dispositivos de detección de anomalías
+* Configuración de la aplicación de detección de anomalías
+* Usuarios
+* Políticas de rendimiento
+* Entidades y aplicaciones empresariales
+* Reglas y configuración de resolución del dispositivo
+* Paneles y widgets
+* Widgets y paneles de páginas de activos personalizados
+* Consultas
+* Anotaciones y reglas de anotación
+* Registros
+* Licencias
+* Estado de adquisición/origen de datos
+* Estado de MySQL
+* Información del sistema
+
+
+El paquete AutoSupport no incluye:
+
+* Configuración de herramientas de seguridad / información del almacén (copia de seguridad mediante un proceso CLI independiente)
+* Datos de rendimiento (si no se seleccionan para incluir en ASUP)
+
+
+[NOTE]
+====
+Si decide incluir datos de rendimiento en el ASUP, se incluyen los siete días más recientes de datos. Los datos restantes estarán en el archivo si tiene activada esa función. Los datos de archivado no se incluyen en ASUP.
+
+====

@@ -1,0 +1,184 @@
+---
+permalink: config-admin/emc-vnxe-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: La fuente de datos VNXe de EMC proporciona compatibilidad de inventario para cabinas de almacenamiento unificado VNXe y Unity de EMC. 
+---
+= Fuente de datos VNXe de EMC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La fuente de datos VNXe de EMC proporciona compatibilidad de inventario para cabinas de almacenamiento unificado VNXe y Unity de EMC.
+
+Este origen de datos está basado en CLI y requiere que instale Unisphere en la CLI de VNXe (uemcli.exe) en la unidad de adquisición en la que reside el origen de datos de VNXe. uemcli.exe utiliza HTTPS como protocolo de transporte, por lo que la unidad de adquisición debe poder iniciar conexiones HTTPS con las matrices VNXe/Unity. Debe tener al menos un usuario de sólo lectura para que lo utilice el origen de datos.
+
+
+
+== Terminología
+
+OnCommand Insight adquiere la siguiente información de inventario a partir del origen de datos de EMC VNXe. Para cada tipo de activo que adquiere Insight, se muestra la terminología más común utilizada en este activo. Al ver o solucionar problemas de este origen de datos, tenga en cuenta la siguiente terminología:
+
+|===
+
+
+| Plazo del proveedor/modelo | Insight plazo 
+
+
+ a| 
+Disco
+ a| 
+Disco
+
+
+
+ a| 
+Cabina de almacenamiento
+ a| 
+Reducida
+
+
+
+ a| 
+Procesador
+ a| 
+Nodo de almacenamiento
+
+
+
+ a| 
+Pool de almacenamiento
+ a| 
+Pool de almacenamiento
+
+
+
+ a| 
+Información general sobre el bloque de iSCSI, VMFS de VMware
+ a| 
+Volumen
+
+
+
+ a| 
+Carpeta compartida
+ a| 
+Volumen interno
+
+
+
+ a| 
+CIFS Share, NFS Share, Share from VMware NFS datastore
+ a| 
+Share
+
+
+
+ a| 
+Sistema remoto con replicación
+ a| 
+Sincronización
+
+
+
+ a| 
+Nodo iSCSI
+ a| 
+Nodo de destino iSCSI
+
+
+
+ a| 
+Iniciador iSCSI
+ a| 
+Iniciador de destino iSCSI
+
+|===
+[NOTE]
+====
+Estos son sólo mapas terminológicos comunes y es posible que no representen todos los casos de este origen de datos.
+
+====
+
+
+== Requisitos
+
+A continuación, se enumeran los requisitos para configurar y utilizar este origen de datos:
+
+* El recopilador de datos de VNXe depende de la interfaz de línea de comandos; debe instalar Unisphere en la CLI de VNXe (uemcli.exe) en la unidad de adquisición donde reside el recopilador de datos de VNXe.
+* uemcli.exe utiliza HTTPS como protocolo de transporte, de modo que la unidad de adquisición deberá poder iniciar conexiones HTTPS con el VNXe.
+* Debe tener al menos un usuario de sólo lectura para que lo utilice el origen de datos.
+* Dirección IP del servidor de activación de soluciones de gestión.
+* Se requiere HTTPS en el puerto 443
+* El recopilador de datos de EMC VNXe proporciona compatibilidad con iSCSI y NAS para el inventario; se descubrirán volúmenes de Fibre Channel, pero Insight no informará sobre los puertos de almacenamiento, enmascaramiento ni asignación de FC.
+
+
+
+
+== Configuración
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Almacenamiento VNXe
+ a| 
+La dirección IP o el nombre de dominio completo del dispositivo VNXe
+
+
+
+ a| 
+Nombre de usuario
+ a| 
+Nombre de usuario del dispositivo VNXe
+
+
+
+ a| 
+Contraseña
+ a| 
+Contraseña del dispositivo VNXe
+
+
+
+ a| 
+Ruta completa al ejecutable uemcli
+ a| 
+Ruta completa a la `uemcli.exe` ejecutable
+
+|===
+
+
+== Configuración avanzada
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Intervalo de sondeo de inventario (mín.)
+ a| 
+Intervalo entre sondeos de inventario (predeterminado 40 minutos)
+
+
+
+ a| 
+Puerto CLI de VNXe
+ a| 
+Puerto utilizado para la CLI de VNXe
+
+
+
+ a| 
+Tiempo de espera de proceso externo de inventario (seg)
+ a| 
+Tiempo de espera de proceso externo (predeterminado 1800 segundos)
+
+|===

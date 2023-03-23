@@ -1,0 +1,263 @@
+---
+permalink: config-admin/advanced-asset-search-techniques-new.html 
+sidebar: sidebar 
+keywords:  
+summary: Se pueden utilizar varias técnicas de búsqueda para buscar datos u objetos en el entorno supervisado. 
+---
+= Técnicas avanzadas de búsqueda
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se pueden utilizar varias técnicas de búsqueda para buscar datos u objetos en el entorno supervisado.
+
+
+
+== Búsqueda con comodín
+
+Puede realizar una búsqueda con varios caracteres comodín con el carácter *. Por ejemplo, _aplic*n_ devolverá la aplicación.
+
+
+
+== Frases utilizadas en la búsqueda
+
+Una frase es un grupo de palabras rodeadas de comillas dobles; por ejemplo, "PAW VNX LUN 5". Puede utilizar comillas dobles para buscar documentos que contengan espacios en sus nombres o atributos.
+
+
+
+== Operadores booleanos
+
+Mediante operadores booleanos, puede combinar varios términos para formar una consulta más compleja.
+
+* *O*
++
+** EL operador OR es el operador conjunto predeterminado.
++
+Si no hay ningún operador booleano entre dos términos, se utiliza el operador OR.
+
+** El operador OR vincula dos términos y busca un documento coincidente si alguno de los términos existe en un documento.
++
+Por ejemplo, «almacenamiento O netapp» busca documentos que contengan «almacenamiento» o «netapp».
+
+** Se dan puntuaciones altas a los documentos que coinciden con la mayoría de los términos.
+
+
+* *Y*
++
+Puede usar el operador AND para buscar documentos en los que tanto los términos de búsqueda existen en un único documento. Por ejemplo, «'aurora Y netapp'» busca documentos que contengan «almacenamiento» y «'netapp».
+
++
+Puede utilizar el símbolo && en lugar de la palabra Y.
+
+* *NO*
++
+Cuando utiliza EL operador NOT, todos los documentos que contienen el término después DE NO se excluyen de los resultados de la búsqueda. Por ejemplo, «almacenamiento NO netapp» busca documentos que solo contengan «almacenamiento» y no «'netapp».
+
++
+Puede utilizar el símbolo ! En vez DE la palabra NO.
+
+
+
+
+
+== Búsqueda de prefijo y sufijo
+
+* Tan pronto como comience a escribir una cadena de búsqueda, el motor de búsqueda realiza una búsqueda de prefijo y sufijo para encontrar la mejor coincidencia.
+* Las coincidencias exactas reciben una puntuación mayor que la coincidencia de prefijo o sufijo. La puntuación se calcula en función de la distancia del término de búsqueda del resultado de búsqueda real. Por ejemplo, tenemos tres almacenes: «aurora», «aurora» y «aurora». Si busca "'aur'", se devolverán las tres cigüeñas. Sin embargo, el resultado de búsqueda de "'aurora'" tendrá la puntuación más alta porque tiene la distancia más cercana a la cadena de búsqueda de prefijo.
+* El motor de búsqueda también busca términos en orden inverso, lo que le permite realizar una búsqueda de sufijo. Por ejemplo, cuando escribe «'345'» en el cuadro de búsqueda, el motor de búsqueda busca «'345'».
+* La búsqueda no distingue mayúsculas y minúsculas.
+
+
+
+
+== Búsqueda mediante términos indexados
+
+Las búsquedas que coinciden con más de los términos indexados tienen como resultado puntuaciones más altas.
+
+La cadena de búsqueda se divide en términos de búsqueda separados por espacio. Por ejemplo, la cadena de búsqueda «de almacenamiento aurora de netapp» se divide en tres palabras clave: «De almacenamiento», «'aurora» y «'netapp». La búsqueda se realiza utilizando los tres términos. Los documentos que coincidan con la mayoría de estos términos tendrán la puntuación más alta. Cuanta más información proporcione, mejores serán los resultados de la búsqueda. Por ejemplo, puede buscar un almacenamiento por su nombre y modo.
+
+La interfaz de usuario muestra los resultados de la búsqueda en todas las categorías, con los tres resultados principales por categoría. Si no ha encontrado un documento que esperaba, puede incluir más términos en la cadena de búsqueda para mejorar los resultados de la búsqueda.
+
+En la tabla siguiente se proporciona una lista de términos indexados que se pueden agregar a la cadena de búsqueda.
+
+|===
+
+
+| Categoría | Términos indexados 
+
+
+ a| 
+Reducida
+ a| 
+* «almacenamiento»
+* nombre
+* proveedor
+* modelo
+
+
+
+
+ a| 
+StoragePool
+ a| 
+* «buen pool»
+* nombre
+* nombre del almacenamiento
+* Las direcciones IP del almacenamiento
+* el número de serie del almacenamiento
+* proveedor de almacenamiento de netapp
+* modelo de almacenamiento
+* nombres de todos los volúmenes internos asociados
+* nombres de todos los discos asociados
+
+
+
+
+ a| 
+Volumen interno
+ a| 
+* «'internalvolume»
+* nombre
+* nombre del almacenamiento
+* Las direcciones IP del almacenamiento
+* el número de serie del almacenamiento
+* proveedor de almacenamiento de netapp
+* modelo de almacenamiento
+* nombre del pool de almacenamiento
+* nombres de todos los recursos compartidos asociados
+* nombres de todas las aplicaciones y entidades de negocio asociadas
+
+
+
+
+ a| 
+Volumen
+ a| 
+* «'volumen»
+* nombre
+* etiqueta
+* nombres de todos los volúmenes internos
+* nombre del pool de almacenamiento
+* nombre del almacenamiento
+* Las direcciones IP del almacenamiento
+* el número de serie del almacenamiento
+* proveedor de almacenamiento de netapp
+* modelo de almacenamiento
+
+
+
+
+ a| 
+Nodo de almacenamiento
+ a| 
+* "tormagenodo"
+* nombre
+* nombre del almacenamiento
+* Las direcciones IP del almacenamiento
+* serialnumber del almacenamiento
+* proveedor de almacenamiento de netapp
+* modelo de almacenamiento
+
+
+
+
+ a| 
+Host
+ a| 
+* «'host'»
+* nombre
+* Direcciones IP
+* nombres de todas las aplicaciones y entidades de negocio asociadas
+
+
+
+
+ a| 
+Almacén de datos
+ a| 
+* «datastore»
+* nombre
+* IP del centro virtual
+* nombres de todos los volúmenes
+* nombres de todos los volúmenes internos
+
+
+
+
+ a| 
+Equipos virtuales
+ a| 
+* «"máquina virtual"
+* nombre
+* Nombre DNS
+* Direcciones IP
+* nombre del host
+* Direcciones IP del host
+* nombres de todos los almacenes de datos
+* nombres de todas las aplicaciones y entidades de negocio asociadas
+
+
+
+
+ a| 
+Interruptores (normales y NPV)
+ a| 
+* "bruja"
+* Dirección IP
+* wwn
+* nombre
+* número de serie
+* modelo
+* ID de dominio
+* nombre de la estructura
+* wwn de la estructura
+
+
+
+
+ a| 
+Cliente más
+ a| 
+* «"aplicación»
+* nombre
+* inquilino
+* línea de negocio
+* unidad de negocio
+* proyecto
+
+
+
+
+ a| 
+Cinta
+ a| 
+* «'cinta»
+* Dirección IP
+* nombre
+* número de serie
+* proveedor
+
+
+
+
+ a| 
+Puerto
+ a| 
+* «'puerto'»
+* wwn
+* nombre
+
+
+
+
+ a| 
+Estructura
+ a| 
+* «'tejido»
+* wwn
+* nombre
+
+
+|===

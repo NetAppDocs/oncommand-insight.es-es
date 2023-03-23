@@ -1,0 +1,38 @@
+---
+permalink: config-admin/researching-a-failed-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Si un origen de datos tiene el "error de inventario!" O "error de rendimiento!" Mensaje y un impacto alto o medio, necesita investigar este problema utilizando la página de resumen del origen de datos con su información vinculada.' 
+---
+= Investigar una fuente de datos fallida
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si un origen de datos tiene el mensaje "*Inventory failed !*" o "*Performance failed !*" y un impacto alto o medio, debe investigar este problema utilizando la página de resumen del origen de datos con su información vinculada.
+
+
+
+== Pasos
+
+. Haga clic en el *Nombre* vinculado del origen de datos para abrir la página Resumen.
+. En la página Resumen, compruebe el área *Comentarios* para leer las notas que dejó otro ingeniero que también podría estar investigando este error.
+. Anote cualquier mensaje de rendimiento.
+. Si se está aplicando un parche a este origen de datos, haga clic en link para comprobar la página *parche* para ver si esto ha causado el problema.
+. Mueva el puntero del ratón sobre los segmentos del gráfico *escala de tiempo del evento* para ver información adicional.
+. Seleccione un mensaje de error para un dispositivo y se mostrará debajo de la línea de tiempo del evento y haga clic en el icono *Detalles de error* que aparece a la derecha del mensaje.
++
+Los detalles del error incluyen el texto del mensaje de error, las causas más probables, la información en uso, y sugerencias de lo que se puede intentar corregir el problema.
+
+. En el área dispositivos que informa este origen de datos, puede filtrar la lista para mostrar sólo los dispositivos de interés y puede hacer clic en el *Nombre* enlazado de un dispositivo para mostrar la _página_ del recurso correspondiente a ese dispositivo.
+. Para volver a las páginas mostradas anteriormente, utilice una de estas técnicas:
++
+** Haga clic en la flecha hacia atrás del explorador.
+** Haga clic con el botón secundario del ratón en la flecha de retroceso para mostrar una lista de las páginas y seleccione la página que desee.
+
+
+. Para mostrar información detallada sobre otros recursos, haga clic en otros nombres vinculados.
+. Cuando vuelva a la página de resumen del origen de datos, compruebe el área *Changes* en la parte inferior de la página para ver si los cambios recientes causaron el problema.
+

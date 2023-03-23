@@ -1,0 +1,31 @@
+---
+permalink: config-admin/designing-your-business-entities-hierarchy.html 
+sidebar: sidebar 
+keywords:  
+summary: Debe comprender los elementos de la estructura corporativa y lo que debe representar en las entidades de negocio porque se convierten en una estructura fija en su base de datos de OnCommand Insight. Puede utilizar la siguiente información para configurar las entidades de negocio. Recuerde que no es necesario utilizar todos los niveles de jerarquía para recopilar datos en estas categorías. 
+---
+= Diseño de la jerarquía de entidades de negocio
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe comprender los elementos de la estructura corporativa y lo que debe representar en las entidades de negocio porque se convierten en una estructura fija en su base de datos de OnCommand Insight. Puede utilizar la siguiente información para configurar las entidades de negocio. Recuerde que no es necesario utilizar todos los niveles de jerarquía para recopilar datos en estas categorías.
+
+
+
+== Pasos
+
+. Examine cada nivel de la jerarquía de entidades de negocio para determinar si ese nivel debe incluirse en la jerarquía de entidades de negocio de su empresa:
++
+** *El nivel de inquilino* es necesario si su empresa es un ISP y desea hacer un seguimiento del uso de los recursos por parte del cliente.
+** *La línea de negocio (LOB)* es necesaria en la jerarquía si es necesario hacer un seguimiento de los datos de las diferentes líneas de producto.
+** *La unidad de negocio* es necesaria si necesita realizar un seguimiento de los datos de diferentes departamentos. Este nivel de la jerarquía suele ser valioso para separar un recurso que un departamento utiliza que otros departamentos no.
+** *El nivel de proyecto* se puede utilizar para trabajos especializados dentro de un departamento. Estos datos pueden ser útiles para determinar, definir y supervisar las necesidades tecnológicas de un proyecto independiente en comparación con otros proyectos de una empresa o departamento.
+
+
+. Cree un gráfico que muestre cada entidad de negocio con los nombres de todos los niveles dentro de la entidad.
+. Compruebe los nombres en la jerarquía para estar seguros de que serán explicativos en las vistas e informes de OnCommand Insight.
+. Identificar todas las aplicaciones que están asociadas con cada entidad de negocio.
+

@@ -1,0 +1,25 @@
+---
+permalink: config-admin/setting-up-your-data-sources-in-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Los orígenes de datos son el componente más importante al intentar mantener un entorno Insight. Los orígenes de datos detectan la información de red que se utiliza para el análisis y la validación. Debe configurar sus orígenes de datos en Insight para poder supervisarlos dentro de su red. 
+---
+= Configurar orígenes de datos en Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los orígenes de datos son el componente más importante al intentar mantener un entorno Insight. Los orígenes de datos detectan la información de red que se utiliza para el análisis y la validación. Debe configurar sus orígenes de datos en Insight para poder supervisarlos dentro de su red.
+
+Para cada origen de datos, los requisitos específicos para definir ese origen de datos dependen del proveedor y modelo de los dispositivos correspondientes. Antes de agregar los orígenes de datos, necesita direcciones de red, información de cuentas y contraseñas para todos los dispositivos y posiblemente estos detalles adicionales:
+
+* Interruptores
+* Estaciones de gestión de dispositivos
+* Sistemas de almacenamiento que tienen conectividad IP
+* Estaciones de gestión del almacenamiento
+* Host de servidores que ejecutan software de gestión para dispositivos de almacenamiento que no tienen conectividad IP
+
+
+Para obtener más información acerca de las definiciones de origen de datos, consulte la información de "referencia de origen de datos específico del proveedor" en esta sección.

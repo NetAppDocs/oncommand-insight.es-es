@@ -1,0 +1,247 @@
+---
+permalink: config-admin/ibm-svc-ssh-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: El origen de datos IBM SVC recopila datos de inventario y rendimiento mediante SSH, lo que admite una variedad de dispositivos que ejecutan el sistema operativo SVC. La lista de dispositivos compatibles incluye modelos como SVC, v7000, v5000 y v3700. Consulte la matriz de compatibilidad con orígenes de datos de Insight para ver modelos y versiones de firmware compatibles. 
+---
+= Fuente de datos IBM SVC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El origen de datos IBM SVC recopila datos de inventario y rendimiento mediante SSH, lo que admite una variedad de dispositivos que ejecutan el sistema operativo SVC. La lista de dispositivos compatibles incluye modelos como SVC, v7000, v5000 y v3700. Consulte la matriz de compatibilidad con orígenes de datos de Insight para ver modelos y versiones de firmware compatibles.
+
+
+
+== Terminología
+
+OnCommand Insight adquiere la siguiente información de inventario del origen de datos IBM SVC. Para cada tipo de activo que adquiere Insight, se muestra la terminología más común utilizada en este activo. Al ver o solucionar problemas de este origen de datos, tenga en cuenta la siguiente terminología:
+
+|===
+
+
+| Plazo del proveedor/modelo | Insight plazo 
+
+
+ a| 
+Unidad
+ a| 
+Disco
+
+
+
+ a| 
+Clúster
+ a| 
+Reducida
+
+
+
+ a| 
+Nodo
+ a| 
+Nodo de almacenamiento
+
+
+
+ a| 
+Grupo Mdisk
+ a| 
+Pool de almacenamiento
+
+
+
+ a| 
+VDisk
+ a| 
+Volumen
+
+
+
+ a| 
+Disco Mdisk
+ a| 
+LUN back-end
+
+|===
+[NOTE]
+====
+Estos son sólo mapas terminológicos comunes y es posible que no representen todos los casos de este origen de datos.
+
+====
+
+
+== Requisitos de inventario
+
+* Dirección IP de cada clúster SVC
+* Puerto 22 disponible
+* Par de claves públicas y privadas que genere conInsight o reutilice un keyair que ya esté en uso en su SVC
++
+Si está reutilizando un keyair existente, debe convertirlos del formato Putty al formato OpenSSH.
+
+* Clave pública instalada en el clúster SVC
+* La clave privada debe identificarse en el origen de datos
+* Validación de acceso: Abierta `ssh` Sesión al clúster SVC mediante la clave privada
+
+
+[NOTE]
+====
+No es necesario instalar software de terceros.
+
+====
+
+
+== Requisitos de rendimiento
+
+* Consola SVC, que es obligatoria para cualquier clúster SVC y necesaria para el paquete básico de la detección SVC.
+* El nivel de acceso administrativo solo se requiere para copiar los archivos de datos de rendimiento de los nodos de clúster al nodo de configuración.
++
+[NOTE]
+====
+Dado que este nivel de acceso no es necesario para el paquete de detección de la base SVC, es posible que el usuario de la base SVC no funcione correctamente.
+
+====
+* Se requiere el puerto 22
+* Se debe generar una clave SSH pública y privada para este usuario, y la clave privada se almacena para que sea accesible desde la Unidad de adquisición. Si el usuario de la base SVC tiene los permisos adecuados, el mismo usuario y la misma clave funcionan. Se puede utilizar la misma clave SSH para los datos de inventario y rendimiento.
+* Active la recopilación de datos mediante la conexión al clúster SVC mediante SSH y ejecutando: `svctask startstats -interval 1`
++
+[NOTE]
+====
+También puede activar la recopilación de datos mediante la interfaz de usuario de administración de SVC.
+
+====
+
+
+
+
+== Se explica el número de serie padre
+
+Tradicionalmente, Insight es capaz de generar informes sobre el número de serie de la cabina de almacenamiento o los números de serie de cada nodo de almacenamiento. Sin embargo, algunas arquitecturas de cabinas de almacenamiento no se alinean correctamente con esto. Un clúster SVC puede componarse de 1-4 dispositivos y cada dispositivo tiene 2 nodos. Si el dispositivo en sí tiene un número de serie, ese número de serie no es ni el número de serie del clúster ni los nodos.
+
+El atributo "número de serie principal" del objeto del nodo de almacenamiento se rellena de forma adecuada para las matrices IBM SVC cuando los nodos individuales se encuentran dentro de un gabinete o dispositivo intermedio que es sólo parte de un clúster mayor.
+
+
+
+== Configuración
+
+|===
+
+
+| *Campo* | *Descripción* 
+
+
+ a| 
+Dirección IP del clúster/s.
+ a| 
+La dirección IP del nombre de dominio completo para el almacenamiento SVC
+
+
+
+ a| 
+Elija 'Contraseña' o 'Archivo de claves OpenSSH' para especificar el tipo de credencial
+ a| 
+El tipo de credencial utilizado para conectarse al dispositivo a través de SSH
+
+
+
+ a| 
+Nombre de usuario del inventario
+ a| 
+Nombre de usuario de la CLI de SVC
+
+
+
+ a| 
+Contraseña de inventario
+ a| 
+Contraseña para la CLI de SVC
+
+
+
+ a| 
+Ruta completa a la clave privada de inventario
+ a| 
+Ruta completa al archivo de claves privadas de inventario
+
+
+
+ a| 
+Nombre de usuario de rendimiento
+ a| 
+Nombre de usuario de la CLI SVC para la recopilación de rendimiento
+
+
+
+ a| 
+Contraseña de rendimiento
+ a| 
+Contraseña para la CLI de SVC para la recopilación del rendimiento
+
+
+
+ a| 
+Ruta completa a la clave privada de rendimiento
+ a| 
+Ruta completa al archivo de claves privadas de rendimiento
+
+|===
+
+
+== Configuración avanzada
+
+|===
+
+
+| *Campo* | *Descripción* 
+
+
+ a| 
+Intervalo de sondeo de inventario (mín.)
+ a| 
+Intervalo entre sondeos de inventario (predeterminado 40 minutos)
+
+
+
+ a| 
+Excluir dispositivos
+ a| 
+Lista separada por comas de los ID de dispositivo que se van a excluir de la colección de inventario
+
+
+
+ a| 
+Tiempo de espera del proceso SSH (s)
+ a| 
+Tiempo de espera del proceso SSH (200 segundos predeterminado)
+
+
+
+ a| 
+Intervalo de sondeo de rendimiento (s)
+ a| 
+Intervalo entre sondeos de rendimiento (predeterminado 300 segundos)
+
+
+
+ a| 
+Rendimiento excluir dispositivos
+ a| 
+Lista separada por comas de ID de dispositivo que se van a excluir de la colección de rendimiento
+
+
+
+ a| 
+Tiempo de espera de proceso de SSH de rendimiento (s)
+ a| 
+Tiempo de espera del proceso SSH (200 segundos predeterminado)
+
+
+
+ a| 
+Para limpiar los archivos de estadísticas objeto de dumping
+ a| 
+Selecciona para limpiar los archivos de estadísticas objeto de dumping
+
+|===

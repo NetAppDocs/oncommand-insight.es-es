@@ -1,0 +1,87 @@
+---
+permalink: config-admin/emc-recoverpoint-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: El origen de datos de EMC RecoverPoint recopila información de inventario del almacenamiento de EMC RecoverPoint. Para la configuración, el origen de datos requiere la dirección IP de los procesadores de almacenamiento y un nombre de usuario y contraseña de sólo lectura. 
+---
+= Fuente de datos de EMC RecoverPoint
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El origen de datos de EMC RecoverPoint recopila información de inventario del almacenamiento de EMC RecoverPoint. Para la configuración, el origen de datos requiere la dirección IP de los procesadores de almacenamiento y un nombre de usuario y contraseña de _sólo lectura.
+
+El origen de datos de EMC RecoverPoint recopila las relaciones de replicación de volumen a volumen que RecoverPoint coordina en otras cabinas de almacenamiento. OnCommand Insight muestra una cabina de almacenamiento para cada clúster RecoverPoint, y recopila datos de inventario de los nodos y los puertos de almacenamiento de ese clúster. No se recopilan datos de volúmenes o pool de almacenamiento.
+
+
+
+== Requisitos
+
+* Dirección IP o nombre de dominio completo del procesador de almacenamiento
+* Nombre de usuario y contraseña de solo lectura
+* Acceso a API DE REST a través del puerto 443
+* Acceso SSH a través de PuTTY
+
+
+
+
+== Configuración
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Dirección de RecoverPoint
+ a| 
+Dirección IP o nombre de dominio completo del clúster RecoverPoint
+
+
+
+ a| 
+Nombre de usuario
+ a| 
+Nombre de usuario del clúster RecoverPoint
+
+
+
+ a| 
+Contraseña
+ a| 
+Contraseña del clúster RecoverPoint
+
+|===
+
+
+== Configuración avanzada
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Puerto TCP
+ a| 
+Puerto TCP utilizado para conectarse al clúster RecoverPoint
+
+
+
+ a| 
+Intervalo de sondeo de inventario (minutos)
+ a| 
+Intervalo entre sondeos de inventario (predeterminado 20 minutos)
+
+
+
+ a| 
+Clústeres excluidos
+ a| 
+Lista de nombres o ID de clúster separados por comas para excluirlos al realizar el sondeo
+
+|===

@@ -1,0 +1,20 @@
+---
+permalink: install-windows/data-source-support-information.html 
+sidebar: sidebar 
+keywords:  
+summary: Como parte de la planificación de la configuración, debe asegurarse de que Insight pueda supervisar los dispositivos del entorno. Para ello, puede consultar la matriz de compatibilidad del origen de datos para obtener información detallada sobre los sistemas operativos, dispositivos específicos y protocolos. Es posible que algunas fuentes de datos no estén disponibles en todos los sistemas operativos. 
+---
+= Información de soporte de fuentes de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Como parte de la planificación de la configuración, debe asegurarse de que Insight pueda supervisar los dispositivos del entorno. Para ello, puede consultar la matriz de compatibilidad del origen de datos para obtener información detallada sobre los sistemas operativos, dispositivos específicos y protocolos. Es posible que algunas fuentes de datos no estén disponibles en todos los sistemas operativos.
+
+
+
+== Ubicación de la versión más actualizada de Data Source Support Matrix
+
+La matriz de compatibilidad con orígenes de datos de OnCommand Insight se actualiza con cada versión de service pack. La versión más reciente del documento se encuentra en la https://mysupport.netapp.com/api/content-service/staticcontents/content/products/oncommandinsight/DatasourceSupportMatrix_7.3.x.pdf["Sitio de soporte de NetApp"]. .

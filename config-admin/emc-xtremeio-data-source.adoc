@@ -1,0 +1,149 @@
+---
+permalink: config-admin/emc-xtremeio-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Para configurar el origen de datos de EMC XtremIO \(HTTP\), debe tener la dirección del host de XtremIO Management Server \(XMS\) y una cuenta con privilegios de administrador.' 
+---
+= Fuente de datos de EMC XtremIO
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para configurar el origen de datos de EMC XtremIO (HTTP), debe tener la dirección del host de XtremIO Management Server (XMS) y una cuenta con privilegios de administrador.
+
+
+
+== Terminología
+
+OnCommand Insight adquiere la siguiente información de inventario del origen de datos de EMC XtremIO. Para cada tipo de activo que adquiere Insight, se muestra la terminología más común utilizada en este activo. Al ver o solucionar problemas de este origen de datos, tenga en cuenta la siguiente terminología:
+
+|===
+
+
+| Plazo del proveedor/modelo | Insight plazo 
+
+
+ a| 
+Disco (SSD)
+ a| 
+Disco
+
+
+
+ a| 
+Clúster
+ a| 
+Reducida
+
+
+
+ a| 
+Controladora
+ a| 
+Nodo de almacenamiento
+
+
+
+ a| 
+Volumen
+ a| 
+Volumen
+
+
+
+ a| 
+Mapa de LUN
+ a| 
+Asignación de volumen
+
+
+
+ a| 
+Iniciador, destino
+ a| 
+Máscara de volumen
+
+|===
+[NOTE]
+====
+Estos son sólo mapas terminológicos comunes y es posible que no representen todos los casos de este origen de datos.
+
+====
+
+
+== Requisitos
+
+* Dirección IP de cada servidor de gestión de XtremIO
+* Una cuenta con privilegios de administrador
+* Acceso al puerto 443 (HTTPS)
+
+
+
+
+== Configuración
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Host XMS
+ a| 
+La dirección IP o el nombre de dominio completo de XtremIO Management Server
+
+
+
+ a| 
+Nombre de usuario
+ a| 
+Nombre de usuario del servidor de gestión de XtremIO
+
+
+
+ a| 
+Contraseña
+ a| 
+Contraseña del servidor de gestión de XtremIO
+
+|===
+
+
+== Configuración avanzada
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Puerto TCP
+ a| 
+Puerto TCP utilizado para conectar con el servidor de administración XTremIO (predeterminado 443 )
+
+
+
+ a| 
+Intervalo de sondeo de inventario (min)
+ a| 
+Intervalo entre sondeos de inventario (predeterminado 60 minutos)
+
+
+
+ a| 
+Tiempo de espera de conexión (s)
+ a| 
+Tiempo de espera de conexión (60 segundos predeterminado)
+
+
+
+ a| 
+Intervalo de sondeo de rendimiento (s)
+ a| 
+Intervalo entre sondeos de rendimiento (predeterminado 300 segundos)
+
+|===

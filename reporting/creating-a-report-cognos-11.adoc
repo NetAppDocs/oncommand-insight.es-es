@@ -1,0 +1,63 @@
+---
+permalink: reporting/creating-a-report-cognos-11.html 
+sidebar: sidebar 
+keywords:  
+summary: La creación de informes con Cognos 11 difiere de las versiones anteriores de Cognos. Utilice este procedimiento para crear un informe utilizando los informes predefinidos de OnCommand Insight. 
+---
+= Creación de un informe utilizando Cognos 11
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La creación de informes con Cognos 11 difiere de las versiones anteriores de Cognos. Utilice este procedimiento para crear un informe utilizando los informes predefinidos de OnCommand Insight.
+
+
+
+== Acerca de esta tarea
+
+Siga estos pasos para generar un informe sencillo sobre la capacidad física de los pools de almacenamiento y almacenamiento en varios centros de datos.
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en image:../media/new-report.gif[""]
+. Haga clic en *Informe*
+. Haga clic en *Plantillas* > *en blanco*
+. Haga clic en *Temas* > *Azul fresco* > *Aceptar*
++
+Se muestran las fichas origen y datos
+
+. Haga clic en *Fuente* > *image:../media/new-report.gif[""]*
+. En el cuadro de diálogo Abrir archivo, haga clic en *Contenido del equipo* > *Paquetes*
++
+Se muestra una lista de paquetes disponibles.
+
+. Haga clic en *capacidad de almacenamiento y agrupación de almacenamiento* > *Abrir*
+. Haga clic en image:../media/new-report.gif[""]
++
+Se muestran los estilos disponibles para el informe.
+
+. Haga clic en *Lista*
++
+Agregue los nombres adecuados para Lista y Consulta
+
+. Haga clic en *Aceptar*
+. Amplíe *capacidad física*
+. Amplíe hasta el nivel más bajo de *Centro de datos*
+. Arrastre image:../media/data-center.gif[""] Al paladar del informe.
+. Amplíe *capacidad (MB)*
+. Arrastre *capacidad (MB)* hasta el paladar de informes.
+. Arrastre *capacidad utilizada (MB)* hasta el paladar de informes.
+. Ejecute el informe haciendo clic en image:../media/run-report.gif[""] y seleccionando un tipo de salida.
+
+
+
+
+== Resultados
+
+Se crea un informe similar al siguiente:
+
+image::../media/cognos-11-report.gif[informe cognos 11]

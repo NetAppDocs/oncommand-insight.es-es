@@ -1,0 +1,242 @@
+---
+permalink: config-admin/predefined-annotation-types.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand dInsight proporciona algunos tipos de anotaciones predeterminados. Estas anotaciones se pueden utilizar para filtrar o agrupar datos y filtrar los informes de datos. 
+---
+= Tipos de anotaciones predeterminados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand dInsight proporciona algunos tipos de anotaciones predeterminados. Estas anotaciones se pueden utilizar para filtrar o agrupar datos y filtrar los informes de datos.
+
+Puede asociar activos con tipos de anotación predeterminados como los siguientes:
+
+* Ciclo de vida de los activos, como cumpleaños, puesta de sol o fin de vida
+* Información sobre la ubicación de un dispositivo, como un centro de datos, un edificio o un piso
+* Clasificación de activos, como por calidad (niveles), por dispositivos conectados (nivel de switch) o por nivel de servicio
+* Estado, como caliente (alta utilización)
+
+
+En la siguiente tabla se enumeran los tipos de anotaciones predeterminados. Puede editar cualquiera de estos nombres de anotaciones según sus necesidades.
+
+|===
+
+
+| Tipos de anotaciones | Descripción | Tipo 
+
+
+ a| 
+Alias
+ a| 
+Nombre sencillo para un recurso.
+ a| 
+Texto
+
+
+
+ a| 
+Cumpleaños
+ a| 
+Fecha en la que el dispositivo estaba o se pondrá en línea.
+ a| 
+Fecha
+
+
+
+ a| 
+Edificio
+ a| 
+Ubicación física de recursos de host, almacenamiento, switch y cinta.
+ a| 
+Lista
+
+
+
+ a| 
+Ciudad
+ a| 
+Ubicación municipal de recursos de host, almacenamiento, switch y cinta.
+ a| 
+Lista
+
+
+
+ a| 
+Grupo de recursos informáticos
+ a| 
+Asignación de grupos utilizada por el origen de datos de sistemas de archivos del host y del equipo virtual.
+ a| 
+Lista
+
+
+
+ a| 
+Continente
+ a| 
+Ubicación geográfica de recursos de host, almacenamiento, switch y cinta.
+ a| 
+Lista
+
+
+
+ a| 
+País
+ a| 
+Ubicación nacional de recursos de host, almacenamiento, switch y cinta.
+ a| 
+Lista
+
+
+
+ a| 
+Centro de datos
+ a| 
+La ubicación física del recurso y está disponible para hosts, cabinas de almacenamiento, switches y cintas.
+ a| 
+Lista
+
+
+
+ a| 
+Conexión directa
+ a| 
+Indica (Sí o no) si un recurso de almacenamiento está conectado directamente a los hosts.
+ a| 
+Booleano
+
+
+
+ a| 
+Fin de la vida
+ a| 
+Fecha en la que se desconecta un dispositivo, por ejemplo, si el arrendamiento ha caducado o se está retirando el hardware.
+ a| 
+Fecha
+
+
+
+ a| 
+Alias de estructura
+ a| 
+Nombre sencillo para un tejido.
+ a| 
+Texto
+
+
+
+ a| 
+Piso
+ a| 
+Ubicación de un dispositivo en la planta de un edificio. Se pueden definir para hosts, cabinas de almacenamiento, switches y cintas.
+ a| 
+Lista
+
+
+
+ a| 
+Caliente
+ a| 
+Dispositivos que ya están en uso pesado regularmente o en el umbral de capacidad.
+ a| 
+Booleano
+
+
+
+ a| 
+Nota
+ a| 
+Comentarios que desea asociar a un recurso.
+ a| 
+Texto
+
+
+
+ a| 
+Rack
+ a| 
+Rack en el que reside el recurso.
+ a| 
+Texto
+
+
+
+ a| 
+Habitación
+ a| 
+Sala en un edificio u otra ubicación de recursos de host, almacenamiento, switch y cinta.
+ a| 
+Lista
+
+
+
+ a| 
+SAN
+ a| 
+Partición lógica de la red. Disponible en hosts, cabinas de almacenamiento, cintas, switches y aplicaciones.
+ a| 
+Lista
+
+
+
+ a| 
+Nivel de servicio
+ a| 
+Un conjunto de niveles de servicio compatibles que puede asignar a recursos. Proporciona una lista de opciones ordenadas para volúmenes internos, qtrees y volúmenes. Editar niveles de servicio para establecer políticas de rendimiento para diferentes niveles.
+ a| 
+Lista
+
+
+
+ a| 
+Estado/provincia
+ a| 
+Estado o provincia en la que se encuentra el recurso.
+ a| 
+Lista
+
+
+
+ a| 
+Puesta de sol
+ a| 
+Límite establecido después del cual no se puede realizar ninguna asignación nueva a ese dispositivo. Útil para migraciones planificadas y otros cambios de red pendientes.
+ a| 
+Fecha
+
+
+
+ a| 
+Cambiar el nivel
+ a| 
+Incluye opciones predefinidas para configurar categorías de conmutadores. Normalmente, estas designaciones permanecen durante toda la vida útil del dispositivo, aunque puede modificarlas, si es necesario. Sólo disponible para interruptores.
+ a| 
+Lista
+
+
+
+ a| 
+Nivel
+ a| 
+Puede utilizarse para definir distintos niveles de servicio dentro de su entorno. Los niveles pueden definir el tipo de nivel, como la velocidad necesaria (por ejemplo, oro o plata). Esta función solo está disponible en volúmenes internos, qtrees, cabinas de almacenamiento, pools de almacenamiento y volúmenes.
+ a| 
+Lista
+
+
+
+ a| 
+Gravedad de la infracción
+ a| 
+Clasificación (por ejemplo, mayor) de una infracción (por ejemplo, falta de puertos de host o falta de redundancia), en una jerarquía de mayor a menor importancia.
+ a| 
+Lista
+
+|===
+[NOTE]
+====
+Alias, centro de datos, caliente, nivel de servicio, puesta de sol, El nivel de conmutador, el nivel de servicio, el nivel y la gravedad de la infracción son anotaciones a nivel de sistema, que no puede eliminar ni cambiar de nombre; sólo puede cambiar sus valores asignados.
+
+====

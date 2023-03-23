@@ -1,0 +1,30 @@
+---
+permalink: config-admin/deleting-queries.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede eliminar consultas cuando ya no reúnan información útil sobre sus activos. No se puede eliminar una consulta si se utiliza en una regla de anotación. 
+---
+= Eliminación de consultas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede eliminar consultas cuando ya no reúnan información útil sobre sus activos. No se puede eliminar una consulta si se utiliza en una regla de anotación.
+
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web Insight.
+. Haga clic en *consultas* y seleccione *Mostrar todas las consultas*.
++
+Aparece la página consultas.
+
+. Coloque el cursor sobre la consulta que desea eliminar y haga clic en image:../media/trash-can-query.gif[""].
++
+Aparece un mensaje de confirmación en el que se pregunta si desea eliminar la consulta.
+
+. Haga clic en *Aceptar*.
+

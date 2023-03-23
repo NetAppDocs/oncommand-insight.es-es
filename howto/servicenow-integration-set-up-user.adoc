@@ -1,0 +1,46 @@
+---
+permalink: howto/servicenow-integration-set-up-user.html 
+sidebar: sidebar 
+keywords:  
+summary: Debe configurar un usuario de ServiceNow para Insight para conectarse y sincronizar los datos. 
+---
+= Integración con ServiceNow: Configure el usuario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe configurar un usuario de ServiceNow para Insight para conectarse y sincronizar los datos.
+
+
+
+== Acerca de esta tarea
+
+
+
+== Pasos
+
+. Cree una cuenta de servicios en ServiceNow. Inicie sesión en ServiceNow y vaya a *seguridad del sistema* > *usuarios y grupos* > *usuarios*. Haga clic en *Nuevo*.
+. Introduzca un nombre de usuario. En este ejemplo utilizaremos «'OCI2SNOW'» como usuario de integración. Introduzca una contraseña para este usuario.
++
+[NOTE]
+====
+En este procedimiento utilizamos un usuario de cuenta de servicios denominado «'OCI2SNOW'»» en toda la documentación. Puede utilizar una cuenta de servicios diferente, pero asegúrese de que sea coherente en todo su entorno.
+
+====
+. Haga clic con el botón derecho del ratón en la barra de menús y haga clic en *Guardar*. Esto le permitirá permanecer en este usuario para poder añadir funciones.
+. Haga clic en *Editar* y agregue las siguientes funciones a este usuario:
++
+** activo
+** import_trafo
+** servicio_rest
+
+
+. Haga clic en *Guardar*.
+. Este mismo usuario debe agregarse a OnCommand Insight. Inicie sesión en Insight como usuario con permisos de administrador.
+. Vaya a *Admin* > *Setup* y haga clic en la ficha *Users*.
+. Haga clic en el botón *acciones* y seleccione *Agregar usuario*.
+. Para obtener el nombre, escriba «'OCI2SNOW'». Si ha utilizado un nombre de usuario distinto, introduzca ese nombre aquí. Introduzca la misma contraseña que utilizó para el usuario ServiceNow anteriormente. Puede dejar el campo de correo electrónico en blanco.
+. Asigne a este usuario el rol *Usuario*. Haga clic en *Guardar*.
+

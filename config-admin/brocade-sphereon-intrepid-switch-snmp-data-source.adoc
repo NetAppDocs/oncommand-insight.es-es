@@ -1,0 +1,153 @@
+---
+permalink: config-admin/brocade-sphereon-intrepid-switch-snmp-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight utiliza la fuente de datos Brocade Sphereon/Intrepid Switch \(SNMP\) para descubrir el inventario de los switches Brocade Sphereon o Intrepid.' 
+---
+= Fuente de datos Brocade Sphereon/Intrepid Switch
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight utiliza la fuente de datos Brocade Sphereon/Intrepid Switch (SNMP) para descubrir el inventario de switches Brocade Sphereon o Intrepid.
+
+
+
+== Requisitos
+
+[NOTE]
+====
+Este recopilador de datos no está disponible a partir de OnCommand Insight 7.3.11.
+
+====
+* Debe haber conectividad IP a todos los switches de la estructura. Si selecciona la casilla de comprobación detectar todos los switches en la estructura, OCI identifica todos los switches de la estructura; sin embargo, necesita conectividad IP a estos switches adicionales para detectarlos.
+* Cadena de comunidad de sólo lectura si se utiliza SNMP V1 o SNMP V2.
+* Acceso HTTP al switch para obtener información de división en zonas.
+* Acceda a la validación ejecutando el `snmpwalk` utilidad para el interruptor (consulte `<install_path\>\bin\)`.
+
+
+
+
+== Configuración
+
+|===
+
+
+| *Campo* | *Descripción* 
+
+
+ a| 
+Conmutador Sphereon
+ a| 
+Dirección IP o nombre de dominio completo del switch
+
+
+
+ a| 
+Versión de SNMP
+ a| 
+Versión de SNMP
+
+
+
+ a| 
+Comunidad SNMP
+ a| 
+Cadena de comunidad de sólo lectura de SNMP que se utiliza para acceder al conmutador
+
+
+
+ a| 
+Nombre de usuario
+ a| 
+Nombre de usuario SMI-S para el conmutador (sólo SNMP v3)
+
+
+
+ a| 
+Contraseña
+ a| 
+Contraseña SMI-S para el conmutador (sólo SNMP v3)
+
+|===
+
+
+== Configuración avanzada
+
+|===
+
+
+| *Campo* | *Descripción* 
+
+
+ a| 
+Intervalo de sondeo de inventario (mín.)
+ a| 
+Intervalo entre sondeos de inventario (predeterminado 15 minutos)
+
+
+
+ a| 
+Protocolo de autenticación SNMP
+ a| 
+Protocolo de autenticación SNMP (sólo SNMPv3)
+
+
+
+ a| 
+Protocolo de privacidad SNMP
+ a| 
+Protocolo de privacidad SNMP (sólo SNMPv3)
+
+
+
+ a| 
+Contraseña de privacidad de SNMP
+ a| 
+Contraseña de privacidad de SNMP
+
+
+
+ a| 
+Número SNMP de reintentos
+ a| 
+Número de intentos de reintento SNMP
+
+
+
+ a| 
+Tiempo de espera de SNMP (ms)
+ a| 
+Tiempo de espera de SNMP (5000 ms predeterminado)
+
+
+
+ a| 
+Nombre de la estructura
+ a| 
+El origen de datos informará del nombre de la estructura. Deje en blanco para informar el nombre de la estructura como WWN.
+
+
+
+ a| 
+Habilite el solapamiento
+ a| 
+Seleccione esta opción para activar la adquisición al recibir una captura SNMP del dispositivo. Si selecciona Activar solapamiento, también debe activar SNMP.
+
+
+
+ a| 
+Tiempo mínimo entre solapamientos (segundos)
+ a| 
+Tiempo mínimo entre intentos de adquisición activados por solapamientos (predeterminado 10 segundos)
+
+
+
+ a| 
+Intervalo de sondeo de rendimiento (s)
+ a| 
+Intervalo entre sondeos de rendimiento (predeterminado 300 segundos)
+
+|===

@@ -1,0 +1,33 @@
+---
+permalink: dwh/managing-user-accounts.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede configurar cuentas de usuario, autenticación de usuario y autorización de usuario desde el portal Data Warehouse. A cada cuenta de usuario se le asigna un rol, con uno de los siguientes niveles de permiso. El número de usuarios está limitado por el número de licencias de generación de informes asociadas a cada rol. 
+---
+= Gestionar cuentas de usuario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede configurar cuentas de usuario, autenticación de usuario y autorización de usuario desde el portal Data Warehouse. A cada cuenta de usuario se le asigna un rol, con uno de los siguientes niveles de permiso. El número de usuarios está limitado por el número de licencias de generación de informes asociadas a cada rol.
+
+
+
+== Pasos
+
+. Inicie sesión en el portal del almacén de datos en `+https://hostname/dwh+`, donde `hostname` Es el nombre del sistema en el que está instalado el almacén de datos de OnCommand Insight.
+. En el panel de navegación de la izquierda, haga clic en *Administración de usuarios*.
++
+image::../media/user-admin-dwh.gif[admin. usuario dwh]
+
+. Debe realizar una de las siguientes acciones:
++
+** Para editar un usuario existente, seleccione la fila para el usuario y haga clic en *Editar*.
+** Para cambiar la contraseña de un usuario, seleccione la fila del usuario y haga clic en *Cambiar contraseña*.
+** Para eliminar un usuario, seleccione la fila para el usuario y haga clic en *Eliminar*
+
+
+. Para activar o desactivar un usuario, seleccione la fila para el usuario y haga clic en *Activar* o *Desactivar*.
+

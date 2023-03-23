@@ -1,0 +1,144 @@
+---
+permalink: config-admin/netapp-clustered-data-ontap-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Este origen de datos se debe utilizar en sistemas de almacenamiento que utilicen Clustered Data ONTAP, y requiere una cuenta de administrador que se utilice para llamadas API de solo lectura. 
+---
+= Origen de datos de Clustered Data ONTAP de NetApp
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Este origen de datos se debe utilizar en sistemas de almacenamiento que utilicen Clustered Data ONTAP, y requiere una cuenta de administrador que se utilice para llamadas API de solo lectura.
+
+
+
+== Terminología
+
+OnCommand Insight adquiere la siguiente información de inventario a partir del origen de datos de Clustered Data ONTAP. Para cada tipo de activo que adquiere Insight, se muestra la terminología más común utilizada en este activo. Al ver o solucionar problemas de este origen de datos, tenga en cuenta la siguiente terminología:
+
+|===
+
+
+| Plazo del proveedor/modelo | Insight plazo 
+
+
+ a| 
+Disco
+ a| 
+Disco
+
+
+
+ a| 
+Grupo RAID
+ a| 
+Grupo de discos
+
+
+
+ a| 
+Clúster
+ a| 
+Reducida
+
+
+
+ a| 
+Nodo
+ a| 
+Nodo de almacenamiento
+
+
+
+ a| 
+Agregado
+ a| 
+Pool de almacenamiento
+
+
+
+ a| 
+LUN
+ a| 
+Volumen
+
+
+
+ a| 
+Volumen
+ a| 
+Volumen interno
+
+|===
+[NOTE]
+====
+Estos son sólo mapas terminológicos comunes y es posible que no representen todos los casos de este origen de datos.
+
+====
+
+
+== Requisitos
+
+* Cuenta de administrador utilizada para llamadas API de sólo lectura
+* La IP de destino es la LIF de gestión del clúster
+* Nombre de usuario (con nombre de rol de solo lectura para la aplicación ontapi en el Vserver predeterminado) y contraseña para iniciar sesión en el clúster de NetApp
+* Requisitos del puerto: 80 o 443
+* Requisitos de licencia: Se requiere licencia FCP y volúmenes asignados/enmascarados para la detección
+
+
+
+
+== Configuración
+
+|===
+
+
+| *Campo* | *Descripción* 
+
+
+ a| 
+IP de gestión de NetApp
+ a| 
+La dirección IP o el nombre de dominio completo del clúster de NetApp
+
+
+
+ a| 
+Nombre de usuario
+ a| 
+Nombre de usuario del clúster de NetApp
+
+
+
+ a| 
+Contraseña
+ a| 
+La contraseña del clúster de NetApp
+
+|===
+
+
+== Configuración avanzada
+
+|===
+
+
+| *Campo* | *Descripción* 
+
+
+ a| 
+Intervalo de sondeo de inventario (mín.)
+ a| 
+Intervalo entre sondeos de inventario (predeterminado 20 minutos)
+
+
+
+ a| 
+Intervalo de sondeo de rendimiento (s)
+ a| 
+Intervalo entre sondeos de rendimiento (predeterminado 300 segundos)
+
+|===

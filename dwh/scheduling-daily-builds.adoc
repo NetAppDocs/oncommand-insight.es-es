@@ -1,0 +1,47 @@
+---
+permalink: dwh/scheduling-daily-builds.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Aunque puede construir manualmente Data Warehouse utilizando el control Build Now en cualquier momento, es la mejor práctica programar compilaciones automáticas, definiendo cuándo y con qué frecuencia construir la base de datos de Data Warehouse. Data Warehouse realiza un trabajo de construcción para cada conector y para cada data Mart. Data Warehouse realiza un trabajo de compilación para cada conector para licencias e inventario y todos los demás trabajos de construcción \(por ejemplo, capacidad\) se realizan en la base de datos consolidada.' 
+---
+= Programación de compilaciones diarias
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Aunque puede construir manualmente Data Warehouse utilizando el control Build Now en cualquier momento, es la mejor práctica programar compilaciones automáticas, definiendo cuándo y con qué frecuencia construir la base de datos de Data Warehouse. Data Warehouse realiza un trabajo de construcción para cada conector y para cada data Mart. Data Warehouse realiza un trabajo de construcción para cada conector para licencias e inventario y todos los demás trabajos de construcción (por ejemplo, capacidad) se realizan en la base de datos consolidada.
+
+
+
+== Acerca de esta tarea
+
+Siempre que se construye el almacén de datos, realiza un trabajo de inventario para cada conector. Una vez finalizados los trabajos de inventario, el almacén de datos realiza trabajos para las dimensiones, la capacidad y los marts de datos restantes.
+
+
+
+== Pasos
+
+. Inicie sesión en el portal del almacén de datos en `+https://hostname/dwh+`, donde `hostname` Es el nombre del sistema en el que está instalado el almacén de datos de OnCommand Insight.
+. En el panel de navegación de la izquierda, haga clic en *Editar programación*.
++
+image::../media/oci-dwh-admin-schedule-gif.gif[DWH Schedule Link]
+
+. En el cuadro de diálogo *Programación de compilación*, haga clic en *Editar* para agregar una nueva programación.
++
+image::../media/oci-dwh-admin-schedule-edit-gif.gif[DWH Edición de horario]
+
+. Seleccione la frecuencia semanal.
+. Elija la hora del día para cada día en que desee ejecutar el trabajo.
+. Seleccione N/A durante los días en los que no desea ejecutar el desarrollo.
+. Para activar la programación, seleccione *Activado*.
++
+[NOTE]
+====
+Si no Marca esta opción, no se producirá la compilación de la programación.
+
+====
+. Haga clic en *Guardar*.
+. Para construir el almacén de datos fuera de la compilación programada automática, haga clic en *generar ahora*.
+

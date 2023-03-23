@@ -1,0 +1,31 @@
+---
+permalink: howto/analyzing-your-infrastructure.html 
+sidebar: sidebar 
+keywords:  
+summary: Los procedimientos de este tema son los que podría utilizar para realizar un análisis de partes de la infraestructura en su entorno. Los pasos, las vistas y los datos que recopila en este ejercicio utilizan objetos de computación virtuales como ejemplo. El análisis de otros activos del entorno seguirá pasos similares utilizando contadores relevantes para cada activo específico. El propósito de este ejercicio es familiarizarle con la variedad de opciones que Insight ofrece para supervisar y comprender las características de los activos de su centro de datos. 
+---
+= Análisis de la infraestructura
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los procedimientos de este tema son los que podría utilizar para realizar un análisis de partes de la infraestructura en su entorno. Los pasos, las vistas y los datos que recopila en este ejercicio utilizan objetos de computación virtuales como ejemplo. El análisis de otros activos del entorno seguirá pasos similares utilizando contadores relevantes para cada activo específico. El propósito de este ejercicio es familiarizarle con la variedad de opciones que Insight ofrece para supervisar y comprender las características de los activos de su centro de datos.
+
+
+
+== Acerca de esta tarea
+
+Algunas de las acciones que se pueden realizar para analizar el estado de su infraestructura pueden incluir las siguientes:
+
+* Observe el comportamiento de un objeto a lo largo del tiempo
+* Comparar las métricas de un objeto con las métricas de los 10 objetos principales como
+* Comparar números de objetos
+* Compare los 10 objetos superiores con el promedio
+* Comparar métricas a frente a B para que muchos objetos muestren categorías y anomalías
+* Comparar un rango de objetos con otros objetos
+* Utilice una expresión para mostrar métricas no disponibles en la interfaz de usuario web
+
+
+Puede crear todas estas vistas de objetos en la infraestructura en un panel utilizando widgets para cada análisis que realice. Las consolas pueden guardarse para proporcionar un acceso rápido a los datos actuales de su infraestructura.

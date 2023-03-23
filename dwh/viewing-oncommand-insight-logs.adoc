@@ -1,0 +1,106 @@
+---
+permalink: dwh/viewing-oncommand-insight-logs.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede ver varios registros de almacén de datos y Cognos en OnCommand Insight. 
+---
+= Ver los registros de OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede ver varios registros de almacén de datos y Cognos en OnCommand Insight.
+
+
+
+== Acerca de esta tarea
+
+Puede examinar la información sobre la solución de problemas y el estado en los archivos de registro de Cognos y Data Warehouse.
+
+
+
+== Pasos
+
+. Inicie sesión en el portal del almacén de datos en `+https://hostname/dwh+`, donde `hostname` Es el nombre del sistema en el que está instalado el almacén de datos de OnCommand Insight.
+. En el panel de navegación de la izquierda, haga clic en *solución de problemas*.
+. En la sección *Logs*, haga clic en *Log Files*.
++
+Se muestran los siguientes archivos de registro:
+
++
+|===
+
+
+ a| 
+dwh.log
+
+
+
+ a| 
+Muestra el estado de los trabajos del almacén de datos
+
+
+
+ a| 
+wildfly.log
+
+
+
+ a| 
+Proporciona información sobre el servidor de aplicaciones WildFly
+
+
+
+ a| 
+dwh_upgrade log
+
+
+
+ a| 
+Proporciona información sobre la actualización en Data Warehouse
+
+
+
+ a| 
+ldap.log
+
+
+
+ a| 
+Registra mensajes relacionados con la autenticación LDAP
+
+
+
+ a| 
+dwh_troubleshoot.log
+
+
+
+ a| 
+Registra mensajes que pueden ayudar a solucionar problemas de DWH
+
+
+
+ a| 
+sanscreenap.log
+
+
+
+ a| 
+Proporciona información acerca de la conexión al servidor, la autenticación y el acceso al repositorio de Cognos, así como información acerca de otros procesos
+
+
+
+ a| 
+cognosserver.log
+
+
+
+ a| 
+Registro Cognos
+
+|===
+. Haga clic en el nombre del archivo de registro que desee ver.
+

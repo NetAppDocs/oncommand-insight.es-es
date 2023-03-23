@@ -1,0 +1,67 @@
+---
+permalink: dwh/viewing-switches-consolidation-issues.html 
+sidebar: sidebar 
+keywords:  
+summary: Los datos reportados para los switches se derivan del Data Mart de inventario. Para todos los interruptores, hay una fila para cada conector que informa sobre ellos, así como el conector principal desde el que se toma cada interruptor. 
+---
+= Ver problemas de consolidación de switches
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los datos reportados para los switches se derivan del Data Mart de inventario. Para todos los interruptores, hay una fila para cada conector que informa sobre ellos, así como el conector principal desde el que se toma cada interruptor.
+
+
+
+== Pasos
+
+. Inicie sesión en el portal del almacén de datos en `+https://hostname/dwh+`, donde `hostname` Es el nombre del sistema en el que está instalado el almacén de datos de OnCommand Insight.
+. En el panel de navegación de la izquierda, haga clic en**solución de problemas**.
+. En la sección *consolidación del chasis*, haga clic en *conmutadores SAN*.
+. Opcionalmente, filtre los datos en esta vista escribiendo una parte del texto y haciendo clic en *filtro*. Para desactivar el filtro, desactive la casilla filtro y haga clic en *filtro*. Puede filtrar por nombre de switch, IP de switch, modelo de proveedor o ID de objeto de OnCommand Insight.
++
+El filtro distingue entre mayúsculas y minúsculas.
+
+. Revise los siguientes datos:
++
+** *GUID*
++
+Identificador único global para este tipo de dispositivo consolidado (cabina de almacenamiento)
+
+** *Nombre*
++
+Nombre de la cabina de almacenamiento consolidada como aparece en el almacén de datos
+
+** *IP*
++
+La dirección IP de la cabina de almacenamiento consolidada
+
+** *Proveedor y Modelo*
++
+Nombre del proveedor que vende la cabina de almacenamiento consolidada y el número de modelo del fabricante
+
+** *WWN*
++
+WWN para el switch de consolidación
+
+** *Conector principal*
++
+Nombre del conector OnCommand Insight que era el origen real de los datos
+
+** *Conectores disponibles*
++
+Todos los conectores OnCommand Insight donde reside la cabina de almacenamiento consolidada
+
+** *Insight ID*
++
+ID de la cabina de almacenamiento consolidada en el chasis OnCommand Insight donde reside el conector principal
+
+** *Tiempo de cambio de Insight*
++
+Cuando se produjo una actualización en OnCommand Insight para la cabina de almacenamiento y cuando se actualizó la misma cabina de almacenamiento en otros servidores OnCommand Insight
+
+
+
+

@@ -1,0 +1,35 @@
+---
+permalink: config-admin/associating-costs-with-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: Antes de ejecutar informes relacionados con costes, debe asociar los costes con las anotaciones a nivel de sistema de nivel de servicio, nivel de switch y nivel, que permiten cobrar a los usuarios de almacenamiento en función del uso que hagan realmente de la producción y la capacidad replicada. Por ejemplo, para el nivel, puede tener valores de nivel Gold y Silver y asignar un coste más alto al nivel Gold que al nivel Silver. 
+---
+= Asociación de costes con anotaciones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de ejecutar informes relacionados con costes, debe asociar los costes con las anotaciones a nivel de sistema de nivel de servicio, nivel de switch y nivel, que permiten cobrar a los usuarios de almacenamiento en función del uso que hagan realmente de la producción y la capacidad replicada. Por ejemplo, para el nivel, puede tener valores de nivel Gold y Silver y asignar un coste más alto al nivel Gold que al nivel Silver.
+
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web Insight.
+. Haga clic en Administrar y seleccione *Anotaciones*.
++
+Aparece la página anotación.
+
+. Coloque el cursor sobre la anotación nivel de servicio, nivel de conmutación o nivel y haga clic en image:../media/edit-annotation-icon.gif[""].
++
+Aparece el cuadro de diálogo Editar anotación.
+
+. Introduzca los valores para cualquier nivel existente en el campo *coste*.
++
+Las anotaciones Tier y Service Level tienen los valores de Auto Tier y Object Storage, respectivamente, que no se pueden quitar.
+
+. Haga clic en image:../media/edit-annotation-add-icon.gif[""] para agregar niveles adicionales.
+. Haga clic en *Guardar* cuando termine.
+

@@ -1,0 +1,243 @@
+---
+permalink: dwh/historical-data-retention-in-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: Los datos se mantienen en el almacén de datos de acuerdo con una programación. A medida que los datos quedan más antiguos, la retención de registros de datos se reduce. 
+---
+= Cómo se conservan los datos históricos en el almacén de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los datos se mantienen en el almacén de datos de acuerdo con una programación. A medida que los datos quedan más antiguos, la retención de registros de datos se reduce.
+
+Data Warehouse conserva los datos históricos basados en los data marts y la granularidad de los datos, como se muestra en la tabla siguiente.
+
+|===
+
+
+| Data mart | Objeto medido | Granularidad | Período de retención 
+
+
+ a| 
+Marts de rendimiento
+ a| 
+Volúmenes y volúmenes internos
+ a| 
+Cada hora
+ a| 
+14 días
+
+
+
+ a| 
+Marts de rendimiento
+ a| 
+Volúmenes y volúmenes internos
+ a| 
+Todos los días
+ a| 
+13 meses
+
+
+
+ a| 
+Marts de rendimiento
+ a| 
+Cliente más
+ a| 
+Cada hora
+ a| 
+13 meses
+
+
+
+ a| 
+Marts de rendimiento
+ a| 
+Host
+ a| 
+Cada hora
+ a| 
+13 meses
+
+
+
+ a| 
+Marts de rendimiento
+ a| 
+Cambie el rendimiento del puerto
+ a| 
+Cada hora
+ a| 
+5 semanas
+
+
+
+ a| 
+Marts de rendimiento
+ a| 
+Cambie el rendimiento del host, el almacenamiento y la cinta
+ a| 
+Cada hora
+ a| 
+13 meses
+
+
+
+ a| 
+Marts de rendimiento
+ a| 
+Nodo de almacenamiento
+ a| 
+Cada hora
+ a| 
+14 días
+
+
+
+ a| 
+Marts de rendimiento
+ a| 
+Nodo de almacenamiento
+ a| 
+Todos los días
+ a| 
+13 meses
+
+
+
+ a| 
+Marts de rendimiento
+ a| 
+Rendimiento de VM
+ a| 
+Cada hora
+ a| 
+14 días
+
+
+
+ a| 
+Marts de rendimiento
+ a| 
+Rendimiento de VM
+ a| 
+Todos los días
+ a| 
+13 meses
+
+
+
+ a| 
+Marts de rendimiento
+ a| 
+Rendimiento del hipervisor
+ a| 
+Cada hora
+ a| 
+14 días
+
+
+
+ a| 
+Marts de rendimiento
+ a| 
+Rendimiento del hipervisor
+ a| 
+Todos los días
+ a| 
+13 meses
+
+
+
+ a| 
+Marts de rendimiento
+ a| 
+Rendimiento de VMDK
+ a| 
+Cada hora
+ a| 
+14 días
+
+
+
+ a| 
+Marts de rendimiento
+ a| 
+Rendimiento de VMDK
+ a| 
+Todos los días
+ a| 
+13 meses
+
+
+
+ a| 
+Marts de rendimiento
+ a| 
+Rendimiento de disco
+ a| 
+Cada hora
+ a| 
+14 días
+
+
+
+ a| 
+Marts de rendimiento
+ a| 
+Rendimiento de disco
+ a| 
+Todos los días
+ a| 
+13 meses
+
+
+
+ a| 
+Marts de capacidad
+ a| 
+Todos (excepto volúmenes individuales)
+ a| 
+Todos los días
+ a| 
+13 meses
+
+
+
+ a| 
+Marts de capacidad
+ a| 
+Todos (excepto volúmenes individuales)
+ a| 
+Representante mensual
+ a| 
+14 meses o más
+
+
+
+ a| 
+Marts de inventario
+ a| 
+Volúmenes individuales
+ a| 
+Estado actual
+ a| 
+1 día (o hasta el siguiente ETL)
+
+|===
+Después de 13 meses (que se puede configurar), Data Warehouse conserva sólo un registro al mes en lugar de un registro al día para los datos de capacidad, rendimiento y recursos en las siguientes tablas de hechos:
+
+* Tabla de hechos del pago por uso (dwh_capacity.chargeback_fact)
+* Tabla de hechos de utilización del sistema de archivos (dwh_fs_util.fs_util_hecho)
+* Tabla de datos de host (dwh_sa.sa_host_Fact)
+* Tabla de hechos de capacidad de volumen interno (dwh_capacity.internal_volume_capacity_fact)
+* Tabla de datos de puertos (dwh_ports.ports_Fact)
+* Tabla de hechos de capacidad para qtree (dwh_Capacity.Qtree_Capacity_Fact)
+* Tabla de hechos de capacidad de almacenamiento y pools de almacenamiento (dwh_Capacity.Storage_and_Storage_pool_Capacity_Fact)
+* Tabla de hechos de capacidad del volumen (dwh_Capacity.vm_Capacity_Fact)
+* Tablas de hechos de rendimiento hora del nodo de almacenamiento (Storage_node_Hourly_Performance_Fact) y rendimiento diario del nodo de almacenamiento (Storage_node_Daily_Performance_Fact)
+

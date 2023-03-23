@@ -1,0 +1,66 @@
+---
+permalink: dwh/adding-a-reporting-user.html 
+sidebar: sidebar 
+keywords:  
+summary: Debe agregar una nueva cuenta de usuario para cada persona que necesite acceder al portal de informes. Disponer de una cuenta de usuario diferente para cada persona proporciona una forma de controlar los derechos de acceso, las preferencias individuales y la responsabilidad. 
+---
+= Agregar un usuario de Informes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe agregar una nueva cuenta de usuario para cada persona que necesite acceder al portal de informes. Disponer de una cuenta de usuario diferente para cada persona proporciona una forma de controlar los derechos de acceso, las preferencias individuales y la responsabilidad.
+
+
+
+== Antes de empezar
+
+Antes de agregar un usuario de Informes, debe haber asignado un nombre de usuario único, determinado la contraseña que debe utilizar y verificado la función o funciones de usuario correctas. Estos roles están especializados en el portal Reporting.
+
+
+
+== Pasos
+
+. Inicie sesión como administrador en el portal del almacén de datos en `+https://hostname/dwh+`, donde `hostname` Es el nombre del sistema en el que está instalado el almacén de datos de OnCommand Insight.
+. En el panel de navegación de la izquierda, haga clic en *Administración de usuarios*.
+. En la ventana *Administración de usuarios*, haga clic en *Agregar nuevo usuario*.
+. Introduzca la siguiente información para el nuevo usuario de Reporting:
++
+** *Nombre de usuario*
++
+Nombre de usuario (alfanumérico, incluidos a-z, A-Z y 0-9) para la cuenta
+
+** *Dirección de correo electrónico*
++
+Dirección de correo electrónico asociada con la cuenta de usuario y requerida si el usuario se suscribe a cualquier informe
+
+** *Contraseña*
++
+Contraseña para iniciar sesión en OnCommand Insight con esta cuenta de usuario, que normalmente selecciona el usuario y se confirma en la interfaz
+
+** *Rol de Insight*
++
+Roles disponibles para el usuario con los permisos correspondientes
+
++
+[NOTE]
+====
+Las opciones para la función OnCommand Insight se muestran sólo si OnCommand Insight está instalado en la misma máquina que las instalaciones de generación de informes, lo cual no es típico.
+
+====
+** *Funciones de informes*
++
+Función de generación de informes para esta cuenta de usuario (por ejemplo, Pro Author)
+
++
+[NOTE]
+====
+La función de administrador es única. Puede añadir este rol a cualquier usuario.
+
+====
+
+
+. Haga clic en *Agregar*.
+

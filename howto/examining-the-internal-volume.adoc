@@ -1,0 +1,31 @@
+---
+permalink: howto/examining-the-internal-volume.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Examen del volumen interno
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+image::../media/greedy-vol1.gif[vol1 avaro]
+
+En la página de destino de Internal Volume, puede ver lo siguiente:
+
+* Los gráficos de rendimiento del volumen interno coinciden con lo que anteriormente se había observado en el rendimiento de la aplicación tanto para latencia como para IOPS.
+* En la sección Recursos, donde se muestran los activos correlacionados, se identifica un recurso de "avaricia" (CDOT_Boston:SP1:Vol_01).
+
+
+Un recurso de gran consumo se identifica mediante análisis de correlación de Insight. Los recursos avaros/degradados son "'compañeros'" que utilizan el mismo recurso compartido. El recurso de gran consumo tiene IOPS o tasas de utilización que afectan negativamente a la IOPS o a la latencia del recurso degradado.
+
+Los recursos de gran consumo y degradados se pueden identificar en las páginas de destino de máquinas virtuales, volúmenes y volúmenes internos. En cada página de aterrizaje se mostrará un máximo de dos recursos codiciosos.
+
+La selección de la clasificación de correlación (%) proporciona los resultados del análisis de recursos codiciosos. Por ejemplo, al hacer clic en un valor porcentual codicioso se identifica la operación en un activo que afecta a la operación en el activo degradado, de forma similar a lo que se muestra en el siguiente ejemplo.
+
+image::../media/greedy-percentage.gif[porcentaje avaricioso]
+
+Cuando se identifica un recurso degradado, puede seleccionar la puntuación degradada (%) para identificar la operación y el recurso que afecta al recurso degradado.
+
+image::../media/guid-13582cf7-aedf-47d1-935e-edc7c5b1b921.gif[guid 13582cf7 aedf 47d1 935e edc7c5b1b921]

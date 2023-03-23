@@ -1,0 +1,48 @@
+---
+permalink: howto/custom-dashboard-concepts.html 
+sidebar: sidebar 
+keywords:  
+summary: Los widgets y los paneles personalizados ofrecen gran flexibilidad en la visualización de los datos. Estos son algunos conceptos que le ayudarán a sacar el máximo partido de sus paneles personalizados. Cada concepto se explica con mayor detalle en las siguientes secciones. 
+---
+= Conceptos personalizados de la consola
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los widgets y los paneles personalizados ofrecen gran flexibilidad en la visualización de los datos. Estos son algunos conceptos que le ayudarán a sacar el máximo partido de sus paneles personalizados. Cada concepto se explica con mayor detalle en las siguientes secciones.
+
+*Variables*
+
+Las variables permiten cambiar los datos que aparecen en algunos o todos los widgets de un panel de control a la vez. Al configurar cada widget para que utilice una variable común, los cambios realizados en un lugar provocan que los datos mostrados en cada widget se actualicen automáticamente.
+
+*Múltiples consultas y/o expresiones*
+
+Cada widget de serie de tiempo (gráficos de líneas, spline, área o áreas apiladas) puede tener hasta cinco consultas y/o expresiones para determinar qué datos mostrar, lo que le permite comparar diferentes conjuntos de datos en un único gráfico. Por ejemplo, puede tener un gráfico de líneas que muestre IOPS tanto de almacenamiento como de máquinas virtuales, o un gráfico único que compare el rendimiento y la latencia de todos los pools de almacenamiento.
+
+*Rollup y Agrupación*
+
+Los datos que se muestran en cada widget se agrupan en los puntos de datos recopilados. Puede optar por recuperar estos datos de una de estas formas:
+
+* Avg: Desplaza los datos como el promedio de los datos subyacentes
+* Max: Permite que los datos se enrolen en el máximo de los datos subyacentes
+* Min.: Desplaza los datos al mínimo de los datos subyacentes
+* Suma: Permite que los datos se supan como la suma de los datos subyacentes
+
+
+De forma predeterminada, todos los datos subyacentes se componen en una sola entrada (todos) del gráfico o la tabla. En su lugar, puede optar por recuperar datos de un atributo específico, como el centro de datos o el nivel, para distribuir los datos subyacentes a los grupos deseados. El widget mostrará los datos sólo para los atributos seleccionados.
+
+Puede agrupar los datos de un widget de tabla según el atributo que elija. Por ejemplo, puede elegir agrupar la tabla por centro de datos. Los grupos se pueden expandir o contraer a voluntad. Los datos de rendimiento de una tabla se resumen en el encabezado de grupo según el método ROLLUP establecido en el widget (promedio, máximo, mínimo o suma).
+
+Los widgets de tabla se pueden ordenar por cualquier columna y las columnas se pueden mover o cambiar de tamaño según sea necesario.
+
+*Arriba / abajo*
+
+Utilice esta opción para limitar el conjunto de resultados en los widgets de gráfico, para seleccionar si desea visualizar los resultados N superiores en el widget o los resultados N inferiores. Puede elegir esta opción cuando los datos no se han acumulado o se han acumulado mediante un atributo específico.
+
+*Anular tiempo del tablero de a bordo*
+
+De forma predeterminada, la mayoría de los widgets que añada a un panel muestran datos según el ajuste del intervalo de tiempo del panel (3h, 24h, 3d, 7d, 30d o intervalo personalizado). Sin embargo, puede anular este ajuste de hora en widgets individuales para obligarlos a mostrar los datos en un contexto de tiempo específico, independientemente del ajuste de tiempo del panel.
+
+Estos conceptos se explican con mayor detalle en la siguiente sección.

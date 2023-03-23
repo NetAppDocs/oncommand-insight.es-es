@@ -1,0 +1,55 @@
+---
+permalink: howto/custom-dashboards.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight 7.3 incluye funcionalidades de consola personalizadas mejoradas para proporcionar a los usuarios una visión operativa de los datos que son importantes para ellos y ofrecer una vista única de dichos datos. 
+---
+= Creación de paneles personalizados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight 7.3 incluye funcionalidades de consola personalizadas mejoradas para proporcionar a los usuarios una visión operativa de los datos que son importantes para ellos y ofrecer una vista única de dichos datos.
+
+OnCommand Insight ofrece a los usuarios la flexibilidad de crear vistas operativas datos de infraestructura a través de plataformas DE TI, al permitirle crear paneles personalizados con una variedad de widgets, cada uno de los cuales ofrece una gran flexibilidad para mostrar y crear gráficos de sus datos. En este procedimiento, creamos un panel de ejemplo para destacar el rendimiento de VM.
+
+Este método debe servir sólo como ejemplo y no cubre todos los escenarios posibles. Los conceptos y pasos aquí indicados pueden utilizarse para crear sus propios paneles personalizados con el fin de resaltar los datos específicos de sus necesidades particulares.
+
+*Descripción general*
+
+Puede crear un panel personalizado mediante cualquiera de los siguientes métodos:
+
+* *Paneles* > *+Nuevo panel*
+* *Paneles* > *Mostrar todos los paneles* y haga clic en *+Agregar*
+
+
+La pantalla Nuevo panel tiene varios controles:
+
+* *Selector de tiempo*: Le permite ver los datos del panel de control durante un intervalo de tiempo desde 3 horas hasta 90 días mediante el selector de rango de fecha personalizado. Puede optar por reemplazar este intervalo de tiempo global en widgets individuales.
+* Botón *Editar*: Al seleccionar "'on'" se activará el modo Editar, que le permitirá realizar cambios en el panel de control. Los nuevos paneles se abren de forma predeterminada en el modo de edición.
+* * Botón Guardar*: Permite guardar, cambiar el nombre o eliminar el panel de control.
+* * Botón variable*: Se pueden agregar variables a los paneles de control. Al cambiar la variable, se actualizan todos los widgets a la vez. Para obtener más información sobre las variables, consulte link:custom-dashboard-concepts.md#["Conceptos personalizados de la consola"]
+* * Botón Widget*, que le permite añadir cualquier número de tablas, gráficos u otros widgets al panel de control.
+
+
+Los widgets se pueden cambiar de tamaño y reubicarse en diferentes posiciones dentro del panel de control, para proporcionarle la mejor vista de sus datos según sus necesidades actuales.
+
+*Tipos de Widget*
+
+Puede elegir entre los siguientes tipos de widgets:
+
+*Widget de Tabla*: Una tabla que muestra datos según los filtros y columnas que elija. Los datos de la tabla se pueden combinar en grupos que se pueden contraer y expandir.
+
+* Gráficos de línea, spline, área, área apilada*: Son widgets de gráficos de serie temporal en los que puede visualizar el rendimiento y otros datos a lo largo del tiempo.
+
+*Widget de un único valor*: Un widget que permite mostrar un único valor que puede obtenerse directamente de un contador o calcularse utilizando una consulta o expresión. Por ejemplo, puede mostrar la suma del total de IOPS de todo el almacenamiento del entorno como un único valor en la parte superior de la consola.
+
+*Gráfico de barras*: Un gráfico que muestra los valores superior o inferior 5, 10, 20 o 50.
+
+* Diagrama de cuadro*: Un trazado del mínimo, máximo, mediana y el rango entre el cuartil inferior y superior de los datos en un solo gráfico.
+
+* Scatter Plot* Chart: Traza datos relacionados como puntos, por ejemplo, IOPS y latencia. En este ejemplo, observaría rápidamente activos con una alta latencia e IOPS bajas.
+
+Además, hay varios widgets anteriores que puede elegir. En el menú desplegable *Widgets*, seleccione **Mostrar más...**para ver estos widgets.

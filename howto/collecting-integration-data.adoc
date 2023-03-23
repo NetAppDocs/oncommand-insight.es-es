@@ -1,0 +1,46 @@
+---
+permalink: howto/collecting-integration-data.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede importar datos de integración en el sistema OnCommand Insight. Los datos se pueden importar mediante el software de código abierto collectd que se ejecuta como daemon para recopilar datos de rendimiento o mediante el origen de datos SNMP de integración que permite recopilar datos SNMP genéricos. 
+---
+= Recogida de datos de integración
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede importar datos de integración en el sistema OnCommand Insight. Los datos se pueden importar mediante el software de código abierto collectd que se ejecuta como daemon para recopilar datos de rendimiento o mediante el origen de datos SNMP de integración que permite recopilar datos SNMP genéricos.
+
+
+
+== Flujo de datos para datos de integración
+
+Lo siguiente se aplica a la cantidad total de datos de integración que se pueden presentar al servidor OnCommand Insight:
+
+* Se mantiene una cola de 100 llamadas.
++
+Cuando un cliente espera en la cola más de un minuto, se produce un error de tiempo de espera.
+
+* La tasa de ingesta recomendada para los datos de integración es una vez por minuto, por cliente.
+* Se permite un límite de 300 tipos de objetos de integración.
+
+
+
+
+== Acceso al software y a la documentación collecd
+
+Puede acceder al software y a la documentación del complemento para el escritor de salida para collectd en el sitio de GitHub de NetApp: https://github.com/NetApp/OCI_collectd[]
+
+
+
+== Backup y restauración de datos de integración
+
+El backup y la restauración de datos de integración se modelan según las políticas de backup y restauración de datos de rendimiento de OnCommand Insight. Cuando se configura un backup para los datos de rendimiento, los datos de integración también se incluyen en el backup. Al igual que sucede con el backup del rendimiento, los siete días de integración más recientes se incluyen en el backup. Todos los datos de integración presentes en un backup se restauran en una operación de restauración.
+
+
+
+== Licencias
+
+Se requiere una licencia Perform para informar los datos de integración. Si no hay una licencia Perform, se produce un error con el mensaje "realizar la licencia necesaria para informar de los datos de integración".

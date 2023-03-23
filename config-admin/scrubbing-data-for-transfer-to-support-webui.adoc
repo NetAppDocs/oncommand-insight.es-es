@@ -1,0 +1,46 @@
+---
+permalink: config-admin/scrubbing-data-for-transfer-to-support-webui.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Los clientes que dispongan de entornos seguros deben comunicarse con el servicio de atención al cliente de NetApp para solucionar los problemas que se produzcan sin comprometer la información sobre bases de datos. Las utilidades de Scrub de OnCommand Insight le permiten configurar un diccionario completo de palabras clave y patrones para que pueda "limpiar" datos confidenciales y enviar archivos depurados al servicio de atención al cliente.' 
+---
+= Eliminación de datos para su transferencia a soporte
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los clientes que dispongan de entornos seguros deben comunicarse con el servicio de atención al cliente de NetApp para solucionar los problemas que se produzcan sin comprometer la información sobre bases de datos. Las utilidades de Scrub de OnCommand Insight le permiten configurar un diccionario completo de palabras clave y patrones para que pueda "limpiar" datos confidenciales y enviar archivos depurados al servicio de atención al cliente.
+
+
+
+== Pasos
+
+. En la interfaz de usuario web, haga clic en *Admin* y seleccione *solución de problemas*.
+. En la parte inferior de la página en el área de otras tareas, haga clic en el enlace *utilidades de Scrub*.
++
+Hay varias secciones de matorral: Buscar en Diccionario, Scrub datos, y construir diccionario, palabras clave personalizadas, y expresiones regulares.
+
+. 
++
+.. En la sección ** Lookup in Dictionary**, escriba un código para mostrar el valor que reemplaza o escriba un valor para ver el código que lo reemplaza. Nota: Antes de poder realizar una búsqueda, debe *construir* el diccionario para identificar los valores que se van a eliminar de los datos de soporte.
+
+
+. Para agregar sus propias palabras clave para eliminar de los datos de soporte, en la sección *palabras clave personalizadas*, haga clic en menu:acciones[Agregar palabra clave personalizada]. Introduzca una palabra clave y haga clic en *Guardar*. La palabra clave se agrega al diccionario.
+. Expanda *patrones (regexp)*. Haga clic en *Agregar* para obtener el cuadro de diálogo para introducir un nuevo patrón.
+. Para utilizar una expresión regular para identificar palabras o frases para matarlas, introduzca un patrón o patrones en la sección *expresiones regulares*. Haga clic en menú:acciones[Agregar expresión regular], escriba un nombre para el patrón y la expresión regular en los campos y haga clic en *Guardar*. La información se ha agregado al diccionario.
++
+[NOTE]
+====
+Los patrones deben estar comprendidos entre paréntesis redondos para identificar un grupo de captura de expresiones regulares.
+
+====
+. En la sección ** Crear diccionario**, haga clic en *generar* para iniciar la compilación del diccionario de todas las palabras identificadas como sensibles desde la base de datos OnCommand Insight.
++
+Al finalizar, aparece un mensaje que le informa de que el diccionario revisado está disponible. La descripción de la base de datos incluye una línea que indica cuántas palabras clave hay en el diccionario. Compruebe la precisión de sus palabras clave en el diccionario. Si encuentra problemas y desea reconstruir el diccionario, haga clic en *Restablecer* en el bloque base de datos para eliminar todas las palabras clave recopiladas de la base de datos OnCommand Insight del diccionario. Como se indica en el mensaje, no se eliminarán otras palabras clave. Vuelva a las utilidades de Scrub e introduzca sus palabras clave personalizadas de nuevo.
+
+. Después de crear un diccionario Scrub, puede usarlo para eliminar un archivo de registro, XML u otro archivo de texto para que los datos sean anónimos.
+. Para eliminar un archivo de registro, XML u otro archivo de texto, en la sección *datos de archivo de Scrub*, busque el archivo y haga clic en *Archivo de Scrub*.
+

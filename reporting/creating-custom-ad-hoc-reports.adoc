@@ -1,0 +1,21 @@
+---
+permalink: reporting/creating-custom-ad-hoc-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar las herramientas de creación de informes para crear informes personalizados. Después de crear informes, puede guardarlos y ejecutarlos en un horario normal. Los resultados de los informes se pueden enviar automáticamente por correo electrónico a usted mismo y a otros. 
+---
+= Crear informes ad hoc personalizados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar las herramientas de creación de informes para crear informes personalizados. Después de crear informes, puede guardarlos y ejecutarlos en un horario normal. Los resultados de los informes se pueden enviar automáticamente por correo electrónico a usted mismo y a otros.
+
+Los ejemplos de esta sección muestran el siguiente proceso, que se puede utilizar para cualquiera de los modelos de datos de OnCommand Insight:
+
+* Identificar una pregunta que se va a responder con un informe
+* Determinar los datos necesarios para respaldar los resultados
+* Selección de elementos de datos para el informe
+

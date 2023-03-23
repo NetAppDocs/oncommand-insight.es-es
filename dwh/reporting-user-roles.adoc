@@ -1,0 +1,195 @@
+---
+permalink: dwh/reporting-user-roles.html 
+sidebar: sidebar 
+keywords:  
+summary: A cada cuenta de usuario se le asigna un rol con un conjunto de permisos. El número de usuarios está limitado por el número de licencias de generación de informes asociadas a cada rol. 
+---
+= Creación de informes sobre los roles de usuario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+A cada cuenta de usuario se le asigna un rol con un conjunto de permisos. El número de usuarios está limitado por el número de licencias de generación de informes asociadas a cada rol.
+
+Cada rol puede realizar las siguientes acciones:
+
+* *Destinatario*
++
+Muestra informes del portal de informes de OnCommand Insight y establece preferencias personales como las de idiomas y zonas horarias.
+
++
+[NOTE]
+====
+Los destinatarios no pueden crear informes, ejecutar informes, programar informes, exportar informes ni realizar tareas administrativas.
+
+====
+* *Consumidor de negocio*
++
+Ejecuta informes y realiza todas las opciones de destinatario.
+
+* *Autor del negocio*
++
+Visualiza informes programados, ejecuta informes de forma interactiva, crea historias, además de realizar todas las opciones de consumidor empresarial.
+
+* *Autor profesional*
++
+Crea informes, crea paquetes y módulos de datos, además de realizar todas las opciones de Business Author.
+
+* *Administrador*
++
+Realiza tareas administrativas de creación de informes, como la importación y exportación de definiciones de informes, la configuración de informes, la configuración de orígenes de datos y el cierre y reinicio de las tareas de creación de informes.
+
+
+
+En la siguiente tabla, se muestran los privilegios y la cantidad máxima de usuarios permitidos para cada rol:
+
+|===
+
+
+| Función | Destinatario | Consumidor de negocios | Autor de negocio | Autor profesional | Admin 
+
+
+ a| 
+Ver informes en la pestaña Contenido del equipo
+ a| 
+Sí
+ a| 
+Sí
+ a| 
+Sí
+ a| 
+Sí
+ a| 
+Sí
+
+
+
+ a| 
+Ejecutar informes
+ a| 
+No
+ a| 
+Sí
+ a| 
+Sí
+ a| 
+Sí
+ a| 
+Sí
+
+
+
+ a| 
+Programar informes
+ a| 
+No
+ a| 
+Sí
+ a| 
+Sí
+ a| 
+Sí
+ a| 
+Sí
+
+
+
+ a| 
+Cargue archivos externos
+ a| 
+No
+ a| 
+No
+ a| 
+Sí
+ a| 
+Sí
+ a| 
+No
+
+
+
+ a| 
+Crear historias
+ a| 
+No
+ a| 
+No
+ a| 
+Sí
+ a| 
+Sí
+ a| 
+No
+
+
+
+ a| 
+Crear informes
+ a| 
+No
+ a| 
+No
+ a| 
+Sí
+ a| 
+Sí
+ a| 
+No
+
+
+
+ a| 
+Crear paquetes y módulos de datos
+ a| 
+No
+ a| 
+No
+ a| 
+No
+ a| 
+Sí
+ a| 
+No
+
+
+
+ a| 
+Realizar tareas administrativas
+ a| 
+No
+ a| 
+No
+ a| 
+No
+ a| 
+No
+ a| 
+Sí
+
+
+
+ a| 
+Número de usuarios
+ a| 
+Número de usuarios de OnCommand Insight
+ a| 
+20
+ a| 
+2
+ a| 
+1
+ a| 
+1
+
+|===
+Cuando agrega un nuevo usuario de almacén de datos y de informes, si excede el límite en una función, el usuario se agrega como "desactivado", y necesita desactivar o quitar otro usuario con esa función para dar una nueva pertenencia al usuario.
+
+[NOTE]
+====
+Las capacidades de creación de informes requieren licencia de Insight Plan. Puede agregar usuarios adicionales de Business Author y Pro Author comprando el ARAP (paquete adicional de creación de informes). Si necesita ayuda, póngase en contacto con su representante de OnCommand Insight.
+
+====
+Estas funciones de usuario de informes no afectan al acceso directo a la base de datos. Estas funciones de usuario de informes no afectan a su capacidad para crear consultas SQL mediante los data marts.

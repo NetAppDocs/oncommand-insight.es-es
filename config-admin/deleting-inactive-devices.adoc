@@ -1,0 +1,37 @@
+---
+permalink: config-admin/deleting-inactive-devices.html 
+sidebar: sidebar 
+keywords:  
+summary: La eliminación de dispositivos inactivos ayuda a mantener los datos más limpios y fáciles de navegar. 
+---
+= Eliminando dispositivos inactivos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La eliminación de dispositivos inactivos ayuda a mantener los datos más limpios y fáciles de navegar.
+
+
+
+== Acerca de esta tarea
+
+Para eliminar dispositivos inactivos de Insight, haga lo siguiente:
+
+
+
+== Pasos
+
+. Cree una consulta nueva o abra una consulta existente.
+. Seleccione el tipo de activo _generic device_, _host_, _Storage_,_switch_ o _Tape_.
+. Agregue un filtro para *está activo* y ajuste el filtro en *no*.
++
+La tabla resultados muestra sólo los activos que no están activos.
+
+. Seleccione los dispositivos que desea eliminar.
+. Haga clic en el botón *acciones* y seleccione *Eliminar dispositivos inactivos*.
++
+Los dispositivos inactivos se eliminan y ya no se mostrarán en Insight.
+
+

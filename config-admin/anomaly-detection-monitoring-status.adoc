@@ -1,0 +1,42 @@
+---
+permalink: config-admin/anomaly-detection-monitoring-status.html 
+sidebar: sidebar 
+keywords:  
+summary: El estado de supervisión de detección de anomalías está disponible en consultas de aplicaciones, widgets y páginas de activos. 
+---
+= Estado de supervisión de detección de anomalías
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El estado de supervisión de detección de anomalías está disponible en consultas de aplicaciones, widgets y páginas de activos.
+
+
+
+== Estado de supervisión de detección de anomalías
+
+Para cada aplicación, verá una de las siguientes opciones:
+
+* *OK*
++
+No se detectan problemas.
+
+* *Aprendizaje*
++
+El servidor de detección de anomalías está obteniendo hasta 14 días de datos de rendimiento y cargándolo en el motor de detección de anomalías.
+
+* *Excede los activos máximos*
++
+Se ha excedido el número máximo de activos que se supervisan para una aplicación. No se pueden supervisar más de 4000 activos para una aplicación. La supervisión se detiene hasta que el número de activos sea menor o igual que 4000. Reduzca el número de activos que se supervisan para seguir supervisando.
+
+* *Error*
++
+Se ha producido un error en la conexión al servidor de detección de anomalías.
+
+* *No monitorizado*
++
+La supervisión está desactivada para la aplicación. En consultas y widgets, este campo se deja en blanco.
+
+

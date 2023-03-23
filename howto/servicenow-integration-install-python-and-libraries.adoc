@@ -1,0 +1,52 @@
+---
+permalink: howto/servicenow-integration-install-python-and-libraries.html 
+sidebar: sidebar 
+keywords:  
+summary: Python se puede instalar en el servidor de Insight, en un host o un equipo virtual independientes. 
+---
+= Instalar Python y bibliotecas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Python se puede instalar en el servidor de Insight, en un host o un equipo virtual independientes.
+
+
+
+== Pasos
+
+. En el equipo virtual o el host, descargue Python 3.6 o versiones posteriores.
+. Elija instalación personalizada y elija las siguientes opciones. Estos son necesarios para un funcionamiento correcto de la secuencia de comandos del conector o son muy recomendados.
++
+** Instalar lanzador para todos los usuarios
+** Añada Python a LA RUTA
+** Instalar el pip (que permite a Python instalar otros paquetes)
+** Instalar el tk/tcl y EL RALENTÍ
+** Instale el paquete de pruebas Python
+** Instalar el lanzador de py para todos los usuarios
+** Asociar archivos con Python
+** Cree accesos directos para las aplicaciones instaladas
+** Agregue python a variables de entorno
+** Precompilar biblioteca estándar
+
+
+. Una vez instalado Python, instale las bibliotecas de Python «requests» y «psnow». Ejecute el siguiente comando: `python -m pip install requests pysnow`
++
+*NOTA:* este comando podría fallar cuando está funcionando en un entorno proxy. Para evitar este problema, debe descargar manualmente cada una de las bibliotecas Python y ejecutar las solicitudes de instalación una por una y en el orden correcto.
+
++
+El comando instalará varios archivos.
+
+. Compruebe que las bibliotecas Python están instaladas correctamente. Inicie Python con uno de los siguientes métodos:
++
+** Abra un símbolo del sistema cmd y escriba `python`
+** En Windows, abra *Inicio* y elija *Python* > *python-<version>.exe*
+
+
+. En el símbolo del sistema Python, escriba `modules`
++
+Python le pedirá que espere un momento mientras recopila una lista de módulos, que a continuación mostrará.
+
+

@@ -1,0 +1,14 @@
+---
+permalink: howto/finding-assets-querying.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede buscar y mostrar fácilmente activos en su entorno con consultas potentes. 
+---
+= Búsqueda de activos: Consulta
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede buscar y mostrar fácilmente activos en su entorno con consultas potentes.

@@ -1,0 +1,41 @@
+---
+permalink: dwh/getting-started-with-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: El almacén de datos de OnCommand Insight le permite configurar las opciones necesarias antes de generar informes que incluyan los datos. Data Warehouse contiene muchas características; sin embargo, sólo necesita usar algunas de ellas para empezar. Para configurar el almacén de datos, utilice las opciones del portal de almacén de datos. 
+---
+= Introducción al almacén de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El almacén de datos de OnCommand Insight le permite configurar las opciones necesarias antes de generar informes que incluyan los datos. Data Warehouse contiene muchas características; sin embargo, sólo necesita usar algunas de ellas para empezar. Para configurar el almacén de datos, utilice las opciones del portal de almacén de datos.
+
+
+
+== Acerca de esta tarea
+
+Para configurar el almacén de datos OnCommand Insight, un administrador de almacenamiento debe llevar a cabo los siguientes procedimientos:
+
+* Acceso al portal Data Warehouse
+* Conexión del almacén de datos a los servidores OnCommand Insight
+* Crear la base de datos a partir del historial
+* Configuración de los procesos de backup y restauración
+
+
+Además, un administrador de almacenamiento podría querer completar los siguientes procedimientos.
+
+* Acceder a MySQL mediante la interfaz de línea de comandos
+* Programación de compilaciones diarias
+* Configurar varios usuarios en la creación de informes
+* Resolución de problemas de configuración
++
+** ¿Por qué no puedo ver mis anotaciones?
+** ¿Qué debo hacer con los puntos de construcción históricos fallidos?
+
+
+
+
+Si es la primera vez que utiliza el portal de almacén de datos, debe configurar Data Warehouse para que aparezca cualquier información en la página Jobs. También debe repetir este proceso de instalación después de restablecer la base de datos del almacén de datos.

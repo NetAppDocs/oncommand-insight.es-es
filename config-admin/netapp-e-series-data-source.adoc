@@ -1,0 +1,120 @@
+---
+permalink: config-admin/netapp-e-series-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'El origen de datos de E-Series de NetApp recopila información de inventario y rendimiento. Hay dos configuraciones posibles \(firmware 6.x y firmware 7.x+\) y ambas tienen los mismos valores.' 
+---
+= Origen de datos E-Series de NetApp
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El origen de datos de E-Series de NetApp recopila información de inventario y rendimiento. Hay dos configuraciones posibles (firmware 6.x y firmware 7.x+) y ambas tienen los mismos valores.
+
+
+
+== Terminología
+
+OnCommand Insight adquiere la siguiente información de inventario de la fuente de datos E-Series de NetApp. Para cada tipo de activo que adquiere Insight, se muestra la terminología más común utilizada en este activo. Al ver o solucionar problemas de este origen de datos, tenga en cuenta la siguiente terminología:
+
+|===
+
+
+| Plazo del proveedor/modelo | Insight plazo 
+
+
+ a| 
+Unidad
+ a| 
+Disco
+
+
+
+ a| 
+Grupo de volúmenes
+ a| 
+Grupo de discos
+
+
+
+ a| 
+Cabina de almacenamiento
+ a| 
+Reducida
+
+
+
+ a| 
+Controladora
+ a| 
+Nodo de almacenamiento
+
+
+
+ a| 
+Grupo de volúmenes
+ a| 
+Pool de almacenamiento
+
+
+
+ a| 
+Volumen
+ a| 
+Volumen
+
+|===
+[NOTE]
+====
+Estos son sólo mapas terminológicos comunes y es posible que no representen todos los casos de este origen de datos.
+
+====
+
+
+== Requisitos
+
+* La dirección IP de cada controladora de la cabina
+* Requisito de puerto 2463
+
+
+
+
+== Configuración
+
+|===
+
+
+| *Campo* | *Descripción* 
+
+
+ a| 
+Lista separada por comas de las IP de controladora de SANtricity de cabina
+ a| 
+Direcciones IP y/o nombres de dominio completos para las controladoras de cabina
+
+|===
+
+
+== Configuración avanzada
+
+|===
+
+
+| *Campo* | *Descripción* 
+
+
+ a| 
+Intervalo de sondeo de inventario (mín.)
+ a| 
+Intervalo entre sondeos de inventario (predeterminado 30 minutos)
+
+
+
+ a| 
+Intervalo de sondeo de rendimiento (hasta 3600 segundos)
+ a| 
+Intervalo entre sondeos de rendimiento (predeterminado 300 segundos)
+
+|===

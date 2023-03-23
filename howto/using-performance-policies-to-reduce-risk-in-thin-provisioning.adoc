@@ -1,0 +1,51 @@
+---
+permalink: howto/using-performance-policies-to-reduce-risk-in-thin-provisioning.html 
+sidebar: sidebar 
+keywords:  
+summary: Debería crear políticas de rendimiento para aumentar las alertas cuando se hayan incumplido los umbrales de su infraestructura virtual. Las alertas permiten responder a los cambios del entorno antes de que provoquen interrupciones o interrupciones del servicio en las operaciones. 
+---
+= Uso de políticas de rendimiento para reducir el riesgo en el aprovisionamiento ligero
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debería crear políticas de rendimiento para aumentar las alertas cuando se hayan incumplido los umbrales de su infraestructura virtual. Las alertas permiten responder a los cambios del entorno antes de que provoquen interrupciones o interrupciones del servicio en las operaciones.
+
+Las políticas que ayudan a supervisar la infraestructura virtual incluyen lo siguiente:
+
+* *Datastore*
++
+Se pueden usar las siguientes políticas en el almacén de datos:
+
++
+** Relación de capacidad: Exceso de dedicación
+** Relación de capacidad: Utilizada
+** Capacidad: Utilizada
+** Capacidad - total
+
+
+* *Piscina de almacenamiento*
++
+Las siguientes políticas pueden proteger contra las interrupciones de la capacidad relacionadas con el almacenamiento en entornos con thin provisioning:
+
++
+** Capacidad aprovisionada
+** Capacidad utilizada
+** Relación de capacidad: Exceso de dedicación
+** Relación de capacidad: Utilizada
+
+
+
+
+Puede ampliar la infraestructura de estas políticas para supervisar la capacidad de la infraestructura virtual, incluidas las siguientes:
+
+* Volúmenes internos
+* LUN
+* Discos
+* VMDK
+* Equipos virtuales
+
+
+Puede configurar políticas con anotaciones. La misma anotación se asigna a los activos específicos que admiten una aplicación. Por ejemplo, puede asignar anotaciones a los almacenes de datos y a los pools de almacenamiento de una aplicación con thin provisioning. Podría tener anotaciones denominadas producción para el entorno de producción, desarrollo para el entorno de desarrollo, etc. Puede cambiar los umbrales y la importancia de las advertencias en función del tipo de aplicación a la que dan soporte los activos. Por ejemplo, una infracción de un umbral para el almacén de datos de una aplicación de producción puede generar un _Critical warning_, mientras que el mismo incumplimiento para un entorno de desarrollo sólo puede generar un _warning_. La incorporación de anotaciones en políticas definidas puede ayudar a reducir aún más el ruido de alertas no deseadas para activos no críticos.

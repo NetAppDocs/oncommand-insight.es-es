@@ -1,0 +1,55 @@
+---
+permalink: install-linux/installing-oncommand-insight-data-warehouse-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La instalación es independiente e incluye los elementos necesarios para ejecutar y operar el almacén de datos de OnCommand Insight \(DWH\).' 
+---
+= Instalación del almacén de datos OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La instalación es independiente e incluye los elementos necesarios para ejecutar y operar el almacén de datos OnCommand Insight (DWH).
+
+
+
+== Antes de empezar
+
+Debe haber completado todos los requisitos previos de instalación.
+
+
+
+== Acerca de esta tarea
+
+Data Warehouse cuenta con capacidades de generación de informes Cognos. Sin embargo, si instala Insight en un servidor Linux, puede utilizar estas funciones sólo si instala el almacén de datos en un servidor Windows. Para obtener información sobre la instalación del almacén de datos en las capacidades de generación de informes de Windows y Cognos, consulte la _OnCommand Insight Installation Guide for Microsoft Windows_.
+
+
+
+== Pasos
+
+. Inicie sesión en el servidor Data Warehouse utilizando una cuenta con privilegios sudo.
+. Desplácese al directorio del servidor donde se encuentran los archivos de instalación y escriba el siguiente comando:
++
+`unzip oci-dwh-<version>-linux-x86_64.zip`
+
++
+Asegúrese de comprobar el número de versión del archivo de instalación; el número de versión puede ser diferente del que se muestra en el comando.
+
+. Puede ver la sintaxis, los argumentos de comandos y el uso de los parámetros para `oci-install.sh` antes de iniciar la instalación:
++
+`sudo ./oci-dwh-<version>-linux-x86_64/oci-install.sh --help`
+
+. Ejecute el script de instalación:
++
+`sudo ./oci-dwh-<version>-linux-x86_64/oci-install.sh`
+
+. Lea el Contrato de licencia, acéptelo y siga las indicaciones.
+
+
+
+
+== Resultados
+
+Después de contestar todas las indicaciones, la instalación comienza y tarda aproximadamente 10 minutos, dependiendo de las aplicaciones instaladas.

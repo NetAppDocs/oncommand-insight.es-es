@@ -1,0 +1,18 @@
+---
+permalink: reporting/using-multiple-data-models-in-one-report.html 
+sidebar: sidebar 
+keywords:  
+summary: Normalmente, se utiliza un modelo de datos por informe. Sin embargo, puede escribir un informe que combine datos de varios modelos de datos. 
+---
+= Uso de varios modelos de datos en un informe
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Normalmente, se utiliza un modelo de datos por informe. Sin embargo, puede escribir un informe que combine datos de varios modelos de datos.
+
+Para escribir un informe que combine datos de varios modelos de datos, elija uno de los modelos de datos que se van a utilizar como base y, a continuación, escriba consultas SQL para acceder a los datos de los marts de datos adicionales. Puede utilizar la función de unión de SQL para combinar los datos de las diferentes consultas en una única consulta que puede utilizar para escribir el informe.
+
+Por ejemplo, supongamos que desea la capacidad actual para cada cabina de almacenamiento y desea capturar anotaciones personalizadas en las cabinas. Se puede crear el informe con el modelo de datos capacidad de almacenamiento. Puede utilizar los elementos de las tablas de capacidad y dimensiones actuales y agregar una consulta SQL independiente para tener acceso a la información de anotaciones en el modelo de datos de inventario. Finalmente, puede combinar los datos vinculando los datos de almacenamiento de inventario a la tabla Storage Dimension con el nombre del almacenamiento y los criterios de unión.

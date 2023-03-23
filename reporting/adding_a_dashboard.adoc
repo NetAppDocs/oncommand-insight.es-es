@@ -1,0 +1,24 @@
+---
+permalink: reporting/adding_a_dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede que desee mostrar un grupo de informes de consola en una pestaña para facilitar el acceso. Puede agregar la ficha desde Preferencias del usuario. 
+---
+= Adición de un panel desde Preferencias del usuario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede que desee mostrar un grupo de informes de consola en una pestaña para facilitar el acceso. Puede agregar la ficha desde Preferencias del usuario.
+
+.Pasos
+. Abra el Portal de informes de OnCommand Insight.
+. En la esquina superior derecha, haga clic en el icono persona para ver un menú desplegable.
+. Seleccione Mis preferencias.
+. En la vista establecer preferencias, haga clic en la ficha Portal Tabs.
+. En la ficha Portal Tabulaciones, haga clic en el vínculo Agregar.
+. En la carpeta carpetas públicas y panel, busque el panel que desee como ficha y compruébelo.
+. Haga clic en la flecha para moverla al cuadro Entradas seleccionadas y haga clic en Aceptar.
+

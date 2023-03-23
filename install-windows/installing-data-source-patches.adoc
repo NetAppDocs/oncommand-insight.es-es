@@ -1,0 +1,40 @@
+---
+permalink: install-windows/installing-data-source-patches.html 
+sidebar: sidebar 
+keywords:  
+summary: Si procede, debe instalar los parches más recientes disponibles para los orígenes de datos para aprovechar las funciones y mejoras más recientes. Después de cargar un parche de origen de datos, puede instalarlo en todos los orígenes de datos del mismo tipo. 
+---
+= Instalación de parches de origen de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si procede, debe instalar los parches más recientes disponibles para los orígenes de datos para aprovechar las funciones y mejoras más recientes. Después de cargar un parche de origen de datos, puede instalarlo en todos los orígenes de datos del mismo tipo.
+
+
+
+== Antes de empezar
+
+Debe haber contactado con el soporte técnico y obtener el `.zip` archivo que contiene las revisiones más recientes del origen de datos proporcionándoles la versión desde la que se está actualizando y la versión a la que desea actualizar.
+
+
+
+== Pasos
+
+. Coloque el archivo de revisión en el servidor de Insight.
+. En la barra de herramientas Insight, haga clic en *Admin*.
+. Haga clic en *parches*.
+. En el botón acciones, seleccione *aplicar parche*.
+. En el cuadro de diálogo *aplicar parche de origen de datos*, haga clic en *examinar* para localizar el archivo de parche cargado.
+. Revise los tipos de fuente de datos *Patch name*, *Description* y *impactados*.
+. Si el parche seleccionado es correcto, haga clic en *aplicar parche*.
++
+Con esta revisión se actualizan todos los orígenes de datos del mismo tipo. Insight obliga automáticamente a la adquisición a que se reinicie al agregar un origen de datos. La detección incluye la detección de cambios en la topología de red, incluida la adición o eliminación de nodos o interfaces.
+
+. Para forzar el proceso de detección manualmente, haga clic en *orígenes de datos* y haga clic en *sondeo de nuevo* junto al origen de datos para forzar la recopilación de datos inmediatamente.
++
+Si el origen de datos ya está en un proceso de adquisición, Insight ignora la solicitud de nuevo sondeo.
+
+

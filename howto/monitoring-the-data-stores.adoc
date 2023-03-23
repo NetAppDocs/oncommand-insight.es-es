@@ -1,0 +1,44 @@
+---
+permalink: howto/monitoring-the-data-stores.html 
+sidebar: sidebar 
+keywords:  
+summary: La página de destino del Datastore identifica los ratios de subsuscripción, la utilización de LUN y disco, los recursos correlacionados y muestra los errores de las políticas y los infracciones que han tenido lugar con el Datastore. 
+---
+= Supervisar los almacenes de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página de destino del Datastore identifica los ratios de subsuscripción, la utilización de LUN y disco, los recursos correlacionados y muestra los errores de las políticas y los infracciones que han tenido lugar con el Datastore.
+
+Utilice esta página de destino para identificar problemas en su infraestructura virtual. Puede realizar un seguimiento de la tendencia de la relación de capacidad y capacidad para anticiparse a los cambios de su capacidad.
+
+* *Resumen*
++
+Utilice esta sección para comprender:
+
++
+** Información sobre la capacidad del almacén de datos, incluida la capacidad física y la capacidad excesivamente comprometida.
+** El porcentaje de capacidad sobrecomprometida.
+** Métricas de latencia, IOPS y rendimiento.
+
+
+* *VMDK*
++
+La sección VMDK muestra el rendimiento y la capacidad del disco virtual.
+
+* *Recursos de almacenamiento*
++
+En esta sección, se muestra la capacidad utilizada y las métricas de rendimiento para el volumen interno relacionado con el almacén de datos.
+
+* *Recursos*
++
+Utilice esta sección para comprender la correlación de VMDK a las LUN y para comprender la ruta de aplicación de almacenamiento a VM.
+
+* *Sección de violaciones*
++
+La sección Violations identifica cualquier incumplimiento de las políticas de rendimiento establecidas para el Datastore.
+
+

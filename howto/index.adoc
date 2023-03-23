@@ -1,0 +1,12 @@
+---
+permalink: howto/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= Guías de procedimientos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+

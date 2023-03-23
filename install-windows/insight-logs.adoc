@@ -1,0 +1,16 @@
+---
+permalink: install-windows/insight-logs.html 
+sidebar: sidebar 
+keywords:  
+summary: Insight proporciona muchos archivos de registro para ayudarle con la investigación y la solución de problemas. Los registros disponibles se enumeran en el directorio de registro. Es posible que desee utilizar una herramienta de supervisión de registros, como BareTail, para mostrar todos los registros a la vez. 
+---
+= Registros de Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight proporciona muchos archivos de registro para ayudarle con la investigación y la solución de problemas. Los registros disponibles se enumeran en el directorio de registro. Es posible que desee utilizar una herramienta de supervisión de registros, como BareTail, para mostrar todos los registros a la vez.
+
+Los archivos de registro se encuentran en la `<install directory>\SANscreen\wildfly\standalone\log` directorio. Los registros de adquisición se encuentran en la `<install directory>\SANscreen\Acq\Log` directorio.

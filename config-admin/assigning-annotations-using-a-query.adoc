@@ -1,0 +1,55 @@
+---
+permalink: config-admin/assigning-annotations-using-a-query.html 
+sidebar: sidebar 
+keywords: bulk edit 
+summary: La asignación de una anotación a un grupo de activos ayuda a identificar o utilizar más fácilmente los activos relacionados en consultas o paneles. 
+---
+= Asignar anotaciones a varios activos mediante una consulta
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La asignación de una anotación a un grupo de activos ayuda a identificar o utilizar más fácilmente los activos relacionados en consultas o paneles.
+
+
+
+== Antes de empezar
+
+Las anotaciones que desea asignar a los activos deben haberse creado previamente.
+
+
+
+== Acerca de esta tarea
+
+Puede simplificar la tarea de asignar una anotación a varios activos mediante una consulta. Por ejemplo, si desea asignar una anotación de dirección personalizada a todas las matrices en una ubicación específica del centro de datos.
+
+
+
+== Pasos
+
+. Cree una nueva consulta para identificar los activos en los que desea asignar una anotación. Haga clic en *consultas* > *+Nueva consulta*.
+. En el menú desplegable *Buscar...*, elija *almacenamiento*. Puede establecer filtros para delimitar aún más la lista de almacenamientos mostrados.
+. En la lista de almacenamientos que se muestra, seleccione uno o varios haciendo clic en la casilla de comprobación situada junto al nombre del almacenamiento. También puede seleccionar todos los almacenamientos mostrados haciendo clic en la casilla de verificación principal de la parte superior de la lista.
+. Cuando haya seleccionado todos los almacenamientos deseados, haga clic en *acciones* > *Editar anotación*.
++
+El sistema muestra el cuadro de diálogo Agregar anotación.
+
+. Seleccione *Annotation* y *Value* que desea asignar a los almacenamientos y haga clic en *Save*.
++
+Si está mostrando la columna para esa anotación, aparecerá en todos los almacenamientos seleccionados.
+
+. Ahora puede utilizar la anotación para filtrar los almacenamientos en un widget o consulta. En un widget, puede hacer lo siguiente:
++
+.. Cree un panel o abra uno existente. Añada una *variable* y elija la anotación que haya establecido en los almacenamientos anteriores. La variable se agrega al panel.
+.. En el campo de variable que acaba de agregar, haga clic en *any* e introduzca el valor adecuado para filtrar. Haga clic en la Marca de verificación para guardar el valor de variable.
+.. Agregar un widget. En la consulta del widget, haga clic en el botón**Filter by****+**y seleccione la anotación correspondiente de la lista.
+.. Haga clic en *Any* y seleccione la variable de anotación que agregó anteriormente. Las variables creadas empiezan por "'$" y se muestran en la lista desplegable.
+.. Configure los otros filtros o campos que desee y, a continuación, haga clic en *Guardar* cuando el widget se personalice según sus preferencias.
+
+
++
+El widget del panel de control muestra los datos sólo de los almacenamientos a los que se ha asignado la anotación.
+
+

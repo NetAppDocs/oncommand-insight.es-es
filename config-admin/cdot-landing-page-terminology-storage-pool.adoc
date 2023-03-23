@@ -1,0 +1,33 @@
+---
+permalink: config-admin/cdot-landing-page-terminology-storage-pool.html 
+sidebar: sidebar 
+keywords:  
+summary: Términos que se aplican a objetos o referencias que puede encontrar en las páginas de destino de activos de pools de almacenamiento de Clustered Data ONTAP de NetApp. 
+---
+= Pool de almacenamiento de Clustered Data ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Términos que se aplican a objetos o referencias que puede encontrar en las páginas de destino de activos de pools de almacenamiento de Clustered Data ONTAP de NetApp.
+
+
+
+== Terminología de Clustered Data ONTAP Storage Pool
+
+Los siguientes términos se aplican a objetos o referencias que puede encontrar en las páginas de destino de activos de pool de almacenamiento de Clustered Data ONTAPde NetApp. Muchos de estos términos también se aplican a otros recopiladores de datos.
+
+* Almacenamiento: En qué cabina de almacenamiento vive este pool. Obligatorio.
+* Tipo -- valor descriptivo de una lista de posibilidades enumeradas. Lo más habitual será ««agregado» o ««Grupo RAID»»»».
+* Nodo: Si la arquitectura de esta cabina de almacenamiento pertenece a un nodo de almacenamiento específico, su nombre se verá aquí como un hipervínculo a su propia página de destino.
+* Utiliza Flash Pool -- Sí/no valor -- ¿este pool basado en SATA/SAS tiene SSD utilizados para la aceleración del almacenamiento en caché?
+* Redundancia -- nivel de RAID o esquema de protección. RAID_DP es de doble paridad, RAID_TP es de triple paridad.
+* Capacidad: Los valores aquí son los lógicos utilizados, la capacidad utilizable y la capacidad total lógica, así como el porcentaje utilizado en estos.
+* Capacidad sobrecomprometida: Si se utilizan tecnologías de eficiencia, se asigna una suma total de capacidades de volumen o volumen interno mayor que la capacidad lógica del pool de almacenamiento, el valor porcentual será mayor que 0 %.
+* Snapshot: Las capacidades de Snapshot utilizadas y totales, si su arquitectura de pool de almacenamiento dedica parte de su capacidad a los segmentos, en exclusiva para los snapshots. Es probable que las configuraciones de ONTAP en MetroCluster lo muestren, mientras que otras configuraciones de ONTAP son menos.
+* Utilización: Valor de porcentaje que muestra el mayor porcentaje de ocupación de disco de cualquier disco que contribuye a la capacidad de este pool de almacenamiento. El aprovechamiento de disco no tiene necesariamente una fuerte correlación con el rendimiento de la cabina: El aprovechamiento puede ser elevado debido a la recompilación de discos, a actividades de deduplicación, etc. en ausencia de cargas de trabajo basadas en host. Asimismo, las implementaciones de replicación de muchas cabinas pueden impulsar el uso del disco sin mostrar como volumen interno o carga de trabajo de volumen.
+* IOPS: La suma de IOPS de todos los discos que contribuyen a la capacidad de este pool de almacenamiento.
+* Rendimiento: La suma del rendimiento de todos los discos que contribuyen a la capacidad de este pool de almacenamiento.
+

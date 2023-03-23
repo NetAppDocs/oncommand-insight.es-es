@@ -1,0 +1,71 @@
+---
+permalink: dwh/accessing-mysql-using-the-command-line-interface-valid.html 
+sidebar: sidebar 
+keywords:  
+summary: Además de acceder a los elementos de datos del almacén de datos mediante las herramientas de creación de informes, puede obtener acceso a los elementos de datos del almacén de datos directamente conectándose como usuario MySQL. Puede que desee conectarse como usuario MySQL para utilizar los elementos de datos en sus propias aplicaciones. 
+---
+= Acceder a MySQL con la interfaz de línea de comandos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Además de acceder a los elementos de datos del almacén de datos mediante las herramientas de creación de informes, puede obtener acceso a los elementos de datos del almacén de datos directamente conectándose como usuario MySQL. Puede que desee conectarse como usuario MySQL para utilizar los elementos de datos en sus propias aplicaciones.
+
+
+
+== Acerca de esta tarea
+
+Hay muchas maneras de conectarse. Los pasos siguientes muestran un sentido.
+
+Al acceder a MySQL, conéctese a la base de datos de MySQL en el equipo donde está instalado Data Warehouse. El puerto MySQL es 3306 de manera predeterminada; sin embargo, puede cambiarlo durante la instalación. El nombre de usuario y la contraseña son dwhuser/netapp123.
+
+
+
+== Pasos
+
+. En la máquina donde está instalado Data Warehouse, abra una ventana de línea de comandos.
+. Acceda al directorio MySQL en el directorio OnCommand Insight.
+. Escriba el siguiente nombre de usuario y contraseña: `mysql -udwhuser -pnetapp123`
++
+Se muestra lo siguiente, dependiendo de dónde esté instalado Data Warehouse:
+
++
+[listing]
+----
+c:\Program Files\SANscreen\mysql\bin> mysql -udwhuser -pnetapp123
+----
++
+[listing]
+----
+Welcome to the MySQL monitor. Commands end with ; or \g.
+Your MySQL connection id is 882
+Server version: 5.1.28-rc-community MySQL Community Server (GPL)
+----
++
+[listing]
+----
+Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
+----
+. Mostrar las bases de datos de almacén de datos: `show databases;`
++
+Aparece lo siguiente:
+
++
+[listing]
+----
+mysql> show databases;
++-------------------------+
+| Database                |
++-------------------------+
+| information_schema      |
+| dwh_capacity            |
+| dwh_capacity_efficiency |
+| dwh_fs_util             |
+| dwh_inventory           |
+| dwh_performance         |
+| dwh_ports               |
++-------------------------+
+----
+

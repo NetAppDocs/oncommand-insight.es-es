@@ -1,0 +1,35 @@
+---
+permalink: config-admin/modifying-performance-policies.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede editar las políticas de rendimiento existentes y predeterminadas para cambiar la forma en que Insight supervisa las condiciones que le interesan en la red. Por ejemplo, es posible que desee cambiar el umbral de una política. 
+---
+= Editar políticas de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede editar las políticas de rendimiento existentes y predeterminadas para cambiar la forma en que Insight supervisa las condiciones que le interesan en la red. Por ejemplo, se recomienda cambiar el umbral de una política.
+
+
+
+== Pasos
+
+. Abra Insight en su navegador.
+. En el menú *gestionar*, seleccione *políticas de rendimiento*.
++
+Se muestra la página Performance Policies.
+
+. Pase el cursor sobre el nombre de una política de la lista de políticas de rendimiento de un objeto.
+. Haga clic en image:../media/oci-edit-threshold-policy-icon.gif[""].
++
+Se muestra el cuadro de diálogo Edit Policy.
+
+. Realice los cambios necesarios.
++
+Si cambia alguna opción que no sea el nombre de la política, Insight elimina todos los incumplimientos existentes de esa política.
+
+. Haga clic en *Guardar.*
+

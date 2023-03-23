@@ -1,0 +1,159 @@
+---
+permalink: config-admin/ibm-ds-cli-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: 'El origen de datos IBM DS \(CLI\) sólo admite dispositivos DS6xxx y DS8xxx. Los dispositivos DS3xxx, DS4xxx y DS5xxx son compatibles con el origen de datos E-Series de NetApp. Consulte la matriz de compatibilidad de origen de datos de Insight para ver modelos y versiones de firmware admitidas.' 
+---
+= Origen de datos de IBM DS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El origen de datos de IBM DS (CLI) sólo admite dispositivos DS6xxx y DS8xxx. Los dispositivos DS3xxx, DS4xxx y DS5xxx son compatibles con el origen de datos E-Series de NetApp. Consulte la matriz de compatibilidad de origen de datos de Insight para ver modelos y versiones de firmware admitidas.
+
+
+
+== Terminología
+
+OnCommand Insight adquiere la siguiente información de inventario del origen de datos de IBM DS. Para cada tipo de activo que adquiere Insight, se muestra la terminología más común utilizada en este activo. Al ver o solucionar problemas de este origen de datos, tenga en cuenta la siguiente terminología:
+
+|===
+
+
+| Plazo del proveedor/modelo | Insight plazo 
+
+
+ a| 
+Módulo de unidad de disco
+ a| 
+Disco
+
+
+
+ a| 
+Imagen de almacenamiento
+ a| 
+Reducida
+
+
+
+ a| 
+Pool de extensiones
+ a| 
+Pool de almacenamiento
+
+
+
+ a| 
+Volumen de bloques fijos
+ a| 
+Volumen
+
+|===
+[NOTE]
+====
+Estos son sólo mapas terminológicos comunes y es posible que no representen todos los casos de este origen de datos.
+
+====
+
+
+== Requisitos
+
+* Dirección IP de cada matriz DS
+* El nombre de visualización de almacenamiento es opcional y sólo cosmético
+* Nombre de usuario y contraseña de sólo lectura en cada matriz DS
+* Software de terceros instalado en el servidor Insight: Dscli de IBM
+* Validación de acceso: Ejecución `dscli` con el nombre de usuario y la contraseña
+* Requisitos del puerto: 80, 443 y 1750
+
+
+
+
+== Configuración
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+DS
+ a| 
+Dirección IP o nombre de dominio completo del host de almacenamiento DS
+
+
+
+ a| 
+Nombre de usuario
+ a| 
+Nombre utilizado para la CLI de DS
+
+
+
+ a| 
+Contraseña
+ a| 
+Contraseña utilizada para la CLI de DS
+
+
+
+ a| 
+Ruta ejecutable dscli.exe
+ a| 
+Ruta completa a la ``dscli.exe``utilidad.
+
+|===
+
+
+== Configuración avanzada
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Intervalo de sondeo de inventario (mín.)
+ a| 
+Intervalo entre sondeos de inventario (predeterminado 40 minutos)
+
+
+
+ a| 
+Nombre para mostrar almacenamiento
+ a| 
+Nombre de la matriz de almacenamiento de IBM DS
+
+
+
+ a| 
+Excluir dispositivos de inventario
+ a| 
+Lista separada por comas de los números de serie del dispositivo que se van a excluir de la colección de inventario
+
+
+
+ a| 
+Intervalo de sondeo de rendimiento (s)
+ a| 
+Intervalo entre sondeos de rendimiento (predeterminado 300 segundos)
+
+
+
+ a| 
+Tipo de filtro de rendimiento
+ a| 
+Incluir: Datos recopilados sólo de dispositivos de la lista. Excluir: No se recopilan datos de estos dispositivos
+
+
+
+ a| 
+Lista de dispositivos de filtro de rendimiento
+ a| 
+Lista separada por comas de ID de dispositivo para incluir o excluir de la colección de rendimiento
+
+|===

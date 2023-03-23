@@ -1,0 +1,35 @@
+---
+permalink: config-admin/installing-a-patch-on-all-data-sources-of-one-type.html 
+sidebar: sidebar 
+keywords:  
+summary: Después de cargar un parche de origen de datos, puede instalarlo en todos los orígenes de datos del mismo tipo. 
+---
+= Instalar un parche en un tipo de origen de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de cargar un parche de origen de datos, puede instalarlo en todos los orígenes de datos del mismo tipo.
+
+
+
+== Antes de empezar
+
+Debe haber cargado un archivo de revisión que desee instalar en un tipo de origen de datos.
+
+
+
+== Pasos
+
+. En la barra de herramientas Insight, haga clic en *Admin*.
+. Haga clic en *parches*.
+. En el botón acciones, seleccione *aplicar parche*.
+. En el cuadro de diálogo *aplicar parche de origen de datos*, haga clic en *examinar* para localizar el archivo de parche cargado.
+. Compruebe los tipos de fuente de datos *, * Descripción* y *impactados* de *Patch NAME*.
+. Si el parche seleccionado es correcto, haga clic en *aplicar parche*.
++
+Con esta revisión se actualizan todos los orígenes de datos del mismo tipo.
+
+

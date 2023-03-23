@@ -1,0 +1,101 @@
+---
+permalink: config-admin/managing-security-on-an-rau.html 
+sidebar: sidebar 
+keywords: rekey 
+summary: La herramienta securityadmin le permite administrar opciones de seguridad en Raus. Es posible que necesite realizar una copia de seguridad o restaurar una configuración de almacén, cambiar las claves de cifrado o actualizar las contraseñas de las unidades de adquisición. 
+---
+= Gestión de la seguridad en una RAU
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La `securityadmin` La herramienta le permite gestionar las opciones de seguridad en Raus. Es posible que necesite realizar una copia de seguridad o restaurar una configuración de almacén, cambiar las claves de cifrado o actualizar las contraseñas de las unidades de adquisición.
+
+
+
+== Acerca de esta tarea
+
+Utilice la `securityadmin` herramienta para gestionar la seguridad:
+
+* Windows - `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat`
+* Linux: `/bin/oci-securityadmin.sh`
+
+
+Un escenario para actualizar la configuración de seguridad para la LAU, RAU es actualizar la contraseña de usuario de "adquisición" cuando se haya cambiado la contraseña para ese usuario en el servidor. Todos los raus y LAU utilizan la misma contraseña que el usuario de "adquisición" del servidor para comunicarse con el servidor.
+
+[NOTE]
+====
+
+====
+El usuario de "adquisición" solo existe en el servidor de Insight. La RAU o LAU inicia sesión como ese usuario cuando se conectan al servidor.
+
+Siga estos pasos para administrar las opciones de seguridad en una RAU:
+
+
+
+== Pasos
+
+. Realice un inicio de sesión remoto en el servidor que ejecuta la RAU
+. Inicie la herramienta de administración de seguridad en modo interactivo: `Windows - C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i``Linux - /bin/oci-securityadmin.sh -i`
++
+El sistema solicita credenciales de inicio de sesión.
+
+. Introduzca el nombre de usuario y la contraseña de una cuenta con las credenciales "'Admin'".
++
+El sistema muestra el menú de la RAU.
+
++
+** *Backup*
++
+Crea un archivo zip de copia de seguridad del almacén que contiene todas las contraseñas y claves y coloca el archivo en una ubicación especificada por el usuario o en las siguientes ubicaciones predeterminadas:
+
++
+*** Windows - `C:\Program Files\SANscreen\backup\vault`
+*** Linux: `/var/log/netapp/oci/backup/vault`
+
+
+** *Restaurar*
++
+Restaura la copia de seguridad zip del almacén que se creó. Una vez restaurada, todas las contraseñas y claves se revierten a valores existentes en el momento de la creación del backup.
+
++
+[NOTE]
+====
+Restore se puede utilizar para sincronizar contraseñas y claves en varios servidores, por ejemplo: - Cambiar claves de cifrado en un servidor - Crear una copia de seguridad del almacén - Restaurar la copia de seguridad del almacén en el segundo servidor
+
++
+
+====
+** *Cambiar claves de cifrado*
++
+Cambie las claves de cifrado de RAU utilizadas para cifrar o descifrar las contraseñas del dispositivo.
+
++
+[NOTE]
+====
+Al cambiar las claves de cifrado, debe realizar una copia de seguridad de la nueva configuración de seguridad para poder restaurarla después de una actualización o instalación.
+
+====
+** *Actualizar contraseña*
++
+Cambiar la contraseña de la cuenta de usuario de "adquisición".
+
++
+[NOTE]
+====
+Algunas cuentas necesitan sincronizarse cuando se cambian las contraseñas. Por ejemplo, si cambia la contraseña del usuario de "adquisición" en el servidor, deberá cambiar la contraseña del usuario de "adquisición" en la LAU, la RAU y las DWH para que coincidan. Además, al cambiar contraseñas, debe realizar una copia de seguridad de la nueva configuración de seguridad para poder restaurarla después de una actualización o instalación.
+
+====
+** *Restablecer valores predeterminados*
++
+Restablece los valores predeterminados de las claves de cifrado y las contraseñas. Los valores predeterminados son los que se proporcionan durante la instalación.
+
+** *Salida*
++
+Salga de la `securityadmin` herramienta.
+
+
+
+

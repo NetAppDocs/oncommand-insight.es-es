@@ -1,0 +1,45 @@
+---
+permalink: config-admin/analyzing-slow-pc-performance.html 
+sidebar: sidebar 
+keywords:  
+summary: Si recibe llamadas de usuarios de la red quejándose de que sus equipos se ejecutan lentamente, debe analizar el rendimiento del host e identificar los recursos afectados. 
+---
+= Análisis de rendimiento lento del PC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si recibe llamadas de usuarios de la red quejándose de que sus equipos se ejecutan lentamente, debe analizar el rendimiento del host e identificar los recursos afectados.
+
+
+
+== Antes de empezar
+
+En este ejemplo, el llamante dio el nombre de host.
+
+
+
+== Pasos
+
+. Abra Insight en su navegador.
+. Introduzca el nombre de host en el cuadro *Buscar activos* y haga clic en el nombre de host en los resultados de la búsqueda.
++
+Se abrirá la página _Asset_ del recurso.
+
+. En la página Asset del host, examine los gráficos de rendimiento en el centro de la página. Quizás sea conveniente mostrar diferentes tipos de datos además de latencia e IOPS que generalmente se seleccionan previamente. Haga clic en las casillas de verificación de otros tipos de datos, como rendimiento, memoria, CPU o procesamiento IP, según el tipo de dispositivo.
+. Para mostrar una descripción de un punto en un gráfico, coloque el puntero del ratón sobre el punto.
+. También es posible que desee cambiar el intervalo de tiempo con la selección en la parte superior de la página para que sea de 3 horas hasta 7 días o todos los datos disponibles.
+. Examine la lista de *recursos correlacionados principales* para ver si hay otros recursos con el mismo patrón de actividad que el recurso base.
++
+El primer recurso de la lista es siempre el recurso base.
+
++
+.. Haga clic en un porcentaje vinculado junto a un recurso correlacionado para ver si el patrón de actividad correlacionado es para IOPS o CPU del recurso base y otro recurso.
+.. Haga clic en la casilla de comprobación de un recurso correlacionado para añadir sus datos a los gráficos de rendimiento.
+.. Haga clic en el nombre vinculado del recurso correlacionado para mostrar su página de activos.
+
+
+. Para una máquina virtual, como en este ejemplo, localice la agrupación de almacenamiento en *Top Concorreletal resources* y haga clic en el nombre de la agrupación de almacenamiento.
+

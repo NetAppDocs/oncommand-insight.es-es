@@ -1,0 +1,33 @@
+---
+permalink: reporting/how-to-plan-the-results-of-your-custom-report.html 
+sidebar: sidebar 
+keywords:  
+summary: Antes de abrir las herramientas de diseño de informes, es posible que desee planificar los resultados deseados del informe. Las herramientas de creación de informes permiten crear informes con facilidad y es posible que no necesite mucha planificación; sin embargo, es buena idea tener una idea del solicitante del informe sobre los requisitos del informe. 
+---
+= Cómo planificar los resultados del informe personalizado
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de abrir las herramientas de diseño de informes, es posible que desee planificar los resultados deseados del informe. Las herramientas de creación de informes permiten crear informes con facilidad y es posible que no necesite mucha planificación; sin embargo, es buena idea tener una idea del solicitante del informe sobre los requisitos del informe.
+
+* Identifique la pregunta exacta que desea responder. Por ejemplo:
++
+** ¿Cuánta capacidad me queda?
+** ¿Cuáles son los costos de pago por uso por unidad de negocios?
+** ¿Qué capacidad tiene el nivel para garantizar que las unidades de negocio estén alineadas en el nivel de almacenamiento adecuado?
+** ¿Cómo puedo prever los requisitos de energía y refrigeración? (Añada metadatos personalizados añadiendo anotaciones a los recursos).
+
+
+* Identifique los elementos de datos que necesita para respaldar la respuesta.
+* Identifique las relaciones entre los datos que desea ver en la respuesta. No incluya relaciones ilógicas en su pregunta, por ejemplo, «'Quiero ver los puertos que se relacionan con la capacidad».
+* Identificar los cálculos necesarios en los datos.
+* Determine qué tipos de filtrado son necesarios para limitar los resultados.
+* Determinar si necesita utilizar datos actuales o históricos.
+* Determine si necesita establecer privilegios de acceso en los informes para limitar los datos a audiencias específicas.
+* Identificar cómo se distribuirá el informe. Por ejemplo, ¿debería enviarse por correo electrónico en un programa determinado o incluirse en el área de carpeta de contenido del equipo?
+* Determinar quién mantendrá el informe. Esto puede afectar a la complejidad del diseño.
+* Crear una maquinación del informe.
+

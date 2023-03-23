@@ -1,0 +1,25 @@
+---
+permalink: howto/compare-metrics-a-against-metrics-b-to-show-categories-and-anomalies.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede utilizar un trazado de dispersión para mostrar dos conjuntos de datos para cada objeto. Por ejemplo, puede especificar que se muestren IOPS Read y latencia total para cada objeto. Con este gráfico se puede identificar el objeto que considere problemático en función de la tasa de IOPS y la latencia combinadas. 
+---
+= Comparar métricas-A con métricas-B para mostrar categorías y anomalías
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar un trazado de dispersión para mostrar dos conjuntos de datos para cada objeto. Por ejemplo, puede especificar que se muestren IOPS Read y latencia total para cada objeto. Con este gráfico se puede identificar el objeto que considere problemático en función de la tasa de IOPS y la latencia combinadas.
+
+
+
+== Pasos
+
+. Agregue un widget con un gráfico de distribución al nuevo panel: *Widget* > *Scatter Plot Chart*
+. Cambie el dispositivo predeterminado a máquina virtual: Haga clic en *almacenamiento* > *máquina virtual* > *latencia total* > *IOPS Read*
++
+El sistema muestra un trazado de dispersión similar a lo siguiente: image:../media/guid-a2c666db-f53d-42b8-82ef-62743b8b0fe2.gif[""]
+
+

@@ -1,0 +1,61 @@
+---
+section: reporting
+title: Creación de informes
+entries:
+- title: Le damos la bienvenida a los informes de OnCommand Insight
+  url: "/reporting/welcome-to-oncommand-insight-reporting.html"
+  entries:
+  - title: Acceder al portal de informes de OnCommand Insight
+    url: "/reporting/accessing-the-oncommand-insight-reporting-portal.html"
+  - title: Variaciones debido a licencias instaladas
+    url: "/reporting/variations-due-to-installed-licenses.html"
+  - title: Creación de informes sobre los roles de usuario
+    url: "/reporting/reporting-user-roles.html"
+  - title: Habilitar encabezados de seguridad
+    url: "/reporting/enabling-security-headers.html"
+- title: Se ha simplificado la creación de informes
+  url: "/reporting/reporting-made-easy.html"
+  entries:
+  - title: Navegar hasta informes predefinidos de OnCommand Insight
+    url: "/reporting/navigating-to-the-pre-defined-oncommand-insight-reports-and-dashboards.html"
+  - title: Lo que permite hacer la consola de Storage Manager
+    url: "/reporting/storage-manager-dashboard.html"
+  - title: Uso de informes predefinidos para responder preguntas comunes
+    url: "/reporting/which-report-answers-your-question.html"
+  - title: Creación de un informe utilizando Cognos 11
+    url: "/reporting/creating-a-report-cognos-11.html"
+- title: Gestión de informes
+  url: "/reporting/managing-reports.html"
+  entries:
+  - title: Personalización del formato de salida y la entrega de un informe
+    url: "/reporting/customizing-a-report-s-output-format-and-delivery.html"
+  - title: Copia de un informe en el portapapeles
+    url: "/reporting/copying-a-report-to-the-clipboard.html"
+  - title: Abrir informes (xml) desde el portapapeles
+    url: "/reporting/importing-existing-reports-to-cognos-11.html"
+- title: Crear informes ad hoc personalizados
+  url: "/reporting/creating-custom-ad-hoc-reports.html"
+  entries:
+  - title: Qué debe hacer antes de diseñar su informe
+    url: "/reporting/what-you-need-to-do-before-you-design-your-report.html"
+  - title: Proceso de creación de informes
+    url: "/reporting/process-of-creating-custom-reports.html"
+    entries:
+    - title: Cómo planificar los resultados del informe personalizado
+      url: "/reporting/how-to-plan-the-results-of-your-custom-report.html"
+    - title: Sugerencias para diseñar informes
+      url: "/reporting/tips-for-designing-reports.html"
+- title: Modelo de datos de generación de informes
+  url: "/reporting/reporting-data-model.html"
+  entries:
+  - title: Información general de modelos de datos
+    url: "/reporting/data-model-overview.html"
+    entries:
+    - title: Modelos de datos de OnCommand Insight
+      url: "/reporting/oncommand-insight-data-model-descriptions.html"
+    - title: Tablas de hechos y dimensiones del modelo de datos
+      url: "/reporting/data-model-fact-and-dimension-tables.html"
+    - title: Colores utilizados en los elementos del modelo de datos
+      url: "/reporting/colors-used-in-data-model-elements.html"
+    - title: Uso de varios modelos de datos en un informe
+      url: "/reporting/using-multiple-data-models-in-one-report.html"

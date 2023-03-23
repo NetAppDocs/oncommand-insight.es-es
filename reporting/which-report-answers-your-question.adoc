@@ -1,0 +1,129 @@
+---
+permalink: reporting/which-report-answers-your-question.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight incluye informes predefinidos que abordan una serie de requisitos comunes de creación de informes, con los que se proporciona información crucial que las partes interesadas necesitan para tomar decisiones informadas sobre su infraestructura de almacenamiento. 
+---
+= Uso de informes predefinidos para responder preguntas comunes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight incluye informes predefinidos que abordan una serie de requisitos comunes de creación de informes, con los que se proporciona información crucial que las partes interesadas necesitan para tomar decisiones informadas sobre su infraestructura de almacenamiento.
+
+Los siguientes informes predefinidos están disponibles en *Contenido del equipo* > *Informes* o *Contenido del equipo* > *Informes específicos del proveedor*.
+
+Las versiones más recientes de los informes pueden estar disponibles en Storage Automation Store de NetApp. Debe consultar regularmente el almacén de automatización para obtener informes.
+
+* *Datos de coste de cloud de AWS*
++
+El informe de costes del cloud proporciona una vista consolidada de todos los activos para que pueda realizar un seguimiento, analizar y optimizar el uso y el coste de los servicios basados en cloud, así como de los servicios en sus instalaciones, a medida que se escalan de forma dinámica en su entorno.
+
++
+El informe proporciona una correlación entre la infraestructura y los costos, lo que ofrece informes claros y factibles para garantizar el dimensionamiento adecuado mediante la planificación centrada de la capacidad y la detección de desperdicios.
+
+* *Capacidad y rendimiento de nivel de servicio de la aplicación*
++
+El informe rendimiento y capacidad de nivel de servicio de la aplicación proporciona una descripción general de alto nivel de las aplicaciones. Esta información se puede utilizar para planificar la capacidad o para diseñar un plan de migración.
+
+* *Pago*
++
+El informe de pago por uso proporciona información de pago por uso y responsabilidad de la capacidad de almacenamiento por hosts, aplicaciones y entidades de negocio, e incluye datos actuales e históricos.
+
++
+Para evitar el doble recuento no se incluyen los servidores ESX, sólo supervisar los equipos virtuales.
+
++
+Hay una versión actualizada de este informe disponible en Storage Automation Store de NetApp.
+
+* *Fuentes de datos*
++
+El informe orígenes de datos muestra todos los orígenes de datos instalados en su sitio, el estado del origen de datos (correcto/fallo) y los mensajes de estado. El informe proporciona información acerca de dónde empezar a solucionar problemas de orígenes de datos. Las fuentes de datos fallidas afectan a la precisión de los informes de Insight y a la facilidad de uso general del producto.
+
+* *ESX vs VM Performance*
++
+El informe de rendimiento de ESX frente a VM ofrece una comparación de los servidores ESX y los equipos virtuales, donde se muestran la tasa media y máxima de IOPS, rendimiento y latencia, así como su utilización para servidores ESX y equipos virtuales. Para evitar el doble recuento, excluya los servidores ESX; sólo incluya los equipos virtuales.
+
++
+Hay una versión actualizada de este informe disponible en Storage Automation Store de NetApp.
+
+* *Resumen de tejido*
++
+El informe Fabric Summary identifica la información de los switches y los switches, incluidos el número de puertos, las versiones de firmware y el estado de la licencia. El informe no incluye puertos de conmutador NPV.
+
+* *Host HBA*
++
+El informe HBA del host ofrece una descripción general de los hosts del entorno y proporciona la versión del proveedor, el modelo y el firmware de los HBA, así como el nivel de firmware de los switches a los que están conectados. Este informe se puede utilizar para analizar la compatibilidad de firmware cuando se planifica una actualización del firmware para un switch o un HBA.
+
+* *Capacidad y rendimiento del nivel de servicio de host*
++
+El informe rendimiento y capacidad del nivel de servicio del host proporciona una visión general del uso del almacenamiento por host para aplicaciones únicamente de bloques.
+
+* *Resumen de host*
++
+El informe Host Summary ofrece una descripción general del aprovechamiento del almacenamiento en cada host seleccionado con información sobre Fibre Channel y hosts iSCSI. El informe le permite comparar puertos y rutas, la capacidad de Fibre Channel e ISCSI y el número de infracciones.
+
+* *Detalles de la licencia*
++
+El informe Detalles de licencia muestra la cantidad de recursos con licencia en todos los sitios con licencias activas. El informe también muestra una suma de la cantidad real en todos los sitios con licencias activas. La suma puede incluir superposiciones de cabinas de almacenamiento gestionadas por varios servidores.
+
+* *Volúmenes asignados pero no Masquera*
++
+El informe volúmenes asignados pero no Masqued enumera los volúmenes cuyo número de unidad lógica (LUN) ha sido asignado para su uso por un host en particular, pero no está enmascarado con ese host. En algunos casos, se pueden retirar del servicio las LUN que se han desenmascarado. Cualquier host puede acceder a los volúmenes sin enmascarar, lo que hace que sean vulnerables a la corrupción de datos.
+
+* *Capacidad y rendimiento de NetApp*
++
+El informe sobre capacidad y rendimiento de NetApp proporciona datos globales para la capacidad asignada, utilizada y comprometida con datos de tendencias y rendimiento de la capacidad de NetApp.
+
+* *Tarjeta de puntuación OCI*
++
+El informe de tabla de puntuación de OCI ofrece un resumen y un estado general de todos los activos detectados por OnCommand Insight. El estado se indica con indicadores verde, amarillo y rojo:
+
++
+** El verde indica que la condición es normal
+** El amarillo indica un posible problema en el entorno
+** Rojo indica un problema que requiere atención todos los campos del informe se describen en el Diccionario de datos que se proporciona con el informe.
+
+
+* *Resumen de almacenamiento*
++
+El informe Storage Summary proporciona un resumen global de datos de capacidad utilizada y no utilizada para los pools de almacenamiento, los pools de almacenamiento y los volúmenes sin configurar. Este informe proporciona una descripción general de todo el almacenamiento detectado.
+
++
+Hay una versión más reciente de este informe disponible en Storage Automation Store de NetApp.
+
+* *Capacidad y rendimiento de VM*
++
+Describe el entorno de máquinas virtuales y el uso de capacidad. Las herramientas de VM deben habilitarse para ver algunos datos, como, por ejemplo, el momento del apagado de las máquinas virtuales.
+
+* *Rutas de VM*
++
+El informe de rutas de VM proporciona datos de capacidad del almacén de datos y métricas de rendimiento para los que se ejecuta la máquina virtual en el host, qué hosts están accediendo a qué volúmenes compartidos, qué es la ruta de acceso activa y qué comprende la asignación y el uso de la capacidad.
+
+* *Capacidad de HDS por thin Pool*
++
+El informe capacidad de HDS por thin Pool muestra la cantidad de capacidad utilizable de un pool de almacenamiento que es con thin provisioning.
+
+* *Capacidad de NetApp por agregado*
++
+En el informe capacidad de NetApp por agregado, se muestra el espacio total bruto, total, utilizado, disponible y comprometido de los agregados.
+
+* *Capacidad de Symmetrix mediante matriz gruesa*
++
+El informe Symmetrix Capacity by thick Array muestra capacidad bruta, capacidad utilizable, capacidad libre, asignada, enmascarada, y la capacidad libre total.
+
+* *Capacidad de Symmetrix mediante Piscina fina*
++
+El informe Symmetrix Capacity by Thin Pool muestra capacidad bruta, capacidad utilizable, capacidad utilizada, capacidad libre, porcentaje utilizado, capacidad de la suscripción y tasa de suscripción.
+
+* *XIV capacidad por Array*
++
+En el informe XIV capacidad por matriz se muestra la capacidad utilizada y no utilizada de la matriz.
+
+* *XIV capacidad por Piscina*
++
+En el informe XIV capacidad por pool se muestra la capacidad utilizada y no utilizada de los pools de almacenamiento.
+
+

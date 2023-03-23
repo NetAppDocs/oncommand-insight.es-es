@@ -1,0 +1,31 @@
+---
+permalink: install-windows/restoring-the-performance-archive.html 
+sidebar: sidebar 
+keywords:  
+summary: En el caso de sistemas que archivan el rendimiento, el proceso de actualización solo restaura siete días de datos archivados. Puede restaurar los datos de archivado restantes después de que se haya competido la actualización. 
+---
+= Restaurar el archivado de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En el caso de sistemas que archivan el rendimiento, el proceso de actualización solo restaura siete días de datos archivados. Puede restaurar los datos de archivado restantes después de que se haya competido la actualización.
+
+
+
+== Acerca de esta tarea
+
+Para restaurar el archivo de rendimiento, siga estos pasos.
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *Admin* > *solución de problemas*
+. En la sección Restaurar, en *cargar archivo de rendimiento*, haga clic en *cargar*.
++
+La carga de archivo se gestiona en segundo plano. La carga del archivado completo puede llevar mucho tiempo, ya que los datos de rendimiento de archivado diarios se completan en Insight. El estado de la carga del archivo se muestra en la sección de archivo de esta página.
+
+

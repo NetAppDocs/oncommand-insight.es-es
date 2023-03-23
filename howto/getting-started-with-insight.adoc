@@ -1,0 +1,23 @@
+---
+permalink: howto/getting-started-with-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Después de instalar y obtener una licencia adecuada de OnCommand Insight, debe realizar una serie de tareas para empezar a preparar el entorno para mostrar los datos que son importantes para usted. 
+---
+= Primeros pasos en Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de instalar y obtener una licencia adecuada de OnCommand Insight, debe realizar una serie de tareas para empezar a preparar el entorno para mostrar los datos que son importantes para usted.
+
+Algunas de las tareas realizadas en un entorno típico son las siguientes:
+
+. *Anotación de sus activos* para prepararlos para realizar consultas e informes. Las anotaciones iniciales útiles normalmente incluyen el centro de datos, el nivel y el nivel de servicio.
+. **Creación de consultas** para mostrar datos importantes y ayuda para la resolución de problemas
+. *Asignar aplicaciones* y *entidades empresariales* a los activos
+. *Creación de políticas de rendimiento* y *alertas* para infracciones contra dichas políticas
+. *Creación de paneles personalizados* para resaltar datos según las necesidades o la función de usuario
+

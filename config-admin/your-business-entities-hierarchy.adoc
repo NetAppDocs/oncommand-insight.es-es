@@ -1,0 +1,24 @@
+---
+permalink: config-admin/your-business-entities-hierarchy.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede definir entidades de negocio para realizar un seguimiento de los datos de su entorno y crear informes a un nivel más granular. 
+---
+= La jerarquía de entidades de negocio
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede definir entidades de negocio para realizar un seguimiento de los datos de su entorno y crear informes a un nivel más granular.
+
+En OnCommand Insight, la jerarquía de entidades de negocio contiene estos niveles:
+
+* *El cliente* se utiliza principalmente por los proveedores de servicios para asociar recursos con un cliente, por ejemplo, NetApp.
+* *Línea de negocio (LOB)* es una línea de negocio o línea de producto dentro de una compañía, por ejemplo, almacenamiento de datos.
+* *Unidad de Negocio* representa una unidad de negocio tradicional como Legal o Marketing.
+* *El proyecto* se utiliza a menudo para identificar un proyecto específico dentro de una unidad de negocio para la cual usted desea el pago por uso de capacidad. Por ejemplo, "Patentes" puede ser un nombre de proyecto para la unidad de negocio Legal y "Eventos de ventas" puede ser un nombre de proyecto para la unidad de negocio de marketing. Tenga en cuenta que los nombres de nivel pueden incluir espacios.
+
+
+No es necesario que utilice todos los niveles en el diseño de la jerarquía corporativa.

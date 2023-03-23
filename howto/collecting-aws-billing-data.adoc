@@ -1,0 +1,22 @@
+---
+permalink: howto/collecting-aws-billing-data.html 
+sidebar: sidebar 
+keywords:  
+summary: El origen de datos de coste de Amazon AWS Cloud importa los datos de facturación generados por Amazon en Insight como datos de integración, lo que los pone a disposición del almacén de datos para la creación de informes. 
+---
+= Recopilación y generación de informes de datos de facturación de AWS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El origen de datos de coste de Amazon AWS Cloud importa los datos de facturación generados por Amazon en Insight como datos de integración, lo que los pone a disposición del almacén de datos para la creación de informes.
+
+Hay tres partes que hacen que los datos de facturación del cloud estén disponibles para Insight:
+
+Verificación de la información de la cuenta de AWS.
+
+Configurar el origen de datos de coste del cloud de AWS en Insight para recopilar los datos.
+
+Envío de los datos al almacén de datos a través de ETL para su uso en informes.

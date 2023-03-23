@@ -1,0 +1,57 @@
+---
+permalink: howto/expressions-example-read-iops-percentage.html 
+sidebar: sidebar 
+keywords:  
+summary: Mediante expresiones, puede ver métricas por medios alternativos, como el porcentaje del total. 
+---
+= Ejemplo de expresiones: Porcentaje de IOPS de lectura
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Mediante expresiones, puede ver métricas por medios alternativos, como el porcentaje del total.
+
+
+
+== Acerca de esta tarea
+
+En este ejemplo, queremos mostrar IOPS de lectura como un porcentaje de IOPS total. Puede pensar en esto como la siguiente fórmula:
+
+* Porcentaje de lectura = (IOPS de lectura / IOPS total) x 100
+
+
+Estos datos se pueden mostrar en un gráfico de líneas del panel. Para ello, siga estos pasos:
+
+
+
+== Pasos
+
+. Cree un nuevo panel o abra un panel existente en *modo de edición*.
+. Añada un widget a la consola. Seleccione *Área gráfica*.
++
+El widget se abre en el modo de edición. De forma predeterminada, se muestra una consulta que muestra *IOPS - total* para activos *almacenamiento*. Si lo desea, seleccione un tipo de activo diferente.
+
+. Haga clic en el botón *convertir en expresión*.
++
+La consulta actual se convierte al modo expresión. Observe que no puede cambiar el tipo de activo mientras está en modo expresión. Observe que mientras está en modo expresión, el botón cambia a *revertir a Consulta*. Haga clic en esta opción si desea volver al modo de consulta en cualquier momento. Tenga en cuenta que el cambio entre modos restablecerá los campos a sus valores predeterminados.
+
++
+Por ahora, permanezca en el modo *expresión*.
+
+. La métrica *IOPS - total* se encuentra ahora en el campo de variable alfabética "'a'". En el campo de la variable "'b'", haga clic en *Seleccionar* y elija *IOPS - Leer*.
++
+Puede agregar hasta un total de cinco variables alfabéticas para la expresión haciendo clic en el botón**+**después de los campos de variable. En nuestro ejemplo de porcentaje de lectura, solo necesitamos IOPS totales («a») y IOPS de lectura (»'b'»).
+
+. En el campo *expresión*, utilice las letras correspondientes a cada variable para crear la expresión. Sabemos que _Read Percentage = (IOPS de lectura/IOPS total) x 100_, por lo que escribimos esta expresión como: `(b / a) * 100`
+. El campo *etiqueta* identifica la expresión. Cambie la etiqueta a "'Porcentaje de lectura'", o algo igualmente significativo para usted.
+. Cambie el campo *unidades* a «»%» o «'Porcentaje'».
++
+El gráfico muestra el porcentaje de lectura de IOPS con el tiempo para los dispositivos de almacenamiento seleccionados. Si lo desea, puede establecer un filtro o elegir un método de acumulación diferente. Tenga en cuenta que si selecciona *suma* como método ROLLUP, todos los valores porcentuales se agregan juntos, lo que potencialmente puede ser superior al 100%.
+
+. Haga clic en *Guardar* para guardar el gráfico en el panel de control.
++
+También puede utilizar expresiones en los widgets *Diagrama de línea*, *Gráfico de spline* o *Diagrama de área apilada*.
+
+

@@ -1,0 +1,26 @@
+---
+permalink: reporting/enabling-security-headers.html 
+sidebar: sidebar 
+keywords:  
+summary: Los encabezados HTTP se pueden configurar para mejorar la seguridad general de la aplicación web Cognos Analytics. 
+---
+= Habilitar encabezados de seguridad
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los encabezados HTTP se pueden configurar para mejorar la seguridad general de la aplicación web Cognos Analytics.
+
+Para agregar los encabezados de respuesta:
+
+* Inicie sesión en la interfaz de usuario de Cognos Analytics y vaya a *Administrar \-> Configuración \-> sistema \-> Configuración avanzada*
+* Añada la siguiente clave/valor y aplique:
++
+** Clave: `BIHeaderFilter.responseHeaders`
+** Valor: `[{"name":"X-FRAME-OPTIONS","value":"SAMEORIGIN"},{"name":"X-XSS-Protection","value":"1"},{"name":"X-Content-Type-Options","value":"nosniff"}]`
+
+
+* Actualice el explorador para habilitar los encabezados.
+

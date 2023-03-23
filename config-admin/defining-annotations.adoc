@@ -1,0 +1,24 @@
+---
+permalink: config-admin/defining-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: Al personalizar OnCommand Insight para realizar un seguimiento de los datos según sus requisitos corporativos, puede definir las anotaciones especializadas que necesite para tener una imagen completa de sus datos, como, por ejemplo, el fin de vida de los activos, el centro de datos, la creación de ubicaciones, el nivel de almacenamiento o el volumen. y el nivel de servicio del volumen interno. 
+---
+= Definición de anotaciones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Al personalizar OnCommand Insight para realizar un seguimiento de los datos según sus requisitos corporativos, puede definir las anotaciones especializadas que necesite para tener una imagen completa de sus datos, como, por ejemplo, el fin de vida de los activos, el centro de datos, la creación de ubicaciones, el nivel de almacenamiento o el volumen. y el nivel de servicio del volumen interno.
+
+
+
+== Pasos
+
+. Enumere cualquier terminología del sector a la que deben asociarse los datos del entorno.
+. Enumere la terminología corporativa a la que deben asociarse los datos de entorno, que no se está realizando un seguimiento utilizando las entidades de negocio.
+. Identifique los tipos de anotaciones predeterminados que pueda utilizar.
+. Identifique qué anotaciones personalizadas debe crear.
+

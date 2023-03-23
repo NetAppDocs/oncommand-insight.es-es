@@ -1,0 +1,33 @@
+---
+permalink: config-admin/adding-a-new-data-source-patch-us26313-fr.html 
+sidebar: sidebar 
+keywords:  
+summary: Los nuevos orígenes de datos se publican como archivos de revisión que se pueden cargar en el sistema mediante el proceso de revisión. Con este proceso puede estar disponible nuevo origen de datos entre las versiones programadas de OnCommand Insight. 
+---
+= Adición de un nuevo origen de datos por parche
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los nuevos orígenes de datos se publican como archivos de revisión que se pueden cargar en el sistema mediante el proceso de revisión. Con este proceso puede estar disponible nuevo origen de datos entre las versiones programadas de OnCommand Insight.
+
+
+
+== Antes de empezar
+
+Debe haber cargado el archivo de revisión que desea instalar.
+
+
+
+== Pasos
+
+. En la barra de herramientas Insight, haga clic en *Admin*.
+. Seleccione *parches*.
+. Seleccione *acciones* > *instalar Service Pack o parche*.
+. En el cuadro de diálogo *instalar Service Pack o parche*, haga clic en *examinar* para buscar y seleccionar el archivo de revisión que cargó.
+. Haga clic en *Siguiente* en el cuadro de diálogo *Resumen de parches*.
+. Revise la información *Léame* y haga clic en *Siguiente* para continuar.
+. En el cuadro de diálogo *instalar*, haga clic en *Finalizar*.
+

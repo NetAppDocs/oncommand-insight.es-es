@@ -1,0 +1,54 @@
+---
+permalink: dwh/setting-email-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede hacer que el almacén de datos envíe correo electrónico a una dirección de correo electrónico específica cuando los trabajos del almacén de datos no se completen correctamente. 
+---
+= Configuración de notificaciones por correo electrónico
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede hacer que el almacén de datos envíe correo electrónico a una dirección de correo electrónico específica cuando los trabajos del almacén de datos no se completen correctamente.
+
+
+
+== Pasos
+
+. Inicie sesión en el portal del almacén de datos en `+https://hostname/dwh+`, donde `hostname` Es el nombre del sistema en el que está instalado el almacén de datos de OnCommand Insight.
+. En el panel de navegación de la izquierda, haga clic en *notificación por correo electrónico*.
+. Introduzca lo siguiente:
++
+** Dirección del servidor SMTP
++
+Especifica el servidor que actúa como servidor SMTP en la organización, identificado mediante un nombre de host o una dirección IP utilizando el formato nnn.nnn.nnn.nnn.nnn. Si especifica un nombre de host, asegúrese de que DNS pueda resolverlo.
+
+** Nombre de usuario y contraseña del servidor SMTP
++
+Especifica el nombre de usuario para acceder al servidor de correo electrónico y sólo es necesario si el servidor SMTP requiere que un usuario inicie sesión en el servidor. Este es el mismo nombre de usuario que utiliza para iniciar sesión en la aplicación y acceder a su correo electrónico.
+
+** Notificaciones habilitadas
++
+*Sí* activa las notificaciones; *no* desactiva las notificaciones.
+
+** Correo electrónico del remitente
++
+Especifica la dirección de correo electrónico que se utiliza para enviar las notificaciones. Debe ser una dirección de correo electrónico válida en su empresa.
+
+** Correo electrónico del destinatario
++
+Especifica la dirección o dirección de correo electrónico de la persona o personas que siempre recibirán el correo electrónico. Separe las varias direcciones con comas.
+
+** Asunto del correo electrónico
++
+Especifica el asunto de la notificación.
+
+** Firma de correo electrónico
++
+Especifica la información que se muestra en la parte inferior del correo electrónico, por ejemplo, el nombre del departamento.
+
+
+
+

@@ -1,0 +1,140 @@
+---
+permalink: config-admin/creating-an-application-performance-policy.html 
+sidebar: sidebar 
+keywords: anomaly score 
+summary: Puede crear una política de rendimiento de la aplicación basada en la puntuación de anomalías de la aplicación. Cruzar umbrales activa alertas que le notifican de problemas relacionados con los recursos de la aplicación. 
+---
+= Crear una política de rendimiento de aplicaciones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede crear una política de rendimiento de la aplicación basada en la puntuación de anomalías de la aplicación. Cruzar umbrales activa alertas que le notifican de problemas relacionados con los recursos de la aplicación.
+
+
+
+== Antes de empezar
+
+El motor de detección de anomalías debe estar en ejecución en el servidor de Insight para supervisar los umbrales definidos en una política de rendimiento de aplicaciones.
+
+
+
+== Acerca de esta tarea
+
+Puede crear políticas que proporcionen alertas sobre diferentes tipos de puntuaciones de anomalías que desee supervisar:
+
+* Para identificar los picos de anomalías, cree una directiva que emita alertas en la primera ocurrencia con un umbral establecido en una puntuación de anomalía alta (>90).
+* Para identificar un cambio en el comportamiento a lo largo del tiempo, cree una directiva que emita alertas después de 1 hora en una puntuación de anomalías media alta. Esta política proporciona una alerta basada en 3 puntuaciones consecutivas de detección de anomalías.
+
+
+
+
+== Pasos
+
+. Abra OnCommand Insight en el explorador.
+. Haga clic en *Administrar* > *políticas de rendimiento*
++
+Se muestra la página Performance Policies.
+
+. Haga clic en *+Agregar*.
++
+Aparecerá el cuadro de diálogo Add Policy.
+
+. Introduzca un nombre de directiva único en el campo *Nombre de directiva*.
++
+Debe usar un nombre diferente de los demás nombres de políticas del objeto.
+
+. En la lista *aplicar a objetos de tipo*, seleccione aplicación.
+. Seleccione la prioridad de aplicación en la lista *prioridad de aplicación*.
+. En la lista *aplicar después de una ventana de*, seleccione cuando se cree una alerta para indicar una infracción de umbral.
++
+La primera opción de ocurrencia activa una alerta cuando se cruza un umbral en la primera puntuación. Todas las demás opciones activan una alerta cuando el umbral se cruza una vez y se cruza de forma continua durante al menos el tiempo especificado.
+
++
+La puntuación de anomalía se proporciona en intervalos de 30 minutos (a 5 minutos después de la hora y 35 minutos después de la hora), por lo tanto, sólo deben seleccionarse los períodos de tiempo divisibles por 30.
+
++
+|===
+
+
+| Aplicar después de la ventana de | Número de cucharones necesarios para la infracción de tiro 
+
+
+ a| 
+Primera ocurrencia
+ a| 
+1
+
+
+
+ a| 
+5 minutos
+ a| 
+2
+
+
+
+ a| 
+10 minutos
+ a| 
+2
+
+
+
+ a| 
+15 minutos
+ a| 
+2
+
+
+
+ a| 
+30 minutos
+ a| 
+2
+
+
+
+ a| 
+45 minutos
+ a| 
+3
+
+
+
+ a| 
+1 hora
+ a| 
+3
+
+
+
+ a| 
+2 horas
+ a| 
+4
+
+|===
+. En la lista *Advertencia*, seleccione crítico o Advertencia
+. Configure correo electrónico si desea cambiar el método predeterminado de notificación por correo electrónico.
+. En la sección *Crear alerta si*, seleccione un operador y, a continuación, introduzca un valor para crear un umbral. La puntuación de anomalía es el único contador de rendimiento utilizado para las políticas de rendimiento de la aplicación.
++
+Puede crear un conjunto de alertas mediante intervalos similares a los siguientes:
+
++
+** 0-20 Alerta de advertencia
+** 21-50 Alerta de advertencia
+** 51-80 Alerta de advertencia
+** >80 Alerta crítica
+
+
+. Active la casilla de verificación *Detener el procesamiento de directivas adicionales si se genera una alerta* si desea que la directiva deje de procesarse cuando se produzca una alerta.
+
+
+
+
+== Resultados
+
+Las notificaciones no son el único medio para ver las infracciones. Las infracciones se muestran en la página de inicio de la aplicación y en el panel de infracciones, donde puede filtrarlas. También puede crear un panel, agregar un widget de tabla de infracciones y filtrar en el nombre de su política de rendimiento para identificar infracciones de la aplicación.

@@ -1,0 +1,107 @@
+---
+permalink: config-admin/microsoft-azure-compute-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insights utiliza el recopilador de datos de computación de Azure para adquirir datos de inventario y rendimiento de instancias de computación de Azure. 
+---
+= Origen de datos de computación de Microsoft Azure
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insights utiliza el recopilador de datos de computación de Azure para adquirir datos de inventario y rendimiento de instancias de computación de Azure.
+
+
+
+== Requisitos
+
+Necesita la siguiente información para configurar este recopilador de datos:
+
+* Requisito de puerto: 443 HTTPS
+* IP de REST de Azure Management (management.azure.com)
+* Azure Service Principal Application (Cliente) ID (cuenta de usuario)
+* Clave de autenticación principal de servicio de Azure (contraseña de usuario)
+
+
+Debe configurar una cuenta de Azure para la detección de Insight. Una vez que la cuenta se haya configurado correctamente y registre la aplicación en Azure, tendrá las credenciales necesarias para descubrir la instancia de Azure con Insight. El siguiente enlace describe cómo configurar la cuenta para Discovery:https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal
+
+
+
+== Configuración
+
+Introduzca los datos en los campos de origen de datos según la tabla siguiente:
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+ID de aplicación principal de servicios Azure (cliente) (se requiere rol de lector)
+ a| 
+ID de inicio de sesión en Azure. Requiere acceso a la función Reader.
+
+
+
+ a| 
+ID de inquilino de Azure
+ a| 
+ID de inquilino de Microsoft
+
+
+
+ a| 
+Clave de autenticación principal del servicio Azure
+ a| 
+Clave de autenticación de inicio de sesión
+
+
+
+ a| 
+Entiendo que Microsoft me factura por las solicitudes de API
+ a| 
+Marque esto para verificar que Microsoft le da la cuenta de las solicitudes de API que ha realizado el sondeo de Insight.
+
+|===
+
+
+== Configuración avanzada
+
+Introduzca los datos en los campos de origen de datos según la tabla siguiente:
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Intervalo de sondeo de inventario (mín.)
+ a| 
+El valor predeterminado es 60
+
+
+
+ a| 
+Elija "excluir" o "incluir" para aplicar al filtro de VM por etiquetas
+ a| 
+Especifique si desea incluir o excluir las VM por etiquetas al recopilar datos. Si se selecciona ''incluir'', el campo clave de etiqueta no puede estar vacío.
+
+
+
+ a| 
+Claves de etiqueta y valores en los que se filtran las VM
+ a| 
+Haga clic en *+ Filter Tag* para elegir qué equipos virtuales (y discos asociados) incluir/excluir filtrando claves y valores que coincidan con claves y valores de etiquetas en el equipo virtual. Se requiere clave de etiqueta; el valor de etiqueta es opcional. Cuando el valor de etiqueta está vacío, la máquina virtual se filtra siempre que coincida con la clave de etiqueta.
+
+
+
+ a| 
+Intervalo de sondeo de rendimiento (seg.)|
+ a| 
+El valor predeterminado es 300
+
+|===

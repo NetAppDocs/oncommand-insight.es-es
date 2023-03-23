@@ -1,0 +1,53 @@
+---
+permalink: howto/scatterplot-example-knowing-your-axis.html 
+sidebar: sidebar 
+keywords:  
+summary: Cambiar el orden de los contadores en un widget de dispersión cambia los ejes en los que se muestran los datos. 
+---
+= Ejemplo de la trama de dispersión: Conocer su eje
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cambiar el orden de los contadores en un widget de dispersión cambia los ejes en los que se muestran los datos.
+
+
+
+== Acerca de esta tarea
+
+Este ejemplo creará un gráfico de dispersión que le permitirá ver equipos virtuales de bajo rendimiento con una alta latencia en comparación con un IOPS bajo.
+
+
+
+== Pasos
+
+. Cree o abra un panel en modo de edición y añada un widget *Scatter Plot Chart*.
+. Seleccione un tipo de activo, por ejemplo, *Virtual Machine*.
+. Seleccione el primer contador que desea trazar. Para este ejemplo, seleccione *latencia - total*.
++
+_Latency - total_ se registra a lo largo del eje X del gráfico.
+
+. Seleccione el segundo contador que desea trazar. Para este ejemplo, seleccione *IOPS - total*.
++
+_IOPS - total_ se registra a lo largo del eje y del gráfico. Los equipos virtuales con mayor latencia se muestran en el lado derecho del gráfico. Sólo se muestran los 100 equipos virtuales de mayor latencia, porque el ajuste *Top by X-axis* es actual.
+
++
+image::../media/scatterplot1.gif[dispersplot1]
+
+. Ahora invierte el orden de los contadores estableciendo el primer contador en *IOPS - total* y el segundo en *latencia - total*.
++
+_Iatency- total_ ahora se registra a lo largo del eje y del gráfico, y__IOPS - Tota__l a lo largo del eje X. Las máquinas virtuales con una tasa mayor de IOPS ahora se muestran en el lado derecho del gráfico.
+
++
+Tenga en cuenta que como no hemos cambiado el ajuste *Top by X-Axis*, el widget ahora muestra las 100 VM con más IOPS, ya que es lo que actualmente se traza a lo largo del eje X.
+
++
+image::../media/scatterplot2.gif[dispersplot2]
+
+. Puede elegir que el gráfico muestre la parte superior N por eje X, la parte superior N por eje y, la parte inferior N por eje X o la parte inferior N por eje Y. En nuestro último ejemplo, el gráfico muestra los 100 VM principales que tienen el _total_ más alto de IOPS. Si lo cambiamos a Top por eje y, el gráfico volverá a mostrar los 100 VM principales que tienen el _total de latencia_ más alto.
++
+Tenga en cuenta que en un gráfico de trazados de dispersión, puede hacer clic en un punto para abrir la página de activos de ese recurso.
+
+

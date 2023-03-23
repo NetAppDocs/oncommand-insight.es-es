@@ -1,0 +1,31 @@
+---
+permalink: dwh/editing-the-site-name-and-viewing-system-information.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede ver la información de actualización del sistema, el módulo, la licencia y el almacén de datos. 
+---
+= Ver información del sistema
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede ver la información de actualización del sistema, el módulo, la licencia y el almacén de datos.
+
+
+
+== Pasos
+
+. Inicie sesión en el portal del almacén de datos en `+https://hostname/dwh+`, donde `hostname` Es el nombre del sistema en el que está instalado el almacén de datos de OnCommand Insight.
+. En el panel de navegación de la izquierda, haga clic en *Información del sistema*.
+. En la ficha *sistema*, revise la información del sistema y edítela, si es necesario, mediante la siguiente acción:
++
+.. Haga clic en *Editar nombre del sitio*
+.. Introduzca el nuevo nombre del sitio y haga clic en *Guardar*.
+
+
+. Para ver la información de la aplicación (nombre de la aplicación, módulo, versión y fecha de instalación), haga clic en la ficha *Información de la aplicación*.
+. Para ver la información de la licencia (protocolo, código, fecha de caducidad y cantidad), haga clic en la ficha *licencias*.
+. Para ver la información de actualización de la aplicación (nombre de la aplicación, fecha, fecha, hora, usuario, Y el tamaño del archivo), haga clic en *Historial de actualizaciones*.
+

@@ -1,0 +1,30 @@
+---
+permalink: config-admin/using-annotations-to-monitor-your-environment.html 
+sidebar: sidebar 
+keywords:  
+summary: A la hora de personalizar OnCommand Insight para realizar un seguimiento de los datos según sus requisitos corporativos, puede definir notas especializadas, llamadas anotaciones y asignarlas a sus activos. Por ejemplo, puede anotar los activos con información como finalización de la vida útil de los activos, centro de datos, ubicación del edificio, nivel de almacenamiento o nivel de servicio de volumen. 
+---
+= Uso de anotaciones para supervisar su entorno
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Al personalizar OnCommand Insight para realizar un seguimiento de los datos de sus requisitos corporativos, puede definir notas especializadas, llamadas _anotaciones_, y asignarlas a sus activos. Por ejemplo, puede anotar los activos con información como finalización de la vida útil de los activos, centro de datos, ubicación del edificio, nivel de almacenamiento o nivel de servicio de volumen.
+
+El uso de anotaciones para supervisar su entorno incluye las siguientes tareas de alto nivel:
+
+* Crear o editar definiciones para todos los tipos de anotaciones.
+* Mostrar páginas de activos y asociar cada activo con una o varias anotaciones.
++
+Por ejemplo, si un activo se está arrendando y el arrendamiento caduca dentro de dos meses, puede que desee aplicar una anotación de fin de vida al activo. Esto ayuda a evitar que otros utilicen ese activo durante un tiempo prolongado.
+
+* Crear reglas para aplicar anotaciones automáticamente a varios activos del mismo tipo.
+* Utilizar la utilidad de importación de anotaciones para importar anotaciones.
+* Filtrar activos por sus anotaciones.
+* Agrupación de datos en informes basada en anotaciones y generación de dichos informes.
++
+Consulte la _Guía de informes de OnCommand Insight_ para obtener más información acerca de los informes.
+
+

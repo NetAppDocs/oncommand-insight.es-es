@@ -1,0 +1,73 @@
+---
+permalink: config-admin/adding-data-sources.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede agregar rápidamente orígenes de datos mediante el cuadro de diálogo Agregar origen de datos. 
+---
+= Agregar orígenes de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede agregar rápidamente orígenes de datos mediante el cuadro de diálogo Agregar origen de datos.
+
+
+
+== Pasos
+
+. Abra OnCommand Insight en el explorador e inicie sesión como usuario con permisos administrativos.
+. Seleccione *Admin* y elija *fuentes de datos*.
+. Haga clic en el botón *+Add*.
++
+Se abrirá el asistente Agregar origen de datos.
+
+. En la sección *Configuración*, introduzca la siguiente información:
++
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Nombre
+ a| 
+Introduzca un nombre de red único para este origen de datos. NOTA: Sólo se permiten letras, números y el carácter de subrayado (_) en el nombre del origen de datos.
+
+
+
+ a| 
+Proveedor
+ a| 
+Elija el proveedor del origen de datos en la lista desplegable.
+
+
+
+ a| 
+Modelo
+ a| 
+Elija el modelo del origen de datos en la lista desplegable.
+
+
+
+ a| 
+Dónde ejecutar
+ a| 
+Elija local, o puede elegir una unidad de adquisición remota si las RAU están configuradas en su entorno.
+
+
+
+ a| 
+Qué recoger
+ a| 
+Para la mayoría de los orígenes de datos, estas opciones serán Inventario y rendimiento. El inventario se selecciona siempre de forma predeterminada y no se puede anular la selección. Tenga en cuenta que algunos orígenes de datos pueden tener opciones diferentes. Las opciones de recopilación que seleccione cambian los campos disponibles en las secciones Configuración y Configuración avanzada.
+
+|===
+. Haga clic en el enlace *Configuración* e introduzca la información básica de configuración necesaria para el origen de datos con el tipo de recopilación de datos seleccionado.
+. Si este tipo de origen de datos normalmente requiere información más detallada para configurarlo en la red, haga clic en el vínculo *Configuración avanzada* para introducir información adicional.
+. Para obtener información detallada acerca de la configuración o la información de configuración avanzada necesaria o disponible para su origen de datos específico, consulte link:vendor-specific-data-source-reference.md#["Referencia de origen de datos específica del proveedor"].
+. Haga clic en el enlace *Prueba* para asegurarse de que el origen de datos está configurado correctamente.
+. Haga clic en *Guardar*.
+

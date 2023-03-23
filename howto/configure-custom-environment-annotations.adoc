@@ -1,0 +1,62 @@
+---
+permalink: howto/configure-custom-environment-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: La anotación entorno es una anotación personalizada para asociar los activos a su ubicación ambiental o utilizar, por ejemplo, Lab, I+D, Production, etc. Al crear la anotación entorno y establecerla en estos activos, podrá buscar, filtrar e informar fácilmente de los activos de laboratorio por separado de los activos de producción, por ejemplo. 
+---
+= Configurar anotaciones de entorno personalizadas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La anotación entorno es una anotación personalizada para asociar los activos a su ubicación ambiental o utilizar, por ejemplo, Lab, I+D, Production, etc. Al crear la anotación entorno y establecerla en estos activos, podrá buscar, filtrar e informar fácilmente de los activos de laboratorio por separado de los activos de producción, por ejemplo.
+
+Pasos:
+
+* Seleccione *gestionar* > *Anotaciones*.
+* Haga clic en el botón *+Add* situado en la parte superior de la página.
+* Para *Nombre*, introduzca ''*entorno*''.
+* Para *Descripción*, introduzca ''*Tipo de entorno de activo*''.
+* Para *Tipo*, seleccione *Lista*. Se mostrarán nuevos campos para crear la lista.
+* Por ahora, deje *Agregar nuevos activos sobre la marcha* sin marcar. Comprobará esta opción si desea agregar nuevos entornos a la lista de opciones al mismo tiempo que los asocia con activos.
+* Introduzca el nombre y la descripción del primer entorno.
+* Haga clic en *+Agregar* y haga lo mismo para el resto de entornos.
+* Cuando termine, haga clic en *Guardar*.
+
+
+Anotaciones de entorno de ejemplo:
+
+|===
+
+
+| Nombre | Descripción 
+
+
+ a| 
+Laboratorio
+ a| 
+Laboratorio
+
+
+
+ a| 
+Des
+ a| 
+Desarrollo
+
+
+
+ a| 
+PRD
+ a| 
+Producción
+
+
+
+ a| 
+...
+ a| 
+
+|===

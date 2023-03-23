@@ -1,0 +1,24 @@
+---
+permalink: config-admin/performance-policy-precedence.html 
+sidebar: sidebar 
+keywords:  
+summary: La página Directivas de rendimiento agrupa las políticas por tipo de objeto y Insight evalúa las políticas en el orden en que aparecen en la lista de políticas de rendimiento del objeto. Puede cambiar el orden en el que Insight evalúa las políticas para mostrar la información más importante para usted en su red. 
+---
+= Prioridad de evaluación de políticas de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La página Performance Policies agrupa las políticas por tipo de objeto y Insight evalúa las políticas en el orden en que aparecen en la lista de políticas de rendimiento del objeto. Puede cambiar el orden en el que Insight evalúa las políticas para mostrar la información más importante para usted en su red.
+
+Insight evalúa todas las políticas que se aplican a un objeto secuencialmente cuando se toman muestras de datos de rendimiento en el sistema para ese objeto; sin embargo, dependiendo de las anotaciones, no todas las políticas se aplican a un grupo de objetos. Por ejemplo, supongamos que el volumen interno tiene las siguientes políticas:
+
+* Política 1 (la directiva predeterminada proporcionada por Insight)
+* Política 2 (con una anotación de "nivel de servicio = Plata" con la opción *Detener el procesamiento de directivas adicionales si se genera una alerta*
+* Política 3 (con una anotación de "nivel de servicio = oro")
+* Política 4
+
+
+Para un nivel de volumen interno con una anotación Gold, Insight evalúa la política 1, ignora la política 2 y, a continuación, evalúa la política 3 y la política 4. Para un nivel sin anotar, Insight evalúa según el orden de las políticas; por lo tanto, Insight evalúa únicamente la Política 1 y la Política 4. Para un nivel de volumen interno con una anotación Silver, Insight evalúa las políticas 1 y 2; Sin embargo, si una alerta se activa cuando el umbral de la política se cruza una vez y se cruza continuamente para la ventana de tiempo especificada en la política, Insight ya no evalúa las demás políticas de la lista mientras evalúa los contadores actuales del objeto. Cuando Insight captura el siguiente conjunto de muestras de rendimiento para el objeto, de nuevo comienza a evaluar las políticas de rendimiento para el objeto por filtro y luego por orden.

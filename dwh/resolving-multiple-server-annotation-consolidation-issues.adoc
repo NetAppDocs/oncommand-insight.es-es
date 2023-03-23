@@ -1,0 +1,39 @@
+---
+permalink: dwh/resolving-multiple-server-annotation-consolidation-issues.html 
+sidebar: sidebar 
+keywords:  
+summary: La vista consolidación de anotaciones de la vista solución de problemas del almacén de datos muestra una tabla que contiene todos los tipos de anotación disponibles y los tipos de objeto a los que se pueden aplicar. 
+---
+= Resolución de problemas de consolidación de anotaciones de varios servidores
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La vista consolidación de anotaciones de la vista solución de problemas del almacén de datos muestra una tabla que contiene todos los tipos de anotación disponibles y los tipos de objeto a los que se pueden aplicar.
+
+
+
+== Acerca de esta tarea
+
+La consolidación de los valores de anotación se basa en el valor del Tipo de anotación. Una cabina de almacenamiento puede tener dos valores de nivel diferentes, cada uno de los cuales procede de un conector diferente. Por lo tanto, si en un conector hay un nivel definido por el nombre oro y en un segundo conector se define un nivel con el nombre goldy, esta información aparece en Data Warehouse como dos niveles separados.
+
+Puesto que algunos tipos de anotación permiten la asignación de varios valores de anotación al mismo objeto, Data Warehouse permite que los objetos (por ejemplo, "'host'") tengan varios valores de anotación asignados (por ejemplo, "centro de datos 1" y "centro de datos 2" se puedan asignar al mismo host).
+
+La anotación de nivel en los volúmenes funciona de forma algo diferente de las tablas de anotaciones generales. Potencialmente, podría haber un gran número de volúmenes en el entorno y mostrarlos en el almacén de datos afectaría a la facilidad de uso de la información. Por lo tanto, la vista consolidación de anotaciones solo muestra los volúmenes que tienen asignados varios valores de nivel y el almacenamiento que contiene cada uno de esos volúmenes.
+
+
+
+== Pasos
+
+. Inicie sesión en el portal del almacén de datos en `+https://hostname/dwh+`, donde `hostname` Es el nombre del sistema en el que está instalado el almacén de datos de OnCommand Insight.
+. En el panel de navegación de la izquierda, haga clic en *solución de problemas*.
+. En la sección *consolidación de anotación*, haga clic en *Mostrar* en la fila del objeto.
++
+A continuación se muestra un ejemplo de anotaciones para Data_Center:
+
++
+image::../media/oci-dwh-troubleshooting-annotations-gif.gif[Solucionar problemas de consolidación de anotaciones]
+
+

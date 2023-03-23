@@ -1,0 +1,28 @@
+---
+permalink: config-admin/default-storage-annotation-settings.html 
+sidebar: sidebar 
+keywords:  
+summary: Para acelerar la asignación de anotaciones de almacenamiento a los recursos, OnCommand Insight incluye 21 reglas de anotación predeterminadas, que asocian un nivel a un modelo de niveles de almacenamiento. Todos los recursos de almacenamiento están asociados automáticamente con un nivel tras la adquisición de los activos de su entorno. 
+---
+= Reglas de anotación de almacenamiento predeterminadas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para acelerar la asignación de anotaciones de almacenamiento a los recursos, OnCommand Insight incluye 21 reglas de anotación predeterminadas, que asocian un nivel a un modelo de niveles de almacenamiento. Todos los recursos de almacenamiento están asociados automáticamente con un nivel tras la adquisición de los activos de su entorno.
+
+Las reglas de anotación predeterminadas aplican anotaciones de nivel de la siguiente manera:
+
+* Nivel 1, nivel de calidad del almacenamiento
++
+La anotación de nivel 1 se aplica a los siguientes proveedores y a sus familias específicas: EMC (Symmetrix), HDS (HDS9500V, HDS9900, HDS9900V, R600, R700, USP r, USP V), IBM (DS8000), NetApp (FAS6000 o FAS6200) y Violin (memoria).
+
+* Nivel 2, nivel de calidad del almacenamiento
++
+La anotación del nivel 2 se aplica a los siguientes proveedores y a sus familias específicas: HP (3PAR StoreServ o EVA), EMC (CLARiiON), HDS (AMS o D800), IBM (XIV) y NetApp (FAS3000, FAS3100 y FAS3200).
+
+
+
+Puede editar la configuración predeterminada de estas reglas para que se ajuste a sus requisitos de nivel o puede eliminarlas si no las necesita.

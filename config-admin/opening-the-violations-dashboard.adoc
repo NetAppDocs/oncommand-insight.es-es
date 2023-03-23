@@ -1,0 +1,64 @@
+---
+permalink: config-admin/opening-the-violations-dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: Cuando Insight genera infracciones debido a los umbrales establecidos en las políticas de rendimiento, puede visualizarlas mediante la Consola de infracciones. El panel enumera todas las infracciones que se producen en su red y le permite localizar y resolver problemas. 
+---
+= Supervisar las infracciones en la red
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cuando Insight genera infracciones debido a los umbrales establecidos en las políticas de rendimiento, puede visualizarlas mediante la Consola de infracciones. El panel enumera todas las infracciones que se producen en su red y le permite localizar y resolver problemas.
+
+
+
+== Pasos
+
+. Abra OnCommand Insight en el explorador.
+. En la barra de herramientas Insight, haga clic en *Paneles* y seleccione *Panel de infracciones*.
++
+Aparecerá el Panel de infracciones.
+
+. Puede utilizar el gráfico circular *violaciones por políticas* de las siguientes formas:
++
+** Puede colocar el cursor sobre cualquier segmento de un gráfico para mostrar el porcentaje de infracciones totales que se han producido para una política o métrica concreta.
+** Puede hacer clic en un corte de un gráfico para "'enlarge'" él, que le permite enfatizar y estudiar más cuidadosamente ese corte alejándolo del resto del gráfico.
+** Haga clic en el image:../media/oci-widget-open-full-screen.gif[""] en la esquina superior derecha para mostrar el gráfico circular en modo de pantalla completa y haga clic en image:../media/oci-restore-size-icon.gif[""] de nuevo para minimizar el gráfico circular. Un gráfico circular puede contener un máximo de cinco sectores; por lo tanto, si dispone de seis políticas que generen violaciones, Insight combina el quinto y el sexto sectores en una sección "'otros'". Insight asigna el mayor número de infracciones al primer segmento, el segundo más infracciones al segundo segmento, etc.
+
+
+. Puede utilizar el gráfico *historial de infracciones* de las siguientes formas:
++
+** Puede colocar el cursor sobre el gráfico para mostrar el número total de infracciones que se han producido en un momento determinado y el número que se ha producido fuera del total de cada métrica especificada.
+** Puede hacer clic en una etiqueta de leyenda para eliminar los datos asociados a la leyenda del gráfico.
++
+Haga clic en la leyenda para volver a mostrar los datos.
+
+** Haga clic en el image:../media/oci-widget-open-full-screen.gif[""] en la esquina superior derecha para mostrar el gráfico en modo de pantalla completa y haga clic en image:../media/oci-restore-size-icon.gif[""] de nuevo para minimizar el gráfico circular.
+
+
+. Puede utilizar la *Tabla de infracciones* de las siguientes formas:
++
+** Haga clic en el image:../media/oci-widget-open-full-screen.gif[""] en la esquina superior derecha para mostrar la tabla en modo de pantalla completa y haga clic en image:../media/oci-restore-size-icon.gif[""] de nuevo para minimizar el gráfico circular.
++
+Si el tamaño de la ventana es demasiado pequeño, la Tabla de infracciones sólo muestra tres columnas; sin embargo, al hacer clic en image:../media/oci-widget-open-full-screen.gif[""], se muestran columnas adicionales (hasta siete).
+
+** Puede mostrar infracciones para un período de tiempo determinado (*1h*, *3h*, *24h*, *3d*, *7d*, Y *30d*), con Insight mostrando un número máximo de 1000 violaciones para el período de tiempo seleccionado.
+** Puede utilizar el cuadro *filtro* para mostrar sólo las infracciones que desee.
+** Para cambiar el orden de las columnas de una tabla por ascendente (flecha arriba) o descendente (flecha abajo), haga clic en la flecha del encabezado de la columna; para volver al orden predeterminado, haga clic en cualquier otro encabezado de columna.
++
+De forma predeterminada, la tabla muestra las infracciones en orden descendente.
+
+** Puede hacer clic en una infracción en la columna ID para mostrar la página de activos durante el tiempo que dure la infracción.
+** Puede hacer clic en los enlaces de recursos (por ejemplo, pool de almacenamiento y volumen de almacenamiento) de la columna Description para mostrar las páginas de activos asociadas con esos recursos.
+** Puede hacer clic en el enlace de política de rendimiento de la columna Policy para mostrar el cuadro de diálogo Edit Policy.
++
+Puede que desee ajustar los umbrales de una política si cree que genera demasiadas violaciones o demasiadas.
+
+** Puede hacer clic en un número de página para examinar los datos por página si hay más datos que ajustes en una sola página.
+** Puede hacer clic en image:../media/oci-delete-policy-threshold-icon.gif[""] para descartar la violación.
+
+
+

@@ -1,0 +1,28 @@
+---
+permalink: dwh/data-warehouse-database-build-from-history-overview.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede construir la base de datos del almacén de datos utilizando datos históricos en el servidor OnCommand Insight. Data Warehouse extrae datos de los servidores OnCommand Insight y construye los data warehouses de acuerdo con la programación de la compilación a partir del historial. 
+---
+= Data warehouse: Compilación de base de datos a partir de la introducción al historial
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede construir la base de datos del almacén de datos utilizando datos históricos en el servidor OnCommand Insight. Data Warehouse extrae datos de los servidores OnCommand Insight y construye los data warehouses de acuerdo con la programación de la compilación a partir del historial.
+
+Esta opción no requiere una licencia especial y los datos de inventario se incluyen en el desarrollo. Sin embargo, para generar información de capacidad, son necesarias las licencias OnCommand Insight Plan y OnCommand Insight Perform.
+
+Si ya se ha realizado alguna compilación (a partir del historial o actual), la generación no se puede realizar en las fechas anteriores al último trabajo. Esto significa que si realiza una generación actual, no puede crear a partir del historial. Más específicamente, si usted realizó compilaciones de la historia que terminó el 1 de enero de 2012, usted no puede realizar ninguna compilación en el año 2011.
+
+Si la generación de historial no incluye un día o dos de los procesos ETL fallidos, no intente crear el historial sólo durante estos pocos días. Los datos históricos se realizan durante períodos más largos y uno o dos días no cambiarán la tendencia de forma significativa. Si desea reconstruir desde el historial, reconstruya todo el historial.
+
+La vista generar a partir del historial muestra todos los trabajos de generación de todos los conectores. Por ejemplo, la vista podría mostrar un trabajo de inventario para cada conector, un trabajo de capacidad de puerto para cada ejecución de compilación y un trabajo de anotaciones.
+
+Antes de configurar la generación a partir del historial, debe producirse lo siguiente:
+
+* Los conectores deben estar configurados.
+* Las anotaciones se deben introducir en OnCommand Insight y se pueden actualizar manualmente mediante la opción *Forzar actualización de anotaciones para DWH* del antiguo portal de OnCommand Insight o se actualizarán automáticamente 15 minutos después de que se hayan establecido.
+

@@ -1,0 +1,20 @@
+---
+permalink: reporting/managing-dashboards.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight proporciona agrupaciones de informes en forma de paneles dinámicos para mostrar diferentes vistas de los datos relacionadas con un problema de administración específico. Al hacer clic en elementos de los paneles se muestra información más detallada. 
+---
+= Gestión de paneles
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight proporciona agrupaciones de informes en forma de paneles dinámicos para mostrar diferentes vistas de los datos relacionadas con un problema de administración específico. Al hacer clic en elementos de los paneles se muestra información más detallada.
+
+Acerca de esta tarea, los paneles agrupan información sobre un tema de interés y proporcionan estas funciones dinámicas:
+
+Haga clic en los elementos del gráfico para regenerar los gráficos que muestran más detalles para los elementos seleccionados. Enlaces a otros informes e información más detallada. Si dispone de un panel favorito, puede agregar una pestaña mediante uno de estos métodos:
+
+Agregue la ficha Panel desde las carpetas públicas. Agregue la ficha del panel desde Preferencias del usuario.

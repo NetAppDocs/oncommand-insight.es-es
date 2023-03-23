@@ -1,0 +1,39 @@
+---
+permalink: dwh/scheduling-daily-backups.html 
+sidebar: sidebar 
+keywords:  
+summary: Aunque puede realizar copias de seguridad manualmente de Data Warehouse utilizando el control Backup/Restore en cualquier momento, es la práctica recomendada programar copias de seguridad automáticas, definiendo cuándo y con qué frecuencia hacer copias de seguridad de la base de datos de Data Warehouse y del almacén de contenido de Cognos. Los backups ofrecen protección frente a la pérdida de datos, lo que le permite restaurar la base de datos de Data Warehouse si es necesario. También se utiliza una copia de seguridad al migrar a un nuevo servidor de almacén de datos o al actualizar a una nueva versión de almacén de datos. 
+---
+= Programación de backups diarios
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Aunque puede realizar copias de seguridad manualmente de Data Warehouse utilizando el control Backup/Restore en cualquier momento, es la práctica recomendada programar copias de seguridad automáticas, definiendo cuándo y con qué frecuencia hacer copias de seguridad de la base de datos de Data Warehouse y del almacén de contenido de Cognos. Los backups ofrecen protección frente a la pérdida de datos, lo que le permite restaurar la base de datos de Data Warehouse si es necesario. También se utiliza una copia de seguridad al migrar a un nuevo servidor de almacén de datos o al actualizar a una nueva versión de almacén de datos.
+
+
+
+== Acerca de esta tarea
+
+La programación de copias de seguridad durante los momentos en que el servidor de almacén de datos no está ocupado mejora el rendimiento de copia de seguridad y reduce el impacto en los usuarios.
+
+
+
+== Pasos
+
+. Inicie sesión en el portal del almacén de datos en `+https://hostname/dwh+`, donde `hostname` Es el nombre del sistema en el que está instalado el almacén de datos de OnCommand Insight.
+. En el panel de navegación de la izquierda, haga clic en *Programación*.
+. En el cuadro de diálogo *Programación de copia de seguridad*, haga clic en *Editar* para agregar una nueva programación.
++
+image::../media/oci-dwh-admin-schedule-backup.gif[backup de programación del administrador de oci dwh]
+
+. Para activar las copias de seguridad programadas, seleccione *copia de seguridad activada*.
+. Especifique la ubicación en la que desea almacenar los archivos de copia de seguridad.
+. Especifique los datos de los que desea realizar la copia de seguridad.
+. Especifique el día o los días en que desea ejecutar el backup.
+. Especifique la hora del día en la que desea iniciar el backup.
+. Especifique cuántas copias de backup anteriores se retendrán.
+. Haga clic en *Guardar*.
+

@@ -1,0 +1,118 @@
+---
+permalink: howto/configuring-applications-for-your-company.html 
+sidebar: sidebar 
+keywords:  
+summary: La comprensión de las aplicaciones utilizadas en el entorno de su empresa le ayuda a realizar un seguimiento del uso de los activos y a informar de los costes. Aquí configuraremos las aplicaciones de su empresa y las asociaremos con los activos adecuados. 
+---
+= Configuración de aplicaciones para su empresa
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Comprender las aplicaciones utilizadas en el entorno de su empresa ayuda a realizar un seguimiento del uso de los activos y a informar sobre los costes. Aquí configuraremos las aplicaciones de su empresa y las asociaremos con los activos adecuados.
+
+
+
+== Acerca de esta tarea
+
+En la sección _Configuring business entities for your company_, creamos algunas entidades de negocio y recomendamos que enumere todas las aplicaciones asociadas con cada entidad de negocio. OnCommand Insight nos permite realizar un seguimiento de los datos asociados con estas aplicaciones para cosas como el uso o la creación de informes de costes.
+
+Antes de poder realizar un seguimiento de los datos asociados a las aplicaciones que se ejecutan en el entorno, primero debe definir esas aplicaciones y asociarlas a los activos adecuados. Puede asociar las aplicaciones con los siguientes activos: Hosts, máquinas virtuales, volúmenes, volúmenes internos, qtrees, recursos compartidos e hipervisores.
+
+En este tutorial, queremos realizar un seguimiento del uso de las máquinas virtuales que el equipo de marketing utiliza para su correo electrónico de Exchange. Recordará la siguiente tabla que creamos al definir nuestras entidades de negocio. Agregemos una columna a esta hoja de cálculo que enumera las aplicaciones utilizadas por cada entidad de negocio. (Esta tabla es sólo un ejemplo de hoja de cálculo. No verá una columna «'aplicaciones» en la tabla de entidades empresariales de Insight).
+
+|===
+
+
+| Inquilino | Línea de negocio | Unidad de negocio | Proyecto | Más grandes 
+
+
+ a| 
+NetApp
+ a| 
+Almacenamiento de datos
+ a| 
+Legal
+ a| 
+Estadounidenses
+ a| 
+Oracle Identity Manager, Oracle On Demand, PatentWiz
+
+
+
+ a| 
+NetApp
+ a| 
+Almacenamiento de datos
+ a| 
+Marketing
+ a| 
+Eventos de ventas
+ a| 
+Exchange, base de datos compartida Oracle, Blastoff Event Planner
+
+
+
+ a| 
+N.A.
+ a| 
+N.A.
+ a| 
+Seguridad
+ a| 
+N.A.
+ a| 
+N.A.
+
+
+
+ a| 
+...
+ a| 
+ a| 
+ a| 
+ a| 
+
+|===
+*Creación de aplicaciones en Insight:*
+
+
+
+== Pasos
+
+. Inicie sesión en Insight como usuario con permisos administrativos.
+. Seleccione *gestionar* > *aplicaciones*
+. Haga clic en el botón *+Add*
+. Introduzca el nombre de la aplicación (en nuestro ejemplo, escriba «'Exchange'»).
+. Seleccione una prioridad para la aplicación
+. Si desea asociar la aplicación a una entidad de negocio, seleccione una en el menú desplegable *entidad de negocio*. De lo contrario, usted puede dejar esto como «'Ninguno'».
+. Si desea asegurarse de que cada host tiene acceso a los mismos volúmenes en un clúster, asegúrese de que la casilla *Validar uso compartido de volumen* esté activada. Por ejemplo, los hosts de clústeres de alta disponibilidad suelen tener que enmascarar a los mismos volúmenes para permitir la recuperación tras fallos; sin embargo, los hosts de aplicaciones que no estén relacionados suelen tener acceso a los mismos volúmenes físicos. Además, es posible que las políticas normativas exijan que se deniega explícitamente el acceso de aplicaciones no relacionadas a los mismos volúmenes físicos por motivos de seguridad. Si no utiliza el uso compartido de volúmenes, desactive la casilla *Validar uso compartido de volúmenes*. Esto requiere la licencia Assure.
+. Haga clic en Guardar.
+. Repita esto para el resto de aplicaciones de su entorno.
+
+
+
+
+== Después de terminar
+
+Vemos que el equipo de marketing utiliza la aplicación Exchange. Queremos ver su uso de equipos virtuales para Exchange, para predecir cuándo necesitaremos añadir más almacenamiento. Asociemos la aplicación Exchange con todas las máquinas virtuales de Marketing. La forma más sencilla de lograrlo es a través de una consulta.
+
+Al seguir estos pasos, puede asociar cada una de sus aplicaciones con sus activos adecuados.
+
+*Asociar aplicaciones a activos:*
+
+Ahora que ha creado sus aplicaciones (y las ha vinculado a entidades de negocio, según desee), podemos asociar dichas aplicaciones con activos de su entorno. En este ejemplo, asociaremos la aplicación de Exchange a una serie de máquinas virtuales de su empresa. La forma más sencilla de hacerlo es qué consulta.
+
+. Seleccione *consultas* > *+Nueva consulta*.
+. En el menú desplegable *Seleccionar tipo de recurso*, elija _Virtual Machine_
+. Asumiremos que el equipo de marketing nombra sus activos con la cadena "'_mktg_". En el cuadro de filtro Nombre, introduzca "'_mktg_ '"(sin comillas) y haga clic en el botón aplicar (Marca de verificación).
+. Se muestra la lista de todas las VM con la cadena "'_mktg_ '.
+. Si lo desea, haga clic en el menú desplegable *más* y agregue filtros adicionales.
+. Active la máquina virtual utilizada para Exchange haciendo clic en en la casilla de comprobación junto a cada nombre de máquina virtual que desee, o bien seleccione todas las máquinas virtuales haciendo clic en la casilla de verificación situada en la parte superior de la columna.
+. Cuando se seleccionen las VM deseadas, haga clic en el botón *acciones* y elija *Agregar aplicación*.
+. En el cuadro de diálogo asignar aplicación, haga clic en el menú desplegable *aplicación* y seleccione "'Exchange'".
+. Haga clic en *Guardar*.
+. Repita esto según sea necesario para asociar la aplicación Exchange con otros activos (hosts, volúmenes, etc.)
+

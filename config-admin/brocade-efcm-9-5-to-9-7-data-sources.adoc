@@ -1,0 +1,140 @@
+---
+permalink: config-admin/brocade-efcm-9-5-to-9-7-data-sources.html 
+sidebar: sidebar 
+keywords:  
+summary: 'OnCommand Insight utiliza la fuente de datos de Brocade Enterprise Fabric Connectivity Manager \(EFCM\) para descubrir el inventario de los switches Brocade EFCM. Insight es compatible con las versiones 9.5, 9.6 y 9.7 de EFCM.' 
+---
+= Fuente de datos de Brocade Enterprise Fabric Connectivity Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight utiliza la fuente de datos de Brocade Enterprise Fabric Connectivity Manager (EFCM) para descubrir el inventario de los switches Brocade EFCM. Insight es compatible con las versiones 9.5, 9.6 y 9.7 de EFCM.
+
+
+
+== Requisitos
+
+[NOTE]
+====
+Este recopilador de datos no está disponible a partir de OnCommand Insight 7.3.11.
+
+====
+* Dirección de red o nombre de dominio completo para el servidor EFCM
+* La versión de EFCM debe ser 9.5, 9.6 o 9.7
+* Dirección IP del servidor EFCM
+* Nombre de usuario y contraseña de sólo lectura para el servidor EFCM
+* Acceso validado al conmutador Connectrix mediante Telnet desde el servidor Insight, utilizando el nombre de usuario y la contraseña de sólo lectura en el puerto 51512
+
+
+
+
+== Configuración
+
+|===
+
+
+| *Campo* | *Descripción* 
+
+
+ a| 
+Servidor EFC
+ a| 
+Dirección IP o nombre de dominio completo del servidor EFC
+
+
+
+ a| 
+Nombre de usuario
+ a| 
+Nombre de usuario del conmutador
+
+
+
+ a| 
+Contraseña
+ a| 
+Contraseña utilizada para el conmutador
+
+|===
+
+
+== Configuración avanzada
+
+|===
+
+
+| *Campo* | *Descripción* 
+
+
+ a| 
+Intervalo de sondeo de inventario (mín.)
+ a| 
+Intervalo entre sondeos de inventario (predeterminado 15 minutos)
+
+
+
+ a| 
+Nombre de la estructura
+ a| 
+El nombre de la estructura que debe notificar el origen de datos de EFCM. Deje en blanco para informar el nombre de la estructura como WWN.
+
+
+
+ a| 
+Puerto de comunicación
+ a| 
+Puerto que se utiliza para la comunicación con el switch
+
+
+
+ a| 
+Habilite el solapamiento
+ a| 
+Seleccione esta opción para activar la adquisición al recibir una captura SNMP del dispositivo. Si selecciona Activar solapamiento, también debe activar SNMP.
+
+
+
+ a| 
+Tiempo mínimo entre solapamientos (seg)
+ a| 
+Tiempo mínimo entre intentos de adquisición activados por solapamientos (predeterminado 15 segundos)
+
+
+
+ a| 
+Zonesets inactivos
+ a| 
+Lista separada por comas de los conjuntos de zonas inactivas en los que realizar la adquisición, además de realizar la adquisición en los conjuntos de zonas activas
+
+
+
+ a| 
+NIC para utilizar
+ a| 
+Especifique la interfaz de red que se debe utilizar en la RAU al informar sobre dispositivos SAN
+
+
+
+ a| 
+Excluir dispositivos
+ a| 
+Lista de nombres de unidades separados por comas para incluir o excluir del sondeo
+
+
+
+ a| 
+Utilice el apodo del interruptor EFCM como nombre del conmutador Insight
+ a| 
+Seleccione esta opción para utilizar el apodo del interruptor EFCM como nombre del conmutador Insight
+
+
+
+ a| 
+Intervalo de sondeo de rendimiento (s)
+ a| 
+Intervalo entre sondeos de rendimiento (predeterminado 300 segundos)
+
+|===

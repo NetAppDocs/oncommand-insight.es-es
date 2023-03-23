@@ -1,0 +1,42 @@
+---
+permalink: howto/setting-up-email-for-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: Insight puede enviar notificaciones por correo electrónico cuando se produzcan eventos desencadenantes, como infracciones de políticas de rendimiento. 
+---
+= Configuración del correo electrónico para las notificaciones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Insight puede enviar notificaciones por correo electrónico cuando se produzcan eventos desencadenantes, como infracciones de políticas de rendimiento.
+
+
+
+== Acerca de esta tarea
+
+Siga estos pasos básicos para configurar notificaciones por correo electrónico:
+
+
+
+== Pasos
+
+. Haga clic en *Admin* > *Notificaciones* y vaya a la sección *correo electrónico*.
+. En el cuadro *servidor*, introduzca el nombre del servidor SMTP. Puede introducir un nombre de dominio completo o una dirección IP.
+. Introduzca el nombre de usuario SMTP y la contraseña (si así lo requiere el servidor SMTP).
+. En el cuadro *correo electrónico del remitente*, introduzca la cuenta de correo electrónico del remitente que se identificará como remitente en las notificaciones.
++
+Esta cuenta debe ser una cuenta de correo electrónico válida dentro de su empresa.
+
+. En el cuadro *firma de correo electrónico*, introduzca cualquier texto que desee insertar en cada correo electrónico que se envíe.
+. En el cuadro *destinatarios*, haga clic en image:../media/add-email-recipient-icon.gif[""]Para introducir una dirección de correo electrónico y haga clic en *Aceptar*.
+. Haga clic en *Guardar*.
++
+Para editar o eliminar una dirección de correo electrónico, o para enviar un mensaje de correo electrónico de prueba, seleccione la dirección y haga clic en el botón adecuado que aparece.
+
++
+Tenga en cuenta que puede configurar Insight para que envíe notificaciones por correo electrónico de infracciones de políticas de rendimiento específicas a individuos o grupos específicos. Por ejemplo, podría enviar violaciones de activos cloud a un grupo y eventos de host físicos a otro. Vaya a *gestionar* > *políticas de rendimiento* para configurar notificaciones de directivas individuales.
+
+

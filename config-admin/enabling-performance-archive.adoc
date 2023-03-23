@@ -1,0 +1,34 @@
+---
+permalink: config-admin/enabling-performance-archive.html 
+sidebar: sidebar 
+keywords:  
+summary: Para habilitar el archivado de datos de rendimiento, siga estos pasos. 
+---
+= Permitiendo el archivado de rendimiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para habilitar el archivado de datos de rendimiento, siga estos pasos.
+
+
+
+== Pasos
+
+. En la barra de herramientas, haga clic en *Admin* > *Configuración*.
+. Seleccione la ficha *copia de seguridad y archivo*.
+. En la sección Archivo de rendimiento , asegúrese de que ** Habilitar archivo de rendimiento** esté activado.
+. Especifique una ubicación de archivo válida.
++
+No puede especificar una carpeta en la carpeta de instalación de Insight.
+
++
+Práctica recomendada: No especifique la misma carpeta para el archivado que la ubicación de copia de seguridad de Insight.
+
+. Haga clic en *Guardar*.
++
+El proceso de archivado se gestiona en segundo plano y no interfiere con otras actividades de Insight.
+
+

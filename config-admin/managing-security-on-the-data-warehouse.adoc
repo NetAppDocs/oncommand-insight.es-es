@@ -1,0 +1,100 @@
+---
+permalink: config-admin/managing-security-on-the-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: La herramienta securityadmin le permite administrar opciones de seguridad en el servidor de Data Warehouse. La administración de seguridad incluye actualizar las contraseñas internas de los usuarios internos en el servidor DWH, crear copias de seguridad de la configuración de seguridad o restaurar las configuraciones con la configuración predeterminada. 
+---
+= Gestión de la seguridad en el almacén de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La `securityadmin` La herramienta le permite administrar las opciones de seguridad en el servidor del almacén de datos. La administración de seguridad incluye actualizar las contraseñas internas de los usuarios internos en el servidor DWH, crear copias de seguridad de la configuración de seguridad o restaurar las configuraciones con la configuración predeterminada.
+
+
+
+== Acerca de esta tarea
+
+Utilice la `securityadmin` herramienta para gestionar la seguridad:
+
+* Windows - `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat`
+* Linux: `/bin/oci-securityadmin.sh`
+
+
+
+
+== Pasos
+
+. Inicie sesión de forma remota en el servidor del almacén de datos.
+. Inicie la herramienta de administración de seguridad en modo interactivo: `Windows - C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i``Linux - /bin/oci-securityadmin.sh -i`
++
+El sistema solicita credenciales de inicio de sesión.
+
+. Introduzca el nombre de usuario y la contraseña de una cuenta con las credenciales "'Admin'".
++
+El sistema muestra el menú de administración de seguridad para el almacén de datos:
+
++
+** *Backup*
++
+Crea un archivo zip de copia de seguridad del almacén que contiene todas las contraseñas y claves y coloca el archivo en una ubicación especificada por el usuario o en la ubicación predeterminada:
+
++
+*** Windows - `C:\Program Files\SANscreen\backup\vault`
+*** Linux: `/var/log/netapp/oci/backup/vault`
+
+
+** *Restaurar*
++
+Restaura la copia de seguridad zip del almacén que se creó. Una vez restaurada, todas las contraseñas y claves se revierten a valores existentes en el momento de la creación del backup.
+
++
+[NOTE]
+====
+Restore se puede utilizar para sincronizar contraseñas y claves en varios servidores, por ejemplo: - Cambiar claves de cifrado en un servidor - Crear una copia de seguridad del almacén - Restaurar la copia de seguridad del almacén en el segundo servidor
+
++
+
+====
+** *Cambiar claves de cifrado*
++
+Cambie la clave de cifrado DWH utilizada para cifrar o descifrar contraseñas, como contraseñas de conector y contraseñas de SMPT.
+
+** *Actualizar contraseña*
++
+Cambiar la contraseña de una cuenta de usuario específica.
+
++
+*** _interno
+*** adquisición
+*** cognos_admin
+*** dwh
+*** dwh_internal
+*** dwususer
+*** hosts
+*** inventario
+*** raíz
+
+
+
+
++
+[NOTE]
+====
+Al cambiar las contraseñas de dwususer, hosts, inventario o root, tiene la opción de usar hash de contraseña SHA-256. Estas opciones requieren que todos los clientes que acceden a las cuentas utilicen conexiones SSL.
+
+====
++
+** *Restablecer valores predeterminados*
++
+Restablece los valores predeterminados de las claves de cifrado y las contraseñas. Los valores predeterminados son los que se proporcionan durante la instalación.
+
+** *Salida*
++
+Salga de la `securityadmin` herramienta.
+
+
+
+

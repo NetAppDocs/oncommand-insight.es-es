@@ -1,0 +1,55 @@
+---
+permalink: install-windows/restoring-the-data-warehouse-database.html 
+sidebar: sidebar 
+keywords:  
+summary: Cuando realiza una copia de seguridad de la base de datos de Data Warehouse, Data Warehouse crea un archivo .zip que posteriormente se puede utilizar para restaurar esa misma base de datos. 
+---
+= Restauración de la base de datos del almacén de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cuando realiza una copia de seguridad de la base de datos de Data Warehouse, Data Warehouse crea un `.zip` archivo que se puede usar más adelante para restaurar esa misma base de datos.
+
+
+
+== Acerca de esta tarea
+
+Al restaurar la base de datos del almacén de datos, también puede restaurar la información de la cuenta de usuario desde la copia de seguridad. El motor de informes de Data Warehouse utiliza las tablas de administración de usuarios en una instalación sólo de Data Warehouse.
+
+
+
+== Pasos
+
+. Inicie sesión en el portal del almacén de datos en `+https://fqdn/dwh+`.
+. En el panel de navegación de la izquierda, haga clic en *copia de seguridad/Restaurar*.
+. En la sección *Restaurar base de datos e informes*, haga clic en *examinar* y busque `.zip` Archivo que contiene la copia de seguridad del almacén de datos.
+. Se recomienda dejar seleccionadas las dos opciones siguientes:
++
+** *Restaurar base de datos*
++
+Incluye la configuración del almacén de datos, los marts de datos, las conexiones y la información de la cuenta de usuario.
+
+** *Restaurar informes*
++
+Incluye informes personalizados, informes diseñados previamente, cambios en los informes diseñados previamente y configuración de informes realizada en Conexión de informes.
+
+
+
+. Haga clic en *Restaurar*.
++
+No salga del estado de restauración. Si lo hace, el estado de la restauración ya no aparecerá y no recibirá ninguna indicación cuando finalice la operación de restauración.
+
+. Para comprobar el proceso de actualización, consulte `dwh_upgrade.log` archivo, que se encuentra en la siguiente ubicación: `<install directory>\SANscreen\wildfly\standalone\log`.
++
+Cuando finalice el proceso de restauración, aparecerá un mensaje justo debajo del botón *Restaurar*. Si el proceso de restauración se realiza correctamente, el mensaje indica que el proceso se ha realizado correctamente. Si el proceso de restauración falla, el mensaje indica la excepción específica que se produjo en ese caso. En este caso, póngase en contacto con el soporte técnico y entrételas `dwh_upgrade.log` archivo. Si se produce una excepción y la operación de restauración falla, la base de datos original se restablece automáticamente.
+
++
+[NOTE]
+====
+Si la operación de restauración falla con un mensaje "'error al actualizar cognos content store'", restaure la base de datos de Data Warehouse sin sus informes (sólo base de datos) y utilice las copias de seguridad de informes XML para importar sus informes.
+
+====
+

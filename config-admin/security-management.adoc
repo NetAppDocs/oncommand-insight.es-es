@@ -1,0 +1,68 @@
+---
+permalink: config-admin/security-management.html 
+sidebar: sidebar 
+keywords:  
+summary: La versión 7.3.1 de OnCommand Insight introdujo funciones de seguridad que permiten a los entornos de Insight funcionar con seguridad mejorada. Entre las características se incluyen mejoras en el cifrado, el hashing de contraseñas y la capacidad de cambiar contraseñas de usuario internas y pares de claves que cifran y descifran contraseñas. Puede gestionar estas funciones en todos los servidores del entorno Insight. 
+---
+= Seguridad de Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La versión 7.3.1 de OnCommand Insight introdujo funciones de seguridad que permiten a los entornos de Insight funcionar con seguridad mejorada. Entre las características se incluyen mejoras en el cifrado, el hashing de contraseñas y la capacidad de cambiar contraseñas de usuario internas y pares de claves que cifran y descifran contraseñas. Puede gestionar estas funciones en todos los servidores del entorno Insight.
+
+La instalación predeterminada de Insight incluye una configuración de seguridad donde todos los sitios del entorno comparten las mismas claves y las mismas contraseñas predeterminadas. Para proteger los datos confidenciales, NetApp recomienda cambiar las claves predeterminadas y la contraseña de usuario Acquisition después de una instalación o actualización.
+
+Las contraseñas cifradas de origen de datos se almacenan en la base de datos de Insight Server. El servidor tiene una clave pública y cifra las contraseñas cuando un usuario las introduce en una página de configuración de origen de datos de WebUI. El servidor no tiene las claves privadas necesarias para descifrar las contraseñas de origen de datos almacenadas en la base de datos del servidor. Sólo las unidades de adquisición (LAU, RAU) tienen la clave privada de origen de datos necesaria para descifrar contraseñas de origen de datos.
+
+
+
+== Cambio de claves de servidores
+
+El uso de claves predeterminadas introduce una vulnerabilidad de seguridad en el entorno. De forma predeterminada, las contraseñas de origen de datos se almacenan cifradas en la base de datos de Insight. Se cifran utilizando una clave común a todas las instalaciones de Insight. En una configuración predeterminada, la base de datos de Insight que se envía a NetApp incluye contraseñas que, en teoría, NetApp podría descifrar.
+
+
+
+== Cambiar la contraseña de usuario de adquisición
+
+Con la contraseña de usuario predeterminada de "adquisición" se introduce una vulnerabilidad de seguridad en el entorno. Todas las unidades de adquisición utilizan el usuario "'Acquisition'" para comunicarse con el servidor. Raus con contraseñas predeterminadas puede teóricamente conectarse a cualquier servidor de Insight utilizando contraseñas predeterminadas.
+
+
+
+== Consideraciones sobre la actualización y la instalación
+
+Cuando el sistema Insight contiene configuraciones de seguridad no predeterminadas (ha cambiado las contraseñas o recodificado), debe realizar una copia de seguridad de sus configuraciones de seguridad. La instalación de software nuevo o, en algunos casos, la actualización de software, revierte el sistema a una configuración de seguridad predeterminada. Cuando el sistema vuelve a la configuración predeterminada, debe restaurar la configuración no predeterminada para que el sistema funcione correctamente.
+
+
+
+== Gestionar las claves en un entorno de proveedor de servicios complejo
+
+Un proveedor de servicios puede alojar varios clientes de OnCommand Insight que recopilan datos. Las claves protegen los datos del cliente del acceso no autorizado por múltiples clientes en Insight Server. Los datos de cada cliente se protegen con sus pares de claves específicos.
+
+Esta implementación de Insight se podría configurar como se muestra en la siguiente ilustración.
+
+image::../media/serv-provider-keys.gif[claves de proveedor serv]
+
+Debe crear claves individuales para cada cliente en esta configuración. El cliente A requiere claves idénticas para ambos raus. El cliente B requiere un único conjunto de claves.
+
+Los pasos que debe seguir para cambiar las claves de cifrado del cliente A:
+
+. Realice un inicio de sesión remoto en el servidor que aloja RAU1.
+. Inicie la herramienta de administración de seguridad.
+. Seleccione Cambiar clave de cifrado para reemplazar las claves predeterminadas.
+. Seleccione copia de seguridad para crear un archivo zip de copia de seguridad de la configuración de seguridad.
+. Ejecute un inicio de sesión remoto en el servidor que aloja RAU2.
+. Copie el archivo zip de copia de seguridad de la configuración de seguridad a RAU2.
+. Inicie la herramienta de administración de seguridad.
+. Restaure la copia de seguridad de RAU1 al servidor actual.
+
+
+Los pasos que debe seguir para cambiar las claves de cifrado del cliente B:
+
+. Inicie sesión de forma remota en el servidor que aloja RAU3.
+. Inicie la herramienta de administración de seguridad.
+. Seleccione Cambiar clave de cifrado para reemplazar las claves predeterminadas.
+. Seleccione copia de seguridad para crear un archivo zip de copia de seguridad de la configuración de seguridad.
+

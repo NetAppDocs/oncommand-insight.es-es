@@ -1,0 +1,21 @@
+---
+permalink: reporting/process-of-creating-custom-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: El proceso de creación de informes ad hoc implica varias tareas. 
+---
+= Proceso de creación de informes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El proceso de creación de informes ad hoc implica varias tareas.
+
+* Planifique los resultados de su informe.
+* Identifique los datos que respaldan sus resultados.
+* Seleccione el modelo de datos (por ejemplo, modelo de datos de pago por uso, modelo de datos de inventario, etc.) que contiene los datos.
+* Seleccione los elementos de datos para el informe.
+* Si lo desea, puede aplicar formato, ordenar y filtrar los resultados del informe.
+

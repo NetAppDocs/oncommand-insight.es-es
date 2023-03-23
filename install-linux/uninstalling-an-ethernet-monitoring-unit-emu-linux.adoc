@@ -1,0 +1,37 @@
+---
+permalink: install-linux/uninstalling-an-ethernet-monitoring-unit-emu-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede desinstalar una unidad de supervisión Ethernet cuando ya no la necesite. 
+---
+= Desinstalación de una unidad de supervisión Ethernet
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede desinstalar una unidad de supervisión Ethernet cuando ya no la necesite.
+
+
+
+== Acerca de esta tarea
+
+[NOTE]
+====
+La unidad de supervisión Ethernet (EMU) no se admite en OnCommand Insight versión 7.3.12 y posteriores.
+
+====
+
+
+== Pasos
+
+. Inicie sesión en el servidor de la unidad de supervisión Ethernet mediante una cuenta con privilegios sudo.
+. Asegúrese de que todas las ventanas de OnCommand Insight están cerradas.
+. Puede ver la sintaxis, los argumentos de comandos y el uso de los parámetros para `uninstall.sh` introduzca el comando siguiente: `sudo /usr/bin/oci-uninstall.sh --help`
+. Escriba el siguiente comando: `sudo /usr/bin/oci-uninstall.sh`
++
+Se ejecuta el script de desinstalación. Siga las indicaciones.
+
+. Una vez finalizada la desinstalación, reinicie el servidor.
+

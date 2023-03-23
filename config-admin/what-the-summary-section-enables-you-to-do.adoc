@@ -1,0 +1,51 @@
+---
+permalink: config-admin/what-the-summary-section-enables-you-to-do.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede ver la sección Resumen para ver información general sobre un activo. Concretamente, resulta útil ver si cualquier métrica \(por ejemplo, memoria, capacidad y latencia\) o cualquier política de rendimiento es un motivo de preocupación, lo que indica OnCommand Insight mostrando un círculo rojo junto a la métrica o la política de rendimiento.' 
+---
+= Uso de la sección Resumen
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede ver la sección Resumen para ver información general sobre un activo. Concretamente, resulta útil ver si cualquier métrica (por ejemplo, memoria, capacidad y latencia) o cualquier política de rendimiento son un motivo de preocupación, lo que indica OnCommand Insight cuando se muestra un círculo rojo junto a la métrica o la política de rendimiento.
+
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web de OnCommand Insight.
+. Localice una página de activos realizando una de las siguientes acciones:
++
+** En la barra de herramientas Insight, haga clic en image:../media/icon-sanscreen-magnifying-glass-gif.gif[""], escriba el nombre del activo y, a continuación, seleccione el activo en la lista.
+** Haga clic en *Paneles*, seleccione *Panel de activos*, busque un nombre de activo y haga clic en él. Aparece la página Asset.
+
+
++
+[NOTE]
+====
+La información que se muestra en la sección Resumen depende del tipo de página de activos que esté viendo.
+
+====
+. Puede hacer clic en cualquiera de los vínculos de activos para ver sus páginas de activos.
++
+Por ejemplo, si está viendo un nodo de almacenamiento, puede hacer clic en un enlace para ver la página de activos del almacenamiento al que está asociado o hacer clic en para ver la página del activo del partner de alta disponibilidad.
+
+. Puede ver las métricas asociadas al activo.
++
+Un círculo rojo junto a una métrica indica que podría necesitar diagnosticar y resolver problemas potenciales.
+
++
+[NOTE]
+====
+Puede observar que la capacidad del volumen puede mostrar más del 100 % en algunos activos de almacenamiento. Esto se debe a que los metadatos relacionados con la capacidad del volumen que forma parte de los datos de capacidad consumida que notifica el activo.
+
+====
+. Si corresponde, puede hacer clic en un enlace de política de rendimiento para ver la política de rendimiento o las políticas asociadas con el activo.
++
+Si aparece un círculo rojo junto a una política de rendimiento, indica que un activo ha superado el umbral definido de la política de rendimiento. Debe examinar la política de rendimiento para diagnosticar el problema con más detalle.
+
+

@@ -1,0 +1,16 @@
+---
+permalink: reporting/managing-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: Para cada informe, puede seleccionar el vínculo más en la columna acciones y acceder a todas las operaciones del informe, como establecer propiedades de informe, programar informes o enviar informes por correo electrónico. Los administradores tienen más opciones de administración disponibles que otros usuarios. 
+---
+= Gestión de informes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Para cada informe, puede seleccionar el enlace *más* de la columna acciones y acceder a todas las operaciones de informe, como configurar propiedades de informe, programar informes o enviar informes por correo electrónico. Los administradores tienen más opciones de administración disponibles que otros usuarios.
+
+Los administradores pueden establecer permisos para otros usuarios de informes de acuerdo con sus roles de OnCommand Insight.

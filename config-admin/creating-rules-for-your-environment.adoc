@@ -1,0 +1,59 @@
+---
+permalink: config-admin/creating-rules-for-your-environment.html 
+sidebar: sidebar 
+keywords:  
+summary: 'El uso de reglas para identificar dispositivos en su entorno suele ser un proceso iterativo que requiere un análisis exhaustivo de su entorno y la creación de múltiples reglas para identificar el mayor número posible de dispositivos. La mejor de los casos consiste en establecer un objetivo para identificar el 100% de los dispositivos de su entorno.' 
+---
+= Planificación de reglas de resolución de dispositivos para su entorno
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El uso de reglas para identificar dispositivos en su entorno suele ser un proceso iterativo que requiere un análisis exhaustivo de su entorno y la creación de múltiples reglas para identificar el mayor número posible de dispositivos. La mejor de los casos consiste en establecer un objetivo para identificar el 100% de los dispositivos de su entorno.
+
+El orden más eficiente para las reglas es colocar primero las reglas más restrictivas, lo que resulta en la mayoría de las inscripciones no en coincidencia de patrones, con el procedimiento que se lleva a cabo para reglas menos restrictivas. Esto permite a Insight aplicar más patrones a cada entrada, lo que aumenta la posibilidad de que los patrones coincidan y de que la identificación de host sea positiva.
+
+Cuando cree reglas, su objetivo debería ser crear reglas que aborden el mayor número posible de dispositivos no identificados. Por ejemplo, crear reglas que siguen un patrón de cobertura similar al siguiente es mucho más eficiente que crear 30 reglas con porcentajes inferiores de cobertura:
+
+|===
+
+
+| Regla | Porcentaje de cobertura 
+
+
+ a| 
+Artículo 1
+ a| 
+60 %
+
+
+
+ a| 
+Artículo 2
+ a| 
+25 %
+
+
+
+ a| 
+Artículo 3
+ a| 
+8 %
+
+
+
+ a| 
+Artículo 4
+ a| 
+4 %
+
+
+
+ a| 
+Artículo 5
+ a| 
+1%
+
+|===

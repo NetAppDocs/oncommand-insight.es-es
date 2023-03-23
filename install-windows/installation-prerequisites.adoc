@@ -1,0 +1,47 @@
+---
+permalink: install-windows/installation-prerequisites.html 
+sidebar: sidebar 
+keywords:  
+summary: Antes de instalar OnCommand Insight, debe descargar la versión de software actual, adquirir la licencia correspondiente y configurar el entorno. 
+---
+= Requisitos previos de la instalación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de instalar OnCommand Insight, debe descargar la versión de software actual, adquirir la licencia correspondiente y configurar el entorno.
+
+Antes de instalar OnCommand Insight, asegúrese de que dispone de lo siguiente:
+
+* Los archivos de software OnCommand Insight en el paquete de instalación descargado para la versión actual
+* Una licencia para utilizar la versión de OnCommand Insight descargada
+* El entorno mínimo de hardware y software
++
+El producto actual puede consumir recursos de hardware adicionales (debido a la funcionalidad mejorada del producto OnCommand Insight) que no se consumieron en versiones anteriores del producto de OnCommand Insight.
+
+* Un plan de implementación que incluye las configuraciones de hardware y red para el servidor OnCommand Insight, almacén de datos e informes y unidades de adquisición remota.
+* Java 8 para la interfaz de usuario Java de OnCommand Insight.
++
+
+NOTE: OnCommand Insight incluye una licencia de Oracle de pago para Java se 8. Los clientes no tienen que comprar ninguna licencia adicional de Java se 8. Esta licencia cubre el uso de Java se 8 con todos los componentes OCI. Consulte la http://docs.netapp.com/oci-73/topic/com.netapp.ndc.notices/GUID-93BE9A1E-D79E-4A97-87A2-4DBE31372A16.html["Avisos"] para obtener detalles específicos.
+
+* Software de análisis de virus deshabilitado
++
+Durante la instalación de OnCommand Insight, debe desactivar por completo todos los detectores de virus. Tras la instalación, las rutas utilizadas por el componente de Insight (rutas de instalación, copia de seguridad y archivado) deben excluirse del análisis de virus, además de excluir la totalidad `sanscreen` directorio de la exploración.
+
++
+Además, debe excluir la carpeta IBM/DB2 (por ejemplo, _C:\Archivos de programa\IBM\DB2_) de la exploración antivirus tras la instalación.
+
+
+
+[NOTE]
+====
+Si está realizando una instalación completa como actualización o como migración al hardware nuevo y el sistema existente contiene una configuración de seguridad no predeterminada, debe realizar una copia de seguridad de la configuración de seguridad antes de realizar la instalación. Una vez finalizada la instalación, debe restaurar la configuración de seguridad antes de restaurar el servidor (que incluye la unidad de adquisición local) o la base de datos del almacén de datos.debe restaurar la configuración de seguridad en todos los servidores Insight antes de restaurar la base de datos DWH.
+
+Para la actualización in situ (disponible solo para Insight Server), la configuración de seguridad se gestiona correctamente y no es necesario restaurarla.
+
+Utilice la `securityadmin` para crear una copia de seguridad de la configuración y restaurar la configuración guardada. Para obtener más información, busque `securityadmin` En el centro de documentación de OnCommand Insight: http://docs.netapp.com/oci-73/index.jsp[]
+
+====

@@ -1,0 +1,27 @@
+---
+permalink: install-windows/backing-up-custom-data-warehouse-reports.html 
+sidebar: sidebar 
+keywords:  
+summary: Si ha creado informes personalizados y no tiene los archivos de origen .xml, debe realizar una copia de seguridad de estos informes antes de la actualización. A continuación, debe copiarlos en un servidor que no sea el servidor de almacén de datos. 
+---
+= Realizar copias de seguridad de informes personalizados de Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si creó informes personalizados y no dispone de `.xml` archivos de origen para ellos, debe realizar una copia de seguridad de estos informes antes de la actualización. A continuación, debe copiarlos en un servidor que no sea el servidor de almacén de datos.
+
+
+
+== Pasos
+
+. Inicie sesión en el portal del almacén de datos en `+https://fqdn/dwh+`.
+. En la barra de herramientas almacén de datos, haga clic en image:../media/oci-reporting-portal-icon.gif[""] Para abrir el Portal de informes e iniciar sesión.
+. Seleccione *Archivo* > *Abrir*.
+. Seleccione la carpeta en la que se encuentra el informe, selecciónelo y, a continuación, haga clic en *Abrir*.
+. Seleccione *Herramientas* > *Copiar informe al portapapeles*.
+. Abra un editor de texto, pegue el contenido del informe y guarde el archivo como `report_name.txt`, donde `report _name` es el nombre del informe.
+. Almacene los informes en un servidor que no sea el servidor de almacén de datos.
+

@@ -1,0 +1,42 @@
+---
+permalink: config-admin/managing-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight supervisa su entorno, lo que le permite investigar posibles problemas antes de que se produzca una crisis. La consola de activos proporciona gráficos circulares resumidos, mapas de calor de IOPS y un gráfico interactivo de los 10 pools de almacenamiento más utilizados. 
+---
+= Información de gestión
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight supervisa su entorno, lo que le permite investigar posibles problemas antes de que se produzca una crisis. La consola de activos proporciona gráficos circulares resumidos, mapas de calor de IOPS y un gráfico interactivo de los 10 pools de almacenamiento más utilizados.
+
+
+
+== Pasos
+
+. Abra Insight**Asset Dashboard** y mueva el cursor sobre los gráficos circulares para examinar la distribución de activos en estos tres gráficos:
++
+** Capacidad por proveedor muestra la capacidad bruta total del almacenamiento por cada proveedor.
+** La capacidad por nivel muestra la capacidad utilizable total de cada nivel de almacenamiento.
+** El gráfico circular puertos de switch muestra los fabricantes de puertos y muestra el porcentaje de puertos utilizados.
+
+
+. Consulte *datos acerca de su entorno* para obtener información acerca de la capacidad usada de su entorno, la eficiencia de la capacidad, los recursos FC consumidos y las estadísticas de infraestructura virtual.
+. Coloque el cursor sobre una barra de la piscina de almacenamiento en el gráfico * Top 10 Pools* para ver la capacidad utilizada y no utilizada del pool de almacenamiento.
+. Haga clic en cualquier nombre de activo que aparezca en texto grande (que indica que el activo tiene problemas) en el mapa térmico *IOP* de almacenamiento para mostrar una página que resume el estado actual de ese activo.
+. En la esquina inferior derecha de *panel de activos*, haga clic en cualquier nombre de activo que aparezca en texto grande (que indica que el activo tiene problemas) en el mapa térmico *Virtual Machine IOPS* para mostrar una página que resume el estado actual del activo.
+. En la barra de herramientas Insight, haga clic en *Admin*.
+. Observe cualquier área que muestre círculos rojos sólidos.
++
+En la interfaz de usuario web de OnCommand Insight, los problemas potenciales se marcan con un círculo rojo sólido.
+
+. Haga clic en *orígenes de datos* para examinar una lista de todos los orígenes de datos supervisados.
++
+Examine cualquier origen de datos con una columna *Estado* que contenga un mensaje con un círculo rojo sólido y con un *impacto* que aparezca como Alto o Medio. Se encuentran en la parte superior de la tabla. Los problemas con esos orígenes de datos afectan a una parte significativa de la red, que debe abordar.
+
+. Haga clic en *unidades de adquisición* para anotar el estado de cada dirección IP que ejecuta Insight y reiniciar una unidad de adquisición, si es necesario
+. Haga clic en *Estado* para ver la supervisión de instancias de alto nivel de los servidores Insight.
+

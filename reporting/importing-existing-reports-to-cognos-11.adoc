@@ -1,0 +1,38 @@
+---
+permalink: reporting/importing-existing-reports-to-cognos-11.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede abrir una especificación de informe que se haya copiado previamente en el portapapeles. 
+---
+= Abrir informes (xml) desde el portapapeles
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede abrir una especificación de informe que se haya copiado previamente en el portapapeles.
+
+
+
+== Acerca de esta tarea
+
+Para introducir la interfaz de usuario de Informes, cree un nuevo informe o abra un informe existente
+
+
+
+== Pasos
+
+. Abra el Portal de informes de Cognos 11: https://server-name:9300/bi/[]
+. En la barra de herramientas, haga clic en image:../media/new-report.gif[""]
+. Haga clic en *Informe*
+. Haga clic en el icono *Páginas*image:../media/pages-icon.gif[""]
++
+El icono *Informe* image:../media/report-icon.gif[""] aparece en pantalla
+
+. Haga clic con el botón izquierdo del ratón en el icono *Informe*
++
+Se muestran las opciones de informe.
+
+. Haga clic en *Abrir informe desde el portapapeles*.
+

@@ -1,0 +1,28 @@
+---
+permalink: dwh/etl-frequency.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Debe ejecutar el proceso extraer, transformar y cargar \(ETL\) al menos una vez al día; sin embargo, si es necesario, puede ejecutar ETL varias veces.' 
+---
+= Datos de fecha y frecuencia ETL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe ejecutar el proceso extraer, transformar y cargar (ETL) al menos una vez al día; sin embargo, si es necesario, puede ejecutar ETL varias veces.
+
+De forma predeterminada, el motor de informes Cognos trata todos los datos de capacidad y rendimiento como aditivos. Como resultado, existe el riesgo de duplicar los datos de capacidad de recuento si el proceso ETL se ejecuta varias veces al día sin los filtros de tiempo adecuados.
+
+Dos elementos de datos de fecha de la dimensión Date están relacionados con el proceso ETL diario. La dimensión Date, que se utiliza en varios modelos de datos, incluye los siguientes elementos de datos que se ven afectados por la ETL:
+
+* *Es Representante de día*
++
+El elemento de datos "is Day Rerepresentativo" se establece en un valor de 1 (verdadero) durante el primer proceso ETL que se ejecuta durante un día determinado. Si el primer proceso ETL se ejecuta a la 1:00 a.m., is Day Rerepresentate se establece en 1 para todos los datos cargados durante la 1:00 a.m. Proceso ETL. Si se programa una segunda ETL más adelante (por ejemplo, 1:00 p.m.), is Day representativo se establece en 0 (falso) para los datos cargados durante ese proceso ETL.
+
+* *Es la última*
++
+El miembro "es más reciente" se establece en un valor de 1 (verdadero) después de que se complete cada proceso ETL. Si el primer proceso ETL se ejecuta a las 1:00 a.m., la opción más reciente se establece en 1 para todos los datos cargados durante la 1:00 a.m. Proceso ETL. Si se programa otro proceso ETL más adelante (por ejemplo, 1:00 p.m.), is Latest se establece en 1 para los datos cargados durante la 1 p.m. Proceso ETL. El proceso ETL también establece la 1:00 a.m. Las cargas ETL son las entradas más recientes a 0 (falso).
+
+

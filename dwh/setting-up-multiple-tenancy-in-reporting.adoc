@@ -1,0 +1,77 @@
+---
+permalink: dwh/setting-up-multiple-tenancy-in-reporting.html 
+sidebar: sidebar 
+keywords:  
+summary: 'El almacén de datos de OnCommand Insight admite multi tenancy \(a menudo acortado a “multi-tenancy” o “multi-tenancy”\) en la creación de informes al permitirle asociar usuarios con una o más entidades de negocio. Con esta función, los administradores pueden separar los datos o los informes de acuerdo con los atributos de usuario o la afiliación de usuarios.' 
+---
+= Configurar varios usuarios en la creación de informes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El almacén de datos de OnCommand Insight da cabida a múltiples usuarios (a menudo acortados del «multi-tenancy» o del «multi-tenancy») para crear informes, ya que le permite asociar usuarios con una o más entidades de negocio. Con esta función, los administradores pueden separar los datos o los informes de acuerdo con los atributos de usuario o la afiliación de usuarios.
+
+Las entidades de negocio utilizan una jerarquía para el pago por uso de capacidad con los valores siguientes:
+
+* Cliente: Lo utilizan principalmente los proveedores de servicios para asociar recursos con un cliente; por ejemplo, NetApp.
+* Línea de negocio (LOB): Línea de negocio dentro de una empresa, por ejemplo "hardware" o "Software".
+* Unidad de negocio: Una unidad de negocio tradicional como "Ventas" o "Marketing".
+* Proyecto: Un proyecto al que se le podría asignar pago por uso de capacidad.
+
+
+El proceso de configuración de varios clientes implica los siguientes pasos principales:
+
+* Configure una cuenta de usuario de almacén de datos.
+* Cree un grupo en el Portal de informes.
+* Asigne usuarios a uno o más grupos, que representan entidades de negocio.
+* Asigne usuarios a una o varias entidades de negocio. Por ejemplo, los usuarios asociados a «NetApp» obtienen acceso a todas las entidades empresariales que tienen «NetApp» como inquilino.
+* Compruebe que los usuarios sólo pueden ver los informes que deben ver.
+
+
+Los puntos siguientes resumen cómo los usuarios acceden a los datos de informes:
+
+* Un usuario, no asignado a ningún grupo, obtiene acceso a todos los datos.
+* Un usuario, asignado a cualquier grupo, no podrá obtener acceso a registros sin entidad comercial.
+
+
+Por ejemplo, puede que tenga los siguientes departamentos y necesite separar informes para los usuarios dentro de estos departamentos.
+
+|===
+
+
+| Usuario | Ingeniería | Soporte técnico | Finanzas | Legal 
+
+
+ a| 
+Usuario1
+ a| 
+X
+ a| 
+X
+ a| 
+ a| 
+
+
+
+ a| 
+Usuario2
+ a| 
+ a| 
+ a| 
+X
+ a| 
+X
+
+
+
+ a| 
+Usuario3
+ a| 
+ a| 
+X
+ a| 
+ a| 
+
+|===

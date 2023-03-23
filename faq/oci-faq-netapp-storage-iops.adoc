@@ -1,0 +1,36 @@
+---
+permalink: faq/oci-faq-netapp-storage-iops.html 
+sidebar: sidebar 
+keywords:  
+summary: Estas preguntas frecuentes responden a preguntas comunes sobre cómo se obtienen las cifras de IOPS de los sistemas de almacenamiento de Data ONTAP. 
+---
+= IOPS de almacenamiento de Data ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Estas preguntas frecuentes responden a preguntas comunes sobre cómo se obtienen las cifras de IOPS de los sistemas de almacenamiento de Data ONTAP.
+
+
+
+== Cómo se obtienen las IOPS de almacenamiento de los sistemas de almacenamiento de Data ONTAP
+
+* Las IOPS de nivel de cabina de almacenamiento se agregan desde las IOPS de los volúmenes internos
+* Las IOPS a nivel de nodo de almacenamiento incluyen OPS de metadatos
+* Las IOPS a nivel de pool de almacenamiento excluyen la OPS de metadatos; solo miden los discos
+* Las IOPS de nivel de volumen interno incluyen operaciones de lectura + escritura (operaciones) + otros OPS
+
+
+
+
+== Pregunta: ¿Cómo puede ser la tasa de IOPS del agregado superior a la de IOPS de los nodos?
+
+Antes de que las IOPS de los nodos CDOT 8.3.1 estén formados por IOPS de protocolo. En CDOT 8.3.1. y, más tarde, están formados por componentes del sistema. Incluyen solicitudes de datos "solo", solicitudes que pasan por la puerta principal, pero no incluyen tareas de back-end como snapmirrors, deduplicación, etc. Por otro lado, estas tareas producen IOPS de disco, por lo tanto, IOPS agregado. Por lo tanto, es posible que vea una tasa de IOPS de agregado superior a la tasa de IOPS de nodos.
+
+
+
+== Pregunta: Cómo se calculan los metadatos u otros OPS
+
+Otros OPS = total - (lectura + escritura)

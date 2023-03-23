@@ -1,0 +1,42 @@
+---
+permalink: config-admin/assets-used-in-queries-and-dashboards.html 
+sidebar: sidebar 
+keywords: queryable,Data Store,objects,custom landing page 
+summary: Las consultas de Insight y los widgets de panel pueden utilizarse con una amplia gama de tipos de activos 
+---
+= Activos utilizados en consultas y paneles
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las consultas de Insight y los widgets de panel pueden utilizarse con una amplia gama de tipos de activos
+
+Los siguientes tipos de activos se pueden utilizar en consultas, widgets de panel y páginas de activos personalizados. Los campos y contadores disponibles para filtros, expresiones y visualización variarán entre los tipos de activos. No todos los activos se pueden utilizar en todos los tipos de widgets.
+
+* Cliente más
+* Almacén de datos
+* Disco
+* Estructura
+* Dispositivo genérico
+* Host
+* Volumen interno
+* Sesión iSCSI
+* Portal de red de iSCSI
+* Ruta
+* Puerto
+* Qtree
+* Cuota
+* Share
+* Reducida
+* Nodo de almacenamiento
+* Pool de almacenamiento
+* Conmutador
+* Cinta
+* VMDK
+* Máquina virtual
+* Volumen
+* Zona
+* Miembro de la zona
+

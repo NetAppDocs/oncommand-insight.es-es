@@ -1,0 +1,18 @@
+---
+permalink: config-admin/mapping-data-source-tags-to-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: Cuando un origen de datos está configurado para sondear datos de etiquetas, Insight establece automáticamente valores de anotación para una anotación de Insight existente con el mismo nombre que una etiqueta. 
+---
+= Asignación de etiquetas de origen de datos a anotaciones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Cuando un origen de datos está configurado para sondear datos de etiquetas, Insight establece automáticamente valores de anotación para una anotación de Insight existente con el mismo nombre que una etiqueta.
+
+Cuando existe la anotación Insight antes de activar las etiquetas en el origen de datos, los datos de la etiqueta del origen de datos se agregan automáticamente a la anotación Insight.
+
+Cuando se crea una anotación después de activar la etiqueta, el sondeo inicial del origen de datos no actualiza automáticamente la anotación. Hay un retraso en el tiempo que se tarda en reemplazar o rellenar la anotación de Insight. Para evitar el retraso, puede forzar la actualización de la etiqueta posponiendo y, a continuación, reanudando el origen de datos.

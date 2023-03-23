@@ -1,0 +1,40 @@
+---
+permalink: config-admin/managing-patches.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede revisar el estado actual de todos los parches de origen de datos que se aplican a la red. Si desea realizar una acción en un parche, puede hacer clic en el nombre vinculado en los parches que se encuentran actualmente en la tabla de revisión. 
+---
+= Gestión de parches
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede revisar el estado actual de todos los parches de origen de datos que se aplican a la red. Si desea realizar una acción en un parche, puede hacer clic en el nombre vinculado en los parches que se encuentran actualmente en la tabla de revisión.
+
+
+
+== Antes de empezar
+
+Debe haber cargado y estar instalando al menos un parche.
+
+
+
+== Pasos
+
+. En la barra de herramientas Insight, haga clic en *Admin*.
+. Haga clic en *parches*.
++
+Si no se está instalando ningún parche, la tabla de parches actualmente en revisión está vacía.
+
+. En *parches actualmente en revisión*, compruebe el estado de los parches del origen de datos que se están aplicando actualmente.
+. Para examinar los detalles asociados a una revisión específica, haga clic en el nombre vinculado de la revisión.
+. Para el parche seleccionado, puede hacer clic en cualquiera de estas opciones para realizar la siguiente acción en el parche:
++
+** *Aprobar parche* confirma el parche con los orígenes de datos.
+** *Revertir* elimina el parche.
+** *Sustituir parche* le permite seleccionar un parche diferente para esos orígenes de datos.
+
+
+

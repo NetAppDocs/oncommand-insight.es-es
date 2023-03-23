@@ -1,0 +1,23 @@
+---
+permalink: dwh/preparing-annotations-in-oncommand-insight.html 
+sidebar: sidebar 
+keywords:  
+summary: Las anotaciones deben prepararse en OnCommand Insight para poder importarlas en el almacén de datos. 
+---
+= Preparación de anotaciones en OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las anotaciones deben prepararse en OnCommand Insight para poder importarlas en el almacén de datos.
+
+
+
+== Pasos
+
+. Inicie sesión en el portal de OnCommand Insight como administrador `+https://hostname+`, donde `hostname` Es el nombre del sistema en el que se ha instalado OnCommand Insight.
+. Haga clic en *Admin* > *solución de problemas*. En la parte inferior de la página, haga clic en *solución avanzada de problemas*.
+. En la ficha *acciones*, haga clic en *Actualizar anotaciones DWH (incluir eliminadas)*.
+

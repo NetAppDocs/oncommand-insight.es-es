@@ -1,0 +1,57 @@
+---
+permalink: install-linux/installing-a-remote-acquisition-unit-rau-linux.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Puede instalar una o más unidades de adquisición remota \(raus\) en su entorno OnCommand Insight. Las unidades de adquisición se ejecutan en la red que accede a \(a través de módulos denominados orígenes de datos\) y recopilan datos de diferentes dispositivos del centro de datos.' 
+---
+= Instalación de una unidad de adquisición remota
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede instalar una o más unidades de adquisición remota (Raus) en su entorno OnCommand Insight. Las unidades de adquisición se ejecutan en la red a la que accede (mediante módulos denominados data _sources_) y recopilan datos de diferentes dispositivos del centro de datos.
+
+
+
+== Antes de empezar
+
+Debe haber completado todos los requisitos previos de instalación.
+
+Debe haber al menos un puerto abierto y disponible entre el servidor de RAU y el servidor de OnCommand Insight para reenviar la información de cambio al servidor. Si no está seguro de esto, valídelo abriendo un explorador Web en el equipo de la RAU y dirigirlo al servidor de OnCommand Insight:
+
+[listing]
+----
+ https://< OnCommand Insight Server hostname >:< acquisition_port >
+----
+De forma predeterminada, el puerto de adquisición es 443, pero puede que haya cambiado durante la instalación del servidor. Si la conexión se realiza correctamente, verá una página de respuesta de OnCommand Insight, que indica un puerto abierto y disponible entre la RAU y el servidor OnCommand Insight.
+
+Para entornos que utilizan la traducción de direcciones de red o la traducción de direcciones de puerto (NAT/PAT: I.e, cualquier traducción de direcciones IP), Insight sólo admite la inserción de una RAU entre NAT y el dispositivo.
+
+* Admitido: OnCommand Insight \-> NAT \-> RAU \-> dispositivo
+* No admitido: OnCommand Insight \-> RAU \-> NAT \-> dispositivo
+
+
+
+
+== Pasos
+
+. Inicie sesión en el servidor RAU utilizando una cuenta con privilegios sudo.
+. Desplácese al directorio del servidor donde se encuentran los archivos de instalación y escriba el siguiente comando:
++
+`unzip oci-rau-<version>-linux-x86_64.zip`
+
+. Puede ver la sintaxis, los argumentos de comandos y el uso de los parámetros para `oci-install.sh`:
++
+`sudo ./oci-rau-<version>-linux-x86_64/oci-install.sh --help`
+
+. Ejecute el script de instalación:
++
+`sudo ./oci-rau-<version>-linux-x86_64/oci-install.sh`
+
+. Lea el Contrato de licencia, acéptelo y, a continuación, siga las indicaciones.
++
+Después de contestar todas las indicaciones, la instalación comienza y tarda aproximadamente 10 minutos, dependiendo de las aplicaciones instaladas.
+
+

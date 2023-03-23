@@ -1,0 +1,37 @@
+---
+permalink: config-admin/adding-a-missing-disk-model.html 
+sidebar: sidebar 
+keywords:  
+summary: Si la adquisición falla debido a un modelo de disco desconocido, puede agregar el modelo de disco que falta al archivo new_disk_models.txt y ejecutar la adquisición de nuevo. 
+---
+= Agregar un modelo de disco ausente
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si la adquisición falla debido a un modelo de disco desconocido, puede agregar el modelo de disco que falta al `new_disk_models.txt` vuelva a ejecutar la adquisición y el archivo.
+
+
+
+== Acerca de esta tarea
+
+Como parte del sondeo de un dispositivo de almacenamiento realizado por OnCommand Insight, se leen los modelos de disco del dispositivo de almacenamiento. Si un proveedor ha añadido nuevos modelos de disco a su cabina de los que no se conoce Insight o si hay alguna discrepancia entre el número de modelo que busca Insight y el que devuelve el dispositivo de almacenamiento, la adquisición de dicho origen de datos se producirá un error. Para evitar estos errores, es necesario actualizar la información de modelo de disco que se conoce en Insight. Los nuevos modelos de disco se añaden a Insight con actualizaciones, parches y versiones de mantenimiento. Sin embargo, puede decidir actualizar esta información manualmente en lugar de esperar a una revisión o actualización.
+
+Dado que OnCommand Insight lee el archivo de modelo de disco cada cinco minutos, toda la información de nuevo modelo de datos introducida se actualiza automáticamente. No es necesario reiniciar el servidor para que los cambios surtan efecto, pero puede optar por reiniciar el servidor y cualquier unidad de adquisición remota (raus) para que los cambios surtan efecto antes de la siguiente actualización.
+
+Las actualizaciones del modelo de disco se agregan a la `new_disk_models.txt` archivo ubicado en la``<SANScreenInstallDir>\wildfly\standalone\deployments\datasources.war`` directorio. Comprenda la información necesaria para describir su nuevo modelo de disco antes de actualizar el `new_disk_models.txt` archivo. La información inexacta en el archivo produce datos incorrectos del sistema y podría dar lugar a una adquisición fallida.
+
+Siga estas instrucciones para actualizar manualmente los modelos de disco de Insight:
+
+
+
+== Pasos
+
+. Busque la información adecuada para su modelo de disco.
+. Con un editor de texto, abra el `new_disk_models.txt` archivo.
+. Agregue la información necesaria para el nuevo origen de datos.
+. Guarde el archivo en la `<SANScreenInstallDir>\wildfly\standalone\deployments\datasources.war` directorio en el servidor.
+. Realice una copia de seguridad del `new_disk_models.txt` archivar en una ubicación segura. Durante cualquier actualización de OnCommand Insight posterior, este archivo se sobrescribirá. Si la información del modelo de disco no está presente en el archivo actualizado, deberá volver a introducirla.
+

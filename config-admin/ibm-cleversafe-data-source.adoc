@@ -1,0 +1,79 @@
+---
+permalink: config-admin/ibm-cleversafe-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: Este origen de datos recopila datos de inventario y rendimiento para IBM Cleversafe. 
+---
+= Fuente de datos IBM Cleversafe
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Este origen de datos recopila datos de inventario y rendimiento para IBM Cleversafe.
+
+
+
+== Requisitos
+
+A continuación se muestran los requisitos para configurar este origen de datos:
+
+* Dirección IP del administrador o nombre de host
+* Un nombre de usuario y una contraseña para el mismo
+* Puerto 9440
+
+
+
+
+== Configuración
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Dirección IP o nombre de host de Cleversafe Manager
+ a| 
+Dirección IP del host del dispositivo CleverSafe
+
+
+
+ a| 
+Nombre de usuario
+ a| 
+Nombre utilizado para iniciar sesión en Cleversafe
+
+
+
+ a| 
+Contraseña
+ a| 
+Contraseña utilizada para iniciar sesión en Cleversafe
+
+|===
+
+
+== Configuración avanzada
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Intervalo de sondeo de inventario (mín.)
+ a| 
+El valor predeterminado es 60 minutos
+
+
+
+ a| 
+Tiempo de espera de conexión HTTP)
+ a| 
+El valor predeterminado es 60 segundos
+
+|===

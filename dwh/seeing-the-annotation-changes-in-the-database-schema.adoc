@@ -1,0 +1,45 @@
+---
+permalink: dwh/seeing-the-annotation-changes-in-the-database-schema.html 
+sidebar: sidebar 
+keywords:  
+summary: El esquema de la base de datos refleja los cambios en la tabla específica. 
+---
+= Visualización de cambios de anotación en el esquema de base de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El esquema de la base de datos refleja los cambios en la tabla específica.
+
+
+
+== Acerca de esta tarea
+
+Por ejemplo, si se añaden anotaciones a una cabina de almacenamiento, estas aparecerán en la tabla de almacenamiento o switch del inventario u otros mercados de datos.
+
+Si actualiza las anotaciones en los recursos mediante la interfaz de usuario de OnCommand Insight e inicia o espera la siguiente compilación de almacén de datos, verá una nueva columna agregada o eliminada en el objeto correspondiente en Inventory (dwh_Inventory) y también en la tabla de dimensiones correspondiente (en el mercado de datos adecuado). Los resultados se muestran en las siguientes tablas:
+
+* dwh_inventory.annotation_value
+* dwh_inventory.object_to_annotation
+
+
+
+
+== Pasos
+
+. Haga clic en image:../media/oci-7-help-icon-gif.gif[""] En la barra de herramientas del almacén de datos y seleccione *Documentación*.
+. Seleccione *Esquema de base de datos*.
+. En el panel *Esquema de base de datos* de la izquierda, desplácese a la sección *DWH_INVENTORY* y haga clic en *switch*.
++
+image::../media/oci-dwh-databaseschema-inventory-switch-gif.gif[Tabla de conmutador de esquema de base de datos de inventario DWH]
+
+. La tabla *dwh_Inventory.switch* refleja los cambios:
++
+image::../media/oci-dwh-databaseschema-capacity-sd-gif.gif[Tabla de dimensiones de almacenamiento de esquemas de base de datos de capacidad DWH]
+
++
+La columna de anotación del centro de datos aparece en la tabla Storage_Dimensions.
+
+

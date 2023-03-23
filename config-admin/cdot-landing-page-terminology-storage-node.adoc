@@ -1,0 +1,34 @@
+---
+permalink: config-admin/cdot-landing-page-terminology-storage-node.html 
+sidebar: sidebar 
+keywords:  
+summary: Términos que se aplican a objetos o referencias que puede encontrar en las páginas de destino del nodo de almacenamiento de Clustered Data ONTAP de NetApp. 
+---
+= Nodo de almacenamiento Clustered Data ONTAP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Términos que se aplican a objetos o referencias que puede encontrar en las páginas de destino del nodo de almacenamiento de Clustered Data ONTAP de NetApp.
+
+
+
+== Terminología de nodos de almacenamiento de Clustered Data ONTAP
+
+Los siguientes términos se aplican a objetos o referencias que puede encontrar en páginas de destino de activos de pool de almacenamiento de Clustered Data ONTAP de NetApp. Muchos de estos términos también se aplican a otros recopiladores de datos.
+
+* Almacenamiento:- de qué cabina de almacenamiento forma parte este nodo. Obligatorio.
+* PARTNER de ALTA DISPONIBILIDAD: En las plataformas en las que un nodo se conmuta al nodo de respaldo uno y solo otro, normalmente se verá aquí.
+* Estado:- estado del nodo. Solo disponible cuando la matriz está lo suficientemente sana para ser inventariada por una fuente de datos.
+* Modelo -- nombre de modelo del nodo.
+* Versión: Nombre de versión del dispositivo.
+* Número de serie: El número de serie del nodo.
+* Memoria -- memoria base 2 si está disponible.
+* Utilización -- en ONTAP, se trata de un índice de tensión del controlador a partir de un algoritmo propio. Con cada encuesta de rendimiento, se informará de una cifra entre 0 y 100 % que es la más alta entre la contención de disco WAFL o el uso medio de CPU. Si observa un valor sostenido > 50 %, esto indica que se ha dimensionamiento insuficiente; potencialmente, una controladora/nodo no tiene lo suficientemente grande o no hay suficientes discos giratorios para absorber la carga de trabajo de escritura.
+* IOPS -- derivado directamente de las llamadas ZAPI de ONTAP en el objeto del nodo.
+* Latencia: Se deriva directamente de las llamadas ZAPI de ONTAP del objeto del nodo.
+* Rendimiento -- derivado directamente de las llamadas ZAPI de ONTAP en el objeto del nodo.
+* Procesadores -- número de CPU.
+

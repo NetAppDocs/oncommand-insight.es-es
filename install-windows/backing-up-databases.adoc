@@ -1,0 +1,16 @@
+---
+permalink: install-windows/backing-up-databases.html 
+sidebar: sidebar 
+keywords:  
+summary: Antes de actualizar, debe realizar una copia de seguridad de las bases de datos de Data Warehouse y OnCommand Insight. La actualización requiere una copia de seguridad de la base de datos de Data Warehouse para que pueda restaurar la base de datos más adelante en el proceso de actualización. La actualización in situ de Insight realiza un backup de la base de datos; sin embargo, debe realizar un backup de la base de datos antes de la actualización como práctica recomendada. 
+---
+= Realizar un backup de las bases de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Antes de actualizar, debe realizar una copia de seguridad de las bases de datos de Data Warehouse y OnCommand Insight. La actualización requiere una copia de seguridad de la base de datos de Data Warehouse para que pueda restaurar la base de datos más adelante en el proceso de actualización. La actualización in situ de Insight realiza un backup de la base de datos; sin embargo, debe realizar un backup de la base de datos antes de la actualización como práctica recomendada.
+
+Para evitar que los datos no se informen correctamente, debe realizar una copia de seguridad de la base de datos de Data Warehouse antes de realizar una copia de seguridad de la base de datos de Insight. Además, si tiene un entorno de prueba, se recomienda asegurarse de poder restaurar el backup antes de continuar con la actualización.

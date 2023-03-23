@@ -1,0 +1,56 @@
+---
+permalink: config-admin/what-the-related-assets-sections-enable-you-to-do.html 
+sidebar: sidebar 
+keywords:  
+summary: La sección activos relacionados le permite ver cualquiera de los activos relacionados con el activo base. Cada activo relacionado se muestra en una tabla junto con las estadísticas pertinentes del activo. Puede exportar la información de activos, ver las estadísticas de activos en los gráficos de rendimiento de la vista experto o mostrar un gráfico que muestre estadísticas de sólo activos relacionados. 
+---
+= Uso de la sección activos relacionados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La sección activos relacionados le permite ver cualquiera de los activos relacionados con el activo base. Cada activo relacionado se muestra en una tabla junto con las estadísticas pertinentes del activo. Puede exportar la información de activos, ver las estadísticas de activos en los gráficos de rendimiento de la vista experto o mostrar un gráfico que muestre estadísticas de sólo activos relacionados.
+
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web de OnCommand Insight.
+. Localice una página de activos realizando una de las siguientes acciones:
++
+** En la barra de herramientas Insight, haga clic en image:../media/icon-sanscreen-magnifying-glass-gif.gif[""], escriba el nombre del activo y, a continuación, seleccione el activo en la lista.
+** Haga clic en *Paneles*, seleccione *Panel de activos*, busque un nombre de activo y haga clic en él. Aparece la página Asset.
+
+
+. Para controlar cómo se muestran los activos en la tabla:
++
+** Haga clic en el nombre de cualquier activo para mostrar su página de activo.
+** Utilice el cuadro *filtro* para mostrar sólo activos específicos.
+** Haga clic en un número de página para examinar los activos por página si hay más de cinco activos en la tabla.
+** Cambie el orden de las columnas de una tabla a ascendente (flecha arriba) o descendente (flecha abajo) haciendo clic en la flecha del encabezado de la columna.
+** Agregue un activo relacionado a cualquier gráfico de rendimiento en la sección Vista experto colocando el cursor sobre el activo relacionado y haciendo clic en image:../media/add-to-expert-view-graph.gif[""].
+
+
+. Para exportar la información mostrada en la tabla a un `.CSV` archivo:
++
+.. Haga clic en image:../media/export-to-csv.gif[""].
+.. Haga clic en *Abrir con* y luego en *Aceptar* para abrir el archivo con Microsoft Excel y guardarlo en una ubicación específica, o haga clic en *Guardar archivo* y luego en *Aceptar* para guardar el archivo en la carpeta Descargas.
++
+Todos los atributos de objeto de las columnas actualmente seleccionadas para su visualización se exportan al archivo. Sólo se exportarán los atributos de las columnas mostradas. Tenga en cuenta que sólo se exportan las primeras 10,000 filas de la tabla.
+
+
+
+. Para mostrar la información de activos relacionada en un gráfico debajo de la tabla, haga clic en image:../media/show-as-chart.gif[""] y realice cualquiera de las siguientes acciones:
++
+** Haga clic en *Leer*,*escribir* o *total* para cambiar los datos de la métrica que se muestran. *Total* es el valor predeterminado.
+** Haga clic en image:../media/pencil-icon-landing-page-be.gif[""] para seleccionar una métrica diferente.
+** Haga clic en image:../media/change-chart-type-icon.gif[""] para cambiar el tipo de gráfico. *Diagrama de línea* es el valor predeterminado.
+** Mueva el cursor por los puntos de datos del gráfico para ver cómo cambia el valor de la métrica en el período de tiempo seleccionado para cada activo relacionado.
+** Haga clic en un activo relacionado en la leyenda del gráfico para agregarlo o quitarlo del gráfico.
+** Haga clic en un número de página de la tabla de activos relacionados para ver otros activos relacionados en el gráfico.
+** Haga clic en image:../media/close-chart-icon.gif[""] para cerrar el gráfico.
+
+
+

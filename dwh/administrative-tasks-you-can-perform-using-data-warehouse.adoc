@@ -1,0 +1,30 @@
+---
+permalink: dwh/administrative-tasks-you-can-perform-using-data-warehouse.html 
+sidebar: sidebar 
+keywords:  
+summary: El almacén de datos OnCommand Insight es una interfaz de usuario basada en web que permite a los usuarios configurar y solucionar problemas de datos en el almacén de datos de OnCommand Insight y configurar programaciones para recuperar datos de OnCommand Insight. 
+---
+= Tareas administrativas que puede realizar utilizando Data Warehouse
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El almacén de datos OnCommand Insight es una interfaz de usuario basada en web que permite a los usuarios configurar y solucionar problemas de datos en el almacén de datos de OnCommand Insight y configurar programaciones para recuperar datos de OnCommand Insight.
+
+Mediante el portal Data Warehouse, puede realizar las siguientes tareas administrativas:
+
+* Compruebe el estado de los trabajos o consultas actuales que se están ejecutando
+* Gestionar anotaciones
+* Configure las notificaciones por correo electrónico
+* Acceda a informes personalizados y cree estos
+* Revise la documentación del almacén de datos y el esquema de la base de datos
+* Edite el nombre del sitio
+* Identifique la versión del almacén de datos y el historial de actualizaciones
+* Construya los datos del almacén de datos a partir del historial
+* Restablezca la base de datos del almacén de datos
+* Realice una copia de seguridad y restaure la base de datos de Data Warehouse
+* Solucione problemas del almacén de datos y observe los registros de OnCommand Insight
+* Administrar cuentas de usuario
+

@@ -1,0 +1,32 @@
+---
+permalink: install-windows/verifying-the-extract-transform-and-load-process.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Después de actualizar, debe asegurarse de que el proceso extraer, transformar y cargar \(ETL\) está recuperando datos de las bases de datos OnCommand Insight, transformando los datos y guardarlos en los data marts.' 
+---
+= Verificación de la programación de extraer, transformar y cargar
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de actualizar, debe asegurarse de que el proceso extraer, transformar y cargar (ETL) está recuperando datos de las bases de datos OnCommand Insight, transformando los datos y guardarlos en los data marts.
+
+
+
+== Pasos
+
+. Inicie sesión en el portal del almacén de datos en `+https://fqdn/dwh+`.
+. En el panel de navegación de la izquierda, haga clic en *Programación*.
+. Haga clic en *Editar horario*.
+. Seleccione *Diario* o *Semanal* en la lista *Tipo*.
++
+Se recomienda programar ETL para que se ejecute una vez al día.
+
+. Compruebe que la hora seleccionada es la hora en la que desea que se ejecute el trabajo.
++
+Esto garantiza que el trabajo de generación se ejecute automáticamente.
+
+. Haga clic en *Guardar*.
+

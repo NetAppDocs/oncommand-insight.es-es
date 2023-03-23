@@ -1,0 +1,46 @@
+---
+permalink: faq/faq-scale-and-ease-of-use.html 
+sidebar: sidebar 
+keywords:  
+summary: Estas preguntas frecuentes responden a preguntas comunes sobre el escalado de OnCommand Insight y su facilidad de uso. 
+---
+= Escalado y facilidad de uso
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Estas preguntas frecuentes responden a preguntas comunes sobre el escalado de OnCommand Insight y su facilidad de uso.
+
+
+
+== ¿Cómo se escala OCI?
+
+OCI es líder con respecto a la interoperabilidad y el número de activos que puede adquirir con un espacio mínimo. En su núcleo, OCI requiere dos servidores virtuales o físicos: Uno para el servidor operativo que descubre todos los activos del centro de datos y otro para su almacén de datos consolidado para la generación de informes históricos a largo plazo. La cobertura empresarial de OCI admite cientos de cabinas, decenas de miles de equipos virtuales, 100,000 rutas de Fibre Channel y más de 10,000 puertos de Fibre Channel, todo ello en una única instancia de servidor.
+
+
+
+== ¿Cuántos empleados necesitan para gestionar la aplicación OCI?
+
+OCI puede gestionarse con una sola persona. Sin embargo, OCI cuenta con funcionalidades que pueden usar varios personales dentro del entorno de la empresa, cada una con distintas funciones, cada una con distintas necesidades de generación de informes, solución de problemas o análisis. Todos los esfuerzos se realizan para minimizar el mantenimiento de la herramienta, desde menús de estado y notificación que muestran problemas de configuración hasta la detección automática de hosts físicos conectados a una estructura. Las anotaciones flexibles aportan contexto empresarial a los datos del ecosistema para todo tipo de usuarios. OCI permite que los administradores de almacenamiento, tejido y virtualización, hasta los Planificadores de capacidad, analistas de negocio y ejecutivos, comparta la información entre tecnologías y silos de negocio de forma conjunta en un único panel.
+
+
+
+== ¿Admite OCI informes personalizados?
+
+Sí. OCI proporciona informes a través de la herramienta de inteligencia empresarial IBM Cognos, que le permite crear sus propios informes totalmente personalizados a partir de los datos recopilados en el almacén de datos de OCI.
+
+
+
+== ¿En qué medida es fácil crear informes personalizados?
+
+La generación de informes OCI ofrece funciones tanto para usuarios noveles como avanzados. OCI proporciona una serie de funciones de creación de informes, entre las que se incluyen la creación de informes "drag and drop" y la creación de informes basados en consultas SQL para la participación de usuarios o servicios profesionales más avanzada. La solución integrada de inteligencia empresarial de OCI (IBM Cognos) evita errores comunes como la capacidad de doble recuento. Con un complemento de informes listos para usar, widgets, consultas y paneles, existen ofertas que se adaptan a los requisitos de generación de informes de cualquiera.
+
+Los clientes también pueden encontrar plantillas de informes que se pueden descargar en la tienda de la comunidad OCI.
+
+
+
+== ¿OCI puede mostrar el rendimiento y la disponibilidad con una simplicidad de "tráfico ligero"?
+
+Sí. El almacén de datos y los informes de OCI permiten informes con mejoras de color, por ejemplo, el "estilo condicional" rojo/amarillo/verde de los valores. La generación de una fuente o fondo de color en un informe puede ser implementada por los usuarios finales y los Servicios profesionales. Las bibliotecas de widgets de OCIS permiten visualizar métricas de rendimiento específicas de negocio en los paneles de control.

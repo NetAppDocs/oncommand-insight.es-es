@@ -1,0 +1,34 @@
+---
+permalink: config-admin/how-annotations-are-assigned.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede asignar anotaciones de forma manual o automática mediante reglas de anotación. OnCommand Insight también asigna automáticamente algunas anotaciones sobre la adquisición de activos y por herencia. Las anotaciones que asigne a un activo aparecerán en la sección datos de usuario de la página activo. 
+---
+= Cómo se asignan las anotaciones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede asignar anotaciones de forma manual o automática mediante reglas de anotación. OnCommand Insight también asigna automáticamente algunas anotaciones sobre la adquisición de activos y por herencia. Las anotaciones que asigne a un activo aparecerán en la sección datos de usuario de la página activo.
+
+Las anotaciones se asignan de las siguientes formas:
+
+* Puede asignar una anotación manualmente a un activo.
++
+Si una anotación se asigna directamente a un activo, la anotación aparece como texto normal en una página de activos. Las anotaciones que se asignan manualmente siempre tienen prioridad sobre las anotaciones que son heredadas o asignadas por reglas de anotación.
+
+* Puede crear una regla de anotación para asignar anotaciones automáticamente a activos del mismo tipo.
++
+Si la anotación está asignada por regla, Insight muestra el nombre de la regla junto al nombre de la anotación en una página de activos.
+
+* Insight asocia automáticamente un nivel con un modelo de niveles de almacenamiento para acelerar la asignación de anotaciones de almacenamiento a sus recursos sobre la adquisición de activos.
++
+Ciertos recursos de almacenamiento se asocian automáticamente con un nivel predefinido (nivel 1 y nivel 2). Por ejemplo, el nivel de almacenamiento Symmetrix se basa en la familia Symmetrix y VMAX y está asociado con el nivel 1. Puede cambiar los valores predeterminados para que coincidan con sus requisitos de nivel. Si Insight asigna la anotación (por ejemplo, Tier), verá "System-defined" cuando sitúe el cursor sobre el nombre de la anotación en una página de activos.
+
+* Unos pocos recursos (hijos de un activo) pueden derivar la anotación predefinida de nivel de su activo (principal).
++
+Por ejemplo, si se asigna una anotación a un almacenamiento, la anotación de nivel se obtiene de todos los pools de almacenamiento, los volúmenes internos, los volúmenes, los qtrees y los recursos compartidos que pertenecen al almacenamiento. Si se aplica una anotación diferente a un volumen interno del almacenamiento, la anotación se deriva posteriormente de todos los volúmenes, qtrees y recursos compartidos. Aparece "derived" junto al nombre de la anotación en una página de activos.
+
+

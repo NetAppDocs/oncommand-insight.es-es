@@ -1,0 +1,16 @@
+---
+permalink: howto/introduction-to-minimizing-risk-in-thin-provisioning.html 
+sidebar: sidebar 
+keywords:  
+summary: En los centros de datos de TECNOLOGÍA híbrida de hoy en día, los administradores se ven presionados a ampliar la utilización de recursos más allá de los límites físicos al utilizar tecnologías de eficiencia de la capacidad como thin provisioning para controlar la asignación y aprovechar las capacidades que alguna vez no estaban disponibles. 
+---
+= Introducción a la reducción del riesgo en thin provisioning
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+En los centros DE datos DE TECNOLOGÍA híbrida actuales, los administradores se ven presionados para aprovechar los recursos más allá de los límites físicos, al utilizar tecnologías de eficiencia de la capacidad como thin provisioning para controlar la asignación y aprovechar las capacidades que antes no estaban disponibles.
+
+OnCommand Insight proporciona detalles sobre el uso y la utilización de la capacidad en tiempo real históricamente en varias capas con Thin Provisioning dentro de la pila de servicios DE TI. No gestionar correctamente el riesgo de exceso de suscripción puede provocar tiempos de inactividad inoportunos para la empresa.

@@ -1,0 +1,57 @@
+---
+permalink: install-windows/downloading-the-installation-packages.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Debe descargar los paquetes de instalación de Insight, almacén de datos y la unidad de adquisición remota \(si corresponde\) antes del día que elija actualizar. Los tiempos de descarga de los paquetes \(.msi archivos\) varían en función del ancho de banda disponible.' 
+---
+= Descargue los paquetes de instalación de OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe descargar los paquetes de instalación de Insight, almacén de datos y la unidad de adquisición remota (si corresponde) antes del día que elija actualizar. Tiempos de descarga de los paquetes (`.msi` ficheros) varían en función del ancho de banda disponible.
+
+
+
+== Acerca de esta tarea
+
+Es posible descargar los paquetes de instalación mediante la interfaz de usuario web de Insight o mediante el enlace OnCommand Insight correspondiente desde http://support.netapp.com/NOW/cgi-bin/software[].
+
+Para descargar el paquete de instalación desde el servidor de Insight, haga lo siguiente:
+
+
+
+== Pasos
+
+. Abra la interfaz de usuario web de Insight abriendo un navegador web e introduciendo una de las siguientes opciones:
++
+** En el servidor de Insight: `+https://localhost+`
+** Desde cualquier ubicación: `+https://IP Address:port or fqdn:port+`
++
+El número de puerto es 443 o el puerto que se configuró al instalar el servidor Insight. El número de puerto predeterminado es 443 si no se especifica el número de puerto en la URL.
+
+
+
+. Inicie sesión en Insight.
+. Haga clic en el icono Ayuda y seleccione *Buscar actualizaciones*.
+. Si se detecta una versión más reciente, siga las instrucciones del cuadro de mensaje.
++
+Se llevará a la página InsightDescription de la nueva versión.
+
+. En la página *Descripción*, haga clic en *continuar*.
+. Cuando aparezca el contrato de licencia para usuario final (EULA), haga clic en *Aceptar*.
+. Haga clic en el enlace del paquete de instalación de cada componente (servidor Insight, almacén de datos, unidad de adquisición remota), etc.) y haga clic en *Guardar como* para guardar el paquete de instalación.
++
+Antes de realizar la actualización, debe asegurarse de copiar los paquetes de instalación de Data Warehouse y Remote Acquisition Unit en discos locales en sus respectivos servidores.
+
+. Haga clic en *SUMA de COMPROBACIÓN* y anote los valores numéricos asociados con cada paquete de instalación.
+. Compruebe que los paquetes de instalación están completos y que no se han producido errores después de descargarlos.
++
+Las transferencias de archivos incompletas pueden causar problemas en el proceso de actualización.
+
++
+Para generar valores hash MD5 para los paquetes de instalación, puede utilizar una utilidad de terceros como la de Microsoftlink:HTTP://SUPPORT.MICROSOFT.COM/KB/841290["Verificador de integridad de archivo"] utilidad.
+
+

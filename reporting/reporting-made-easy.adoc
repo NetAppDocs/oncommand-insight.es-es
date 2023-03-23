@@ -1,0 +1,38 @@
+---
+permalink: reporting/reporting-made-easy.html 
+sidebar: sidebar 
+keywords:  
+summary: Puede generar informes predefinidos en el portal de informes de OnCommand Insight, enviarlos por correo electrónico a otros usuarios e incluso modificarlos. Varios informes permiten filtrar por dispositivo, entidad de negocio o nivel. Las herramientas de elaboración de informes utilizan IBM Cognos como base y le proporcionan muchas opciones de presentación de datos. 
+---
+= Se ha simplificado la creación de informes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede generar informes predefinidos en el portal de informes de OnCommand Insight, enviarlos por correo electrónico a otros usuarios e incluso modificarlos. Varios informes permiten filtrar por dispositivo, entidad de negocio o nivel. Las herramientas de elaboración de informes utilizan IBM Cognos como base y le proporcionan muchas opciones de presentación de datos.
+
+* Los informes predefinidos de OnCommand Insight muestran su inventario, capacidad de almacenamiento, pago por uso, rendimiento, eficiencia del almacenamiento y los datos de costes del cloud. Puede modificar estos informes predefinidos y guardar sus modificaciones.
+
+
+Los datos del informe que tiene a su disposición están controlados por varias cosas, entre ellas:
+
+* Acceso de inicio de sesión en el portal de informes de OnCommand Insight, que está definido por roles.
+* La configuración del almacén de datos de OnCommand InsightData, que almacena los datos de los informes.
+
+
+Puede generar informes en distintos formatos, incluidos HTML, PDF, CSV, XML, Y Excel.
+
+OnCommand Insight da cabida a múltiples usuarios para la creación de informes, lo que le permite asociar usuarios con unidades de negocio. Con esta función, los administradores pueden separar los datos o los informes de acuerdo con los atributos de un usuario o su afiliación.
+
+[NOTE]
+====
+Con la versión 11.1.2 de Cognos, las direcciones URL de informes no se consideran "estables" y están sujetas a cambios. Si tiene URL de informe marcadas como marcadores, es posible que estos marcadores fallen posteriormente. Puede encontrar más información aquí: http://queryvision.com/ibm-analytics-11-x-urls-they-are-a-changing/[]
+
+====
+[NOTE]
+====
+OnCommand Insight no admite ninguna consola creada mediante paquetes en IBM Cognos, a menos que se utilice la nueva característica del módulo de datos.
+
+====

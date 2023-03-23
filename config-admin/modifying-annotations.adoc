@@ -1,0 +1,55 @@
+---
+permalink: config-admin/modifying-annotations.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible que desee cambiar el nombre, la descripción o los valores de una anotación o eliminar una anotación que ya no desee utilizar. 
+---
+= Modificación de anotaciones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible que desee cambiar el nombre, la descripción o los valores de una anotación o eliminar una anotación que ya no desee utilizar.
+
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web de OnCommand Insight.
+. Haga clic en *Administrar* y seleccione *Anotaciones*.
++
+Aparece la página Anotaciones.
+
+. Coloque el cursor sobre la anotación que desee editar y haga clic en image:../media/edit-recipient-icon.gif[""].
++
+Aparece el cuadro de diálogo *Editar anotación*.
+
+. Puede realizar las siguientes modificaciones en una anotación:
++
+.. Cambie el nombre, la descripción o ambos.
++
+Sin embargo, tenga en cuenta que puede introducir un máximo de 255 caracteres tanto para el nombre como para la descripción, y no puede cambiar el tipo de anotación. Además, para las anotaciones a nivel de sistema, no se puede cambiar el nombre ni la descripción; sin embargo, se pueden agregar o quitar valores si la anotación es un tipo de lista.
+
++
+[NOTE]
+====
+Si se publica una anotación personalizada en el almacén de datos y se le cambia el nombre, se perderán los datos históricos.
+
+====
+.. Para agregar otro valor a una anotación de tipo de lista, haga clic en image:../media/add-annotation-icon.gif[""].
+.. Para eliminar un valor de una anotación de un tipo de lista, haga clic en image:../media/trash-can-query.gif[""].
++
+No se puede eliminar un valor de anotación si dicho valor está asociado a una anotación incluida en una regla de anotación, una consulta o una política de rendimiento.
+
+
+
+. Haga clic en *Guardar* cuando termine.
+
+
+
+
+== Después de terminar
+
+Si va a utilizar anotaciones en el almacén de datos, debe forzar una actualización de las anotaciones en el almacén de datos. Consulte la _OnCommand Insight Guía de administración de almacenes de datos_.

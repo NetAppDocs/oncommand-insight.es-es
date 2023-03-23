@@ -1,0 +1,66 @@
+---
+permalink: howto/creating-policies-and-thresholds-for-storage-pools.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible crear políticas de rendimiento que activen las alertas para notificarle cuando se superen los umbrales de los activos de Storage Pool. 
+---
+= Creación de políticas de rendimiento para pools de almacenamiento
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible crear políticas de rendimiento que activen las alertas para notificarle cuando se superen los umbrales de los activos de Storage Pool.
+
+
+
+== Antes de empezar
+
+En este procedimiento se asume que ha aprovisionado thin-provisioning el pool de almacenamiento.
+
+
+
+== Acerca de esta tarea
+
+Desea crear políticas que supervisen e informen los cambios de un pool de almacenamiento que podrían contribuir a la interrupción del servicio. Para el pool de almacenamiento físico con thin provisioning, desea supervisar la capacidad física y supervisar la tasa de thin provisioning.
+
+
+
+== Pasos
+
+. Abra OnCommand Insight en el explorador.
+. Seleccione *gestionar* > *políticas de rendimiento*
++
+Se muestra la página Performance Policies. Las directivas se organizan por objeto y se evalúan en el orden en el que aparecen en la lista. Si las notificaciones están habilitadas (*Admin* > *Notificaciones*), puede configurar Insight para que envíe correo electrónico cuando se violen las directivas de rendimiento.
+
+. Haga clic en **+Add**para crear una nueva directiva.
+. En *Nombre de directiva*, introduzca un nombre de directiva para el grupo de almacenamiento.
+. En *aplicar a objetos de tipo*, seleccione Grupo de almacenamiento.
+. En *aplicar después de la ventana de* introduzca la primera incidencia.
+. En *con severidad* introduzca crítico
+. Configure los destinatarios de correo electrónico que desea recibir notificaciones cuando se hayan incumplido los umbrales.
++
+De forma predeterminada, las alertas por correo electrónico sobre infracciones de directivas se envían a los destinatarios de la lista global de correo electrónico. Puede anular esta configuración para que se envíen alertas de una directiva concreta a destinatarios específicos.
+
++
+Haga clic en el vínculo para abrir la lista de destinatarios y, a continuación, haga clic en el botón + para agregar destinatarios. Las alertas de infracción de esta directiva se enviarán a todos los destinatarios de la lista.
+
+. En *Crear alerta si cualquiera de las siguientes opciones es verdadero* introduzca la relación de capacidad - utilizado > 85%
+
+
+
+
+== Resultados
+
+Esta configuración da como resultado que el sistema envíe un mensaje de advertencia crucial cuando se utiliza más del 85% de la capacidad física del pool de almacenamiento. Si se utiliza el 100 % de la memoria física, se producirá un fallo en la aplicación.
+
+
+
+== Cree políticas de almacenamiento adicional
+
+
+
+=== Acerca de esta tarea
+
+Cree una política adicional de «relación de capacidad: Utilizada» que genere un mensaje de advertencia cuando la capacidad de pool de almacenamiento utilizada supere el 75 %. Si las notificaciones están habilitadas (*Admin* > *Notificaciones*), puede configurar Insight para que envíe correo electrónico cuando se violen las directivas de rendimiento.

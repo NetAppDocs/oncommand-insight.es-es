@@ -1,0 +1,33 @@
+---
+permalink: config-admin/additional-data.html 
+sidebar: sidebar 
+keywords: landing 
+summary: Los datos adicionales se pueden mostrar en widgets personalizables en cada página de activo. Personalizar la página de un activo aplica la personalización a las páginas para todos los activos de ese tipo. 
+---
+= Página de activos personalizable
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los datos adicionales se pueden mostrar en widgets personalizables en cada página de activo. Personalizar la página de un activo aplica la personalización a las páginas para todos los activos de ese tipo.
+
+Para personalizar los widgets de páginas de activos, realice las siguientes acciones:
+
+. Agregue un widget a la página
+. Cree una consulta o expresión para que el widget muestre los datos deseados
+. Elija un filtro si lo desea
+. Elija un método de agrupación o acumulación
+. Guarde el widget
+. Repita el procedimiento para todos los widgets que desee
+. Guarde la página del activo
+
+
+También puede agregar variables a la página de activos personalizados que se pueden utilizar para afinar aún más los datos mostrados en widgets. Además de las variables habituales, cada tipo de activo puede usar un conjunto de variables "$this" para identificar rápidamente recursos directamente relacionados con el activo actual, por ejemplo, todas las máquinas virtuales alojadas por el mismo hipervisor que aloja la máquina virtual actual.
+
+Esta página de activos personalizados es única para cada usuario, así como para cada tipo de activo. Por ejemplo, si el usuario A crea una página de activos personalizada para una máquina virtual, esa página personalizada se mostrará para cualquier página de activos de máquina virtual, para ese usuario.
+
+Los usuarios sólo pueden ver, editar o eliminar las páginas de activos personalizados que crean.
+
+Las páginas de activos personalizados no se incluyen en la funcionalidad de exportación/importación de Insight.

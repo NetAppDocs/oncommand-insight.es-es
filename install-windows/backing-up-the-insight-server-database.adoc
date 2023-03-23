@@ -1,0 +1,30 @@
+---
+permalink: install-windows/backing-up-the-insight-server-database.html 
+sidebar: sidebar 
+keywords:  
+summary: Realice una copia de seguridad de la base de datos de Insight para asegurarse de tener una copia de seguridad reciente si se produce un problema después de la actualización. Durante la fase de backup y restauración, no se recogerán datos de rendimiento; por lo tanto, el backup debe producirse lo más cerca posible del tiempo de actualización. 
+---
+= Realizar un backup de la base de datos de OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Realice una copia de seguridad de la base de datos de Insight para asegurarse de tener una copia de seguridad reciente si se produce un problema después de la actualización. Durante la fase de backup y restauración, no se recogerán datos de rendimiento; por lo tanto, el backup debe producirse lo más cerca posible del tiempo de actualización.
+
+
+
+== Pasos
+
+. Abra Insight en su navegador.
+. Haga clic en *Admin* > *solución de problemas*.
+. En la página *solución de problemas*, haga clic en *copia de seguridad*.
++
+El tiempo para realizar un backup de la base de datos puede variar en función de los recursos disponibles (arquitectura, CPU y memoria), el tamaño de la base de datos y la cantidad de objetos supervisados en su entorno.
+
++
+Una vez finalizada la copia de seguridad, se le preguntará si desea descargar el archivo.
+
+. Descargue el archivo de copia de seguridad.
+

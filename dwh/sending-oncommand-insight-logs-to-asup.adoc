@@ -1,0 +1,30 @@
+---
+permalink: dwh/sending-oncommand-insight-logs-to-asup.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible enviar registros de ASUP al soporte técnico para ayudar en la solución de problemas. ASUP para almacén de datos está configurado para ejecutarse automáticamente. En el portal de almacén de datos, puede desactivar el proceso de envío automático, incluir una copia de seguridad de la base de datos de almacén de datos o iniciar una transmisión a ASUP. Al solicitar un informe ASUP, la solicitud de informe aparece como un trabajo en la página Jobs del portal de almacén de datos. 
+---
+= Enviar registros de Insight a ASUP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible enviar registros de ASUP al soporte técnico para ayudar en la solución de problemas. ASUP para almacén de datos está configurado para ejecutarse automáticamente. En el portal de almacén de datos, puede desactivar el proceso de envío automático, incluir una copia de seguridad de la base de datos de almacén de datos o iniciar una transmisión a ASUP. Al solicitar un informe ASUP, la solicitud de informe aparece como un trabajo en la página Jobs del portal de almacén de datos.
+
+
+
+== Acerca de esta tarea
+
+La cola de trabajos gestiona el trabajo de forma similar al procesamiento de otros trabajos. Si un trabajo de ASUP ya está en estado pendiente o en ejecución, se muestra un mensaje de error que indica que no se puede añadir la solicitud de informe de ASUP a la solicitud de trabajo, ya que la cola de trabajos contiene solicitudes pendientes o en ejecución.
+
+
+
+== Pasos
+
+. Inicie sesión en el portal del almacén de datos en `+https://hostname/dwh+`, donde `hostname` Es el nombre del sistema en el que está instalado el almacén de datos de OnCommand Insight.
+. En el panel de navegación de la izquierda, haga clic en *solución de problemas*.
+. En la sección *ASUP de OnCommand Insight* de la página *solución de problemas*, haga clic en *Descargar informe de solución de problemas DWH* para recuperar el informe de solución de problemas.
+. Para enviar el informe al servidor OnCommand Insight que aparece como el primer conector de la página del portal de almacén de datos *conectores*, haga clic en *Enviar ahora*.
+

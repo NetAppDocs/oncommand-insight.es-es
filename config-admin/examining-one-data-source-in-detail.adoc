@@ -1,0 +1,52 @@
+---
+permalink: config-admin/examining-one-data-source-in-detail.html 
+sidebar: sidebar 
+keywords:  
+summary: Si observa que un origen de datos ha fallado o se ha ralentizado, es posible que desee examinar un resumen detallado de la información de ese origen de datos para determinar la causa del problema. Las fuentes de datos con condiciones que requieren su atención están marcadas con un círculo rojo sólido. 
+---
+= Examinar en detalle un origen de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si observa que un origen de datos ha fallado o se ha ralentizado, es posible que desee examinar un resumen detallado de la información de ese origen de datos para determinar la causa del problema. Las fuentes de datos con condiciones que requieren su atención están marcadas con un círculo rojo sólido.
+
+
+
+== Pasos
+
+. En la barra de herramientas Insight, haga clic en *Admin*.
++
+Se abrirá la lista *orígenes de datos*. Cualquier origen de datos enumerado con problemas potenciales se Marca con un círculo rojo sólido. Los problemas más graves están en la parte superior de la lista.
+
+. Seleccione el origen de datos que causa preocupación.
+. Haga clic en el enlace del nombre del origen de datos.
+. En la página de resumen del origen de datos, compruebe la información de cualquiera de estas secciones:
++
+** *Escala de tiempo del evento*
++
+Enumera los eventos vinculados al estado actual que se muestra en la lista orígenes de datos. Los eventos de este resumen se muestran por dispositivo. Los errores se muestran en rojo. Puede colocar el puntero del ratón sobre los elementos de la línea de tiempo para mostrar información adicional.
+
+** *Dispositivos notificados por esta fuente de datos*
++
+Enumera los tipos de dispositivos, sus direcciones IP y vínculos a información más detallada para cada dispositivo.
+
+** *Cambios reportados por esta fuente de datos (últimas 3 semanas)*
++
+Muestra los dispositivos que se han agregado o eliminado o que han cambiado la configuración.
+
+
+
+. Después de examinar la información del origen de datos, es posible que desee realizar una de estas operaciones utilizando los botones de la parte superior de la página:
++
+** *Editar* la descripción del origen de datos para corregir el problema.
+** *Encuesta de nuevo* obliga a la encuesta a revelar si el problema era persistente o intermitente.
+** *Posponer* sondeo de fuente de datos durante 3, 7 o 30 días para darle tiempo para investigar el problema y detener los mensajes de advertencia.
+** *Instale un parche* en el origen de datos para corregir el problema.
+** Preparar un *informe de errores* para asistencia técnica.
+** *Eliminar* el origen de datos de su entorno de supervisión de Insight.
+
+
+

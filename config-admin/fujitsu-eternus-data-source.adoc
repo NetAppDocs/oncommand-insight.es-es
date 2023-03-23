@@ -1,0 +1,128 @@
+---
+permalink: config-admin/fujitsu-eternus-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: El origen de datos ETERNUS de Fujitsu requiere la dirección IP del almacenamiento. No se puede delimitar por comas. 
+---
+= Fuente de datos ETERNUS de Fujitsu
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El origen de datos ETERNUS de Fujitsu requiere la dirección IP del almacenamiento. No se puede delimitar por comas.
+
+
+
+== Terminología
+
+OnCommand Insight adquiere la siguiente información de inventario de la fuente de datos ETERNUS de Fujitsu. Para cada tipo de activo que adquiere Insight, se muestra la terminología más común utilizada en este activo. Al ver o solucionar problemas de este origen de datos, tenga en cuenta la siguiente terminología:
+
+|===
+
+
+| Plazo del proveedor/modelo | Insight plazo 
+
+
+ a| 
+Disco
+ a| 
+Disco
+
+
+
+ a| 
+Reducida
+ a| 
+Reducida
+
+
+
+ a| 
+Thin Pool, pool de niveles flexible,
+
+Grupo RAID
+ a| 
+Pool de almacenamiento
+
+
+
+ a| 
+Volumen estándar, volumen de datos Snap (SDV),
+
+Volumen de Snap Data Pool (SDPV),
+
+Volumen de thin provisioning (TPV)
+ a| 
+Volumen
+
+|===
+[NOTE]
+====
+Estos son sólo mapas terminológicos comunes y es posible que no representen todos los casos de este origen de datos.
+
+====
+
+
+== Requisitos
+
+* Dirección IP del almacenamiento ETERNUS, que no se puede delimitar entre comas
+* Nombre de usuario y contraseña en el nivel de administración de SSH
+* Puerto 22
+* Asegúrese de que el desplazamiento de página está desactivado. (clienv-show-more-scroll desactivado)
+
+
+
+
+== Configuración
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Dirección IP de almacenamiento ETERNUS
+ a| 
+La dirección IP del almacenamiento ETERNUS
+
+
+
+ a| 
+Nombre de usuario
+ a| 
+Nombre de usuario para almacenamiento ETERNUS
+
+
+
+ a| 
+Contraseña
+ a| 
+Contraseña utilizada para el esternus
+
+|===
+
+
+== Configuración avanzada
+
+|===
+
+
+| Campo | Descripción 
+
+
+ a| 
+Intervalo de sondeo de inventario (mín.)
+ a| 
+Intervalo entre sondeos de inventario (predeterminado 20 minutos)
+
+
+
+ a| 
+Tiempo de espera del proceso SSH (s)
+ a| 
+Tiempo de espera del proceso SSH (600 segundos predeterminado)
+
+|===

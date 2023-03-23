@@ -1,0 +1,85 @@
+---
+permalink: config-admin/about-oncommand-insight-anomaly-detection.html 
+sidebar: sidebar 
+keywords:  
+summary: OnCommand Insight contiene análisis de detección de anomalías de aprendizaje automático que proporcionan visibilidad de la infraestructura de una aplicación e identifica anomalías de rendimiento antes de que se conviertan en interrupciones de servicio. 
+---
+= Cómo funciona la detección de anomalías de OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Insight ofrece análisis de detección de anomalías de aprendizaje automático que proporcionan visibilidad de la infraestructura de una aplicación e identifica anomalías de rendimiento antes de que se conviertan en interrupciones de servicio.
+
+El análisis de anomalías ayuda a identificar el rango de carga de trabajo operativo normal de una aplicación e informa cuando los cambios en el rendimiento se encuentran fuera de los niveles esperados. El motor de detección de anomalías de la aplicación procesa indicadores de rendimiento que recopila Insight e identifica anomalías en la infraestructura de la aplicación.
+
+Puede usar la detección de anomalías para realizar estas tareas:
+
+* Identifique cambios significativos en el comportamiento de la infraestructura de aplicaciones
+* Realice un seguimiento de una aplicación a través de toda la pila y de varios contadores
+* Diagnostique la causa de los eventos recurrentes periódicamente en una carga de trabajo de aplicaciones
+* Proporciona un conjunto más completo de información comparada con datos de contadores de rendimiento utilizando valores de umbral estáticos
+* Supervisión en modo reactivo mejorado, con una vista integral de la topología y la capacidad de centrarse en los comportamientos más anómalos.
+
+
+El motor de detección de anomalías utiliza los datos de Insight para analizar las aplicaciones. Cuando se inicia la supervisión por primera vez, el motor de análisis puede procesar hasta 14 días de datos históricos de rendimiento. Los datos se recogen durante semanas o incluso meses, por lo que proporcionan datos más precisos sobre un determinado recurso. Los datos incluyen totales para los siguientes contadores:
+
+|===
+
+
+| Objetos | Contador 
+
+
+ a| 
+MÁQUINA VIRTUAL
+ a| 
+Latencia, IOPS
+
+
+
+ a| 
+Hipervisor
+ a| 
+Uso de CPU, IOPS
+
+
+
+ a| 
+Puerto de borde
+ a| 
+Crédito de BB cero
+
+
+
+ a| 
+Nodo de almacenamiento
+ a| 
+Latencia, utilización e IOPS
+
+
+
+ a| 
+Volumen
+ a| 
+Latencia, IOPS
+
+
+
+ a| 
+Volumen interno
+ a| 
+Latencia, IOPS
+
+
+
+ a| 
+Del banco de almacenamiento
+ a| 
+IOPS, uso
+
+|===
+Los datos que recopila el motor de detección de anomalías se archivan cuando se activa Performance Data Archiving en el servidor Insight. Consulte la página Estado del sistema para determinar si el archivado está habilitado.
+
+El motor de detección de anomalías se ejecuta en un servidor independiente al de Insight Server. Se puede configurar en un equipo físico o en una máquina virtual. Consulte la Guía de instalación de OnCommand Insight para Windows o Linux si desea obtener más información.

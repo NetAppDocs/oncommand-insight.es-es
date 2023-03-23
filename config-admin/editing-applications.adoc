@@ -1,0 +1,46 @@
+---
+permalink: config-admin/editing-applications.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible que desee cambiar la prioridad de una aplicación, la entidad de negocio asociada a una aplicación o el estado del uso compartido de volúmenes. 
+---
+= Editar aplicaciones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Se recomienda cambiar la prioridad de una aplicación, la entidad empresarial asociada con una aplicación o el estado de uso compartido de un volumen.
+
+
+
+== Pasos
+
+. Inicie sesión en la interfaz de usuario web de OnCommand Insight.
+. Haga clic en *Administrar* y seleccione *aplicaciones*.
+. Coloque el cursor sobre la aplicación que desea editar y haga clic en image:../media/edit-recipient-icon.gif[""].
++
+Aparece el cuadro de diálogo Editar aplicación.
+
+. Realice alguna de las siguientes acciones:
++
+** Haga clic en *prioridad* y seleccione una prioridad diferente.
++
+[NOTE]
+====
+No se puede cambiar el nombre de la aplicación.
+
+====
+** Haga clic en *entidad de negocio* y seleccione una entidad de negocio diferente con la que asociar la aplicación o seleccione *ninguna* para eliminar la asociación de la aplicación con la entidad de negocio.
+** Haga clic para desactivar o seleccionar *Validar el uso compartido de volúmenes*.
++
+[NOTE]
+====
+Esta opción solo está disponible si tiene la licencia Assure.
+
+====
+
+
+. Haga clic en *Guardar*.
+

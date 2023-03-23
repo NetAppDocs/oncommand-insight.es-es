@@ -1,0 +1,52 @@
+---
+permalink: dwh/restoring-and-upgrading-reports-for-versions-prior-to-6-3.html 
+sidebar: sidebar 
+keywords:  
+summary: Si va a actualizar una versión de Insight anterior a la 6.3, debe restaurar manualmente los artefactos de creación de informes. 
+---
+= Informes de restauración y actualización de versiones anteriores a 6.3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si va a actualizar una versión de Insight anterior a la 6.3, debe restaurar manualmente los artefactos de creación de informes.
+
+
+
+== Antes de empezar
+
+Siga las instrucciones de los temas "actualización del almacén de datos (DWH)" y "copia de seguridad de informes personalizados y artefactos de informes".
+
+
+
+== Pasos
+
+. Para restaurar artefactos de informes de versiones anteriores a la versión 6.3, copie el archivo Export Backup.zip que creó y guardó en el `<install>\cognos\c10_64\deployment` directorio.
+. Abra un explorador y vaya a. `http://<server>:<port>/reporting` para el servidor y el puerto que ha utilizado durante la instalación.
+. Introduzca su nombre de usuario y contraseña y haga clic en *Login*.
+. En el menú *Iniciar*, seleccione *Insight Reporting Administration*.
+. Haga clic en la ficha *Configuración*.
++
+Debido a cambios en el modelo de datos, es posible que los informes de los paquetes antiguos no se ejecuten y necesiten actualizarse.
+
+. Haga clic en *Administración de contenido*.
+. Haga clic en el botón *Nueva importación*.
+. Asegúrese de que ha copiado el archivo en el directorio de implementación (por ejemplo, `backup6.0.zip`) Está seleccionado y haga clic en *Siguiente*.
+. Si ha introducido una contraseña para proteger el archivo, introduzca la contraseña y haga clic en *Aceptar*.
+. Cambie el nombre `+Export...+` para `Import Backup` Y haga clic en *Siguiente*.
+. Haga clic en el icono de lápiz junto a cada nombre de paquete e introduzca un nuevo nombre de destino, si es necesario. Por ejemplo, agregue un `_original` sufijo del nombre existente. A continuación, haga clic en *Aceptar*.
+. Después de cambiar el nombre de los nombres de paquetes de destino para todos los paquetes, seleccione todas las carpetas azules y haga clic en *Siguiente* para continuar.
+. Acepte todos los valores predeterminados.
+. Haga clic en *Finalizar* y, a continuación, seleccione *Ejecutar*.
+. Compruebe los detalles de esta importación y haga clic en *Aceptar*.
+. Haga clic en *Actualizar* para ver el estado de la importación.
+. Haga clic en *Cerrar* una vez finalizada la importación.
+
+
+
+
+== Resultados
+
+Aparecen dos conjuntos de paquetes en la ficha carpetas públicas. Por ejemplo, uno con un `7.0` sufijo (para la versión más reciente) y uno con un `_original` (o lo que haya introducido durante el procedimiento de copia de seguridad/restauración) sufijo que contiene los informes antiguos. Debido a cambios en el modelo de datos, es posible que los informes de los paquetes antiguos no se ejecuten y necesiten actualizarse. Las fichas del portal ahora apuntan a la versión actual de las páginas del portal.

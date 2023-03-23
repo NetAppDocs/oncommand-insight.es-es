@@ -1,0 +1,144 @@
+---
+permalink: config-admin/hpe-nimble-data-source.html 
+sidebar: sidebar 
+keywords:  
+summary: El recopilador de datos de HPE Nimble admite los datos de inventario y rendimiento de las cabinas de almacenamiento de HPE Nimble. 
+---
+= Origen de datos HPE Nimble
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El recopilador de datos de HPE Nimble admite los datos de inventario y rendimiento de las cabinas de almacenamiento de HPE Nimble.
+
+
+
+== Terminología
+
+OnCommand Insight adquiere la siguiente información de inventario del origen de datos de HPE Nimble. Para cada tipo de activo que adquiere Insight, se muestra la terminología más común utilizada en este activo. Al ver o solucionar problemas de este origen de datos, tenga en cuenta la siguiente terminología:
+
+|===
+
+
+| Plazo del proveedor/modelo | Insight plazo 
+
+
+ a| 
+Cabina
+ a| 
+Reducida
+
+
+
+ a| 
+Disco
+ a| 
+Disco
+
+
+
+ a| 
+Piscina
+ a| 
+Pool de almacenamiento
+
+
+
+ a| 
+Volumen
+ a| 
+Volumen
+
+
+
+ a| 
+Iniciador
+ a| 
+Alias del host de almacenamiento
+
+
+
+ a| 
+Controladora
+ a| 
+Nodo de almacenamiento
+
+
+
+ a| 
+Interfaz Fibre Channel
+ a| 
+Controladora
+
+|===
+[NOTE]
+====
+Estos son sólo mapas terminológicos comunes y es posible que no representen todos los casos de este origen de datos.
+
+====
+
+
+== Requisitos
+
+* La cabina debe estar instalada y configurada, y es posible acceder a ella desde el cliente a través de su nombre de dominio completo (FQDN) o la dirección IP de administración de cabinas.
+* El arreglo debe estar ejecutando NimbleOS 2.3.x o posterior.
+* Debe tener un nombre de usuario y una contraseña válidos para la cabina.
+* El puerto 5392 debe estar abierto en la cabina.
+
+
+
+
+== Configuración
+
+|===
+
+
+| *Campo* | *Descripción* 
+
+
+ a| 
+Dirección IP de administración de cabinas
+ a| 
+Nombre de dominio completo (FQDN) o dirección IP de administración de cabinas.
+
+
+
+ a| 
+Nombre de usuario
+ a| 
+Nombre de usuario de la cabina Nimble
+
+
+
+ a| 
+Contraseña
+ a| 
+Contraseña de la cabina de Nimble
+
+|===
+
+
+== Configuración avanzada
+
+|===
+
+
+| *Campo* | *Descripción* 
+
+
+ a| 
+Puerto
+ a| 
+Puerto que utiliza la API DE REST de Nimble. El valor predeterminado es 5392.
+
+
+
+ a| 
+Intervalo de sondeo de inventario (mín.)
+ a| 
+Intervalo entre sondeos de inventario (predeterminado 60 minutos)
+
+|===
+Nota: El intervalo de sondeo de rendimiento predeterminado es de 300 segundos y no se puede cambiar. Este es el único intervalo admitido por Nimble.

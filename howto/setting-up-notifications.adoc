@@ -1,0 +1,16 @@
+---
+permalink: howto/setting-up-notifications.html 
+sidebar: sidebar 
+keywords:  
+summary: Es posible configurar Insight para que envíe notificaciones sobre eventos desencadenantes como política de rendimiento, ruta global o infracciones de capacidad mediante correo electrónico, SNMP o syslog. También puede configurar Insight para que envíe notificaciones por correo electrónico sobre eventos de nivel del sistema, como errores de origen de datos o fallos de unidad de adquisición. 
+---
+= Configuración de notificaciones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Es posible configurar Insight para que envíe notificaciones sobre eventos desencadenantes como política de rendimiento, ruta global o infracciones de capacidad mediante correo electrónico, SNMP o syslog. También puede configurar Insight para que envíe notificaciones por correo electrónico sobre eventos de nivel del sistema, como errores de origen de datos o fallos de unidad de adquisición.
+
+Estas son instrucciones básicas. Para obtener información más detallada sobre las notificaciones, consulte Configuración y administración > Configuración y administración de Insight > Configuración de Insight.
