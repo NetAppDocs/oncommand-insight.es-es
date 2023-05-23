@@ -35,9 +35,9 @@ Para obtener las instrucciones más actualizadas del CAC y del certificado, cons
 
 A continuación se enumeran los requisitos comunes de configuración del cliente:
 
-* Instalación de Smart Card middleware, como ActivClient (consulte http://militarycac.com/activclient.htm)[]
-* Modificación del explorador de IE (consulte http://militarycac.com/files/Making_AKO_work_with_Internet_Explorer_color.pdf)[]
-* Modificación del navegador Firefox (consulte https://militarycac.com/firefox2.htm)[]
+* Instalación de Smart Card middleware, como ActivClient (consulte
+* Modificación del explorador de IE (consulte
+* Modificación del navegador Firefox (consulte
 
 
 Entre los pasos adicionales de configuración se incluyen los siguientes:

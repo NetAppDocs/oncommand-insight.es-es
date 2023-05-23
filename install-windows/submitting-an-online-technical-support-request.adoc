@@ -17,7 +17,7 @@ Si tiene problemas con la instalación de Insight, como cliente de soporte regis
 
 == Antes de empezar
 
-A través de su dirección de correo electrónico corporativa, debe registrarse como cliente de soporte para obtener servicios de soporte online. El registro se realiza a través del sitio de soporte (http://support.netapp.com)[].
+A través de su dirección de correo electrónico corporativa, debe registrarse como cliente de soporte para obtener servicios de soporte online. El registro se realiza a través del sitio de soporte .
 
 
 
