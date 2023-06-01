@@ -455,6 +455,8 @@ entries:
     - title: Fuente de datos de HDS HiCommand Device Manager
       url: "/config-admin/hds-hicommand-devicemanager-data-source.html"
       entries:
+      - title: Centro de operaciones de HDS
+        url: "/collector_hds_ops_center.html"
       - title: Almacenamiento en HDS
         url: "/config-admin/hds-landing-page-terminology-storage.html"
       - title: Pool de almacenamiento de HDS

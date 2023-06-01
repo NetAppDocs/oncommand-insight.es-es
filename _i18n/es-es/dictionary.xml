@@ -8205,6 +8205,42 @@
   <block id="135cca1b87ae0b4a874f6d6184055603" category="sidebar">Observe el comportamiento de un objeto a lo largo del tiempo</block>
   <block id="a8ccc3b97766b616055316a691052a65" category="sidebar">Compare el total de latencia de un objeto con el total de latencia de los 10 objetos superiores</block>
   <block id="1e6ff685c4fea5f20ae54d736f584efe" category="sidebar">Personalización del formato de salida y la entrega de un informe</block>
-  <block id="782e478a3967380e548c616b53e48fa3" category="paragraph">OnCommand Insight es una solución única que permite la gestión y el análisis de recursos entre dominios y proveedores en redes, almacenamiento y servidores en entornos físicos y virtuales. Insight puede ayudarle a optimizar su infraestructura actual, ya que le permite adaptar el tamaño de las operaciones con el fin de satisfacer las demandas del negocio. Simplifica el proceso de determinar qué y cuándo comprar. También reduce el riesgo durante las migraciones tecnológicas complejas, como el traslado a un cloud híbrido, identificando las cargas de trabajo que podrían optar a la migración al cloud. Con Insight, puede gestionar la infraestructura TECNOLÓGICA como un servicio completo integrando los recursos en toda la cadena de suministro de servicios TECNOLÓGICOS de la empresa.</block>
   <block id="9a94b99275970f0f82451969eeccb836" category="sidebar">Centro de operaciones de HDS</block>
+  <block id="8020d56a67ade967a3254ada824b1406" category="summary">Configurar el recopilador de datos del centro de operaciones de HDS.</block>
+  <block id="edfa0366cb6c25de6aa46576a0e54251" category="doc">Recopilador de datos del centro de Hitachi OPS</block>
+  <block id="317ca49a534ef6dc0317a60fdf058fef" category="paragraph">Este recopilador de datos usa la suite de aplicaciones integrada de Hitachi OPS Center para acceder a los datos de inventario y rendimiento de varios dispositivos de almacenamiento. Para la detección de inventario y capacidad, la instalación del Centro de operaciones debe incluir los componentes de "Servicios comunes" y "Administrador". Para la recopilación del rendimiento, debe tener instalado el "analizador".</block>
+  <block id="aa274d02dd5bbca295ce4b6cd3594c6d" category="paragraph">OnCommand Insight adquiere la siguiente información de inventario de este recopilador de datos. Para cada tipo de activo adquirido, se muestra la terminología más común utilizada para este activo. Al ver o solucionar problemas de este recopilador de datos, tenga en cuenta la siguiente terminología:</block>
+  <block id="5c6ab1284b6b7a5a7102854a969c99be" category="cell">Sistemas de almacenamiento</block>
+  <block id="6fa6e2299a829e04bba19b10e38dc56c" category="cell">Grupos de paridad</block>
+  <block id="7f47ab518e59deb2aed009c3db49ddbd" category="cell">Grupos de discos, Storage Pool(RAID)</block>
+  <block id="88bda324c3afff84ed43de6af0cfdc82" category="cell">Pool de almacenamiento (fino, SNAP)</block>
+  <block id="b539957d5ac5efa3c17ecf122d0aef01" category="cell">Grupos de paridad externa</block>
+  <block id="8d574b46d24459c09062877c134e14a5" category="cell">Pool de almacenamiento (backend), grupos de discos</block>
+  <block id="08aa09e012efb5b185b38b15d4ded675" category="cell">Nodo de almacenamiento → nodo de controladora → puerto</block>
+  <block id="a18b5712dface3f20bce7750886350d3" category="cell">Grupos de hosts</block>
+  <block id="5b52c3da7acdc6837b619fa0e7beb98b" category="cell">Asignación de volúmenes y enmascaramiento</block>
+  <block id="b4a20e3a6be7e6cd6f8e3dcdd45cb2a8" category="cell">Parejas de volúmenes</block>
+  <block id="561b06d0d233f84983c474e6cd225d20" category="paragraph">Nota: Sólo son asignaciones de terminología comunes y es posible que no representen todos los casos de este recopilador de datos.</block>
+  <block id="ea9460ea7afc9634eafcb42137ae3f7b" category="paragraph">Para recopilar datos de inventario, debe contar con lo siguiente:</block>
+  <block id="d96f025cc7db5db06dd47e78c55d8f1e" category="list-text">Dirección IP o nombre de host del servidor del centro de operaciones que aloja el componente "Servicios comunes"</block>
+  <block id="8281bdee16e3d690812d635a332bd2cf" category="list-text">Cuenta de usuario y contraseña de administrador del sistema raíz/administrador del sistema que existen en todos los servidores que alojan componentes del Centro de operaciones. HDS no implementaron la compatibilidad con la API REST para el uso por parte de usuarios LDAP/SSO hasta que OPS Center 10.8+</block>
+  <block id="fdfceedcfadaa8fc4e641a9271ff7595" category="section-title">Requisitos de rendimiento</block>
+  <block id="8f2fd5a7846dd234e704c033378310ab" category="paragraph">Para poder recopilar datos de rendimiento, se deben cumplir los siguientes requisitos:</block>
+  <block id="d3a405c96e9fcea92b0929c28b531e59" category="list-text">Se debe instalar el módulo Analizador del centro de operaciones de HDS</block>
+  <block id="e71e6bc0f8f44471c52859083251c1b7" category="list-text">Las cabinas de almacenamiento deben estar alimentando el módulo Analizador del centro de operaciones</block>
+  <block id="8f4ab816532074b60c2865f1089b6d38" category="cell">Dirección IP del centro de operaciones de Hitachi</block>
+  <block id="211ba4facc37bc8a85949c753a2fcfbd" category="cell">Dirección IP o nombre de dominio completo del servidor del Centro de operaciones que aloja el componente "Servicios comunes"</block>
+  <block id="8db0f231405345684c1dab98cc049f52" category="cell">Nombre de usuario del servidor del Centro de operaciones.</block>
+  <block id="18bf6f2c111fb8ac2dbe99d3445cbadd" category="cell">Contraseña que se utiliza para el servidor del centro de operaciones.</block>
+  <block id="bc742a3b20c159bc11ea844e4d798e34" category="cell">HTTPS (puerto 443) es la opción predeterminada</block>
+  <block id="d394f4a37cee9ff0a48907bfdacc4a9f" category="cell">Anular puerto TCP</block>
+  <block id="cd5f584259d833ff583a4824164dfbc3" category="cell">Especifique el puerto que se va a utilizar si no es el predeterminado</block>
+  <block id="4908467e27b4191d95f9c906a4d8dcd3" category="cell">Intervalo entre sondeos de inventario. El valor predeterminado es 40.</block>
+  <block id="07570853d28c7dc0401130aea747f9fb" category="cell">Especifique si desea incluir o excluir la lista de matrices a continuación al recopilar datos.</block>
+  <block id="e245ed75c6b828ee4ae338a39e57c9bc" category="cell">Filtrar lista de dispositivos</block>
+  <block id="0f6a3a02976086b90f48da7e5992aa82" category="cell">Lista separada por comas de los números de serie del dispositivo que se van a incluir o excluir</block>
+  <block id="7cde90d1aea7fffbc619c41625a35c52" category="cell">Intervalo entre sondeos de rendimiento. El valor predeterminado es 300.</block>
+  <block id="5ea8c0bc0f3ff2ad5a8ecd87179c69f1" category="inline-link-macro">Matriz de compatibilidad de recopilador de datos</block>
+  <block id="b13fdf15118fa90916588b42c9eab20f" category="paragraph">Puede encontrar información adicional en <block ref="d34993add17c6dd464dba2ccd7f99cbb" category="inline-link-macro-rx"></block> o en la <block ref="6bcd41b5488d3cd417d31b80921f5af9" category="inline-link-macro-rx"></block>.</block>
+  <block id="16d15d3f29508a543513f5bccddd527e" category="paragraph">OnCommand Insight es una solución única que permite la gestión y el análisis de recursos entre dominios y proveedores en redes, almacenamiento y servidores en entornos físicos y virtuales. Insight puede ayudarle a optimizar su infraestructura actual, ya que le permite adaptar el tamaño de las operaciones con el fin de satisfacer las demandas del negocio. Simplifica el proceso de determinar qué y cuándo comprar. También reduce el riesgo durante las migraciones tecnológicas complejas, como el traslado a un cloud híbrido, identificando las cargas de trabajo que podrían optar a la migración al cloud. Con Insight, puede gestionar la infraestructura TECNOLÓGICA como un servicio completo integrando los recursos en toda la cadena de suministro de servicios TECNOLÓGICOS de la empresa.</block>
 </blocks>
