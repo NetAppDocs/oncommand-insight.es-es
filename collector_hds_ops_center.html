@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
   <head class="at-element-marker">
-  <title>Prueba de la configuración del origen de datos</title>
+  <title>Recopilador de datos del centro de Hitachi OPS</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Prueba de la configuración del origen de datos" />
+  <meta property="og:title" content="Recopilador de datos del centro de Hitachi OPS" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/es-es/oncommand-insight/config-admin/testing-the-data-source-configuration.html" />
-	<meta property="og:description" content="Cuando se agrega un origen de datos, puede comprobar la corrección de la configuración para comunicarse con el dispositivo antes de guardar o actualizar ese ..." />
+	<meta property="og:url" content="https://docs.netapp.com/es-es/oncommand-insight/collector_hds_ops_center.html" />
+	<meta property="og:description" content="Configurar el recopilador de datos del centro de operaciones de HDS." />
   <meta property="og:image" content="https://docs.netapp.com/es-es/oncommand-insight/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Cuando se agrega un origen de datos, puede comprobar la corrección de la configuración para comunicarse con el dispositivo antes de guardar o actualizar ese ...">
-  <meta name="keywords" content=" "><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Configurar el recopilador de datos del centro de operaciones de HDS.">
+  <meta name="keywords" content=" data collector, Hitachi Ops Center"><!-- Icons -->
   <link rel="icon" href="/es-es/oncommand-insight/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -32,17 +32,17 @@
   <link rel="stylesheet" href="/es-es/oncommand-insight/css/landing-page.css" type="text/css">
   <link rel="stylesheet" href="/es-es/oncommand-insight/css/tabbed-blocks.css" type="text/css">
   <!-- Canonical url -->
-  <link rel="canonical" href="https://docs.netapp.com/es-es/oncommand-insight/config-admin/testing-the-data-source-configuration.html" />
-  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/oncommand-insight/config-admin/testing-the-data-source-configuration.html" />
-  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/oncommand-insight/config-admin/testing-the-data-source-configuration.html" />
-  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/oncommand-insight/config-admin/testing-the-data-source-configuration.html" />
-  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/oncommand-insight/config-admin/testing-the-data-source-configuration.html" />
-  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/oncommand-insight/config-admin/testing-the-data-source-configuration.html" />
-  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/oncommand-insight/config-admin/testing-the-data-source-configuration.html" />
-  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/oncommand-insight/config-admin/testing-the-data-source-configuration.html" />
-  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/oncommand-insight/config-admin/testing-the-data-source-configuration.html" />
-  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/oncommand-insight/config-admin/testing-the-data-source-configuration.html" />
-  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/oncommand-insight/config-admin/testing-the-data-source-configuration.html" />
+  <link rel="canonical" href="https://docs.netapp.com/es-es/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/oncommand-insight/collector_hds_ops_center.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/oncommand-insight/collector_hds_ops_center.html" />
   <link rel='stylesheet' href='/es-es/oncommand-insight/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
     function addAdobeLaunch(adobeId) {
       var head = document.getElementsByTagName('head')[0];
@@ -177,7 +177,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/oncommand-insight.es-es/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/es-es/oncommand-insight/config-admin/testing-the-data-source-configuration.html&page-title=Prueba de la configuración del origen de datos" class="page-nav-contribute-link" role="button"><img src="/es-es/oncommand-insight/images/discuss-sm.svg" alt="" class="github-icon" />Solicitar cambios en el documento</a><a target="_blank" href="https://github.com/NetAppDocs/oncommand-insight/blob/main/config-admin/testing-the-data-source-configuration.adoc" class="page-nav-contribute-link" role="button"><img src="/es-es/oncommand-insight/images/edit-sm.svg" alt="" class="github-icon" />Editar en GitHub</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/es-es/oncommand-insight/images/article-sm.svg" alt="" class="github-icon" />Guía del colaborador</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/oncommand-insight.es-es/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/es-es/oncommand-insight/collector_hds_ops_center.html&page-title=Recopilador de datos del centro de Hitachi OPS" class="page-nav-contribute-link" role="button"><img src="/es-es/oncommand-insight/images/discuss-sm.svg" alt="" class="github-icon" />Solicitar cambios en el documento</a><a target="_blank" href="https://github.com/NetAppDocs/oncommand-insight/blob/main/config-admin/collector_hds_ops_center.adoc" class="page-nav-contribute-link" role="button"><img src="/es-es/oncommand-insight/images/edit-sm.svg" alt="" class="github-icon" />Editar en GitHub</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/es-es/oncommand-insight/images/article-sm.svg" alt="" class="github-icon" />Guía del colaborador</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">EN ESTA PÁGINA</div>
@@ -297,23 +297,23 @@
       </div>
 
       <ul class="custom-dropdown-menu"><li>
-          <a href="https://docs.netapp.com/es-es/oncommand-insight/config-admin/testing-the-data-source-configuration.html" target="_self"><span translate="no" class="notranslate">Español</span></a>
+          <a href="https://docs.netapp.com/es-es/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">Español</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/us-en/oncommand-insight/config-admin/testing-the-data-source-configuration.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+          <a href="https://docs.netapp.com/us-en/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">English</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/ja-jp/oncommand-insight/config-admin/testing-the-data-source-configuration.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+          <a href="https://docs.netapp.com/ja-jp/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/ko-kr/oncommand-insight/config-admin/testing-the-data-source-configuration.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+          <a href="https://docs.netapp.com/ko-kr/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/zh-cn/oncommand-insight/config-admin/testing-the-data-source-configuration.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+          <a href="https://docs.netapp.com/zh-cn/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/zh-tw/oncommand-insight/config-admin/testing-the-data-source-configuration.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+          <a href="https://docs.netapp.com/zh-tw/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/de-de/oncommand-insight/config-admin/testing-the-data-source-configuration.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+          <a href="https://docs.netapp.com/de-de/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/fr-fr/oncommand-insight/config-admin/testing-the-data-source-configuration.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
+          <a href="https://docs.netapp.com/fr-fr/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">Français</span></a>
         </li><li>
-          <a href="https://docs.netapp.com/it-it/oncommand-insight/config-admin/testing-the-data-source-configuration.html" target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+          <a href="https://docs.netapp.com/it-it/oncommand-insight/collector_hds_ops_center.html" target="_self"><span translate="no" class="notranslate">Italiano</span></a>
         </li></ul>
     </div>
     <!-- End Language Selector -->
@@ -2285,8 +2285,6 @@
 
 
 
-    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
-  
 
 
         </li>
@@ -2370,6 +2368,8 @@
             Fuente de datos de HDS HiCommand Device Manager
           </a>
           
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
 
 
 
@@ -2385,6 +2385,8 @@
   
 
 
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
 
 
 
@@ -6964,7 +6966,7 @@
       data-pdf-exists="true" 
       data-pdf-filename="Prueba de la configuración del origen de datos"
       data-li-level="4#" 
-      class="  active "
+      class=" "
     ><a class="na-navbar-padding" href="/es-es/oncommand-insight/config-admin/testing-the-data-source-configuration.html">
         Prueba de la configuración del origen de datos
       </a></li></ul></li><li 
@@ -7136,7 +7138,7 @@
       data-pdf-exists="true" 
       data-pdf-filename="Centro de operaciones de HDS"
       data-li-level="5#" 
-      class=" "
+      class="  active "
     ><a class="na-navbar-padding" href="/es-es/oncommand-insight/collector_hds_ops_center.html">
         Centro de operaciones de HDS
       </a></li><li 
@@ -7164,7 +7166,7 @@
       data-pdf-exists="true" 
       data-pdf-filename="Centro de operaciones de HDS"
       data-li-level="4#" 
-      class=" "
+      class="  active "
     ><a class="na-navbar-padding" href="/es-es/oncommand-insight/collector_hds_ops_center.html">
         Centro de operaciones de HDS
       </a></li><li 
@@ -9791,14 +9793,14 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Prueba de la configuración del origen de datos</h1>
+  <h1 class="n-doc__component-detail-heading">Recopilador de datos del centro de Hitachi OPS</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2023-03-23 20:21:14 +0000">03/23/2023</time>
+    <time datetime="2023-06-01 18:08:07 +0000">06/01/2023</time>
     
   
 
@@ -9808,24 +9810,184 @@
 
 </p>
 
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph lead">
-<p>Cuando se agrega un origen de datos, puede comprobar la corrección de la configuración para comunicarse con el dispositivo antes de guardar o actualizar ese origen de datos.</p>
+<p>Este recopilador de datos usa la suite de aplicaciones integrada de Hitachi OPS Center para acceder a los datos de inventario y rendimiento de varios dispositivos de almacenamiento. Para la detección de inventario y capacidad, la instalación del Centro de operaciones debe incluir los componentes de "Servicios comunes" y "Administrador". Para la recopilación del rendimiento, debe tener instalado el "analizador".</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="terminología">Terminología</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Al hacer clic en el botón <strong>Prueba</strong> del asistente de origen de datos, se comprueba la comunicación con el dispositivo especificado. La prueba produce uno de estos resultados:</p>
+<p>OnCommand Insight adquiere la siguiente información de inventario de este recopilador de datos. Para cada tipo de activo adquirido, se muestra la terminología más común utilizada para este activo. Al ver o solucionar problemas de este recopilador de datos, tenga en cuenta la siguiente terminología:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Plazo del proveedor/modelo</th>
+<th class="tableblock halign-left valign-top">Término de OnCommand Insight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sistemas de almacenamiento</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reducida</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Volumen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Volumen</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Grupos de paridad</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Grupos de discos, Storage Pool(RAID)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Disco</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Disco</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pool de almacenamiento</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pool de almacenamiento (fino, SNAP)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Grupos de paridad externa</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pool de almacenamiento (backend), grupos de discos</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Puerto</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nodo de almacenamiento → nodo de controladora → puerto</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Grupos de hosts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Asignación de volúmenes y enmascaramiento</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parejas de volúmenes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sincronización de almacenamiento</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Nota: Sólo son asignaciones de terminología comunes y es posible que no representen todos los casos de este recopilador de datos.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="requisitos-de-inventario">Requisitos de inventario</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Para recopilar datos de inventario, debe contar con lo siguiente:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>PASADO: El origen de datos está configurado correctamente.</p>
+<p>Dirección IP o nombre de host del servidor del centro de operaciones que aloja el componente "Servicios comunes"</p>
 </li>
 <li>
-<p>ADVERTENCIA: La prueba estaba incompleta, probablemente debido a que el tiempo de espera se agota durante el procesamiento o la adquisición no se estaba ejecutando.</p>
-</li>
-<li>
-<p>FAILED: El origen de datos, tal y como se ha configurado, no puede comunicarse con el dispositivo especificado. Compruebe los ajustes de configuración y vuelva a realizar una prueba.</p>
+<p>Cuenta de usuario y contraseña de administrador del sistema raíz/administrador del sistema que existen en todos los servidores que alojan componentes del Centro de operaciones. HDS no implementaron la compatibilidad con la API REST para el uso por parte de usuarios LDAP/SSO hasta que OPS Center 10.8+</p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="requisitos-de-rendimiento">Requisitos de rendimiento</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Para poder recopilar datos de rendimiento, se deben cumplir los siguientes requisitos:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Se debe instalar el módulo Analizador del centro de operaciones de HDS</p>
+</li>
+<li>
+<p>Las cabinas de almacenamiento deben estar alimentando el módulo Analizador del centro de operaciones</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configuración">Configuración</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Campo</th>
+<th class="tableblock halign-left valign-top">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dirección IP del centro de operaciones de Hitachi</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dirección IP o nombre de dominio completo del servidor del Centro de operaciones que aloja el componente "Servicios comunes"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nombre de usuario</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nombre de usuario del servidor del Centro de operaciones.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contraseña</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contraseña que se utiliza para el servidor del centro de operaciones.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configuración-avanzada">Configuración avanzada</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Campo</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Descripción</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tipo de conexión</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HTTPS (puerto 443) es la opción predeterminada</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Anular puerto TCP</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Especifique el puerto que se va a utilizar si no es el predeterminado</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Intervalo de sondeo de inventario (mín.)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Intervalo entre sondeos de inventario. El valor predeterminado es 40.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Elija "excluir" o "incluir" para especificar una lista</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Especifique si desea incluir o excluir la lista de matrices a continuación al recopilar datos.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Filtrar lista de dispositivos</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lista separada por comas de los números de serie del dispositivo que se van a incluir o excluir</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Intervalo de sondeo de rendimiento (s)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Intervalo entre sondeos de rendimiento. El valor predeterminado es 300.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Puede encontrar información adicional en <a href="concept_requesting_support.html">"Soporte técnico"</a> o en la <a href="https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf">"Matriz de compatibilidad de recopilador de datos"</a>.</p>
+</div>
+</div>
 </div>
 
     </article>
