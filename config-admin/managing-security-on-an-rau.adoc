@@ -25,10 +25,6 @@ Utilice la `securityadmin` herramienta para gestionar la seguridad:
 
 Un escenario para actualizar la configuración de seguridad para la LAU, RAU es actualizar la contraseña de usuario de "adquisición" cuando se haya cambiado la contraseña para ese usuario en el servidor. Todos los raus y LAU utilizan la misma contraseña que el usuario de "adquisición" del servidor para comunicarse con el servidor.
 
-[NOTE]
-====
-
-====
 El usuario de "adquisición" solo existe en el servidor de Insight. La RAU o LAU inicia sesión como ese usuario cuando se conectan al servidor.
 
 Siga estos pasos para administrar las opciones de seguridad en una RAU:
@@ -38,9 +34,14 @@ Siga estos pasos para administrar las opciones de seguridad en una RAU:
 == Pasos
 
 . Realice un inicio de sesión remoto en el servidor que ejecuta la RAU
-. Inicie la herramienta de administración de seguridad en modo interactivo: `Windows - C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i``Linux - /bin/oci-securityadmin.sh -i`
+. Inicie la herramienta de administración de seguridad en modo interactivo:
++
+** Windows - `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i`
+** Linux: `/bin/oci-securityadmin.sh -i`
 +
 El sistema solicita credenciales de inicio de sesión.
+
+
 
 . Introduzca el nombre de usuario y la contraseña de una cuenta con las credenciales "'Admin'".
 +
@@ -64,8 +65,6 @@ Restaura la copia de seguridad zip del almacén que se creó. Una vez restaurada
 [NOTE]
 ====
 Restore se puede utilizar para sincronizar contraseñas y claves en varios servidores, por ejemplo: - Cambiar claves de cifrado en un servidor - Crear una copia de seguridad del almacén - Restaurar la copia de seguridad del almacén en el segundo servidor
-
-+
 
 ====
 ** *Cambiar claves de cifrado*

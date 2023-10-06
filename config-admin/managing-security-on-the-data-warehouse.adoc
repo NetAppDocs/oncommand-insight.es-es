@@ -28,9 +28,14 @@ Utilice la `securityadmin` herramienta para gestionar la seguridad:
 == Pasos
 
 . Inicie sesión de forma remota en el servidor del almacén de datos.
-. Inicie la herramienta de administración de seguridad en modo interactivo: `Windows - C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i``Linux - /bin/oci-securityadmin.sh -i`
+. Inicie la herramienta de administración de seguridad en modo interactivo:
++
+** Windows - `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i`
+** Linux: `/bin/oci-securityadmin.sh -i`
 +
 El sistema solicita credenciales de inicio de sesión.
+
+
 
 . Introduzca el nombre de usuario y la contraseña de una cuenta con las credenciales "'Admin'".
 +

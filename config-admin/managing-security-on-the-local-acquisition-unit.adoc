@@ -34,9 +34,14 @@ Utilice la `securityadmin` herramienta para gestionar la seguridad:
 == Pasos
 
 . Inicie sesión de forma remota en Insight Server.
-. Inicie la herramienta de administración de seguridad en modo interactivo (-i).
+. Inicie la herramienta de administración de seguridad en modo interactivo:
++
+** Windows - `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i`
+** Linux: `/bin/oci-securityadmin.sh -i`
 +
 El sistema solicita credenciales de inicio de sesión.
+
+
 
 . Introduzca el nombre de usuario y la contraseña de una cuenta con las credenciales "'Admin'".
 . Seleccione *Unidad de adquisición local* para volver a configurar la configuración de seguridad de la unidad de adquisición local.
@@ -61,8 +66,6 @@ Restaura la copia de seguridad zip del almacén que se creó. Una vez restaurada
 [NOTE]
 ====
 Restore se puede utilizar para sincronizar contraseñas y claves en varios servidores, por ejemplo: - Cambiar claves de cifrado en la LAU - Crear una copia de seguridad del almacén - Restaurar la copia de seguridad del almacén en cada uno de los raus
-
-+
 
 ====
 ** *Cambiar claves de cifrado*

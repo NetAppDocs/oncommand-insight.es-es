@@ -28,9 +28,14 @@ Utilice la `securityadmin` herramienta para gestionar la seguridad:
 == Pasos
 
 . Inicie sesión de forma remota en Insight Server.
-. Inicie la herramienta de administración de seguridad en modo interactivo: `securityadmin -i`
+. Inicie la herramienta de administración de seguridad en modo interactivo:
++
+** Windows - `C:\Program Files\SANscreen\securityadmin\bin\securityadmin.bat -i`
+** Linux: `/bin/oci-securityadmin.sh -i`
 +
 El sistema solicita credenciales de inicio de sesión.
+
+
 
 . Introduzca el nombre de usuario y la contraseña de una cuenta con las credenciales "'Admin'".
 . Seleccione *servidor*.
@@ -55,8 +60,6 @@ Restaura la copia de seguridad zip del almacén que se creó. Una vez restaurada
 [NOTE]
 ====
 Restore se puede utilizar para sincronizar contraseñas y claves en varios servidores, por ejemplo: - Cambiar la clave de cifrado del servidor en un servidor - Crear una copia de seguridad del almacén - Restaurar la copia de seguridad del almacén en el segundo servidor
-
-+
 
 ====
 ** *Cambiar clave de cifrado*
@@ -85,22 +88,23 @@ Cambiar contraseña de las cuentas internas que usa Insight. Se muestran las sig
 
 
 
-+
+
+
 [NOTE]
 ====
 Algunas cuentas necesitan sincronizarse cuando se cambian las contraseñas. Por ejemplo, si cambia la contraseña del usuario de "adquisición" en el servidor, deberá cambiar la contraseña del usuario de "adquisición" en la LAU, la RAU y las DWH para que coincidan. Además, al cambiar contraseñas, debe realizar una copia de seguridad de la nueva configuración de seguridad para poder restaurarla después de una actualización o instalación.
 
 ====
-+
-** *Restablecer valores predeterminados*
+* *Restablecer valores predeterminados*
 +
 Restablece las claves y las contraseñas a los valores predeterminados. Los valores predeterminados son los que se proporcionan durante la instalación.
 
-** *Salida*
+* *Salida*
 +
 Salga de la `securityadmin` herramienta.
 
++
+.. Elija la opción que desea cambiar y siga las indicaciones.
 
 
-. Elija la opción que desea cambiar y siga las indicaciones.
 
