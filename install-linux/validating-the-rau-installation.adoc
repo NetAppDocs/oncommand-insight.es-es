@@ -21,6 +21,11 @@ Para validar la instalación correcta de la unidad de adquisición remota, puede
 . Haga clic en *unidades de adquisición*.
 . Compruebe que la nueva unidad de adquisición remota se ha registrado correctamente y que tiene un estado conectado.
 +
-Si no lo hace, debe ponerse en contacto con el soporte técnico.
+Si no tiene un estado conectado, intente reiniciar el servicio. Inicie sesión en el sistema de la unidad de adquisición remota y ejecute el siguiente comando:
+
++
+ oci-service.sh restart acquisition
++
+Si sigue sin conectarse, póngase en contacto con el soporte técnico.
 
 
