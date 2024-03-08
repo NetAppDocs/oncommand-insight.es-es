@@ -12,4 +12,4 @@ summary:
 
 Las notas de la versión de OnCommand Insight están disponibles fuera del centro de documentación. Se le pedirá que inicie sesión con sus credenciales del sitio de soporte de NetApp.
 
-link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2652943["Notas de la versión .PDF"^]
+link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2652943["Notas de la versión .PDF"^] (se abre en una ventana nueva)
