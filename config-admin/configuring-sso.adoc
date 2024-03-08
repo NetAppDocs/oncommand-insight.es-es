@@ -2,7 +2,7 @@
 permalink: config-admin/configuring-sso.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Single Sign-On \(SSO\) permite a los usuarios de su organización utilizar OnCommand Insight sin necesidad de una cuenta especial.' 
+summary: 'El inicio de sesión único (SSO) permite a los usuarios de su organización utilizar OnCommand Insight sin necesidad de una cuenta especial.' 
 ---
 = Configuración del inicio de sesión único (SSO)
 :allow-uri-read: 
