@@ -39,32 +39,3 @@ A continuación se enumeran los requisitos comunes de configuración del cliente
 * Modificación del explorador de IE (consulte
 * Modificación del navegador Firefox (consulte
 
-
-Entre los pasos adicionales de configuración se incluyen los siguientes:
-
-
-
-== Pasos
-
-. Desactive las ventanas emergentes de diálogo innecesarias al iniciar el cliente Java:
-+
-.. Abra el panel de control "'Java'".
-.. Seleccione la ficha «'Avanzado'».
-.. Seleccione "'Configuración avanzada de seguridad'".
-.. Desactive la opción "'usar certificados y claves en el almacén de claves del navegador'".
-
-
-. Importar certificados de software a los certificados personales de un usuario mediante el navegador Chrome:
-+
-.. Desplácese hasta «'Configuración avanzada».
-.. Seleccione «certificados de antigüedad».
-.. Seleccione la ficha «'certificados personales»».
-.. Seleccione "'Importar...'".
-.. Seleccione el archivo .p12.
-.. Complete el asistente; asegúrese de introducir el campo de contraseña con la contraseña que se utilizó para crear el certificado.
-
-
-+
-Es necesario realizar pasos similares para configurar los exploradores Internet Explorer y Firefox.
-
-

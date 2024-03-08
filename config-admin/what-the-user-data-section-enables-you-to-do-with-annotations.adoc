@@ -37,7 +37,7 @@ Aparece el cuadro de diálogo Agregar anotación.
 
 . Haga clic en *Guardar*.
 +
-La anotación se asigna al activo. Posteriormente, puede filtrar los activos mediante anotaciones mediante una consulta. Si desea agrupar activos por anotaciones, debe utilizar la interfaz de usuario de Java.
+La anotación se asigna al activo. Posteriormente, puede filtrar los activos mediante anotaciones mediante una consulta.
 
 . Si desea cambiar el valor de la anotación después de asignarla, haga clic en image:../media/change-annotation-value.gif[""] y seleccione un valor diferente.
 +

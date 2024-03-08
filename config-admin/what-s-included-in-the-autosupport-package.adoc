@@ -20,13 +20,10 @@ El paquete AutoSupport incluye lo siguiente:
 * Orígenes de datos y configuración de orígenes de datos
 * Paquetes de integración
 * Unidades de adquisición remota
-* Unidades de monitorización Ethernet
 * Configuración de ASUP/proxy
 * Configuración de ubicación de copia de seguridad
 * Configuración de ubicación de archivo
 * Configuración de notificaciones
-* Puntuaciones y dispositivos de detección de anomalías
-* Configuración de la aplicación de detección de anomalías
 * Usuarios
 * Políticas de rendimiento
 * Entidades y aplicaciones empresariales

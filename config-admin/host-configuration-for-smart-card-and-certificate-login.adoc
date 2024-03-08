@@ -59,29 +59,7 @@ Para obtener las instrucciones más actualizadas del CAC y del certificado, cons
 Repita este paso con todos los certificados intermedios.
 
 . Especifique el dominio en LDAP para que coincida con este ejemplo.
-. En el servidor OnCommand Insight, el `wildfly/standalone/configuration/standalone-full.xml` El archivo debe modificarse actualizando el cliente de verificación a "SOLICITADO" en ``/subsystem=undertow/server=default-server/https-listener=default-https``Para activar CAC. Ejecute el comando apropiado:
-+
-|===
 
-
-| SO | Guión 
-
-
- a| 
-Windows
- a| 
-<install dir>\SANscreen\wilfly\bin\enableCACforRemoteEJB.bat
-
-
-
- a| 
-Linux
- a| 
-/Opt/netapp/oci/wiland/bin/enableCACforRemoteEJB.sh
-
-|===
-+
-Después de ejecutar la secuencia de comandos, espere hasta que se complete la recarga del servidor de wilfly antes de continuar con el siguiente paso.
 
 . Reinicie el servidor.
 

@@ -15,7 +15,7 @@ Una instalación típica de OnCommand Insight incluye la adquisición de datos y
 
 Los principales componentes de la arquitectura de Insight se muestran en el siguiente diagrama:
 
-image::../media/oci-architecture-2022.gif[arquitectura de oci 2022]
+image::../media/oci-architecture-2024.png[arquitectura oci 2024]
 
 * *Servidor OnCommand Insight*
 +
@@ -35,10 +35,6 @@ Una API permite la recopilación de datos de agentes externos. Los datos de inte
 * *Web UI*
 +
 La interfaz de usuario web HTML5 de Insight le permite configurar orígenes de datos y su entorno de supervisión, incluidas políticas, umbrales y alertas. A continuación, puede usar el panel de control de UIAsset y las páginas de activos de la Web para identificar y investigar posibles problemas. Puede crear paneles personalizados con una gran variedad de widgets, cada uno de los cuales ofrece una gran flexibilidad para visualizar, analizar y crear gráficos de sus datos.
-
-* *Detección de anomalías*
-+
-Las anomalías son eventos de cambio de rendimiento en la infraestructura de aplicaciones que no se ajustan a patrones previamente observados y esperados. La detección de anomalías se dirige a la infraestructura que presta servicio a una aplicación, identificando los cambios en los patrones de procesamiento y los comportamientos. Estos patrones de procesamiento cíclicos incluyen «ebbs y flujos» históricos en un rendimiento de las cargas de trabajo durante las horas de funcionamiento empresarial y las operaciones no empresariales.
 
 * *Almacén de datos*
 +

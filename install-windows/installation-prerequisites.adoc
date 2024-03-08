@@ -22,11 +22,6 @@ Antes de instalar OnCommand Insight, asegúrese de que dispone de lo siguiente:
 El producto actual puede consumir recursos de hardware adicionales (debido a la funcionalidad mejorada del producto OnCommand Insight) que no se consumieron en versiones anteriores del producto de OnCommand Insight.
 
 * Un plan de implementación que incluye las configuraciones de hardware y red para el servidor OnCommand Insight, almacén de datos e informes y unidades de adquisición remota.
-* Java 8 para la interfaz de usuario Java de OnCommand Insight.
-+
-
-NOTE: OnCommand Insight incluye una licencia de Oracle de pago para Java se 8. Los clientes no tienen que comprar ninguna licencia adicional de Java se 8. Esta licencia cubre el uso de Java se 8 con todos los componentes OCI. Consulte la link:legal-notices.html["Avisos"] para obtener detalles específicos.
-
 * Software de análisis de virus deshabilitado
 +
 Durante la instalación de OnCommand Insight, debe desactivar por completo todos los detectores de virus. Tras la instalación, las rutas utilizadas por el componente de Insight (rutas de instalación, copia de seguridad y archivado) deben excluirse del análisis de virus, además de excluir la totalidad `sanscreen` directorio de la exploración.

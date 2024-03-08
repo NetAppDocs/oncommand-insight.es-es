@@ -125,7 +125,7 @@ Esto significa que si los administradores de Active Directory presionan los cert
 
 ** Java y Mozilla Firefox tienen sus propios almacenes de certificados.
 +
-Si los administradores del sistema no automatizan la incorporación de los certificados de CA en los almacenes de certificados de confianza de estas aplicaciones, es posible que el uso del cliente Insight Java o del explorador Firefox siga generando advertencias de certificado debido a que se trata de un certificado no confiable, incluso cuando se reemplazó el certificado autofirmado. Conseguir que la cadena de certificados de su empresa esté instalada en el almacén de verdad es un requisito adicional.
+Si los administradores del sistema no automatizan la ingestión de certificados de CA en los almacenes de certificados de confianza de estas aplicaciones, el uso del navegador Firefox puede continuar generando advertencias de certificados debido a un certificado que no es de confianza, incluso cuando el certificado autofirmado se haya reemplazado. Conseguir que la cadena de certificados de su empresa esté instalada en el almacén de verdad es un requisito adicional.
 
 
 

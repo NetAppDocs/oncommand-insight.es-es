@@ -17,7 +17,7 @@ Estas preguntas frecuentes responden a preguntas comunes sobre la solución de p
 
 == ¿Cómo puedo crear una lista de todos los recursos codiciosos de mi entorno?
 
-El análisis de correlación de OCI ayuda con la identificación de recursos de gran consumo y degradados para una ruta de servicio especificada. El análisis generado por la característica de correlación se realiza en tiempo real mientras se visualiza cada objeto. El análisis realizado reduce considerablemente el tiempo necesario para solucionar los problemas de rendimiento e identificar la causa raíz. El análisis de las infracciones generadas por las políticas de rendimiento definidas es un punto de entrada a la detección de recursos de gran consumo o degradados. Las funcionalidades de detección de anomalías de OCI también se pueden usar como un enfoque más proactivo para identificar los recursos de gran consumo o degradados de una infraestructura de aplicaciones antes de que estos se conviertan en interrupciones de servicio. Tanto los widgets como los paneles que utilizan la funcionalidad de consulta más reciente ayudan a filtrar, ordenar y visualizar recursos con un nivel de IOPS superior al esperado (gran consumo), utilización o latencia.
+El análisis de correlación de OCI ayuda con la identificación de recursos de gran consumo y degradados para una ruta de servicio especificada. El análisis generado por la característica de correlación se realiza en tiempo real mientras se visualiza cada objeto. El análisis realizado reduce considerablemente el tiempo necesario para solucionar los problemas de rendimiento e identificar la causa raíz. El análisis de las infracciones generadas por las políticas de rendimiento definidas es un punto de entrada a la detección de recursos de gran consumo o degradados. Tanto los widgets como los paneles que utilizan la funcionalidad de consulta más reciente ayudan a filtrar, ordenar y visualizar recursos con un nivel de IOPS superior al esperado (gran consumo), utilización o latencia.
 
 
 
@@ -28,8 +28,6 @@ Sí. La solución de problemas del rendimiento en OCI se puede solucionar de var
 El panel de infracciones de OCI permite a los usuarios priorizar las tareas en función del número de eventos, la duración y la hora del día. Un ejemplo de varios tipos de alertas sería latencia, IOPS, uso, gravedad, unidad empresarial o incluso aplicación asociada.
 
 El análisis de correlación de OCI ayuda a los administradores a comparar los objetos asociados con el recurso afectado y determina su impacto en los créditos de IOPS, latencia, utilización, CPU y BB.
-
-Los últimos avances de OCI en la detección de anomalías y la supervisión de ethernet ofrecen un enfoque más agresivo y proactivo para detectar los comportamientos de recursos desviados antes de que se conviertan en interrupciones de servicio o interrupciones del servicio.
 
 La tecnología de consultas y los paneles de widgets de OCI permiten localizar detalles específicos en vistas organizadas que tienen como objetivo las áreas problemáticas del centro de datos.
 

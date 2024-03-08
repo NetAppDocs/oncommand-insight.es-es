@@ -45,28 +45,6 @@ Estado de la unidad de adquisición local
 
 
  a| 
-Motor de detección de anomalías
- a| 
-Capacidad del motor
- a| 
-Número de aplicaciones supervisadas para la detección de anomalías
- a| 
-Número y porcentaje de aplicaciones que se están supervisando de 48 aplicaciones posibles.
-
-
-
- a| 
-Motor de detección de anomalías
- a| 
-Estado del motor
- a| 
-Estado del motor de detección de anomalías
- a| 
-"'OK'" si no se detectan errores, en caso contrario se muestra información sobre algún error encontrado. Consulte `prelert.log` archivo para obtener más información.
-
-
-
- a| 
 DWH
  a| 
 Backup
@@ -263,12 +241,4 @@ Estado de la copia de seguridad semanal
 "'OK'" si la copia de seguridad semanal está activada, en caso contrario muestra "'la copia de seguridad semanal no está activada'".
 
 |===
-+
-[NOTE]
-====
-Si el motor de detección de anomalías muestra un error, consulte `prelert.log` Archivo en la siguiente ubicación para obtener más información: - Windows: `disk drive:\install directory\SANscreen\Wildfly\Standalone\Logs`- Linux: `/var/log/netapp/oci/wildfly/`
-
-+
-
-====
 

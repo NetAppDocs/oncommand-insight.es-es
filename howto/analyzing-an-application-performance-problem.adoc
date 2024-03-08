@@ -35,7 +35,7 @@ Al realizar una búsqueda, puede agregar un descriptor de objeto antes del nombr
 ====
 . Cuando selecciona "Exchange 2016" en los resultados de la búsqueda, el sistema muestra la página de inicio de la aplicación.
 +
-image::../media/exch2016-land-page.gif[página de tierra de la exch2016]
+image::../media/exch2016-land-page.png[página de tierra de la exch2016]
 
 +
 En la página de destino de la aplicación, la siguiente información es de su interés:

@@ -39,7 +39,6 @@ Los servidores Insight pueden tener servidores de seguridad de software instalad
 * Unidades de adquisición remota que buscan conectarse al servidor de Insight
 * Servidores OCI DWH con conectores a este servidor Insight.
 * Cualquier interacción programática con la API DE REST de Insight
-* Motor de detección de anomalías que busca obtener datos de rendimiento de Insight para la información de anomalías de la prestación
 
 
 Nuestra recomendación general para cualquiera que desee implementar la protección con firewall en el nivel de host del servidor de Insight es permitir el acceso HTTPS a todos los bloques IP de la red corporativa.

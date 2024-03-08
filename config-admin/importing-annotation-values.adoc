@@ -165,7 +165,9 @@ No hay espacios entre las opciones y sus valores.
 ====
 Las siguientes palabras clave están reservadas e impiden que los usuarios las especifiquen como nombres de anotación: - Aplicación - prioridad_de_aplicación - arrendatario - línea_de_negocio - Unidad_de_negocio - se generan errores de proyecto si intenta importar un tipo de anotación utilizando una de las palabras clave reservadas. Si ha creado nombres de anotación con estas palabras clave, debe modificarlas para que la herramienta de utilidad de importación pueda funcionar correctamente.
 
+====
 +
 
-====
+NOTE: La utilidad de importación de anotaciones requiere Java 8 o Java 11. Asegúrese de que uno de ellos está instalado antes de ejecutar la utilidad de importación. Se recomienda utilizar la última versión de OpenJDK 11.
+
 

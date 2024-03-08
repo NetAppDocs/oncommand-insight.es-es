@@ -2,7 +2,7 @@
 permalink: install-windows/upgrade-insight.html 
 sidebar: sidebar 
 keywords:  
-summary: 'Normalmente, se debe realizar una actualización en todos los servidores de Insight \(servidor Insight, servidor de almacén de datos, unidad de adquisición remota, unidad de supervisión Ethernet\), con la excepción del servidor que ejecuta el software de detección de anomalías. Siempre debería consultar las notas de la versión para conocer los requisitos de actualización de una versión nueva de OnCommand Insight.' 
+summary: 'Normalmente, se debe realizar una actualización en todos los servidores de Insight \(Servidor Insight, Servidor Data Warehouse, Unidad de adquisición remota.\). Siempre debería consultar las notas de la versión para conocer los requisitos de actualización de una versión nueva de OnCommand Insight.' 
 ---
 = Actualizar OnCommand Insight
 :allow-uri-read: 
@@ -11,6 +11,6 @@ summary: 'Normalmente, se debe realizar una actualización en todos los servidor
 
 
 [role="lead"]
-Normalmente, se debe realizar una actualización en todos los servidores de Insight (servidor Insight, servidor de almacén de datos, unidad de adquisición remota, unidad de supervisión Ethernet), con la excepción del servidor que ejecuta el software de detección de anomalías. Siempre debería consultar las notas de la versión para conocer los requisitos de actualización de una versión nueva de OnCommand Insight.
+Normalmente, se debe realizar una actualización en todos los servidores Insight (servidor Insight, servidor de Data Warehouse, unidad de adquisición remota). Siempre debería consultar las notas de la versión para conocer los requisitos de actualización de una versión nueva de OnCommand Insight.
 
 A menos que se indique lo contrario, los requisitos y procedimientos se aplican a la actualización de Insight 7.x a la versión actual de Insight. Si va a actualizar desde una versión anterior a la 7.0, póngase en contacto con su representante de cuenta.

@@ -22,10 +22,6 @@ entries:
     url: "/install-linux/data-warehouse-server-requirements-linux.html"
   - title: Requisitos del servidor de la unidad de adquisición remota
     url: "/install-linux/remote-acquisition-unit-server-requirements.html"
-  - title: Requisitos de detección de anomalías
-    url: "/install-linux/anomaly-detection-requirements.html"
-  - title: Requisitos de la interfaz de usuario de Insight Java
-    url: "/install-linux/insight-java-ui-requirements.html"
   - title: Exploradores compatibles con OnCommand Insight
     url: "/install-linux/insight-browser-support.html"
 - title: Instrucciones de instalación de Insight
@@ -42,10 +38,6 @@ entries:
     entries:
     - title: Validación de la instalación de la unidad de adquisición remota
       url: "/install-linux/validating-the-rau-installation.html"
-  - title: Instalación del software de detección de anomalías
-    url: "/install-linux/installing-the-anomaly-detection-software.html"
-  - title: Instalación de una unidad de supervisión Ethernet
-    url: "/install-linux/installing-an-ethernet-monitoring-unit-linux.html"
   - title: Comprobación de la instalación
     url: "/install-linux/checking-the-installation.html"
     entries:
@@ -78,10 +70,6 @@ entries:
     url: "/install-linux/upgrading-data-warehouse.html"
   - title: Actualización del software de la Unidad de adquisición remota
     url: "/install-linux/upgrading-remote-acquisition-units.html"
-  - title: Actualización del motor de detección de anomalías
-    url: "/install-linux/upgrading-the-anomaly-detection-engine.html"
-  - title: Actualización del software de la unidad de supervisión Ethernet
-    url: "/install-linux/upgrading-ethernet-monitoring-units.html"
   - title: Migrando de Windows a Linux
     url: "/install-linux/migrating-from-windows-to-linux.html"
 - title: Desinstalando OnCommand Insight
@@ -93,7 +81,3 @@ entries:
     url: "/install-linux/uninstalling-data-warehouse.html"
   - title: Desinstalación de una unidad de adquisición remota
     url: "/install-linux/uninstalling-a-remote-acquisition-unit-rau.html"
-  - title: Desinstalación de una unidad de supervisión Ethernet
-    url: "/install-linux/uninstalling-an-ethernet-monitoring-unit-emu-linux.html"
-  - title: Desinstalación del motor de detección de anomalías
-    url: "/install-linux/uninstalling-the-anomaly-detection-engine-linux.html"

@@ -34,12 +34,6 @@ Puede asociar las aplicaciones con los siguientes activos: Hosts, máquinas virt
 +
 Después de definir una aplicación, la página aplicaciones muestra el nombre de la aplicación, su prioridad y, si corresponde, la entidad de negocio asociada a la aplicación.
 
-+
-[NOTE]
-====
-Si el motor de detección de anomalías está instalado, la página Panel de aplicaciones también muestra una puntuación de anomalías para la aplicación. Para obtener más información acerca de la instalación y configuración del motor de detección de anomalías, consulte la _Guía de configuración y administración de OnCommand Insight_.
-
-====
 . Haga clic en *Agregar*.
 +
 Aparece el cuadro de diálogo Agregar aplicación.
