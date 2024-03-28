@@ -51,8 +51,6 @@
   <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
   <block id="24efa7ee4511563b16144f39706d594f" category="section-title">Aviso</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">Los archivos de notificación proporcionan información sobre los derechos de autor y las licencias de terceros que se utilizan en software de NetApp.</block>
-  <block id="96532acff98306bde184975084e9549c" category="inline-link">Aviso para OnCommand Insight 7.3</block>
-  <block id="f4c7a3c5ae1df7a6c170973ba1bdce85" category="paragraph"><block ref="f4c7a3c5ae1df7a6c170973ba1bdce85" category="inline-link-rx"></block></block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="doc">Notas de la versión</block>
   <block id="496375f0bbb802e5ea6f5a6fcba708e1" category="paragraph">Las notas de la versión de OnCommand Insight están disponibles fuera del centro de documentación. Se le pedirá que inicie sesión con sus credenciales del sitio de soporte de NetApp.</block>
   <block id="b1ff5704b48e42d700d43961dd415064" category="doc">Marca comercial</block>
@@ -7921,4 +7919,10 @@ La instalación incluye las siguientes tareas principales:</block>
   <block id="1767cf140ccb13b28bdcc76c42d20028" category="summary">La instalación requiere la instalación de varios componentes de OnCommand Insight, Insight Server y Data Warehouse.</block>
   <block id="91d2987029cf3cc4274c5eb4680b41dc" category="inline-link-macro">Notas de la versión .PDF</block>
   <block id="4a72f4d610aba1b283b741c8990f9bb9" category="paragraph"><block ref="698989a8d25ebae051898deae3187b3f" category="inline-link-macro-rx"></block> (se abre en una ventana nueva)</block>
+  <block id="a025a7deda19d8febe29b4915330a80f" category="inline-link">Aviso para OnCommand Insight 7.3.15</block>
+  <block id="3c68b49692fae1f44d5bcc3f3ff40570" category="paragraph"><block ref="3c68b49692fae1f44d5bcc3f3ff40570" category="inline-link-rx"></block></block>
+  <block id="1eeac4787b3b9277406496e9c0b0460d" category="inline-link">Aviso para OnCommand Insight 7.3.14</block>
+  <block id="2d38b7c541c52f4778b0146ee5977422" category="paragraph"><block ref="2d38b7c541c52f4778b0146ee5977422" category="inline-link-rx"></block></block>
+  <block id="84cf7cbe773d4bdce52df2d271ec42ad" category="inline-link">Aviso para OnCommand Insight 7.3.13</block>
+  <block id="7b06c1df3904beda719ace07d24e5d2e" category="paragraph"><block ref="7b06c1df3904beda719ace07d24e5d2e" category="inline-link-rx"></block></block>
 </blocks>
