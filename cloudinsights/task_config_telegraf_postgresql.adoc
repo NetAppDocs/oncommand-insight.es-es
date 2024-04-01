@@ -1,0 +1,93 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_postgresql.html 
+keywords: telegraf, installation, install, postgresql 
+summary: Configuración del recopilador de datos PostgreSQL 
+---
+= Recopilador de datos PostgreSQL
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights utiliza este recopilador de datos para recopilar métricas de PostgreSQL.
+
+
+
+== Instalación
+
+. En *Observabilidad > Colectores*, haz clic en *+Recopilador de datos*. Elija PostgreSQL.
++
+Seleccione el sistema operativo o la plataforma en la que está instalado el agente Telegraf.
+
+. Si todavía no ha instalado un agente para la colección o desea instalar un agente para un sistema operativo o plataforma diferente, haga clic en _Mostrar instrucciones_ para expandir el link:task_config_telegraf_agent.html["Instalación del agente"] instrucciones.
+. Seleccione la clave de acceso del agente para utilizarla con este recopilador de datos. Puede agregar una nueva clave de acceso del agente haciendo clic en el botón *+ clave de acceso del agente*. Práctica recomendada: Utilice una clave de acceso de agente diferente sólo cuando desee agrupar recopiladores de datos, por ejemplo, por sistema operativo/plataforma.
+. Siga los pasos de configuración para configurar el recopilador de datos. Las instrucciones varían en función del tipo de sistema operativo o plataforma que utilice para recopilar datos.
+
+
+image:PostgreSQLDCConfigLinux.png["Configuración de PostgreSQL"]
+
+
+
+== Configuración
+
+Puede encontrar información en la link:https://www.postgresql.org/docs/["Documentación de PostgreSQL"].
+
+
+
+== Objetos y contadores
+
+Se recopilan los objetos siguientes y sus contadores:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Objeto: | Identificadores: | Atributos: | Puntos de datos: 
+
+
+| Servidor PostgreSQL | Espacio de nombres
+Base de datos
+Servidor | Nombre del nodo
+IP del nodo | Buffers asignados
+Backend de buffers
+Buffers: Sincronización de Archivos de Backend
+Punto de control de buffers
+Limpian los tampones
+Hora de sincronización de puntos de control
+Tiempo de escritura de puntos de control
+Solicitudes de puntos de control
+Puntos de control temporizados
+Max escrito limpio 
+
+
+| Base de datos PostgreSQL | Espacio de nombres
+Base de datos
+Servidor | OID de base de datos
+Nombre del nodo
+IP del nodo | Tiempo de lectura de bloques
+Tiempo de escritura de bloques
+Aciertos de Bloques
+Lecturas de bloques
+Conflictos
+Interbloqueos
+Número de cliente
+Bytes de archivos temporales
+Núm. De archivos temporales
+Filas suprimidas
+Filas recuperadas
+Filas insertadas
+Filas devueltas
+Filas actualizadas
+Transacciones confirmadas
+Transacciones con rollback 
+|===
+
+
+== Resolución de problemas
+
+Puede encontrar información adicional en link:concept_requesting_support.html["Soporte técnico"] página.

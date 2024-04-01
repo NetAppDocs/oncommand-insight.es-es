@@ -1,0 +1,298 @@
+---
+sidebar: sidebar 
+permalink: telegraf_agent_k8s_config_options.html 
+keywords: telegraf, installation, install, agent, telegraf agent, kubernetes, eks, operator, k8s, options, configuration 
+summary: El operador de supervisión de Kubernetes de NetApp tiene una serie de opciones configurables. 
+---
+= Opciones de configuración del operador de supervisión de NetApp Kubernetes
+:hardbreaks:
+:toclevels: 2
+:allow-uri-read: 
+:nofooter: 
+:toclevels: 2
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La link:task_config_telegraf_agent_k8s.html["Operador de supervisión Kubernetes de NetApp"] la instalación y configuración se pueden personalizar.
+
+La siguiente tabla enumera las posibles opciones para el archivo AgentConfiguration:
+
+[cols="1,1,2"]
+|===
+| Componente | Opción | Descripción 
+
+
+| agente |  | Opciones de configuración comunes a todos los componentes que el operador puede instalar. Estas pueden considerarse como opciones “globales”. 
+
+
+|  | Repositorio de documentos | Una anulación de dockerRepo para extraer imágenes de los repositorios de docker privados de los clientes en comparación con el repositorio de docker de Cloud Insights. El valor predeterminado es el repositorio de Cloud Insights docker 
+
+
+|  | DockerImagePullSecret | Opcional: Un secreto para el repositorio privado de los clientes 
+
+
+|  | Nombre del clúster | Campo de texto libre que identifica de forma única un clúster en todos los clústeres de clientes. Debe ser único en un cliente Cloud Insights. El valor predeterminado es lo que introduce el cliente en la interfaz de usuario del campo «Cluster Name» 
+
+
+|  | proxy
+Formato:
+proxy:
+  servidor:
+  puerto:
+  nombre de usuario:
+  contraseña:
+  NoProxy:
+  IsTelegrafProxyActivado:
+  Se habilita isAuProxyEnabled:
+  IsFluentbitProxyEnabled:
+  IsCollectorProxyEnabled: | Opcional para que el cliente establezca el proxy. Esto suele ser el proxy corporativo de los clientes. 
+
+
+| telegraf |  | Opciones de configuración que pueden personalizar la instalación de telegraf del Operador 
+
+
+|  | Intervalo de colección | Intervalo de recopilación de métricas, en segundos (Max=60s) 
+
+
+|  | DsCpuLimit | Límite de CPU para telegraf ds 
+
+
+|  | DsMemLimit | Límite de memoria para telegraf ds 
+
+
+|  | DsCpuRequest | Solicitud de CPU para telegraf ds 
+
+
+|  | DsMemRequest | Solicitud de memoria para telegraf ds 
+
+
+|  | RsCpuLimit | Límite de CPU para telegraf rs 
+
+
+|  | RsMemLimit | Límite de memoria para telegraf rs 
+
+
+|  | RsCpuRequest | Solicitud de CPU para telegraf rs 
+
+
+|  | RsMemRequest | Solicitud de memoria para telegraf rs 
+
+
+|  | DockerMountPoint | Una sustitución para la ruta de acceso de dockerMountPoint. Esto es para instalaciones de Docker no estándar en plataformas k8s como la fundición en la nube 
+
+
+|  | DockerUnixSocket | Una sustitución para dockerUnixSocket path. Esto es para instalaciones de Docker no estándar en plataformas k8s como la fundición en la nube. 
+
+
+|  | CrioSockPath | Una sustitución para la ruta crioSockPath. Esto es para instalaciones de Docker no estándar en plataformas k8s como la fundición en la nube. 
+
+
+|  | Privilegios de ejecución | Ejecute el contenedor de telegraf en modo con privilegios. Establezca esta opción en true si SELinux está activado en los nodos k8s 
+
+
+|  | Tamaño de lote | Consulte link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Documentación de configuración de Telegraf"] 
+
+
+|  | Buffer Limit | Consulte link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Documentación de configuración de Telegraf"] 
+
+
+|  | RoundInterval | Consulte link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Documentación de configuración de Telegraf"] 
+
+
+|  | Colección Jitter | Consulte link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Documentación de configuración de Telegraf"] 
+
+
+|  | precisión | Consulte link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Documentación de configuración de Telegraf"] 
+
+
+|  | FlushInterval | Consulte link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Documentación de configuración de Telegraf"] 
+
+
+|  | FlushJitter | Consulte link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Documentación de configuración de Telegraf"] 
+
+
+|  | Tiempo de espera de salida | Consulte link:https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md#agent["Documentación de configuración de Telegraf"] 
+
+
+|  | DockerMetricCollectionEnabled | Recopilar métricas de Docker. De forma predeterminada, se establece en true y las métricas de docker se recopilarán para implementaciones k8s basadas en docker en las instalaciones. Para desactivar la recopilación de métricas de docker, defínala en FALSE. 
+
+
+|  | DsToleraciones | telegraf-ds toleraciones adicionales. 
+
+
+|  | RsToleraciones | toleraciones adicionales de telegraf-rs. 
+
+
+| métricas-estado-kube |  | Opciones de configuración que pueden personalizar la instalación de métricas de estado kube del Operador 
+
+
+|  | CpuLimit | Límite de CPU para la implementación de métricas de estado-kube 
+
+
+|  | MemLimit | Límite de MEM para el despliegue de métricas de estado-kube 
+
+
+|  | CpuRequest | Solicitud de CPU para el despliegue de métricas de estado de kube 
+
+
+|  | MemRequest | Solicitud de MEM para el despliegue de métricas de estado de kube 
+
+
+|  | recursos | lista separada por comas de recursos que se van a capturar.
+ejemplo: cronjobs,daemonsets,deployments,ingresses,jobs,namespaces,nodes,persistentvolumeclaims,
+volúmenes persistentes, pods, replicasets, cuotas de recursos, servicios, conjuntos de estado 
+
+
+|  | toleraciones | kube-state-metrics toleraciones adicionales. 
+
+
+|  | etiquetas | lista separada por comas de recursos que kube-state-metrics debe capturar
+
++++
+ejemplo: cronjobs=[*],daemonsets=[*],despliegues=[*],ingresses=[*],jobs=[*],namespaces=[*],nodes=[*],
+persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resourcequota=[*],services=[*],statefulsets=[*]
++++ 
+
+
+| registros |  | Opciones de configuración que pueden personalizar la recopilación de registros y la instalación del operador 
+
+
+|  | ReadFromHead | verdadero/falso, debe leer con fluidez el log de la cabecera 
+
+
+|  | tiempo de espera | timeout, en segundos 
+
+
+|  | DnsMode | TCP/UDP, modo para DNS 
+
+
+|  | toleraciones de bits fluidas | toleraciones adicionales de fluent-bit-ds. 
+
+
+|  | toleraciones-exportador-de-eventos | toleraciones adicionales de evento-exportador. 
+
+
+| asignación de carga de trabajo |  | Opciones de configuración que pueden personalizar la recopilación de mapas de carga de trabajo y la instalación del operador 
+
+
+|  | CpuLimit | Límite de CPU para ds de observador neto 
+
+
+|  | MemLimit | Límite de mem para ds de observador neto 
+
+
+|  | CpuRequest | Solicitud de CPU para ds de observador de red 
+
+
+|  | MemRequest | solicitud de mem para ds de observador neto 
+
+
+|  | MetricAggregationInterval | intervalo de agregación de métricas, en segundos 
+
+
+|  | BpfPollInterval | Intervalo de sondeo de BPF, en segundos 
+
+
+|  | Habilitar DNSLookup | True/false, active la búsqueda de DNS 
+
+
+|  | l4-toleraciones | net-observer-l4-ds toleraciones adicionales. 
+|===
+
+
+== Archivo de configuración de AgentConfiguration de ejemplo
+
+A continuación se muestra un archivo de ejemplo de AgentConfiguration. Tenga en cuenta que no todas las opciones se capturan aquí:
+
+[listing]
+----
+apiVersion: monitoring.netapp.com/v1alpha1
+kind: AgentConfiguration
+metadata:
+  name: netapp-monitoring-configuration
+  namespace: NAMESPACE_PLACEHOLDER
+  labels:
+    installed-by: nkmo-NAMESPACE_PLACEHOLDER
+
+spec:
+  agent:
+    # a uniquely identifiable user friendly clustername. This clustername should be unique across
+    # all clusters in your cloud insights tenant
+    clusterName: pbhat-dev
+
+    # optional: proxy settings. This is usually your corporate proxy settings
+    proxy:
+      server: testserver
+      port: 3128
+      noproxy: websock.svc
+      username: user
+      password: pass
+      isTelegrafProxyEnabled: true
+      isFluentbitProxyEnabled: true
+      isCollectorsProxyEnabled: true
+      isAuProxyEnabled: false
+
+    # An optional docker registry where you want docker images to be pulled from as compared to CI's docker registry
+    # Please see documentation link here:
+    dockerRepo: dummy.docker.repo/long/path/to/test
+    # Optional: A docker image pull secret that maybe needed for your private docker registry
+    dockerImagePullSecret: docker-secret-name
+
+    # Set runPrivileged to true SELinux is enabled on your kubernetes nodes
+    # runPrivileged: false
+
+  telegraf:
+    # use these settings to fine tune data collection
+    collectionInterval: 20s
+
+    # batchSize:
+    # bufferLimit:
+    # roundInterval:
+    # collectionJitter:
+    # precision:
+    # flushInterval:
+    # flushJitter:
+
+    # Collect kubernetes.system_container metrics and objects in the kube-system|cattle-system namespaces for managed kubernetes clusters
+    # (EKS, AKS, GKE, managed Rancher). Set this to true if you want collect these metrics.
+    #managedK8sSystemMetricCollectionEnabled: true|false
+
+    # Collect kubernetes.pod_volume (pod ephemeral storage) metrics. Set this to true if you want to collect these metrics.
+    #podVolumeMetricFilteringEnabled: true|false
+
+    # Declare Rancher cluster as managed. Set this to true if your Rancher cluster is managed as opposed to on-premise.
+    #isManagedRancher: true|false
+
+    # By default, docker metrics will be collected for on-premise, docker-based k8s deployments. To disable docker metric collection, set this to false.
+    # dockerMetricCollectionEnabled: true|false
+
+
+    # Deamonset CPU/Mem limits and requests
+    # dsCpuLimit:
+    # dsMemLimit:
+    # dsCpuRequest:
+    # dsMemRequest:
+
+    # Replicaset CPU/Mem limits and requests
+    # rsCpuLimit:
+    # rsMemLimit:
+    # rsCpuRequest:
+    # rsMemRequest:
+
+  kube-state-metrics:
+    # cpuLimit:
+    # memLimit:
+    # cpuRequest:
+    # memRequest:
+
+    # a comma separated list of resources to capture.
+    # example: cronjobs,daemonsets,deployments,ingresses,jobs,namespaces,nodes,persistentvolumeclaims,persistentvolumes,pods,replicasets,resourcequotas,services,statefulsets
+    # resources:
+
+    # a comma seperated list of resources that kube-state-metrics should capture
+    # example: cronjobs=[*],daemonsets=[*],deployments=[*],ingresses=[*],jobs=[*],namespaces=[*],nodes=[*],persistentvolumeclaims=[*],persistentvolumes=[*],pods=[*],replicasets=[*],resourcequotas=[*],services=[*],statefulsets=[*]
+    # labels:
+----

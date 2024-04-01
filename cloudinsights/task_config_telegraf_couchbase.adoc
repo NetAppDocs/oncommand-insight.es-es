@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_couchbase.html 
+keywords: telegraf, installation, install, couchbase 
+summary: Configuración de recopilador de datos Couchbase 
+---
+= Recopilador de datos de Couchbase
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights utiliza este recopilador de datos para recopilar métricas de Couchbase.
+
+
+
+== Instalación
+
+. En *Observabilidad > Colectores*, haz clic en *+Recopilador de datos*. Elija Couchbase.
++
+Seleccione el sistema operativo o la plataforma en la que está instalado el agente Telegraf.
+
+. Si todavía no ha instalado un agente para la colección o desea instalar un agente para un sistema operativo o plataforma diferente, haga clic en _Mostrar instrucciones_ para expandir el link:task_config_telegraf_agent.html["Instalación del agente"] instrucciones.
+. Seleccione la clave de acceso del agente para utilizarla con este recopilador de datos. Puede agregar una nueva clave de acceso del agente haciendo clic en el botón *+ clave de acceso del agente*. Práctica recomendada: Utilice una clave de acceso de agente diferente sólo cuando desee agrupar recopiladores de datos, por ejemplo, por sistema operativo/plataforma.
+. Siga los pasos de configuración para configurar el recopilador de datos. Las instrucciones varían en función del tipo de sistema operativo o plataforma que utilice para recopilar datos.
+
+
+image:CouchbaseDCConfigWindows.png["Configuración de Couchbase"]
+
+
+
+== Configuración
+
+Puede encontrar información en la link:https://docs.couchbase.com/home/index.html["Documentación de Couchbase"].
+
+
+
+== Objetos y contadores
+
+Se recopilan los objetos siguientes y sus contadores:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Objeto: | Identificadores: | Atributos: | Puntos de datos: 
+
+
+| Nodo Couchbase | Espacio de nombres
+Clúster
+Nombre de host de nodo Couchbase | Nombre del nodo
+IP del nodo | Memoria libre
+Memoria total 
+
+
+| Bloque de Couchbase | Espacio de nombres
+Cucharón
+Clúster | Nombre del nodo
+IP del nodo | Datos utilizados
+Intervalos de datos
+Disco utilizado
+Recuento de artículos
+Memoria utilizada
+Operaciones por segundo
+Cuota utilizada 
+|===
+
+
+== Resolución de problemas
+
+Puede encontrar información adicional en link:concept_requesting_support.html["Soporte técnico"] página.

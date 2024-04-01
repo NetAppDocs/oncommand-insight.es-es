@@ -1,0 +1,264 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_flink.html 
+keywords: telegraf, installation, install, flink 
+summary: Configuración del recopilador de datos de Flink 
+---
+= Colector de datos Flink
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights utiliza este recopilador de datos para recopilar métricas de Flink.
+
+
+
+== Instalación
+
+. En *Observabilidad > Colectores*, haz clic en *+Recopilador de datos*. Seleccione Flink.
++
+Seleccione el sistema operativo o la plataforma en la que está instalado el agente Telegraf.
+
+. Si todavía no ha instalado un agente para la colección o desea instalar un agente para un sistema operativo o plataforma diferente, haga clic en _Mostrar instrucciones_ para expandir el link:task_config_telegraf_agent.html["Instalación del agente"] instrucciones.
+. Seleccione la clave de acceso del agente para utilizarla con este recopilador de datos. Puede agregar una nueva clave de acceso del agente haciendo clic en el botón *+ clave de acceso del agente*. Práctica recomendada: Utilice una clave de acceso de agente diferente sólo cuando desee agrupar recopiladores de datos, por ejemplo, por sistema operativo/plataforma.
+. Siga los pasos de configuración para configurar el recopilador de datos. Las instrucciones varían en función del tipo de sistema operativo o plataforma que utilice para recopilar datos.
+
+
+image:FlinkDCConfigWindows.png["Configuración de tinta"]
+
+
+
+== Configuración
+
+Un despliegue completo de Flink implica los siguientes componentes:
+
+JobManager: El sistema primario Flink. Coordina una serie de TaskManagers. En una configuración de alta disponibilidad, el sistema tendrá más de un JobManager.
+TaskManager: Aquí es donde se ejecutan los operadores Flink.
+El plugin de tinta se basa en el complemento Jolokia de telegraf. Como un requisito para recopilar información de todos los componentes de Flink, JMX debe configurarse y exponerse a través de Jolokia en todos los componentes.
+
+
+
+=== Compatibilidad
+
+La configuración se desarrolló contra Flink versión 1.7.0.
+
+
+
+=== Configuración
+
+
+
+==== Agente Jolokia Jar
+
+Para todos los componentes individuales, se debe descargar una versión del archivo JAR del agente JAR Jolokia. La versión probada contra fue link:https://jolokia.org/download.html["Agente Jolokia 1.6.0"].
+
+Las instrucciones siguientes asumen que el archivo JAR descargado (jolokia-jvm-1.6.0-agent.jar) se coloca en la ubicación '/opt/flink/lib/'.
+
+
+
+==== JobManager
+
+Para configurar JobManager para exponer la API de Jolokia, puede configurar la siguiente variable de entorno en los nodos y, a continuación, reiniciar JobManager:
+
+ export FLINK_ENV_JAVA_OPTS="-javaagent:/opt/flink/lib/jolokia-jvm-1.6.0-agent.jar=port=8778,host=0.0.0.0"
+Puede elegir un puerto diferente para Jolokia (8778). Si usted tiene un IP interno para bloquear Jolokia en usted puede reemplazar el "Catch all" 0.0.0.0 por su propio IP. Tenga en cuenta que este IP debe ser accesible desde el plugin de telegraf.
+
+
+
+==== Administrador de tareas
+
+Para configurar TaskManager para exponer la API de Jolokia, puede configurar la siguiente variable de entorno en los nodos y, a continuación, reiniciar TaskManager:
+
+ export FLINK_ENV_JAVA_OPTS="-javaagent:/opt/flink/lib/jolokia-jvm-1.6.0-agent.jar=port=8778,host=0.0.0.0"
+Puede elegir un puerto diferente para Jolokia (8778). Si usted tiene un IP interno para bloquear Jolokia en usted puede reemplazar el "Catch all" 0.0.0.0 por su propio IP. Tenga en cuenta que este IP debe ser accesible desde el plugin de telegraf.
+
+
+
+== Objetos y contadores
+
+Se recopilan los objetos siguientes y sus contadores:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Objeto: | Identificadores: | Atributos: | Puntos de datos: 
+
+
+| Gestor de tareas de tinta | Clúster
+Espacio de nombres
+Servidor | Nombre del nodo
+ID del gestor de tareas
+IP del nodo | Segmentos de memoria disponibles de red
+Segmentos de memoria total de red
+Recuento de Mercados de PS de Recopilación de Basura
+Recolección de Basura PS MarkSweep Time
+Recuento de Escavengos de PS de Recolección de Basura
+Recogida de Basura PS Tiempo de Recuperación
+Memoria de pila confirmada
+Inicialización de Memoria de Pila
+Memoria de Pila Máx
+Memoria de Pila Usada
+Daemon de recuento de threads
+Pico de recuento de threads
+Recuento de Threads
+Recuento de Threads Total Iniciado 
+
+
+| Trabajo de tinta | Clúster
+Espacio de nombres
+servidor
+ID de trabajo | Nombre del nodo
+Nombre del trabajo
+IP del nodo
+Última ruta externa de punto de control
+Hora de reinicio | Tiempo de inactividad
+Reinicios completos
+Última Alineación de Punto de Control en Buffer
+Duración del último punto de control
+Tamaño del último punto de control
+Número de puntos de control completados
+Núm. De puntos de control fallidos
+Número de puntos de control en curso
+Número de puntos de control
+Siempre activo 
+
+
+| Gestor de trabajos de tinta | Clúster
+Espacio de nombres
+Servidor | Nombre del nodo
+IP del nodo | Recuento de Mercados de PS de Recopilación de Basura
+Recolección de Basura PS MarkSweep Time
+Recuento de Escavengos de PS de Recolección de Basura
+Recogida de Basura PS Tiempo de Recuperación
+Memoria de pila confirmada
+Inicialización de Memoria de Pila
+Memoria de Pila Máx
+Memoria de Pila Usada
+Núm. De gestores de tareas registrados
+Número de trabajos en ejecución
+Ranuras de tareas disponibles
+Total de ranuras de tareas
+Daemon de recuento de threads
+Pico de recuento de threads
+Recuento de Threads
+Recuento de Threads Total Iniciado 
+
+
+| Tarea de tinta | Clúster
+Espacio de nombres
+ID de trabajo
+ID de la tarea | Servidor
+Nombre del nodo
+Nombre del trabajo
+Índice de subtareas
+ID de intento de tarea
+Número de intento de tarea
+Nombre de la tarea
+ID del gestor de tareas
+IP del nodo
+Marca de agua de entrada actual | Buffers en Uso de Pool
+Buffers en longitud de cola
+Desborda el uso del pool
+Longitud de cola de salida de buffers
+Núm. De búferes en local
+Número de búferes en recuento local por segundo
+Núm. De búferes en tarifa local por segundo
+Núm. De búferes en Remoto
+Núm. De búferes en recuento remoto por segundo
+Núm. De búferes en velocidad remota por segundo
+Núm. De Buffers Fuera
+Recuento de Núm. De Buffers Fuera por Segundo
+Núm. De Buffers Fuera por Segundo Ratio
+Número de bytes en Local
+Número de bytes en recuento local por segundo
+Número de bytes en tasa local por segundo
+Número de bytes en Remote
+Número de bytes en recuento remoto por segundo
+Número de bytes en ratio remoto por segundo
+Número de bytes de salida
+Número de bytes de salida por segundo recuento
+Ratio de Núm. De Bytes de Salida por Segundo
+Núm. De registros en
+Número de registros por segundo Recuento
+Núm. De registros por segundo de tarifa
+Núm. Registra salida
+Número de registros salidos por segundo Recuento
+Número de registros salidos por segundo ratio 
+
+
+| Operador de tareas de tinta | Clúster
+Espacio de nombres
+ID de trabajo
+ID de operador
+ID de la tarea | Servidor
+Nombre del nodo
+Nombre del trabajo
+Nombre del operador
+Índice de subtareas
+ID de intento de tarea
+Número de intento de tarea
+Nombre de la tarea
+ID del gestor de tareas
+IP del nodo | Marca de agua de entrada actual
+Marca de agua de salida actual
+Núm. De registros en
+Número de registros por segundo Recuento
+Núm. De registros por segundo de tarifa
+Núm. Registra salida
+Número de registros salidos por segundo Recuento
+Número de registros salidos por segundo ratio
+Núm. De registros con retraso eliminados
+Particiones asignadas
+Ratio de bytes consumidos
+Promedio de latencia de confirmación
+Latencia de confirmación máxima
+Ratio de Compromiso
+Errores de confirmación
+Confirmaciones correctas
+Ratio de cierre de conexión
+Recuento de conexiones
+Ratio de Creación de Conexiones
+Cuente
+Promedio de latencia de recuperación
+Latencia máxima de recuperación
+Ratio de Recuperación
+Media de Tamaño de Recuperación
+Tamaño máximo de recuperación
+Tiempo Medio de Recuperación de Aceleración
+Tiempo máximo de recuperación del acelerador
+Frecuencia de latidos
+Tasa de bytes entrante
+Ratio de I/O.
+Tiempo Medio de E/S (ns)
+Ratio de Espera de E/S.
+Tiempo Medio de Espera de E/S (ns)
+Tarifa de incorporación
+Promedio de tiempo de unión
+Último latido anterior
+Velocidad de I/O de red
+Tasa de bytes saliente
+Registra la tasa consumida
+Registro Máx. De Retraso
+Media de registros por solicitud
+Tipo de solicitud
+Media de tamaño de solicitud
+Tamaño máximo de solicitud
+Tasa de respuesta
+Seleccione Tasa
+Velocidad de sincronización
+Tiempo Medio de Sincronización
+Tiempo máximo de respuesta de latido
+Tiempo máximo de unión
+Tiempo máximo de sincronización 
+|===
+
+
+== Resolución de problemas
+
+Puede encontrar información adicional en link:concept_requesting_support.html["Soporte técnico"] página.

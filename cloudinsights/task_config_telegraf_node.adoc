@@ -1,0 +1,173 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_node.html 
+keywords: telegraf, installation, install, node, host 
+summary: Configuración del recopilador de datos de Flink 
+---
+= Recopilación de datos de nodo
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights recopila métricas del nodo en el que instala un agente.
+
+
+
+== Instalación
+
+. En *Observabilidad > Colectores*, elige un sistema operativo/plataforma. Tenga en cuenta que instalar cualquier recopilador de datos de integración (Kubernetes, Docker, Apache, etc.) también configurará la recogida de datos de nodos.
+. Siga las instrucciones para configurar el agente. Las instrucciones varían en función del tipo de sistema operativo o plataforma que utilice para recopilar datos.
+
+
+
+
+== Objetos y contadores
+
+Los objetos siguientes y sus contadores se recopilan como métricas Node:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Objeto: | Identificadores: | Atributos: | Puntos de datos: 
+
+
+| Sistema de archivos de nodos | UUID de nodo
+Dispositivo
+Ruta
+Tipo | IP del nodo
+Nombre del nodo
+SO del nodo
+Modo | Libre
+Sin inodos
+Total de inodos
+Los inodos utilizados
+Total
+Total utilizado
+Utilizado 
+
+
+| Disco de nodo | UUID de nodo
+Disco | IP del nodo
+Nombre del nodo
+SO del nodo | Tiempo de E/S total
+IOPS en curso
+Bytes de Lectura (por Segundo)
+Tiempo de lectura total
+Lecturas (por segundo)
+Total de tiempo de E/S ponderado
+Bytes de Escritura (por Segundo)
+Tiempo de escritura total
+Escrituras (por segundo)
+Longitud actual de la cola de disco
+Tiempo de escritura
+Tiempo de lectura
+Tiempo de I/O. 
+
+
+| CPU del nodo | UUID de nodo
+CPU | IP del nodo
+Nombre del nodo
+SO del nodo | Uso de CPU del sistema
+Uso de CPU del usuario
+Uso de CPU Inactivo
+Uso de CPU del procesador
+Interrumpir el uso de CPU
+Uso de CPU DPC 
+
+
+| Nodo | UUID de nodo | IP del nodo
+Nombre del nodo
+SO del nodo | Hora de inicio del kernel
+Conmutadores de Contexto de Núcleo (por Segundo)
+Entropía de kernel disponible
+Interrupciones del kernel (por segundo)
+Procesos de núcleo bifurcados (por segundo)
+Memoria activa
+Total de memoria disponible
+Memoria disponible
+Memoria en buffer
+Memoria en caché
+Límite de confirmación de memoria
+Memoria confirmada como
+Memoria sucia
+Memoria libre
+Memoria alta libre
+Total Alto de Memoria
+Memoria Tamaño de página enorme
+Memoria enormes páginas gratis
+Total de páginas enormes de memoria
+Memoria baja libre
+Total de memoria baja
+Memoria asignada
+Tablas de páginas de memoria
+Memoria compartida
+Bloque de memoria
+Intercambio de memoria en caché
+Intercambio de memoria libre
+Total de intercambio de memoria
+Memoria total
+Total de memoria utilizada
+Memoria utilizada
+Fragmento de memoria Vmalloc
+Total de Vmalloc de Memoria
+Memoria Vmalloc utilizada
+Memoria cableada
+Total de Reescritura de Memoria
+Tmp. De reescritura de memoria
+Fallos de caché de memoria
+Fallos de demanda cero de memoria
+Fallos de Página de Memoria
+Páginas de memoria
+Memoria no paginada
+Memoria paginada
+Núcleo de caché de memoria
+Caché en espera de memoria normal
+Reserva de Caché en Espera de Memoria
+Fallos de transición de memoria
+Procesos bloqueados
+Procesos muertos
+Procesos inactivos
+Procesa paginación
+Procesos en ejecución
+Procesos en suspensión
+Los procesos se han detenido
+Total de procesos
+Procesa el total de threads
+Procesos desconocidos
+Zombis de procesos
+Longitud de la cola del procesador
+Intercambio libre
+Total de intercambio
+Total de intercambio utilizado
+Intercambio utilizado
+Intercambie
+Intercambie
+Tiempo de actividad del sistema
+Núm. De sistema CPU
+Núm.e usuarios del sistema
+Llamadas del sistema 
+
+
+| Red de nodos | Interfaz de red
+UUID de nodo | Nombre del nodo
+IP del nodo
+SO del nodo | Bytes recibidos
+Bytes enviados
+Paquetes descartados
+Errores de paquetes salientes
+Paquetes recibidos descartados
+Errores de Paquetes Recibidos
+Paquetes recibidos
+Paquetes enviados 
+|===
+
+
+== Configuración
+
+Encontrará información sobre la configuración y la solución de problemas en la link:task_config_telegraf_agent.html["Configuración de un agente"] página.

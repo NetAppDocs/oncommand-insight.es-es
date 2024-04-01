@@ -1,0 +1,98 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_kapacitor.html 
+keywords: telegraf, installation, install, kapacitor 
+summary: configuración de kapacitor 
+---
+= Recopilador de datos de Kapacitor
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights utiliza este recopilador de datos para recopilar métricas del afluxdata Kapacitor.
+
+
+
+== Instalación
+
+. En *Observabilidad > Colectores*, haz clic en *+Recopilador de datos*. Elija Kapacitor.
++
+Seleccione el sistema operativo o la plataforma en la que está instalado el agente Telegraf.
+
+. Si todavía no ha instalado un agente para la colección o desea instalar un agente para un sistema operativo o plataforma diferente, haga clic en _Mostrar instrucciones_ para expandir el link:task_config_telegraf_agent.html["Instalación del agente"] instrucciones.
+. Seleccione la clave de acceso del agente para utilizarla con este recopilador de datos. Puede agregar una nueva clave de acceso del agente haciendo clic en el botón *+ clave de acceso del agente*. Práctica recomendada: Utilice una clave de acceso de agente diferente sólo cuando desee agrupar recopiladores de datos, por ejemplo, por sistema operativo/plataforma.
+. Siga los pasos de configuración para configurar el recopilador de datos. Las instrucciones varían en función del tipo de sistema operativo o plataforma que utilice para recopilar datos.
+
+
+image:KapacitorDCConfigWindows.png["Configuración de Kapacitor"]
+
+
+
+== Configuración
+
+La información de configuración se puede encontrar en https://docs.influxdata.com/kapacitor/v1.5/["Documentación de Kapacitor"]
+
+
+
+== Objetos y contadores
+
+Se recopilan los objetos siguientes y sus contadores:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Objeto | Identificadores | Atributos | Puntos de datos: 
+
+
+| Kapacitor | Espacio de nombres
+Nombre del nodo
+IP del nodo | Arquitectura de SO
+Nombre de SO
+Versión del SO
+Especificación de tiempo de ejecución
+Proveedor de especificación de tiempo de ejecución
+Versión de especificación de tiempo de ejecución
+Siempre activo
+Versión Kapacitor
+Nombre de VM de Runtime
+Proveedor de VM de Runtime
+Versión de Runtime VM | Bytes asignados
+Sistema Buck Hash
+Libera
+Sistema GC
+Fracción PU GCC
+Asignación de Pila
+Pila inactiva
+Uso de pila
+Objetos de Pila
+Pila liberada
+Sistema de Pila
+Último GC (ns)
+Busque UPS
+Mallocs
+Mcache en uso
+Sistema Mcache
+Mspan en uso
+Sistema Mspan
+Siguiente GC (ns)
+Núm. GC
+Otro sistema
+Pausa Total (ns)
+Pila en uso
+Sistema de pila
+Bytes del sistema
+Total de bytes asignados
+Tiempo Medio de Ejecución (ns)
+Errores 
+|===
+
+
+== Resolución de problemas
+
+Puede encontrar información adicional en link:concept_requesting_support.html["Soporte técnico"] página.

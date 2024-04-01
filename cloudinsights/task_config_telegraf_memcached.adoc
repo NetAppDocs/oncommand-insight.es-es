@@ -1,0 +1,100 @@
+---
+sidebar: sidebar 
+permalink: task_config_telegraf_memcached.html 
+keywords: telegraf, installation, install, memcached 
+summary: Configuración de recopilador de datos memcached 
+---
+= Recopilador de datos en caché
+:hardbreaks:
+:toclevels: 1
+:allow-uri-read: 
+:toclevels: 1
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Insights utiliza este recopilador de datos para recopilar métricas de Memcached.
+
+
+
+== Instalación
+
+. En *Observabilidad > Colectores*, haz clic en *+Recopilador de datos*. Seleccione Memcached.
++
+Seleccione el sistema operativo o la plataforma en la que está instalado el agente Telegraf.
+
+. Si todavía no ha instalado un agente para la colección o desea instalar un agente para un sistema operativo o plataforma diferente, haga clic en _Mostrar instrucciones_ para expandir el link:task_config_telegraf_agent.html["Instalación del agente"] instrucciones.
+. Seleccione la clave de acceso del agente para utilizarla con este recopilador de datos. Puede agregar una nueva clave de acceso del agente haciendo clic en el botón *+ clave de acceso del agente*. Práctica recomendada: Utilice una clave de acceso de agente diferente sólo cuando desee agrupar recopiladores de datos, por ejemplo, por sistema operativo/plataforma.
+. Siga los pasos de configuración para configurar el recopilador de datos. Las instrucciones varían en función del tipo de sistema operativo o plataforma que utilice para recopilar datos.
+
+
+image:MemcachedDCConfigWindows.png["Configuración de memcached"]
+
+
+
+== Configuración
+
+Puede encontrar información en la link:https://github.com/memcached/memcached/wiki["Wiki memcached"].
+
+
+
+== Objetos y contadores
+
+Se recopilan los objetos siguientes y sus contadores:
+
+[cols="<.<,<.<,<.<,<.<"]
+|===
+| Objeto: | Identificadores: | Atributos: | Puntos de datos: 
+
+
+| Memcached | Espacio de nombres
+Servidor | IP del nodo
+Nombre del nodo | Aceptar conexiones
+Solicitudes de autenticación gestionadas
+Se han producido errores en las autenticaciones
+Bytes utilizados
+Bytes Lectos (por Segundo)
+Bytes Escritos (por Segundo)
+CAS Badval
+Aciertos CAS
+Faltas CAS
+Vaciar Solicitudes (por Segundo)
+Obtener Solicitudes (por Segundo)
+Definir Solicitudes (por Segundo)
+Toca Solicitudes (por segundo)
+Rendimientos de conexión (por segundo)
+Estructuras de conexión
+Abra Conexiones
+Elementos almacenados actualmente
+Aciertos de Solicitudes de DECR (por Segundo)
+Faltas de Solicitudes de DECR (por segundo)
+Aciertos de Supresión de Solicitudes (por Segundo)
+Faltas de Supresión de Solicitudes (por Segundo)
+Elementos expulsados
+Expulsiones válidas
+Artículos caducados
+Obtener Aciertos (por Segundo)
+Obtener pérdidas (por segundo)
+Bytes hash utilizados
+Hash se está expandiendo
+Nivel de potencia hash
+Aciertos de Solicitudes de INCR (por Segundo)
+Faltas de Solicitudes de INCR (por Segundo)
+Máximo de Bytes del Servidor
+Núm. De Escucha Desactivada
+Se ha reclamado
+Recuento de Threads de Trabajador
+Total de Conexiones Abiertas
+Total de artículos almacenados
+Toque Éxitos
+Toque Misses
+Tiempo de actividad del servidor 
+|===
+
+
+== Resolución de problemas
+
+Puede encontrar información adicional en link:concept_requesting_support.html["Soporte técnico"] página.
