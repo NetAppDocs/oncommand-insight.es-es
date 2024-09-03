@@ -75,9 +75,9 @@ Unified Manager de OnCommand opera en la capa de «gestión de protección» de 
 
 
 
-== ¿Qué es la ETL secundaria de OnCommand Insight mencionada en Automation Storefront?
+== ¿Qué es el ETL secundario de OnCommand Insight?
 
-El requisito de "ETL secundario" al que se hace referencia en algunas descargas de informes de OnCommand Insight Automation Storefront hace referencia a una implementación de servicios profesionales desarrollados que se utiliza para invocar datos capturados de extracción, transformación y carga adicionales (ETL), para que los datos se utilicen para su población en el almacén de datos de OnCommand Insight.
+El ETL secundario se refiere a una implementación de servicios profesionales desarrollados que se utiliza para invocar extracción, transformación y carga adicional (ETL) de datos capturados, para su inclusión en el almacén de datos de OnCommand Insight.
 
 El objetivo principal del proceso ETL secundario es obtener una captura previa de datos en "lote", lo que permite generar informes más complejos con mayor rapidez o programar su ejecución diaria.
 
