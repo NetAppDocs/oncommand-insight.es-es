@@ -1,0 +1,16 @@
+---
+permalink: config-admin/reference_data_collector_support_matrix.html 
+sidebar: sidebar 
+keywords:  
+summary: 'La matriz de compatibilidad del recopilador de datos (origen de datos) proporciona información sobre los recopiladores de datos admitidos.' 
+---
+= Matriz de compatibilidad del recopilador de datos de OnCommand Insight
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La matriz de compatibilidad del recopilador de datos proporciona referencias para recopiladores de datos compatibles con OCI, incluida la información del proveedor y del modelo.
+
+Esta página es un marcador de posición.
