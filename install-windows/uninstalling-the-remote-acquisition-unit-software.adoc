@@ -13,6 +13,13 @@ summary: Debe desinstalar la versión existente del software de la unidad de adq
 [role="lead"]
 Debe desinstalar la versión existente del software de la unidad de adquisición remota antes de poder actualizar a una nueva versión. Debe realizar esta tarea en todos los servidores remotos de la unidad de adquisición del entorno.
 
+[NOTE]
+====
+*Se recomienda encarecidamente hacer una copia de seguridad del almacén* antes de desinstalar OnCommand Insight. *Debe hacer una copia de seguridad del almacén* si va a actualizar OnCommand Insight.
+
+Consulte link:../config-admin\/security-management.html["Herramienta securityadmin"]las instrucciones para obtener más información.
+
+====
 
 
 == Pasos

@@ -13,6 +13,13 @@ summary: Debe desinstalar el software Data Warehouse para poder realizar la actu
 [role="lead"]
 Debe desinstalar el software Data Warehouse para poder realizar la actualización.
 
+[NOTE]
+====
+*Se recomienda encarecidamente hacer una copia de seguridad del almacén* antes de desinstalar OnCommand Insight. *Debe hacer una copia de seguridad del almacén* si va a actualizar OnCommand Insight.
+
+Consulte link:../config-admin\/security-management.html["Herramienta securityadmin"]las instrucciones para obtener más información.
+
+====
 
 
 == Antes de empezar

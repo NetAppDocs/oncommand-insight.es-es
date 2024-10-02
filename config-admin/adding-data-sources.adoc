@@ -67,7 +67,7 @@ Para la mayoría de los orígenes de datos, estas opciones serán Inventario y r
 |===
 . Haga clic en el enlace *Configuración* e introduzca la información básica de configuración necesaria para el origen de datos con el tipo de recopilación de datos seleccionado.
 . Si este tipo de origen de datos normalmente requiere información más detallada para configurarlo en la red, haga clic en el vínculo *Configuración avanzada* para introducir información adicional.
-. Para obtener información detallada acerca de la configuración o la información de configuración avanzada necesaria o disponible para su origen de datos específico, consulte link:vendor-specific-data-source-reference.md#["Referencia de origen de datos específica del proveedor"].
+. Para obtener detalles sobre la configuración o la información de configuración avanzada necesaria o disponible para su origen de datos específico, consulte la link:vendor-specific-data-source-reference.html["Referencia de origen de datos específica del proveedor"].
 . Haga clic en el enlace *Prueba* para asegurarse de que el origen de datos está configurado correctamente.
 . Haga clic en *Guardar*.
 

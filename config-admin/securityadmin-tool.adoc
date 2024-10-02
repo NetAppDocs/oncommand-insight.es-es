@@ -1,17 +1,17 @@
 ---
-permalink: config-admin/security-management.html 
+permalink: config-admin/securityadmin-tool.html 
 sidebar: sidebar 
 keywords: SecurityAdmin, security, password, keystore, truststore, trustore, 
 summary: La herramienta SecurityAdmin de OnCommand Insight incluye funciones que permiten a los entornos de Insight operar con seguridad mejorada, como cifrado, hash de contraseñas y la capacidad de cambiar contraseñas de usuario internas y pares de claves que cifran y descifran contraseñas. 
 ---
-= Seguridad de Insight
+= Herramienta securityadmin
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-OnCommand Insight ofrece funciones que permiten a los entornos de Insight operar con seguridad mejorada. Estas características incluyen cifrado, hash de contraseñas y la capacidad de cambiar contraseñas de usuario internas y pares de claves que cifran y descifran contraseñas. Puede gestionar estas funciones en todos los servidores del entorno Insight mediante la herramienta SecurityAdmin.
+OnCommand Insight ofrece funciones que permiten a los entornos de Insight operar con seguridad mejorada. Estas características incluyen cifrado, hash de contraseñas y la capacidad de cambiar contraseñas de usuario internas y pares de claves que cifran y descifran contraseñas. Puede administrar estas funciones en todos los servidores del entorno Insight utilizando la herramienta *SecurityAdmin Tool*.
 
 
 
@@ -105,6 +105,8 @@ Cree un archivo zip que contenga el almacén. La ruta relativa a los archivos de
 * acq/conf/vault/*
 
 
+Tenga en cuenta que se recomienda encarecidamente realizar una copia de seguridad del almacén cada vez que realice una copia de seguridad de una base de datos OnCommand Insight.
+
 
 
  a| 
@@ -124,9 +126,8 @@ Esto se puede utilizar cuando el almacén y la instalación no son consistentes.
 
 
  a| 
-change-trust-store-password
  a| 
-Cambie la contraseña utilizada para un almacén de confianza y guarde la nueva contraseña en el almacén. La contraseña actual del almacén de confianza debe ser conocida.
+Change-trust-store-password Cambie la contraseña utilizada para un almacén de confianza y almacene la nueva contraseña en el almacén. La contraseña actual del almacén de confianza debe ser conocida.
 
 
 
@@ -207,29 +208,6 @@ Cree un nuevo almacén vacío (que tendrá claves diferentes a las del almacén 
 |===
 
 
-=== Comandos ocultos
-
-La herramienta SA proporciona los siguientes comandos que no requieren autenticación, pero que realizan cambios coordinados en la instalación.
-
-[cols="25a,75a"]
-|===
-
-
- a| 
-actualización de list-keys (servidor)
- a| 
-Si el usuario no se ha autenticado, autentique con la cuenta _interna y la contraseña del almacén actual. A continuación, reemplace el almacén actual con el almacén en el archivo de copia de seguridad y realice las acciones coordinadas.
-
-
-
- a| 
-actualización (adquisición)
- a| 
-Reemplace el almacén actual por el almacén en el archivo de copia de seguridad y realice las acciones coordinadas.
-
-|===
-
-
 == Acciones coordinadas
 
 
@@ -243,30 +221,30 @@ Reemplace el almacén actual por el almacén en el archivo de copia de seguridad
  a| 
 _interno
  a| 
-Actualizar hash de contraseña para el usuario en la base de datos
+actualizar hash de contraseña para el usuario en la base de datos
 
 
 
  a| 
 adquisición
  a| 
-Actualizar hash de contraseña para el usuario en la base de datos
+actualizar hash de contraseña para el usuario en la base de datos
 
-Si el almacén de adquisición está presente, actualice también la entrada en el almacén de adquisición
+si el almacén de adquisición está presente, actualice también la entrada en el almacén de adquisición
 
 
 
  a| 
 dwh_internal
  a| 
-Actualizar hash de contraseña para el usuario en la base de datos
+actualizar hash de contraseña para el usuario en la base de datos
 
 
 
  a| 
 cognos_admin
  a| 
-Actualizar hash de contraseña para el usuario en la base de datos
+actualizar hash de contraseña para el usuario en la base de datos
 
 Si DWH y windows, actualice SANscreen/cognos/analytics/configuration/SANscreenAP.properties para establecer la propiedad cognos.admin en la contraseña.
 
@@ -322,28 +300,28 @@ Ejecute SQL para actualizar la contraseña de usuario en la instancia de MySQL
  a| 
 contraseña_almacén_claves
  a| 
-Vuelva a escribir el almacén de claves con la nueva contraseña: Wildfly/standalone/configuration/server.keystore
+vuelva a escribir el almacén de claves con la nueva contraseña: wildfly/standalone/configuration/server.keystore
 
 
 
  a| 
 truststore_password
  a| 
-Vuelva a escribir el almacén de claves con la nueva contraseña: Wildfly/standalone/configuration/server.trustore
+vuelva a escribir el almacén de claves con la nueva contraseña: wildfly/standalone/configuration/server.trustore
 
 
 
  a| 
 contraseña_clave
  a| 
-Vuelva a escribir el almacén de claves con la nueva contraseña: Wildfly/standalone/configuration/sso.jks
+vuelva a escribir el almacén de claves con la nueva contraseña: wildfly/standalone/configuration/sso.jks
 
 
 
  a| 
 cognos_archive
  a| 
-Ninguno
+ninguno
 
 |===
 
@@ -357,14 +335,14 @@ Ninguno
  a| 
 adquisición
  a| 
-Ninguno
+ninguno
 
 
 
  a| 
 truststore_password
  a| 
-Vuelva a escribir el almacén de claves con la nueva contraseña (si existe): Acq/conf/cert/client.keystore
+vuelva a escribir el almacén de claves con la nueva contraseña (si existe): acq/conf/cert/client.keystore
 
 |===
 

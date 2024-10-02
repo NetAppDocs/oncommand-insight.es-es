@@ -31,7 +31,7 @@ La advertencia de certificación no afecta a la facilidad de uso del sistema. Cu
 
 . Enumere el contenido del almacén de claves: `C:\Program Files\SANscreen\java64\bin>keytool.exe -list -v -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
 +
-Cuando se le pida una contraseña, introduzca `changeit`.
+Consulte link:../config-admin/securityadmin-tool.html["Securityadmin"]la documentación para obtener más información sobre la configuración o el cambio de la contraseña del almacén de claves.
 
 +
 Debe haber al menos un certificado en el almacén de claves, `ssl certificate`.

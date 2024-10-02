@@ -13,6 +13,13 @@ summary: Puede desinstalar Data Warehouse si es necesario.
 [role="lead"]
 Puede desinstalar Data Warehouse si es necesario.
 
+[NOTE]
+====
+*Se recomienda encarecidamente hacer una copia de seguridad del almacén* antes de desinstalar OnCommand Insight.
+
+Consulte link:../config-admin\/security-management.html["Herramienta securityadmin"]las instrucciones para obtener más información.
+
+====
 
 
 == Antes de empezar

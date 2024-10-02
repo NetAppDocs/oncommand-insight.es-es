@@ -20,5 +20,7 @@ sidebar:
   - section: reporting
   - section: faq
   - section: howto
+  - title: Matriz de compatibilidad de recopilador de datos
+    url: "/config-admin/reference_data_collector_support_matrix.html"
   - title: Avisos legales
     url: "/legal-notices.html"

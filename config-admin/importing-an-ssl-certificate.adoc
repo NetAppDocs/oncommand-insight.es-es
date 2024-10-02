@@ -25,7 +25,9 @@ Debe asegurarse de que el sistema cumple el nivel de bit mínimo requerido (1024
 
 [NOTE]
 ====
-Antes de intentar realizar este procedimiento, debe realizar una copia de seguridad de la existente `server.keystore` y asigne un nombre a la copia de seguridad `server.keystore.old`. Corromper o dañar el `server.keystore` El archivo puede resultar en un servidor Insight inoperable después de reiniciar el servidor Insight. Si crea una copia de seguridad, puede revertir al archivo antiguo si se producen problemas.
+Se recomienda encarecidamente realizar una copia de seguridad del almacén antes de actualizar.
+
+Consulte link:../config-admin\/security-management.html["Herramienta securityadmin"]las instrucciones para obtener más información sobre el almacén y la administración de contraseñas.
 
 ====
 
@@ -34,10 +36,6 @@ Antes de intentar realizar este procedimiento, debe realizar una copia de seguri
 
 . Cree una copia del archivo original del almacén de claves: `cp c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore.old`
 . Enumere el contenido del almacén de claves: `C:\Program Files\SANscreen\java64\bin\keytool.exe -list -v -keystore "c:\Program Files\SANscreen\wildfly\standalone\configuration\server.keystore"`
-+
-.. Cuando se le pida una contraseña, introduzca `changeit`.
-
-
 +
 El sistema muestra el contenido del almacén de claves. Debe haber al menos un certificado en el almacén de claves, `"ssl certificate"`.
 

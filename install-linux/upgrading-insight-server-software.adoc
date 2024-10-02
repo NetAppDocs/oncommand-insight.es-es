@@ -13,6 +13,13 @@ summary: Puede comprobar si hay actualizaciones del servidor OnCommand Insight d
 [role="lead"]
 Puede comprobar si hay actualizaciones del servidor OnCommand Insight después de iniciar sesión en el servidor.
 
+[NOTE]
+====
+Se recomienda realizar una copia de seguridad del almacén y de la base de datos antes de actualizar OnCommand Insight.
+
+Consulte link:../config-admin\/security-management.html["Herramienta securityadmin"]las instrucciones para obtener más información sobre el almacén.
+
+====
 
 
 == Pasos

@@ -15,6 +15,17 @@ Después de actualizar el software de servidor Insight, debe actualizar el softw
 
 
 
+== Acerca de esta tarea
+
+[NOTE]
+====
+Se recomienda encarecidamente realizar una copia de seguridad del almacén y de la base de datos antes de actualizar DWH.
+
+Consulte link:../config-admin\/security-management.html["Herramienta securityadmin"]las instrucciones para obtener más información sobre el almacén.
+
+====
+
+
 == Pasos
 
 . Inicie sesión en el servidor de almacén de datos (DWH) utilizando una cuenta con privilegios sudo.

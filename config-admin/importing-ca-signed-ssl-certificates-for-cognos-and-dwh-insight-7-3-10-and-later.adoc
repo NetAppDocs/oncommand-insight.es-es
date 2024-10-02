@@ -46,7 +46,8 @@ Debe tener privilegios de administrador para realizar este procedimiento.
 . Genere una solicitud de cifrado de certificado desde Cognos. En una ventana Admin CMD, ejecute:
 +
 .. cd `“\Program Files\sanscreen\cognos\analytics\bin”`
-.. `ThirdPartyCertificateTool.bat -java:local -c -e -p NoPassWordSet -a RSA -r c:\temp\encryptRequest.csr -d “CN=server.domain.com,O=NETAPP,C=US” -H “server.domain.com” -I “ipaddress”`. Nota: Aquí -H y -i van a agregar subyectAltNames como dns e ipaddress.
+.. `ThirdPartyCertificateTool.bat -java:local -c -e -p <password> -a RSA -r c:\temp\encryptRequest.csr -d “CN=server.domain.com,O=NETAPP,C=US” -H “server.domain.com” -I “ipaddress”`. Nota: Aquí -H y -i van a agregar subyectAltNames como dns e ipaddress.
+.. Para <password>, utilice la contraseña del archivo _/SANscreen/bin/cognos_info.dat_.
 
 
 . Abra el `c:\temp\encryptRequest.csr` archiva y copia el contenido generado.
@@ -93,14 +94,16 @@ Esto descargará el archivo fqdn.p7b
 . Exporte el último certificado Cognos a cognos.crt utilizando el indicador de administración CMD:
 +
 .. cd "'C:\Archivos de programa\SANscreen"
-.. java\bin\keytool.exe -exportcert -file c:\temp\cognos.crt -keystore cognos\analítica\Configuration\certs\CAMKeystore -storetype PKCS12 -storepass NoPassWordSet -alias cifrado
+.. java\bin\keytool.exe -exportcert -file c:\temp\cognos.crt -keystore cognos\analytics\configuration\certs\CAMKeystore -storetype PKCS12 -storepass <password> -cifrado de alias
+.. Para <password>, utilice la contraseña del archivo _/SANscreen/bin/cognos_info.dat_.
 
 
 . Haga una copia de seguridad del servidor de seguridad DWH en``..\SANscreen\wildfly\standalone\configuration\server.trustore``
 . Importe "'c:\temp\cognos.crt'" en DWH truStore para establecer la comunicación SSL entre Cognos y DWH, mediante la ventana de indicación Admin CMD.
 +
 .. cd "'C:\Archivos de programa\SANscreen"
-.. java\bin\keytool.exe -importcert -file c:\temp\cognos.crt -keystore willose\reasone\configuration\server.trustore -storepass chretosca -alias cognos3rdca
+.. java\bin\keytool.exe -importcert -file c:\temp\cognos.crt -keystore wildfly\standalone\configuration\server.trustore -storepass <password> -alias cognos3rdca
+.. Para <password>, utilice la contraseña del archivo _/SANscreen/bin/cognos_info.dat_.
 
 
 . Reinicie el servicio SANscreen.
@@ -108,7 +111,7 @@ Esto descargará el archivo fqdn.p7b
 . Los siguientes pasos deben realizarse incluso cuando sólo se cambia el "certificado de l" y los certificados de Cognos predeterminados no se modifican. De lo contrario, Cognos puede quejarse del nuevo certificado SANscreen o no puede crear una copia de seguridad DWH.
 +
 .. `cd “%SANSCREEN_HOME%cognos\analytics\bin\”`
-.. `“%SANSCREEN_HOME%java64\bin\keytool.exe” -exportcert -file “c:\temp\sanscreen.cer” -keystore “%SANSCREEN_HOME%wildfly\standalone\configuration\server.keystore” -storepass changeit -alias “ssl certificate”`
+.. `“%SANSCREEN_HOME%java64\bin\keytool.exe” -exportcert -file “c:\temp\sanscreen.cer” -keystore “%SANSCREEN_HOME%wildfly\standalone\configuration\server.keystore” -storepass <password> -alias “ssl certificate”`
 .. `ThirdPartyCertificateTool.bat -java:local -i -T -r “c:\temp\sanscreen.cer”`
 
 

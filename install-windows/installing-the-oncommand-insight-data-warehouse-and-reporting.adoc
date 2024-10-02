@@ -47,7 +47,7 @@ Tenga en cuenta lo siguiente antes de instalar o actualizar.
 
 []
 ====
-El nombre de usuario DB2 así como el nombre de inicio de sesión de Windows tienen las siguientes restricciones: * Los caracteres válidos son: 'A' a 'Z'; 'a' a 'z'; '0' a '9'; '#'; '@'; '_'; '!'; '('; ')'; '{'; '}'; '-'; y '.'. * Si utiliza los caracteres especiales '!'; '('; ')'; '{'; '}'; '-'; y '.' se deben usar todas las letras mayúsculas para el nombre de usuario. * El primer carácter de la cadena debe ser un carácter alfabético, @, #, o $; no puede ser un número o las secuencias de letras _SYS_, _DBM_, o _IBM_ * no puede exceder 128 bytes de longitud. * No puede ser USUARIOS, ADMINISTRADORES, INVITADOS, PÚBLICO, LOCAL o cualquier palabra reservada de SQL.
+El nombre de usuario de DB2 así como el nombre de inicio de sesión de Windows tienen las siguientes restricciones: * Los caracteres válidos son: 'A' a 'Z'; 'a' a 'z'; '0' a '9'; '@'; '_'; '!'; '('; ')'; '{'; '}'; '-'; y '. * Si utiliza los caracteres especiales '!'; '('; ')'; '{'; '}'; '-'; y '.' se deben usar todas las letras mayúsculas para el nombre de usuario. * El primer carácter de la cadena debe ser un carácter alfabético, @, #, o $; no puede ser un número o las secuencias de letras _SYS_, _DBM_, o _IBM_ * no puede exceder 128 bytes de longitud. * No puede ser USUARIOS, ADMINISTRADORES, INVITADOS, PÚBLICO, LOCAL o cualquier palabra reservada de SQL.
 
 ====
 * El usuario DB2 no puede ser el mismo que el usuario que realiza la instalación.
@@ -76,4 +76,24 @@ Con OnCommand Insight 7.3.10 y posterior, debe ejecutar la secuencia de comandos
 +
 El almacén de datos con instalación de informes puede tardar hasta una hora en completarse.
 
+
+
+
+
+== Sincronizar servidor y DWH
+
+
+IMPORTANT: Después de instalar el Almacén de Datos, *Debe* sincronizar el Almacén de Datos con el Servidor OnCommand Insight. Siga estos pasos:
+
+. En el sistema Servidor OnCommand Insight, inicie la herramienta *SecurityAdmin* en modo interactivo
++
+ securityadmin -i
+. Cambie la contraseña de los usuarios _INVENTORY_ y _dwh_INTERNAL_ por contraseñas de su elección. *Toma nota de estas contraseñas* como las necesitarás a continuación.
+. Reinicie el servicio DWH.
+. En *Cada Conector* inicie la herramienta *SecurityAdmin* en modo interactivo. Necesitará las contraseñas que anotó en el paso 2 anterior.
++
+ securityadmin -i
+. Cambie las contraseñas de los usuarios _INVENTORY_ y _dwh_INTERNAL_ por las contraseñas utilizadas en el paso 2.
+. Reinicie los servicios en los conectores.
+. Agregue los Conectores a DWH, utilizando las contraseñas para los usuarios _INVENTORY_ y _dwh_INTERNAL_ del paso 2
 

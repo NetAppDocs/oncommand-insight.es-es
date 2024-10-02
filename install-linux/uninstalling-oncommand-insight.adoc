@@ -13,4 +13,11 @@ summary: Puede desinstalar los componentes de OnCommand Insight si es necesario.
 [role="lead"]
 Puede desinstalar los componentes de OnCommand Insight si es necesario. Debe desinstalar los componentes de OnCommand Insight por separado.
 
+[NOTE]
+====
+*Se recomienda encarecidamente hacer una copia de seguridad del almacén* antes de desinstalar OnCommand Insight.
+
+Consulte link:../config-admin\/security-management.html["Herramienta securityadmin"]las instrucciones para obtener más información.
+
+====
 Cada componente se desinstala por separado.

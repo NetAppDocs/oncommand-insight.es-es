@@ -55,3 +55,24 @@ Para entornos que utilizan la traducción de direcciones de red o la traducción
 Después de contestar todas las indicaciones, la instalación comienza y tarda aproximadamente 10 minutos, dependiendo de las aplicaciones instaladas.
 
 
+
+Si sus datos comienzan a adquirir, todos están configurados; debe sincronizar el servidor y la RAU como se indica a continuación.
+
+
+
+== Sincronizar servidor y RAU
+
+
+IMPORTANT: Si los datos no comienzan a adquirirse después de instalar la Unidad de adquisición remota, sincronice la RAU con el servidor OnCommand Insight. Siga estos pasos:
+
+. En el sistema Servidor OnCommand Insight, inicie la herramienta *SecurityAdmin* en modo interactivo
++
+ securityadmin -i
+. Cambie la contraseña del usuario _acquisition_ del servidor Insight a una contraseña de su elección. *Toma nota de esta contraseña* como la necesitarás a continuación.
+. Reinicie el servidor/LAU.
+. En el sistema de unidad de adquisición remota (RAU), inicie la herramienta *SecurityAdmin* en modo interactivo. Necesitará la contraseña que anotó en el paso 2 anterior.
++
+ securityadmin -i
+. Cambie la contraseña del usuario _acquisition_ por la contraseña utilizada en el paso 2.
+. Reinicie RAU.
+

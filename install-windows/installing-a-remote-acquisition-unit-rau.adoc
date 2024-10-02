@@ -41,6 +41,7 @@ El puerto de adquisición predeterminado es 443, pero puede que se haya cambiado
 ** *OnCommand Insight* *Nombre del servidor o dirección*: Nombre de host o dirección IP para identificar el servidor OnCommand Insight. La RAU utiliza este nombre/IP para abrir un enlace de comunicaciones con el servidor. Si especifica un nombre de host, asegúrese de que se puede resolver mediante DNS.
 ** *Nombre de la unidad de adquisición*: Nombre único que identifica la RAU.
 ** *Puerto Seguro de adquisición remota (HTTPS)* de OnCommand Insight: Puerto utilizado por las unidades de adquisición remota para enviar información de cambio de entorno al servidor OnCommand Insight. Esta configuración debe coincidir con el valor introducido al instalar el servidor OnCommand Insight y debe ser la misma en todos los raus.
+** Introduzca la contraseña de usuario _acquisition_.
 
 
 . Revise las selecciones. Haga clic en *Atrás* para volver y realizar los cambios. Haga clic en *Siguiente*.
@@ -55,3 +56,24 @@ Espere a que finalice la instalación. Esto debería tardar entre 5 y 10 minutos
 == Después de terminar
 
 Una vez finalizada la instalación, aparece una ventana final. Haga clic en el cuadro *Iniciar servicio de adquisición remota* para iniciar la RAU y haga clic en *Finalizar* para finalizar esta operación.
+
+Si sus datos comienzan a adquirir, todos están configurados; debe sincronizar el servidor y la RAU como se indica a continuación.
+
+
+
+== Sincronizar servidor y RAU
+
+
+IMPORTANT: Si los datos no comienzan a adquirirse después de instalar la Unidad de adquisición remota, sincronice la RAU con el servidor OnCommand Insight. Siga estos pasos:
+
+. En el sistema Servidor OnCommand Insight, inicie la herramienta *SecurityAdmin* en modo interactivo
++
+ securityadmin -i
+. Cambie la contraseña del usuario _acquisition_ del servidor Insight a una contraseña de su elección. *Toma nota de esta contraseña* como la necesitarás a continuación.
+. Reinicie el servidor/LAU.
+. En el sistema de unidad de adquisición remota (RAU), inicie la herramienta *SecurityAdmin* en modo interactivo. Necesitará la contraseña que anotó en el paso 2 anterior.
++
+ securityadmin -i
+. Cambie la contraseña del usuario _acquisition_ por la contraseña utilizada en el paso 2.
+. Reinicie RAU.
+

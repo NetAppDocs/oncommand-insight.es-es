@@ -70,9 +70,9 @@ De NetApp
  a| 
 Un equipo que ejecuta una versión con licencia de uno de los siguientes, que no ejecuta ningún otro software de nivel de aplicación:
 
-* Red Hat Enterprise Linux 7,3, 7,4, 7,5, 7,6 y 7,7 7,8, 7,9, 8,1, 8,2, 8,3 8,4 de febrero de 8,5, 8,8 9,2
-* CentOS 7,2, 7,5, 7,6, 7,7, 7,8, 7,9, CentOS 8 Stream, CentOS 9 Stream
-* Oracle Enterprise Linux 7,5, 7,6, 7,7, 7,8 y 7,9 8,1, 8,2, 8,3, 8,4, 8,5 8,8
+* Red Hat Enterprise Linux 7,9, 8,10 y 9,4
+* CentOS 8 Stream, CentOS 9 Stream
+* Oracle Enterprise Linux 7,9, 8,10 y 9,4
 
 
 Una versión con licencia garantiza que las dependencias requeridas por la instalación se resuelvan automáticamente por el sistema operativo.

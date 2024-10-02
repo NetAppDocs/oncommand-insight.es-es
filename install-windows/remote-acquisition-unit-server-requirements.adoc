@@ -22,7 +22,7 @@ Debe instalar una unidad de adquisición remota (RAU) para obtener información 
  a| 
 De NetApp
  a| 
-Un equipo que ejecuta Microsoft Windows Server 2016, 2019 o 2022 de 64 bits, con el Service Pack más reciente.
+Un equipo que ejecuta Microsoft Windows Server 2016, 2019 o 2022 de 64 bits, con el Service Pack más reciente. Windows .NET Framework versión 3,5 debe instalarse antes de instalar OnCommand Insight.
 
 
 

@@ -13,6 +13,13 @@ summary: Puede desinstalar una unidad de adquisición remota cuando ya no la nec
 [role="lead"]
 Puede desinstalar una unidad de adquisición remota cuando ya no la necesite.
 
+[NOTE]
+====
+*Se recomienda encarecidamente hacer una copia de seguridad del almacén* antes de desinstalar OnCommand Insight.
+
+Consulte link:../config-admin\/security-management.html["Herramienta securityadmin"]las instrucciones para obtener más información.
+
+====
 
 
 == Pasos

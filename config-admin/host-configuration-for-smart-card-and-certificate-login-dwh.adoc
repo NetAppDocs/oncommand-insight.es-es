@@ -51,7 +51,7 @@ Para Linux, modifique el `clientAuth` parámetro in `/opt/netapp/oci/scripts/wil
 . Agregue las entidades emisoras de certificados (CA) al almacén de datos de trueque:
 +
 .. En una ventana de comandos, vaya a. `..\SANscreen\wildfly\standalone\configuration`.
-.. Utilice la `keytool` Utilidad para enumerar las CA de confianza: `C:\Program Files\SANscreen\java64\bin\keytool.exe -list -keystore server.trustore -storepass changeit`
+.. Utilice la `keytool` utilidad para enumerar las CA de confianza `C:\Program Files\SANscreen\java64\bin\keytool.exe -list -keystore server.trustore -storepass <password>`: + Consulte link:../config-admin/securityadmin-tool.html["Securityadmin"]la documentación para obtener más información sobre la configuración o el cambio de la contraseña para server_trustore.
 +
 La primera palabra de cada línea indica el alias de CA.
 

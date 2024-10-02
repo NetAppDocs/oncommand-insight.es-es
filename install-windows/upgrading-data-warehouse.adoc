@@ -21,29 +21,33 @@ El almacén de datos (DWH) no admite la actualización en línea. Siga estos pas
 
 [NOTE]
 ====
-Al actualizar DWH, se elimina la carpeta que contiene la copia de seguridad del almacén de la herramienta _securityadmin_. Se recomienda realizar una copia de seguridad del almacén antes de actualizar DWH. Como referencia, las carpetas predeterminadas del almacén son las siguientes:
+*Debe hacer una copia de seguridad del almacén* antes de actualizar DWH.
 
-* Carpeta del almacén (almacenes en uso):``%SANSCREEN_HOME%\wildfly\standalone\configuration\vault``
-* Backups de almacén: `%SANSCREEN_HOME%\backup\vault`
-
-
-Consulte http://ie-docs.rtp.openeng.netapp.com/oci-73_ram/topic/com.netapp.doc.oci-acg/GUID-E3351676-2088-4767-AAB5-CB1D8476291C.html?resultof=%22%76%61%75%6c%74%22%20["Gestión de la seguridad en el almacén de datos"] si quiere más información.
+Consulte link:../config-admin\/security-management.html["Herramienta securityadmin"]las instrucciones para obtener más información.
 
 ====
 
 
 == Pasos
 
+Al actualizar el almacén de datos, debe realizar las siguientes acciones:
+
+. Después de instalar DWH 7,3.16, restaure el almacén y la base de datos en este orden:
++
+.. Almacén
+.. Base de datos
+
+
 . Inicie sesión en el servidor DWH utilizando una cuenta que tenga permisos de administrador local de Windows.
 . Realice una copia de seguridad de la base de datos y los informes de DWH mediante la interfaz del portal de DWH.
-. Haga una copia de seguridad de la configuración de seguridad si el servidor utiliza una configuración de seguridad no predeterminada.
+. Haga una copia de seguridad del almacén. Consulte link:../config-admin/security-management.html["Securityadmin"]la documentación.
 . Desinstale el software DWH del servidor.
 . Reinicie el servidor para eliminar componentes de la memoria.
 . Instale la nueva versión de DWH en el servidor.
 +
 La instalación dura aproximadamente 2 horas. Se recomienda dejar todos los valores predeterminados seleccionados.
 
-. Restaure la configuración de seguridad no predeterminada en el servidor DWH.
+. Restaure el almacén en el servidor DWH.
 . Restaurar la base de datos DWH en el servidor.
 
 

@@ -13,6 +13,13 @@ summary: Antes de comenzar a actualizar Insight, es importante comprender el pro
 [role="lead"]
 Antes de comenzar a actualizar Insight, es importante comprender el proceso de actualización. El proceso de actualización es el mismo para la mayoría de las versiones de Insight.
 
+[NOTE]
+====
+*Debe hacer una copia de seguridad del almacén* antes de actualizar OnCommand Insight.
+
+Consulte link:../config-admin\/security-management.html["Herramienta securityadmin"]las instrucciones para obtener más información.
+
+====
 El proceso de actualización de Insight incluye las siguientes tareas de alto nivel:
 
 * Descarga de los paquetes de instalación

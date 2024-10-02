@@ -19,6 +19,13 @@ Una vez completadas todas las tareas de requisitos previos, inicie sesión en In
 
 El paquete de instalación de Insight debe estar ubicado en el servidor.
 
+[NOTE]
+====
+*Debe hacer una copia de seguridad del almacén* antes de actualizar OnCommand Insight.
+
+Consulte link:../config-admin\/security-management.html["Herramienta securityadmin"]las instrucciones para obtener más información.
+
+====
 
 
 == Pasos

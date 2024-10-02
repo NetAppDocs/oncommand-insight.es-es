@@ -17,6 +17,13 @@ Se pueden usar las listas de comprobación proporcionadas para registrar el prog
 
 == Lista de comprobación para preparar la actualización (obligatorio)
 
+[NOTE]
+====
+*Debe hacer una copia de seguridad del almacén* antes de actualizar OnCommand Insight.
+
+Consulte link:../config-admin\/security-management.html["Herramienta securityadmin"]las instrucciones para obtener más información.
+
+====
 |===
 
 

@@ -13,12 +13,14 @@ summary: Se necesitan algunas modificaciones para habilitar CAC en un servidor O
 [role="lead"]
 Se necesitan algunas modificaciones para habilitar CAC en un servidor OnCommand Insight de Linux.
 
+La CA raíz debe importarse al almacén de confianza.
+
 
 
 == Pasos
 
 . Vaya a. `/opt/netapp/oci/conf/`
 . Editar `wildfly.properties` y cambie el valor de `CLIENT_AUTH_ENABLED` A "Verdadero"
-. Importe el «'certificado raíz» que existe en `/opt/netapp/oci/wildfly/standalone/configuration/server.keystore`
+. Importe el '`certificado raíz '' que existe en `/opt/netapp/oci/wildfly/standalone/configuration/server.truststore`
 . Reinicie el servidor
 

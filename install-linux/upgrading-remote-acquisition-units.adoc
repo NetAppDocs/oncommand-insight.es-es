@@ -13,6 +13,13 @@ summary: Después de actualizar el software Insight Server, debe actualizar el s
 [role="lead"]
 Después de actualizar el software Insight Server, debe actualizar el software de adquisición remota.
 
+[NOTE]
+====
+Se recomienda encarecidamente realizar una copia de seguridad del almacén y de la base de datos antes de actualizar DWH.
+
+Consulte link:../config-admin\/security-management.html["Herramienta securityadmin"]las instrucciones para obtener más información sobre el almacén.
+
+====
 
 
 == Pasos

@@ -20,6 +20,9 @@ Puede instalar fácilmente el servidor OnCommand Insight con el asistente de con
 Debe haber completado todos los requisitos previos de instalación.
 
 
+NOTE: Si está actualizando OnCommand Insight, * debe realizar una copia de seguridad del almacén antes de desinstalar o actualizar * su versión actual.
+
+
 
 == Pasos
 
@@ -32,6 +35,7 @@ Debe haber completado todos los requisitos previos de instalación.
 +
 *Mejor práctica:* Use el nombre del cliente como prefijo para el sitio: Por ejemplo, NetApp.
 
+. Introduzca una contraseña de administrador. Confirme la contraseña.
 . En la ventana *Información del cliente: Configurar ASUP de NetApp*, haga lo siguiente:
 +
 .. Seleccione la base de datos que contiene los datos que desea cargar en ASUP. Para ello, seleccione una de las siguientes opciones:
@@ -90,4 +94,23 @@ Puerto utilizado internamente por el PC donde se ejecuta el servidor OnCommand I
 La instalación debería tardar aproximadamente 20 minutos, dependiendo de las aplicaciones instaladas.
 
 . Haga clic en *Finalizar*.
+. Si va a instalar una unidad de adquisición remota (RAU), debe ejecutar la herramienta SecurityAdmin para crear una contraseña para el usuario _acquisition_. Necesitará esta contraseña al instalar la RAU.
++
+Nota: Si ha creado esta contraseña, _NOT_ necesita sincronizar el servidor y la RAU como se indica a continuación.
 
+
+
+
+
+== Sincronizar servidor con DWH y RAU
+
+
+IMPORTANT: Después de instalar la Unidad de adquisición remota y/o el Almacén de datos, debe sincronizar la RAU/DWH con el Servidor OnCommand Insight. Siga los pasos que se indican a continuación:
+
+link:../install-windows/installing-a-remote-acquisition-unit-rau.html#synchronize-server-and-rau["Sincronizar servidor y RAU (Windows)"]
+
+link:../install-windows/installing-the-oncommand-insight-data-warehouse-and-reporting.html#synchronize-server-and-dwh["Sincronizar servidor y DWH (Windows)"]
+
+link:../install-linux/installing-a-remote-acquisition-unit-rau-linux.html#synchronize-server-and-rau["Sincronizar servidor y RAU (Linux)"]
+
+link:../install-linux/installing-oncommand-insight-data-warehouse-linux.html#synchronize-server-and-dwh["Sincronizar servidor y DWH (Linux)"]

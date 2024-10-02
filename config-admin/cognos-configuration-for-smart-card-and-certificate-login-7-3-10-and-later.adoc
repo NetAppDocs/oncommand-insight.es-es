@@ -38,17 +38,20 @@ Para obtener las instrucciones más actualizadas del CAC y del certificado, cons
 . Agregue las autoridades de certificación (CA) al almacén de Cognos.
 +
 .. En una ventana de comandos, vaya a. `..\SANscreen\cognos\analytics\configuration\certs\`
-.. Utilice la `keytool` Utilidad para enumerar las CA de confianza: `..\..\ibm-jre\jre\bin\keytool.exe -list -keystore CAMKeystore.jks -storepass NoPassWordSet`
+.. Utilice `keytool` la utilidad para mostrar las CA de confianza: `..\..\ibm-jre\jre\bin\keytool.exe -list -keystore CAMKeystore.jks -storepass <password>
+
+
 +
 La primera palabra de cada línea indica el alias de CA.
 
++
 .. Si no existen archivos adecuados, proporcione un archivo de certificado de CA, normalmente un `.pem` archivo.
 .. Para incluir las CA del cliente con CA de confianza OnCommand Insight, vaya a. `..\SANscreen\cognos\analytics\configuration\certs\`.
 .. Utilice la `keytool` utilidad para importar `.pem` archivo: `..\..\ibm-jre\jre\bin\keytool.exe -importcert -keystore CAMKeystore.jks -alias my_alias -file 'path/to/my.pem' -v -trustcacerts`
 +
-`my_alias` Normalmente es un alias que identificaría fácilmente la CA en``keytool -list`` funcionamiento.
+`my_alias` Por lo general, es un alias que identificaría fácilmente la CA en ``keytool -list``la operación.
 
-.. Cuando se le pida una contraseña, introduzca `NoPassWordSet`.
+.. Cuando se le solicite una contraseña, introduzca la contraseña del archivo _/SANscreen/bin/cognos_info.dat_.
 .. Responda `yes` cuando se le solicite que confíe en el certificado.
 
 
