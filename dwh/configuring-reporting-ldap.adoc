@@ -22,6 +22,9 @@ Debe iniciar sesión en Insight como administrador para realizar esta tarea.
 Para todos los usuarios de Secure Active Directory (es decir, LDAPS), debe usar el nombre del servidor AD exactamente como se define en el certificado. No se puede utilizar la dirección IP para un inicio de sesión seguro de AD.
 
 
+NOTE: Si ha cambiado las contraseñas _server.keystore_ y/o _server.trustore_ mediante link:../config-admin/security-management.html["securityadmin"], reinicie el servicio _SANscreen_ antes de importar el certificado LDAP.
+
+
 
 == Pasos
 

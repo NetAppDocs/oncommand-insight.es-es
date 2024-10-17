@@ -25,6 +25,9 @@ Debe haber completado las siguientes tareas:
 * Asigne los roles de usuario correctos.
 
 
+
+NOTE: Si está importando un certificado LDAP y ha cambiado las contraseñas _server.keystore_ y/o _server.trustore_ mediante link:../config-admin/security-management.html["securityadmin"], reinicie el servicio _SANscreen_ antes de importar el certificado LDAP.
+
 [NOTE]
 ====
 Las prácticas recomendadas de seguridad exigen que los administradores configuren el sistema operativo host para evitar el inicio de sesión interactivo de usuarios que no son administradores o estándar.
